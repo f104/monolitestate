@@ -1,0 +1,161 @@
+.realty {
+    .realty__list {
+        .realty__list__item {
+            margin-left: - $container-padding-sm;
+            margin-right: - $container-padding-sm;
+            margin-bottom: 10px;
+            .realty__list__item__inner {
+                background-color: $white;
+                min-height: 216px;
+                display: block;
+            }
+            .realty__list__item__img-wrapper {
+                display: none;
+            }
+            .realty__list__item__content-wrapper {
+                padding-left: $container-padding-sm;
+                padding-right: $container-padding-sm;
+                padding-top: 16px;
+            }
+            .realty__list__item__row {
+                display: flex;
+                align-items: baseline;
+                margin-bottom: 20px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+            .realty__list__item__h {
+                font-size: 20px;
+                margin-bottom: 0;
+                flex: 1;
+            }
+            .realty__list__item__text {
+                font-size: 14px;
+                flex: 1;
+            }
+            .realty__list__item__counter {
+                opacity: 0.6;
+                font-size: 14px;
+                font-weight: 600;
+                text-align: right;
+                flex-basis: 54px;
+                &._total {
+                    font-size: 12px;
+                    flex-basis: auto;
+                }
+                &._color {
+                    opacity: 1;
+                    color: $secondary;
+                    flex-basis: auto;
+                }
+            }
+            &._map {
+                .realty__list__item__inner {
+                    @include link-in-text;
+                    min-height: 186px;
+                }
+                .realty__list__item__img-wrapper {
+                    display: block;
+                    width: 100%;
+                    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.08);
+                }
+                .realty__list__item__img-inner {
+                    @include bg-img-inner($white, .6);
+                }
+                .realty__list__item__img {
+                    @include bg-img-100;
+                }
+                .realty__list__item__content-wrapper {
+                    position: absolute;
+                    padding: 0;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 23px;
+                    color: $body-color;
+                    white-space: nowrap;
+                    [class^="icon-"] {
+                        font-size: 16px;
+                        margin-right: 10px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-up(md) {
+    .realty {
+        .realty__list {
+            .realty__list__item {
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 30px;
+                .realty__list__item__inner {
+                    border-radius: 4px;
+                    display: flex;
+                    min-height: 236px;
+                }
+                .realty__list__item__img-wrapper {
+                    display: block;
+                    width: 247px;
+                    @include bg-img-wrapper;
+                }
+                .realty__list__item__img-inner {
+                    @include bg-img-inner(transparent, 1);
+                }
+                .realty__list__item__img {
+                    @include bg-img-height-100;
+                }
+                .realty__list__item__content-wrapper {
+                    padding-left: 32px;
+                    padding-right: 32px;
+                    padding-top: 19px;
+                    flex: 1;
+                }
+                .realty__list__item__h {
+                    font-size: 23px;
+                }
+                .realty__list__item__text {
+                    font-size: 15px;
+                }
+                .realty__list__item__counter {
+                    font-size: 15px;
+                    flex-basis: 60px;
+                    &._total {
+                        font-size: 14px;
+                    }
+                }
+                &._map {
+                    .realty__list__item__inner {
+                        min-height: 236px;
+                    }
+                }
+            }
+        }
+    }
+}
+$realty-gutter-width: 30px;
+@include media-breakpoint-up(lg) {
+    .realty {
+        .realty__list {
+            margin-left: - $realty-gutter-width / 2;
+            margin-right: - $realty-gutter-width / 2;
+            display: flex;
+            flex-wrap: wrap;
+            .realty__list__item {
+                padding-left: $realty-gutter-width / 2;
+                padding-right: $realty-gutter-width / 2;
+                flex-basis: 50%;
+                .realty__list__item__img-wrapper {
+                    width: 204px;
+                }
+                .realty__list__item__content-wrapper {
+                    padding-left: 28px;
+                    padding-right: 28px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2018 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="menu" unicode="&#xe800;" d="M0-150h1571v167h-1571v-167z m0 417h1571v166h-1571v-166z m0 583v-167h1571v167h-1571z" horiz-adv-x="1571" />
+
+<glyph glyph-name="more" unicode="&#xe801;" d="M93 335a56 56 0 0 1-77 0 52 52 0 0 1 0-75l407-395c11-10 25-15 39-15a55 55 0 0 1 38 15l407 395a52 52 0 0 1 0 75 56 56 0 0 1-77 0l-368-358-369 358z m0 500a56 56 0 0 1-77 0 52 52 0 0 1 0-75l407-394c11-11 25-16 39-16a55 55 0 0 1 38 15l407 395a52 52 0 0 1 0 75 56 56 0 0 1-77 0l-368-358-369 358z" horiz-adv-x="923" />
+
+<glyph glyph-name="phone" unicode="&#xe802;" d="M200 417c78-156 211-284 367-367l122 122c17 17 39 22 55 11 62-22 128-33 200-33 34 0 56-22 56-56v-188c0-34-22-56-56-56a944 944 0 0 0-944 944c0 34 22 56 56 56h194c33 0 56-22 56-56 0-66 11-133 33-200 5-16 0-38-11-55l-128-122z" horiz-adv-x="1000" />
+
+<glyph glyph-name="star" unicode="&#xe803;" d="M601 21l-325-171 62 362-263 256 363 53 162 329 163-329 363-53-263-256 62-362z" horiz-adv-x="1167" />
+
+<glyph glyph-name="user" unicode="&#xe804;" d="M598 305c150 0 273 122 273 272 0 150-123 273-273 273a274 274 0 0 1-273-273c0-150 123-272 273-272z m-45-91c-169 0-500-79-500-243v-121h1000v121c0 164-332 243-500 243z" horiz-adv-x="1100" />
+
+<glyph glyph-name="map" unicode="&#xe805;" d="M972 850h-11l-294-117-334 117-311-106c-11-5-22-11-22-27v-839c0-17 11-28 28-28h11l294 117 334-117 311 106c11 5 22 16 22 27v839c0 17-11 28-28 28z m-305-889l-334 117v661l334-117v-661z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>

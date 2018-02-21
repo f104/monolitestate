@@ -1,0 +1,119 @@
+.sprite {
+    font-size: 10px;
+}
+
+.sprite:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 7.7em 52.3em;
+}
+
+.no-svg .sprite:before {
+    background-image: url("../svg/sprite.png");
+}
+
+
+
+  .sprite.fb:before {
+      background-position: 0em 0em;
+      width: 5.2em;
+      height: 5.2em;
+  }
+
+
+
+
+  .sprite.instagram:before {
+      background-position: 0em -5.2em;
+      width: 5.2em;
+      height: 5.2em;
+  }
+
+
+
+
+  .sprite.man-baloon:before {
+      background-position: 0em -10.4em;
+      width: 5.5em;
+      height: 4.9em;
+  }
+
+
+
+
+  .sprite.ok:before {
+      background-position: 0em -15.3em;
+      width: 5.2em;
+      height: 5.2em;
+  }
+
+
+
+
+  .sprite.russia:before {
+      background-position: 0em -20.5em;
+      width: 7.7em;
+      height: 4.4em;
+  }
+
+
+
+
+  .sprite.sales-1:before {
+      background-position: 0em -24.9em;
+      width: 4.2em;
+      height: 4.6em;
+  }
+
+
+
+
+  .sprite.sales-2:before {
+      background-position: 0em -29.5em;
+      width: 4em;
+      height: 4em;
+  }
+
+
+
+
+  .sprite.sales-3:before {
+      background-position: 0em -33.5em;
+      width: 3.9em;
+      height: 3.9em;
+  }
+
+
+
+
+  .sprite.sweet-home:before {
+      background-position: 0em -37.4em;
+      width: 4.7em;
+      height: 4.5em;
+  }
+
+
+
+
+  .sprite.twitter:before {
+      background-position: 0em -41.9em;
+      width: 5.2em;
+      height: 5.2em;
+  }
+
+
+
+
+  .sprite.vk:before {
+      background-position: 0em -47.1em;
+      width: 5.2em;
+      height: 5.2em;
+  }
+
+
+
+
+

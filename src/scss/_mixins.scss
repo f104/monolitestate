@@ -1,0 +1,81 @@
+@mixin list-unstyled {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+@mixin link-in-text {
+    &:after {
+        content: none;
+    }
+}
+
+@mixin link-inverse {
+    color: $white;
+    &:after {
+        background: url(img/link-inverse.png) repeat-x;
+    }
+    &:hover {
+        opacity: .7;
+        &:after {
+            opacity: .7;
+        }
+    }
+}
+
+@mixin transition($p) {
+    transition: $p .2s ease-in-out;
+}
+
+@mixin row($gutter) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: - $gutter / 2;
+    margin-right: - $gutter / 2;
+}
+
+@mixin col($basis, $gutter) {
+    flex: 0 0 $basis;
+    width: $basis;
+    padding-right: $gutter / 2;
+    padding-left: $gutter / 2;
+}
+
+@mixin bg-img-wrapper() {
+    position: relative;
+    overflow: hidden;
+}
+@mixin bg-img-inner($background-color, $opacity) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $background-color;
+        opacity: $opacity;
+    }
+}
+@mixin bg-img-100() {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: none;
+    max-height: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin bg-img-height-100() {
+    position: absolute;
+    min-width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}

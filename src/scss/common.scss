@@ -1,0 +1,107 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "variables";
+@import "mixins";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/utilities/flex";
+
+
+body {
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+@media (hover: none) {
+    a:hover { color: inherit !important; }
+}
+.container {
+    padding: 0 $container-padding-sm;
+}
+@include media-breakpoint-up(md) {
+    .container {
+        padding: 0 $container-padding-md;
+    }
+}
+@include media-breakpoint-up(lg) {
+    .container {
+        padding: 0 $container-padding-lg;
+    }
+}
+.flex {
+    display: flex !important;;
+}
+.hidden {
+    display: none !important;
+}
+.necessaty_fields {
+    display: none !important;;
+}
+.text-nowrap { white-space: nowrap !important; }
+
+.no-padding-top {
+    padding-top: 0 !important;
+}
+
+a {
+    outline: none;
+    position: relative;
+    @include transition(color);
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 1px;
+        background: url(img/link.png) repeat-x;
+        @include transition(opacity);
+    }
+    &:hover {
+        &:after {
+            opacity: .7;
+        }
+    }
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    margin-right: 0; 
+    margin-left: 0; 
+    width: auto;
+    line-height: inherit;
+}
+
+.content {
+    position: relative;
+    .content__overlay {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000;
+        opacity: .4;
+        z-index: 900;
+        /*@include transition();*/
+    }
+}
+
+@import "header";
+@import "sliders";
+@import "forms";
+@import "footer";
+@import "page-assets/index";
+@import "page-assets/realty";
+@import "page-assets/sales";
+@import "page-assets/about";
+@import "page-assets/hypothec";
+@import "page-assets/agents";
+@import "page-assets/partners";
+
+.preloader {
+    display: none !important;
+}

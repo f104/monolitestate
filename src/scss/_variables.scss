@@ -1,0 +1,36 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 320px,
+  md: 768px,
+  lg: 1280px
+);
+$grid-gutter-width: 26px;
+$container-max-widths: (
+  sm: 100%,
+  md: 100%,
+  lg: 1280px
+/*  ,
+  xl: 1140px*/
+);
+$container-padding-sm: 20px;
+$container-padding-md: 30px;
+$container-padding-lg: 40px;
+
+$primary: #3863c5; // основной синий
+$secondary: #ff9d00; // основной оранжевый
+$gray-light: #e5e4e4; // светлый серый
+/*$blue-dark: #455a64; // темно-синий, часто используется*/
+$body-bg: #f5f5f5;
+$body-color: #131313;
+$link-color: $primary;
+$link-hover-color: #6288df;
+$link-hover-decoration: none;
+$headings-color: $body-color;
+
+$font-size-base-px: 15px;
+$font-size-base: $font-size-base-px;
+$font-weight-base: normal;
+$line-height-base: normal;
+$font-family-base: 'Lato', sans-serif;
+/*$font-family-alt: 'DINPro', 'PT Sans Narrow', sans-serif;*/
+/*$font-family-alt-bold: 'DINPro Bold', 'DINPro', 'PT Sans Narrow', sans-serif;*/
