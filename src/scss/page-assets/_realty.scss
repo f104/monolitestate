@@ -4,10 +4,13 @@
             margin-left: - $container-padding-sm;
             margin-right: - $container-padding-sm;
             margin-bottom: 10px;
+            position: relative;
             .realty__list__item__inner {
                 background-color: $white;
                 min-height: 216px;
                 display: block;
+                @include link-in-text;
+                color: $body-color;
             }
             .realty__list__item__img-wrapper {
                 display: none;
@@ -96,6 +99,15 @@
                     border-radius: 4px;
                     display: flex;
                     min-height: 236px;
+                    top: 0;
+                    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0);
+                    @include transition(all);
+                }
+                &:hover {
+                    .realty__list__item__inner {
+                        top: -10px;
+                        box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.12);
+                    }
                 }
                 .realty__list__item__img-wrapper {
                     display: block;

@@ -3,6 +3,9 @@
         padding-left: 40px;
         padding-right: 40px;
         text-align: center;
+        .agents__full__img {
+            display: none;
+        }
         .agents__full__name {
             font-size: 18px;
             margin-bottom: 20px;
@@ -32,6 +35,9 @@
     .agents__buttons {
         .btn {
             margin-bottom: 15px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
         }
     }
 }
@@ -48,6 +54,9 @@
             cursor: pointer;
             @include transition(all);
         }
+        .agents-list__item__img-wrapper {
+            margin-bottom: 6px;
+        }
         .agents-list__item__img {
             display: block;
             margin-left: auto;
@@ -56,7 +65,6 @@
             height: 100px;
             border-radius: 50%;
             box-shadow: 0 0 45px 0 rgba(12, 27, 63, 0.3);
-            margin-bottom: 6px;
             @include transition(all);
         }
         .agents-list__item__short {
@@ -99,6 +107,38 @@
     }
 }
 @include media-breakpoint-up(md) {
+    .agents {
+        .index-section__h3 {
+            margin-bottom: 10px;
+        }
+        .agents__full {
+            width: 243px;
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            .agents__full__img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 146px;
+                height: 146px;
+                border-radius: 50%;
+                box-shadow: 0 0 45px 0 rgba(12, 27, 63, 0.3);
+                margin-bottom: 27px;
+            }
+        }
+        .agents__buttons {
+            width: 243px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            .btn {
+                padding: 0;
+            }
+        }
+    }
     .agents-list-wrapper {
         position: relative;
         overflow: hidden;
@@ -109,13 +149,201 @@
         margin-left: 0;
         margin-right: 0;
         width: 1280px;
+        height: 522px;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
         .agents-list__item {
+            .agents-list__item__inner {
+                position: relative;
+                top: 0;
+                @include transition(all);
+            }
+            &:hover {
+                .agents-list__item__inner {
+                    top: -5px;
+                }
+            }
+            .agents-list__item__img {
+                box-shadow: 0 11px 19px 0 rgba(12, 27, 63, 0.22);
+            }
+            .agents-list__item__img-wrapper {
+                position: relative;
+                padding: 4px;
+                &:after {
+                    content: '';
+                    display: block;
+                    top: 0;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    border-radius: 50%;
+                    @include transition(background-color);
+                    z-index: -1;
+                }
+            }
             &._active {
                 .agents-list__item__img {
-                    border: 4px solid $primary;
+                    box-shadow: 0 0 14px 0 $primary;
+                }
+                .agents-list__item__img-wrapper {
+                    &:after {
+                        background-color: $primary;
+                    }
+                }
+            }
+            position: absolute;
+            &:nth-child(1) {
+                left: 68px;
+                top: 90px;
+                .agents-list__item__img {
+                    width: 76px;
+                    height: 76px;
+                }
+            }
+            &:nth-child(2) {
+                left: 40px;
+                top: 250px;
+                .agents-list__item__img {
+                    width: 76px;
+                    height: 76px;
+                }
+            }
+            &:nth-child(3) {
+                left: 59px;
+                top: 400px;
+                .agents-list__item__img {
+                    width: 95px;
+                    height: 95px;
+                }
+            }
+            &:nth-child(4) {
+                left: 154px;
+                top: 170px;
+                .agents-list__item__img {
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+            &:nth-child(5) {
+                left: 202px;
+                top: 379px;
+                .agents-list__item__img {
+                    width: 62px;
+                    height: 62px;
+                }
+            }
+            &:nth-child(6) {
+                left: 282px;
+                top: 110px;
+                .agents-list__item__img {
+                    width: 76px;
+                    height: 76px;
+                }
+            }
+            &:nth-child(7) {
+                left: 270px;
+                top: 265px;
+                .agents-list__item__img {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            &:nth-child(8) {
+                left: 403px;
+                top: 40px;
+                .agents-list__item__img {
+                    width: 49px;
+                    height: 49px;
+                }
+            }
+            &:nth-child(9) {
+                left: 376px;
+                top: 204px;
+                .agents-list__item__img {
+                    width: 76px;
+                    height: 76px;
+                }
+            }
+            &:nth-child(10) {
+                left: 376px;
+                top: 385px;
+                .agents-list__item__img {
+                    width: 76px;
+                    height: 76px;
+                }
+            }
+            &:nth-child(11) {
+                left: 848px;
+                top: 106px;
+                .agents-list__item__img {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+            &:nth-child(12) {
+                left: 883px;
+                top: 226px;
+                .agents-list__item__img {
+                    width: 76px;
+                    height: 76px;
+                }
+            }
+            &:nth-child(13) {
+                left: 855px;
+                top: 370px;
+                .agents-list__item__img {
+                    width: 76px;
+                    height: 76px;
+                }
+            }
+            &:nth-child(14) {
+                left: 957px;
+                top: 10px;
+                .agents-list__item__img {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            &:nth-child(15) {
+                left: 1027px;
+                top: 187px;
+                .agents-list__item__img {
+                    width: 52px;
+                    height: 52px;
+                }
+            }
+            &:nth-child(16) {
+                left: 999px;
+                top: 316px;
+                .agents-list__item__img {
+                    width: 76px;
+                    height: 76px;
+                }
+            }
+            &:nth-child(17) {
+                left: 1118px;
+                top: 20px;
+                .agents-list__item__img {
+                    width: 69px;
+                    height: 69px;
+                }
+            }
+            &:nth-child(18) {
+                left: 1155px;
+                top: 142px;
+                .agents-list__item__img {
+                    width: 76px;
+                    height: 76px;
+                }
+            }
+            &:nth-child(19) {
+                left: 1143px;
+                top: 300px;
+                .agents-list__item__img {
+                    width: 87px;
+                    height: 87px;
                 }
             }
         }

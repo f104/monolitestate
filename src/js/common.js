@@ -4,6 +4,7 @@ jQuery(function () {
     $(document).ready(function () {
         initSmallSliders();
         initAgentsPresentation();
+        setAgentsPresentation();
     });
 
     $(window).on('resize', function () {
@@ -26,6 +27,7 @@ jQuery(function () {
             $('.js-slider-small.slick-initialized').slick('unslick');
         }
         if ($(window).outerWidth() < appConfig.breakpoint.md) {
+            $('.js-slider-agents .agents-list__item').off('click');
             $('.js-slider-agents:not(.slick-initialized)').slick({
                 dots: false,
                 arrows: false,
@@ -41,16 +43,28 @@ jQuery(function () {
 //                console.log(slick);
                 $(this).find('._active').removeClass('_active');
                 $(slick.$slides[currentSlide]).addClass('_active');
-                initAgentsPresentation();
+                setAgentsPresentation();
             });
         } else {
             $('.js-slider-agents.slick-initialized').slick('unslick');
+            initAgentsPresentation();
         }
     }
 
     function initAgentsPresentation() {
+        if ($(window).outerWidth() >= appConfig.breakpoint.md) {
+            $('.js-slider-agents .agents-list__item').on('click', function () {
+                $(this).parent().find('._active').removeClass('_active');
+                $(this).addClass('_active');
+                setAgentsPresentation();
+            });
+        }
+    }
+    
+    function setAgentsPresentation() {
         var $agent = $('.js-slider-agents ._active .js-slider-agents__short');
         var $full = $('.js-slider-agents__full');
+        $full.find('.js-slider-agents__full__img').attr('src', $agent.data('agent-img'));
         $full.find('.js-slider-agents__full__name').text($agent.data('agent-name'));
         var phone = $agent.data('agent-phone');
         $full.find('.js-slider-agents__full__phone a').text(phone).attr('href', 'tel:' + phone.replace(/[-\s]/g, ''));

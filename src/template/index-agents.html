@@ -2,62 +2,131 @@
     <h3 class="index-section__h3">Наши агенты</h3>
     <div class="agents-list-wrapper">
         <ul class="agents-list js-slider-agents">
-            <li class="agents-list__item slide _active">
-                <div class="agents-list__item__inner">
-                    <img class="agents-list__item__img" src="img/agents/1.jpg" alt="alt-text">
-                    <div class="agents-list__item__short js-slider-agents__short"
-                         data-agent-name="Пушкин Александр Сергеевич"
-                         data-agent-phone="+7 123 456-78-90"
-                         data-agent-link="monolitestate.com">
-                        Александр
-                    </div>
-                </div>
-            </li>
-            <li class="agents-list__item slide">
-                <div class="agents-list__item__inner">
-                    <img class="agents-list__item__img" src="img/agents/3.jpg" alt="alt-text">
-                    <div class="agents-list__item__short js-slider-agents__short"
-                         data-agent-name="Столбова Ольга Арслановна"
-                         data-agent-phone="+7 123 456-78-90"
-                         data-agent-link="monolitestate.com">
-                        Ольга
-                    </div>
-                </div>
-            </li>
-            <li class="agents-list__item slide">
-                <div class="agents-list__item__inner">
-                    <img class="agents-list__item__img" src="img/agents/2.jpg" alt="alt-text">
-                    <div class="agents-list__item__short js-slider-agents__short"
-                         data-agent-name="Мусоргский Модест Петрович"
-                         data-agent-phone="+7 123 456-78-90"
-                         data-agent-link="monolitestate.com"
-                         >
-                        Модест
-                    </div>
-                </div>
-            </li>
-            <li class="agents-list__item slide">
-                <div class="agents-list__item__inner">
-                    <img class="agents-list__item__img" src="img/agents/4.jpg" alt="alt-text">
-                    <div class="agents-list__item__short js-slider-agents__short"
-                         data-agent-name="Столбова Ольга Арслановна"
-                         data-agent-phone="+7 123 456-78-90"
-                         data-agent-link="monolitestate.com"
-                         >
-                        Ольга
-                    </div>
-                </div>
-            </li>
+            @@include('./chunks/index-agents-item.html', {
+            "active": 1,
+            "img": "1.jpg",
+            "short": "Александр",
+            "name": "Пушкин Александр Сергеевич"
+            })
+            @@include('./chunks/index-agents-item.html', {
+            "active": 0,
+            "img": "3.jpg",
+            "short": "Ольга",
+            "name": "Столбова Ольга Арслановна"
+            })
+            @@include('./chunks/index-agents-item.html', {
+            "active": 0,
+            "img": "2.jpg",
+            "short": "Модест",
+            "name": "Мусоргский Модест Петрович"
+            })
+            @@include('./chunks/index-agents-item.html', {
+            "active": 0,
+            "img": "4.jpg",
+            "short": "Ольга",
+            "name": "Столбова Ольга Арслановна"
+            })
+            @@include('./chunks/index-agents-item.html', {
+            "active": 0,
+            "img": "1.jpg",
+            "short": "Александр",
+            "name": "Пушкин Александр Сергеевич"
+            })
+            @@include('./chunks/index-agents-item.html', {
+            "active": 0,
+            "img": "3.jpg",
+            "short": "Ольга",
+            "name": "Столбова Ольга Арслановна"
+            })
+            @@include('./chunks/index-agents-item.html', {
+            "active": 0,
+            "img": "2.jpg",
+            "short": "Модест",
+            "name": "Мусоргский Модест Петрович"
+            })
+            @@include('./chunks/index-agents-item.html', {
+            "active": 0,
+            "img": "4.jpg",
+            "short": "Ольга",
+            "name": "Столбова Ольга Арслановна"
+            })
+            @@include('./chunks/index-agents-item.html', {
+            "active": 0,
+            "img": "1.jpg",
+            "short": "Александр",
+            "name": "Пушкин Александр Сергеевич"
+            })
+            @@include('./chunks/index-agents-item.html', {
+            "active": 0,
+            "img": "3.jpg",
+            "short": "Ольга",
+            "name": "Столбова Ольга Арслановна"
+            })
+            @@include('./chunks/index-agents-item.html', {
+            "active": 0,
+            "img": "2.jpg",
+            "short": "Модест",
+            "name": "Мусоргский Модест Петрович"
+            })
+            @@include('./chunks/index-agents-item.html', {
+            "active": 0,
+            "img": "4.jpg",
+            "short": "Ольга",
+            "name": "Столбова Ольга Арслановна"
+            })
+            @@include('./chunks/index-agents-item.html', {
+            "active": 0,
+            "img": "1.jpg",
+            "short": "Александр",
+            "name": "Пушкин Александр Сергеевич"
+            })
+            @@include('./chunks/index-agents-item.html', {
+            "active": 0,
+            "img": "3.jpg",
+            "short": "Ольга",
+            "name": "Столбова Ольга Арслановна"
+            })
+            @@include('./chunks/index-agents-item.html', {
+            "active": 0,
+            "img": "2.jpg",
+            "short": "Модест",
+            "name": "Мусоргский Модест Петрович"
+            })
+            @@include('./chunks/index-agents-item.html', {
+            "active": 0,
+            "img": "4.jpg",
+            "short": "Ольга",
+            "name": "Столбова Ольга Арслановна"
+            })
+            @@include('./chunks/index-agents-item.html', {
+            "active": 0,
+            "img": "1.jpg",
+            "short": "Александр",
+            "name": "Пушкин Александр Сергеевич"
+            })
+            @@include('./chunks/index-agents-item.html', {
+            "active": 0,
+            "img": "3.jpg",
+            "short": "Ольга",
+            "name": "Столбова Ольга Арслановна"
+            })
+            @@include('./chunks/index-agents-item.html', {
+            "active": 0,
+            "img": "2.jpg",
+            "short": "Модест",
+            "name": "Мусоргский Модест Петрович"
+            })
         </ul>
-    </div>
-    <div class="agents__full js-slider-agents__full">
-        <div class="agents__full__name js-slider-agents__full__name"></div>
-        <div class="agents__full__phone js-slider-agents__full__phone"><a href="#"></a></div>
-        <div class="agents__full__link js-slider-agents__full__link"><a href="#"></a></div>
-        <div class="agents__full__all js-slider-agents__full__all"><a href="#">Посмотреть все объекты</a></div>
-    </div>
-    <div class="agents__buttons">
-        <a href="#" class="btn _lg _solid">Начать сотрудничество</a>
-        <a href="#" class="btn _lg _secondary">Все риэлторы</a>
+        <div class="agents__full js-slider-agents__full">
+            <img class="agents__full__img js-slider-agents__full__img">
+            <div class="agents__full__name js-slider-agents__full__name"></div>
+            <div class="agents__full__phone js-slider-agents__full__phone"><a href="#"></a></div>
+            <div class="agents__full__link js-slider-agents__full__link"><a href="#"></a></div>
+            <div class="agents__full__all js-slider-agents__full__all"><a href="#">Посмотреть все объекты</a></div>
+        </div>
+        <div class="agents__buttons">
+            <a href="#" class="btn _lg _solid">Начать сотрудничество</a>
+            <a href="#" class="btn _lg _secondary">Все риэлторы</a>
+        </div>
     </div>
 </section>
