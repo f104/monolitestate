@@ -9,6 +9,19 @@
     }
 }
 
+@mixin link-black {
+    color: $body-color;
+    &:after {
+        content: none;
+    }
+    [class^="icon-"] {
+        color: $primary;
+    }
+    &:hover {
+        color: $primary;
+    }
+}
+
 @mixin link-inverse {
     color: $white;
     &:after {

@@ -46,7 +46,7 @@ body {
     padding-top: 0 !important;
 }
 
-a {
+a, .link {
     outline: none;
     position: relative;
     @include transition(color);
@@ -65,6 +65,11 @@ a {
             opacity: .7;
         }
     }
+    &._inverse {
+        &:after {
+            background: url(img/link-inverse.png) repeat-x;
+        }
+    }
 }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
@@ -72,6 +77,11 @@ a {
     margin-left: 0; 
     width: auto;
     line-height: inherit;
+}
+[class^="icon-"] {
+    &._middle {
+        vertical-align: middle;
+    }
 }
 
 .content {
@@ -83,10 +93,10 @@ a {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #000;
-        opacity: .4;
+        background-color: $white;
+        opacity: .8;
         z-index: 900;
-        /*@include transition();*/
+        /*@include transition(all);*/
     }
 }
 
