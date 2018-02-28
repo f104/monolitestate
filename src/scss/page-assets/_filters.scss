@@ -1,0 +1,289 @@
+.filters {
+    margin-bottom: 30px;
+    .index-section__h3 {
+        font-size: 16px;
+        font-weight: normal;
+        margin-bottom: 16px;
+    }
+    .filters__tabs {
+        @include list-unstyled;
+        display: flex;
+        li {
+            flex: 1;
+            border-style: solid;
+            border-color: $secondary;
+            border-width: 1px 0 1px 1px;
+            &:first-of-type {
+                border-radius: 5px 0 0 5px; 
+            }
+            &:last-of-type {
+                border-radius: 0 5px 5px 0;
+                border-right-width: 1px;
+            }
+            a {
+                @include link-black;
+                display: block;
+                font-size: 14px;
+                line-height: 32px;
+                padding-top: 1px;
+                text-align: center;
+                transition: background-color .2s ease-in-out, color .2s ease-in-out;
+                &.active, &:hover {
+                    background-color: $secondary;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+.filters-form {
+    .input-group {
+        margin-bottom: 15px;
+    }
+    .filters-form__realty-type {
+        @include row(10px);
+        .filters-form__realty-type__item {
+            @include col(50%, 10px)
+            margin-bottom: 10px;
+            display: flex;
+            .filters-form__realty-type__label {
+                opacity: 1;
+                margin-bottom: 0;
+                cursor: pointer;
+                flex: 1;
+                display: flex;
+                .filters-form__realty-type__label__inner {
+                    min-height: 81px;
+                    border-radius: 5px;
+                    background-color: $white;
+                    padding: 10;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    justify-content: center;
+                    flex: 1;
+                    font-weight: normal;
+                    @include transition(background-color);
+                    position: relative;
+                    .filters-form__realty-type__label__inner__img {
+                        margin-bottom: 6px;
+                        @each $tmp in second, new, village, commerce {
+                            &._#{$tmp} {
+                                @extend .sprite;
+                                @extend .realty-#{$tmp};
+                            }
+                        }
+                    }
+                }
+                input {
+                    display: none;
+                    &:checked {
+                        ~ .filters-form__realty-type__label__inner {
+                            background-color: $primary;
+                            color: $white;
+                            .filters-form__realty-type__label__inner__img {
+                                @each $tmp in second, new, village, commerce {
+                                    &._#{$tmp} {
+                                        @extend .sprite;
+                                        @extend .realty-#{$tmp}-o;
+                                    }
+                                }
+                            }
+                            @extend .sprite;
+                            @extend .realty-check;
+                            font-size: inherit;
+                            &:before {
+                                position: absolute;
+                                top: 11px;
+                                right: 11px;
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .filters-form__rooms {
+        label {
+            font-size: 12px;
+            font-weight: normal;
+            margin-bottom: 6px;
+        }
+        .filters-form__rooms__inner {
+            font-size: 0;
+            .filters-form__rooms__inner__checkbox {
+                opacity: 1;
+                margin-bottom: 0;
+                display: inline-block;
+                margin-right: 7px;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+                .filters-form__rooms__inner__checkbox__inner {
+                    font-size: 14px;
+                    line-height: 32px;
+                    font-weight: 500;
+                    display: block;
+                    min-width: 32px;
+                    text-align: center;
+                    background-color: rgba(0, 0, 0, 0.07);
+                    padding: 0 4px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    @include transition(box-shadow);
+                }
+                &:hover {
+                    .filters-form__rooms__inner__checkbox__inner {
+                        @include border-inset(1px, $primary);
+                    }
+                }
+                input {
+                    display: none;
+                    &:checked {
+                        ~ .filters-form__rooms__inner__checkbox__inner {
+                            @include border-inset(2px, $primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .filters-form__summary {
+        margin-top: 20px;
+        .filters-form__summary__text {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .filters-form__summary__buttons {
+            @include row(10px);
+            .filters-form__summary__buttons__col {
+                @include col(auto, 10px);
+                flex: 1;
+                .btn {
+                    padding: 0;
+                    [class^="icon-"] {
+                        font-size: 15px;
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .filters-form {
+        .filters-form__md {
+            display: none !important;
+        }        
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .filters {
+        margin-bottom: 35px;
+        .index-section__h3 {
+            display: none;
+        }
+        .filters__tabs {
+            display: none;
+        }
+    }
+    .filters-form {
+        .filters-form__h3 {
+            font-size: 30px;
+            font-weight: 300;
+            line-height: 1.13;
+            margin-bottom: 22px;
+        }
+        .filters-form__rooms {
+            .filters-form__rooms__inner {
+                display: flex;
+                .filters-form__rooms__inner__checkbox {
+                    flex: 1;
+                }
+            }
+        }
+        .filters-form__summary {
+            margin-top: 10px;
+            .filters-form__summary__text {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            .filters-form__summary__buttons {
+                @include row(15px);
+                margin-bottom: 20px;
+                .filters-form__summary__buttons__col {
+                    @include col(171px, 15px);
+                }
+            }
+        }
+        .filters-form__help {
+            opacity: 0.5;
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+        .filters-form__sm {
+            display: none !important;
+        }
+        .filters-form__row {
+            @include row(12px);
+            align-items: flex-end;
+            .input-group {
+                @include col(33.33%, 12px);
+                margin-bottom: 12px;
+                &._col1 {
+                    order: 1;
+                    flex-basis: 31%;
+                }
+                &._col2 {
+                    order: 2;
+                    flex-basis: 33%;
+                }
+                &._col3 {
+                    order: 3;
+                    flex-basis: 36%;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .filters-form {
+        .filters-form__h3 {
+            font-size: 35px;
+            line-height: 0.97;
+        }
+        .filters-form__summary {
+            .filters-form__summary__text {
+                margin-bottom: 17px;
+            }
+            .filters-form__summary__buttons {
+                margin-bottom: 25px;
+                .btn {
+                    font-size: 19px;
+                    line-height: 60px;
+                }
+            }
+        }
+        .filters-form__row {
+            @include row(18px);
+            .input-group {
+                @include col(33.33%, 18px);
+                margin-bottom: 18px;
+            }
+        }
+        .filters-form__row__lg {
+            display: flex;
+            .filters-form__col__lg {
+                &:first-of-type {
+                    flex: 1;
+                    margin-right: 32px;
+                }
+            }
+        }
+    }
+}

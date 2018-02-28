@@ -1,0 +1,97 @@
+.fancybox-container._popup {
+    .fancybox-is-open .fancybox-bg {
+        opacity: .8;
+    }
+    .fancybox-bg {
+        background: $white;
+    }
+    .fancybox-close-small {
+        right: 20px;
+        top: 26px;
+        width: auto;
+        height: auto;
+        &:after {
+            content: none;
+        }
+    }
+    .fancybox-slide > div {
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 0 50px 0 rgba(12, 27, 63, 0.2);
+        background-color: transparent;
+    }
+}
+.popup {
+    border-radius: 4px;
+    background-color: $white;
+    padding: 22px 20px;
+    position: relative;
+    .popup__h3 {
+        font-size: 22px;
+        font-weight: 300;
+        margin-bottom: 5px;
+        margin-right: 80px;
+    }
+    .popup__lead {
+        opacity: 0.5;
+        font-size: 13px;
+        margin-bottom: 22px;
+    }
+}
+.popup-call {
+    width: 320px;
+    height: 560px;
+    .popup-call__help {
+        margin-right: 100px;
+    }
+    .popup-call__img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 183px;
+    }
+}
+@include media-breakpoint-up(lg) {
+    .fancybox-container._popup {
+        .fancybox-close-small {
+            right: 50px;
+            top: 42px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+    .popup {
+        border-radius: 4px;
+        padding: 42px 50px;
+        .popup__h3 {
+            font-size: 35px;
+            margin-bottom: 10px;
+            margin-right: 120px;
+        }
+        .popup__lead {
+            opacity: 0.5;
+            font-size: 15px;
+            margin-bottom: 40px;
+        }
+    }
+    .popup-call {
+        width: 644px;
+        height: 577px;
+        .popup-call__help {
+            margin-top: 30px;
+            margin-right: 30px;
+        }
+        .popup-call__img {
+            position: absolute;
+            right: 41px;
+            bottom: 0;
+            width: 302px;
+        }
+        .popup-call__form {
+            width: 291px;
+            .btn {
+                width: 208px;
+            }
+        }
+    }    
+}

@@ -1,0 +1,27 @@
+<div id="call">
+    <div class="popup popup-call">
+        <h3 class="popup__h3">Заказать обратный звонок</h3>
+        <p class="popup__lead">Перезвоним в течение 5 минут</p>
+        <form id="popup_call_form" class="popup-call__form js-validate">
+            <div class="input-group _lg _secondary">
+                <label>Как к вам обращаться?</label>
+                <input type="text" name="name" value="Иван" required>
+            </div>
+            <div class="input-group _lg _secondary">
+                <label>Ваш телефон</label>
+                <input type="text" name="phone" value="7" 
+                       data-inputmask="'mask': '+9 (999) 999-99-99'" 
+                       required>
+            </div>
+            <div class="input-group">
+                <button class="btn _solid _lg _shadow" type="submit">Перезвоните мне</button>
+            </div>
+            <div class="input-group">
+                <div class="input-help popup-call__help">Нажимая кнопку «Перезвоните мне» вы принимаете Условия пользовательского соглашения и соглашаетесь на обработку ваших персональных данных.</div>
+            </div>
+        </form>
+        <img class="popup-call__img" src="img/call.png"
+             srcset="img/call@2x.png 2x,img/call@3x.png 3x"
+             alt="alt text">
+    </div>
+</div>

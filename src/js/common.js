@@ -6,6 +6,15 @@ jQuery(function () {
         initAgentsPresentation();
         setAgentsPresentation();
         initMenu();
+        initMask();
+        initPopup();
+        initSelect();
+        initValidate();
+        initRealtyFilters();
+
+        $('.js-scrollbar').scrollbar();
+        $('.js-tabs').easytabs();
+
     });
 
     $(window).on('resize', function () {
@@ -64,30 +73,24 @@ jQuery(function () {
     }
 
     function setAgentsPresentation() {
-        var $agent = $('.js-slider-agents ._active .js-slider-agents__short');
-        var $full = $('.js-slider-agents__full');
-        $full.find('.js-slider-agents__full__img').attr('src', $agent.data('agent-img'));
-        $full.find('.js-slider-agents__full__name').text($agent.data('agent-name'));
-        var phone = $agent.data('agent-phone');
-        $full.find('.js-slider-agents__full__phone a').text(phone).attr('href', 'tel:' + phone.replace(/[-\s]/g, ''));
-        var link = $agent.data('agent-link');
-        $full.find('.js-slider-agents__full__link a').text(link).attr('href', '//:' + link);
+        if ($('.js-slider-agents').length) {
+            var $agent = $('.js-slider-agents ._active .js-slider-agents__short');
+            var $full = $('.js-slider-agents__full');
+            $full.find('.js-slider-agents__full__img').attr('src', $agent.data('agent-img'));
+            $full.find('.js-slider-agents__full__name').text($agent.data('agent-name'));
+            var phone = $agent.data('agent-phone');
+            $full.find('.js-slider-agents__full__phone a').text(phone).attr('href', 'tel:' + phone.replace(/[-\s]/g, ''));
+            var link = $agent.data('agent-link');
+            $full.find('.js-slider-agents__full__link a').text(link).attr('href', '//:' + link);
+        }
     }
 
     function initMenu() {
-//        $('.js-menu-toggler, .js-menu-overlay').off('click');
-//        $('.js-menu-toggler, .js-menu').removeClass('_active');
-//        $('.js-menu').show();
-//        $('.js-menu-overlay').hide();
-        $('.js-menu-scrollbar').scrollbar();
         $('.js-menu-toggler').on('click', function (e) {
             e.preventDefault();
             $(this).toggleClass('_active');
             $('.js-menu').toggleClass('_active');
             $('.js-menu-overlay').toggle();
-//            if ($(window).outerWidth() >= appConfig.breakpoint.md && $(window).outerWidth() < appConfig.breakpoint.lg) {
-//                $('.js-menu').hasClass('_active') ? $('.js-menu').slideDown() : $('.js-menu').slideUp();
-//            }
         });
         $('.js-menu-overlay').on('click', function (e) {
             $('.js-menu-toggler').click();
@@ -96,6 +99,69 @@ jQuery(function () {
             e.preventDefault();
             $(this).toggleClass('_active');
             $('.js-menu-second').toggleClass('_active');
+        });
+    }
+
+    function initMask() {
+        $(':input').inputmask();
+    }
+
+    function initPopup() {
+        var options = {
+            baseClass: '_popup',
+            btnTpl: {
+                smallBtn: '<span data-fancybox-close class="fancybox-close-small"><span class="link">Закрыть</span></span>',
+            },
+        };
+        $('.js-popup').fancybox(options);
+    }
+
+    function initSelect() {
+        $('.js-select-search').each(function (index, element) {
+            var $items = $(element).find('.js-select-search__item');
+            $(element).find('.js-select-search__input').on('keyup', function () {
+                var query = $(this).val().trim().toLowerCase();
+//                console.log(query);
+                if (query.length) {
+                    $items.each(function () {
+                        $(this).data('select-search').toLowerCase().indexOf(query) === 0 ? $(this).show() : $(this).hide();
+                    });
+                } else {
+                    $items.show();
+                }
+            });
+        });
+        $('.js-select').on('click', function(e){
+            e.stopPropagation();
+        });
+        $('.js-select__toggler').on('click', function(){
+            $('.js-select').removeClass('_active');
+            $(this).parents('.js-select').addClass('_active').toggleClass('_opened');
+            $('.js-select').not('._active').removeClass('_opened');
+        });
+        $(window).on('click', function(){
+            $('.js-select').removeClass('_opened _active');
+        });
+    }
+
+    function initValidate() {
+        $.validator.addMethod("phone", function (value, element) {
+            return this.optional(element) || /^\+\d\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/.test(value);
+        }, "Please specify a valid mobile number");
+        var options = {
+            errorPlacement: function (error, element) {},
+            rules: {
+                phone: "phone"
+            }
+        };
+        $('.js-validate').each(function () {
+            $(this).validate(options);
+        });
+    }
+    
+    function initRealtyFilters() {
+        $('.js-filters-realty-type').on('click', function(){
+            $('.js-filters-realty-title').text($(this).data('filters-title'));
         });
     }
 

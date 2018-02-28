@@ -17,13 +17,14 @@ var path = {
         js: 'build/js/',
         css: 'build/css/',
         img: 'build/img/',
-        sprite: 'build/css/sprite/',
+        sprite: 'src/scss/',
+//        sprite: 'build/css/sprite/',
         fonts: 'build/fonts/'
     },
     src: {
         html: 'src/*.html',
         js: 'src/js/**/*.js',
-        style: 'src/scss/**/*.*',
+        style: 'src/scss/**/*.scss',
         img: 'src/img/**/*.*',
         sprite: 'src/img/sprite/*.svg',
         fonts: 'src/fonts/**/*.*'
@@ -96,8 +97,9 @@ gulp.task('sprites', function () {
     return gulp.src(path.src.sprite)
         .pipe(svgSprite({
             common: "sprite",
-//            preview: false,
-//            cssFile: "_sprite.scss"
+            preview: false,
+            cssFile: "_sprite.scss",
+            svgPath: "%f"
         }))
         .pipe(gulp.dest(path.build.sprite));
 });

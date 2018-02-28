@@ -1,0 +1,111 @@
+<section class="container index-section filters">
+    <h3 class="index-section__h3">Недвижимость в Нижнем Новгороде</h3>
+    <div class="js-tabs">
+        <ul class="filters__tabs">
+            <li><a href="#buy">Купить</a></li>
+            <li><a href="#rent1">Снять</a></li>
+            <li><a href="#sell">Продать</a></li>
+            <li><a href="#rent2">Сдать</a></li>
+        </ul>
+        <div id="buy">
+            <form class="filters-form">
+                <h3 class="filters-form__h3 filters-form__md js-filters-realty-title">Найдите недвижимость на вторичном рынке</h3>
+                <div class="filters-form__row__lg">
+                    <div class="filters-form__col__lg _col1">
+                        <div class="input-group filters-form__realty-type filters-form__sm">
+                            <div class="filters-form__realty-type__item">
+                                <label class="filters-form__realty-type__label js-filters-realty-type"
+                                       data-filters-title="Найдите недвижимость на вторичном рынке">
+                                    <input type="radio" checked name="realty-type">
+                                    <span class="filters-form__realty-type__label__inner">
+                                        <i class="filters-form__realty-type__label__inner__img _second"></i>
+                                        Вторичная
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="filters-form__realty-type__item">
+                                <label class="filters-form__realty-type__label js-filters-realty-type"
+                                       data-filters-title="Найдите недвижимость в новостройках">
+                                    <input type="radio" name="realty-type">
+                                    <span class="filters-form__realty-type__label__inner">
+                                        <i class="filters-form__realty-type__label__inner__img _new"></i>
+                                        Новостройки
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="filters-form__realty-type__item">
+                                <label class="filters-form__realty-type__label js-filters-realty-type"
+                                       data-filters-title="Найдите загородную недвижимость">
+                                    <input type="radio" name="realty-type">
+                                    <span class="filters-form__realty-type__label__inner">
+                                        <i class="filters-form__realty-type__label__inner__img _village"></i>
+                                        Загородная
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="filters-form__realty-type__item">
+                                <label class="filters-form__realty-type__label js-filters-realty-type"
+                                       data-filters-title="Найдите коммерческую недвижимость">
+                                    <input type="radio" name="realty-type">
+                                    <span class="filters-form__realty-type__label__inner">
+                                        <i class="filters-form__realty-type__label__inner__img _commerce"></i>
+                                        Коммерческая
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filters-form__row">
+                            <div class="input-group filters-form__rooms _col2">
+                                <label>Кол-во комнат</label>
+                                <div class="filters-form__rooms__inner">
+                                    <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">Студ.</span></label>
+                                    <label class="filters-form__rooms__inner__checkbox filters-form__sm"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">Комн.</span></label>
+                                    <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">1</span></label>
+                                    <label class="filters-form__rooms__inner__checkbox"><input type="checkbox" checked><span class="filters-form__rooms__inner__checkbox__inner">2</span></label>
+                                    <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">3</span></label>
+                                    <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">4+</span></label>
+                                </div>
+                            </div>
+                            <div class="input-group _col1">
+                                @@include('./chunks/pseudo-select.html', {"title": "Район, Улица"})
+                            </div>
+                            <div class="input-group _double _col3">
+                                <input placeholder="Цена от (руб.)">
+                                <input placeholder="Цена до (руб.)">
+                            </div>
+                        </div>
+                        <div class="filters-form__row filters-form__md">
+                            <div class="input-group _col1">
+                                @@include('./chunks/pseudo-select.html', {"title": "Жилой комплекс"})
+                            </div>
+                            <div class="input-group _col2">
+                                <input placeholder="Код объекта">
+                            </div>
+                            <div class="input-group _double _col3">
+                                <input placeholder="Площадь от">
+                                <input placeholder="Площадь до">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filters-form__col__lg _col2">
+                        <div class="filters-form__summary">
+                            <p class="filters-form__summary__text">Найдено 19 518 вариантов</p>
+                            <div class="filters-form__summary__buttons">
+                                <div class="filters-form__summary__buttons__col">
+                                    <button class="btn _lg _secondary">Показать</button>
+                                </div>
+                                <div class="filters-form__summary__buttons__col">
+                                    <button class="btn _lg _primary"><i class="icon-map _middle"></i>На карте</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="filters-form__help filters-form__md">Для поиска другой недвижимости перейдите в соответствующий раздел</p>
+            </form>
+        </div>
+        <div id="rent1">Снять</div>
+        <div id="sell">Продать</div>
+        <div id="rent2">Сдать</div>
+    </div>
+</section>

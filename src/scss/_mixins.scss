@@ -92,3 +92,10 @@
     top: 0;
     left: 0;
 }
+
+@mixin border-inset($width, $color) {
+    box-shadow: inset $width 0 0 $color, 
+                inset 0 $width 0 $color, 
+                inset (-$width) 0 0 $color, 
+                inset 0 (-$width) 0 $color;
+}
