@@ -11,6 +11,7 @@ jQuery(function () {
         initSelect();
         initValidate();
         initRealtyFilters();
+        initPassword();
 
         $('.js-scrollbar').scrollbar();
         $('.js-tabs').easytabs();
@@ -114,6 +115,12 @@ jQuery(function () {
             },
         };
         $('.js-popup').fancybox(options);
+        if (window.location.hash) {
+            var $cnt = $(window.location.hash);
+            if ($cnt.length && $cnt.hasClass('popup-cnt')) {
+                $.fancybox.open($cnt, options);
+            }
+        }
     }
 
     function initSelect() {
@@ -131,15 +138,15 @@ jQuery(function () {
                 }
             });
         });
-        $('.js-select').on('click', function(e){
+        $('.js-select').on('click', function (e) {
             e.stopPropagation();
         });
-        $('.js-select__toggler').on('click', function(){
+        $('.js-select__toggler').on('click', function () {
             $('.js-select').removeClass('_active');
             $(this).parents('.js-select').addClass('_active').toggleClass('_opened');
             $('.js-select').not('._active').removeClass('_opened');
         });
-        $(window).on('click', function(){
+        $(window).on('click', function () {
             $('.js-select').removeClass('_opened _active');
         });
     }
@@ -158,11 +165,39 @@ jQuery(function () {
             $(this).validate(options);
         });
     }
-    
+
     function initRealtyFilters() {
-        $('.js-filters-realty-type').on('click', function(){
+        $('.js-filters-realty-type').on('click', function () {
             $('.js-filters-realty-title').text($(this).data('filters-title'));
         });
+    }
+
+    function initPassword() {
+        // https://github.com/dropbox/zxcvbn
+        $.getScript("js/libs/zxcvbn.js")
+                .done(function (script, textStatus) {
+                    init();
+                })
+                .fail(function (jqxhr, settings, exception) {
+                    console.log('Error loading zxcvbn');
+                });
+
+        function init() {
+            $('.js-password').on('keyup', function () {
+                if (typeof (zxcvbn) === 'undefined') {
+                    return;
+                }
+                var val = $(this).val().trim(),
+                        res = zxcvbn(val),
+                        cnt = $(this).siblings('.input-help');
+                cnt.removeClass('_0 _1 _2 _3 _4');
+                if (val.length) {
+                    cnt.addClass('_' + res.score);
+                }
+//                console.log(res.score);
+            });
+            $('.js-password').keyup();
+        }
     }
 
 });

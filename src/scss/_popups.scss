@@ -51,6 +51,23 @@
         width: 183px;
     }
 }
+.popup-signup {
+    .popup-signup__form {
+        .popup-signup__form__signin {
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .popup-signup__form__row3 {
+            .input-group {
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
 @include media-breakpoint-up(lg) {
     .fancybox-container._popup {
         .fancybox-close-small {
@@ -93,5 +110,36 @@
                 width: 208px;
             }
         }
-    }    
+    }
+    .popup-signup {
+        width: 1015px;
+        .popup-signup__form {
+            .popup-signup__form__row1 {
+                @include row(20px);
+                .input-group {
+                    @include col(auto, 20px);
+                    flex: 1;
+                }
+            }
+            .popup-signup__form__row2 {
+                @include row(23px);
+                align-items: center;
+                margin-bottom: 30px;
+                .input-group {
+                    @include col(auto, 23px);
+                }
+            }
+            .popup-signup__form__row3 {
+                @include row(23px);
+                flex-direction: row-reverse;
+                .input-group {
+                    @include col(50%, 23px);
+                    margin-bottom: 0;
+                }
+            }
+            .popup-signup__form__signin {
+                margin-bottom: 0;
+            }
+        }
+    }
 }

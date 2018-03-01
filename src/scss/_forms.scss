@@ -3,6 +3,9 @@
     font-weight: 500;
     opacity: .85;
 }
+form {
+    margin: 0;
+}
 .btn {
     font-size: 14px;
     line-height: 40px;
@@ -82,6 +85,109 @@
         display: block;
         width: 100%;
     }
+    .input-help {
+        opacity: 0.5;
+        font-size: 12px;
+        font-weight: 500;
+        color: #2e2e2e;
+        &._black {
+            opacity: 1;
+        }
+        &._password {
+            opacity: 1;
+            position: relative;
+            padding-top: 11px;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 6px;
+                border-radius: 3px;
+                background-color: #f0f0f0;
+                display: none;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 6px;
+                border-radius: 3px;
+                transition: width .2s ease-in-out, color .2s ease-in-out;
+                display: none;
+            }
+            .input-help__pass {
+                display: none;
+                &._0, &._1 {
+                    color: $red;
+                }
+                &._2 {
+                    color: $secondary;
+                }
+                &._3, &._4 {
+                    color: $green;
+                }
+                &._0 {
+                    ._0 {
+                        display: block;
+                    }
+                }
+            }
+            &._0, &._1, &._2, &._3, &._4 {
+                &:before, &:after {
+                    display: block;
+                }
+            }
+            &._0 {
+                &:after {
+                    width: 20%;
+                    background-color: $red;
+                }
+                ._0 {
+                    display: block;
+                }
+            }
+            &._1 {
+                &:after {
+                    width: 40%;
+                    background-color: $red;
+                }
+                ._1 {
+                    display: block;
+                }
+            }
+            &._2 {
+                &:after {
+                    width: 60%;
+                    background-color: $secondary;
+                }
+                ._2 {
+                    display: block;
+                }
+            }
+            &._3 {
+                &:after {
+                    width: 80%;
+                    background-color: $green;
+                }
+                ._3 {
+                    display: block;
+                }
+            }
+            &._4 {
+                &:after {
+                    width: 100%;
+                    background-color: $green;
+                }
+                ._4 {
+                    display: block;
+                }
+            }
+        }
+    }
     input {
         display: block;
         width: 100%;
@@ -102,6 +208,9 @@
         &:focus {
             @include border-inset(2px, $primary);
         }
+        ~ .input-help {
+            margin-top: 6px;
+        }
         &.error {
             @include border-inset(1px, #ff0000);
             background-color: #f2d3d3;
@@ -113,12 +222,11 @@
                 @include border-inset(2px, #ff0000);
                 background-color: #f2d3d3;
             }
+            ~ .input-help {
+                opacity: 1;
+                color: $red;
+            }
         }
-    }
-    .input-help {
-        opacity: 0.7;
-        font-size: 12px;
-        font-weight: 500;
     }
     &._lg {
         input {

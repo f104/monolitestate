@@ -49,6 +49,7 @@ a, .link {
     position: relative;
     @include transition(color);
     color: $link-color;
+    cursor: pointer;
     &:after {
         content: '';
         position: absolute;
