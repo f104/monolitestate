@@ -44,7 +44,7 @@
                     <a href="#" class="header__main__user__link"><i class="icon-user"></i></a>
                 </div>
                 <div class="header__main__md">
-                    <a href="#" class="header__main__user__link btn _primary"><i class="icon-user _middle"></i> Войти</a>
+                    <a href="#login" class="header__main__user__link btn _primary js-popup"><i class="icon-user _middle"></i> Войти</a>
                     <a href="#signup" class="header__main__user__link btn _secondary js-popup">Регистрация</a>
                 </div>
             </div>
@@ -62,7 +62,7 @@
         <div class="header__menu__inner js-scrollbar scrollbar-outer">
             <div class="container">
                 <div class="header__menu__user">
-                    <a href="#" class="header__main__user__link btn _primary"><i class="icon-user _middle"></i> Войти</a>
+                    <a href="#login" class="header__main__user__link btn _primary js-popup"><i class="icon-user _middle"></i> Войти</a>
                     <a href="#signup" class="header__main__user__link btn _secondary js-popup">Регистрация</a>
                 </div>
                 <div class="header__menu__phone">
@@ -1136,13 +1136,15 @@
                     </ul>
                 </div>
                 <div class="footer__up__col _col4">
-                    <ul class="footer__social">
-                        <li><a href="#" class="_fb" rel="noopener nofollow"></a></li>
-                        <li><a href="#" class="_instagram" rel="noopener nofollow"></a></li>
-                        <li><a href="#" class="_vk" rel="noopener nofollow"></a></li>
-                        <li><a href="#" class="_twitter" rel="noopener nofollow"></a></li>
-                        <li><a href="#" class="_ok" rel="noopener nofollow"></a></li>
-                    </ul>
+                    <div class="footer__social">
+                        <ul class="social-links">
+    <li><a href="#" class="_fb" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_instagram" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_vk" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_twitter" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_ok" rel="noopener nofollow"></a></li>
+</ul>
+                    </div>
                 </div>
             </div>
             <div class="footer__down">
@@ -1227,7 +1229,7 @@
                     <button class="btn _solid _lg _shadow" type="submit">Регистрация</button>
                 </div>
                 <div class="input-group">
-                    <div class="popup-signup__form__signin">Я <a href="#signin" class="js-popup">уже зарегистрирован</a> на вашем сайте</div>
+                    <div class="popup-signup__form__login">Я <a href="#login" class="js-popup">уже зарегистрирован</a> на вашем сайте</div>
                 </div>
             </div>
             <div class="popup-signup__form__row3">
@@ -1236,6 +1238,51 @@
                 </div>
                 <div class="input-group">
                     <div class="input-help _black">При регистрации на сайте вы получите доступ к своему личному кабинету, где сможете добавлять объявления в избранное и наблюдать за ними.</div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+    <div id="login" class="popup-cnt">
+    <div class="popup popup-signup _login">
+        <h3 class="popup__h3">Вход в личный кабинет</h3>
+        <form id="popup_login_form" class="popup-signup__form">
+            <div class="popup-signup__form__row1">
+                <div class="input-group _lg _secondary">
+                    <label>E-mail <span class="link">или телефон</span></label>
+                    <input type="text" name="name" value="user@host.com" required>
+                </div>
+                <div class="input-group _lg _secondary">
+                    <label>Пароль</label>
+                    <input type="password" name="password" value="J3hdIsd Kj" required class="error">
+                    <div class="input-help">
+                        Пароль не верный, <a href="#signup" class="js-popup">Забыли пароль?</a>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-signup__form__row2">
+                <div class="input-group">
+                    <button class="btn _solid _lg _shadow" type="submit">Войти</button>
+                </div>
+                <div class="input-group">
+                    <div class="popup-signup__form__login">Мне сначала нужно 
+                        <a href="#signup" class="js-popup">зарегистрироваться</a></div>
+                </div>
+            </div>
+            <div class="popup-signup__form__row3">
+                <div class="input-group">
+                    <div class="popup-signup__form__social">
+                        <span class="popup-signup__form__social__text">
+                            Войти через социальные сети
+                        </span>
+                        <ul class="social-links">
+    <li><a href="#" class="_fb" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_instagram" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_vk" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_twitter" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_ok" rel="noopener nofollow"></a></li>
+</ul>
+                    </div>
                 </div>
             </div>
         </form>
@@ -1264,6 +1311,4 @@
 <script src="js/libs/jquery.easytabs.min.js"></script>
 <script src="js/libs/jquery.validate.min.js"></script>
 <script src="js/common.js"></script>
-
-<!--<script src="js/libs/zxcvbn.js" async></script>-->
 </html>

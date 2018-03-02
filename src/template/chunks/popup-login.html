@@ -1,0 +1,39 @@
+<div id="login" class="popup-cnt">
+    <div class="popup popup-signup _login">
+        <h3 class="popup__h3">Вход в личный кабинет</h3>
+        <form id="popup_login_form" class="popup-signup__form">
+            <div class="popup-signup__form__row1">
+                <div class="input-group _lg _secondary">
+                    <label>E-mail <span class="link">или телефон</span></label>
+                    <input type="text" name="name" value="user@host.com" required>
+                </div>
+                <div class="input-group _lg _secondary">
+                    <label>Пароль</label>
+                    <input type="password" name="password" value="J3hdIsd Kj" required class="error">
+                    <div class="input-help">
+                        Пароль не верный, <a href="#signup" class="js-popup">Забыли пароль?</a>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-signup__form__row2">
+                <div class="input-group">
+                    <button class="btn _solid _lg _shadow" type="submit">Войти</button>
+                </div>
+                <div class="input-group">
+                    <div class="popup-signup__form__login">Мне сначала нужно 
+                        <a href="#signup" class="js-popup">зарегистрироваться</a></div>
+                </div>
+            </div>
+            <div class="popup-signup__form__row3">
+                <div class="input-group">
+                    <div class="popup-signup__form__social">
+                        <span class="popup-signup__form__social__text">
+                            Войти через социальные сети
+                        </span>
+                        @@include('./social.html')
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

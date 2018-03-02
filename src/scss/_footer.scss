@@ -52,30 +52,6 @@
             font-weight: normal;
         }
     }
-    .footer__social {
-        @include list-unstyled;
-        font-size: 0;
-        margin-bottom: 0;
-        li {
-            display: inline-block;
-            margin-right: 5px;
-            &:last-of-type {
-                margin-right: 0;
-            }
-        }
-        a {
-            @include link-in-text;
-            @each $social in fb, instagram, vk, twitter, ok {
-                &._#{$social} {
-                    @extend .sprite;
-                    @extend .#{$social};
-                    &:hover {
-                        @extend .#{$social}-hover;
-                    }   
-                }
-            }
-        }
-    }
     .footer__up {
         margin-bottom: 30px;
     }

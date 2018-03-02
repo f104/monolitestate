@@ -114,7 +114,9 @@ jQuery(function () {
                 smallBtn: '<span data-fancybox-close class="fancybox-close-small"><span class="link">Закрыть</span></span>',
             },
         };
-        $('.js-popup').fancybox(options);
+        $('.js-popup').on('click', function(){
+            $.fancybox.close();
+        }).fancybox(options);
         if (window.location.hash) {
             var $cnt = $(window.location.hash);
             if ($cnt.length && $cnt.hasClass('popup-cnt')) {
