@@ -2,6 +2,7 @@ jQuery(function () {
     "use strict";
 
     $(document).ready(function () {
+        initMainSlider();
         initSmallSliders();
         initAgentsPresentation();
         setAgentsPresentation();
@@ -22,6 +23,84 @@ jQuery(function () {
         initSmallSliders();
 //        initMenu();
     });
+
+    function initMainSlider() {
+        var time = appConfig.sliderAutoplaySpeed / 1000;
+        var $bar = $('.js-main-slider-bar'),
+            $slick = $('.js-slider-main'),
+            isPause = false,
+            tick,
+            percentTime;
+    
+        if ($slick.length === 0) return;
+
+        $slick.slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            speed: appConfig.sliderFadeSpeed
+//            autoplaySpeed: appConfig.sliderAutoplaySpeed,
+        });
+        $slick.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            if (currentSlide < nextSlide) {
+                $(slick.$slides[currentSlide]).addClass('_fade _left');
+                $(slick.$slides[nextSlide]).addClass('_fade _right');
+            } else {
+                $(slick.$slides[currentSlide]).addClass('_fade _right');
+                $(slick.$slides[nextSlide]).addClass('_fade _left');
+            }
+            clearTimeout(tick);
+            $bar.animate({
+                width: 0 + '%'
+            }, 100);
+        });
+        $slick.on('afterChange', function (event, slick, currentSlide) {
+            $(slick.$slides[currentSlide]).removeClass('_fade _left _right');
+            startProgressbar();
+        });
+
+        $slick.on({
+            mouseenter: function () {
+                isPause = true;
+            },
+            mouseleave: function () {
+                isPause = false;
+            }
+        })
+
+        function startProgressbar() {
+            resetProgressbar();
+            percentTime = 0;
+//            isPause = false;
+            tick = setInterval(interval, 10);
+        }
+
+        function interval() {
+            if (isPause === false) {
+                percentTime += 1 / (time + 0.1);
+                $bar.css({
+                    width: percentTime + "%"
+                });
+                if (percentTime >= 100) {
+                    $slick.slick('slickNext');
+                }
+            }
+        }
+
+
+        function resetProgressbar() {
+            $bar.css({
+                width: 0 + '%'
+            });
+            clearTimeout(tick);
+        }
+
+        startProgressbar();
+
+    }
 
     function initSmallSliders() {
         if ($(window).outerWidth() < appConfig.breakpoint.md) {
@@ -114,7 +193,7 @@ jQuery(function () {
                 smallBtn: '<span data-fancybox-close class="fancybox-close-small"><span class="link">Закрыть</span></span>',
             },
         };
-        $('.js-popup').on('click', function(){
+        $('.js-popup').on('click', function () {
             $.fancybox.close();
         }).fancybox(options);
         if (window.location.hash) {
@@ -175,8 +254,15 @@ jQuery(function () {
     }
 
     function initPassword() {
+        if ($('.js-password').length === 0) {
+            return;
+        }
         // https://github.com/dropbox/zxcvbn
-        $.getScript("js/libs/zxcvbn.js")
+        $.ajax({
+            url: "./js/libs/zxcvbn.js",
+            dataType: "script",
+            cache: true
+        })
                 .done(function (script, textStatus) {
                     init();
                 })

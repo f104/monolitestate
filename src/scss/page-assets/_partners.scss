@@ -58,7 +58,7 @@ $partners-gutter-width: $grid-gutter-width;
             }
         }
     }
-    .partners-more {
+    .partners__more {
         display: none;
     }
 }
@@ -88,7 +88,7 @@ $partners-gutter-width: $grid-gutter-width;
             margin-left: auto;
             margin-right: auto;
         }
-        .partners-more {
+        .partners__more {
             display: block;
             margin-bottom: 12px;
         }
@@ -98,10 +98,10 @@ $partners-gutter-width: $grid-gutter-width;
     .partners {
         .partners__list {
             @include row($partners-gutter-width);
-            margin-bottom: 39px;
+            margin-bottom: 39 - $partners-gutter-width;
             .partners__list__item {
                 @include col(25%, $partners-gutter-width);
-                margin-bottom: 0;
+                margin-bottom: $partners-gutter-width;
             }
         }
     }
