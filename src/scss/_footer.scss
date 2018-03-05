@@ -79,7 +79,7 @@
         display: inline-block;
     }
     .footer__down {
-        margin-bottom: 20px;
+        padding-bottom: 20px;
     }
 }
 @include media-breakpoint-down(md) {

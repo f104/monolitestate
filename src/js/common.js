@@ -27,12 +27,13 @@ jQuery(function () {
     function initMainSlider() {
         var time = appConfig.sliderAutoplaySpeed / 1000;
         var $bar = $('.js-main-slider-bar'),
-            $slick = $('.js-slider-main'),
-            isPause = false,
-            tick,
-            percentTime;
-    
-        if ($slick.length === 0) return;
+                $slick = $('.js-slider-main'),
+                isPause = false,
+                tick,
+                percentTime;
+
+        if ($slick.length === 0)
+            return;
 
         $slick.slick({
             dots: true,
@@ -166,6 +167,16 @@ jQuery(function () {
     }
 
     function initMenu() {
+        if ($(window).outerWidth() < appConfig.breakpoint.md) {
+            $('.js-menu .scrollbar-outer').scrollbar();
+        }
+        $(window).on('resize', function () {
+            if ($(window).outerWidth() < appConfig.breakpoint.md) {
+                $('.js-menu .scrollbar-outer').scrollbar();
+            } else {
+                $('.js-menu .scrollbar-outer').scrollbar('destroy');
+            }
+        });
         $('.js-menu-toggler').on('click', function (e) {
             e.preventDefault();
             $(this).toggleClass('_active');

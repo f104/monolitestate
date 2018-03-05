@@ -202,6 +202,7 @@ form {
         color: $body-color;
         padding: 0 16px;
         outline: none;
+        min-width: 0; //https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size
         @include transition(box-shadow);
         &:hover{
             @include border-inset(1px, $primary);
@@ -380,9 +381,8 @@ form {
             padding: 1px 0;
             .scroll-element {
                 &.scroll-y {
-                    width: 6px;
                     .scroll-element_outer {
-                        left: 0px;
+                        left: 6px;
                         width: 6px;
                     }
                 }
