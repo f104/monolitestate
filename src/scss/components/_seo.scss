@@ -1,0 +1,31 @@
+.seo {
+    .seo_h {
+        font-size: 22px;
+        font-weight: 300;
+        margin-bottom: 24px;
+    }
+    p {
+        opacity: 0.5;
+        font-family: Lato;
+        font-size: 14px;
+        line-height: 1.29;
+    }
+}
+@include media-breakpoint-up(md) {
+    .seo {
+        .seo_h {
+            font-size: 28px;
+            line-height: 1.21;
+            margin-bottom: 28px;
+        }
+        p {
+            font-size: 15px;
+            line-height: 1.35;
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .seo {
+        width: 971px;
+    }
+}

@@ -95,7 +95,25 @@
 
 @mixin border-inset($width, $color) {
     box-shadow: inset $width 0 0 $color, 
-                inset 0 $width 0 $color, 
-                inset (-$width) 0 0 $color, 
-                inset 0 (-$width) 0 $color;
+        inset 0 $width 0 $color, 
+        inset (-$width) 0 0 $color, 
+        inset 0 (-$width) 0 $color;
+}
+
+@mixin clearfix() {
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+}
+
+@mixin hover-up() {
+    top: 0;
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0);
+    @include transition(all);
+    &:hover {
+        top: -10px;
+        box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.12);
+    }
 }

@@ -1,6 +1,6 @@
 .filters {
     margin-bottom: 30px;
-    .index-section__h3 {
+    .section__h {
         font-size: 16px;
         font-weight: normal;
         margin-bottom: 16px;
@@ -183,7 +183,7 @@
 @include media-breakpoint-up(md) {
     .filters {
         margin-bottom: 35px;
-        .index-section__h3 {
+        .section__h {
             display: none;
         }
         .filters__tabs {
@@ -191,7 +191,7 @@
         }
     }
     .filters-form {
-        .filters-form__h3 {
+        .filters-form__h {
             font-size: 30px;
             font-weight: 300;
             line-height: 1.13;
@@ -253,7 +253,7 @@
 
 @include media-breakpoint-up(lg) {
     .filters-form {
-        .filters-form__h3 {
+        .filters-form__h {
             font-size: 35px;
             line-height: 0.97;
         }

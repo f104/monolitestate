@@ -1,0 +1,187 @@
+.reviews {
+    .reviews__list {
+        margin-left: - $container-padding-sm;
+        margin-right: - $container-padding-sm;
+        .slick-dots {
+            margin-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .reviews__list__item {
+            height: auto;
+            margin-bottom: 30px;
+            .reviews__list__item__inner {
+                padding: $container-padding-sm;
+                background-color: $white;
+            }
+            .reviews__list__item__content {
+                margin-bottom: 26px;
+            }
+            .reviews__list__item__header {
+                margin-bottom: 25px;
+                @include clearfix;
+            }
+            .reviews__list__item__img-wrapper {
+                width: 82px;
+                margin-right: 18px;
+                float: left;
+            }
+            .reviews__list__item__img {
+                border-radius: 50%;
+                width: 100%;
+            }
+            .reviews__list__item__title {
+                font-size: 18px;
+                margin-bottom: 7px;
+            }
+            .reviews__list__item__subtitle {
+                font-size: 14px;
+                margin-bottom: 23px;
+                span {
+                    display: block;
+                }
+            }
+            .reviews__list__item__agent {
+                font-size: 12px;
+                color: #6d6d6d;
+            }
+            .reviews__list__item__date {
+                font-size: 0;
+                .reviews__list__item__date__icon {
+                    color: rgb(126, 126, 126);
+                    margin-right: 9px;
+                    font-size: 14px;
+                    top: -1px;
+                    position: relative;
+                }
+                .reviews__list__item__date__text {
+                    opacity: .5;
+                    font-size: 15px;
+                }
+            }
+        }
+        &._big {
+            display: none;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .reviews {
+        .reviews__list {
+            margin-left: 0;
+            margin-right: 0;
+            .reviews__list__item {
+                .reviews__list__item__inner {
+                    border-radius: 4px;
+                    padding: 33px 40px 40px;
+                }
+                .reviews__list__item__content {
+                    margin-bottom: 32px;
+                }
+                .reviews__list__item__header {
+                    margin-bottom: 20px;
+                    display: flex;
+                    .reviews__list__item__header__inner {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+                }
+                .reviews__list__item__img-wrapper {
+                    width: 103px;
+                    margin-right: 27px;
+                    float: none;
+                }
+                .reviews__list__item__title {
+                    font-size: 24px;
+                    margin-bottom: 17px;
+                }
+                .reviews__list__item__subtitle {
+                    font-size: 14px;
+                    margin-bottom: 8px;
+                    span {
+                        display: inline;
+                    }
+                }
+            }
+        }
+        .btn {
+            width: 237px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .reviews {
+        .reviews__list {
+            .slick-dots {
+                margin-bottom: 40px;
+            }
+            .reviews__list__item {
+                margin-bottom: 40px;
+            }
+            &:not(._big) {
+                @include row(29px);
+                /*margin-top: -10px;*/
+                .reviews__list__item {
+                    margin-top: 10px;
+                    @include col(33.33%, 29px);
+                    .reviews__list__item__inner {
+                        cursor: pointer;
+                        height: 272px;
+                        overflow: hidden;
+                        position: relative;
+                        @include hover-up();
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            height: 125px;
+                            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff, #fff);
+                        }
+                    }
+                    .reviews__list__item__inner {
+                        border-radius: 5px;
+                        padding: 21px 26px;
+                    }
+                    .reviews__list__item__header {
+                        margin-bottom: 24px;
+                    }
+                    .reviews__list__item__img-wrapper {
+                        width: 76px;
+                        margin-right: 23px;
+                    }
+                    .reviews__list__item__title {
+                        font-size: 18px;
+                        margin-bottom: 7px;
+                    }
+                    .reviews__list__item__subtitle {
+                        display: none;
+                    }
+                    .reviews__list__item__date {
+                        position: absolute;
+                        left: 26px;
+                        bottom: 23px;
+                        z-index: 1;
+                    }
+                }
+            }
+            &._big {
+                display: block;
+                transition: height 0.4s ease-in-out;
+                /*height: 0;*/
+                .reviews__list__item {
+                    .reviews__list__item__inner {
+                        /*margin-bottom: 50px;*/
+                        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), $white);
+                    }
+                }
+            }
+        }
+    }
+}

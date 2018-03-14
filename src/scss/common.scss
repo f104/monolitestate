@@ -108,7 +108,6 @@ a, .link {
 @import "forms";
 @import "popups";
 @import "footer";
-@import "page-assets/index";
 @import "page-assets/filters";
 @import "page-assets/realty";
 @import "page-assets/sales";
@@ -116,7 +115,11 @@ a, .link {
 @import "page-assets/hypothec";
 @import "page-assets/agents";
 @import "page-assets/partners";
+@import "page-assets/reviews";
+@import "components/section";
+@import "components/seo";
 @import "components/social";
+@import "components/services";
 
 .preloader {
     display: none !important;

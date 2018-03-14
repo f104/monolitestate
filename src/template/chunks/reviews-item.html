@@ -1,0 +1,32 @@
+<div class="reviews__list__item slide">
+    <div class="reviews__list__item__inner">
+        <div class="reviews__list__item__header">
+            <div class="reviews__list__item__img-wrapper">
+                <img class="reviews__list__item__img"
+                     src="img/reviews/@@img.jpg"
+                     srcset="img/@@img@2x.jpg 2x,
+                     img/@@img@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            <div class="reviews__list__item__header__inner">
+                <div class="reviews__list__item__title">
+                    @@title
+                </div>
+                <div class="reviews__list__item__subtitle">
+                    @@if (post) {@@post,} 
+                    <span class="text-nowrap">@@city</span>
+                </div>
+                <div class="reviews__list__item__agent">
+                    Риелтор: <a href="#" class="text-nowrap">@@agent</a>
+                </div>
+            </div>
+        </div>
+        <div class="reviews__list__item__content">
+            @@text
+        </div>
+        <div class="reviews__list__item__date">
+            <i class="icon-calendar reviews__list__item__date__icon"></i>
+            <span class="reviews__list__item__date__text">@@date</span>
+        </div>
+    </div>
+</div>

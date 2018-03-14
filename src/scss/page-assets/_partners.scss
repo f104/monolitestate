@@ -71,15 +71,7 @@ $partners-gutter-width: $grid-gutter-width;
                 @include col(50%, $partners-gutter-width);
                 margin-bottom: 32px;
                 .partners__list__item__inner {
-                    top: 0;
-                    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0);
-                    @include transition(all);
-                }
-                &:hover {
-                    .partners__list__item__inner {
-                        top: -10px;
-                        box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.12);
-                    }
+                    @include hover-up();
                 }
             }
         }

@@ -4,6 +4,7 @@ jQuery(function () {
     $(document).ready(function () {
         initMainSlider();
         initSmallSliders();
+        initReviewsSlider();
         initAgentsPresentation();
         setAgentsPresentation();
         initMenu();
@@ -296,6 +297,52 @@ jQuery(function () {
 //                console.log(res.score);
             });
             $('.js-password').keyup();
+        }
+    }
+
+    function initReviewsSlider() {
+        var $slider = $('.js-slider-reviews');
+        $slider.slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            slidesToShow: 3,
+            focusOnSelect: true,
+            adaptiveHeight: true,
+            dotsClass: 'slick-dots _big',
+            responsive: [
+                {
+                    breakpoint: appConfig.breakpoint.lg,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+        var $big = $('.reviews__list._big .reviews__list__item');
+        var current = 0;
+        if ($big.length && $slider.length) {
+            setBig();
+            $slider
+            .on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                if (currentSlide != nextSlide) {
+                    clearBig();
+                }
+                current = currentSlide;
+            })
+            .on('afterChange', function (event, slick, currentSlide) {
+                if (currentSlide != current) {
+                    setBig();
+                }
+            });
+        }
+        function clearBig() {
+            $big.fadeOut().empty();
+        }
+        function setBig() {
+            $('.js-slider-reviews .slick-current .reviews__list__item__inner').clone().appendTo($big);
+            $big.fadeIn();
+            $big.parent().css('height', $big.outerHeight(true));
         }
     }
 

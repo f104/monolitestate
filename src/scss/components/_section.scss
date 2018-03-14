@@ -1,11 +1,11 @@
-.index-section {
+.section {
     margin-bottom: 50px;
-    .index-section__h3 {
+    .section__h {
         font-size: 22px;
         font-weight: 300;
         margin-bottom: 20px;
     }
-    .index-section__lead {
+    .section__lead {
         opacity: 0.5;
         font-size: 16px;
         margin-bottom: 28px;
@@ -13,75 +13,47 @@
     &._inverse {
         padding-top: 20px;
         padding-bottom: 20px;
-        .index-section__h3 {
+        .section__h {
             color: $white;
         }
-        .index-section__lead {
+        .section__lead {
             color: $white;
         }
     }
 }
 @include media-breakpoint-up(md) {
-    .index-section {
+    .section {
         margin-bottom: 70px;
-        .index-section__h3 {
+        .section__h {
             font-size: 35px;
-            line-height: 0.97;
-            margin-bottom: 50px;
-            + .index-section__lead {
+            margin-bottom: 40px;
+            + .section__lead {
                 margin-top: -30px;
             }
         }
-        .index-section__lead {
+        .section__lead {
             font-size: 18px;
             margin-bottom: 34px;
         }
         &._inverse {
             padding-top: 30px;
             padding-bottom: 45px;
-            .index-section__h3 {
+            .index-section__h {
                 color: $white;
             }
-            .index-section__lead {
+            .section__lead {
                 color: $white;
             }
         }
     }
 }
 @include media-breakpoint-up(lg) {
-    .index-section {
-        .index-section__h3 {
+    .section {
+        .section__h {
             font-size: 40px;
         }
         &._inverse {
             padding-top: 40px;
-        }
-    }
-}
-
-.seo {
-    .seo_h {
-        font-size: 22px;
-        font-weight: 300;
-        margin-bottom: 24px;
-    }
-    p {
-        opacity: 0.5;
-        font-family: Lato;
-        font-size: 14px;
-        line-height: 1.29;
-    }
-}
-@include media-breakpoint-up(md) {
-    .seo {
-        .seo_h {
-            font-size: 28px;
-            line-height: 1.21;
-            margin-bottom: 28px;
-        }
-        p {
-            font-size: 15px;
-            line-height: 1.35;
         }
     }
 }
