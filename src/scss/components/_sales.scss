@@ -3,9 +3,6 @@
         font-size: 16px;
         line-height: 1.38;
         margin-bottom: 50px;
-        &:last-of-type {
-            margin-bottom: 0;
-        }
         .sales-list__item__h {
             font-size: 21px;
             line-height: 1.24;
@@ -28,25 +25,29 @@
             }
         }
         .sales-list__item__p {
-            margin-bottom: 32px;
-        }
-        .btn {
-            display: inline-block;
-            width: auto;
+            margin-bottom: 20px;
         }
     }
 }
 @include media-breakpoint-up(md) {
     .sales-list {
-        display: flex;
-        flex-wrap: wrap;
+        margin-bottom: -50px;
+        @include row(50px);
         .sales-list__item {
-            flex-basis: 50%;
-            padding-right: 30px;
-            &:nth-child(2n) {
-                padding-right: 0;
+            @include col(50%, 50px);
+            display: flex;
+            flex-direction: column;
+            .sales-list__item__p {
+                flex: 1;
             }
-            &:last-of-type {
+            .btn {
+                display: inline-block;
+                width: auto;
+                align-self: flex-start;
+            }
+        }
+        &._3 {
+            .sales-list__item:last-of-type {
                 flex-basis: 60%;
             }
         }
@@ -54,16 +55,15 @@
 }
 @include media-breakpoint-up(lg) {
     .sales-list {
-        .sales-list__item {
-            flex-basis: 33.33%;
-            padding-right: 70px;
-            margin-bottom: 0;
-            &:nth-child(2n) {
-                padding-right: 70px;
+        &._3 {
+            @include row(70px);
+            .sales-list__item, .sales-list__item:last-of-type {
+                @include col(33.33%, 70px)
             }
-            &:last-of-type {
-                flex-basis: 33.33%;
-                padding-right: 0;
+        }
+        &._4 {
+            .sales-list__item {
+                @include col(25%, 50px)
             }
         }
     }

@@ -110,16 +110,18 @@ a, .link {
 @import "footer";
 @import "page-assets/filters";
 @import "page-assets/realty";
-@import "page-assets/sales";
 @import "page-assets/about";
 @import "page-assets/hypothec";
 @import "page-assets/agents";
 @import "page-assets/partners";
 @import "page-assets/reviews";
 @import "components/section";
+@import "components/promo";
+@import "components/sales";
 @import "components/seo";
 @import "components/social";
 @import "components/services";
+@import "components/callme";
 
 .preloader {
     display: none !important;

@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 7.7em 107.7em;
+    background-size: 7.7em 118.7em;
 }
 
 .no-svg .sprite:before {
@@ -170,17 +170,17 @@
 
 
 
-  .sprite.sales-1:before {
+  .sprite.sales-car:before {
       background-position: 0em -69.9em;
-      width: 4.2em;
-      height: 4.6em;
+      width: 4.1em;
+      height: 3.4em;
   }
 
 
 
 
-  .sprite.sales-2:before {
-      background-position: 0em -74.5em;
+  .sprite.sales-hand:before {
+      background-position: 0em -73.3em;
       width: 4em;
       height: 4em;
   }
@@ -188,8 +188,26 @@
 
 
 
-  .sprite.sales-3:before {
-      background-position: 0em -78.5em;
+  .sprite.sales-home:before {
+      background-position: 0em -77.3em;
+      width: 4.2em;
+      height: 4.6em;
+  }
+
+
+
+
+  .sprite.sales-hypothec:before {
+      background-position: 0em -81.9em;
+      width: 4.7em;
+      height: 2.9em;
+  }
+
+
+
+
+  .sprite.sales-money:before {
+      background-position: 0em -84.8em;
       width: 3.9em;
       height: 3.9em;
   }
@@ -197,8 +215,17 @@
 
 
 
+  .sprite.sales-ring:before {
+      background-position: 0em -88.7em;
+      width: 4.7em;
+      height: 4.7em;
+  }
+
+
+
+
   .sprite.sweet-home:before {
-      background-position: 0em -82.4em;
+      background-position: 0em -93.4em;
       width: 4.7em;
       height: 4.5em;
   }
@@ -207,7 +234,7 @@
 
 
   .sprite.twitter:before {
-      background-position: 0em -86.9em;
+      background-position: 0em -97.9em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -216,7 +243,7 @@
 
 
   .sprite.twitter-hover:before {
-      background-position: 0em -92.1em;
+      background-position: 0em -103.1em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -225,7 +252,7 @@
 
 
   .sprite.vk:before {
-      background-position: 0em -97.3em;
+      background-position: 0em -108.3em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -234,7 +261,7 @@
 
 
   .sprite.vk-hover:before {
-      background-position: 0em -102.5em;
+      background-position: 0em -113.5em;
       width: 5.2em;
       height: 5.2em;
   }
