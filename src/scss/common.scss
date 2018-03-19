@@ -5,6 +5,8 @@
 @import "mixins";
 @import "node_modules/bootstrap/scss/reboot";
 @import "node_modules/bootstrap/scss/grid";
+@import "libs/select2/core.scss";
+@import "libs/select2/theme/custom/layout.scss";
 
 body {
     font-style: normal;
@@ -109,13 +111,15 @@ a, .link {
 @import "popups";
 @import "footer";
 @import "page-assets/filters";
-@import "page-assets/realty";
 @import "page-assets/about";
 @import "page-assets/hypothec";
 @import "page-assets/agents";
 @import "page-assets/partners";
 @import "page-assets/reviews";
 @import "components/section";
+@import "components/realty-index";
+@import "components/realty";
+@import "components/tabs";
 @import "components/promo";
 @import "components/sales";
 @import "components/seo";

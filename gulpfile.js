@@ -1,7 +1,6 @@
 'use strict';
 var gulp = require('gulp'),
         watch = require('gulp-watch'),
-        prefixer = require('gulp-autoprefixer'),
         sass = require('gulp-sass'),
         sourcemaps = require('gulp-sourcemaps'),
         svgSprite = require("gulp-svg-sprites"),
@@ -10,6 +9,9 @@ var gulp = require('gulp'),
         browserSync = require("browser-sync"),
         rigger = require('gulp-rigger'),
         fileinclude = require('gulp-file-include'),
+        autoprefixer = require('gulp-autoprefixer'),
+        rename = require("gulp-rename"),
+        cleanCSS = require('gulp-clean-css'),
         reload = browserSync.reload;
 var path = {
     build: {
@@ -103,30 +105,20 @@ gulp.task('sprites', function () {
         }))
         .pipe(gulp.dest(path.build.sprite));
 });
-//gulp.task('sprite:build', function () {
-//    var config = {
-//        "dest": "./build/css/sprite/",
-//    "log": "debug",
-//    "mode": {
-//        "css": {
-//            "common": "sprite",
-//            "render": {
-//                "css": true,
-//                "scss": true
-//            }
-//        },
-//        "view": true,
-//        "defs": true,
-//        "symbol": true,
-//        "stack": true
-//    }
-//    };
-//    gulp.src(path.src.sprite)
-//            .pipe(svgSprite(config)).on('error', function (error) {
-//        console.log(error);
-//    })
-//            .pipe(gulp.dest(path.build.sprite));
-//});
+gulp.task('css-prod', () =>
+    gulp.src(path.src.style)
+        .pipe(sass({
+            sourceMap: false,
+            errLogToConsole: true
+        }))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(cleanCSS())
+        .pipe(rename("common.min.css"))
+        .pipe(gulp.dest(path.build.css))
+);
 gulp.task('fonts:build', function () {
     gulp.src(path.src.fonts)
             .pipe(gulp.dest(path.build.fonts))

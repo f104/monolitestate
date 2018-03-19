@@ -1,0 +1,53 @@
+<div class="realty__list__item">
+    <div class="realty__list__item__inner">
+        <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
+            <ul class="realty__list__item__tags">
+            @@for (var i = 0; i < tags.length; i++) {
+                <li>`+tags[i]+`</li>
+            }
+            </ul>
+            @@if (oldprice != '') {
+            <i class="sprite oldprice"></i>
+            }
+            @@for (var i = 0; i < 1; i++) {
+            <div class="realty__list__item__img-inner js-realty__list__item__img-inner _active">
+                <img class="realty__list__item__img"
+                     src="img/realty/second/`+img[0]+`.jpg">
+            </div>
+            }
+            @@for (var i = 1; i < img.length; i++) {
+                <div class="realty__list__item__img-inner js-realty__list__item__img-inner">
+                    <img class="realty__list__item__img"
+                         src="img/realty/second/`+img[i]+`.jpg"
+                         srcset="img/realty/second/`+img[i]+`@2x.jpg 2x,
+                         img/realty/second/`+img[i]+`@3x.jpg 3x"
+                         alt="@@title">
+                </div>
+            }
+            <span class="realty__list__item__img-wrapper__counter">
+                <span class="js-realty__list__item__img-counter">1</span>
+                из @@total
+            </span>
+        </div>
+        <div class="realty__list__item__content">
+            <div class="realty__list__item__content__header">
+                <div class="realty__list__item__title">@@title</div>
+                <div class="realty__list__item__subtitle">@@subtitle</div>
+            </div>
+            <div class="realty__list__item__content__footer">
+                @@if (oldprice != '') {
+                <div class="realty__list__item__oldprice">@@oldprice руб.</div>
+                }
+                <div class="realty__list__item__content__footer__row">
+                    <div class="realty__list__item__price">@@price руб.</div>
+                    <div class="realty__list__item__area">@@area м²</div>
+                </div>
+                <div class="realty__list__item__hypothec">
+                    Ипотека: 
+                    <span class="realty__list__item__hypothec__accent">@@hypothec руб./мес</span>
+                </div>
+                <a href="#" class="btn _lg _secondary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>

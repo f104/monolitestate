@@ -1,0 +1,133 @@
+<section class="container section realty">
+    <h3 class="section__h">Новые поступления в Нижнем Новгороде</h3>
+    <div class="js-tabs">
+        <div class="tabs">
+            <ul class="tabs__list js-tabs__list">
+                <li><a href="#studio">Студии</a></li>
+                <li><a href="#rooms_1">Однокомнатные квартиры</a></li>
+                <li><a href="#rooms_2">Двухкомнатные квартиры</a></li>
+                <li><a href="#rooms_3">Трехкомнатные квартиры</a></li>
+                <li><a href="#rooms_4">Четырехкомнатные квартиры</a></li>
+                <li><a href="#houses">Дома/дачи</a></li>
+            </ul>
+            <div class="tabs__select">
+                <select class="js-tabs__select js-select2" style="width:100%">
+                    <option value="#studio">Студии</option>
+                    <option value="#rooms_1">Однокомнатные квартиры</option>
+                    <option value="#rooms_2">Двухкомнатные квартиры</option>
+                    <option value="#rooms_3">Трехкомнатные квартиры</option>
+                    <option value="#rooms_4">Четырехкомнатные квартиры</option>
+                    <option value="#houses">Дома/дачи</option>
+                </select>
+            </div>
+        </div>
+        <div id="studio">
+            <div class="realty__list">
+                @@include('./chunks/realty-item.html', {
+                "img": [1, 2, 3],
+                "total": 3,
+                "tags": ["Евроремонт", "Хороший вид"],
+                "title": "Центр: КПД, ул. 50 лет Октября",
+                "subtitle": "Студия",
+                "oldprice": "2 670 000",
+                "price": "2 460 000",
+                "area": "32",
+                "hypothec": "15 324"
+                })
+                @@include('./chunks/realty-item.html', {
+                "img": [2, 3, 4, 1, 2],
+                "total": 10,
+                "tags": ["Евроремонт"],
+                "title": "Северный: Улица Ленина, д. 45",
+                "subtitle": "Студия",
+                "oldprice": "",
+                "price": "3 123 000",
+                "area": "44",
+                "hypothec": "22 012"
+                })
+                @@include('./chunks/realty-item.html', {
+                "img": [3, 1, 2],
+                "total": 3,
+                "tags": ["Евроремонт", "Рядом садик"],
+                "title": "Улица Романа Ноздрина, д. 128",
+                "subtitle": "Студия",
+                "oldprice": "2 190 000",
+                "price": "1 980 000",
+                "area": "26",
+                "hypothec": "13 012"
+                })
+                @@include('./chunks/realty-item.html', {
+                "img": [4, 1, 2, 3, 4],
+                "total": 10,
+                "tags": ["Евроремонт", "Рядом метро"],
+                "title": "Улица Полка Нормандии-Неман, д. 28",
+                "subtitle": "Студия",
+                "oldprice": "",
+                "price": "4 540 000",
+                "area": "57",
+                "hypothec": "15 324"
+                })
+            </div>
+        </div>
+        <div id="rooms_1">
+            <div class="realty__list">
+                @@include('./chunks/realty-item.html', {
+                "img": [1, 2, 3],
+                "total": 3,
+                "tags": ["Евроремонт", "Хороший вид"],
+                "title": "Центр: КПД, ул. 50 лет Октября",
+                "subtitle": "Однокомнатная квартира",
+                "oldprice": "2 670 000",
+                "price": "2 460 000",
+                "area": "32",
+                "hypothec": "15 324"
+                })
+                @@include('./chunks/realty-item.html', {
+                "img": [2, 3, 4, 1, 2],
+                "total": 10,
+                "tags": ["Евроремонт"],
+                "title": "Северный: Улица Ленина, д. 45",
+                "subtitle": "Однокомнатная квартира",
+                "oldprice": "",
+                "price": "3 123 000",
+                "area": "44",
+                "hypothec": "22 012"
+                })
+                @@include('./chunks/realty-item.html', {
+                "img": [3, 1, 2],
+                "total": 3,
+                "tags": ["Евроремонт", "Рядом садик"],
+                "title": "Улица Романа Ноздрина, д. 128",
+                "subtitle": "Однокомнатная квартира",
+                "oldprice": "2 190 000",
+                "price": "1 980 000",
+                "area": "26",
+                "hypothec": "13 012"
+                })
+                @@include('./chunks/realty-item.html', {
+                "img": [4, 1, 2, 3, 4],
+                "total": 10,
+                "tags": ["Евроремонт", "Рядом метро"],
+                "title": "Улица Полка Нормандии-Неман, д. 28",
+                "subtitle": "Однокомнатная квартира",
+                "oldprice": "",
+                "price": "4 540 000",
+                "area": "57",
+                "hypothec": "15 324"
+                })
+            </div>
+        </div>
+        <div id="rooms_2">
+            rooms 2
+        </div>
+        <div id="rooms_3">
+            rooms 3
+        </div>
+        <div id="rooms_4">
+            rooms 4
+        </div>
+        <div id="houses">
+            houses
+        </div>
+    </div>
+</section>
