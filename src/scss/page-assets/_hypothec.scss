@@ -148,7 +148,7 @@ $hypothec-gutter-width: $grid-gutter-width;
             }
         }
     }
-    .hypothec__more {
+    .section__buttons .btn._more {
         display: none;
     }
 }
@@ -165,14 +165,8 @@ $hypothec-gutter-width: $grid-gutter-width;
                 }
             }
         }
-        .btn {
-            width: 237px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .hypothec__more {
+        .section__buttons .btn._more {
             display: block;
-            margin-bottom: 12px;
         }
     }
 }

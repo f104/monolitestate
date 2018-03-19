@@ -21,6 +21,14 @@
             color: $white;
         }
     }
+    .section__buttons {
+        .btn {
+            margin-bottom: 12px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 @include media-breakpoint-up(md) {
     .section {
@@ -44,6 +52,13 @@
             }
             .section__lead {
                 color: $white;
+            }
+        }
+        .section__buttons {
+            .btn {
+                width: 270px;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
     }
