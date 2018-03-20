@@ -373,8 +373,9 @@ jQuery(function () {
             $(elem).easytabs({
                 tabs: '.js-tabs__list > li'
             });
-            $(elem).bind('easytabs:after', function (event, $clicked) {
+            $(elem).bind('easytabs:after', function (event, $clicked, $target) {
                 $(elem).find('.js-tabs__select').val($clicked.attr('href')).change();
+                $target.find('.slick-initialized').slick('setPosition');
             });
             $(elem).find('.js-tabs__select').on('change', function () {
                 $(elem).easytabs('select', $(this).val());
