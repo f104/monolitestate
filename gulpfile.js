@@ -77,7 +77,6 @@ gulp.task('style:build', function () {
                 sourceMap: true,
                 errLogToConsole: true
             }))
-//        .pipe(prefixer())
             .pipe(sourcemaps.write())
             .pipe(gulp.dest(path.build.css))
             .pipe(reload({stream: true}));
@@ -106,7 +105,7 @@ gulp.task('sprites', function () {
         .pipe(gulp.dest(path.build.sprite));
 });
 gulp.task('css-prod', () =>
-    gulp.src(path.src.style)
+    gulp.src('src/scss/common.scss')
         .pipe(sass({
             sourceMap: false,
             errLogToConsole: true

@@ -1,0 +1,147 @@
+<section class="container section realty">
+    <h3 class="section__h">Новые поступления в Нижнем Новгороде</h3>
+    <div class="js-tabs">
+        <div class="tabs">
+            <ul class="tabs__list js-tabs__list">
+                <li><a href="#tab1">Готовый бизнес</a></li>
+                <li><a href="#tab2">Свободное назначение</a></li>
+                <li><a href="#tab3">Торговое</a></li>
+                <li><a href="#tab4">Офис</a></li>
+                <li><a href="#tab5">Земля</a></li>
+                <li><a href="#tab6">Склад</a></li>
+                <li><a href="#tab7">База</a></li>
+                <li><a href="#tab8">Производство</a></li>
+            </ul>
+            <div class="tabs__select">
+                <select class="js-tabs__select js-select2" style="width:100%">
+                    <option value="#tab1">Готовый бизнес</option>
+                    <option value="#tab2">Свободное назначение</option>
+                    <option value="#tab3">Торговое</option>
+                    <option value="#tab4">Офис</option>
+                    <option value="#tab5">Земля</option>
+                    <option value="#tab6">Склад</option>
+                    <option value="#tab7">База</option>
+                    <option value="#tab8">Производство</option>
+                </select>
+            </div>
+        </div>
+        <div id="tab1">
+            <div class="realty__list slider-small js-slider-small">
+                @@include('./chunks/realty-item.html', {
+                "img": [5, 6, 7, 8, 5],
+                "total": 10,
+                "tags": [],
+                "title": "ДЦ Вознесение, ул. Дубовая, д. 48",
+                "subtitle": "Готовый бизнес",
+                "oldprice": "6 670 000 руб.",
+                "price": "5 100 000 руб.",
+                "area": "857",
+                "hypothec": ""
+                })
+                @@include('./chunks/realty-item.html', {
+                "img": [6, 7, 8, 5, 6],
+                "total": 10,
+                "tags": [],
+                "title": "ДЦ Открытие, ул. Восстания, д. 21",
+                "subtitle": "Готовый бизнес",
+                "oldprice": "",
+                "price": "10 000 000 руб.",
+                "area": "131",
+                "hypothec": ""
+                })
+                @@include('./chunks/realty-item.html', {
+                "img": [7, 8, 5, 6, 7],
+                "total": 10,
+                "tags": [],
+                "title": "ТРЦ Антарктика, ул. Луговая, д. 81",
+                "subtitle": "Готовый бизнес",
+                "oldprice": "6 670 000 руб.",
+                "price": "5 100 000 руб.",
+                "area": "643",
+                "hypothec": ""
+                })
+                @@include('./chunks/realty-item.html', {
+                "img": [8, 5, 6, 7, 8],
+                "total": 10,
+                "tags": [],
+                "title": "Офис на ул. Спартанская, д. 21",
+                "subtitle": "Готовый бизнес",
+                "oldprice": "",
+                "price": "9 000 000 руб.",
+                "area": "515",
+                "hypothec": ""
+                })
+            </div>
+            <button class="btn _primary _lg section__button _more">Показать больше<i class="icon-more"></i></button>
+            <a href="#" class="btn _secondary _lg section__button">Все предложения</a>
+        </div>
+        <div id="tab2">
+            Свободное назначение
+        </div>
+        <div id="tab3">
+            Торговое
+        </div>
+        <div id="tab4">
+            <div class="realty__list slider-small js-slider-small">
+                @@include('./chunks/realty-item.html', {
+                "img": [5, 6, 7, 8, 5],
+                "total": 10,
+                "tags": [],
+                "title": "ДЦ Вознесение, ул. Дубовая, д. 48",
+                "subtitle": "Офисное помещение",
+                "oldprice": "6 670 000 руб.",
+                "price": "5 100 000 руб.",
+                "area": "857",
+                "hypothec": ""
+                })
+                @@include('./chunks/realty-item.html', {
+                "img": [6, 7, 8, 5, 6],
+                "total": 10,
+                "tags": [],
+                "title": "ДЦ Открытие, ул. Восстания, д. 21",
+                "subtitle": "Офисное помещение",
+                "oldprice": "",
+                "price": "10 000 000 руб.",
+                "area": "131",
+                "hypothec": ""
+                })
+                @@include('./chunks/realty-item.html', {
+                "img": [7, 8, 5, 6, 7],
+                "total": 10,
+                "tags": [],
+                "title": "ТРЦ Антарктика, ул. Луговая, д. 81",
+                "subtitle": "Офисное помещение",
+                "oldprice": "6 670 000 руб.",
+                "price": "5 100 000 руб.",
+                "area": "643",
+                "hypothec": ""
+                })
+                @@include('./chunks/realty-item.html', {
+                "img": [8, 5, 6, 7, 8],
+                "total": 10,
+                "tags": [],
+                "title": "Офис на ул. Спартанская, д. 21",
+                "subtitle": "Офисное помещение",
+                "oldprice": "",
+                "price": "9 000 000 руб.",
+                "area": "515",
+                "hypothec": ""
+                })
+            </div>
+            <button class="btn _primary _lg section__button _more">Показать больше<i class="icon-more"></i></button>
+            <a href="#" class="btn _secondary _lg section__button">Все офисы</a>
+        </div>
+        <div id="tab5">
+            Земля
+        </div>
+        <div id="tab6">
+            Склад
+        </div>
+        <div id="tab7">
+            База
+        </div>
+        <div id="tab8">
+            Производство
+        </div>
+    </div>
+</section>

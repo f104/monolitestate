@@ -1,8 +1,10 @@
 .realty {
     .realty__list {
+        margin-bottom: 70px;
         .realty__list__item {
             display: flex;
             .realty__list__item__inner {
+                flex: 1;
                 display: flex;
                 flex-direction: column;
                 background-color: $white;
@@ -52,13 +54,12 @@
             .realty__list__item__price, .realty__list__item__area {
                 font-size: 21px;
                 opacity: .9;
-                margin-bottom: 7px;
             }
             .realty__list__item__hypothec {
                 font-size: 14px;
                 font-weight: 500;
                 opacity: .9;
-                margin-bottom: 24px;
+                margin-top: 7px;
                 .realty__list__item__hypothec__accent {
                     color: $secondary;
                 }
@@ -76,11 +77,15 @@
                     color: $primary;
                 }
             }
-            .realty__list__item__img-wrapper {
+            .realty__list__item__btn {
+                margin-top: 24px;
+            }
+            .realty__list__item__images {
                 position: relative;
                 height: 217px;
                 padding: 15px 12px;
-                .realty__list__item__img-inner {
+                overflow: hidden;
+                .realty__list__item__img-wrapper {
                     height: 34px;
                     &:before {
                         content: '';
@@ -103,9 +108,11 @@
                     img {
                         display: none;
                         position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
+                        min-height: 100%;
+                        min-width: 100%;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
                     }
                     &._active {
                         &:after {
@@ -116,7 +123,7 @@
                         }
                     }
                 }
-                .realty__list__item__img-wrapper__counter {
+                .realty__list__item__images__counter {
                     position: absolute;
                     bottom: 15px;
                     left: 12px;
@@ -138,7 +145,7 @@
             }
         }
     }
-    .section__buttons .btn._more {
+    .section__button._more {
         display: none;
     }
 }
@@ -162,11 +169,19 @@
             }
         }
         .realty__list {
+            @include row(28px);
+            flex-wrap: wrap;
+            margin-bottom: 20px;
             .realty__list__item {
+                @include col(50%, 28px);
+                margin-bottom: 28px;
                 .realty__list__item__inner {
                     @include hover-up();
                 }
             }
+        }
+        .section__button._more {
+            display: block;
         }
     }
 }
@@ -177,11 +192,7 @@
             @include row(28px);
             .realty__list__item {
                 @include col(25%, 28px);
-                margin-bottom: 40px;
             }
-        }
-        .section__buttons .btn._more {
-            display: block;
         }
     }
 }

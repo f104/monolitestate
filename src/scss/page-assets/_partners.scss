@@ -58,7 +58,7 @@ $partners-gutter-width: $grid-gutter-width;
             }
         }
     }
-    .section__buttons .btn._more {
+    .section__button._more {
         display: none;
     }
 }
@@ -75,7 +75,7 @@ $partners-gutter-width: $grid-gutter-width;
                 }
             }
         }
-        .section__buttons .btn._more {
+        .section__button._more {
             display: block;
         }
     }

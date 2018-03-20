@@ -1,20 +1,26 @@
 <html lang="ru" dir="ltr">
     @@include('./template/head.html', {
-    "name": "Вторичное жилье"
+    "name": "Коммерческая недвижимость"
     })
     <body>
         @@include('./template/header.html')
         <div class="content">
-            @@include('./template/realty-second.html')
+            @@include('./template/realty-commercial.html')
             @@include('./template/promo.html', {
-            "img": 1,
-            "title": "Покупайте квартиры<br>в новом ЖК «Свободный»",
-            "subtitle": "И получите месяц парковки бесплатно!"
+            "img": 3,
+            "title": "Новые офисы<br>на Долгопрудной!",
+            "subtitle": ""
             })
+            @@include('./template/agents.html')
             @@include('./template/sales.html')
             @@include('./template/callme.html')
+            @@include('./template/promo.html', {
+            "img": 3,
+            "title": "Торговые площади<br>со скидкой",
+            "subtitle": " Только с 5 по 20 августа"
+            })
             @@include('./template/hypothec.html', {
-            "title": "Ипотека на вторичное жилье"
+            "title": "Ипотека на коммерческую недвижимость"
             })
             @@include('./template/reviews.html')
             @@include('./template/services.html')

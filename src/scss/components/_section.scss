@@ -21,10 +21,8 @@
             color: $white;
         }
     }
-    .section__buttons {
-        .btn {
-            margin-bottom: 12px;
-        }
+    .section__button {
+        margin-bottom: 12px;
         &:last-child {
             margin-bottom: 0;
         }
@@ -54,12 +52,10 @@
                 color: $white;
             }
         }
-        .section__buttons {
-            .btn {
-                width: 270px;
-                margin-left: auto;
-                margin-right: auto;
-            }
+        .section__button {
+            width: 270px;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }

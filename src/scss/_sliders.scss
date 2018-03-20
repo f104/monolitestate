@@ -1,5 +1,6 @@
 .slick-dots {
     @include list-unstyled;
+    margin-bottom: 0;
     text-align: center;
     li {
         display: inline-block;
@@ -70,10 +71,14 @@
     &.slick-slider {
         margin-left: - $container-padding-sm;
         margin-right: - $container-padding-sm;
+        .slick-track {
+            display: flex;
+        }
         .slide {
             margin-bottom: 0 !important;
             margin-left: 5px;
             margin-right: 5px;
+            height: auto;
         }
         .slick-dots {
             position: absolute;
@@ -199,7 +204,7 @@
             height: 9px;
         }
         .slick-dots {
-            bottom: 15px;
+            bottom: 35px;
         }
         .slide {
             height: 450px;

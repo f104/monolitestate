@@ -355,8 +355,8 @@ jQuery(function () {
     }
 
     function initRealty() {
-        $('.js-realty__list__item__img-wrapper').each(function () {
-            var $togglers = $(this).find('.js-realty__list__item__img-inner');
+        $('.js-realty__list__item__images').each(function () {
+            var $togglers = $(this).find('.js-realty__list__item__img-wrapper');
             var $counter = $(this).find('.js-realty__list__item__img-counter');
             $togglers.each(function (i) {
                 $(this).on('mouseover', function () {

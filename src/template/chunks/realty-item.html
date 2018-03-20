@@ -1,6 +1,6 @@
-<div class="realty__list__item">
+<div class="realty__list__item slide">
     <div class="realty__list__item__inner">
-        <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
+        <div class="realty__list__item__images js-realty__list__item__images">
             <ul class="realty__list__item__tags">
             @@for (var i = 0; i < tags.length; i++) {
                 <li>`+tags[i]+`</li>
@@ -10,21 +10,24 @@
             <i class="sprite oldprice"></i>
             }
             @@for (var i = 0; i < 1; i++) {
-            <div class="realty__list__item__img-inner js-realty__list__item__img-inner _active">
+            <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper _active">
                 <img class="realty__list__item__img"
-                     src="img/realty/second/`+img[0]+`.jpg">
+                     src="img/realty/objects/`+img[0]+`.jpg"
+                     srcset="img/realty/objects/`+img[0]+`@2x.jpg 2x,
+                     img/realty/objects/`+img[0]+`@3x.jpg 3x"
+                     alt="@@title">
             </div>
             }
             @@for (var i = 1; i < img.length; i++) {
-                <div class="realty__list__item__img-inner js-realty__list__item__img-inner">
+                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
                     <img class="realty__list__item__img"
-                         src="img/realty/second/`+img[i]+`.jpg"
-                         srcset="img/realty/second/`+img[i]+`@2x.jpg 2x,
-                         img/realty/second/`+img[i]+`@3x.jpg 3x"
+                         src="img/realty/objects/`+img[i]+`.jpg"
+                         srcset="img/realty/objects/`+img[i]+`@2x.jpg 2x,
+                         img/realty/objects/`+img[i]+`@3x.jpg 3x"
                          alt="@@title">
                 </div>
             }
-            <span class="realty__list__item__img-wrapper__counter">
+            <span class="realty__list__item__images__counter">
                 <span class="js-realty__list__item__img-counter">1</span>
                 из @@total
             </span>
@@ -36,17 +39,19 @@
             </div>
             <div class="realty__list__item__content__footer">
                 @@if (oldprice != '') {
-                <div class="realty__list__item__oldprice">@@oldprice руб.</div>
+                <div class="realty__list__item__oldprice">@@oldprice</div>
                 }
                 <div class="realty__list__item__content__footer__row">
-                    <div class="realty__list__item__price">@@price руб.</div>
+                    <div class="realty__list__item__price">@@price</div>
                     <div class="realty__list__item__area">@@area м²</div>
                 </div>
+                @@if (hypothec != '') {
                 <div class="realty__list__item__hypothec">
                     Ипотека: 
                     <span class="realty__list__item__hypothec__accent">@@hypothec руб./мес</span>
                 </div>
-                <a href="#" class="btn _lg _secondary">Подробнее</a>
+                }
+                <a href="#" class="btn _lg _secondary realty__list__item__btn">Подробнее</a>
             </div>
         </div>
     </div>

@@ -1,21 +1,14 @@
 <html lang="ru" dir="ltr">
     @@include('./template/head.html', {
-    "name": "Вторичное жилье"
+    "name": "Аренда"
     })
     <body>
         @@include('./template/header.html')
         <div class="content">
-            @@include('./template/realty-second.html')
-            @@include('./template/promo.html', {
-            "img": 1,
-            "title": "Покупайте квартиры<br>в новом ЖК «Свободный»",
-            "subtitle": "И получите месяц парковки бесплатно!"
-            })
+            @@include('./template/realty-rent.html')
+            @@include('./template/agents.html')
             @@include('./template/sales.html')
             @@include('./template/callme.html')
-            @@include('./template/hypothec.html', {
-            "title": "Ипотека на вторичное жилье"
-            })
             @@include('./template/reviews.html')
             @@include('./template/services.html')
             @@include('./template/seo.html')
