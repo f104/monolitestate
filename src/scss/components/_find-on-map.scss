@@ -1,0 +1,48 @@
+.find-on-map {
+    display: block;
+    @include link-in-text;
+    margin-left: - $container-padding-sm;
+    margin-right: - $container-padding-sm;
+    .find-on-map__img-wrapper {
+        @include bg-img-wrapper;
+        display: block;
+        width: 100%;
+        min-height: 116px;
+        box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
+    }
+    .find-on-map__img-inner {
+        @include bg-img-inner($white, .6);
+    }
+    .find-on-map__img {
+        @include bg-img-100;
+    }
+    .find-on-map__content {
+        position: absolute;
+        padding: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 18px;
+        color: $body-color;
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+        [class^="icon-"] {
+            font-size: 16px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .find-on-map {
+        margin-left: 0;
+        margin-right: 0;
+        @include hover-up;
+        .find-on-map__content {
+            font-size: 23px;
+        }
+    }
+}

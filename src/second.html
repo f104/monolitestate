@@ -5,6 +5,10 @@
     <body>
         @@include('./template/header.html')
         <div class="content">
+            @@include('./template/realty-form-second.html')
+            @@include('./template/find-on-map.html', {
+            "text": "Искать квартиры на карте"
+            })
             @@include('./template/realty-second.html')
             @@include('./template/promo.html', {
             "img": 1,

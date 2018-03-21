@@ -1,0 +1,177 @@
+.realty-form {
+    color: $white;
+    .realty-form__h {
+        font-size: 22px;
+        font-weight: 300;
+        margin-bottom: 25px;
+    }
+    .realty-form__lead {
+        opacity: 0.7;
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 25px;
+    }
+    .realty-form__text {
+        font-size: 14px;
+        line-height: 1.29;
+        margin-bottom: 34px;
+        p, ul {
+            margin-bottom: 1rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        a {
+            color: $white;
+            &:after {
+                background: url(img/link-inverse.png) repeat-x;
+            }
+        }
+        ul {
+            @include list-unstyled;
+            padding-left: 25px;
+            li {
+                margin-bottom: 1rem;
+                position: relative;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+                &:before {
+                    content: '•';
+                    position: absolute;
+                    left: -25px;
+                    top: -1px;
+                }
+            }
+        }
+    }
+    .realty-form__call {
+        .realty-form__call__text {
+            display: block;
+            font-size: 14px;
+            color: $white;
+            margin-bottom: 10px;
+        }
+        .realty-form__call__phone {
+            font-size: 26px;
+            color: white;
+            @include link-in-text;
+            .link {
+                @include link-inverse;
+            }
+            [class^="icon-"] {
+                font-size: 20px;
+                margin-right: 10px;
+            }
+        }
+    }
+    .realty-form__row {
+        margin-bottom: 45px;
+        .realty-form__col {
+            &._2 {
+                .realty-form__h {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    &._second {
+        background-image: linear-gradient(21deg, #7faed8, #4585be);
+    }
+    &._rent {
+        background-image: linear-gradient(23deg, #7faed8, #4585be);
+    }
+    &._commercial {
+        background-image: linear-gradient(158deg, #16222a, #3a6073);
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .realty-form {
+        .realty-form__h {
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
+        .realty-form__lead {
+            margin-bottom: 34px;
+        }
+        .realty-form__text {
+            font-size: 16px;
+            line-height: normal;
+            margin-bottom: 40px;
+        }
+        .realty-form__call {
+            .realty-form__call__text {
+                font-size: 15px;
+            }
+        }
+        .input-group {
+            input {
+                width: 300px;
+            }
+        }
+        .realty-form__row {
+            margin-bottom: 35px;
+        }
+        &._second {
+            background-image: linear-gradient(52deg, #7faed8, #4585be);
+        }
+        &._rent {
+            background-image: linear-gradient(51deg, #7faed8, #4585be);
+        }
+        &._commercial {
+            background-image: linear-gradient(131deg, #16222a, #3a6073);
+        }
+    }    
+}
+
+@include media-breakpoint-up(lg) {
+    .realty-form {
+        .realty-form__h {
+            font-size: 45px;
+            margin-bottom: 40px;
+        }
+        .realty-form__text {
+            padding-right: 60px;
+            margin-bottom: 50px;
+        }
+        .realty-form__row {
+            margin-bottom: 0;
+            display: flex;
+            .realty-form__col {
+                flex: 1;
+            }
+        }
+        .input-group__wrapper {
+            &:last-of-type {
+                .input-group {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &._second {
+            background-image: linear-gradient(77deg, #7faed8, #4585be);
+            .realty-form__h {
+                margin-bottom: 30px;
+            }
+        }
+        &._rent {
+            background-image: linear-gradient(78deg, #7faed8, #4585be);
+        }
+        &._commercial {
+            background-image: linear-gradient(101deg, #16222a, #3a6073);
+            .realty-form__h {
+                font-size: 35px;
+            }
+            .realty-form__row {
+                .realty-form__col {
+                    &._2 {
+                        .realty-form__h {
+                            font-size: 32px;
+                        }                        
+                    }
+                }
+            }
+        }
+    }    
+}

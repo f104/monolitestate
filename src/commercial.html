@@ -5,6 +5,10 @@
     <body>
         @@include('./template/header.html')
         <div class="content">
+            @@include('./template/realty-form-commercial.html')
+            @@include('./template/find-on-map.html', {
+            "text": "Искать недвижимость для бизнеса на карте"
+            })
             @@include('./template/realty-commercial.html')
             @@include('./template/promo.html', {
             "img": 3,
