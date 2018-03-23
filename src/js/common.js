@@ -245,9 +245,15 @@ jQuery(function () {
             $('.js-select').removeClass('_opened _active');
         });
         // select2
-        $('.js-select2').select2({
-            theme: 'custom',
-            minimumResultsForSearch: Infinity,
+        function initSelect2() {
+            $('.js-select2').select2({
+                theme: 'custom',
+                minimumResultsForSearch: Infinity,
+            });
+        }
+        initSelect2();
+        $(window).on('resize', function () {
+            initSelect2();
         });
 //        $('.js-select2').select2('open');
     }

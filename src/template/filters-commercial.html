@@ -1,0 +1,107 @@
+<section class="container section filters">
+    <form class="filters-form">
+        <h3 class="filters-form__h">
+            Недвижимость для бизнеса в Нижнем Новгороде</h3>
+        <div class="filters-form__checkbox">
+            @@include('./chunks/filters-checkbox.html', {
+            "text": "Офис",
+            "checked": 0
+            })
+            @@include('./chunks/filters-checkbox.html', {
+            "text": "Торговое",
+            "checked": 1
+            })
+            @@include('./chunks/filters-checkbox.html', {
+            "text": "Свободного назначения",
+            "checked": 0
+            })
+            @@include('./chunks/filters-checkbox.html', {
+            "text": "Новостройки",
+            "checked": 0
+            })
+            @@include('./chunks/filters-checkbox.html', {
+            "text": "Готовый бизнес",
+            "checked": 0
+            })
+            @@include('./chunks/filters-checkbox.html', {
+            "text": "Производство",
+            "checked": 0
+            })
+            @@include('./chunks/filters-checkbox.html', {
+            "text": "База",
+            "checked": 0
+            })
+            @@include('./chunks/filters-checkbox.html', {
+            "text": "Склад",
+            "checked": 0
+            })
+            @@include('./chunks/filters-checkbox.html', {
+            "text": "Земля",
+            "checked": 0
+            })
+            @@include('./chunks/filters-checkbox.html', {
+            "text": "Здания",
+            "checked": 0
+            })
+            @@include('./chunks/filters-checkbox.html', {
+            "text": "Общепит",
+            "checked": 0
+            })
+        </div>
+        <div class="filters-form__row__lg">
+            <div class="filters-form__col__lg _col1">
+                <div class="filters-form__row">
+                    <div class="input-group _col1">
+                        <div class="filters-form__radio">
+                            <label class="filters-form__radio__item">
+                                <input type="radio" name="type2" value="buy">
+                                <span class="filters-form__radio__item__inner">Купить</span>
+                            </label>
+                            <label class="filters-form__radio__item">
+                                <input type="radio" checked name="type2" value="rent">
+                                <span class="filters-form__radio__item__inner">Арендовать</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-group _col2">
+                        <select class="js-select2">
+                            <option>Вторичная</option>
+                            <option>Новая</option>
+                        </select>
+                    </div>
+                    <div class="input-group _double _col3">
+                        <input placeholder="Цена от (руб.)">
+                        <input placeholder="Цена до (руб.)">
+                    </div>
+                </div>
+                <div class="filters-form__row">
+                    <div class="input-group _col1">
+                        @@include('./chunks/pseudo-select.html', {"title": "Район, Улица"})
+                    </div>
+                    <div class="input-group _col2">
+                        <input placeholder="Код объекта">
+                    </div>
+                    <div class="input-group _double _col3">
+                        <input placeholder="Площадь от">
+                        <input placeholder="Площадь до">
+                    </div>
+                </div>
+            </div>
+            <div class="filters-form__col__lg _col2">
+                <div class="filters-form__summary _norooms">
+                    <p class="filters-form__summary__text">Найдено 19 518 вариантов</p>
+                    <div class="filters-form__summary__buttons">
+                        <div class="filters-form__summary__buttons__col">
+                            <button class="btn _lg _secondary">Показать</button>
+                        </div>
+                        <div class="filters-form__summary__buttons__col">
+                            <button class="btn _lg _primary"><i class="icon-map _middle"></i>На карте</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="filters-form__help filters-form__md">Для поиска другой недвижимости перейдите в соответствующий раздел</p>
+    </form>
+</div>
+</section>
