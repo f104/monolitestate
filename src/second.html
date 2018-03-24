@@ -3,7 +3,9 @@
     "name": "Вторичное жилье"
     })
     <body>
-        @@include('./template/header.html')
+        @@include('./template/header.html', {
+        "active": "second"
+        })
         <div class="content">
             @@include('./template/filters-second.html')
             @@include('./template/realty-form-second.html')
@@ -17,7 +19,10 @@
             "subtitle": "И получите месяц парковки бесплатно!"
             })
             @@include('./template/sales.html')
-            @@include('./template/callme.html')
+            @@include('./template/callme.html', {
+            "title": "Не хочу искать, перезвоните мне!",
+            "margin": 1
+            })
             @@include('./template/hypothec.html', {
             "title": "Ипотека на вторичное жилье"
             })
@@ -25,7 +30,7 @@
             @@include('./template/services.html')
             @@include('./template/seo.html')
             @@include('./template/footer.html')
-            @@include('./template/popups.html')
+            @@include('./template/popups-common.html')
             <div class="content__overlay js-menu-overlay"></div>
         </div>
         @@include('./template/foot.html')

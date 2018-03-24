@@ -469,7 +469,7 @@ body {
                         text-align: center;
                         display: block;
                         @include transition(all);
-                        &:hover {
+                        &._active, &:hover {
                             background-color: $white;
                             color: $primary;
                             opacity: 1;

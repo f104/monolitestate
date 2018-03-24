@@ -78,6 +78,24 @@
         }
     }
 }
+
+@include media-breakpoint-up(md) {
+    .popup-subscribe {
+        width: 704px;
+        .popup-subscribe__form {
+            width: 460px;
+            .input-group__wrapper {
+                .input-group {
+                    flex: 1;
+                    .input-help {
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @include media-breakpoint-up(lg) {
     .fancybox-container._popup {
         .fancybox-close-small {

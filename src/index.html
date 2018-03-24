@@ -3,7 +3,9 @@
     "name": "Главная"
     })
     <body>
-        @@include('./template/header.html')
+        @@include('./template/header.html', {
+        "active": ""
+        })
         <div class="content">
             @@include('./template/filters-index.html')
             @@include('./template/index-slider.html')
@@ -23,7 +25,7 @@
             @@include('./template/index-partners.html')
             @@include('./template/seo.html')
             @@include('./template/footer.html')
-            @@include('./template/popups.html')
+            @@include('./template/popups-common.html')
             <div class="content__overlay js-menu-overlay"></div>
         </div>
         @@include('./template/foot.html')

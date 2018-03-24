@@ -3,7 +3,9 @@
     "name": "Аренда"
     })
     <body>
-        @@include('./template/header.html')
+        @@include('./template/header.html', {
+        "active": "rent"
+        })
         <div class="content">
             @@include('./template/filters-second.html')
             @@include('./template/realty-form-rent.html')
@@ -13,12 +15,15 @@
             @@include('./template/realty-rent.html')
             @@include('./template/agents.html')
             @@include('./template/sales.html')
-            @@include('./template/callme.html')
+            @@include('./template/callme.html', {
+            "title": "Не хочу искать, перезвоните мне!",
+            "margin": 1
+            })
             @@include('./template/reviews.html')
             @@include('./template/services.html')
             @@include('./template/seo.html')
             @@include('./template/footer.html')
-            @@include('./template/popups.html')
+            @@include('./template/popups-common.html')
             <div class="content__overlay js-menu-overlay"></div>
         </div>
         @@include('./template/foot.html')

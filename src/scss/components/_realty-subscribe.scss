@@ -1,0 +1,36 @@
+.realty-subscribe {
+    background-image: linear-gradient(118deg, #699ce4, $primary);
+    padding: $container-padding-sm 0;
+    .realty-subscribe__text {
+        flex: 1;
+        font-size: 16px;
+        color: $white;
+        margin-bottom: 20px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .realty-subscribe {
+        background-image: linear-gradient(99deg, #699ce4, $primary);
+        padding: $container-padding-md 0;
+        .realty-subscribe__inner {
+            display: flex;
+            align-items: center;
+        }
+        .realty-subscribe__text {
+            font-size: 19px;
+            margin-bottom: 0;
+            margin-right: 30px;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .realty-subscribe {
+        background-image: linear-gradient(93deg, #699ce4, $primary);
+        .realty-subscribe__text {
+            font-size: 21px;
+            white-space: pre-line;
+        }
+    }
+}
