@@ -138,7 +138,7 @@
                 <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
                 <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
                 <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Жилой комплекс с очень длинным названием</span></label>
                 <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
                 <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
                 <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
@@ -181,7 +181,7 @@
                 <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
                 <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
                 <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Жилой комплекс с очень длинным названием</span></label>
                 <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
                 <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
                 <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
@@ -221,7 +221,9 @@
                             <button class="btn _lg _secondary">Показать</button>
                         </div>
                         <div class="filters-form__summary__buttons__col">
-                            <button class="btn _lg _primary"><i class="icon-map _middle"></i>На карте</button>
+                            <button class="btn _lg _primary">
+                                <i class="icon-map _middle"></i><span>На карте</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -229,7 +231,6 @@
         </div>
         <p class="filters-form__help filters-form__md">Для поиска другой недвижимости перейдите в соответствующий раздел</p>
     </form>
-</div>
 </section>
             <section class="section _inverse realty-form _rent">
     <div class="container">
@@ -320,47 +321,49 @@
             <div class="realty__list slider-small js-slider-small">
                 <div class="realty__list__item slide">
     <div class="realty__list__item__inner">
-        <div class="realty__list__item__images js-realty__list__item__images">
-            <ul class="realty__list__item__tags">
-            
-                <li>Евроремонт</li>
-            
-                <li>Хороший вид</li>
-            
-            </ul>
+        <div class="realty__list__item__images">
             
             <i class="sprite oldprice"></i>
             
-            
-            <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper _active">
-                <img class="realty__list__item__img"
-                     src="img/realty/objects/1.jpg"
-                     srcset="img/realty/objects/1@2x.jpg 2x,
-                     img/realty/objects/1@3x.jpg 3x"
-                     alt="Центр: КПД, ул. 50 лет Октября">
-            </div>
-            
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
+            <ul class="realty-tags">
+                
+                <li><span class="realty-tags__content">Евроремонт</span></li>
+                
+                <li><span class="realty-tags__content">Хороший вид</span></li>
+                
+            </ul>
+            <div class="realty-list-slider js-realty-list-slider">
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/1.jpg"
+                         srcset="img/realty/objects/1@2x.jpg 2x,
+                         img/realty/objects/1@3x.jpg 3x"
+                         alt="Центр: КПД, ул. 50 лет Октября">
+                </div>
+                
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
                     <img class="realty__list__item__img"
                          src="img/realty/objects/2.jpg"
                          srcset="img/realty/objects/2@2x.jpg 2x,
                          img/realty/objects/2@3x.jpg 3x"
                          alt="Центр: КПД, ул. 50 лет Октября">
                 </div>
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
                     <img class="realty__list__item__img"
                          src="img/realty/objects/3.jpg"
                          srcset="img/realty/objects/3@2x.jpg 2x,
                          img/realty/objects/3@3x.jpg 3x"
                          alt="Центр: КПД, ул. 50 лет Октября">
                 </div>
-            
-            <span class="realty__list__item__images__counter">
-                <span class="js-realty__list__item__img-counter">1</span>
-                из 3
-            </span>
+                
+                <span class="realty-list-slider__counter">
+                    <span class="js-realty-list-slider__counter">1</span>
+                    из 3
+                </span>
+            </div>
         </div>
         <div class="realty__list__item__content">
             <div class="realty__list__item__content__header">
@@ -369,7 +372,7 @@
             </div>
             <div class="realty__list__item__content__footer">
                 
-                <div class="realty__list__item__oldprice">16 000 руб./мес.</div>
+                <del class="realty__list__item__oldprice">16 000 руб./мес.</del>
                 
                 <div class="realty__list__item__content__footer__row">
                     <div class="realty__list__item__price">14 000 руб./мес.</div>
@@ -383,59 +386,61 @@
 </div>
                 <div class="realty__list__item slide">
     <div class="realty__list__item__inner">
-        <div class="realty__list__item__images js-realty__list__item__images">
-            <ul class="realty__list__item__tags">
+        <div class="realty__list__item__images">
             
-                <li>Евроремонт</li>
-            
+            <ul class="realty-tags">
+                
+                <li><span class="realty-tags__content">Евроремонт</span></li>
+                
             </ul>
-            
-            
-            <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper _active">
-                <img class="realty__list__item__img"
-                     src="img/realty/objects/2.jpg"
-                     srcset="img/realty/objects/2@2x.jpg 2x,
-                     img/realty/objects/2@3x.jpg 3x"
-                     alt="Северный: Улица Ленина, д. 45">
-            </div>
-            
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
-                    <img class="realty__list__item__img"
-                         src="img/realty/objects/3.jpg"
-                         srcset="img/realty/objects/3@2x.jpg 2x,
-                         img/realty/objects/3@3x.jpg 3x"
-                         alt="Северный: Улица Ленина, д. 45">
-                </div>
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
-                    <img class="realty__list__item__img"
-                         src="img/realty/objects/4.jpg"
-                         srcset="img/realty/objects/4@2x.jpg 2x,
-                         img/realty/objects/4@3x.jpg 3x"
-                         alt="Северный: Улица Ленина, д. 45">
-                </div>
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
-                    <img class="realty__list__item__img"
-                         src="img/realty/objects/1.jpg"
-                         srcset="img/realty/objects/1@2x.jpg 2x,
-                         img/realty/objects/1@3x.jpg 3x"
-                         alt="Северный: Улица Ленина, д. 45">
-                </div>
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
+            <div class="realty-list-slider js-realty-list-slider">
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
                     <img class="realty__list__item__img"
                          src="img/realty/objects/2.jpg"
                          srcset="img/realty/objects/2@2x.jpg 2x,
                          img/realty/objects/2@3x.jpg 3x"
                          alt="Северный: Улица Ленина, д. 45">
                 </div>
-            
-            <span class="realty__list__item__images__counter">
-                <span class="js-realty__list__item__img-counter">1</span>
-                из 10
-            </span>
+                
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/3.jpg"
+                         srcset="img/realty/objects/3@2x.jpg 2x,
+                         img/realty/objects/3@3x.jpg 3x"
+                         alt="Северный: Улица Ленина, д. 45">
+                </div>
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/4.jpg"
+                         srcset="img/realty/objects/4@2x.jpg 2x,
+                         img/realty/objects/4@3x.jpg 3x"
+                         alt="Северный: Улица Ленина, д. 45">
+                </div>
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/1.jpg"
+                         srcset="img/realty/objects/1@2x.jpg 2x,
+                         img/realty/objects/1@3x.jpg 3x"
+                         alt="Северный: Улица Ленина, д. 45">
+                </div>
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/2.jpg"
+                         srcset="img/realty/objects/2@2x.jpg 2x,
+                         img/realty/objects/2@3x.jpg 3x"
+                         alt="Северный: Улица Ленина, д. 45">
+                </div>
+                
+                <span class="realty-list-slider__counter">
+                    <span class="js-realty-list-slider__counter">1</span>
+                    из 10
+                </span>
+            </div>
         </div>
         <div class="realty__list__item__content">
             <div class="realty__list__item__content__header">
@@ -456,47 +461,49 @@
 </div>
                 <div class="realty__list__item slide">
     <div class="realty__list__item__inner">
-        <div class="realty__list__item__images js-realty__list__item__images">
-            <ul class="realty__list__item__tags">
-            
-                <li>Евроремонт</li>
-            
-                <li>Рядом садик</li>
-            
-            </ul>
+        <div class="realty__list__item__images">
             
             <i class="sprite oldprice"></i>
             
-            
-            <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper _active">
-                <img class="realty__list__item__img"
-                     src="img/realty/objects/3.jpg"
-                     srcset="img/realty/objects/3@2x.jpg 2x,
-                     img/realty/objects/3@3x.jpg 3x"
-                     alt="Улица Романа Ноздрина, д. 128">
-            </div>
-            
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
+            <ul class="realty-tags">
+                
+                <li><span class="realty-tags__content">Евроремонт</span></li>
+                
+                <li><span class="realty-tags__content">Рядом садик</span></li>
+                
+            </ul>
+            <div class="realty-list-slider js-realty-list-slider">
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/3.jpg"
+                         srcset="img/realty/objects/3@2x.jpg 2x,
+                         img/realty/objects/3@3x.jpg 3x"
+                         alt="Улица Романа Ноздрина, д. 128">
+                </div>
+                
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
                     <img class="realty__list__item__img"
                          src="img/realty/objects/1.jpg"
                          srcset="img/realty/objects/1@2x.jpg 2x,
                          img/realty/objects/1@3x.jpg 3x"
                          alt="Улица Романа Ноздрина, д. 128">
                 </div>
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
                     <img class="realty__list__item__img"
                          src="img/realty/objects/2.jpg"
                          srcset="img/realty/objects/2@2x.jpg 2x,
                          img/realty/objects/2@3x.jpg 3x"
                          alt="Улица Романа Ноздрина, д. 128">
                 </div>
-            
-            <span class="realty__list__item__images__counter">
-                <span class="js-realty__list__item__img-counter">1</span>
-                из 3
-            </span>
+                
+                <span class="realty-list-slider__counter">
+                    <span class="js-realty-list-slider__counter">1</span>
+                    из 3
+                </span>
+            </div>
         </div>
         <div class="realty__list__item__content">
             <div class="realty__list__item__content__header">
@@ -505,7 +512,7 @@
             </div>
             <div class="realty__list__item__content__footer">
                 
-                <div class="realty__list__item__oldprice">18 000 руб./мес.</div>
+                <del class="realty__list__item__oldprice">18 000 руб./мес.</del>
                 
                 <div class="realty__list__item__content__footer__row">
                     <div class="realty__list__item__price">17 000 руб./мес.</div>
@@ -519,61 +526,63 @@
 </div>
                 <div class="realty__list__item slide">
     <div class="realty__list__item__inner">
-        <div class="realty__list__item__images js-realty__list__item__images">
-            <ul class="realty__list__item__tags">
+        <div class="realty__list__item__images">
             
-                <li>Евроремонт</li>
-            
-                <li>Рядом метро</li>
-            
+            <ul class="realty-tags">
+                
+                <li><span class="realty-tags__content">Евроремонт</span></li>
+                
+                <li><span class="realty-tags__content">Рядом метро</span></li>
+                
             </ul>
-            
-            
-            <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper _active">
-                <img class="realty__list__item__img"
-                     src="img/realty/objects/4.jpg"
-                     srcset="img/realty/objects/4@2x.jpg 2x,
-                     img/realty/objects/4@3x.jpg 3x"
-                     alt="Улица Полка Нормандии-Неман, д. 28">
-            </div>
-            
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
-                    <img class="realty__list__item__img"
-                         src="img/realty/objects/1.jpg"
-                         srcset="img/realty/objects/1@2x.jpg 2x,
-                         img/realty/objects/1@3x.jpg 3x"
-                         alt="Улица Полка Нормандии-Неман, д. 28">
-                </div>
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
-                    <img class="realty__list__item__img"
-                         src="img/realty/objects/2.jpg"
-                         srcset="img/realty/objects/2@2x.jpg 2x,
-                         img/realty/objects/2@3x.jpg 3x"
-                         alt="Улица Полка Нормандии-Неман, д. 28">
-                </div>
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
-                    <img class="realty__list__item__img"
-                         src="img/realty/objects/3.jpg"
-                         srcset="img/realty/objects/3@2x.jpg 2x,
-                         img/realty/objects/3@3x.jpg 3x"
-                         alt="Улица Полка Нормандии-Неман, д. 28">
-                </div>
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
+            <div class="realty-list-slider js-realty-list-slider">
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
                     <img class="realty__list__item__img"
                          src="img/realty/objects/4.jpg"
                          srcset="img/realty/objects/4@2x.jpg 2x,
                          img/realty/objects/4@3x.jpg 3x"
                          alt="Улица Полка Нормандии-Неман, д. 28">
                 </div>
-            
-            <span class="realty__list__item__images__counter">
-                <span class="js-realty__list__item__img-counter">1</span>
-                из 10
-            </span>
+                
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/1.jpg"
+                         srcset="img/realty/objects/1@2x.jpg 2x,
+                         img/realty/objects/1@3x.jpg 3x"
+                         alt="Улица Полка Нормандии-Неман, д. 28">
+                </div>
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/2.jpg"
+                         srcset="img/realty/objects/2@2x.jpg 2x,
+                         img/realty/objects/2@3x.jpg 3x"
+                         alt="Улица Полка Нормандии-Неман, д. 28">
+                </div>
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/3.jpg"
+                         srcset="img/realty/objects/3@2x.jpg 2x,
+                         img/realty/objects/3@3x.jpg 3x"
+                         alt="Улица Полка Нормандии-Неман, д. 28">
+                </div>
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/4.jpg"
+                         srcset="img/realty/objects/4@2x.jpg 2x,
+                         img/realty/objects/4@3x.jpg 3x"
+                         alt="Улица Полка Нормандии-Неман, д. 28">
+                </div>
+                
+                <span class="realty-list-slider__counter">
+                    <span class="js-realty-list-slider__counter">1</span>
+                    из 10
+                </span>
+            </div>
         </div>
         <div class="realty__list__item__content">
             <div class="realty__list__item__content__header">
@@ -593,54 +602,58 @@
     </div>
 </div>
             </div>
-            <button class="btn _primary _lg section__button _more">Показать больше<i class="icon-more"></i></button>
+            <button class="btn _primary _lg section__button _more">
+                <span>Показать больше</span><i class="icon-more"></i>
+            </button>
             <a href="result.html" class="btn _secondary _lg section__button">Все студии</a>
         </div>
         <div id="rooms_1">
             <div class="realty__list slider-small js-slider-small">
                 <div class="realty__list__item slide">
     <div class="realty__list__item__inner">
-        <div class="realty__list__item__images js-realty__list__item__images">
-            <ul class="realty__list__item__tags">
-            
-                <li>Евроремонт</li>
-            
-                <li>Хороший вид</li>
-            
-            </ul>
+        <div class="realty__list__item__images">
             
             <i class="sprite oldprice"></i>
             
-            
-            <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper _active">
-                <img class="realty__list__item__img"
-                     src="img/realty/objects/1.jpg"
-                     srcset="img/realty/objects/1@2x.jpg 2x,
-                     img/realty/objects/1@3x.jpg 3x"
-                     alt="Центр: КПД, ул. 50 лет Октября">
-            </div>
-            
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
+            <ul class="realty-tags">
+                
+                <li><span class="realty-tags__content">Евроремонт</span></li>
+                
+                <li><span class="realty-tags__content">Хороший вид</span></li>
+                
+            </ul>
+            <div class="realty-list-slider js-realty-list-slider">
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/1.jpg"
+                         srcset="img/realty/objects/1@2x.jpg 2x,
+                         img/realty/objects/1@3x.jpg 3x"
+                         alt="Центр: КПД, ул. 50 лет Октября">
+                </div>
+                
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
                     <img class="realty__list__item__img"
                          src="img/realty/objects/2.jpg"
                          srcset="img/realty/objects/2@2x.jpg 2x,
                          img/realty/objects/2@3x.jpg 3x"
                          alt="Центр: КПД, ул. 50 лет Октября">
                 </div>
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
                     <img class="realty__list__item__img"
                          src="img/realty/objects/3.jpg"
                          srcset="img/realty/objects/3@2x.jpg 2x,
                          img/realty/objects/3@3x.jpg 3x"
                          alt="Центр: КПД, ул. 50 лет Октября">
                 </div>
-            
-            <span class="realty__list__item__images__counter">
-                <span class="js-realty__list__item__img-counter">1</span>
-                из 3
-            </span>
+                
+                <span class="realty-list-slider__counter">
+                    <span class="js-realty-list-slider__counter">1</span>
+                    из 3
+                </span>
+            </div>
         </div>
         <div class="realty__list__item__content">
             <div class="realty__list__item__content__header">
@@ -649,7 +662,7 @@
             </div>
             <div class="realty__list__item__content__footer">
                 
-                <div class="realty__list__item__oldprice">16 000 руб./мес.</div>
+                <del class="realty__list__item__oldprice">16 000 руб./мес.</del>
                 
                 <div class="realty__list__item__content__footer__row">
                     <div class="realty__list__item__price">14 000 руб./мес.</div>
@@ -663,59 +676,61 @@
 </div>
                 <div class="realty__list__item slide">
     <div class="realty__list__item__inner">
-        <div class="realty__list__item__images js-realty__list__item__images">
-            <ul class="realty__list__item__tags">
+        <div class="realty__list__item__images">
             
-                <li>Евроремонт</li>
-            
+            <ul class="realty-tags">
+                
+                <li><span class="realty-tags__content">Евроремонт</span></li>
+                
             </ul>
-            
-            
-            <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper _active">
-                <img class="realty__list__item__img"
-                     src="img/realty/objects/2.jpg"
-                     srcset="img/realty/objects/2@2x.jpg 2x,
-                     img/realty/objects/2@3x.jpg 3x"
-                     alt="Северный: Улица Ленина, д. 45">
-            </div>
-            
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
-                    <img class="realty__list__item__img"
-                         src="img/realty/objects/3.jpg"
-                         srcset="img/realty/objects/3@2x.jpg 2x,
-                         img/realty/objects/3@3x.jpg 3x"
-                         alt="Северный: Улица Ленина, д. 45">
-                </div>
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
-                    <img class="realty__list__item__img"
-                         src="img/realty/objects/4.jpg"
-                         srcset="img/realty/objects/4@2x.jpg 2x,
-                         img/realty/objects/4@3x.jpg 3x"
-                         alt="Северный: Улица Ленина, д. 45">
-                </div>
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
-                    <img class="realty__list__item__img"
-                         src="img/realty/objects/1.jpg"
-                         srcset="img/realty/objects/1@2x.jpg 2x,
-                         img/realty/objects/1@3x.jpg 3x"
-                         alt="Северный: Улица Ленина, д. 45">
-                </div>
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
+            <div class="realty-list-slider js-realty-list-slider">
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
                     <img class="realty__list__item__img"
                          src="img/realty/objects/2.jpg"
                          srcset="img/realty/objects/2@2x.jpg 2x,
                          img/realty/objects/2@3x.jpg 3x"
                          alt="Северный: Улица Ленина, д. 45">
                 </div>
-            
-            <span class="realty__list__item__images__counter">
-                <span class="js-realty__list__item__img-counter">1</span>
-                из 10
-            </span>
+                
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/3.jpg"
+                         srcset="img/realty/objects/3@2x.jpg 2x,
+                         img/realty/objects/3@3x.jpg 3x"
+                         alt="Северный: Улица Ленина, д. 45">
+                </div>
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/4.jpg"
+                         srcset="img/realty/objects/4@2x.jpg 2x,
+                         img/realty/objects/4@3x.jpg 3x"
+                         alt="Северный: Улица Ленина, д. 45">
+                </div>
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/1.jpg"
+                         srcset="img/realty/objects/1@2x.jpg 2x,
+                         img/realty/objects/1@3x.jpg 3x"
+                         alt="Северный: Улица Ленина, д. 45">
+                </div>
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/2.jpg"
+                         srcset="img/realty/objects/2@2x.jpg 2x,
+                         img/realty/objects/2@3x.jpg 3x"
+                         alt="Северный: Улица Ленина, д. 45">
+                </div>
+                
+                <span class="realty-list-slider__counter">
+                    <span class="js-realty-list-slider__counter">1</span>
+                    из 10
+                </span>
+            </div>
         </div>
         <div class="realty__list__item__content">
             <div class="realty__list__item__content__header">
@@ -736,47 +751,49 @@
 </div>
                 <div class="realty__list__item slide">
     <div class="realty__list__item__inner">
-        <div class="realty__list__item__images js-realty__list__item__images">
-            <ul class="realty__list__item__tags">
-            
-                <li>Евроремонт</li>
-            
-                <li>Рядом садик</li>
-            
-            </ul>
+        <div class="realty__list__item__images">
             
             <i class="sprite oldprice"></i>
             
-            
-            <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper _active">
-                <img class="realty__list__item__img"
-                     src="img/realty/objects/3.jpg"
-                     srcset="img/realty/objects/3@2x.jpg 2x,
-                     img/realty/objects/3@3x.jpg 3x"
-                     alt="Улица Романа Ноздрина, д. 128">
-            </div>
-            
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
+            <ul class="realty-tags">
+                
+                <li><span class="realty-tags__content">Евроремонт</span></li>
+                
+                <li><span class="realty-tags__content">Рядом садик</span></li>
+                
+            </ul>
+            <div class="realty-list-slider js-realty-list-slider">
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/3.jpg"
+                         srcset="img/realty/objects/3@2x.jpg 2x,
+                         img/realty/objects/3@3x.jpg 3x"
+                         alt="Улица Романа Ноздрина, д. 128">
+                </div>
+                
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
                     <img class="realty__list__item__img"
                          src="img/realty/objects/1.jpg"
                          srcset="img/realty/objects/1@2x.jpg 2x,
                          img/realty/objects/1@3x.jpg 3x"
                          alt="Улица Романа Ноздрина, д. 128">
                 </div>
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
                     <img class="realty__list__item__img"
                          src="img/realty/objects/2.jpg"
                          srcset="img/realty/objects/2@2x.jpg 2x,
                          img/realty/objects/2@3x.jpg 3x"
                          alt="Улица Романа Ноздрина, д. 128">
                 </div>
-            
-            <span class="realty__list__item__images__counter">
-                <span class="js-realty__list__item__img-counter">1</span>
-                из 3
-            </span>
+                
+                <span class="realty-list-slider__counter">
+                    <span class="js-realty-list-slider__counter">1</span>
+                    из 3
+                </span>
+            </div>
         </div>
         <div class="realty__list__item__content">
             <div class="realty__list__item__content__header">
@@ -785,7 +802,7 @@
             </div>
             <div class="realty__list__item__content__footer">
                 
-                <div class="realty__list__item__oldprice">18 000 руб./мес.</div>
+                <del class="realty__list__item__oldprice">18 000 руб./мес.</del>
                 
                 <div class="realty__list__item__content__footer__row">
                     <div class="realty__list__item__price">17 000 руб./мес.</div>
@@ -799,61 +816,63 @@
 </div>
                 <div class="realty__list__item slide">
     <div class="realty__list__item__inner">
-        <div class="realty__list__item__images js-realty__list__item__images">
-            <ul class="realty__list__item__tags">
+        <div class="realty__list__item__images">
             
-                <li>Евроремонт</li>
-            
-                <li>Рядом метро</li>
-            
+            <ul class="realty-tags">
+                
+                <li><span class="realty-tags__content">Евроремонт</span></li>
+                
+                <li><span class="realty-tags__content">Рядом метро</span></li>
+                
             </ul>
-            
-            
-            <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper _active">
-                <img class="realty__list__item__img"
-                     src="img/realty/objects/4.jpg"
-                     srcset="img/realty/objects/4@2x.jpg 2x,
-                     img/realty/objects/4@3x.jpg 3x"
-                     alt="Улица Полка Нормандии-Неман, д. 28">
-            </div>
-            
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
-                    <img class="realty__list__item__img"
-                         src="img/realty/objects/1.jpg"
-                         srcset="img/realty/objects/1@2x.jpg 2x,
-                         img/realty/objects/1@3x.jpg 3x"
-                         alt="Улица Полка Нормандии-Неман, д. 28">
-                </div>
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
-                    <img class="realty__list__item__img"
-                         src="img/realty/objects/2.jpg"
-                         srcset="img/realty/objects/2@2x.jpg 2x,
-                         img/realty/objects/2@3x.jpg 3x"
-                         alt="Улица Полка Нормандии-Неман, д. 28">
-                </div>
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
-                    <img class="realty__list__item__img"
-                         src="img/realty/objects/3.jpg"
-                         srcset="img/realty/objects/3@2x.jpg 2x,
-                         img/realty/objects/3@3x.jpg 3x"
-                         alt="Улица Полка Нормандии-Неман, д. 28">
-                </div>
-            
-                <div class="realty__list__item__img-wrapper js-realty__list__item__img-wrapper">
+            <div class="realty-list-slider js-realty-list-slider">
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
                     <img class="realty__list__item__img"
                          src="img/realty/objects/4.jpg"
                          srcset="img/realty/objects/4@2x.jpg 2x,
                          img/realty/objects/4@3x.jpg 3x"
                          alt="Улица Полка Нормандии-Неман, д. 28">
                 </div>
-            
-            <span class="realty__list__item__images__counter">
-                <span class="js-realty__list__item__img-counter">1</span>
-                из 10
-            </span>
+                
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/1.jpg"
+                         srcset="img/realty/objects/1@2x.jpg 2x,
+                         img/realty/objects/1@3x.jpg 3x"
+                         alt="Улица Полка Нормандии-Неман, д. 28">
+                </div>
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/2.jpg"
+                         srcset="img/realty/objects/2@2x.jpg 2x,
+                         img/realty/objects/2@3x.jpg 3x"
+                         alt="Улица Полка Нормандии-Неман, д. 28">
+                </div>
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/3.jpg"
+                         srcset="img/realty/objects/3@2x.jpg 2x,
+                         img/realty/objects/3@3x.jpg 3x"
+                         alt="Улица Полка Нормандии-Неман, д. 28">
+                </div>
+                
+                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                    <img class="realty__list__item__img"
+                         src="img/realty/objects/4.jpg"
+                         srcset="img/realty/objects/4@2x.jpg 2x,
+                         img/realty/objects/4@3x.jpg 3x"
+                         alt="Улица Полка Нормандии-Неман, д. 28">
+                </div>
+                
+                <span class="realty-list-slider__counter">
+                    <span class="js-realty-list-slider__counter">1</span>
+                    из 10
+                </span>
+            </div>
         </div>
         <div class="realty__list__item__content">
             <div class="realty__list__item__content__header">
@@ -873,7 +892,9 @@
     </div>
 </div>
             </div>
-            <button class="btn _primary _lg section__button _more">Показать больше<i class="icon-more"></i></button>
+            <button class="btn _primary _lg section__button _more">
+                <span>Показать больше</span><i class="icon-more"></i>
+            </button>
             <a href="result.html" class="btn _secondary _lg section__button">Все однокомнатные</a>
         </div>
         <div id="rooms_2">

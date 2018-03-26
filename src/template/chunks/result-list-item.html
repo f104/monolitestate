@@ -1,0 +1,126 @@
+<div class="result-list__item">
+    <div class="result-list__item__images">
+        <div class="realty-list-slider js-realty-list-slider">
+            <ul class="realty-tags">
+                @@for (var i = 0; i < tags.length; i++) {
+                <li><span class="realty-tags__content">`+tags[i]+`</span></li>
+                }
+            </ul>
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/1.jpg"
+                     srcset="img/realty/objects/1@2x.jpg 2x,
+                     img/realty/objects/1@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/2.jpg"
+                     srcset="img/realty/objects/2@2x.jpg 2x,
+                     img/realty/objects/2@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/3.jpg"
+                     srcset="img/realty/objects/3@2x.jpg 2x,
+                     img/realty/objects/3@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/4.jpg"
+                     srcset="img/realty/objects/4@2x.jpg 2x,
+                     img/realty/objects/4@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            <span class="realty-list-slider__counter">
+                <span class="js-realty-list-slider__counter">1</span>
+                из 10
+            </span>
+        </div>
+    </div>
+    <div class="result-list__item__content">
+        <h5 class="result-list__item__h">
+            @@title
+        </h5>
+        <p class="result-list__item__lead">Однокомнатная квартира</p>
+        @@if (oldprice != "") {
+        <div class="card-sale">
+            <span class="card-sale__icon">
+                <i class="icon-down-small"></i>
+            </span>
+            <span class="card-sale__text">
+                Произошло снижение цены
+            </span>
+        </div>
+        }
+        <div class="result-list__item__row">
+            <div class="result-list__item__col _1">
+                <div class="result-list__item__price">
+                    @@if (oldprice != "") {
+                    <del>2 670 000 руб.</del> <i class="icon-down-small"></i>
+                    }
+                    @@if (oldprice == "") {
+                    <a href="#subscribe" class="result-list__item__price__link js-popup">
+                        Сообщить о снижении цены
+                    </a>
+                    }
+                    <span class="result-list__item__price__cost">
+                        2 321 414 руб.
+                    </span>
+                    <span class="result-list__item__help">
+                        стоимость
+                    </span>
+                </div>
+            </div>
+            <div class="result-list__item__col _2">
+                <div class="result-list__item__hypothec">
+                    21 413 руб./мес.
+                    <span class="result-list__item__help">
+                        в ипотеку
+                    </span>
+                </div>
+                <i class="icon-help-circled"></i>
+            </div>
+            <div class="result-list__item__col _3">
+                <ul class="result-list__item__options">
+                    <li>
+                        32 м²
+                        <span class="result-list__item__help">
+                            площадь
+                        </span>
+                    </li>
+                    <li>
+                        73 414 руб.
+                        <span class="result-list__item__help">
+                            цена за м²
+                        </span>
+                    </li>
+                    <li>
+                        5 этаж
+                        <span class="result-list__item__help">
+                            из 14
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="result-list__item__actions">
+            <div class="result-list__item__actions__compare input-group">
+                <label class="checkbox">
+                    <input type="checkbox" @@if (compare == 1) {checked}>
+                           <span class="checkbox__text">К сравнению</span>
+                </label>
+            </div>
+            <div class="result-list__item__actions__btn">
+                <button class="btn _primary 
+                        result-list__item__actions__btn__compare
+                        @@if (fav == 1) {_active}">
+                    <i class="icon-star"></i>
+                </button>
+                <a href="#" class="btn _secondary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>

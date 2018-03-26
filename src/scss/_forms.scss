@@ -43,11 +43,17 @@ form {
     &._shadow {
         box-shadow: 0 15px 24px 0 rgba(0, 0, 0, 0.11);
     }
+    &._md {
+        font-size: 16px;
+    }
     &._lg {
         font-size: 18px;
         line-height: 52px;
         [class^="icon-"] {
             font-size: 13px;
+            &:first-child {
+                margin-right: 8px;
+            }
             &:last-child {
                 margin-left: 8px;
             }
@@ -56,7 +62,7 @@ form {
     &:focus {
         outline: none;
     }
-    &:hover {
+    &:hover, &._active {
         color: $white;
         [class^="icon-"] {
             color: $white;
@@ -306,18 +312,22 @@ form {
                 border: 1px solid #BBC2D4;
                 border-radius: 4px;
             }
+            &:after {
+                content: '';
+                position: absolute;
+                left: 4px;
+                top: 3px;
+                width: 9px;
+                height: 9px;
+                border-radius: 2px;
+                background-color: transparent;
+                @include transition(background-color)
+            }
         }
         input {
             display: none;
             &:checked ~ .checkbox__text {
                 &:after {
-                    content: '';
-                    position: absolute;
-                    left: 4px;
-                    top: 3px;
-                    width: 9px;
-                    height: 9px;
-                    border-radius: 2px;
                     background-color: $primary;
                 }
             }

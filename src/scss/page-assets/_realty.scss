@@ -1,3 +1,30 @@
+.realty-tags {
+    @include list-unstyled;
+    margin-bottom: 0;
+    li {
+        margin-bottom: 5px;
+        .realty-tags__content {
+            display: inline-block;
+            background-color: #fefefe;
+            font-size: 11px;
+            line-height: 18px;
+            border-radius: 4px;
+            padding: 2px 8px 0;
+            color: $primary;
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .realty-tags {
+        li {
+            .realty-tags__content {
+                font-size: 14px;
+                line-height: 21px;
+            }
+        }
+    }
+}
+
 .realty {
     .realty__list {
         margin-bottom: 70px;
@@ -9,6 +36,7 @@
                 flex-direction: column;
                 background-color: $white;
                 border-radius: 4px;
+                overflow: hidden;
                 .realty__list__item__content {
                     flex-grow: 1;
                     padding: 18px 20px 22px;
@@ -41,6 +69,7 @@
                 position: relative;
                 display: inline-block;
                 margin-bottom: 3px;
+                text-decoration: none;
                 &:after {
                     content: '';
                     position: absolute;
@@ -64,73 +93,12 @@
                     color: $secondary;
                 }
             }
-            .realty__list__item__tags {
-                @include list-unstyled;
-                margin-bottom: 0;
-                li {
-                    margin-bottom: 5px;
-                    background-color: #fefefe;
-                    line-height: 21px;
-                    border-radius: 4px;
-                    font-size: 14px;
-                    padding: 2px 8px 0;
-                    color: $primary;
-                }
-            }
             .realty__list__item__btn {
                 margin-top: 24px;
             }
             .realty__list__item__images {
                 position: relative;
-                height: 217px;
-                padding: 15px 12px;
-                overflow: hidden;
-                .realty__list__item__img-wrapper {
-                    height: 34px;
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        left: 0;
-                        z-index: 1;
-                        width: 100%;
-                        height: 34px;
-                    }
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        z-index: 2;
-                        width: 4px;
-                        height: 26px;
-                        border-radius: 2px;
-                        left: 14px;
-                        background-color: $white;
-                    }
-                    img {
-                        display: none;
-                        position: absolute;
-                        min-height: 100%;
-                        min-width: 100%;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                    }
-                    &._active {
-                        &:after {
-                            background-color: $secondary;
-                        }
-                        img {
-                            display: block;
-                        }
-                    }
-                }
-                .realty__list__item__images__counter {
-                    position: absolute;
-                    bottom: 15px;
-                    left: 12px;
-                    font-size: 12px;
-                    color: $white;
-                }
-                .realty__list__item__tags {
+                .realty-tags {
                     position: absolute;
                     top: 15px;
                     left: 30px;
@@ -193,6 +161,73 @@
             .realty__list__item {
                 @include col(25%, 28px);
             }
+        }
+    }
+}
+
+.card-sale {
+    width: 125px;
+    height: 38px;
+    border-radius: 2px 0 0 2px;
+    background-color: #f22727;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 17px;
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        border-left: $white solid 10px;
+        border-top: 19px solid transparent;
+        border-bottom: 19px solid transparent;
+    }
+    .card-sale__icon {
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: $white;
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-right: 5px;
+        text-align: center;
+        .icon-down-small {
+            color: #f22727;
+            text-align: center;
+            line-height: 20px;
+        }
+    }
+    .card-sale__text {
+        display: block;
+        font-size: 10px;
+        font-weight: 600;
+        color: $white;
+        margin-top: 1px;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .card-sale {
+        width: 153px;
+        height: 46px;
+        padding-left: 20px;
+        &:before {
+            border-left: $white solid 12px;
+            border-top: 23px solid transparent;
+            border-bottom: 23px solid transparent;
+        }
+        .card-sale__icon {
+            width: 26px;
+            height: 26px;
+            margin-right: 8px;
+            .icon-down-small {
+                font-size: 20px;
+                line-height: 26px;
+            }
+        }
+        .card-sale__text {
+            font-size: 12px;
+            margin-top: 1px;
         }
     }
 }

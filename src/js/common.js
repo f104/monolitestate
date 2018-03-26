@@ -361,9 +361,9 @@ jQuery(function () {
     }
 
     function initRealty() {
-        $('.js-realty__list__item__images').each(function () {
-            var $togglers = $(this).find('.js-realty__list__item__img-wrapper');
-            var $counter = $(this).find('.js-realty__list__item__img-counter');
+        $('.js-realty-list-slider').each(function () {
+            var $togglers = $(this).find('.js-realty-list-slider__img-wrapper');
+            var $counter = $(this).find('.js-realty-list-slider__counter');
             $togglers.each(function (i) {
                 $(this).on('mouseover', function () {
                     $togglers.removeClass('_active');
@@ -388,6 +388,6 @@ jQuery(function () {
             });
         });
     }
-
+    
 });
 //# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJjb21tb24uanMiXSwic291cmNlc0NvbnRlbnQiOlsialF1ZXJ5KGZ1bmN0aW9uICgpIHtcclxuICAgIFwidXNlIHN0cmljdFwiO1xyXG5cclxuICAgICQoZG9jdW1lbnQpLnJlYWR5KGZ1bmN0aW9uICgpIHtcclxuXHJcbiAgICB9KTtcclxuICAgIFxyXG59KTsiXSwiZmlsZSI6ImNvbW1vbi5qcyJ9

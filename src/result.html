@@ -7,6 +7,7 @@
         "active": "second"
         })
         <div class="content">
+            @@include('./template/filters-result.html')
             <div class="page-header">
                 <div class="container">
                     <div class="page-header__row">
@@ -32,7 +33,7 @@
                     </div>
                 </div>
             </div>
-            
+            @@include('./template/result-list.html')            
             @@include('./template/callme.html', {
             "title": "Ничего не понравилось?",
             "margin": 0

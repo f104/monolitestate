@@ -1,5 +1,5 @@
 .filters {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     .section__h {
         font-size: 16px;
         font-weight: normal;
@@ -13,7 +13,7 @@
         margin-bottom: 19px;
     }
     .input-group {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
     .filters-form__realty-type {
         @include row(10px);
@@ -205,7 +205,7 @@
         margin-top: 20px;
         .filters-form__summary__text {
             font-size: 16px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
         .filters-form__summary__buttons {
             @include row(10px);
@@ -216,7 +216,6 @@
                     padding: 0;
                     [class^="icon-"] {
                         font-size: 15px;
-                        margin-right: 8px;
                     }
                 }
             }
@@ -234,7 +233,7 @@
 
 @include media-breakpoint-up(md) {
     .filters {
-        margin-bottom: 35px;
+        margin-bottom: 30px;
         .section__h {
             display: none;
         }
@@ -273,7 +272,6 @@
             margin-top: 10px;
             .filters-form__summary__text {
                 font-size: 18px;
-                margin-bottom: 20px;
             }
             .filters-form__summary__buttons {
                 @include row(15px);
@@ -287,6 +285,7 @@
             opacity: 0.5;
             font-size: 15px;
             font-weight: 500;
+            margin-top: 20px;
             margin-bottom: 0;
         }
         .filters-form__sm {
@@ -297,7 +296,7 @@
             align-items: flex-end;
             .input-group {
                 @include col(33.33%, 12px);
-                margin-bottom: 12px;
+                margin-bottom: 13px;
                 &._col1 {
                     order: 1;
                     flex-basis: 31%;
@@ -328,22 +327,26 @@
             &._norooms {
                 margin-top: 0;
             }
-            .filters-form__summary__text {
-                margin-bottom: 17px;
-            }
             .filters-form__summary__buttons {
-                margin-bottom: 25px;
+                margin-bottom: 0;
                 .btn {
                     font-size: 19px;
                     line-height: 60px;
                 }
             }
         }
+        .filters-form__help {
+            margin-top: 25px;
+        }
         .filters-form__row {
             @include row(18px);
             .input-group {
                 @include col(33.33%, 18px);
-                margin-bottom: 18px;
+            }
+            &:last-of-type {
+                .input-group {
+                    margin-bottom: 0;
+                }                
             }
         }
         .filters-form__row__lg {

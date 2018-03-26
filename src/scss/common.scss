@@ -37,6 +37,11 @@ body {
 .hidden {
     display: none !important;
 }
+@include media-breakpoint-down(md) {
+    .hidden-sm {
+        display: none !important;
+    }
+}
 .necessaty_fields {
     display: none !important;;
 }
@@ -88,6 +93,10 @@ a, .link {
     }
 }
 
+.icon-help-circled {
+    color: #cecece;
+}
+
 .content {
     position: relative;
     .content__overlay {
@@ -115,6 +124,7 @@ a, .link {
 @import "page-assets/realty";
 @import "page-assets/partners";
 @import "page-assets/reviews";
+@import "page-assets/result";
 @import "components/section";
 @import "components/realty-index";
 @import "components/filters";
@@ -129,7 +139,9 @@ a, .link {
 @import "components/find-on-map";
 @import "components/realty-form";
 @import "components/realty-subscribe";
+@import "components/realty-list-slider";
 @import "components/page-header";
+@import "components/list-header";
 
 .preloader {
     display: none !important;

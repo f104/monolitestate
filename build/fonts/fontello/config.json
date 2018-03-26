@@ -117,6 +117,36 @@
       "search": [
         "calendar"
       ]
+    },
+    {
+      "uid": "fb1c799ffe5bf8fb7f8bcb647c8fe9e6",
+      "css": "right-dir",
+      "code": 59400,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "9dc654095085167524602c9acc0c5570",
+      "css": "left-dir",
+      "code": 59401,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "5048fb5dd929882d2bac1ad3777b0b7d",
+      "css": "filter",
+      "code": 59402,
+      "src": "elusive"
+    },
+    {
+      "uid": "c16a63e911bc47b46dc2a7129d2f0c46",
+      "css": "down-small",
+      "code": 59404,
+      "src": "typicons"
+    },
+    {
+      "uid": "de9a631a7d18106aea1c89ba51b1990a",
+      "css": "help-circled",
+      "code": 59403,
+      "src": "entypo"
     }
   ]
 }
