@@ -299,6 +299,11 @@ form {
             display: inline;
             padding: 0 5px;
             text-align: center;
+            -moz-appearance: textfield;
+            &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
         }
     }
     &._range {
@@ -319,6 +324,7 @@ form {
     .checkbox {
         display: block;
         opacity: 1;
+        margin-bottom: 0;
         .checkbox__text {
             font-size: 15px;
             font-weight: normal;
@@ -474,15 +480,15 @@ form {
         border-radius: 3px;
         border: none;
         margin-bottom: 20px;
-        padding-left: 11.5px;
-        padding-right: 11.5px;
+        padding-left: 11px;
+        padding-right: 11px;
     }
     .noUi-connect {
         background: #4264cf;
     }
     .noUi-handle {
-        width: 23px;
-        height: 23px;
+        width: 22px;
+        height: 22px;
         background-color: #a3b3eb;
         border: none;
         box-shadow: none;
@@ -496,17 +502,20 @@ form {
         &:after {
             content: '\e800';
             font-family: 'fontello';
-            height: unset;
-            width: unset;
+            height: 6px;
+            width: 7px;
             background: none;
-            color: $white;
-            left: 8.5px;
-            top: 8.5px;
+            color: #fff;
+            opacity: .7;
+            left: 50%;
+            top: 50%;
             font-size: 5px;
+            box-sizing: content-box;
+            transform: translate(-50%,-50%);
         }
     }
 }
 html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
-    right: -11.5px;
+    right: -11px;
     left: auto;
 }

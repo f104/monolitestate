@@ -13,11 +13,11 @@
                     <div class="input-group _range">
                         <span class="input-group__item">
                             <input type="number" min="19" max="160" value="19" 
-                                   class="js-range__from"> м²
+                                   autocomplete="off" class="js-range__from"> м²
                         </span>
                         <span class="input-group__item">
-                            <input value="160"
-                                   class="js-range__to"> м²
+                            <input type="number" min="19" max="160" value="160"
+                                   autocomplete="off" class="js-range__to"> м²
                         </span>
                     </div>
                 </fieldset>
@@ -27,19 +27,21 @@
                     <div class="input-group _range js-range__target">
                         <span class="input-group__item">
                             <input type="number" min="8" max="24" value="8"
-                                   class="js-range__from"> м²
+                                   autocomplete="off" class="js-range__from"> м²
                         </span>
                         <span class="input-group__item">
                             <input type="number" min="8" max="24" value="24" 
-                                   class="js-range__to"> м²
+                                   autocomplete="off" class="js-range__to"> м²
                         </span>
                     </div>
                 </fieldset>
                 <fieldset>
                     <legend>Этаж</legend>
                     <div class="input-group _fromto">
-                        От <input type="number" min="1" max="13" value="1"> 
-                        до <input type="number" min="1" max="13" value="13">
+                        От <input type="number" min="1" max="13" 
+                                  autocomplete="off" value="1"> 
+                        до <input type="number" min="1" max="13" 
+                                  autocomplete="off" value="13">
                     </div>
                 </fieldset>
                 <fieldset class="_inline">
