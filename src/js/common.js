@@ -16,6 +16,7 @@ jQuery(function () {
         initRealty();
         initPassword();
         initTabs();
+        initRange();
 
         $('.js-scrollbar').scrollbar();
 
@@ -388,6 +389,39 @@ jQuery(function () {
             });
         });
     }
-    
+
+    function initRange() {
+        $('.js-range').each(function (index, elem) {
+            var slider = $(elem).find('.js-range__target')[0],
+                from = $(elem).find('.js-range__from')[0],
+                to = $(elem).find('.js-range__to')[0];
+            if (slider && from && to) {
+                var min = parseInt(from.value) || 0,
+                    max = parseInt(to.value) || 0;
+                noUiSlider.create(slider, {
+                    start: [
+                        min,
+                        max
+                    ],
+                    connect: true,
+                    range: {
+                        'min': min,
+                        'max': max
+                    }
+                });
+                var snapValues = [from, to];
+                slider.noUiSlider.on('update', function (values, handle) {
+                    snapValues[handle].value = Math.round(values[handle]);
+                });
+                from.addEventListener('change', function () {
+                    slider.noUiSlider.set([this.value, null]);
+                });
+                to.addEventListener('change', function () {
+                    slider.noUiSlider.set([null, this.value]);
+                });
+            }
+        });
+    }
+
 });
 //# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJjb21tb24uanMiXSwic291cmNlc0NvbnRlbnQiOlsialF1ZXJ5KGZ1bmN0aW9uICgpIHtcclxuICAgIFwidXNlIHN0cmljdFwiO1xyXG5cclxuICAgICQoZG9jdW1lbnQpLnJlYWR5KGZ1bmN0aW9uICgpIHtcclxuXHJcbiAgICB9KTtcclxuICAgIFxyXG59KTsiXSwiZmlsZSI6ImNvbW1vbi5qcyJ9

@@ -10,6 +10,7 @@
     <link href="css/libs/slick.css" rel="stylesheet" type="text/css">
     <link href="css/libs/jquery.scrollbar.css" rel="stylesheet" type="text/css">
     <link href="css/libs/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+    <link href="css/libs/nouislider.min.css" rel="stylesheet" type="text/css"/>
     <link href="css/common.css" rel="stylesheet" type="text/css">
 </head>
     <body>
@@ -316,8 +317,151 @@
 </div>
 
     <div class="result-list">
-        <div class="result-list__filter">
-
+        <div class="result-list__aside">
+            <form class="result-list__filter">
+                <h3 class="result-list__filter__h">
+                    Расширенный фильтр
+                </h3>
+                <fieldset class="js-range">
+                    <legend>Общая площадь</legend>
+                    <div class="range js-range__target"></div>
+                    <div class="input-group _range">
+                        <span class="input-group__item">
+                            <input type="number" min="19" max="160" value="19" 
+                                   class="js-range__from"> м²
+                        </span>
+                        <span class="input-group__item">
+                            <input value="160"
+                                   class="js-range__to"> м²
+                        </span>
+                    </div>
+                </fieldset>
+                <fieldset class="js-range">
+                    <legend>Площадь кухни</legend>
+                    <div class="range js-range__target"></div>
+                    <div class="input-group _range js-range__target">
+                        <span class="input-group__item">
+                            <input type="number" min="8" max="24" value="8"
+                                   class="js-range__from"> м²
+                        </span>
+                        <span class="input-group__item">
+                            <input type="number" min="8" max="24" value="24" 
+                                   class="js-range__to"> м²
+                        </span>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Этаж</legend>
+                    <div class="input-group _fromto">
+                        От <input type="number" min="1" max="13" value="1"> 
+                        до <input type="number" min="1" max="13" value="13">
+                    </div>
+                </fieldset>
+                <fieldset class="_inline">
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkbox__text">Со скидкой</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Обмен</span>
+                        </label>
+                    </div>                    
+                </fieldset>
+                <fieldset>
+                    <legend>Тип недвижимости</legend>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkbox__text">Квартиры</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Комнаты</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Малосемейка</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Общежитие</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Отделка</legend>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkbox__text">Черновая</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Улучшенная черновая</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Косметический ремонт</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkbox__text">Современный ремонт</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Ремонт по дизайн-проекту</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Окна</legend>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkbox__text">Пластиковые</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Пластиковые/деревянные</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Деревянные</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Алюминиевые</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <div class="result-list__filter__btn">
+                    <button class="btn _lg _secondary" type="reset">Сбросить фильтр</button>
+                </div>
+            </form>
         </div>
         <div class="result-list__content">
             <div class="result-list__item">
@@ -439,7 +583,7 @@
                         ">
                     <i class="icon-star"></i>
                 </button>
-                <a href="#" class="btn _secondary">Подробнее</a>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
         </div>
     </div>
@@ -554,7 +698,7 @@
                         _active">
                     <i class="icon-star"></i>
                 </button>
-                <a href="#" class="btn _secondary">Подробнее</a>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
         </div>
     </div>
@@ -678,7 +822,7 @@
                         ">
                     <i class="icon-star"></i>
                 </button>
-                <a href="#" class="btn _secondary">Подробнее</a>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
         </div>
     </div>
@@ -793,7 +937,7 @@
                         _active">
                     <i class="icon-star"></i>
                 </button>
-                <a href="#" class="btn _secondary">Подробнее</a>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
         </div>
     </div>
@@ -917,7 +1061,7 @@
                         ">
                     <i class="icon-star"></i>
                 </button>
-                <a href="#" class="btn _secondary">Подробнее</a>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
         </div>
     </div>
@@ -1032,7 +1176,7 @@
                         _active">
                     <i class="icon-star"></i>
                 </button>
-                <a href="#" class="btn _secondary">Подробнее</a>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
         </div>
     </div>
@@ -1156,7 +1300,7 @@
                         ">
                     <i class="icon-star"></i>
                 </button>
-                <a href="#" class="btn _secondary">Подробнее</a>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
         </div>
     </div>
@@ -1271,7 +1415,7 @@
                         _active">
                     <i class="icon-star"></i>
                 </button>
-                <a href="#" class="btn _secondary">Подробнее</a>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
         </div>
     </div>
@@ -1395,7 +1539,7 @@
                         ">
                     <i class="icon-star"></i>
                 </button>
-                <a href="#" class="btn _secondary">Подробнее</a>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
         </div>
     </div>
@@ -1510,7 +1654,7 @@
                         _active">
                     <i class="icon-star"></i>
                 </button>
-                <a href="#" class="btn _secondary">Подробнее</a>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
         </div>
     </div>
@@ -1868,6 +2012,7 @@
 <script src="js/libs/jquery.easytabs.min.js"></script>
 <script src="js/libs/jquery.validate.min.js"></script>
 <script src="js/libs/select2.min.js"></script>
+<script src="js/libs/nouislider.min.js"></script>
 <script src="js/common.js"></script>
     </body>
 </html>

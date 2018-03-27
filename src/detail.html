@@ -1,0 +1,23 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "Объект"
+    })
+    <body>
+        @@include('./template/header.html', {
+        "active": "second"
+        })
+        <div class="content">
+            @@include('./template/sales.html')
+            @@include('./template/hypothec-detail.html')
+            @@include('./template/realty-similar.html')
+            @@include('./template/callme.html', {
+            "title": "Не хочу искать, перезвоните мне!",
+            "margin": 0
+            })
+            @@include('./template/footer.html')
+            @@include('./template/popups-common.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        @@include('./template/foot.html')
+    </body>
+</html>

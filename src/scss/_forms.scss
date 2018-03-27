@@ -292,6 +292,30 @@ form {
             }
         }
     }
+    &._range, &._fromto {
+        input {
+            width: 39px;
+            line-height: 34px;
+            display: inline;
+            padding: 0 5px;
+            text-align: center;
+        }
+    }
+    &._range {
+        display: flex;
+        justify-content: space-between;
+        .input-group__item {
+            input {
+                margin-right: 5px;
+            }
+        }
+    }
+    &._fromto {
+        input {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    }
     .checkbox {
         display: block;
         opacity: 1;
@@ -441,4 +465,48 @@ form {
             }
         }
     }
+}
+
+.range {
+    &.noUi-target {
+        background-color: #e7e7e7;
+        height: 5px;
+        border-radius: 3px;
+        border: none;
+        margin-bottom: 20px;
+        padding-left: 11.5px;
+        padding-right: 11.5px;
+    }
+    .noUi-connect {
+        background: #4264cf;
+    }
+    .noUi-handle {
+        width: 23px;
+        height: 23px;
+        background-color: #a3b3eb;
+        border: none;
+        box-shadow: none;
+        border-radius: 50%;
+        outline: none;
+        cursor: pointer;
+        top: -8px;
+        &:before {
+            content: none;
+        }
+        &:after {
+            content: '\e800';
+            font-family: 'fontello';
+            height: unset;
+            width: unset;
+            background: none;
+            color: $white;
+            left: 8.5px;
+            top: 8.5px;
+            font-size: 5px;
+        }
+    }
+}
+html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
+    right: -11.5px;
+    left: auto;
 }

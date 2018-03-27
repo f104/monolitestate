@@ -33,6 +33,10 @@
 @include media-breakpoint-up(md) {
     .tabs {
         margin-bottom: $container-padding-md;
+        display: inline-block;
+        &._w100 {
+            display: block;
+        }
         .tabs__list {
             li {
                 a {

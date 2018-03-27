@@ -1,0 +1,76 @@
+<section class="container section realty">
+    <h3 class="section__h">Похожие квартиры в Нижнем Новгороде</h3>
+    <div class="js-tabs">
+        <div class="tabs">
+            <ul class="tabs__list js-tabs__list">
+                <li><a href="#tab1">По цене</a></li>
+                <li><a href="#tab2">По площади</a></li>
+                <li><a href="#tab3">По расположению</a></li>
+            </ul>
+            <div class="tabs__select">
+                <select class="js-tabs__select js-select2" style="width:100%">
+                    <option value="#tab1">По цене</option>
+                    <option value="#tab2">По площади</option>
+                    <option value="#tab3">По расположению</option>
+                </select>
+            </div>
+        </div>
+        <div id="tab1">
+            <div class="realty__list slider-small js-slider-small">
+                @@include('./chunks/realty-item.html', {
+                "img": [1, 2, 3],
+                "total": 3,
+                "tags": ["Евроремонт", "Хороший вид"],
+                "title": "Центр: КПД, ул. 50 лет Октября",
+                "subtitle": "Однокомнатная квартира",
+                "oldprice": "2 670 000 руб.",
+                "price": "2 460 000 руб.",
+                "area": "32",
+                "hypothec": "15 324"
+                })
+                @@include('./chunks/realty-item.html', {
+                "img": [2, 3, 4, 1, 2],
+                "total": 10,
+                "tags": ["Евроремонт"],
+                "title": "Северный: Улица Ленина, д. 45",
+                "subtitle": "Однокомнатная квартира",
+                "oldprice": "",
+                "price": "3 123 000 руб.",
+                "area": "44",
+                "hypothec": "22 012"
+                })
+                @@include('./chunks/realty-item.html', {
+                "img": [3, 1, 2],
+                "total": 3,
+                "tags": ["Евроремонт", "Рядом садик"],
+                "title": "Улица Романа Ноздрина, д. 128",
+                "subtitle": "Однокомнатная квартира",
+                "oldprice": "2 190 000 руб.",
+                "price": "1 980 000 руб.",
+                "area": "26",
+                "hypothec": "13 012"
+                })
+                @@include('./chunks/realty-item.html', {
+                "img": [4, 1, 2, 3, 4],
+                "total": 10,
+                "tags": ["Евроремонт", "Рядом метро"],
+                "title": "Улица Полка Нормандии-Неман, д. 28",
+                "subtitle": "Однокомнатная квартира",
+                "oldprice": "",
+                "price": "4 540 000 руб.",
+                "area": "57",
+                "hypothec": "15 324"
+                })
+            </div>
+            <a href="result.html" class="btn _secondary _lg section__button">
+                Все похожие
+            </a>
+        </div>
+        <div id="tab2">
+            tab #2
+        </div>
+        <div id="tab3">
+            tab #3
+        </div>
+    </div>
+</section>

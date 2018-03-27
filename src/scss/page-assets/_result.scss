@@ -1,4 +1,43 @@
 .result-list {
+    .result-list__filter {
+        background-color: $white;
+        border-radius: 5px;
+        .result-list__filter__h {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        fieldset {
+            padding: 0 20px 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid $gray-light;
+            legend {
+                opacity: 0.6;
+                font-family: Lato;
+                font-size: 14px;
+                font-weight: normal;
+                margin-bottom: 15px;
+            }
+            .input-group {
+                margin-bottom: 15px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+            &._inline {
+                .input-group {
+                    display: inline-block;
+                    margin-bottom: 0;
+                    margin-right: 20px;
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                } 
+            }
+        }
+        .result-list__filter__btn {
+            padding: 5px 20px 20px;
+        }
+    }
     .result-list__item {
         margin-left: - $container-padding-sm;
         margin-right: - $container-padding-sm;
@@ -215,7 +254,7 @@
 @include media-breakpoint-up(lg) {
     .result-list {
         display: flex;
-        .result-list__filter {
+        .result-list__aside {
             width: 279px;
             margin-right: 28px;
             flex-shrink: 0;
