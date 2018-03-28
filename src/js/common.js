@@ -17,6 +17,7 @@ jQuery(function () {
         initPassword();
         initTabs();
         initRange();
+        initGallery();
 
         $('.js-scrollbar').scrollbar();
 
@@ -393,11 +394,11 @@ jQuery(function () {
     function initRange() {
         $('.js-range').each(function (index, elem) {
             var slider = $(elem).find('.js-range__target')[0],
-                from = $(elem).find('.js-range__from')[0],
-                to = $(elem).find('.js-range__to')[0];
+                    from = $(elem).find('.js-range__from')[0],
+                    to = $(elem).find('.js-range__to')[0];
             if (slider && from && to) {
                 var min = parseInt(from.value) || 0,
-                    max = parseInt(to.value) || 0;
+                        max = parseInt(to.value) || 0;
                 noUiSlider.create(slider, {
                     start: [
                         min,
@@ -420,6 +421,40 @@ jQuery(function () {
                     slider.noUiSlider.set([null, this.value]);
                 });
             }
+        });
+    }
+
+    function initGallery() {
+        $('.js-gallery-nav').slick({
+            dots: false,
+            arrows: true,
+            infinite: false,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            focusOnSelect: true,
+            asNavFor: '.js-gallery',
+            responsive: [
+                {
+                    breakpoint: appConfig.breakpoint.md,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }
+            ],
+        });
+        $('.js-gallery').slick({
+            dots: false,
+            arrows: true,
+            infinite: false,
+            asNavFor: '.js-gallery-nav',
+            responsive: [
+                {
+                    breakpoint: appConfig.breakpoint.md,
+                    settings: {
+                        arrows: false
+                    }
+                }
+            ],
         });
     }
 

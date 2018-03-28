@@ -5,6 +5,7 @@
 @import "mixins";
 @import "node_modules/bootstrap/scss/reboot";
 @import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/utilities/embed";
 @import "libs/select2/core.scss";
 @import "libs/select2/theme/custom/layout.scss";
 
@@ -125,6 +126,7 @@ a, .link {
 @import "page-assets/partners";
 @import "page-assets/reviews";
 @import "page-assets/result";
+@import "page-assets/content";
 @import "components/section";
 @import "components/realty-index";
 @import "components/filters";
@@ -142,6 +144,7 @@ a, .link {
 @import "components/realty-list-slider";
 @import "components/page-header";
 @import "components/list-header";
+@import "components/gallery";
 
 .preloader {
     display: none !important;
