@@ -172,23 +172,35 @@ jQuery(function () {
 
     function initMenu() {
         if ($(window).outerWidth() < appConfig.breakpoint.md) {
-            $('.js-menu .scrollbar-outer').scrollbar();
+            $('.js-scrollbar-sm .scrollbar-outer').scrollbar();
+        }
+        if ($(window).outerWidth() < appConfig.breakpoint.lg) {
+            $('.js-scrollbar-md .scrollbar-outer').scrollbar();
         }
         $(window).on('resize', function () {
             if ($(window).outerWidth() < appConfig.breakpoint.md) {
-                $('.js-menu .scrollbar-outer').scrollbar();
+                $('.js-scrollbar-sm .scrollbar-outer').scrollbar();
             } else {
-                $('.js-menu .scrollbar-outer').scrollbar('destroy');
+                $('.js-scrollbar-sm .scrollbar-outer').scrollbar('destroy');
+            }
+        });
+        $(window).on('resize', function () {
+            if ($(window).outerWidth() < appConfig.breakpoint.lg) {
+                $('.js-scrollbar-md .scrollbar-outer').scrollbar();
+            } else {
+                $('.js-scrollbar-md .scrollbar-outer').scrollbar('destroy');
             }
         });
         $('.js-menu-toggler').on('click', function (e) {
             e.preventDefault();
-            $(this).toggleClass('_active');
-            $('.js-menu').toggleClass('_active');
-            $('.js-menu-overlay').toggle();
+            var href = $(this).attr('href');
+            $('.js-menu-toggler[href="'+href+'"]').toggleClass('_active');
+            $(href).toggleClass('_active');
+            $('.js-menu._active').length == 0 ? $('.js-menu-overlay').hide() : $('.js-menu-overlay').show();
         });
         $('.js-menu-overlay').on('click', function (e) {
-            $('.js-menu-toggler').click();
+            $('.js-menu-toggler, .js-menu').removeClass('_active');
+            $(this).hide()
         });
         $('.js-menu-second-toggler').on('click', function (e) {
             e.preventDefault();

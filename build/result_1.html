@@ -33,7 +33,7 @@
     </div>
     <div class="header__main">
         <div class="container">
-            <div class="header__main__menu"><a href="#menu" class="header__main__menu__link js-menu-toggler"><i class="icon-menu"></i></a></div>
+            <div class="header__main__menu"><a href="#" class="header__main__menu__link js-menu-toggler"><i class="icon-menu"></i></a></div>
             <div class="header__main__logo"><a href="index.html"><img src="img/logo.png"
                                                                       srcset="img/logo@2x.png 2x,
                                                                       img/logo@3x.png 3x"></a></div>
@@ -60,7 +60,7 @@
             </div>
         </div>
     </div>
-    <div id="menu" class="header__menu js-menu js-scrollbar-sm">
+    <div class="header__menu js-menu">
         <div class="header__menu__inner scrollbar-outer">
             <div class="container">
                 <div class="header__menu__user">
@@ -308,7 +308,7 @@
             </span>
         </div>
         <div class="list-header__col _5">
-            <a href="#result_filter" class="btn _md _primary js-menu-toggler">
+            <a href="#" class="btn _md _primary">
                 <i class="icon-filter"></i>
                 Показать фильтр
             </a>
@@ -318,155 +318,150 @@
 
     <div class="result-list">
         <div class="result-list__aside">
-            <form id="result_filter" class="result-list__filter js-menu js-scrollbar-md">
-                <div class="result-list__filter__inner scrollbar-outer">
-                    <h3 class="result-list__filter__h">
-                        Расширенный фильтр
-                    </h3>
-                    <a href="#result_filter" class="result-list__filter__close js-menu-toggler">
-                        <i class="icon-close"></i>
-                    </a>
-                    <fieldset class="js-range">
-                        <legend>Общая площадь</legend>
-                        <div class="range js-range__target"></div>
-                        <div class="input-group _range">
-                            <span class="input-group__item">
-                                <input type="number" min="19" max="160" value="19" 
-                                       autocomplete="off" class="js-range__from"> м²
-                            </span>
-                            <span class="input-group__item">
-                                <input type="number" min="19" max="160" value="160"
-                                       autocomplete="off" class="js-range__to"> м²
-                            </span>
-                        </div>
-                    </fieldset>
-                    <fieldset class="js-range">
-                        <legend>Площадь кухни</legend>
-                        <div class="range js-range__target"></div>
-                        <div class="input-group _range js-range__target">
-                            <span class="input-group__item">
-                                <input type="number" min="8" max="24" value="8"
-                                       autocomplete="off" class="js-range__from"> м²
-                            </span>
-                            <span class="input-group__item">
-                                <input type="number" min="8" max="24" value="24" 
-                                       autocomplete="off" class="js-range__to"> м²
-                            </span>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Этаж</legend>
-                        <div class="input-group _fromto">
-                            От <input type="number" min="1" max="13" 
-                                      autocomplete="off" value="1"> 
-                            до <input type="number" min="1" max="13" 
-                                      autocomplete="off" value="13">
-                        </div>
-                    </fieldset>
-                    <fieldset class="_inline">
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox" checked>
-                                <span class="checkbox__text">Со скидкой</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Обмен</span>
-                            </label>
-                        </div>                    
-                    </fieldset>
-                    <fieldset>
-                        <legend>Тип недвижимости</legend>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox" checked>
-                                <span class="checkbox__text">Квартиры</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Комнаты</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Малосемейка</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Общежитие</span>
-                            </label>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Отделка</legend>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox" checked>
-                                <span class="checkbox__text">Черновая</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Улучшенная черновая</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Косметический ремонт</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox" checked>
-                                <span class="checkbox__text">Современный ремонт</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Ремонт по дизайн-проекту</span>
-                            </label>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Окна</legend>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox" checked>
-                                <span class="checkbox__text">Пластиковые</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Пластиковые/деревянные</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Деревянные</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Алюминиевые</span>
-                            </label>
-                        </div>
-                    </fieldset>
-                    <div class="result-list__filter__btn">
-                        <button class="btn _lg _secondary" type="reset">Сбросить фильтр</button>
+            <form class="result-list__filter">
+                <h3 class="result-list__filter__h">
+                    Расширенный фильтр
+                </h3>
+                <fieldset class="js-range">
+                    <legend>Общая площадь</legend>
+                    <div class="range js-range__target"></div>
+                    <div class="input-group _range">
+                        <span class="input-group__item">
+                            <input type="number" min="19" max="160" value="19" 
+                                   autocomplete="off" class="js-range__from"> м²
+                        </span>
+                        <span class="input-group__item">
+                            <input type="number" min="19" max="160" value="160"
+                                   autocomplete="off" class="js-range__to"> м²
+                        </span>
                     </div>
+                </fieldset>
+                <fieldset class="js-range">
+                    <legend>Площадь кухни</legend>
+                    <div class="range js-range__target"></div>
+                    <div class="input-group _range js-range__target">
+                        <span class="input-group__item">
+                            <input type="number" min="8" max="24" value="8"
+                                   autocomplete="off" class="js-range__from"> м²
+                        </span>
+                        <span class="input-group__item">
+                            <input type="number" min="8" max="24" value="24" 
+                                   autocomplete="off" class="js-range__to"> м²
+                        </span>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Этаж</legend>
+                    <div class="input-group _fromto">
+                        От <input type="number" min="1" max="13" 
+                                  autocomplete="off" value="1"> 
+                        до <input type="number" min="1" max="13" 
+                                  autocomplete="off" value="13">
+                    </div>
+                </fieldset>
+                <fieldset class="_inline">
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkbox__text">Со скидкой</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Обмен</span>
+                        </label>
+                    </div>                    
+                </fieldset>
+                <fieldset>
+                    <legend>Тип недвижимости</legend>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkbox__text">Квартиры</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Комнаты</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Малосемейка</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Общежитие</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Отделка</legend>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkbox__text">Черновая</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Улучшенная черновая</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Косметический ремонт</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkbox__text">Современный ремонт</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Ремонт по дизайн-проекту</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Окна</legend>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkbox__text">Пластиковые</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Пластиковые/деревянные</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Деревянные</span>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__text">Алюминиевые</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <div class="result-list__filter__btn">
+                    <button class="btn _lg _secondary" type="reset">Сбросить фильтр</button>
                 </div>
             </form>
         </div>
@@ -579,20 +574,16 @@
         </div>
         <div class="result-list__item__actions">
             <div class="result-list__item__actions__compare input-group">
-                <label class="checkbox ">
-                    <input type="checkbox" 
-                        
-                        >
-                    <span class="checkbox__text">К сравнению</span>
+                <label class="checkbox">
+                    <input type="checkbox" >
+                           <span class="checkbox__text">К сравнению</span>
                 </label>
             </div>
             <div class="result-list__item__actions__btn">
-                
                 <button class="btn _primary 
                         result-list__item__actions__btn__compare
                         ">
                     <i class="icon-star"></i>
-                
                 </button>
                 <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
@@ -698,20 +689,16 @@
         </div>
         <div class="result-list__item__actions">
             <div class="result-list__item__actions__compare input-group">
-                <label class="checkbox ">
-                    <input type="checkbox" 
-                        
-                        checked>
-                    <span class="checkbox__text">К сравнению</span>
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                           <span class="checkbox__text">К сравнению</span>
                 </label>
             </div>
             <div class="result-list__item__actions__btn">
-                
                 <button class="btn _primary 
                         result-list__item__actions__btn__compare
                         _active">
                     <i class="icon-star"></i>
-                
                 </button>
                 <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
@@ -826,15 +813,16 @@
         </div>
         <div class="result-list__item__actions">
             <div class="result-list__item__actions__compare input-group">
-                <label class="checkbox _disabled">
-                    <input type="checkbox" 
-                        disabled
-                        >
-                    <span class="checkbox__text">К сравнению</span>
+                <label class="checkbox">
+                    <input type="checkbox" >
+                           <span class="checkbox__text">К сравнению</span>
                 </label>
             </div>
             <div class="result-list__item__actions__btn">
-                
+                <button class="btn _primary 
+                        result-list__item__actions__btn__compare
+                        ">
+                    <i class="icon-star"></i>
                 </button>
                 <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
@@ -940,20 +928,16 @@
         </div>
         <div class="result-list__item__actions">
             <div class="result-list__item__actions__compare input-group">
-                <label class="checkbox ">
-                    <input type="checkbox" 
-                        
-                        checked>
-                    <span class="checkbox__text">К сравнению</span>
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                           <span class="checkbox__text">К сравнению</span>
                 </label>
             </div>
             <div class="result-list__item__actions__btn">
-                
                 <button class="btn _primary 
                         result-list__item__actions__btn__compare
                         _active">
                     <i class="icon-star"></i>
-                
                 </button>
                 <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
@@ -1068,20 +1052,16 @@
         </div>
         <div class="result-list__item__actions">
             <div class="result-list__item__actions__compare input-group">
-                <label class="checkbox ">
-                    <input type="checkbox" 
-                        
-                        >
-                    <span class="checkbox__text">К сравнению</span>
+                <label class="checkbox">
+                    <input type="checkbox" >
+                           <span class="checkbox__text">К сравнению</span>
                 </label>
             </div>
             <div class="result-list__item__actions__btn">
-                
                 <button class="btn _primary 
                         result-list__item__actions__btn__compare
                         ">
                     <i class="icon-star"></i>
-                
                 </button>
                 <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
@@ -1187,20 +1167,16 @@
         </div>
         <div class="result-list__item__actions">
             <div class="result-list__item__actions__compare input-group">
-                <label class="checkbox ">
-                    <input type="checkbox" 
-                        
-                        checked>
-                    <span class="checkbox__text">К сравнению</span>
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                           <span class="checkbox__text">К сравнению</span>
                 </label>
             </div>
             <div class="result-list__item__actions__btn">
-                
                 <button class="btn _primary 
                         result-list__item__actions__btn__compare
                         _active">
                     <i class="icon-star"></i>
-                
                 </button>
                 <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
@@ -1315,20 +1291,16 @@
         </div>
         <div class="result-list__item__actions">
             <div class="result-list__item__actions__compare input-group">
-                <label class="checkbox ">
-                    <input type="checkbox" 
-                        
-                        >
-                    <span class="checkbox__text">К сравнению</span>
+                <label class="checkbox">
+                    <input type="checkbox" >
+                           <span class="checkbox__text">К сравнению</span>
                 </label>
             </div>
             <div class="result-list__item__actions__btn">
-                
                 <button class="btn _primary 
                         result-list__item__actions__btn__compare
                         ">
                     <i class="icon-star"></i>
-                
                 </button>
                 <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
@@ -1434,20 +1406,16 @@
         </div>
         <div class="result-list__item__actions">
             <div class="result-list__item__actions__compare input-group">
-                <label class="checkbox ">
-                    <input type="checkbox" 
-                        
-                        checked>
-                    <span class="checkbox__text">К сравнению</span>
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                           <span class="checkbox__text">К сравнению</span>
                 </label>
             </div>
             <div class="result-list__item__actions__btn">
-                
                 <button class="btn _primary 
                         result-list__item__actions__btn__compare
                         _active">
                     <i class="icon-star"></i>
-                
                 </button>
                 <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
@@ -1562,20 +1530,16 @@
         </div>
         <div class="result-list__item__actions">
             <div class="result-list__item__actions__compare input-group">
-                <label class="checkbox ">
-                    <input type="checkbox" 
-                        
-                        >
-                    <span class="checkbox__text">К сравнению</span>
+                <label class="checkbox">
+                    <input type="checkbox" >
+                           <span class="checkbox__text">К сравнению</span>
                 </label>
             </div>
             <div class="result-list__item__actions__btn">
-                
                 <button class="btn _primary 
                         result-list__item__actions__btn__compare
                         ">
                     <i class="icon-star"></i>
-                
                 </button>
                 <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
@@ -1681,20 +1645,16 @@
         </div>
         <div class="result-list__item__actions">
             <div class="result-list__item__actions__compare input-group">
-                <label class="checkbox ">
-                    <input type="checkbox" 
-                        
-                        checked>
-                    <span class="checkbox__text">К сравнению</span>
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                           <span class="checkbox__text">К сравнению</span>
                 </label>
             </div>
             <div class="result-list__item__actions__btn">
-                
                 <button class="btn _primary 
                         result-list__item__actions__btn__compare
                         _active">
                     <i class="icon-star"></i>
-                
                 </button>
                 <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>
@@ -1756,7 +1716,7 @@
             </span>
         </div>
         <div class="list-header__col _5">
-            <a href="#result_filter" class="btn _md _primary js-menu-toggler">
+            <a href="#" class="btn _md _primary">
                 <i class="icon-filter"></i>
                 Показать фильтр
             </a>

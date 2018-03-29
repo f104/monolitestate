@@ -3,150 +3,155 @@
 
     <div class="result-list">
         <div class="result-list__aside">
-            <form class="result-list__filter">
-                <h3 class="result-list__filter__h">
-                    Расширенный фильтр
-                </h3>
-                <fieldset class="js-range">
-                    <legend>Общая площадь</legend>
-                    <div class="range js-range__target"></div>
-                    <div class="input-group _range">
-                        <span class="input-group__item">
-                            <input type="number" min="19" max="160" value="19" 
-                                   autocomplete="off" class="js-range__from"> м²
-                        </span>
-                        <span class="input-group__item">
-                            <input type="number" min="19" max="160" value="160"
-                                   autocomplete="off" class="js-range__to"> м²
-                        </span>
+            <form id="result_filter" class="result-list__filter js-menu js-scrollbar-md">
+                <div class="result-list__filter__inner scrollbar-outer">
+                    <h3 class="result-list__filter__h">
+                        Расширенный фильтр
+                    </h3>
+                    <a href="#result_filter" class="result-list__filter__close js-menu-toggler">
+                        <i class="icon-close"></i>
+                    </a>
+                    <fieldset class="js-range">
+                        <legend>Общая площадь</legend>
+                        <div class="range js-range__target"></div>
+                        <div class="input-group _range">
+                            <span class="input-group__item">
+                                <input type="number" min="19" max="160" value="19" 
+                                       autocomplete="off" class="js-range__from"> м²
+                            </span>
+                            <span class="input-group__item">
+                                <input type="number" min="19" max="160" value="160"
+                                       autocomplete="off" class="js-range__to"> м²
+                            </span>
+                        </div>
+                    </fieldset>
+                    <fieldset class="js-range">
+                        <legend>Площадь кухни</legend>
+                        <div class="range js-range__target"></div>
+                        <div class="input-group _range js-range__target">
+                            <span class="input-group__item">
+                                <input type="number" min="8" max="24" value="8"
+                                       autocomplete="off" class="js-range__from"> м²
+                            </span>
+                            <span class="input-group__item">
+                                <input type="number" min="8" max="24" value="24" 
+                                       autocomplete="off" class="js-range__to"> м²
+                            </span>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Этаж</legend>
+                        <div class="input-group _fromto">
+                            От <input type="number" min="1" max="13" 
+                                      autocomplete="off" value="1"> 
+                            до <input type="number" min="1" max="13" 
+                                      autocomplete="off" value="13">
+                        </div>
+                    </fieldset>
+                    <fieldset class="_inline">
+                        <div class="input-group">
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkbox__text">Со скидкой</span>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__text">Обмен</span>
+                            </label>
+                        </div>                    
+                    </fieldset>
+                    <fieldset>
+                        <legend>Тип недвижимости</legend>
+                        <div class="input-group">
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkbox__text">Квартиры</span>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__text">Комнаты</span>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__text">Малосемейка</span>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__text">Общежитие</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Отделка</legend>
+                        <div class="input-group">
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkbox__text">Черновая</span>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__text">Улучшенная черновая</span>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__text">Косметический ремонт</span>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkbox__text">Современный ремонт</span>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__text">Ремонт по дизайн-проекту</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Окна</legend>
+                        <div class="input-group">
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkbox__text">Пластиковые</span>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__text">Пластиковые/деревянные</span>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__text">Деревянные</span>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__text">Алюминиевые</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div class="result-list__filter__btn">
+                        <button class="btn _lg _secondary" type="reset">Сбросить фильтр</button>
                     </div>
-                </fieldset>
-                <fieldset class="js-range">
-                    <legend>Площадь кухни</legend>
-                    <div class="range js-range__target"></div>
-                    <div class="input-group _range js-range__target">
-                        <span class="input-group__item">
-                            <input type="number" min="8" max="24" value="8"
-                                   autocomplete="off" class="js-range__from"> м²
-                        </span>
-                        <span class="input-group__item">
-                            <input type="number" min="8" max="24" value="24" 
-                                   autocomplete="off" class="js-range__to"> м²
-                        </span>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend>Этаж</legend>
-                    <div class="input-group _fromto">
-                        От <input type="number" min="1" max="13" 
-                                  autocomplete="off" value="1"> 
-                        до <input type="number" min="1" max="13" 
-                                  autocomplete="off" value="13">
-                    </div>
-                </fieldset>
-                <fieldset class="_inline">
-                    <div class="input-group">
-                        <label class="checkbox">
-                            <input type="checkbox" checked>
-                            <span class="checkbox__text">Со скидкой</span>
-                        </label>
-                    </div>
-                    <div class="input-group">
-                        <label class="checkbox">
-                            <input type="checkbox">
-                            <span class="checkbox__text">Обмен</span>
-                        </label>
-                    </div>                    
-                </fieldset>
-                <fieldset>
-                    <legend>Тип недвижимости</legend>
-                    <div class="input-group">
-                        <label class="checkbox">
-                            <input type="checkbox" checked>
-                            <span class="checkbox__text">Квартиры</span>
-                        </label>
-                    </div>
-                    <div class="input-group">
-                        <label class="checkbox">
-                            <input type="checkbox">
-                            <span class="checkbox__text">Комнаты</span>
-                        </label>
-                    </div>
-                    <div class="input-group">
-                        <label class="checkbox">
-                            <input type="checkbox">
-                            <span class="checkbox__text">Малосемейка</span>
-                        </label>
-                    </div>
-                    <div class="input-group">
-                        <label class="checkbox">
-                            <input type="checkbox">
-                            <span class="checkbox__text">Общежитие</span>
-                        </label>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend>Отделка</legend>
-                    <div class="input-group">
-                        <label class="checkbox">
-                            <input type="checkbox" checked>
-                            <span class="checkbox__text">Черновая</span>
-                        </label>
-                    </div>
-                    <div class="input-group">
-                        <label class="checkbox">
-                            <input type="checkbox">
-                            <span class="checkbox__text">Улучшенная черновая</span>
-                        </label>
-                    </div>
-                    <div class="input-group">
-                        <label class="checkbox">
-                            <input type="checkbox">
-                            <span class="checkbox__text">Косметический ремонт</span>
-                        </label>
-                    </div>
-                    <div class="input-group">
-                        <label class="checkbox">
-                            <input type="checkbox" checked>
-                            <span class="checkbox__text">Современный ремонт</span>
-                        </label>
-                    </div>
-                    <div class="input-group">
-                        <label class="checkbox">
-                            <input type="checkbox">
-                            <span class="checkbox__text">Ремонт по дизайн-проекту</span>
-                        </label>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend>Окна</legend>
-                    <div class="input-group">
-                        <label class="checkbox">
-                            <input type="checkbox" checked>
-                            <span class="checkbox__text">Пластиковые</span>
-                        </label>
-                    </div>
-                    <div class="input-group">
-                        <label class="checkbox">
-                            <input type="checkbox">
-                            <span class="checkbox__text">Пластиковые/деревянные</span>
-                        </label>
-                    </div>
-                    <div class="input-group">
-                        <label class="checkbox">
-                            <input type="checkbox">
-                            <span class="checkbox__text">Деревянные</span>
-                        </label>
-                    </div>
-                    <div class="input-group">
-                        <label class="checkbox">
-                            <input type="checkbox">
-                            <span class="checkbox__text">Алюминиевые</span>
-                        </label>
-                    </div>
-                </fieldset>
-                <div class="result-list__filter__btn">
-                    <button class="btn _lg _secondary" type="reset">Сбросить фильтр</button>
                 </div>
             </form>
         </div>
@@ -169,8 +174,8 @@
             "title": "г. Бор, Нижняя Дубровка, Нижегородский р-н, ул. Максима Горького, д. 141",
             "oldprice": "2 670 000",
             "tags": ["Евроремонт", "Рядом метро"],
-            "compare": 0,
-            "fav": 0
+            "compare": -1,
+            "fav": -1
             })
             @@include('./chunks/result-list-item.html', {
             "title": "г. Нижний Новгород, Нижняя Дубровка, ул. Максима Горького, д. 141",

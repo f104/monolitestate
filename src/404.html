@@ -1,0 +1,40 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "404"
+    })
+    <body>
+        @@include('./template/header.html', {
+        "active": ""
+        })
+        <div class="content">
+            <section class="section container not-found">
+                <h1 class="section__h">Страница не найдена</h1>
+                <div class="not-found__row _1">
+                    <div class="not-found__404">404</div>
+                    <div class="not-found__row _2">
+                        <div class="not-found__text">
+                            Что-то пошло не так и квартира потерялась, 
+                            но я её обязательно найду!
+                        </div>
+                        <div class="not-found__img-wrapper">
+                            <img src="img/404.png"
+                                 srcset="img/404@2x.png 2x,
+                                 img/404@3x.png 3x"
+                                 alt="alt -text">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @@include('./template/filters-index.html')
+            @@include('./template/callme.html', {
+            "title": "Если у вас есть вопросы",
+            "margin": 1
+            })
+            @@include('./template/seo.html')
+            @@include('./template/footer.html')
+            @@include('./template/popups-common.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        @@include('./template/foot.html')
+    </body>
+</html>

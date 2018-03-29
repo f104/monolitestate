@@ -1,10 +1,14 @@
 .result-list {
     .result-list__filter {
-        background-color: $white;
-        border-radius: 5px;
+        .result-list__filter__inner {
+            background-color: $white;
+        }
         .result-list__filter__h {
             padding: 20px;
             margin-bottom: 20px;
+        }
+        .result-list__filter__close {
+            display: none;
         }
         fieldset {
             padding: 0 20px 20px;
@@ -166,8 +170,53 @@
     }
 }
 
+@include media-breakpoint-down(md) {
+    .result-list {
+        .result-list__filter {
+            position: fixed;
+            z-index: 997;
+            top: 0;
+            width: 280px;
+            left: -280px;
+            @include transition(transform);
+            height: 100vh;
+            padding-top: 60px;
+            &._active {
+                transform: translateX(100%);
+                .result-list__filter__inner {
+                    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.13);
+                }
+            }
+            .scrollbar-outer {
+                height: 100%;
+                .scroll-element {
+                    display: none;
+                }
+                .scroll-content.scroll-scrolly_visible {
+                    left: 0;
+                    margin-left: 0;
+                }
+            }
+            .result-list__filter__close {
+                @include link-black;
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 23px;
+                [class^="icon-"] {
+                    color: $body-color;
+                }
+            }
+        }
+    }
+}
+
 @include media-breakpoint-up(md) {
     .result-list {
+        .result-list__filter {
+            z-index: 999;
+            padding-top: 0;
+        }
         .result-list__item {
             margin-left: 0;
             margin-right: 0;
@@ -258,6 +307,12 @@
             width: 279px;
             margin-right: 28px;
             flex-shrink: 0;
+        }
+        .result-list__filter {
+            z-index: unset;
+            .result-list__filter__inner {
+                border-radius: 5px;
+            }
         }
         .result-list__item {
             margin-bottom: 28px;

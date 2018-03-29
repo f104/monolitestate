@@ -362,6 +362,12 @@ form {
                 }
             }
         }
+        &._disabled {
+            pointer-events: none;
+            .checkbox__text {
+                opacity: .5;
+            }
+        }
     }
 }
 

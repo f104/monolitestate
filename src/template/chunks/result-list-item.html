@@ -108,16 +108,20 @@
         </div>
         <div class="result-list__item__actions">
             <div class="result-list__item__actions__compare input-group">
-                <label class="checkbox">
-                    <input type="checkbox" @@if (compare == 1) {checked}>
-                           <span class="checkbox__text">К сравнению</span>
+                <label class="checkbox @@if (compare == -1) {_disabled}">
+                    <input type="checkbox" 
+                        @@if (compare == -1) {disabled}
+                        @@if (compare == 1) {checked}>
+                    <span class="checkbox__text">К сравнению</span>
                 </label>
             </div>
             <div class="result-list__item__actions__btn">
+                @@if (fav != -1) {
                 <button class="btn _primary 
                         result-list__item__actions__btn__compare
                         @@if (fav == 1) {_active}">
                     <i class="icon-star"></i>
+                }
                 </button>
                 <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>

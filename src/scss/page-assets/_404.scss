@@ -1,0 +1,112 @@
+.not-found {
+    .not-found__404 {
+        font-size: 154px;
+        font-weight: 100;
+        line-height: 1;
+    }
+    .not-found__text {
+        max-width: 450px;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.1;
+        background-color: $white;
+        padding: 15px 30px;
+        border-radius: 70px 100px 100px 0;
+        margin-bottom: 40px;
+        position: relative;
+        &:before {
+            content: '';
+            width: 80px;
+            height: 40px;
+            background-color: $white;
+            bottom: -40px;
+            left: 0;
+            position: absolute;
+        }
+        &:after {
+            content: '';
+            width: 80px;
+            height: 40px;
+            background-color: $body-bg;
+            bottom: -40px;
+            left: 0;
+            position: absolute;
+            border-radius: 100% 0 0px 0;
+        }
+    }
+    .not-found__img-wrapper {
+        width: 146px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .not-found {
+        .not-found__404 {
+            font-size: 200px;
+        }
+        .not-found__row {
+            &._2 {
+                display: flex;
+                align-items: flex-end;
+            }
+        }
+        .not-found__text {
+            max-width: unset;
+            width: 440px;
+            font-size: 28px;
+            padding: 25px 30px 25px 50px;
+            border-radius: 70px;
+            margin-right: 80px;
+            margin-bottom: 17px;
+            position: relative;
+            &:before {
+                content: '';
+                width: 70px;
+                height: 90px;
+                background-color: $white;
+                bottom: auto;
+                left: auto;
+                position: absolute;
+                right: -21px;
+                top: 38px;
+                transform: skew(-44deg,-11deg);
+                z-index: -1;
+            }
+            &:after {
+                content: none;
+            }
+        }
+        .not-found__img-wrapper {
+            width: 181px;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .not-found {
+        .not-found__row {
+            &._1 {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        .not-found__text {
+            font-size: 32px;
+            line-height: 1.25;
+            width: 500px;
+            border-radius: 85px;
+            padding-left: 60px;
+            margin-right: 100px;
+            &:before {
+                width: 100px;
+                height: 106px;
+                right: -22px;
+                top: 53px;
+                transform: skew(-44deg,-11deg);
+            }
+        }
+    }
+}
