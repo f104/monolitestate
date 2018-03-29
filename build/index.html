@@ -1444,7 +1444,36 @@
 </div>
             <div class="content__overlay js-menu-overlay"></div>
         </div>
-        <script>
+        <div class="dev">
+    <span id="dev_toggler" class="dev__toggler">&lt;/&gt;</span>
+    <ul>
+        <li><a href="index.html">main</a></li>
+        <li><a href="second.html">second</a></li>
+        <li><a href="rent.html">rent</a></li>
+        <li><a href="commercial.html">commercial</a></li>
+        <li><a href="result.html">result</a></li>
+        <li><a href="detail.html">detail</a></li>
+        <li><a href="content.html">content</a></li>
+        <li><a href="404.html">404</a></li>
+    </ul>
+</div>
+<script>
+    (function () {
+        var t = document.getElementById('dev_toggler');
+        var p = t.parentElement;
+        t.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.parentElement.classList.toggle('_active');
+        });
+        p.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+        window.addEventListener('click', function () {
+            p.classList.remove('_active');
+        });
+    }());
+</script>
+<script>
     var appConfig = {
         breakpoint: {
             sm: 320,

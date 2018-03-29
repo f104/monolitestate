@@ -1,0 +1,42 @@
+.dev {
+    position: fixed;
+    z-index: 100500;
+    right: 0;
+    bottom: 0;
+    background: white;
+    border-style: solid;
+    border-color: #131313;
+    border-width: 1px 0 0 1px;
+    padding: .5rem;
+    transition: transform .2s;
+    width: 100px;
+    transform: translateX(100%);
+    ul {
+        padding-left: 1rem;
+        line-height: 1.7;
+        margin-bottom: 0;
+        font-size: 75%;
+    }
+    .dev__toggler {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-100%);
+        background: #131313;
+        color: white;
+        padding: .2rem;
+        cursor: pointer;
+        opacity: .3;
+        transition: opacity .2s;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &._active {
+        transform: none;
+        .dev__toggler {
+            opacity: 1;
+        }
+    }
+}

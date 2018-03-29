@@ -42,6 +42,9 @@
             padding: 0 20px 20px;
         }
     }
+    .promo {
+        margin-bottom: $container-padding-sm;
+    }
     .result-list__item {
         margin-left: - $container-padding-sm;
         margin-right: - $container-padding-sm;
@@ -217,6 +220,9 @@
             z-index: 999;
             padding-top: 0;
         }
+        .promo {
+            @include hover-up;
+        }
         .result-list__item {
             margin-left: 0;
             margin-right: 0;
@@ -313,6 +319,9 @@
             .result-list__filter__inner {
                 border-radius: 5px;
             }
+        }
+        .promo {
+            margin-bottom: 28px;            
         }
         .result-list__item {
             margin-bottom: 28px;
