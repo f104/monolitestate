@@ -51,15 +51,15 @@
         <div class="filters-form__row__lg">
             <div class="filters-form__col__lg _col1">
                 <div class="filters-form__row">
-                    <div class="input-group _col1">
-                        <div class="filters-form__radio">
-                            <label class="filters-form__radio__item">
-                                <input type="radio" name="type2" value="buy">
-                                <span class="filters-form__radio__item__inner">Купить</span>
+                    <div class="input-group _col1 _radio">
+                        <div class="input-group__inner">
+                            <label class="input-group__radio__item">
+                                <input type="radio" checked="" name="type2" value="1">
+                                <span class="input-group__radio__item__inner">Купить</span>
                             </label>
-                            <label class="filters-form__radio__item">
-                                <input type="radio" checked name="type2" value="rent">
-                                <span class="filters-form__radio__item__inner">Арендовать</span>
+                            <label class="input-group__radio__item">
+                                <input type="radio" name="type2" value="2">
+                                <span class="input-group__radio__item__inner">Арендовать</span>
                             </label>
                         </div>
                     </div>
@@ -70,8 +70,8 @@
                         </select>
                     </div>
                     <div class="input-group _double _col3">
-                        <input placeholder="Цена от (руб.)">
-                        <input placeholder="Цена до (руб.)">
+                        <input placeholder="Цена от (руб.)" class="js-mask__currency">
+                        <input placeholder="Цена до (руб.)" class="js-mask__currency">
                     </div>
                 </div>
                 <div class="filters-form__row">
@@ -82,8 +82,8 @@
                         <input placeholder="Код объекта">
                     </div>
                     <div class="input-group _double _col3">
-                        <input placeholder="Площадь от">
-                        <input placeholder="Площадь до">
+                        <input placeholder="Площадь от" class="js-mask__square">
+                        <input placeholder="Площадь до" class="js-mask__square">
                     </div>
                 </div>
             </div>

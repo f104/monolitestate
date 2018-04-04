@@ -26,7 +26,7 @@
                     <li><a href="#">Услуги</a></li>
                     <li><a href="#">О компании</a></li>
                     <li><a href="#">Вакансии</a></li>
-                    <li><a href="#">Новости</a></li>
+                    <li><a href="news.html">Новости</a></li>
                 </ul>
             </nav>
         </div>
@@ -95,7 +95,7 @@
                             <li><a href="#">Услуги</a></li>
                             <li><a href="#">Рейтинг агентов</a></li>
                             <li><a href="#">Застройщики</a></li>
-                            <li><a href="#">Новости рынка недвижимости</a></li>
+                            <li><a href="news.html">Новости рынка недвижимости</a></li>
                             <li><a href="#">Акции</a></li>
                             <li><a href="#">Контакты</a></li>
                             <li><a href="#">Специалисты по недвижимости</a></li>
@@ -163,8 +163,8 @@
 </div>
                     </div>
                     <div class="input-group _double _col3">
-                        <input placeholder="Цена от (руб.)">
-                        <input placeholder="Цена до (руб.)">
+                        <input placeholder="Цена от (руб.)" class="js-mask__currency">
+                        <input placeholder="Цена до (руб.)" class="js-mask__currency">
                     </div>
                 </div>
                 <div class="filters-form__row">
@@ -209,8 +209,8 @@
                         <input placeholder="Код объекта">
                     </div>
                     <div class="input-group _double _col3">
-                        <input placeholder="Площадь от">
-                        <input placeholder="Площадь до">
+                        <input placeholder="Площадь от" class="js-mask__square">
+                        <input placeholder="Площадь до" class="js-mask__square">
                     </div>
                 </div>
             </div>
@@ -256,7 +256,7 @@
         </div>
         <div class="input-group _lg _white _secondary">
             <label>Ваш телефон:</label>
-            <input value="" data-inputmask="'mask': '+9 (999) 999-99-99'">
+            <input value="" class="js-mask__tel">
         </div>
     </div>
     <div class="input-group__wrapper _submit">
@@ -277,7 +277,7 @@
 </div>
     </div>
 </section>
-            <section class="container section">
+            <section class="container section find-on-map-section">
     <a href="#" class="find-on-map">
         <div class="find-on-map__img-wrapper">
             <div class="find-on-map__img-inner">
@@ -1021,7 +1021,7 @@
                         </div>
                         <div class="input-group _lg _white _secondary">
                             <label>Ваш телефон:</label>
-                            <input value="+7 (123) 456-78-90" data-inputmask="'mask': '+9 (999) 999-99-99'">
+                            <input value="+7 (123) 456-78-90" class="js-mask__tel">
                         </div>
                     </div>
                     <div class="input-group__wrapper _submit">
@@ -1045,8 +1045,8 @@
 </section>
             <section class="container section hypothec">
     <h3 class="section__h">Ипотека на вторичное жилье</h3>
-    <ul class="hypothec__list slider-small js-slider-small">
-    <li class="hypothec__list__item slide">
+    <div class="hypothec__list slider-small js-slider-small">
+    <div class="hypothec__list__item slide">
     <a href="#" class="hypothec__list__item__inner">
         <span class="hypothec__list__item__img-wrapper">
             <img src="img/hypothec/sberbank.png"
@@ -1060,8 +1060,8 @@
         </span>
         Сбербанк. Акция «Больше метров‑меньше ставка». Готовое жилье
     </a>
-</li>
-    <li class="hypothec__list__item slide">
+</div>
+    <div class="hypothec__list__item slide">
     <a href="#" class="hypothec__list__item__inner">
         <span class="hypothec__list__item__img-wrapper">
             <img src="img/hypothec/vtb.png"
@@ -1075,8 +1075,8 @@
         </span>
         ВТБ. Акция «Больше метров‑меньше ставка». Готовое жилье
     </a>
-</li>
-    <li class="hypothec__list__item slide">
+</div>
+    <div class="hypothec__list__item slide">
     <a href="#" class="hypothec__list__item__inner">
         <span class="hypothec__list__item__img-wrapper">
             <img src="img/hypothec/binbank.png"
@@ -1090,8 +1090,8 @@
         </span>
         Бинбанк. Акция «Больше метров‑меньше ставка». Готовое жилье
     </a>
-</li>
-    <li class="hypothec__list__item slide">
+</div>
+    <div class="hypothec__list__item slide">
     <a href="#" class="hypothec__list__item__inner">
         <span class="hypothec__list__item__img-wrapper">
             <img src="img/hypothec/gazprombank.png"
@@ -1105,8 +1105,8 @@
         </span>
         Газпромбанк. Акция «Больше ставка»
     </a>
-</li>
-</ul>
+</div>
+</div>
     <button class="btn _primary _lg section__button _more">
         <span>Больше программ</span><i class="icon-more"></i></button>
     <a href="#" class="btn _secondary _lg section__button">Все программы</a>
@@ -1380,7 +1380,7 @@
                     <ul class="footer__menu">
                         <li><a href="#">Работа в компании «Монолит Истейт»</a></li>
                         <li><a href="#">О компании «Монолит Истейт»</a></li>
-                        <li><a href="#">Новости компании</a></li>
+                        <li><a href="news.html">Новости компании</a></li>
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 </div>
@@ -1401,7 +1401,8 @@
                 </div>
                 <div class="footer__up__col _col4">
                     <div class="footer__social">
-                        <ul class="social-links">
+                        
+<ul class="social-links">
     <li><a href="#" class="_fb" rel="noopener nofollow"></a></li>
     <li><a href="#" class="_instagram" rel="noopener nofollow"></a></li>
     <li><a href="#" class="_vk" rel="noopener nofollow"></a></li>
@@ -1445,8 +1446,7 @@
             <div class="input-group _lg _secondary">
                 <label>Ваш телефон</label>
                 <input type="text" name="phone" value="7" 
-                       data-inputmask="'mask': '+9 (999) 999-99-99'" 
-                       required>
+                       class="js-mask__tel" required>
             </div>
             <div class="input-group">
                 <button class="btn _solid _lg _shadow" type="submit">Перезвоните мне</button>
@@ -1539,7 +1539,8 @@
                         <span class="popup-signup__form__social__text">
                             Войти через социальные сети
                         </span>
-                        <ul class="social-links">
+                        
+<ul class="social-links">
     <li><a href="#" class="_fb" rel="noopener nofollow"></a></li>
     <li><a href="#" class="_instagram" rel="noopener nofollow"></a></li>
     <li><a href="#" class="_vk" rel="noopener nofollow"></a></li>
@@ -1565,6 +1566,7 @@
         <li><a href="result.html">result</a></li>
         <li><a href="detail.html">detail</a></li>
         <li><a href="content.html">content</a></li>
+        <li><a href="news.html">news</a></li>
         <li><a href="404.html">404</a></li>
     </ul>
 </div>

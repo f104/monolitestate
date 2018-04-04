@@ -1,24 +1,30 @@
+.social-text {
+    opacity: 0.4;
+    display: block;
+    margin-bottom: 8px;
+}
 .social-links {
-        @include list-unstyled;
-        font-size: 0;
-        margin-bottom: 0;
-        li {
-            display: inline-block;
-            margin-right: 5px;
-            &:last-of-type {
-                margin-right: 0;
-            }
+    @include list-unstyled;
+    font-size: 0;
+    margin-bottom: 0;
+    white-space: nowrap;
+    li {
+        display: inline-block;
+        margin-right: 5px;
+        &:last-of-type {
+            margin-right: 0;
         }
-        a {
-            @include link-in-text;
-            @each $social in fb, instagram, vk, twitter, ok {
-                &._#{$social} {
-                    @extend .sprite;
-                    @extend .#{$social};
-                    &:hover {
-                        @extend .#{$social}-hover;
-                    }   
-                }
+    }
+    a {
+        @include link-in-text;
+        @each $social in fb, instagram, vk, twitter, ok {
+            &._#{$social} {
+                @extend .sprite;
+                @extend .#{$social};
+                &:hover {
+                    @extend .#{$social}-hover;
+                }   
             }
         }
     }
+}

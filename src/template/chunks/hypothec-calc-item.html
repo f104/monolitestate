@@ -1,0 +1,40 @@
+<div class="hypothec-calc__res__item slide">
+    <div class="hypothec-calc__res__item__row _head">
+        <span class="hypothec-calc__res__item__img-wrapper">
+            <img src="img/hypothec/@@img.png"
+                 srcset="img/hypothec/@@img@2x.png 2x,
+                 img/hypothec/@@img@3x.png 3x"
+                 alt="@@bank">
+        </span>
+        <span class="hypothec-calc__res__item__title">
+            @@text
+        </span>
+    </div>
+    <div class="hypothec-calc__res__item__row _content">
+        <span class="hypothec-calc__res__item__rate">
+            <span class="js-hypothec__rate">@@rate</span>%
+        </span>
+        <span>Ставка по ипотеке</span>
+        <span class="hypothec-calc__res__item__payment">
+            <span class="js-hypothec__permonth"></span> руб./мес.
+        </span>
+        <span>Платеж по ипотеке</span>
+    </div>
+    @@if (rateME != "0") {
+    <span class="hidden js-hypothec__rateME">@@rateME</span>
+    <div class="hypothec-calc__res__item__row _foot">
+        <div class="hypothec-calc__res__item__row">
+            <span class="hypothec-calc__res__item__payment_accent">
+                <span class="js-hypothec__permonthME"></span> руб./мес.
+            </span>
+            <span>Платеж с нами</span>
+        </div>
+        <div class="hypothec-calc__res__item__row">
+            <span class="hypothec-calc__res__item__economy-text">Ваша экономия составит</span>
+            <span class="hypothec-calc__res__item__economy">
+                <span class="js-hypothec__economy"></span> руб.
+            </span>
+        </div>
+    </div>
+    }
+</div>

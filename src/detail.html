@@ -7,6 +7,203 @@
         "active": "second"
         })
         <div class="content">
+            <div class="page-header _white">
+                <div class="container">
+                    <h1 class="page-header__h">
+                        Центр: КПД, ул. 50 лет Октября
+                        <a href="#" class="page-header__tag">Евроремонт</a>
+                        <a href="#" class="page-header__tag">Рядом метро</a>
+                    </h1>
+                    <p class="page-header__lead">Однокомнатная квартира</p>
+                    <ul class="page-header__tags">
+                        <li class="page-header__tags__item">
+                            <a class="page-header__tag" href="#">Евроремонт</a>
+                        </li>
+                        <li class="page-header__tags__item">
+                            <a class="page-header__tag" href="#">Рядом метро</a>
+                        </li>
+                    </ul>
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="secondary.html">Вторичная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="result.html">Двухкомнатные квартиры</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#">Центр: КПД</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#">50 лет Октября</a>
+                        </li>
+                        <li class="breadcrumbs__item _active">
+                            Однокомнатная квартира, ул. 50 лет Октября
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <section class="section container detail">
+                <div class="detail__row">
+                    <div class="detail__col detail__gallery">
+                        @@include('./template/gallery.html')
+                    </div>
+                    <div class="detail__col detail__info">
+                        <div class="detail__info__cart">
+                            <div class="card-sale _big">
+                                <span class="card-sale__icon">
+                                    <i class="icon-down-small"></i>
+                                </span>
+                                <span class="card-sale__text">
+                                    Произошло снижение цены
+                                </span>
+                            </div>
+                            <div class="detail__info__cart__price">
+                                <del>2 670 000 руб.</del> <i class="icon-down-small"></i>
+                                <span class="detail__info__cart__price__cost">
+                                    2 321 414 руб.
+                                </span>
+                                <span class="detail__info__cart__help">
+                                    стоимость
+                                </span>
+                            </div>
+                            <div class="detail__info__cart__hypothec">
+                                <p>
+                                    <span class="detail__info__cart__hypothec__accent">
+                                        21 413 руб./мес.
+                                    </span>
+                                    <span class="detail__info__cart__hypothec__muted">
+                                        в ипотеку
+                                    </span>
+                                </p>
+                                <p>Выгода с Монолит Истейт до <strong>181 440 руб.</strong></p>
+                            </div>
+                            <ul class="detail__info__cart__options">
+                                <li>
+                                    32 м²
+                                    <span class="detail__info__cart__help">
+                                        площадь
+                                    </span>
+                                </li>
+                                <li>
+                                    73 414 руб.
+                                    <span class="detail__info__cart__help">
+                                        цена за м²
+                                    </span>
+                                </li>
+                                <li>
+                                    5 этаж
+                                    <span class="detail__info__cart__help">
+                                        из 14
+                                    </span>
+                                </li>
+                            </ul>
+                            <button class="btn _lg _secondary detail__info__btn">Записаться на просмотр</button>
+                        </div>
+                        <div class="detail__info__map">
+                            <a href="#" class="find-on-map">
+                                <div class="find-on-map__img-wrapper">
+                                    <div class="find-on-map__img-inner">
+                                        <img class="find-on-map__img" src="img/realty/map1.jpg" srcset="img/realty/map1@2x.jpg 2x,
+                                             img/realty/map1@3x.jpg 3x" alt="alt text">
+                                    </div>
+                                </div>
+                                <div class="find-on-map__content">
+                                    <i class="icon-map"></i>Искать квартиры на&nbsp;карте
+                                    <span class="find-on-map__content__small">
+                                        <i class="icon-location"></i>Искать квартиры на&nbsp;карте
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <ul class="detail__info__list">
+                            <li>
+                                <span>Площадь кухни</span>
+                                <span>14 кв.м</span>
+                            </li>
+                            <li>
+                                <span>Высота потолков</span>
+                                <span>2.5 м</span>
+                            </li>
+                            <li>
+                                <span>Серия</span>
+                                <span>86</span>
+                            </li>
+                            <li>
+                                <span>Вид ремонта</span>
+                                <span>Современный ремонт</span>
+                            </li>
+                            <li>
+                                <span>Окна</span>
+                                <span>Пластиковые</span>
+                            </li>
+                            <li>
+                                <span>Год постройки</span>
+                                <span>1995</span>
+                            </li>
+                            <li>
+                                <span>Код объекта</span>
+                                <span>1690032</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail__row">
+                    <div class="detail__col">
+                        <h3 class="detail__h">Описание</h3>
+                        <div class="detail__content rte">
+                            <p>Предлагается к продаже. Просторная, теплая, двухкомнатная квартира, 
+                                67 кв.м., распашонка с современным ремонтом. Кухня 15,7 кв.м, сан.узел раздельный. 
+                                Застекленная лоджия. Современный ремонт, ламинат, натяжные потолки, 
+                                два безшумных кондиционера. Встроенная кухня. Индукционная варочная поверхность, 
+                                духовой шкаф, посудомоечная машина — всё фирмы bosh. Прихожая с большим 
+                                встроенным шкафом фирмы «komandor». Фильтры на горячую и холодную воду, титан. 
+                                В квартире остается практически вся мебель.</p>
+                            <p>Окна: Пластиковые</p>
+                            <p>Характеристика дома и придомовой территории: Закрытый двор, Парковка, Лифт 
+                                пассажирский, Лифт грузовой</p>
+                            <p>Ремонт: Современный ремонт</p>
+                            <p>В квартире имеется: телефон, интернет, кабельное телевидение, домофон, 
+                                железная дверь, из мебели ничего не остается.</p>
+                            <p>Управляющая компания: ООО УК «Русь»</p>
+                        </div>
+                    </div>
+                    <div class="detail__col">
+                        <h3 class="detail__h">Агент этого объекта </h3>
+                        <div class="detail__agent">
+                            @@include('./template/chunks/agent.html', {
+                            "img": 1,
+                            "name": "Столбова Ольга Арслановна",
+                            "post": "",
+                            "phone": "+7 922 471-16-85",
+                            "link": 1,
+                            "all": 1
+                            })
+                            <form class="detail__agent__form">
+                                <div class="input-group">
+                                    <span class="input-text">
+                                        Оставьте ваш номер, и агент перезвонит вам в течение 5 минут
+                                    </span>
+                                </div>
+                                <div class="input-group _lg">
+                                    <label>Ваш телефон</label>
+                                    <input class="js-mask__tel">
+                                </div>
+                                <div class="input-group">
+                                    <button class="btn _lg _solid">Жду звонка</button>
+                                </div>
+                                <div class="input-group _last">
+                                    <span class="input-help">
+                                        Отправляя заявку вы соглашаетесь на обработку персональных данных
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
             @@include('./template/sales.html')
             @@include('./template/hypothec-detail.html')
             @@include('./template/realty-similar.html')

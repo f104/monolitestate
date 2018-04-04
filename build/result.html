@@ -26,7 +26,7 @@
                     <li><a href="#">Услуги</a></li>
                     <li><a href="#">О компании</a></li>
                     <li><a href="#">Вакансии</a></li>
-                    <li><a href="#">Новости</a></li>
+                    <li><a href="news.html">Новости</a></li>
                 </ul>
             </nav>
         </div>
@@ -95,7 +95,7 @@
                             <li><a href="#">Услуги</a></li>
                             <li><a href="#">Рейтинг агентов</a></li>
                             <li><a href="#">Застройщики</a></li>
-                            <li><a href="#">Новости рынка недвижимости</a></li>
+                            <li><a href="news.html">Новости рынка недвижимости</a></li>
                             <li><a href="#">Акции</a></li>
                             <li><a href="#">Контакты</a></li>
                             <li><a href="#">Специалисты по недвижимости</a></li>
@@ -161,8 +161,8 @@
 </div>
                     </div>
                     <div class="input-group _double _col3">
-                        <input placeholder="Цена от (руб.)">
-                        <input placeholder="Цена до (руб.)">
+                        <input placeholder="Цена от (руб.)" class="js-mask__currency">
+                        <input placeholder="Цена до (руб.)" class="js-mask__currency">
                     </div>
                 </div>
                 <div class="filters-form__row">
@@ -207,8 +207,8 @@
                         <input placeholder="Код объекта">
                     </div>
                     <div class="input-group _double _col3">
-                        <input placeholder="Площадь от">
-                        <input placeholder="Площадь до">
+                        <input placeholder="Площадь от" class="js-mask__square">
+                        <input placeholder="Площадь до" class="js-mask__square">
                     </div>
                 </div>
             </div>
@@ -230,11 +230,11 @@
         </div>
     </form>
 </section>
-            <div class="page-header _white">
+            <div class="page-header _white _subscribe">
                 <div class="container">
                     <div class="page-header__row">
                         <div class="page-header__col page-header__md">
-                            <h1 class="page-header_h">Вторичное жилье</h1>
+                            <h1 class="page-header__h">Вторичное жилье</h1>
                             <ul class="breadcrumbs">
                                 <li class="breadcrumbs__item">
                                     <a href="index.html">Главная</a>
@@ -255,223 +255,228 @@
                     </div>
                 </div>
             </div>
-            <section class="section container">
+            <section class="section">
     <div class="list-header ">
-    <div class="list-header__row">
-        <div class="list-header__col _1">
-            <label class="list-header__label">Сортировка:</label>
-            <select class="list-header__select js-select2">
-                <option>По дате публикации</option>
-                <option>По цене</option>
-            </select>
-        </div>
-        <div class="list-header__col _2">
-            <label class="list-header__label">Показать:</label>
-            <select class="list-header__select js-select2">
-                <option>За все время (6321)</option>
-                <option>За месяц (542)</option>
-            </select>
-        </div>
-        <div class="list-header__col _3">
-            <ul class="pagination">
-                <li class="pagination__item">
-                    <a class="pagination__item__link _first _disabled" href="#"></a>
-                </li>
-                <li class="pagination__item">
-                    <a class="pagination__item__link _active" href="#">1</a>
-                </li>
-                <li class="pagination__item">
-                    <a class="pagination__item__link" href="#">2</a>
-                </li>
-                <li class="pagination__item hidden-sm">
-                    <a class="pagination__item__link" href="#">3</a>
-                </li>
-                <li class="pagination__item hidden-sm">
-                    <a class="pagination__item__link" href="#">4</a>
-                </li>
-                <li class="pagination__item _skip">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </li>
-                <li class="pagination__item">
-                    <a class="pagination__item__link" href="#">322</a>
-                </li>
-                <li class="pagination__item">
-                    <a class="pagination__item__link _last" href="#"></a>
-                </li>
-            </ul>
-        </div>
-        <div class="list-header__col _4">
-            <span class="list-header__total">
-                Показано 10 из 146
-            </span>
-        </div>
-        <div class="list-header__col _5">
-            <a href="#result_filter" class="btn _md _primary js-menu-toggler">
-                <i class="icon-filter"></i>
-                Показать фильтр
-            </a>
+    <div class="container">
+        <div class="list-header__row">
+            <div class="list-header__sorting">
+                <div class="sorting">
+                    <div class="sorting__item">
+                        <label class="sorting__label">Сортировка:</label>
+                        <select class="sorting__select js-select2">
+                            <option>По дате публикации</option>
+                            <option>По цене</option>
+                        </select>
+                    </div>
+                    <div class="sorting__item">
+                        <label class="sorting__label">Показать:</label>
+                        <select class="sorting__select js-select2">
+                            <option>За все время (6321)</option>
+                            <option>За месяц (542)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="list-header__pagination">
+                <ul class="pagination">
+                    <li class="pagination__item">
+                        <a class="pagination__item__link _first _disabled" href="#"></a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link _active" href="#">1</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link" href="#">2</a>
+                    </li>
+                    <li class="pagination__item hidden-sm">
+                        <a class="pagination__item__link" href="#">3</a>
+                    </li>
+                    <li class="pagination__item hidden-sm">
+                        <a class="pagination__item__link" href="#">4</a>
+                    </li>
+                    <li class="pagination__item _skip">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link" href="#">322</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link _last" href="#"></a>
+                    </li>
+                </ul>
+                <span class="list-header__pagination__total">
+                    Показано 10 из 146
+                </span>
+            </div>
+            <div class="list-header__btn-filter">
+                <a href="#result_filter" class="btn _md _primary js-menu-toggler">
+                    <i class="icon-filter"></i>
+                    Показать фильтр
+                </a>
+            </div>
         </div>
     </div>
 </div>
 
-    <div class="result-list">
-        <div class="result-list__aside">
-            <form id="result_filter" class="result-list__filter js-menu js-scrollbar-md">
-                <div class="result-list__filter__inner scrollbar-outer">
-                    <h3 class="result-list__filter__h">
-                        Расширенный фильтр
-                    </h3>
-                    <a href="#result_filter" class="result-list__filter__close js-menu-toggler">
-                        <i class="icon-close"></i>
-                    </a>
-                    <fieldset class="js-range">
-                        <legend>Общая площадь</legend>
-                        <div class="range js-range__target"></div>
-                        <div class="input-group _range">
-                            <span class="input-group__item">
-                                <input type="number" min="19" max="160" value="19" 
-                                       autocomplete="off" class="js-range__from"> м²
-                            </span>
-                            <span class="input-group__item">
-                                <input type="number" min="19" max="160" value="160"
-                                       autocomplete="off" class="js-range__to"> м²
-                            </span>
-                        </div>
-                    </fieldset>
-                    <fieldset class="js-range">
-                        <legend>Площадь кухни</legend>
-                        <div class="range js-range__target"></div>
-                        <div class="input-group _range js-range__target">
-                            <span class="input-group__item">
-                                <input type="number" min="8" max="24" value="8"
-                                       autocomplete="off" class="js-range__from"> м²
-                            </span>
-                            <span class="input-group__item">
-                                <input type="number" min="8" max="24" value="24" 
-                                       autocomplete="off" class="js-range__to"> м²
-                            </span>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Этаж</legend>
-                        <div class="input-group _fromto">
-                            От <input type="number" min="1" max="13" 
-                                      autocomplete="off" value="1"> 
-                            до <input type="number" min="1" max="13" 
-                                      autocomplete="off" value="13">
-                        </div>
-                    </fieldset>
-                    <fieldset class="_inline">
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox" checked>
-                                <span class="checkbox__text">Со скидкой</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Обмен</span>
-                            </label>
-                        </div>                    
-                    </fieldset>
-                    <fieldset>
-                        <legend>Тип недвижимости</legend>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox" checked>
-                                <span class="checkbox__text">Квартиры</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Комнаты</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Малосемейка</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Общежитие</span>
-                            </label>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Отделка</legend>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox" checked>
-                                <span class="checkbox__text">Черновая</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Улучшенная черновая</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Косметический ремонт</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox" checked>
-                                <span class="checkbox__text">Современный ремонт</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Ремонт по дизайн-проекту</span>
-                            </label>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Окна</legend>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox" checked>
-                                <span class="checkbox__text">Пластиковые</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Пластиковые/деревянные</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Деревянные</span>
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkbox__text">Алюминиевые</span>
-                            </label>
-                        </div>
-                    </fieldset>
-                    <div class="result-list__filter__btn">
-                        <button class="btn _lg _secondary" type="reset">Сбросить фильтр</button>
-                    </div>
-                </div>
-            </form>
+    <div class="container">
+        <div class="result-list">
+            <div class="result-list__aside">
+                <form id="result_filter" class="result-list__filter js-menu js-scrollbar-md">
+    <div class="result-list__filter__inner scrollbar-outer">
+        <h3 class="result-list__filter__h">
+            Расширенный фильтр
+        </h3>
+        <a href="#result_filter" class="result-list__filter__close js-menu-toggler">
+            <i class="icon-close"></i>
+        </a>
+        <fieldset class="js-range">
+            <legend>Общая площадь</legend>
+            <div class="range js-range__target"></div>
+            <div class="input-group _range">
+                <span class="input-group__item">
+                    <input type="number" min="19" max="160" value="19" 
+                           autocomplete="off" class="js-range__from"> м²
+                </span>
+                <span class="input-group__item">
+                    <input type="number" min="19" max="160" value="160"
+                           autocomplete="off" class="js-range__to"> м²
+                </span>
+            </div>
+        </fieldset>
+        <fieldset class="js-range">
+            <legend>Площадь кухни</legend>
+            <div class="range js-range__target"></div>
+            <div class="input-group _range js-range__target">
+                <span class="input-group__item">
+                    <input type="number" min="8" max="24" value="8"
+                           autocomplete="off" class="js-range__from"> м²
+                </span>
+                <span class="input-group__item">
+                    <input type="number" min="8" max="24" value="24" 
+                           autocomplete="off" class="js-range__to"> м²
+                </span>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Этаж</legend>
+            <div class="input-group _fromto">
+                От <input type="number" min="1" max="13" 
+                          autocomplete="off" value="1"> 
+                до <input type="number" min="1" max="13" 
+                          autocomplete="off" value="13">
+            </div>
+        </fieldset>
+        <fieldset class="_inline">
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                    <span class="checkbox__text">Со скидкой</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Обмен</span>
+                </label>
+            </div>                    
+        </fieldset>
+        <fieldset>
+            <legend>Тип недвижимости</legend>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                    <span class="checkbox__text">Квартиры</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Комнаты</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Малосемейка</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Общежитие</span>
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Отделка</legend>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                    <span class="checkbox__text">Черновая</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Улучшенная черновая</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Косметический ремонт</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                    <span class="checkbox__text">Современный ремонт</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Ремонт по дизайн-проекту</span>
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Окна</legend>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                    <span class="checkbox__text">Пластиковые</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Пластиковые/деревянные</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Деревянные</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Алюминиевые</span>
+                </label>
+            </div>
+        </fieldset>
+        <div class="result-list__filter__btn">
+            <button class="btn _lg _secondary" type="reset">Сбросить фильтр</button>
         </div>
-        <div class="result-list__content">
-            <div class="result-list__item">
+    </div>
+</form>
+            </div>
+            <div class="result-list__content">
+                <div class="result-list__item">
     <div class="result-list__item__images">
         <div class="realty-list-slider js-realty-list-slider">
             <ul class="realty-tags">
@@ -599,7 +604,7 @@
         </div>
     </div>
 </div>
-            <div class="result-list__item">
+                <div class="result-list__item">
     <div class="result-list__item__images">
         <div class="realty-list-slider js-realty-list-slider">
             <ul class="realty-tags">
@@ -718,7 +723,7 @@
         </div>
     </div>
 </div>
-            <div class="result-list__item">
+                <div class="result-list__item">
     <div class="result-list__item__images">
         <div class="realty-list-slider js-realty-list-slider">
             <ul class="realty-tags">
@@ -841,7 +846,7 @@
         </div>
     </div>
 </div>
-            <div class="result-list__item">
+                <div class="result-list__item">
     <div class="result-list__item__images">
         <div class="realty-list-slider js-realty-list-slider">
             <ul class="realty-tags">
@@ -960,7 +965,7 @@
         </div>
     </div>
 </div>
-            <div class="result-list__item">
+                <div class="result-list__item">
     <div class="result-list__item__images">
         <div class="realty-list-slider js-realty-list-slider">
             <ul class="realty-tags">
@@ -1088,7 +1093,7 @@
         </div>
     </div>
 </div>
-            <div class="result-list__item">
+                <div class="result-list__item">
     <div class="result-list__item__images">
         <div class="realty-list-slider js-realty-list-slider">
             <ul class="realty-tags">
@@ -1207,7 +1212,7 @@
         </div>
     </div>
 </div>
-            <div class="result-list__item">
+                <div class="result-list__item">
     <div class="result-list__item__images">
         <div class="realty-list-slider js-realty-list-slider">
             <ul class="realty-tags">
@@ -1335,7 +1340,7 @@
         </div>
     </div>
 </div>
-            <div class="result-list__item">
+                <div class="result-list__item">
     <div class="result-list__item__images">
         <div class="realty-list-slider js-realty-list-slider">
             <ul class="realty-tags">
@@ -1454,22 +1459,22 @@
         </div>
     </div>
 </div>
-            <div class="promo">
-                <a href="#" class="promo__wrapper">
-                    <div class="promo__img-inner">
-                        <img class="promo__img" 
-                             src="img/promo/1.jpg"
-                             srcset="img/promo/1@2x.jpg 2x,
-                             img/promo/1@3x.jpg 3x"
-                             alt="alt text">
-                    </div>
-                    <h3 class="promo__h">
-                        Покупайте квартиры<br>в новом ЖК «Свободный»
-                    </h3>
-                    <p class="promo__p">И получите месяц парковки бесплатно!</p>
-                </a>
-            </div>
-            <div class="result-list__item">
+                <div class="promo">
+                    <a href="#" class="promo__wrapper">
+                        <div class="promo__img-inner">
+                            <img class="promo__img" 
+                                 src="img/promo/1.jpg"
+                                 srcset="img/promo/1@2x.jpg 2x,
+                                 img/promo/1@3x.jpg 3x"
+                                 alt="alt text">
+                        </div>
+                        <h3 class="promo__h">
+                            Покупайте квартиры<br>в новом ЖК «Свободный»
+                        </h3>
+                        <p class="promo__p">И получите месяц парковки бесплатно!</p>
+                    </a>
+                </div>
+                <div class="result-list__item">
     <div class="result-list__item__images">
         <div class="realty-list-slider js-realty-list-slider">
             <ul class="realty-tags">
@@ -1597,7 +1602,7 @@
         </div>
     </div>
 </div>
-            <div class="result-list__item">
+                <div class="result-list__item">
     <div class="result-list__item__images">
         <div class="realty-list-slider js-realty-list-slider">
             <ul class="realty-tags">
@@ -1716,69 +1721,76 @@
         </div>
     </div>
 </div>
+            </div>
         </div>
     </div>
 
-    <div class="list-header _footer">
-    <div class="list-header__row">
-        <div class="list-header__col _1">
-            <label class="list-header__label">Сортировка:</label>
-            <select class="list-header__select js-select2">
-                <option>По дате публикации</option>
-                <option>По цене</option>
-            </select>
-        </div>
-        <div class="list-header__col _2">
-            <label class="list-header__label">Показать:</label>
-            <select class="list-header__select js-select2">
-                <option>За все время (6321)</option>
-                <option>За месяц (542)</option>
-            </select>
-        </div>
-        <div class="list-header__col _3">
-            <ul class="pagination">
-                <li class="pagination__item">
-                    <a class="pagination__item__link _first _disabled" href="#"></a>
-                </li>
-                <li class="pagination__item">
-                    <a class="pagination__item__link _active" href="#">1</a>
-                </li>
-                <li class="pagination__item">
-                    <a class="pagination__item__link" href="#">2</a>
-                </li>
-                <li class="pagination__item hidden-sm">
-                    <a class="pagination__item__link" href="#">3</a>
-                </li>
-                <li class="pagination__item hidden-sm">
-                    <a class="pagination__item__link" href="#">4</a>
-                </li>
-                <li class="pagination__item _skip">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </li>
-                <li class="pagination__item">
-                    <a class="pagination__item__link" href="#">322</a>
-                </li>
-                <li class="pagination__item">
-                    <a class="pagination__item__link _last" href="#"></a>
-                </li>
-            </ul>
-        </div>
-        <div class="list-header__col _4">
-            <span class="list-header__total">
-                Показано 10 из 146
-            </span>
-        </div>
-        <div class="list-header__col _5">
-            <a href="#result_filter" class="btn _md _primary js-menu-toggler">
-                <i class="icon-filter"></i>
-                Показать фильтр
-            </a>
+    <div class="list-header _white _footer">
+    <div class="container">
+        <div class="list-header__row">
+            <div class="list-header__sorting">
+                <div class="sorting">
+                    <div class="sorting__item">
+                        <label class="sorting__label">Сортировка:</label>
+                        <select class="sorting__select js-select2">
+                            <option>По дате публикации</option>
+                            <option>По цене</option>
+                        </select>
+                    </div>
+                    <div class="sorting__item">
+                        <label class="sorting__label">Показать:</label>
+                        <select class="sorting__select js-select2">
+                            <option>За все время (6321)</option>
+                            <option>За месяц (542)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="list-header__pagination">
+                <ul class="pagination">
+                    <li class="pagination__item">
+                        <a class="pagination__item__link _first _disabled" href="#"></a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link _active" href="#">1</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link" href="#">2</a>
+                    </li>
+                    <li class="pagination__item hidden-sm">
+                        <a class="pagination__item__link" href="#">3</a>
+                    </li>
+                    <li class="pagination__item hidden-sm">
+                        <a class="pagination__item__link" href="#">4</a>
+                    </li>
+                    <li class="pagination__item _skip">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link" href="#">322</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link _last" href="#"></a>
+                    </li>
+                </ul>
+                <span class="list-header__pagination__total">
+                    Показано 10 из 146
+                </span>
+            </div>
+            <div class="list-header__btn-filter">
+                <a href="#result_filter" class="btn _md _primary js-menu-toggler">
+                    <i class="icon-filter"></i>
+                    Показать фильтр
+                </a>
+            </div>
         </div>
     </div>
 </div>
-    <button class="btn _secondary _lg section__button">Показать еще</button>
+    <div class="container">
+        <button class="btn _secondary _lg section__button">Показать еще</button>
+    </div>
 </section>            
             <section class="section _inverse _nomargin callme">
     <div class="container">
@@ -1795,7 +1807,7 @@
                         </div>
                         <div class="input-group _lg _white _secondary">
                             <label>Ваш телефон:</label>
-                            <input value="+7 (123) 456-78-90" data-inputmask="'mask': '+9 (999) 999-99-99'">
+                            <input value="+7 (123) 456-78-90" class="js-mask__tel">
                         </div>
                     </div>
                     <div class="input-group__wrapper _submit">
@@ -1874,7 +1886,7 @@
                     <ul class="footer__menu">
                         <li><a href="#">Работа в компании «Монолит Истейт»</a></li>
                         <li><a href="#">О компании «Монолит Истейт»</a></li>
-                        <li><a href="#">Новости компании</a></li>
+                        <li><a href="news.html">Новости компании</a></li>
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 </div>
@@ -1895,7 +1907,8 @@
                 </div>
                 <div class="footer__up__col _col4">
                     <div class="footer__social">
-                        <ul class="social-links">
+                        
+<ul class="social-links">
     <li><a href="#" class="_fb" rel="noopener nofollow"></a></li>
     <li><a href="#" class="_instagram" rel="noopener nofollow"></a></li>
     <li><a href="#" class="_vk" rel="noopener nofollow"></a></li>
@@ -1939,8 +1952,7 @@
             <div class="input-group _lg _secondary">
                 <label>Ваш телефон</label>
                 <input type="text" name="phone" value="7" 
-                       data-inputmask="'mask': '+9 (999) 999-99-99'" 
-                       required>
+                       class="js-mask__tel" required>
             </div>
             <div class="input-group">
                 <button class="btn _solid _lg _shadow" type="submit">Перезвоните мне</button>
@@ -2033,7 +2045,8 @@
                         <span class="popup-signup__form__social__text">
                             Войти через социальные сети
                         </span>
-                        <ul class="social-links">
+                        
+<ul class="social-links">
     <li><a href="#" class="_fb" rel="noopener nofollow"></a></li>
     <li><a href="#" class="_instagram" rel="noopener nofollow"></a></li>
     <li><a href="#" class="_vk" rel="noopener nofollow"></a></li>
@@ -2059,6 +2072,7 @@
         <li><a href="result.html">result</a></li>
         <li><a href="detail.html">detail</a></li>
         <li><a href="content.html">content</a></li>
+        <li><a href="news.html">news</a></li>
         <li><a href="404.html">404</a></li>
     </ul>
 </div>

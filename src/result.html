@@ -7,12 +7,12 @@
         "active": "second"
         })
         <div class="content">
-            @@include('./template/filters-result.html')
-            <div class="page-header _white">
+            @@include('./template/result/filters.html')
+            <div class="page-header _white _subscribe">
                 <div class="container">
                     <div class="page-header__row">
                         <div class="page-header__col page-header__md">
-                            <h1 class="page-header_h">Вторичное жилье</h1>
+                            <h1 class="page-header__h">Вторичное жилье</h1>
                             <ul class="breadcrumbs">
                                 <li class="breadcrumbs__item">
                                     <a href="index.html">Главная</a>
@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div>
-            @@include('./template/result-list.html')            
+            @@include('./template/result/list.html')            
             @@include('./template/callme.html', {
             "title": "Ничего не понравилось?",
             "margin": 0

@@ -1,0 +1,23 @@
+<div class="agent">
+    <img src="img/agents/@@img.jpg"
+         srcset="img/agents/@@img@2x.jpg 2x,
+         img/agents/@@img@3x.jpg 3x"
+         class="agent__img" alt="alt text">
+    <div class="agent__name">@@name</div>
+    @@if (post != '') {
+    <div class="agent__post">@@post</div>
+    }
+    <div class="agent__phone">
+        <a href="tel:@@phone">@@phone</a>
+    </div>
+    @@if (link == 1) {
+        <div class="agent__link">
+            <a href="//:monolitestate.com">monolitestate.com</a>
+        </div>
+    }
+    @@if (all == 1) {
+        <div class="agent__all">
+            <a href="#">Посмотреть все объекты</a>
+        </div>
+    }
+</div>

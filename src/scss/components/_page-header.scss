@@ -1,9 +1,47 @@
 .page-header {
     margin-bottom: 40px;
-    .page-header_h {
+    .page-header__h {
         font-size: 22px;
         font-weight: 300;
-        margin-bottom: 0;
+        margin-bottom: 10px;
+        @include media-breakpoint-up(md) {
+            font-size: 32px;
+            line-height: 1.06;
+        }
+        &._lg {
+            @include media-breakpoint-up(md) {
+                font-size: 35px;
+            }
+            @include media-breakpoint-up(lg) {
+                font-size: 40px;
+            }
+        }
+        .page-header__tag {
+            display: none;
+        }
+    }
+    .page-header__lead {
+        opacity: 0.5;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 16px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @include media-breakpoint-up(md) {
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+        &._lg {
+            font-size: 15px;
+            font-weight: 400;            
+            @include media-breakpoint-up(md) {
+                font-size: 18px;
+            }
+            @include media-breakpoint-up(lg) {
+                font-size: 21px;
+            }
+        }
     }
     .page-header__subscribe {
         .page-header__subscribe__text {
@@ -14,26 +52,70 @@
             margin-top: 7px;
         }
     }
+    .page-header__tag {
+        display: block;
+        font-size: 14px;
+        line-height: 19px;
+        font-weight: 400;
+        border-radius: $border-radius;
+        background-color: #fefefe;
+        border: solid 1px #e1e1e1;
+        @include link-in-text;
+        padding: 2px 8px 0;
+    }
+    .page-header__tags {
+        @include list-unstyled;
+        margin-bottom: 0;
+        font-size: 0;
+        .page-header__tags__item {
+            display: inline-block;
+            margin-right: 8px;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+    .page-header__social {
+        @include media-breakpoint-only(sm) {
+            margin-top: 20px;
+        }
+    }
     .page-header__md {
         display: none;
     }
     &._white {
-        margin-bottom: 25px;
+        background-color: $white;
+        padding: $container-padding-sm 0;
+        margin-bottom: 30px;
+        &:first-child {
+            margin-top: -5px;
+        }
+    }
+    &._subscribe {
+        background-color: transparent;
+        padding: 0;
     }
 }
 
 @include media-breakpoint-up(md) {
     .page-header {
-        .page-header_h {
-            font-size: 32px;
-            line-height: 1.06;
-            margin-bottom: 10px;
+        .page-header__h {
+            .page-header__tag {
+                display: inline-block;
+                vertical-align: middle;
+                &:first-of-type {
+                    margin-left: 10px;
+                }
+            }
         }
         .page-header__subscribe {
             margin: -10px 0 -10px 20px;
             .btn {
                 width: 295px;
             }
+        }
+        .page-header__tags {
+            display: none;
         }
         .page-header__row {
             display: flex;
@@ -44,6 +126,12 @@
             display: block;
         }
         &._white {
+            padding: $container-padding-md 0;
+            &:first-child {
+                margin-top: -15px;
+            }
+        }
+        &._subscribe {
             background-color: $white;
             padding: $container-padding-md 0;
         }
@@ -52,8 +140,13 @@
 
 @include media-breakpoint-up(lg) {
     .page-header {
-        .page-header_h {
-            font-size: 40px;
+        /*        .page-header__h {
+                    font-size: 40px;
+                }*/
+        &._white {
+            &:first-child {
+                margin-top: -30px;
+            }
         }
     }
 }
@@ -64,6 +157,7 @@
     .breadcrumbs__item {
         display: inline;
         font-size: 12px;
+        white-space: nowrap;
         a {
             color: #7e7e7e;
             &:after {
@@ -81,5 +175,10 @@
                 content: none;
             }
         }
+    }
+}
+@include media-breakpoint-down(sm) {
+    .breadcrumbs {
+        display: none;
     }
 }

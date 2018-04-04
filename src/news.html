@@ -1,0 +1,29 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "Новости"
+    })
+    <body>
+        @@include('./template/header.html', {
+        "active": ""
+        })
+        <div class="content">
+            <div class="page-header">
+                <div class="container page-header__row">
+                    <div class="page-header__col">
+                        <h1 class="page-header__h _lg">Новости</h1>
+                        <p class="page-header__lead _lg">Последние новости «Монолит Истейт» и рынка недвижимости.</p>
+                    </div>
+                    <div class="page-header__social page-header__col">
+                        @@include('./template/chunks/social.html', {"text":"Мы в социальных сетях:"})
+                    </div>
+                </div>
+            </div>
+            @@include('./template/news/list.html')
+            @@include('./template/seo.html')
+            @@include('./template/footer.html')
+            @@include('./template/popups-common.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        @@include('./template/foot.html')
+    </body>
+</html>

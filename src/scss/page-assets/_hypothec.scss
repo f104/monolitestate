@@ -100,7 +100,6 @@ $hypothec-gutter-width: $grid-gutter-width;
 
 .hypothec {
     .hypothec__list {
-        @include list-unstyled;
         margin-bottom: 64px;
         .hypothec__list__item {
             height: 338px;
@@ -111,7 +110,7 @@ $hypothec-gutter-width: $grid-gutter-width;
                 text-align: center;
                 color: $body-color;
                 background-color: $white;
-                border-radius: 4px;
+                border-radius: $border-radius;
                 padding: 0 30px;
                 height: 100%;
                 &:after {
@@ -147,6 +146,39 @@ $hypothec-gutter-width: $grid-gutter-width;
                 }
             }
         }
+        &._scroll {
+            display: none;
+            margin-top: -10px;
+            margin-left: 0;
+            margin-right: 0;
+            .scrollbar-outer {
+                display: flex;
+                flex-wrap: nowrap;
+                .scroll-content {
+                    padding-top: 10px;
+                    margin-left: -13px;
+                    margin-right: -13px !important;
+                }
+                > .scroll-element {
+                    height: 5px;
+                    border-radius: 3px;
+                    background: #e7e7e7;
+                    .scroll-element_outer {
+                        height: 5px;
+                        top: 0px;
+                    }
+                    .scroll-bar {
+                        height: 5px;
+                        border-radius: 3px;
+                        background: #4264cf;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .hypothec__list__item {
+                margin-bottom: 20px;
+            }
+        }
     }
     .section__button._more {
         display: none;
@@ -164,6 +196,13 @@ $hypothec-gutter-width: $grid-gutter-width;
                     @include hover-up();
                 }
             }
+            &._scroll {
+                display: block;
+                .hypothec__list__item {
+                    width: 278px;
+                    flex: 0 0 auto;
+                }
+            }
         }
         .section__button._more {
             display: block;
@@ -179,6 +218,362 @@ $hypothec-gutter-width: $grid-gutter-width;
                 @include col(25%, $hypothec-gutter-width);
                 margin-bottom: 0;
             }
+            &._scroll {
+                .hypothec__list__item {
+                    @include col(25%, $hypothec-gutter-width);
+                }
+            }
         }
+    }
+}
+
+.hypothec-calc {
+    .hypothec-calc__h {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.63;
+        margin-bottom: 18px;
+    }
+    .hypothec-calc__fields {
+        margin-bottom: 20px;
+    }
+    .hypothec-calc__res-h {
+        opacity: 0.5;
+        font-weight: normal;
+        line-height: 1.33;
+        margin-bottom: 20px;
+    }
+    .hypothec-calc__res {
+        margin-bottom: 68px;
+        margin-left: - $container-padding-sm;
+        margin-right: - $container-padding-sm;
+        .hypothec-calc__res__item {
+            background-color: $white;
+            border-radius: $border-radius;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            > .hypothec-calc__res__item__row {
+                padding: 15px 20px;
+                border-bottom: 1px solid $gray-light;
+                &:last-of-type {
+                    border-bottom: none;
+                }
+                &._head {
+                    display: flex;
+                    /*flex-grow: 1;*/
+                }
+                &._content {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    > span {
+                        margin-bottom: 5px;
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                &._foot {
+                    > .hypothec-calc__res__item__row {
+                        display: flex;
+                        align-items: center;
+                        > span {
+                            margin-bottom: 5px;
+                        }
+                        &:last-of-type {
+                            flex-wrap: wrap;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+            .hypothec-calc__res__item__img-wrapper {
+                width: 73px;
+                margin-right: 18px;
+                flex-shrink: 0;
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+            .hypothec-calc__res__item__title {
+                max-width: 200px;
+            }
+            .hypothec-calc__res__item__rate {
+                font-size: 18px;
+                margin-right: 15px;
+            }
+            .hypothec-calc__res__item__payment {
+                opacity: 0.5;
+                font-size: 18px;
+                margin-top: 5px;
+                flex-basis: 100%;
+            }
+            .hypothec-calc__res__item__payment_accent {
+                font-size: 18px;
+                border-radius: $border-radius;
+                border: 1px solid $primary;
+                padding: 5px 7px 3px;
+                white-space: nowrap;
+                margin-right: 10px;
+            }
+            .hypothec-calc__res__item__economy-text {
+                flex-basis: 100%;
+            }
+            .hypothec-calc__res__item__economy {
+                font-size: 16px;
+                color: $primary;
+                border-radius: $border-radius;
+                border: 1px solid $primary;
+                padding: 5px 7px 3px;
+                white-space: nowrap;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+@include media-breakpoint-up(md) {
+    .hypothec-calc {
+        .hypothec-calc__h {
+            font-size: 21px;
+            margin-bottom: 40px;
+        }
+        .hypothec-calc__fields {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 600px;
+            > * {
+                margin-right: 20px;
+            }
+            .input-group {
+                width: 200px;
+                &._double {
+                    width: 302px;
+                }
+            }
+        }
+        .hypothec-calc__res-h {
+            font-size: 18px;
+            line-height: 1.44;
+        }
+        .hypothec-calc__res {
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 20px;
+            &.slider-small.slick-slider .slide {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .hypothec-calc__res__item {
+                > .hypothec-calc__res__item__row {
+                    padding: 20px 25px;
+                    &._head {
+                        align-items: center;
+                    }
+                }
+                .hypothec-calc__res__item__img-wrapper {
+                    width: 93px;
+                    height: 65px;
+                    margin-right: 22px;
+                }
+                .hypothec-calc__res__item__title {
+                    max-width: 250px;
+                    font-size: 15px;
+                }
+                .hypothec-calc__res__item__rate {
+                    font-size: 24px;
+                }
+                .hypothec-calc__res__item__payment {
+                    font-size: 24px;
+                    flex-basis: auto;
+                    margin-right: 20px;
+                }
+                .hypothec-calc__res__item__payment_accent {
+                    font-size: 24px;
+                    padding: 5px 7px 3px;
+                    margin-right: 13px;
+                }
+                .hypothec-calc__res__item__economy {
+                    font-size: 18px;
+                    margin-left: 13px;
+                    margin-right: 0;
+                }
+                .hypothec-calc__res__item__economy-text {
+                    margin-right: 0;
+                    flex-basis: auto;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-only(md) {
+    .hypothec-calc {
+        .hypothec-calc__res {
+            .hypothec-calc__res__item {
+                > .hypothec-calc__res__item__row {
+                    &._content {
+                        flex-wrap: nowrap;
+                        > span {
+                            margin-bottom: 0;
+                            margin-right: 20px;
+                            &:last-of-type {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                    &._foot {
+                        display: flex;
+                        align-items: center;
+                        > .hypothec-calc__res__item__row {
+                            > span {
+                                margin-bottom: 0px;
+                            }
+                            &:last-of-type {
+                                flex-wrap: nowrap;
+                                margin-top: 0px;
+                                margin-left: 40px;
+                            }
+                        }
+                    }
+                }
+                .hypothec-calc__res__item__payment {
+                    margin-top: 0;
+                    margin-left: 20px;
+                }
+                .hypothec-calc__res__item__payment_accent {
+                    font-size: 24px;
+                    padding: 5px 7px 3px;
+                    margin-right: 13px;
+                }
+                
+            }
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .hypothec-calc {
+        .hypothec-calc__fields {
+            max-width: unset;
+        }
+        .hypothec-calc__row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .hypothec-calc__res {
+                order: 1;
+                width: 382px;
+                margin-bottom: 28px;
+            }
+            .hypothec-request {
+                order: 2;
+                width: 790px;
+            }
+            .hypothec__list {
+                order: 3;
+                flex-basis: 100%;
+            }
+        }
+    }
+}
+
+.hypothec-request {
+    background-color: $white;
+    padding: $container-padding-sm;
+    margin-left: - $container-padding-sm;
+    margin-right: - $container-padding-sm;
+    margin-bottom: 28px;
+    .hypothec-request__h {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .hypothec-request__feat {
+        @include list-unstyled;
+        font-size: 14px;
+        /*margin-bottom: 25px;*/
+        .hypothec-request__feat__item {
+            margin-bottom: 25px;
+            /*            &:last-of-type {
+                            margin-bottom: 0;
+                        }*/
+        }
+    }
+    .hypothec-request__agent {
+        padding: 0 20%;
+        margin-bottom: 30px;
+        .agent {
+            .agent__name {
+                font-size: 15px;
+            }
+        }
+    }
+    .hypothec-request__form {
+        .hypothec-request__form__text {
+            line-height: 1.33;
+            margin-bottom: 15px;
+        }
+        .hypothec-request__form__agree {
+            opacity: 0.4;
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+    }
+    .hypothec-request__col._1 {
+        margin-bottom: 30px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .hypothec-request {
+        padding: $container-padding-md;
+        margin-left: - $container-padding-md;
+        margin-right: - $container-padding-md;
+        .hypothec-request__h {
+            font-size: 21px;
+            margin-bottom: 30px;
+        }
+        .hypothec-request__agent {
+            padding: 0;
+            margin-bottom: 0;
+            margin-right: 30px;
+        }
+        .hypothec-request__form {
+            display: flex;
+            flex-direction: column;
+            .hypothec-request__form__text {
+                flex: 1;
+            }
+        }
+        .hypothec-request__row {
+            display: flex;
+            flex: 1;
+        }
+        .hypothec-request__col {
+            &._1 {
+                margin-bottom: 0;
+                flex-basis: 300px;
+                padding-right: 40px;
+                display: flex;
+                flex-direction: column;
+                .hypothec-request__feat {
+                    flex: 1;
+                }
+            }
+            &._2 {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .hypothec-request {
+        padding: 26px;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: $border-radius;
     }
 }

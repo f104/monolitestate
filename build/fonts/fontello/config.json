@@ -147,6 +147,12 @@
       "css": "help-circled",
       "code": 59403,
       "src": "entypo"
+    },
+    {
+      "uid": "22cfc7af2c4f158b37317c65c92b48c2",
+      "css": "location",
+      "code": 59405,
+      "src": "elusive"
     }
   ]
 }

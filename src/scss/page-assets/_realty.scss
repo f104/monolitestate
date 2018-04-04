@@ -8,7 +8,7 @@
             background-color: #fefefe;
             font-size: 11px;
             line-height: 18px;
-            border-radius: 4px;
+            border-radius: $border-radius;
             padding: 2px 8px 0;
             color: $primary;
         }
@@ -35,7 +35,7 @@
                 display: flex;
                 flex-direction: column;
                 background-color: $white;
-                border-radius: 4px;
+                border-radius: $border-radius;
                 overflow: hidden;
                 .realty__list__item__content {
                     flex-grow: 1;
@@ -202,32 +202,28 @@
         font-size: 10px;
         font-weight: 600;
         color: $white;
-        margin-top: 1px;
     }
 }
-
-@include media-breakpoint-up(lg) {
-    .card-sale {
-        width: 153px;
-        height: 46px;
-        padding-left: 20px;
-        &:before {
-            border-left: $white solid 12px;
-            border-top: 23px solid transparent;
-            border-bottom: 23px solid transparent;
+@mixin card-sale-big() {
+    width: 153px;
+    height: 46px;
+    padding-left: 20px;
+    &:before {
+        border-left: $white solid 12px;
+        border-top: 23px solid transparent;
+        border-bottom: 23px solid transparent;
+    }
+    .card-sale__icon {
+        width: 26px;
+        height: 26px;
+        margin-right: 8px;
+        .icon-down-small {
+            font-size: 20px;
+            line-height: 26px;
         }
-        .card-sale__icon {
-            width: 26px;
-            height: 26px;
-            margin-right: 8px;
-            .icon-down-small {
-                font-size: 20px;
-                line-height: 26px;
-            }
-        }
-        .card-sale__text {
-            font-size: 12px;
-            margin-top: 1px;
-        }
+    }
+    .card-sale__text {
+        font-size: 12px;
+        margin-top: 1px;
     }
 }

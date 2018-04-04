@@ -18,6 +18,7 @@ jQuery(function () {
         initTabs();
         initRange();
         initGallery();
+        initHypothec();
 
         $('.js-scrollbar').scrollbar();
 
@@ -194,7 +195,7 @@ jQuery(function () {
         $('.js-menu-toggler').on('click', function (e) {
             e.preventDefault();
             var href = $(this).attr('href');
-            $('.js-menu-toggler[href="'+href+'"]').toggleClass('_active');
+            $('.js-menu-toggler[href="' + href + '"]').toggleClass('_active');
             $(href).toggleClass('_active');
             $('.js-menu._active').length == 0 ? $('.js-menu-overlay').hide() : $('.js-menu-overlay').show();
         });
@@ -210,7 +211,42 @@ jQuery(function () {
     }
 
     function initMask() {
-        $(':input').inputmask();
+        $('.js-mask__tel').inputmask({
+            mask: '+9 (999) 999-99-99'
+        });
+        Inputmask.extendAliases({
+            'numeric': {
+                autoUnmask: true,
+                showMaskOnHover: false,
+                radixPoint: ",",
+                groupSeparator: " ",
+                digits: 0,
+                allowMinus: false,
+                autoGroup: true,
+                rightAlign: false,
+                unmaskAsNumber: true
+            }
+        });
+        $('.js-mask__currency').inputmask("numeric", {
+            suffix: ' руб.'
+        });
+        $('.js-mask__square').inputmask("numeric", {
+            suffix: ' м²'
+        });
+        $('.js-mask__age').inputmask("numeric", {
+            suffix: ' лет'
+        });
+        $('.js-mask__percent').inputmask("numeric", {
+            suffix: '%'
+        });
+        $('.js-mask__currency, .js-mask__square, .js-mask__percent').on('blur', function () {
+            // need for remove suffix
+            // https://github.com/RobinHerbots/Inputmask/issues/1551
+            var v = $(this).val();
+            if (v == 0 || v == '') {
+                $(this).val('');
+            }
+        });
     }
 
     function initPopup() {
@@ -434,6 +470,46 @@ jQuery(function () {
                 });
             }
         });
+
+        $('.js-picker').each(function (index, elem) {
+            var slider = $(elem).find('.js-picker__target')[0],
+                    input = $(elem).find('.js-picker__input')[0];
+            if (slider && input) {
+                var min = parseInt(input.getAttribute('min')) || 0,
+                        max = parseInt(input.getAttribute('max')) || 0,
+                        val = parseInt(input.value) || min;
+                noUiSlider.create(slider, {
+                    start: val,
+                    connect: [true, false],
+                    format: {
+                        to: function (value) {
+                            return parseInt(value);
+                        },
+                        from: function (value) {
+                            return value;
+                        }
+                    },
+                    range: {
+                        'min': min,
+                        'max': max
+                    }
+                });
+                slider.noUiSlider.on('update', function () {
+                    input.value = slider.noUiSlider.get();
+                    $(elem).find('.js-picker__input').trigger('change');
+                    var mask = input.inputmask;
+                    if (mask && input.classList.contains('js-mask__age')) {
+                        var suffix = getNumEnding(slider.noUiSlider.get(), [' год', ' года', ' лет']);
+                        mask.option({
+                            suffix: suffix
+                        });
+                    }
+                });
+                input.addEventListener('change', function () {
+                    slider.noUiSlider.set(this.value);
+                });
+            }
+        });
     }
 
     function initGallery() {
@@ -444,7 +520,7 @@ jQuery(function () {
             slidesToShow: 6,
             slidesToScroll: 1,
             focusOnSelect: true,
-            asNavFor: '.js-gallery',
+            asNavFor: '.js-gallery__slider',
             responsive: [
                 {
                     breakpoint: appConfig.breakpoint.md,
@@ -454,19 +530,145 @@ jQuery(function () {
                 }
             ],
         });
-        $('.js-gallery').slick({
-            dots: false,
-            arrows: true,
-            infinite: false,
-            asNavFor: '.js-gallery-nav',
+        $('.js-gallery').each(function (i, el) {
+            var $slider = $(el).find('.js-gallery__slider');
+            var $current = $(el).find('.js-gallery__current');
+            $slider.slick({
+                dots: false,
+                arrows: true,
+                infinite: false,
+                asNavFor: '.js-gallery-nav',
+                responsive: [
+                    {
+                        breakpoint: appConfig.breakpoint.md,
+                        settings: {
+                            arrows: false
+                        }
+                    }
+                ],
+            });
+            $slider.on('afterChange', function (event, slick, currentSlide) {
+                $current.text(++currentSlide);
+            });
+            $(el).find('.js-gallery__total').text($slider.find('.slide').length);
+        });
+    }
+
+    /**
+     * Функция возвращает окончание для множественного числа слова на основании числа и массива окончаний
+     * param  iNumber Integer Число на основе которого нужно сформировать окончание
+     * param  aEndings Array Массив слов или окончаний для чисел (1, 4, 5),
+     *         например ['яблоко', 'яблока', 'яблок']
+     * return String
+     * 
+     * https://habrahabr.ru/post/105428/
+     */
+    function getNumEnding(iNumber, aEndings) {
+        var sEnding, i;
+        iNumber = iNumber % 100;
+        if (iNumber >= 11 && iNumber <= 19) {
+            sEnding = aEndings[2];
+        } else {
+            i = iNumber % 10;
+            switch (i)
+            {
+                case (1):
+                    sEnding = aEndings[0];
+                    break;
+                case (2):
+                case (3):
+                case (4):
+                    sEnding = aEndings[1];
+                    break;
+                default:
+                    sEnding = aEndings[2];
+            }
+        }
+        return sEnding;
+    }
+
+    function initHypothec() {
+        $('.js-hypothec').each(function () {
+            var $cost = $(this).find('.js-hypothec__cost'),
+                    cost = $cost.val(),
+                    $paymentPercent = $(this).find('.js-hypothec__payment-percent'),
+                    $paymentSum = $(this).find('.js-hypothec__payment-sum'),
+                    $age = $(this).find('.js-hypothec__age'),
+                    $credit = $(this).find('.js-hypothec__credit'),
+                    $slider = $(this).find('.js-hypothec__slider'),
+                    $slides = $slider.find('.slide'),
+                    $scroll = $(this).find('.js-hypothec__scroll');
+            var rate = [];
+            $slider.find('.js-hypothec__rate').each(function () {
+                rate.push(parseFloat($(this).text().replace(",", ".")) || 0);
+            });
+            var rateME = [];
+            $slider.find('.js-hypothec__rateME').each(function () {
+                rateME.push(parseFloat($(this).text().replace(",", ".")) || 0);
+            });
+            var credit = 0;
+            var age = $age.val();
+            $paymentPercent.on('change', function () {
+                $paymentSum.val(calcPayment(cost, $paymentPercent.val()));
+                credit = calcCredit(cost, $paymentPercent.val());
+                $credit.val(credit);
+                $slides.each(function (i, el) {
+                    $(el).find('.js-hypothec__permonth').text(formatPrice(calcPerMonth(credit, rate[i], age)));
+                    $(el).find('.js-hypothec__permonthME').text(formatPrice(calcPerMonth(credit, rateME[i], age)));
+                    $(el).find('.js-hypothec__economy').text(formatPrice(calcPerMonth(credit, rate[i], age) * 12 * age - calcPerMonth(credit, rateME[i], age) * 12 * age));
+                });
+            });
+            $paymentPercent.trigger('change');
+            $age.on('change', function () {
+                age = $age.val();
+                $slides.each(function (i, el) {
+                    $(el).find('.js-hypothec__permonth').text(formatPrice(calcPerMonth(credit, rate[i], age)));
+                    $(el).find('.js-hypothec__permonthME').text(formatPrice(calcPerMonth(credit, rateME[i], age)));
+                    $(el).find('.js-hypothec__economy').text(formatPrice(calcPerMonth(credit, rate[i], age) * 12 * age - calcPerMonth(credit, rateME[i], age) * 12 * age));
+                });
+            });
+            $scroll.find('.hypothec__list__item').each(function (i) {
+                $(this).find('a').on('click', function (e) {
+                    e.preventDefault();
+                    $slider.slick('slickGoTo', i);
+                });
+            });
+        });
+        function calcPayment(cost, percent) {
+            return Math.ceil(cost * percent / 100);
+        }
+        function calcCredit(cost, percent) {
+            return cost - Math.ceil(cost * percent / 100);
+        }
+        function calcPerMonth(credit, rate, age) {
+            return Math.ceil(credit * ((rate / 1200.0) / (1.0 - Math.pow(1.0 + rate / 1200.0, -(age * 12)))));
+        }
+        function formatPrice(price) {
+            return price.toString().replace(/./g, function (c, i, a) {
+                return i && c !== "." && !((a.length - i) % 3) ? ' ' + c : c;
+            });
+        }
+        $('.js-hypothec__slider').slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '15px',
+            focusOnSelect: true,
+            mobileFirst: true,
             responsive: [
                 {
-                    breakpoint: appConfig.breakpoint.md,
+                    breakpoint: appConfig.breakpoint.md - 1,
                     settings: {
-                        arrows: false
+                        dots: false,
+                        fade: true,
+                        draggable: false,
+                        centerPadding: '0px'
                     }
                 }
-            ],
+            ]
         });
     }
 

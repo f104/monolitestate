@@ -73,7 +73,7 @@
             margin-right: 0;
             .reviews__list__item {
                 .reviews__list__item__inner {
-                    border-radius: 4px;
+                    border-radius: $border-radius;
                     padding: 33px 40px 40px;
                 }
                 .reviews__list__item__content {

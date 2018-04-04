@@ -1,0 +1,51 @@
+<div class="hypothec-request">
+    <div class="hypothec-request__row">
+        <div class="hypothec-request__col _1">
+            <h4 class="hypothec-request__h">Оформить онлайн</h4>
+            <ul class="hypothec-request__feat">
+                <li class="hypothec-request__feat__item">
+                    Зарегистрируйтесь в личном кабинете за 1 минуту
+                </li>
+                <li class="hypothec-request__feat__item">
+                    Отправьте заявку сразу в несколько банков
+                </li>
+                <li class="hypothec-request__feat__item">
+                    Следите за ходом рассмотрения вашей заявки
+                </li>
+            </ul>
+            <a href="#" class="btn _lg _secondary">Продолжить оформление</a>
+        </div>
+        <div class="hypothec-request__col _2">
+            <h4 class="hypothec-request__h">Оформить с экспертом</h4>
+            <div class="hypothec-request__row">
+                <div class="hypothec-request__agent">
+                    @@include('./chunks/agent.html', {
+                    "img": 1,
+                    "name": "Столбова Ольга Арслановна",
+                    "post": "Ваш личный помощник по ипотеке",
+                    "phone": "+7 922 471-16-85",
+                    "link": 0,
+                    "all": 0
+                    })
+                </div>
+                <form class="hypothec-request__form">
+                    <div class="input-group hypothec-request__form__text">
+                        Оставьте ваш номер, и агент перезвонит вам в течение 5 минут
+                    </div>
+                    <div class="input-group _lg">
+                        <label>Ваш телефон</label>
+                        <input class="js-mask__tel">
+                    </div>
+                    <div class="input-group _lg">
+                        <button class="btn _lg _solid">Жду звонка</button>
+                    </div>
+                    <div class="input-group _last">
+                        <span class="input-help">
+                            Отправляя заявку вы соглашаетесь на обработку персональных данных
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

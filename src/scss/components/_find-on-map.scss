@@ -1,15 +1,13 @@
 .find-on-map {
     display: block;
     @include link-in-text;
-    margin-left: - $container-padding-sm;
-    margin-right: - $container-padding-sm;
     .find-on-map__img-wrapper {
         @include bg-img-wrapper;
         display: block;
         width: 100%;
         min-height: 116px;
         box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.08);
-        border-radius: 4px;
+        border-radius: $border-radius;
     }
     .find-on-map__img-inner {
         @include bg-img-inner($white, .6);
@@ -33,16 +31,38 @@
             margin-right: 10px;
             vertical-align: middle;
         }
+        .find-on-map__content__small {
+            display: block;
+            opacity: 0.6;
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 10px;
+            [class^="icon-"] {
+                color: $secondary;
+                font-size: 13px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+.find-on-map-section {
+    .find-on-map {
+        margin-left: - $container-padding-sm;
+        margin-right: - $container-padding-sm;
     }
 }
 
 @include media-breakpoint-up(md) {
     .find-on-map {
-        margin-left: 0;
-        margin-right: 0;
         @include hover-up;
         .find-on-map__content {
             font-size: 23px;
+        }
+    }
+    .find-on-map-section {
+        .find-on-map {
+            margin-left: 0;
+            margin-right: 0;
         }
     }
 }
