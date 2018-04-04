@@ -78,6 +78,32 @@
         }
     }
 }
+.popup-visit {
+    @include media-breakpoint-up(md) {
+        width: 700px;
+        .input-group__wrapper {
+            &:not(._submit) {
+                .input-group {
+                    margin-right: 35px;
+                    flex-basis: 50%;
+                }
+            }
+            &._submit {
+                .input-group {
+                    .btn {
+                        width: 196px;
+                    }
+                    .input-help {
+                        width: 180px;
+                    }
+                }
+            }
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        width: 860px;
+    }
+}
 
 @include media-breakpoint-up(md) {
     .popup-subscribe {

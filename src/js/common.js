@@ -19,6 +19,7 @@ jQuery(function () {
         initRange();
         initGallery();
         initHypothec();
+        initDatepicker()
 
         $('.js-scrollbar').scrollbar();
 
@@ -252,6 +253,7 @@ jQuery(function () {
     function initPopup() {
         var options = {
             baseClass: '_popup',
+            autoFocus: false,
             btnTpl: {
                 smallBtn: '<span data-fancybox-close class="fancybox-close-small"><span class="link">Закрыть</span></span>',
             },
@@ -669,6 +671,32 @@ jQuery(function () {
                     }
                 }
             ]
+        });
+    }
+
+    function initDatepicker() {
+        var datepicker_visible = false;
+        $('.js-datetimepicker').datepicker({
+            minDate: new Date(),
+            timepicker: true,
+            dateTimeSeparator: ', ',
+            position: 'top left',
+            onShow: function (inst, animationCompleted) {
+                if (animationCompleted) {
+                    datepicker_visible = true;
+                }
+            },
+            onHide: function (inst, animationCompleted) {
+                if (animationCompleted) {
+                    datepicker_visible = false;
+                }
+            }
+        });
+        $('.js-datetimepicker').on('click', function () {
+            if (datepicker_visible) {
+                var datepicker = $('.js-datetimepicker').data('datepicker');
+                datepicker.hide();
+            }
         });
     }
 

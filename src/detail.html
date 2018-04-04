@@ -100,7 +100,10 @@
                                     </span>
                                 </li>
                             </ul>
-                            <button class="btn _lg _secondary detail__info__btn">Записаться на просмотр</button>
+                            <a href="#visit" 
+                               class="btn _lg _secondary detail__info__btn js-popup">
+                                Записаться на просмотр
+                            </a>
                         </div>
                         <div class="detail__info__map">
                             <a href="#" class="find-on-map">
@@ -211,6 +214,9 @@
             "title": "Не хочу искать, перезвоните мне!",
             "margin": 0
             })
+            <div class="hidden">
+            @@include('./template/popups/visit.html')
+            </div>
             @@include('./template/footer.html')
             @@include('./template/popups-common.html')
             <div class="content__overlay js-menu-overlay"></div>

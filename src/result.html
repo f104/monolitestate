@@ -39,7 +39,9 @@
             "margin": 0
             })
             @@include('./template/realty-subscribe.html')
-            @@include('./template/popups-realty.html')
+            <div class="hidden">
+                @@include('./template/popups/subscribe.html')
+            </div>
             @@include('./template/footer.html')
             @@include('./template/popups-common.html')
             <div class="content__overlay js-menu-overlay"></div>

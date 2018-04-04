@@ -530,6 +530,9 @@ form {
         display: flex;
         .input-group {
             margin-right: 20px;
+            &:last-of-type {
+                margin-right: 0;
+            }
         }
         &._submit {
             align-items: center;
@@ -599,4 +602,21 @@ form {
 html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     right: -11px;
     left: auto;
+}
+
+.input-wrapper {
+    position: relative;
+    &._datepicker {
+        input {
+            padding-right: 40px;
+        }
+        [class^="icon-"] {
+            color: $primary;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+    }
 }

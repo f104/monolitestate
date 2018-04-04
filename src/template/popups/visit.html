@@ -1,0 +1,43 @@
+<div id="visit" class="popup-cnt">
+    <div class="popup popup-visit">
+        <h3 class="popup__h3">Записаться на просмотр</h3>
+        <form id="popup_subscribe_form" class="popup-subscribe__form js-validate">
+            <div class="input-group__wrapper">
+                <div class="input-group _lg _secondary">
+                    <label>Ваше имя</label>
+                    <input type="text" name="name" value="" required>
+                </div>
+                <div class="input-group _lg _secondary">
+                    <label>E-mail</label>
+                    <input type="text" name="email" value="" required>
+                </div>
+            </div>
+            <div class="input-group__wrapper">
+                <div class="input-group _lg _secondary">
+                    <label>Ваш телефон</label>
+                    <input type="text" name="phone" value="" required 
+                           class="js-mask__tel">
+                </div>
+                <div class="input-group _lg _secondary">
+                    <label>Удобная дата и время</label>
+                    <div class="input-wrapper _datepicker">
+                        <input type="text" name="date" value="" 
+                               required readonly 
+                               class="js-datetimepicker">
+                        <i class="icon-calendar"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group__wrapper _submit">
+                <div class="input-group">
+                    <button class="btn _solid _lg _shadow" type="submit">Отправить</button>
+                </div>
+                <div class="input-group">
+                    <span class="input-help">
+                        Оправляя заявку вы соглашаетесь на обработку 
+                        ваших персональных данных.</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
