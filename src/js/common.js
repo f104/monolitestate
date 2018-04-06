@@ -20,8 +20,7 @@ jQuery(function () {
         initGallery();
         initHypothec();
         initDatepicker()
-
-        $('.js-scrollbar').scrollbar();
+        initScrollbar()
 
     });
 
@@ -173,26 +172,6 @@ jQuery(function () {
     }
 
     function initMenu() {
-        if ($(window).outerWidth() < appConfig.breakpoint.md) {
-            $('.js-scrollbar-sm .scrollbar-outer').scrollbar();
-        }
-        if ($(window).outerWidth() < appConfig.breakpoint.lg) {
-            $('.js-scrollbar-md .scrollbar-outer').scrollbar();
-        }
-        $(window).on('resize', function () {
-            if ($(window).outerWidth() < appConfig.breakpoint.md) {
-                $('.js-scrollbar-sm .scrollbar-outer').scrollbar();
-            } else {
-                $('.js-scrollbar-sm .scrollbar-outer').scrollbar('destroy');
-            }
-        });
-        $(window).on('resize', function () {
-            if ($(window).outerWidth() < appConfig.breakpoint.lg) {
-                $('.js-scrollbar-md .scrollbar-outer').scrollbar();
-            } else {
-                $('.js-scrollbar-md .scrollbar-outer').scrollbar('destroy');
-            }
-        });
         $('.js-menu-toggler').on('click', function (e) {
             e.preventDefault();
             var href = $(this).attr('href');
@@ -698,6 +677,31 @@ jQuery(function () {
                 datepicker.hide();
             }
         });
+    }
+    
+    function initScrollbar() {
+        $('.js-scrollbar').scrollbar();
+        if ($(window).outerWidth() < appConfig.breakpoint.md) {
+            $('.js-scrollbar-sm').scrollbar();
+        }
+        if ($(window).outerWidth() < appConfig.breakpoint.lg) {
+            $('.js-scrollbar-md').scrollbar();
+        }
+        $(window).on('resize', function () {
+            if ($(window).outerWidth() < appConfig.breakpoint.md) {
+                $('.js-scrollbar-sm').scrollbar();
+            } else {
+                $('.js-scrollbar-sm').scrollbar('destroy');
+            }
+        });
+        $(window).on('resize', function () {
+            if ($(window).outerWidth() < appConfig.breakpoint.lg) {
+                $('.js-scrollbar-md').scrollbar();
+            } else {
+                $('.js-scrollbar-md').scrollbar('destroy');
+            }
+        });
+//        $('.js-scrollbar-hot').scrollbar();
     }
 
 });

@@ -148,36 +148,6 @@ $hypothec-gutter-width: $grid-gutter-width;
         }
         &._scroll {
             display: none;
-            margin-top: -10px;
-            margin-left: 0;
-            margin-right: 0;
-            .scrollbar-outer {
-                display: flex;
-                flex-wrap: nowrap;
-                .scroll-content {
-                    padding-top: 10px;
-                    margin-left: -13px;
-                    margin-right: -13px !important;
-                }
-                > .scroll-element {
-                    height: 5px;
-                    border-radius: 3px;
-                    background: #e7e7e7;
-                    .scroll-element_outer {
-                        height: 5px;
-                        top: 0px;
-                    }
-                    .scroll-bar {
-                        height: 5px;
-                        border-radius: 3px;
-                        background: #4264cf;
-                        cursor: pointer;
-                    }
-                }
-            }
-            .hypothec__list__item {
-                margin-bottom: 20px;
-            }
         }
     }
     .section__button._more {
@@ -197,9 +167,19 @@ $hypothec-gutter-width: $grid-gutter-width;
                 }
             }
             &._scroll {
-                display: block;
+                display: flex;
+                flex-wrap: nowrap;
+                padding-top: 10px;
+                margin-bottom: 0;
+                &:after {
+                    content: '';
+                    display: block;
+                    width: $container-padding-md - $hypothec-gutter-width / 2;
+                    flex-shrink: 0;
+                }
                 .hypothec__list__item {
-                    width: 278px;
+                    margin-bottom: 20px;
+                    width: 306px;
                     flex: 0 0 auto;
                 }
             }
@@ -219,8 +199,13 @@ $hypothec-gutter-width: $grid-gutter-width;
                 margin-bottom: 0;
             }
             &._scroll {
+                &:after {
+                    content: none;
+                }
                 .hypothec__list__item {
-                    @include col(25%, $hypothec-gutter-width);
+                    margin-bottom: 20px;
+                    width: 306px;
+                    flex: 0 0 auto;
                 }
             }
         }
@@ -406,6 +391,9 @@ $hypothec-gutter-width: $grid-gutter-width;
                 }
             }
         }
+        .scroll-wrapper {
+            margin-bottom: 25px;
+        }
     }
 }
 @include media-breakpoint-only(md) {
@@ -447,7 +435,7 @@ $hypothec-gutter-width: $grid-gutter-width;
                     padding: 5px 7px 3px;
                     margin-right: 13px;
                 }
-                
+
             }
         }
     }
@@ -465,14 +453,30 @@ $hypothec-gutter-width: $grid-gutter-width;
                 order: 1;
                 width: 382px;
                 margin-bottom: 28px;
+                background-color: $white;
+                border-radius: $border-radius;
             }
             .hypothec-request {
                 order: 2;
                 width: 790px;
             }
-            .hypothec__list {
+            .hypothec-calc__list {
                 order: 3;
-                flex-basis: 100%;
+                width: 100%;
+            }
+        }
+        .scrollbar-outer._hor.scroll-wrapper {
+            margin-left: - $hypothec-gutter-width / 2;
+            margin-right: - $hypothec-gutter-width / 2;
+            .scroll-content {
+                padding-left: $hypothec-gutter-width / 2;
+                padding-right: $hypothec-gutter-width / 2;
+            }
+            .scroll-x {
+                .scroll-element_outer {
+                    left: $hypothec-gutter-width / 2;
+                    right: $hypothec-gutter-width / 2;
+                }
             }
         }
     }

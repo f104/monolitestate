@@ -153,6 +153,12 @@
       "css": "location",
       "code": 59405,
       "src": "elusive"
+    },
+    {
+      "uid": "8663320a860b00f26e94d3d15c9ba99a",
+      "css": "clock",
+      "code": 59406,
+      "src": "entypo"
     }
   ]
 }

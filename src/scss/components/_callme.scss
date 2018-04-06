@@ -1,53 +1,55 @@
-$hypothec-gutter-width: $grid-gutter-width;
 .callme {
     background-image: linear-gradient(346deg, #7f7fc7, #494995);
+    @include media-breakpoint-up(md) {
+        background-image: linear-gradient(45deg, #7f7fc7, #494995);
+    }
+    @include media-breakpoint-up(lg) {
+        background-image: linear-gradient(20deg, #7f7fc7, #494995);
+    }
     .callme__wrapper {
         position: relative;
+        .section__lead {
+            @include media-breakpoint-up(md) {
+                width: 80%;
+            }
+        }
         .btn {
             width: 157px;
         }
-        .callme__wrapper__img-wrapper {
-            margin-left: -20px;
-            margin-right: -20px;
-            margin-bottom: -20px;
-            img {
-                width: 100%;
-            }
-        }
-    }
-}
-@include media-breakpoint-up(md) {
-    .callme {
-        background-image: linear-gradient(45deg, #7f7fc7, #494995);
-        .callme__wrapper {
-            .section__lead {
-                width: 80%;
-            }
-            .input-group__wrapper:not(._submit) {
+        .input-group__wrapper:not(._submit) {
+            @include media-breakpoint-up(md) {
                 display: block;
                 .input-group {
                     width: 311px;
                 }
             }
-            .callme__wrapper__img-wrapper {
+            @include media-breakpoint-up(lg) {
+                display: flex;
+            }
+        }
+        .callme__wrapper__img-wrapper {
+            margin-left: -20px;
+            margin-right: -20px;
+            margin-bottom: -20px;
+            @include media-breakpoint-up(md) {
                 margin: 0;
                 position: absolute;
                 right: -30px;
                 bottom: -40px;
                 width: 410px;
             }
-        }
-    }
-}
-@include media-breakpoint-up(lg) {
-    .callme {
-        background-image: linear-gradient(20deg, #7f7fc7, #494995);
-        .callme__wrapper {
-            .input-group__wrapper:not(._submit) {
-                display: flex;
-            }
-            .callme__wrapper__img-wrapper {
+            @include media-breakpoint-up(lg) {
                 width: 470px;
+            }
+            img {
+                width: 100%;
+            }
+            &._2 {
+                width: 280px;
+                margin-left: auto;
+                @include media-breakpoint-up(md) {
+                    width: 328px;
+                }
             }
         }
     }
