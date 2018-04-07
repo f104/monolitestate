@@ -20,8 +20,10 @@
     .list-header__sorting {
         margin-bottom: 18px;
         @include media-breakpoint-up(md) {
-            flex-basis: 100%;
             margin-bottom: 20px;
+            /*&:not(._auto) {*/
+            flex-basis: 100%;
+            /*}*/
         }
         @include media-breakpoint-up(lg) {
             flex-basis: auto;
@@ -105,9 +107,24 @@
             }
         }
     }
+    &._1 {
+        .sorting__item {
+            @include media-breakpoint-up(md) {
+                flex-basis: 100%;
+            }            
+        }
+    }
+    &._2 {
+        .sorting__item {
+            @include media-breakpoint-up(md) {
+                flex-basis: 50%;
+            }            
+        }
+    }
     .sorting__label {
         font-size: 12px;
         margin-bottom: 8px;
+        white-space: nowrap;
         @include media-breakpoint-up(md) {
             font-size: 14px;
             margin-bottom: 0;
@@ -116,8 +133,12 @@
     }
     .sorting__select {
         width: 100%;
+        min-width: 220px;
         @include media-breakpoint-up(lg) {
             width: 200px;
+        }
+        &.select2-hidden-accessible {
+            min-width: unset;
         }
     }
 }

@@ -1,0 +1,136 @@
+<section class="section">
+    @@include('./list-header.html', {"class": "_white"})
+    <div class="container agents-list-wrapper">
+        <p class="agents-list-wrapper__h agents__muted">Результаты поиска</p>
+        <div class="agents-list-wrapper__row">
+            <div class="agents-list">
+                <div class="agents-list__inner">
+                    @@loop('./item.html', [
+                    { 
+                    "img": 5, 
+                    "name": "Столбова Ольга Арслановна", 
+                    "post": "Риэлтор",
+                    "phone": "+7 922 471-16-85",
+                    "link": "stolbova@monolit.ru",
+                    "all": 1,
+                    "more": 1
+                    },
+                    { 
+                    "img": 6, 
+                    "name": "Лукшина Дарья Александровна", 
+                    "post": "Риэлтор",
+                    "phone": "+7 920 561-16-45",
+                    "link": "lukshina@monolit.ru",
+                    "all": 1,
+                    "more": 1
+                    },
+                    { 
+                    "img": 7, 
+                    "name": "Бродина Александра Сергеевна", 
+                    "post": "Риэлтор",
+                    "phone": "+7 922 371-16-85",
+                    "link": "brodina@monolit.ru",
+                    "all": 1,
+                    "more": 1
+                    }
+                    ])
+                @@include('./promo-form.html')
+                    @@loop('./item.html', [
+                    { 
+                    "img": 8, 
+                    "name": "Петров Евгений Вячеславович", 
+                    "post": "Риэлтор",
+                    "phone": "+7 920 561-16-45",
+                    "link": "petrov.e@monolit.ru",
+                    "all": 1,
+                    "more": 1
+                    },
+                    { 
+                    "img": 7, 
+                    "name": "Бродина Александра Сергеевна", 
+                    "post": "Риэлтор",
+                    "phone": "+7 922 371-16-85",
+                    "link": "brodina@monolit.ru",
+                    "all": 1,
+                    "more": 1
+                    },
+                    { 
+                    "img": 5, 
+                    "name": "Столбова Ольга Арслановна", 
+                    "post": "Риэлтор",
+                    "phone": "+7 922 471-16-85",
+                    "link": "stolbova@monolit.ru",
+                    "all": 1,
+                    "more": 1
+                    }
+                    ])
+                @@include('./promo-work.html')
+                    @@loop('./item.html', [
+                    { 
+                    "img": 5, 
+                    "name": "Столбова Ольга Арслановна", 
+                    "post": "Риэлтор",
+                    "phone": "+7 922 471-16-85",
+                    "link": "stolbova@monolit.ru",
+                    "all": 1,
+                    "more": 1
+                    },
+                    { 
+                    "img": 6, 
+                    "name": "Лукшина Дарья Александровна", 
+                    "post": "Риэлтор",
+                    "phone": "+7 920 561-16-45",
+                    "link": "lukshina@monolit.ru",
+                    "all": 1,
+                    "more": 1
+                    },
+                    { 
+                    "img": 7, 
+                    "name": "Бродина Александра Сергеевна", 
+                    "post": "Риэлтор",
+                    "phone": "+7 922 371-16-85",
+                    "link": "brodina@monolit.ru",
+                    "all": 1,
+                    "more": 1
+                    },
+                    { 
+                    "img": 8, 
+                    "name": "Петров Евгений Вячеславович", 
+                    "post": "Риэлтор",
+                    "phone": "+7 920 561-16-45",
+                    "link": "petrov.e@monolit.ru",
+                    "all": 1,
+                    "more": 1
+                    },
+                    { 
+                    "img": 5, 
+                    "name": "Столбова Ольга Арслановна", 
+                    "post": "Риэлтор",
+                    "phone": "+7 922 471-16-85",
+                    "link": "stolbova@monolit.ru",
+                    "all": 1,
+                    "more": 1
+                    },
+                    { 
+                    "img": 8, 
+                    "name": "Константин Константинович Константинопольский", 
+                    "post": "Риэлтор",
+                    "phone": "+7 920 561-16-45",
+                    "link": "petrov.e@monolit.ru",
+                    "all": 1,
+                    "more": 1
+                    }
+                    ])
+                </div>
+            </div>
+            <div class="agents-list-aside">
+                @@include('./promo-form.html')
+                @@include('./promo-work.html')
+            </div>
+        </div>
+    </div>
+    @@include('./list-header.html', {"class": "_footer _white"})
+    <div class="container">
+        <button class="btn _secondary _lg section__button">Показать еще</button>
+    </div>
+</section>
