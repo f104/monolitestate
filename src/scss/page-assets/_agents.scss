@@ -233,6 +233,9 @@ $agents-list-gutter: 26px;
         }
     }
     .agents-filter__search {
+        .input-wrapper._icon [class^="icon-"] {
+            color: $body-color;
+        }
         @include media-breakpoint-up(lg) {
             flex: 1;
             margin-right: 68px;
@@ -251,7 +254,7 @@ $agents-list-gutter: 26px;
         }
     }
     .agents-filter__alphabet-wrapper {
-        overflow-y: scroll;
+        overflow-y: auto;
         margin-left: - $container-padding-sm;
         margin-right: - $container-padding-sm;
         padding-left: $container-padding-sm;
@@ -259,6 +262,14 @@ $agents-list-gutter: 26px;
             content: '';
             display: inline-block;
             width: $container-padding-sm;
+        }
+        @include media-breakpoint-up(md) {
+            margin-left: - $container-padding-md;
+            margin-right: - $container-padding-md;
+            padding-left: $container-padding-md;
+            .alphabet:after {
+                width: $container-padding-md;
+            }
         }
     }
 }
