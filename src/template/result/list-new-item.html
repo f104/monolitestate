@@ -31,33 +31,17 @@
         </div>
     </div>
     <div class="result-list__item__content">
-        <h5 class="result-list__item__h @@if (oldprice != '') {_withcard}">
+        <h5 class="result-list__item__h">
             @@title
         </h5>
-        <p class="result-list__item__lead">Однокомнатная квартира</p>
-        @@if (oldprice != "") {
-        <div class="card-sale">
-            <span class="card-sale__icon">
-                <i class="icon-down-small"></i>
-            </span>
-            <span class="card-sale__text">
-                Произошло снижение цены
-            </span>
-        </div>
-        }
+        <p class="result-list__item__builder">
+            Застройщик: <a href="#">ГК «Меридиан»</a>
+        </p>
         <div class="result-list__item__row">
             <div class="result-list__item__col _1">
                 <div class="result-list__item__price">
-                    @@if (oldprice != "") {
-                    <del>2 670 000 руб.</del> <i class="icon-down-small"></i>
-                    }
-                    @@if (oldprice == "") {
-                    <a href="#subscribe" class="result-list__item__price__link js-popup">
-                        Сообщить о снижении цены
-                    </a>
-                    }
                     <span class="result-list__item__price__cost">
-                        2 321 414 руб.
+                        от 2 321 414 руб.
                     </span>
                     <span class="result-list__item__help">
                         стоимость
@@ -76,21 +60,21 @@
             <div class="result-list__item__col _3">
                 <ul class="result-list__item__options">
                     <li>
-                        32 м²
+                        <a href="#">233 квартиры</a>
                         <span class="result-list__item__help">
-                            площадь
+                            в наличии
                         </span>
                     </li>
                     <li>
-                        73 414 руб.
+                        4 кв. 2017
                         <span class="result-list__item__help">
-                            цена за м²
+                            срок сдачи
                         </span>
                     </li>
                     <li>
-                        5 этаж
+                        Панель
                         <span class="result-list__item__help">
-                            из 14
+                            стены
                         </span>
                     </li>
                 </ul>
@@ -100,9 +84,9 @@
             <div class="result-list__item__actions__compare input-group">
                 <label class="checkbox @@if (compare == -1) {_disabled}">
                     <input type="checkbox" 
-                        @@if (compare == -1) {disabled}
-                        @@if (compare == 1) {checked}>
-                    <span class="checkbox__text">К сравнению</span>
+                           @@if (compare == -1) {disabled}
+                           @@if (compare == 1) {checked}>
+                           <span class="checkbox__text">К сравнению</span>
                 </label>
             </div>
             <div class="result-list__item__actions__btn">
@@ -111,7 +95,7 @@
                         result-list__item__actions__btn__compare
                         @@if (fav == 1) {_active}">
                     <i class="icon-star"></i>
-                }
+                    }
                 </button>
                 <a href="detail.html" class="btn _secondary">Подробнее</a>
             </div>

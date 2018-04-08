@@ -1,0 +1,79 @@
+<section class="container section hypothec">
+    <h3 class="section__h">@@title</h3>
+    <div class="hypothec-calc js-hypothec">
+        <h3 class="hypothec-calc__h">
+            Рассчитайте ваш платеж по ипотеке
+        </h3>
+        <div class="hypothec-calc__fields">
+            <div class="input-group">
+                <label>Стоимость недвижимости</label>
+                <input value="2323414" disabled="disabled" class="js-mask__currency js-hypothec__cost">
+            </div>
+            <div class="js-picker">
+                <div class="input-group _picker _double _third">
+                    <label>Первоначальный взнос</label>
+                    <input disabled="disabled" 
+                           class="js-mask__currency js-hypothec__payment-sum">
+                    <input min="10" max="90" value="30" disabled="disabled" 
+                           class="js-mask__percent js-picker__input js-hypothec__payment-percent">
+                </div>
+                <div class="range _picker js-picker__target"></div>
+            </div>
+            <div class="input-group">
+                <label>Сумма кредита</label>
+                <input disabled="disabled" class="js-mask__currency js-hypothec__credit">
+            </div>
+            <div class="js-picker">
+                <div class="input-group _picker">
+                    <label>Срок ипотеки</label>
+                    <input min="1" max="30" value="20" 
+                           disabled="disabled" 
+                           class="js-mask__age js-picker__input js-hypothec__age">
+                </div>
+                <div class="range _picker js-picker__target"></div>
+            </div>
+        </div>
+        <p class="hypothec-calc__res-h">Найдено 5 ипотечных программ</p>
+        <div class="hypothec-calc__row">
+            <div class="hypothec-calc__res slider-small js-hypothec__slider">
+                @@include('./calc-item.html', {
+                "img": "sberbank",
+                "bank": "Сбербанк",
+                "rate": "7,5",
+                "rateME": "7",
+                "text": "Сбербанк. Акция «Больше метров – меньше ставка». Готовое жилье"
+                })
+                @@include('./calc-item.html', {
+                "img": "vtb",
+                "bank": "ВТБ",
+                "rate": "8",
+                "rateME": "0",
+                "text": "ВТБ. Акция «Больше метров – меньше ставка». Готовое жилье"
+                })
+                @@include('./calc-item.html', {
+                "img": "binbank",
+                "bank": "Бинбанк",
+                "rate": "12",
+                "rateME": "11",
+                "text": "Бинбанк. Акция «Больше метров – меньше ставка». Готовое жилье"
+                })
+                @@include('./calc-item.html', {
+                "img": "gazprombank",
+                "bank": "Газпромбанк",
+                "rate": "10,5",
+                "rateME": "0",
+                "text": "Газпромбанк. Акция «Больше ставка»"
+                })
+                @@include('./calc-item.html', {
+                "img": "sberbank",
+                "bank": "Сбербанк",
+                "rate": "7,5",
+                "rateME": "7",
+                "text": "Сбербанк. Акция «Больше метров – меньше ставка». Готовое жилье"
+                })
+            </div>
+            @@include('./scroll.html')
+            @@include('./request.html')
+        </div>
+    </div>
+</section>

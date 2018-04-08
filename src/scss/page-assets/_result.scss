@@ -77,10 +77,15 @@
             font-size: 12px;
             margin-bottom: 11px;
         }
+        .result-list__item__builder {
+            font-size: 12px;
+            margin-bottom: 18px;
+        }
         .result-list__item__help {
             opacity: 0.5;
             font-size: 12px;
             display: block;
+            padding-top: 2px;
         }
         .result-list__item__price {
             margin-bottom: 10px;
@@ -246,10 +251,16 @@
             }
             .result-list__item__h {
                 font-size: 16px;
-                margin-right: 120px;
+                &._withcard {
+                    margin-right: 140px;
+                }
             }
             .result-list__item__lead {
                 margin-bottom: 14px;
+            }
+            .result-list__item__builder {
+                font-size: 13px;
+                margin-bottom: 25px;
             }
             .result-list__item__price {
                 .icon-down-small {
@@ -313,7 +324,11 @@
         .result-list__aside {
             width: 279px;
             margin-right: 28px;
+            margin-bottom: 28px;
             flex-shrink: 0;
+        }
+        .result-list__content {
+            flex: 1;
         }
         .result-list__filter {
             z-index: unset;
@@ -334,11 +349,17 @@
             }
             .result-list__item__h {
                 font-size: 20px;
-                margin-right: 170px;
                 margin-bottom: 11px;
+                &._withcard {
+                    margin-right: 150px;
+                }
             }
             .result-list__item__lead {
                 margin-bottom: 20px;
+            }
+            .result-list__item__builder {
+                font-size: 15px;
+                margin-bottom: 25px;
             }
             .result-list__item__help {
                 font-size: 13px;
@@ -354,6 +375,7 @@
                 }
                 .result-list__item__price__cost {
                     font-size: 24px;
+                    line-height: 25px;
                 }
                 .result-list__item__price__link {
                     font-size: 14px;

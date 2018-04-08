@@ -152,20 +152,33 @@
             }
         }
     }
-    .filters-form__checkbox {
-        display: flex;
+    .filters-form__checkbox-wrapper {
         margin-top: 20px;
         margin-bottom: 20px;
         margin-left: - $container-padding-sm;
         padding-left: $container-padding-sm;
         margin-right: - $container-padding-sm;
         overflow-y: scroll;
+        .filters-form__checkbox {
+            .filters-form__checkbox__item {
+                margin-bottom: 7px;
+                flex: 0;
+                &:last-of-type {
+                    padding-right: $container-padding-sm;
+                }
+                .filters-form__checkbox__item__inner {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+    .filters-form__checkbox {
+        display: flex;
         .filters-form__checkbox__item {
             display: block;
-            flex: 0;
-            margin: 0 7px 7px 0;
+            flex: 1;
+            margin-right: 7px;
             &:last-of-type {
-                padding-right: $container-padding-sm;
                 margin-right: 0;
             }
             .filters-form__checkbox__item__label {
@@ -178,7 +191,7 @@
                 display: block;
                 border: 1px solid #b6b6b6;
                 border-radius: 5px;
-                padding: 0 10px;
+                padding: 0 20px;
                 font-size: 14px;
                 font-weight: 500;
                 line-height: 40px;
@@ -255,17 +268,24 @@
                 }
             }
         }
-        .filters-form__checkbox {
-            flex-wrap: wrap;
+        .filters-form__checkbox-wrapper {
             margin-top: 30px;
             margin-left: 0;
             padding-left: 0;
             margin-right: 0;
             overflow-y: auto;
-            .filters-form__checkbox__item {
-                &:last-of-type {
-                    padding-right: 0;
+            .filters-form__checkbox {
+                flex-wrap: wrap;
+                .filters-form__checkbox__item {
+                    &:last-of-type {
+                        padding-right: 0;
+                    }
                 }
+            }
+        }
+        .filters-form__checkbox {
+            .filters-form__checkbox__item {
+                flex: 0;
             }
         }
         .filters-form__summary {
@@ -320,7 +340,7 @@
             font-size: 35px;
             line-height: 0.97;
         }
-        .filters-form__checkbox {
+        .filters-form__checkbox-wrapper {
             margin-top: 40px;
         }
         .filters-form__summary {

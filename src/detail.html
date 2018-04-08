@@ -209,7 +209,9 @@
                 </div>
             </section>
             @@include('./template/sales.html')
-            @@include('./template/hypothec-detail.html')
+            @@include('./template/hypothec/calc.html', {
+            "title": "Ипотечные программы на это жилье"
+            })
             @@include('./template/realty-similar.html')
             @@include('./template/callme.html', {
             "title": "Не хочу искать, перезвоните мне!",

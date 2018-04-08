@@ -431,6 +431,7 @@ form {
         opacity: 1;
         margin-bottom: 0;
         break-inside: avoid;
+        padding-top: 1px;
         .checkbox__text {
             font-size: 15px;
             font-weight: normal;
@@ -442,7 +443,7 @@ form {
                 content: '';
                 position: absolute;
                 left: 0;
-                top: 0px;
+                top: -1px;
                 width: 17px;
                 height: 17px;
                 border: 1px solid #BBC2D4;
@@ -452,7 +453,7 @@ form {
                 content: '';
                 position: absolute;
                 left: 4px;
-                top: 4px;
+                top: 3px;
                 width: 9px;
                 height: 9px;
                 border-radius: 2px;
@@ -523,6 +524,7 @@ form {
                 margin-bottom: 15px;
             }
             .checkbox {
+                display: block;
                 margin-bottom: 15px;
                 &:last-of-type {
                     margin-bottom: 0;

@@ -1,0 +1,90 @@
+<section class="section">
+    @@include('./list-header.html', {"class": ""})
+
+    <div class="container">
+        <div class="result-list">
+            <div class="result-list__aside">
+                @@include('./list-filters.html', {
+                "type": "new"
+                })
+            </div>
+            <div class="result-list__content">
+                @@include('./list-new-item.html', {
+                "img": [9, 10, 11, 12],
+                "title": "ЖК «Квартет», ГП-236, ул. Широтная, 213",
+                "tags": ["Рядом метро"],
+                "compare": 0,
+                "fav": 0
+                })
+                @@include('./list-new-item.html', {
+                "img": [10, 11, 12, 9],
+                "title": "ЖК «Квартет», ГП-236, ул. Широтная, 213",
+                "tags": [],
+                "compare": -1,
+                "fav": 0
+                })
+                @@include('./list-new-item.html', {
+                "img": [11, 12, 9, 10],
+                "title": "ЖК «Квартет», ГП-236, ул. имени 346 Гвардейской Краснознаменной дивизии, 213",
+                "tags": ["Рядом метро"],
+                "compare": 1,
+                "fav": 1
+                })
+                @@include('./list-new-item.html', {
+                "img": [12, 9, 10, 11],
+                "title": "ЖК «Квартет», ГП-236, ул. Широтная, 213",
+                "tags": ["Рядом метро"],
+                "compare": 0,
+                "fav": 0
+                })
+                @@include('./list-new-item.html', {
+                "img": [9, 10, 11, 12],
+                "title": "ЖК «Квартет», ГП-236, ул. Широтная, 213",
+                "tags": ["Рядом метро"],
+                "compare": 0,
+                "fav": 0
+                })
+                @@include('./list-new-item.html', {
+                "img": [10, 11, 12, 9],
+                "title": "ЖК «Квартет», ГП-236, ул. Широтная, 213",
+                "tags": [],
+                "compare": -1,
+                "fav": 0
+                })
+                @@include('./list-new-item.html', {
+                "img": [11, 12, 9, 10],
+                "title": "ЖК «Квартет», ГП-236, ул. имени 346 Гвардейской Краснознаменной дивизии, 213",
+                "tags": ["Рядом метро"],
+                "compare": 1,
+                "fav": 1
+                })
+                @@include('./list-new-item.html', {
+                "img": [12, 9, 10, 11],
+                "title": "ЖК «Квартет», ГП-236, ул. Широтная, 213",
+                "tags": ["Рядом метро"],
+                "compare": 0,
+                "fav": 0
+                })
+                @@include('./list-new-item.html', {
+                "img": [9, 10, 11, 12],
+                "title": "ЖК «Квартет», ГП-236, ул. Широтная, 213",
+                "tags": ["Рядом метро"],
+                "compare": 0,
+                "fav": 0
+                })
+                @@include('./list-new-item.html', {
+                "img": [10, 11, 12, 9],
+                "title": "ЖК «Квартет», ГП-236, ул. Широтная, 213",
+                "tags": [],
+                "compare": -1,
+                "fav": 0
+                })
+            </div>
+        </div>
+    </div>
+
+    @@include('./list-header.html', {"class": "_white _footer"})
+    <div class="container">
+        <button class="btn _secondary _lg section__button">Показать еще</button>
+    </div>
+</section>

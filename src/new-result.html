@@ -1,24 +1,27 @@
 <html lang="ru" dir="ltr">
     @@include('./template/head.html', {
-    "name": "Вторичное жилье"
+    "name": "Квартиры в новостройках"
     })
     <body>
         @@include('./template/header.html', {
-        "active": "second"
+        "active": "new"
         })
         <div class="content">
-            @@include('./template/result/filters.html')
+            @@include('./template/result/filters-new.html')
             <div class="page-header _white _subscribe">
                 <div class="container">
                     <div class="page-header__row">
                         <div class="page-header__col page-header__md">
-                            <h1 class="page-header__h">Вторичное жилье</h1>
+                            <h1 class="page-header__h">Квартиры в новостройках</h1>
                             <ul class="breadcrumbs">
                                 <li class="breadcrumbs__item">
                                     <a href="index.html">Главная</a>
                                 </li>
                                 <li class="breadcrumbs__item _active">
-                                    Вторичное жилье
+                                    <a href="new.html">Новостройки</a>
+                                </li>
+                                <li class="breadcrumbs__item _active">
+                                    Поиск новостроек
                                 </li>
                             </ul>
                         </div>
@@ -33,7 +36,10 @@
                     </div>
                 </div>
             </div>
-            @@include('./template/result/list.html')            
+            @@include('./template/result/list-new.html')            
+            @@include('./template/hypothec/calc.html', {
+            "title": "Ипотечные программы для новостроек"
+            })
             @@include('./template/callme.html', {
             "title": "Ничего не понравилось?",
             "margin": 0,
@@ -41,8 +47,9 @@
             "img": "call1"
             })
             @@include('./template/realty-subscribe.html', {
-            "margin": 0
+            "margin": 1
             })
+            @@include('./template/seo.html')
             <div class="hidden">
                 @@include('./template/popups/subscribe.html')
             </div>

@@ -43,6 +43,7 @@
                           autocomplete="off" value="13">
             </div>
         </fieldset>
+        @@if (type == 'second') {
         <fieldset class="_inline">
             <div class="input-group">
                 <label class="checkbox">
@@ -84,6 +85,42 @@
                 </label>
             </div>
         </fieldset>
+        }
+        @@if (type == 'new') {
+        <fieldset>
+            <legend>Оценка</legend>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                    <span class="checkbox__text">Превосходно 9+</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Отлично 8+</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Очень хорошо 7+</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Хорошо 6+</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Прочие</span>
+                </label>
+            </div>
+        </fieldset>
+        }
         <fieldset>
             <legend>Отделка</legend>
             <div class="input-group">
@@ -117,6 +154,7 @@
                 </label>
             </div>
         </fieldset>
+        @@if (type == 'second') {
         <fieldset>
             <legend>Окна</legend>
             <div class="input-group">
@@ -144,6 +182,7 @@
                 </label>
             </div>
         </fieldset>
+        }
         <div class="result-list__filter__btn">
             <button class="btn _lg _secondary" type="reset">Сбросить фильтр</button>
         </div>
