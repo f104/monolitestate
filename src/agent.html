@@ -1,0 +1,105 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "Агент"
+    })
+    <body>
+        @@include('./template/header.html', {
+        "active": ""
+        })
+        <div class="content">
+            <div class="container">
+                <div class="agent-header">
+                    <div class="agent-header__img-wrapper">
+                        <img src="img/agents/big.jpg"
+                             srcset="img/agents/big@2x.jpg 2x,
+                             img/agents/big@3x.jpg 3x"
+                             class="agent-header__img"
+                             alt="alt text">
+                    </div>
+                    <div class="agent-header__head">
+                        <h1 class="agent-header__h">
+                            Столбова Ольга Арслановна
+                        </h1>
+                        <p class="agent-header__lead">Риэлтор</p>
+                    </div>
+                    <ul class="agent-header__contacts">
+                        <li>
+                            <a href="tel:+79224711685" class="agent-header__phone">
+                                <i class="icon-phone"></i><span class="link">+7 922 471-16-85</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:stolbova@monolit.ru">stolbova@monolit.ru</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="agent-form">
+                    <h3 class="agent-form__h">Оставьте ваш номер, и я перезвоню в течение 5 минут</h3>
+                    <form class="agent-form__form">
+                        <div class="input-group__wrapper">
+                            <div class="input-group _lg _white _secondary">
+                                <label>Ваше имя:</label>
+                                <input>
+                            </div>
+                            <div class="input-group _lg _white _secondary">
+                                <label>Ваш телефон:</label>
+                                <input class="js-mask__tel">
+                            </div>
+                        </div>
+                        <div class="input-group__wrapper _submit">
+                            <div class="input-group">
+                                <button class="btn _solid _lg _shadow" type="submit">
+                                    Жду звонка
+                                </button>
+                            </div>
+                            <div class="input-group _lg _white">
+                                <span class="input-help">Отправляя заявку вы соглашаетесь 
+                                    на обработку персональных данных</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <section class="section">
+                <div class="container">
+                    <h3 class="section__h">Предложения риэлтора</h3>
+                </div>
+                <div class="js-tabs">
+                    <div class="container">
+                        <div class="tabs">
+                            <ul class="tabs__list js-tabs__list">
+                                <li><a href="#tab1">Вторичная</a></li>
+                                <li><a href="#tab2">Новостройки</a></li>
+                                <li><a href="#tab3">Коммерческая</a></li>
+                                <li><a href="#tab4">Аренда</a></li>
+                            </ul>
+                            <div class="tabs__select">
+                                <select class="js-tabs__select js-select2" style="width:100%">
+                                    <option value="#tab1">Вторичная</option>
+                                    <option value="#tab2">Новостройки</option>
+                                    <option value="#tab3">Коммерческая</option>
+                                    <option value="#tab4">Аренда</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab1">
+                        @@include('./template/result/list.html')
+                    </div>
+                    <div id="tab2">
+                        @@include('./template/result/list-new.html')
+                    </div>
+                    <div id="tab3">
+                    </div>
+                    <div id="tab4">
+                    </div>
+                </div>
+            </section>
+            @@include('./template/seo.html')
+            @@include('./template/footer.html')
+            @@include('./template/popups-common.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        @@include('./template/foot.html')
+    </body>
+</html>

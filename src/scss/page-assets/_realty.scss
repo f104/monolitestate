@@ -118,24 +118,8 @@
     }
 }
 
-@include media-breakpoint-only(sm) {
-    .realty {
-        .tabs {
-            border: none;
-            .tabs__list {
-                display: none;
-            }
-        }
-    }
-}
-
 @include media-breakpoint-up(md) {
     .realty {
-        .tabs {
-            .tabs__select {
-                display: none;
-            }
-        }
         .realty__list {
             @include row(28px);
             flex-wrap: wrap;

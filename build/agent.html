@@ -1,6 +1,6 @@
 <html lang="ru" dir="ltr">
     <head>
-    <title>Квартиры в новостройках</title>
+    <title>Агент</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -82,7 +82,7 @@
                 <ul class="header__menu__first">
                     <li><a href="#" class="header__menu__first__toggler js-menu-second-toggler"><i class="icon-menu"></i></a></li>
                     <li><a href="second.html" >Вторичное жилье</a></li>
-                    <li><a href="#" class="_active">Новостройки без комиссии</a></li>
+                    <li><a href="#" >Новостройки без комиссии</a></li>
                     <li><a href="#">Дома, дачи, участки</a></li>
                     <li><a href="rent.html" >Аренда</a></li>
                     <li><a href="commercial.html" >Коммерческая</a></li>
@@ -111,255 +111,1683 @@
     </div>
 </header>
         <div class="content">
-            <section class="container section filters">
-    <form class="filters-form">
-        <div class="filters-form__row__lg">
-            <div class="filters-form__col__lg _col1">
-                <div class="filters-form__row">
-                    <div class="input-group filters-form__rooms _col2">
-                        <label>Кол-во комнат</label>
-                        <div class="filters-form__rooms__inner">
-                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">Студ.</span></label>
-                            <label class="filters-form__rooms__inner__checkbox filters-form__sm"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">Комн.</span></label>
-                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">1</span></label>
-                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox" checked><span class="filters-form__rooms__inner__checkbox__inner">2</span></label>
-                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">3</span></label>
-                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">4+</span></label>
-                        </div>
+            <div class="container">
+                <div class="agent-header">
+                    <div class="agent-header__img-wrapper">
+                        <img src="img/agents/big.jpg"
+                             srcset="img/agents/big@2x.jpg 2x,
+                             img/agents/big@3x.jpg 3x"
+                             class="agent-header__img"
+                             alt="alt text">
                     </div>
-                    <div class="input-group _col1">
-                        <div class="pseudo-select js-select">
-    <div class="pseudo-select__inner">
-        <div class="pseudo-select__select js-select__toggler">
-            <span class="pseudo-select__select__inner">
-                Район, Улица
-            </span>
-        </div>
-        <div class="pseudo-select__dropdown js-select__inner js-select-search">
-            <input class="pseudo-select__dropdown__search js-select-search__input" placeholder="Поиск">
-            <div class="js-scrollbar scrollbar-outer">
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Жилой комплекс с очень длинным названием</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-            </div>
-        </div>
-    </div>
-</div>
+                    <div class="agent-header__head">
+                        <h1 class="agent-header__h">
+                            Столбова Ольга Арслановна
+                        </h1>
+                        <p class="agent-header__lead">Риэлтор</p>
                     </div>
-                    <div class="input-group _double _col3">
-                        <input placeholder="Цена от (руб.)" class="js-mask__currency">
-                        <input placeholder="Цена до (руб.)" class="js-mask__currency">
-                    </div>
-                </div>
-                <div class="filters-form__row">
-                    <div class="input-group _col1">
-                        <div class="pseudo-select js-select">
-    <div class="pseudo-select__inner">
-        <div class="pseudo-select__select js-select__toggler">
-            <span class="pseudo-select__select__inner">
-                Жилой комплекс
-            </span>
-        </div>
-        <div class="pseudo-select__dropdown js-select__inner js-select-search">
-            <input class="pseudo-select__dropdown__search js-select-search__input" placeholder="Поиск">
-            <div class="js-scrollbar scrollbar-outer">
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Жилой комплекс с очень длинным названием</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-            </div>
-        </div>
-    </div>
-</div>
-                    </div>
-                    <div class="input-group _col2">
-                        <div class="pseudo-select js-select">
-    <div class="pseudo-select__inner">
-        <div class="pseudo-select__select js-select__toggler">
-            <span class="pseudo-select__select__inner">
-                Срок сдачи
-            </span>
-        </div>
-        <div class="pseudo-select__dropdown js-select__inner js-select-search">
-            <input class="pseudo-select__dropdown__search js-select-search__input" placeholder="Поиск">
-            <div class="js-scrollbar scrollbar-outer">
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Жилой комплекс с очень длинным названием</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-            </div>
-        </div>
-    </div>
-</div>
-                    </div>
-                    <div class="input-group _double _col3">
-                        <input placeholder="Площадь от" class="js-mask__square">
-                        <input placeholder="Площадь до" class="js-mask__square">
-                    </div>
-                </div>
-                <div class="filters-form__row">
-                    <div class="input-group _col1">
-                        <div class="pseudo-select js-select">
-    <div class="pseudo-select__inner">
-        <div class="pseudo-select__select js-select__toggler">
-            <span class="pseudo-select__select__inner">
-                Застройщик
-            </span>
-        </div>
-        <div class="pseudo-select__dropdown js-select__inner js-select-search">
-            <input class="pseudo-select__dropdown__search js-select-search__input" placeholder="Поиск">
-            <div class="js-scrollbar scrollbar-outer">
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Жилой комплекс с очень длинным названием</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-            </div>
-        </div>
-    </div>
-</div>
-                    </div>
-                    <div class="input-group _col2">
-                        <div class="filters-form__checkbox">
-                            <div class="filters-form__checkbox__item">
-    <label class="filters-form__checkbox__item__label">
-        <input type="checkbox" >
-        <span class="filters-form__checkbox__item__inner">
-            <span class="filters-form__checkbox__item__inner__text">
-                Дом сдан
-            </span>
-        </span>
-    </label>
-</div>
-                            <div class="filters-form__checkbox__item">
-    <label class="filters-form__checkbox__item__label">
-        <input type="checkbox" checked>
-        <span class="filters-form__checkbox__item__inner">
-            <span class="filters-form__checkbox__item__inner__text">
-                Заселиться в 2018
-            </span>
-        </span>
-    </label>
-</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="filters-form__col__lg _col2">
-                <div class="filters-form__summary">
-                    <p class="filters-form__summary__text">Найдено 6 322 варианта</p>
-                    <div class="filters-form__summary__buttons">
-                        <div class="filters-form__summary__buttons__col">
-                            <button class="btn _lg _secondary">Показать</button>
-                        </div>
-                        <div class="filters-form__summary__buttons__col">
-                            <button class="btn _lg _primary">
-                                <i class="icon-map _middle"></i><span>На карте</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
-</section>
-            <div class="page-header _white _subscribe">
-                <div class="container">
-                    <div class="page-header__row">
-                        <div class="page-header__col page-header__md">
-                            <h1 class="page-header__h">Квартиры в новостройках</h1>
-                            <ul class="breadcrumbs">
-                                <li class="breadcrumbs__item">
-                                    <a href="index.html">Главная</a>
-                                </li>
-                                <li class="breadcrumbs__item _active">
-                                    <a href="new.html">Новостройки</a>
-                                </li>
-                                <li class="breadcrumbs__item _active">
-                                    Поиск новостроек
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="page-header__col page-header__subscribe">
-                            <a href="#subscribe" class="btn _solid _lg js-popup">
-                                Подписаться на обновления
+                    <ul class="agent-header__contacts">
+                        <li>
+                            <a href="tel:+79224711685" class="agent-header__phone">
+                                <i class="icon-phone"></i><span class="link">+7 922 471-16-85</span>
                             </a>
-                            <span class="page-header__subscribe__text">
-                                Будьте в курсе снижения цен по вашему запросу
-                            </span>
+                        </li>
+                        <li>
+                            <a href="mailto:stolbova@monolit.ru">stolbova@monolit.ru</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="agent-form">
+                    <h3 class="agent-form__h">Оставьте ваш номер, и я перезвоню в течение 5 минут</h3>
+                    <form class="agent-form__form">
+                        <div class="input-group__wrapper">
+                            <div class="input-group _lg _white _secondary">
+                                <label>Ваше имя:</label>
+                                <input>
+                            </div>
+                            <div class="input-group _lg _white _secondary">
+                                <label>Ваш телефон:</label>
+                                <input class="js-mask__tel">
+                            </div>
                         </div>
-                    </div>
+                        <div class="input-group__wrapper _submit">
+                            <div class="input-group">
+                                <button class="btn _solid _lg _shadow" type="submit">
+                                    Жду звонка
+                                </button>
+                            </div>
+                            <div class="input-group _lg _white">
+                                <span class="input-help">Отправляя заявку вы соглашаетесь 
+                                    на обработку персональных данных</span>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
             <section class="section">
+                <div class="container">
+                    <h3 class="section__h">Предложения риэлтора</h3>
+                </div>
+                <div class="js-tabs">
+                    <div class="container">
+                        <div class="tabs">
+                            <ul class="tabs__list js-tabs__list">
+                                <li><a href="#tab1">Вторичная</a></li>
+                                <li><a href="#tab2">Новостройки</a></li>
+                                <li><a href="#tab3">Коммерческая</a></li>
+                                <li><a href="#tab4">Аренда</a></li>
+                            </ul>
+                            <div class="tabs__select">
+                                <select class="js-tabs__select js-select2" style="width:100%">
+                                    <option value="#tab1">Вторичная</option>
+                                    <option value="#tab2">Новостройки</option>
+                                    <option value="#tab3">Коммерческая</option>
+                                    <option value="#tab4">Аренда</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab1">
+                        <section class="section">
+    <div class="list-header ">
+    <div class="container">
+        <div class="list-header__row">
+            <div class="list-header__sorting">
+                <div class="sorting _2">
+                    <div class="sorting__item">
+                        <label class="sorting__label">Сортировка:</label>
+                        <select class="sorting__select js-select2">
+                            <option>По дате публикации</option>
+                            <option>По цене</option>
+                        </select>
+                    </div>
+                    <div class="sorting__item">
+                        <label class="sorting__label">Показать:</label>
+                        <select class="sorting__select js-select2">
+                            <option>За все время (6321)</option>
+                            <option>За месяц (542)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="list-header__pagination">
+                <ul class="pagination">
+                    <li class="pagination__item">
+                        <a class="pagination__item__link _first _disabled" href="#"></a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link _active" href="#">1</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link" href="#">2</a>
+                    </li>
+                    <li class="pagination__item hidden-sm">
+                        <a class="pagination__item__link" href="#">3</a>
+                    </li>
+                    <li class="pagination__item hidden-sm">
+                        <a class="pagination__item__link" href="#">4</a>
+                    </li>
+                    <li class="pagination__item _skip">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link" href="#">322</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link _last" href="#"></a>
+                    </li>
+                </ul>
+                <span class="list-header__pagination__total">
+                    Показано 10 из 146
+                </span>
+            </div>
+            <div class="list-header__btn-filter">
+                <a href="#result_filter_second" class="btn _md _primary js-menu-toggler">
+                    <i class="icon-filter"></i>
+                    Показать фильтр
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="result-list">
+            <div class="result-list__aside">
+                <form id="result_filter_second" class="result-list__filter js-menu">
+    <div class="result-list__filter__inner scrollbar-outer js-scrollbar-md">
+        <h3 class="result-list__filter__h">
+            Расширенный фильтр
+        </h3>
+        <a href="#result_filter" class="result-list__filter__close js-menu-toggler">
+            <i class="icon-close"></i>
+        </a>
+        <fieldset class="js-range">
+            <legend>Общая площадь</legend>
+            <div class="range js-range__target"></div>
+            <div class="input-group _range">
+                <span class="input-group__item">
+                    <input type="number" min="19" max="160" value="19" 
+                           autocomplete="off" class="js-range__from"> м²
+                </span>
+                <span class="input-group__item">
+                    <input type="number" min="19" max="160" value="160"
+                           autocomplete="off" class="js-range__to"> м²
+                </span>
+            </div>
+        </fieldset>
+        <fieldset class="js-range">
+            <legend>Площадь кухни</legend>
+            <div class="range js-range__target"></div>
+            <div class="input-group _range js-range__target">
+                <span class="input-group__item">
+                    <input type="number" min="8" max="24" value="8"
+                           autocomplete="off" class="js-range__from"> м²
+                </span>
+                <span class="input-group__item">
+                    <input type="number" min="8" max="24" value="24" 
+                           autocomplete="off" class="js-range__to"> м²
+                </span>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Этаж</legend>
+            <div class="input-group _fromto">
+                От <input type="number" min="1" max="13" 
+                          autocomplete="off" value="1"> 
+                до <input type="number" min="1" max="13" 
+                          autocomplete="off" value="13">
+            </div>
+        </fieldset>
+        
+        <fieldset class="_inline">
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                    <span class="checkbox__text">Со скидкой</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Обмен</span>
+                </label>
+            </div>                    
+        </fieldset>
+        <fieldset>
+            <legend>Тип недвижимости</legend>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                    <span class="checkbox__text">Квартиры</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Комнаты</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Малосемейка</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Общежитие</span>
+                </label>
+            </div>
+        </fieldset>
+        
+        
+        <fieldset>
+            <legend>Отделка</legend>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                    <span class="checkbox__text">Черновая</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Улучшенная черновая</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Косметический ремонт</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                    <span class="checkbox__text">Современный ремонт</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Ремонт по дизайн-проекту</span>
+                </label>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Окна</legend>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                    <span class="checkbox__text">Пластиковые</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Пластиковые/деревянные</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Деревянные</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox__text">Алюминиевые</span>
+                </label>
+            </div>
+        </fieldset>
+        
+        <div class="result-list__filter__btn">
+            <button class="btn _lg _secondary" type="reset">Сбросить фильтр</button>
+        </div>
+    </div>
+</form>
+            </div>
+            <div class="result-list__content">
+                <div class="result-list__item">
+    <div class="result-list__item__images">
+        <div class="realty-list-slider js-realty-list-slider">
+            <ul class="realty-tags">
+                
+                <li><span class="realty-tags__content">Евроремонт</span></li>
+                
+                <li><span class="realty-tags__content">Рядом метро</span></li>
+                
+            </ul>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/1.jpg"
+                     srcset="img/realty/objects/1@2x.jpg 2x,
+                     img/realty/objects/1@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/2.jpg"
+                     srcset="img/realty/objects/2@2x.jpg 2x,
+                     img/realty/objects/2@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/3.jpg"
+                     srcset="img/realty/objects/3@2x.jpg 2x,
+                     img/realty/objects/3@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/4.jpg"
+                     srcset="img/realty/objects/4@2x.jpg 2x,
+                     img/realty/objects/4@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <span class="realty-list-slider__counter">
+                <span class="js-realty-list-slider__counter">1</span>
+                из 10
+            </span>
+        </div>
+    </div>
+    <div class="result-list__item__content">
+        <h5 class="result-list__item__h _withcard">
+            г. Бор, Нижняя Дубровка, Нижегородский р-н, ул. Максима Горького, д. 141
+        </h5>
+        <p class="result-list__item__lead">Однокомнатная квартира</p>
+        
+        <div class="card-sale">
+            <span class="card-sale__icon">
+                <i class="icon-down-small"></i>
+            </span>
+            <span class="card-sale__text">
+                Произошло снижение цены
+            </span>
+        </div>
+        
+        <div class="result-list__item__row">
+            <div class="result-list__item__col _1">
+                <div class="result-list__item__price">
+                    
+                    <del>2 670 000 руб.</del> <i class="icon-down-small"></i>
+                    
+                    
+                    <span class="result-list__item__price__cost">
+                        2 321 414 руб.
+                    </span>
+                    <span class="result-list__item__help">
+                        стоимость
+                    </span>
+                </div>
+            </div>
+            <div class="result-list__item__col _2">
+                <div class="result-list__item__hypothec">
+                    21 413 руб./мес.
+                    <span class="result-list__item__help">
+                        в ипотеку
+                    </span>
+                </div>
+                <i class="icon-help-circled"></i>
+            </div>
+            <div class="result-list__item__col _3">
+                <ul class="result-list__item__options">
+                    <li>
+                        32 м²
+                        <span class="result-list__item__help">
+                            площадь
+                        </span>
+                    </li>
+                    <li>
+                        73 414 руб.
+                        <span class="result-list__item__help">
+                            цена за м²
+                        </span>
+                    </li>
+                    <li>
+                        5 этаж
+                        <span class="result-list__item__help">
+                            из 14
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="result-list__item__actions">
+            <div class="result-list__item__actions__compare input-group">
+                <label class="checkbox ">
+                    <input type="checkbox" 
+                        
+                        >
+                    <span class="checkbox__text">К сравнению</span>
+                </label>
+            </div>
+            <div class="result-list__item__actions__btn">
+                
+                <button class="btn _primary 
+                        result-list__item__actions__btn__compare
+                        ">
+                    <i class="icon-star"></i>
+                
+                </button>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>
+                <div class="result-list__item">
+    <div class="result-list__item__images">
+        <div class="realty-list-slider js-realty-list-slider">
+            <ul class="realty-tags">
+                
+                <li><span class="realty-tags__content">Евроремонт</span></li>
+                
+            </ul>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/2.jpg"
+                     srcset="img/realty/objects/2@2x.jpg 2x,
+                     img/realty/objects/2@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/3.jpg"
+                     srcset="img/realty/objects/3@2x.jpg 2x,
+                     img/realty/objects/3@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/4.jpg"
+                     srcset="img/realty/objects/4@2x.jpg 2x,
+                     img/realty/objects/4@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/1.jpg"
+                     srcset="img/realty/objects/1@2x.jpg 2x,
+                     img/realty/objects/1@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <span class="realty-list-slider__counter">
+                <span class="js-realty-list-slider__counter">1</span>
+                из 10
+            </span>
+        </div>
+    </div>
+    <div class="result-list__item__content">
+        <h5 class="result-list__item__h ">
+            г. Нижний Новгород, Нижняя Дубровка, ул. Максима Горького, д. 141
+        </h5>
+        <p class="result-list__item__lead">Однокомнатная квартира</p>
+        
+        <div class="result-list__item__row">
+            <div class="result-list__item__col _1">
+                <div class="result-list__item__price">
+                    
+                    
+                    <a href="#subscribe" class="result-list__item__price__link js-popup">
+                        Сообщить о снижении цены
+                    </a>
+                    
+                    <span class="result-list__item__price__cost">
+                        2 321 414 руб.
+                    </span>
+                    <span class="result-list__item__help">
+                        стоимость
+                    </span>
+                </div>
+            </div>
+            <div class="result-list__item__col _2">
+                <div class="result-list__item__hypothec">
+                    21 413 руб./мес.
+                    <span class="result-list__item__help">
+                        в ипотеку
+                    </span>
+                </div>
+                <i class="icon-help-circled"></i>
+            </div>
+            <div class="result-list__item__col _3">
+                <ul class="result-list__item__options">
+                    <li>
+                        32 м²
+                        <span class="result-list__item__help">
+                            площадь
+                        </span>
+                    </li>
+                    <li>
+                        73 414 руб.
+                        <span class="result-list__item__help">
+                            цена за м²
+                        </span>
+                    </li>
+                    <li>
+                        5 этаж
+                        <span class="result-list__item__help">
+                            из 14
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="result-list__item__actions">
+            <div class="result-list__item__actions__compare input-group">
+                <label class="checkbox ">
+                    <input type="checkbox" 
+                        
+                        checked>
+                    <span class="checkbox__text">К сравнению</span>
+                </label>
+            </div>
+            <div class="result-list__item__actions__btn">
+                
+                <button class="btn _primary 
+                        result-list__item__actions__btn__compare
+                        _active">
+                    <i class="icon-star"></i>
+                
+                </button>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>
+                <div class="result-list__item">
+    <div class="result-list__item__images">
+        <div class="realty-list-slider js-realty-list-slider">
+            <ul class="realty-tags">
+                
+                <li><span class="realty-tags__content">Евроремонт</span></li>
+                
+                <li><span class="realty-tags__content">Рядом метро</span></li>
+                
+            </ul>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/3.jpg"
+                     srcset="img/realty/objects/3@2x.jpg 2x,
+                     img/realty/objects/3@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/4.jpg"
+                     srcset="img/realty/objects/4@2x.jpg 2x,
+                     img/realty/objects/4@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/1.jpg"
+                     srcset="img/realty/objects/1@2x.jpg 2x,
+                     img/realty/objects/1@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/2.jpg"
+                     srcset="img/realty/objects/2@2x.jpg 2x,
+                     img/realty/objects/2@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <span class="realty-list-slider__counter">
+                <span class="js-realty-list-slider__counter">1</span>
+                из 10
+            </span>
+        </div>
+    </div>
+    <div class="result-list__item__content">
+        <h5 class="result-list__item__h _withcard">
+            г. Бор, Нижняя Дубровка, Нижегородский р-н, ул. Максима Горького, д. 141
+        </h5>
+        <p class="result-list__item__lead">Однокомнатная квартира</p>
+        
+        <div class="card-sale">
+            <span class="card-sale__icon">
+                <i class="icon-down-small"></i>
+            </span>
+            <span class="card-sale__text">
+                Произошло снижение цены
+            </span>
+        </div>
+        
+        <div class="result-list__item__row">
+            <div class="result-list__item__col _1">
+                <div class="result-list__item__price">
+                    
+                    <del>2 670 000 руб.</del> <i class="icon-down-small"></i>
+                    
+                    
+                    <span class="result-list__item__price__cost">
+                        2 321 414 руб.
+                    </span>
+                    <span class="result-list__item__help">
+                        стоимость
+                    </span>
+                </div>
+            </div>
+            <div class="result-list__item__col _2">
+                <div class="result-list__item__hypothec">
+                    21 413 руб./мес.
+                    <span class="result-list__item__help">
+                        в ипотеку
+                    </span>
+                </div>
+                <i class="icon-help-circled"></i>
+            </div>
+            <div class="result-list__item__col _3">
+                <ul class="result-list__item__options">
+                    <li>
+                        32 м²
+                        <span class="result-list__item__help">
+                            площадь
+                        </span>
+                    </li>
+                    <li>
+                        73 414 руб.
+                        <span class="result-list__item__help">
+                            цена за м²
+                        </span>
+                    </li>
+                    <li>
+                        5 этаж
+                        <span class="result-list__item__help">
+                            из 14
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="result-list__item__actions">
+            <div class="result-list__item__actions__compare input-group">
+                <label class="checkbox _disabled">
+                    <input type="checkbox" 
+                        disabled
+                        >
+                    <span class="checkbox__text">К сравнению</span>
+                </label>
+            </div>
+            <div class="result-list__item__actions__btn">
+                
+                </button>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>
+                <div class="result-list__item">
+    <div class="result-list__item__images">
+        <div class="realty-list-slider js-realty-list-slider">
+            <ul class="realty-tags">
+                
+                <li><span class="realty-tags__content">Евроремонт</span></li>
+                
+            </ul>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/4.jpg"
+                     srcset="img/realty/objects/4@2x.jpg 2x,
+                     img/realty/objects/4@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/1.jpg"
+                     srcset="img/realty/objects/1@2x.jpg 2x,
+                     img/realty/objects/1@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/2.jpg"
+                     srcset="img/realty/objects/2@2x.jpg 2x,
+                     img/realty/objects/2@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/3.jpg"
+                     srcset="img/realty/objects/3@2x.jpg 2x,
+                     img/realty/objects/3@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <span class="realty-list-slider__counter">
+                <span class="js-realty-list-slider__counter">1</span>
+                из 10
+            </span>
+        </div>
+    </div>
+    <div class="result-list__item__content">
+        <h5 class="result-list__item__h ">
+            г. Нижний Новгород, Нижняя Дубровка, ул. Максима Горького, д. 141
+        </h5>
+        <p class="result-list__item__lead">Однокомнатная квартира</p>
+        
+        <div class="result-list__item__row">
+            <div class="result-list__item__col _1">
+                <div class="result-list__item__price">
+                    
+                    
+                    <a href="#subscribe" class="result-list__item__price__link js-popup">
+                        Сообщить о снижении цены
+                    </a>
+                    
+                    <span class="result-list__item__price__cost">
+                        2 321 414 руб.
+                    </span>
+                    <span class="result-list__item__help">
+                        стоимость
+                    </span>
+                </div>
+            </div>
+            <div class="result-list__item__col _2">
+                <div class="result-list__item__hypothec">
+                    21 413 руб./мес.
+                    <span class="result-list__item__help">
+                        в ипотеку
+                    </span>
+                </div>
+                <i class="icon-help-circled"></i>
+            </div>
+            <div class="result-list__item__col _3">
+                <ul class="result-list__item__options">
+                    <li>
+                        32 м²
+                        <span class="result-list__item__help">
+                            площадь
+                        </span>
+                    </li>
+                    <li>
+                        73 414 руб.
+                        <span class="result-list__item__help">
+                            цена за м²
+                        </span>
+                    </li>
+                    <li>
+                        5 этаж
+                        <span class="result-list__item__help">
+                            из 14
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="result-list__item__actions">
+            <div class="result-list__item__actions__compare input-group">
+                <label class="checkbox ">
+                    <input type="checkbox" 
+                        
+                        checked>
+                    <span class="checkbox__text">К сравнению</span>
+                </label>
+            </div>
+            <div class="result-list__item__actions__btn">
+                
+                <button class="btn _primary 
+                        result-list__item__actions__btn__compare
+                        _active">
+                    <i class="icon-star"></i>
+                
+                </button>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>
+                <div class="result-list__item">
+    <div class="result-list__item__images">
+        <div class="realty-list-slider js-realty-list-slider">
+            <ul class="realty-tags">
+                
+                <li><span class="realty-tags__content">Евроремонт</span></li>
+                
+                <li><span class="realty-tags__content">Рядом метро</span></li>
+                
+            </ul>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/1.jpg"
+                     srcset="img/realty/objects/1@2x.jpg 2x,
+                     img/realty/objects/1@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/2.jpg"
+                     srcset="img/realty/objects/2@2x.jpg 2x,
+                     img/realty/objects/2@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/3.jpg"
+                     srcset="img/realty/objects/3@2x.jpg 2x,
+                     img/realty/objects/3@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/4.jpg"
+                     srcset="img/realty/objects/4@2x.jpg 2x,
+                     img/realty/objects/4@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <span class="realty-list-slider__counter">
+                <span class="js-realty-list-slider__counter">1</span>
+                из 10
+            </span>
+        </div>
+    </div>
+    <div class="result-list__item__content">
+        <h5 class="result-list__item__h _withcard">
+            г. Бор, Нижняя Дубровка, Нижегородский р-н, ул. Максима Горького, д. 141
+        </h5>
+        <p class="result-list__item__lead">Однокомнатная квартира</p>
+        
+        <div class="card-sale">
+            <span class="card-sale__icon">
+                <i class="icon-down-small"></i>
+            </span>
+            <span class="card-sale__text">
+                Произошло снижение цены
+            </span>
+        </div>
+        
+        <div class="result-list__item__row">
+            <div class="result-list__item__col _1">
+                <div class="result-list__item__price">
+                    
+                    <del>2 670 000 руб.</del> <i class="icon-down-small"></i>
+                    
+                    
+                    <span class="result-list__item__price__cost">
+                        2 321 414 руб.
+                    </span>
+                    <span class="result-list__item__help">
+                        стоимость
+                    </span>
+                </div>
+            </div>
+            <div class="result-list__item__col _2">
+                <div class="result-list__item__hypothec">
+                    21 413 руб./мес.
+                    <span class="result-list__item__help">
+                        в ипотеку
+                    </span>
+                </div>
+                <i class="icon-help-circled"></i>
+            </div>
+            <div class="result-list__item__col _3">
+                <ul class="result-list__item__options">
+                    <li>
+                        32 м²
+                        <span class="result-list__item__help">
+                            площадь
+                        </span>
+                    </li>
+                    <li>
+                        73 414 руб.
+                        <span class="result-list__item__help">
+                            цена за м²
+                        </span>
+                    </li>
+                    <li>
+                        5 этаж
+                        <span class="result-list__item__help">
+                            из 14
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="result-list__item__actions">
+            <div class="result-list__item__actions__compare input-group">
+                <label class="checkbox ">
+                    <input type="checkbox" 
+                        
+                        >
+                    <span class="checkbox__text">К сравнению</span>
+                </label>
+            </div>
+            <div class="result-list__item__actions__btn">
+                
+                <button class="btn _primary 
+                        result-list__item__actions__btn__compare
+                        ">
+                    <i class="icon-star"></i>
+                
+                </button>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>
+                <div class="result-list__item">
+    <div class="result-list__item__images">
+        <div class="realty-list-slider js-realty-list-slider">
+            <ul class="realty-tags">
+                
+                <li><span class="realty-tags__content">Евроремонт</span></li>
+                
+            </ul>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/2.jpg"
+                     srcset="img/realty/objects/2@2x.jpg 2x,
+                     img/realty/objects/2@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/3.jpg"
+                     srcset="img/realty/objects/3@2x.jpg 2x,
+                     img/realty/objects/3@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/4.jpg"
+                     srcset="img/realty/objects/4@2x.jpg 2x,
+                     img/realty/objects/4@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/1.jpg"
+                     srcset="img/realty/objects/1@2x.jpg 2x,
+                     img/realty/objects/1@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <span class="realty-list-slider__counter">
+                <span class="js-realty-list-slider__counter">1</span>
+                из 10
+            </span>
+        </div>
+    </div>
+    <div class="result-list__item__content">
+        <h5 class="result-list__item__h ">
+            г. Нижний Новгород, Нижняя Дубровка, ул. Максима Горького, д. 141
+        </h5>
+        <p class="result-list__item__lead">Однокомнатная квартира</p>
+        
+        <div class="result-list__item__row">
+            <div class="result-list__item__col _1">
+                <div class="result-list__item__price">
+                    
+                    
+                    <a href="#subscribe" class="result-list__item__price__link js-popup">
+                        Сообщить о снижении цены
+                    </a>
+                    
+                    <span class="result-list__item__price__cost">
+                        2 321 414 руб.
+                    </span>
+                    <span class="result-list__item__help">
+                        стоимость
+                    </span>
+                </div>
+            </div>
+            <div class="result-list__item__col _2">
+                <div class="result-list__item__hypothec">
+                    21 413 руб./мес.
+                    <span class="result-list__item__help">
+                        в ипотеку
+                    </span>
+                </div>
+                <i class="icon-help-circled"></i>
+            </div>
+            <div class="result-list__item__col _3">
+                <ul class="result-list__item__options">
+                    <li>
+                        32 м²
+                        <span class="result-list__item__help">
+                            площадь
+                        </span>
+                    </li>
+                    <li>
+                        73 414 руб.
+                        <span class="result-list__item__help">
+                            цена за м²
+                        </span>
+                    </li>
+                    <li>
+                        5 этаж
+                        <span class="result-list__item__help">
+                            из 14
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="result-list__item__actions">
+            <div class="result-list__item__actions__compare input-group">
+                <label class="checkbox ">
+                    <input type="checkbox" 
+                        
+                        checked>
+                    <span class="checkbox__text">К сравнению</span>
+                </label>
+            </div>
+            <div class="result-list__item__actions__btn">
+                
+                <button class="btn _primary 
+                        result-list__item__actions__btn__compare
+                        _active">
+                    <i class="icon-star"></i>
+                
+                </button>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>
+                <div class="result-list__item">
+    <div class="result-list__item__images">
+        <div class="realty-list-slider js-realty-list-slider">
+            <ul class="realty-tags">
+                
+                <li><span class="realty-tags__content">Евроремонт</span></li>
+                
+                <li><span class="realty-tags__content">Рядом метро</span></li>
+                
+            </ul>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/3.jpg"
+                     srcset="img/realty/objects/3@2x.jpg 2x,
+                     img/realty/objects/3@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/4.jpg"
+                     srcset="img/realty/objects/4@2x.jpg 2x,
+                     img/realty/objects/4@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/1.jpg"
+                     srcset="img/realty/objects/1@2x.jpg 2x,
+                     img/realty/objects/1@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/2.jpg"
+                     srcset="img/realty/objects/2@2x.jpg 2x,
+                     img/realty/objects/2@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <span class="realty-list-slider__counter">
+                <span class="js-realty-list-slider__counter">1</span>
+                из 10
+            </span>
+        </div>
+    </div>
+    <div class="result-list__item__content">
+        <h5 class="result-list__item__h _withcard">
+            г. Бор, Нижняя Дубровка, Нижегородский р-н, ул. Максима Горького, д. 141
+        </h5>
+        <p class="result-list__item__lead">Однокомнатная квартира</p>
+        
+        <div class="card-sale">
+            <span class="card-sale__icon">
+                <i class="icon-down-small"></i>
+            </span>
+            <span class="card-sale__text">
+                Произошло снижение цены
+            </span>
+        </div>
+        
+        <div class="result-list__item__row">
+            <div class="result-list__item__col _1">
+                <div class="result-list__item__price">
+                    
+                    <del>2 670 000 руб.</del> <i class="icon-down-small"></i>
+                    
+                    
+                    <span class="result-list__item__price__cost">
+                        2 321 414 руб.
+                    </span>
+                    <span class="result-list__item__help">
+                        стоимость
+                    </span>
+                </div>
+            </div>
+            <div class="result-list__item__col _2">
+                <div class="result-list__item__hypothec">
+                    21 413 руб./мес.
+                    <span class="result-list__item__help">
+                        в ипотеку
+                    </span>
+                </div>
+                <i class="icon-help-circled"></i>
+            </div>
+            <div class="result-list__item__col _3">
+                <ul class="result-list__item__options">
+                    <li>
+                        32 м²
+                        <span class="result-list__item__help">
+                            площадь
+                        </span>
+                    </li>
+                    <li>
+                        73 414 руб.
+                        <span class="result-list__item__help">
+                            цена за м²
+                        </span>
+                    </li>
+                    <li>
+                        5 этаж
+                        <span class="result-list__item__help">
+                            из 14
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="result-list__item__actions">
+            <div class="result-list__item__actions__compare input-group">
+                <label class="checkbox _disabled">
+                    <input type="checkbox" 
+                        disabled
+                        >
+                    <span class="checkbox__text">К сравнению</span>
+                </label>
+            </div>
+            <div class="result-list__item__actions__btn">
+                
+                </button>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>
+                <div class="result-list__item">
+    <div class="result-list__item__images">
+        <div class="realty-list-slider js-realty-list-slider">
+            <ul class="realty-tags">
+                
+                <li><span class="realty-tags__content">Евроремонт</span></li>
+                
+            </ul>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/4.jpg"
+                     srcset="img/realty/objects/4@2x.jpg 2x,
+                     img/realty/objects/4@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/1.jpg"
+                     srcset="img/realty/objects/1@2x.jpg 2x,
+                     img/realty/objects/1@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/2.jpg"
+                     srcset="img/realty/objects/2@2x.jpg 2x,
+                     img/realty/objects/2@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/3.jpg"
+                     srcset="img/realty/objects/3@2x.jpg 2x,
+                     img/realty/objects/3@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <span class="realty-list-slider__counter">
+                <span class="js-realty-list-slider__counter">1</span>
+                из 10
+            </span>
+        </div>
+    </div>
+    <div class="result-list__item__content">
+        <h5 class="result-list__item__h ">
+            г. Нижний Новгород, Нижняя Дубровка, ул. Максима Горького, д. 141
+        </h5>
+        <p class="result-list__item__lead">Однокомнатная квартира</p>
+        
+        <div class="result-list__item__row">
+            <div class="result-list__item__col _1">
+                <div class="result-list__item__price">
+                    
+                    
+                    <a href="#subscribe" class="result-list__item__price__link js-popup">
+                        Сообщить о снижении цены
+                    </a>
+                    
+                    <span class="result-list__item__price__cost">
+                        2 321 414 руб.
+                    </span>
+                    <span class="result-list__item__help">
+                        стоимость
+                    </span>
+                </div>
+            </div>
+            <div class="result-list__item__col _2">
+                <div class="result-list__item__hypothec">
+                    21 413 руб./мес.
+                    <span class="result-list__item__help">
+                        в ипотеку
+                    </span>
+                </div>
+                <i class="icon-help-circled"></i>
+            </div>
+            <div class="result-list__item__col _3">
+                <ul class="result-list__item__options">
+                    <li>
+                        32 м²
+                        <span class="result-list__item__help">
+                            площадь
+                        </span>
+                    </li>
+                    <li>
+                        73 414 руб.
+                        <span class="result-list__item__help">
+                            цена за м²
+                        </span>
+                    </li>
+                    <li>
+                        5 этаж
+                        <span class="result-list__item__help">
+                            из 14
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="result-list__item__actions">
+            <div class="result-list__item__actions__compare input-group">
+                <label class="checkbox ">
+                    <input type="checkbox" 
+                        
+                        checked>
+                    <span class="checkbox__text">К сравнению</span>
+                </label>
+            </div>
+            <div class="result-list__item__actions__btn">
+                
+                <button class="btn _primary 
+                        result-list__item__actions__btn__compare
+                        _active">
+                    <i class="icon-star"></i>
+                
+                </button>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>
+                <div class="promo">
+                    <a href="#" class="promo__wrapper">
+                        <div class="promo__img-inner">
+                            <img class="promo__img" 
+                                 src="img/promo/1.jpg"
+                                 srcset="img/promo/1@2x.jpg 2x,
+                                 img/promo/1@3x.jpg 3x"
+                                 alt="alt text">
+                        </div>
+                        <h3 class="promo__h">
+                            Покупайте квартиры<br>в новом ЖК «Свободный»
+                        </h3>
+                        <p class="promo__p">И получите месяц парковки бесплатно!</p>
+                    </a>
+                </div>
+                <div class="result-list__item">
+    <div class="result-list__item__images">
+        <div class="realty-list-slider js-realty-list-slider">
+            <ul class="realty-tags">
+                
+                <li><span class="realty-tags__content">Евроремонт</span></li>
+                
+                <li><span class="realty-tags__content">Рядом метро</span></li>
+                
+            </ul>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/1.jpg"
+                     srcset="img/realty/objects/1@2x.jpg 2x,
+                     img/realty/objects/1@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/2.jpg"
+                     srcset="img/realty/objects/2@2x.jpg 2x,
+                     img/realty/objects/2@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/3.jpg"
+                     srcset="img/realty/objects/3@2x.jpg 2x,
+                     img/realty/objects/3@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/4.jpg"
+                     srcset="img/realty/objects/4@2x.jpg 2x,
+                     img/realty/objects/4@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <span class="realty-list-slider__counter">
+                <span class="js-realty-list-slider__counter">1</span>
+                из 10
+            </span>
+        </div>
+    </div>
+    <div class="result-list__item__content">
+        <h5 class="result-list__item__h _withcard">
+            г. Бор, Нижняя Дубровка, Нижегородский р-н, ул. Максима Горького, д. 141
+        </h5>
+        <p class="result-list__item__lead">Однокомнатная квартира</p>
+        
+        <div class="card-sale">
+            <span class="card-sale__icon">
+                <i class="icon-down-small"></i>
+            </span>
+            <span class="card-sale__text">
+                Произошло снижение цены
+            </span>
+        </div>
+        
+        <div class="result-list__item__row">
+            <div class="result-list__item__col _1">
+                <div class="result-list__item__price">
+                    
+                    <del>2 670 000 руб.</del> <i class="icon-down-small"></i>
+                    
+                    
+                    <span class="result-list__item__price__cost">
+                        2 321 414 руб.
+                    </span>
+                    <span class="result-list__item__help">
+                        стоимость
+                    </span>
+                </div>
+            </div>
+            <div class="result-list__item__col _2">
+                <div class="result-list__item__hypothec">
+                    21 413 руб./мес.
+                    <span class="result-list__item__help">
+                        в ипотеку
+                    </span>
+                </div>
+                <i class="icon-help-circled"></i>
+            </div>
+            <div class="result-list__item__col _3">
+                <ul class="result-list__item__options">
+                    <li>
+                        32 м²
+                        <span class="result-list__item__help">
+                            площадь
+                        </span>
+                    </li>
+                    <li>
+                        73 414 руб.
+                        <span class="result-list__item__help">
+                            цена за м²
+                        </span>
+                    </li>
+                    <li>
+                        5 этаж
+                        <span class="result-list__item__help">
+                            из 14
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="result-list__item__actions">
+            <div class="result-list__item__actions__compare input-group">
+                <label class="checkbox ">
+                    <input type="checkbox" 
+                        
+                        >
+                    <span class="checkbox__text">К сравнению</span>
+                </label>
+            </div>
+            <div class="result-list__item__actions__btn">
+                
+                <button class="btn _primary 
+                        result-list__item__actions__btn__compare
+                        ">
+                    <i class="icon-star"></i>
+                
+                </button>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>
+                <div class="result-list__item">
+    <div class="result-list__item__images">
+        <div class="realty-list-slider js-realty-list-slider">
+            <ul class="realty-tags">
+                
+                <li><span class="realty-tags__content">Евроремонт</span></li>
+                
+            </ul>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/2.jpg"
+                     srcset="img/realty/objects/2@2x.jpg 2x,
+                     img/realty/objects/2@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/3.jpg"
+                     srcset="img/realty/objects/3@2x.jpg 2x,
+                     img/realty/objects/3@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/4.jpg"
+                     srcset="img/realty/objects/4@2x.jpg 2x,
+                     img/realty/objects/4@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/1.jpg"
+                     srcset="img/realty/objects/1@2x.jpg 2x,
+                     img/realty/objects/1@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            
+            <span class="realty-list-slider__counter">
+                <span class="js-realty-list-slider__counter">1</span>
+                из 10
+            </span>
+        </div>
+    </div>
+    <div class="result-list__item__content">
+        <h5 class="result-list__item__h ">
+            г. Нижний Новгород, Нижняя Дубровка, ул. Максима Горького, д. 141
+        </h5>
+        <p class="result-list__item__lead">Однокомнатная квартира</p>
+        
+        <div class="result-list__item__row">
+            <div class="result-list__item__col _1">
+                <div class="result-list__item__price">
+                    
+                    
+                    <a href="#subscribe" class="result-list__item__price__link js-popup">
+                        Сообщить о снижении цены
+                    </a>
+                    
+                    <span class="result-list__item__price__cost">
+                        2 321 414 руб.
+                    </span>
+                    <span class="result-list__item__help">
+                        стоимость
+                    </span>
+                </div>
+            </div>
+            <div class="result-list__item__col _2">
+                <div class="result-list__item__hypothec">
+                    21 413 руб./мес.
+                    <span class="result-list__item__help">
+                        в ипотеку
+                    </span>
+                </div>
+                <i class="icon-help-circled"></i>
+            </div>
+            <div class="result-list__item__col _3">
+                <ul class="result-list__item__options">
+                    <li>
+                        32 м²
+                        <span class="result-list__item__help">
+                            площадь
+                        </span>
+                    </li>
+                    <li>
+                        73 414 руб.
+                        <span class="result-list__item__help">
+                            цена за м²
+                        </span>
+                    </li>
+                    <li>
+                        5 этаж
+                        <span class="result-list__item__help">
+                            из 14
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="result-list__item__actions">
+            <div class="result-list__item__actions__compare input-group">
+                <label class="checkbox ">
+                    <input type="checkbox" 
+                        
+                        checked>
+                    <span class="checkbox__text">К сравнению</span>
+                </label>
+            </div>
+            <div class="result-list__item__actions__btn">
+                
+                <button class="btn _primary 
+                        result-list__item__actions__btn__compare
+                        _active">
+                    <i class="icon-star"></i>
+                
+                </button>
+                <a href="detail.html" class="btn _secondary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="list-header _white _footer">
+    <div class="container">
+        <div class="list-header__row">
+            <div class="list-header__sorting">
+                <div class="sorting _2">
+                    <div class="sorting__item">
+                        <label class="sorting__label">Сортировка:</label>
+                        <select class="sorting__select js-select2">
+                            <option>По дате публикации</option>
+                            <option>По цене</option>
+                        </select>
+                    </div>
+                    <div class="sorting__item">
+                        <label class="sorting__label">Показать:</label>
+                        <select class="sorting__select js-select2">
+                            <option>За все время (6321)</option>
+                            <option>За месяц (542)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="list-header__pagination">
+                <ul class="pagination">
+                    <li class="pagination__item">
+                        <a class="pagination__item__link _first _disabled" href="#"></a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link _active" href="#">1</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link" href="#">2</a>
+                    </li>
+                    <li class="pagination__item hidden-sm">
+                        <a class="pagination__item__link" href="#">3</a>
+                    </li>
+                    <li class="pagination__item hidden-sm">
+                        <a class="pagination__item__link" href="#">4</a>
+                    </li>
+                    <li class="pagination__item _skip">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link" href="#">322</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link _last" href="#"></a>
+                    </li>
+                </ul>
+                <span class="list-header__pagination__total">
+                    Показано 10 из 146
+                </span>
+            </div>
+            <div class="list-header__btn-filter">
+                <a href="#result_filter_@@type" class="btn _md _primary js-menu-toggler">
+                    <i class="icon-filter"></i>
+                    Показать фильтр
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container">
+        <button class="btn _secondary _lg section__button">Показать еще</button>
+    </div>
+</section>
+                    </div>
+                    <div id="tab2">
+                        <section class="section">
     <div class="list-header ">
     <div class="container">
         <div class="list-header__row">
@@ -1813,405 +3241,14 @@
     <div class="container">
         <button class="btn _secondary _lg section__button">Показать еще</button>
     </div>
-</section>            
-            <section class="container section hypothec">
-    <h3 class="section__h">Ипотечные программы для новостроек</h3>
-    <div class="hypothec-calc js-hypothec">
-        <h3 class="hypothec-calc__h">
-            Рассчитайте ваш платеж по ипотеке
-        </h3>
-        <div class="hypothec-calc__fields">
-            <div class="input-group">
-                <label>Стоимость недвижимости</label>
-                <input value="2323414" disabled="disabled" class="js-mask__currency js-hypothec__cost">
-            </div>
-            <div class="js-picker">
-                <div class="input-group _picker _double _third">
-                    <label>Первоначальный взнос</label>
-                    <input disabled="disabled" 
-                           class="js-mask__currency js-hypothec__payment-sum">
-                    <input min="10" max="90" value="30" disabled="disabled" 
-                           class="js-mask__percent js-picker__input js-hypothec__payment-percent">
-                </div>
-                <div class="range _picker js-picker__target"></div>
-            </div>
-            <div class="input-group">
-                <label>Сумма кредита</label>
-                <input disabled="disabled" class="js-mask__currency js-hypothec__credit">
-            </div>
-            <div class="js-picker">
-                <div class="input-group _picker">
-                    <label>Срок ипотеки</label>
-                    <input min="1" max="30" value="20" 
-                           disabled="disabled" 
-                           class="js-mask__age js-picker__input js-hypothec__age">
-                </div>
-                <div class="range _picker js-picker__target"></div>
-            </div>
-        </div>
-        <p class="hypothec-calc__res-h">Найдено 5 ипотечных программ</p>
-        <div class="hypothec-calc__row">
-            <div class="hypothec-calc__res slider-small js-hypothec__slider">
-                <div class="hypothec-calc__res__item slide">
-    <div class="hypothec-calc__res__item__row _head">
-        <span class="hypothec-calc__res__item__img-wrapper">
-            <img src="img/hypothec/sberbank.png"
-                 srcset="img/hypothec/sberbank@2x.png 2x,
-                 img/hypothec/sberbank@3x.png 3x"
-                 alt="Сбербанк">
-        </span>
-        <span class="hypothec-calc__res__item__title">
-            Сбербанк. Акция «Больше метров – меньше ставка». Готовое жилье
-        </span>
-    </div>
-    <div class="hypothec-calc__res__item__row _content">
-        <span class="hypothec-calc__res__item__rate">
-            <span class="js-hypothec__rate">7,5</span>%
-        </span>
-        <span>Ставка по ипотеке</span>
-        <span class="hypothec-calc__res__item__payment">
-            <span class="js-hypothec__permonth"></span> руб./мес.
-        </span>
-        <span>Платеж по ипотеке</span>
-    </div>
-    
-    <span class="hidden js-hypothec__rateME">7</span>
-    <div class="hypothec-calc__res__item__row _foot">
-        <div class="hypothec-calc__res__item__row">
-            <span class="hypothec-calc__res__item__payment_accent">
-                <span class="js-hypothec__permonthME"></span> руб./мес.
-            </span>
-            <span>Платеж с нами</span>
-        </div>
-        <div class="hypothec-calc__res__item__row">
-            <span class="hypothec-calc__res__item__economy-text">Ваша экономия составит</span>
-            <span class="hypothec-calc__res__item__economy">
-                <span class="js-hypothec__economy"></span> руб.
-            </span>
-        </div>
-    </div>
-    
-</div>
-                <div class="hypothec-calc__res__item slide">
-    <div class="hypothec-calc__res__item__row _head">
-        <span class="hypothec-calc__res__item__img-wrapper">
-            <img src="img/hypothec/vtb.png"
-                 srcset="img/hypothec/vtb@2x.png 2x,
-                 img/hypothec/vtb@3x.png 3x"
-                 alt="ВТБ">
-        </span>
-        <span class="hypothec-calc__res__item__title">
-            ВТБ. Акция «Больше метров – меньше ставка». Готовое жилье
-        </span>
-    </div>
-    <div class="hypothec-calc__res__item__row _content">
-        <span class="hypothec-calc__res__item__rate">
-            <span class="js-hypothec__rate">8</span>%
-        </span>
-        <span>Ставка по ипотеке</span>
-        <span class="hypothec-calc__res__item__payment">
-            <span class="js-hypothec__permonth"></span> руб./мес.
-        </span>
-        <span>Платеж по ипотеке</span>
-    </div>
-    
-</div>
-                <div class="hypothec-calc__res__item slide">
-    <div class="hypothec-calc__res__item__row _head">
-        <span class="hypothec-calc__res__item__img-wrapper">
-            <img src="img/hypothec/binbank.png"
-                 srcset="img/hypothec/binbank@2x.png 2x,
-                 img/hypothec/binbank@3x.png 3x"
-                 alt="Бинбанк">
-        </span>
-        <span class="hypothec-calc__res__item__title">
-            Бинбанк. Акция «Больше метров – меньше ставка». Готовое жилье
-        </span>
-    </div>
-    <div class="hypothec-calc__res__item__row _content">
-        <span class="hypothec-calc__res__item__rate">
-            <span class="js-hypothec__rate">12</span>%
-        </span>
-        <span>Ставка по ипотеке</span>
-        <span class="hypothec-calc__res__item__payment">
-            <span class="js-hypothec__permonth"></span> руб./мес.
-        </span>
-        <span>Платеж по ипотеке</span>
-    </div>
-    
-    <span class="hidden js-hypothec__rateME">11</span>
-    <div class="hypothec-calc__res__item__row _foot">
-        <div class="hypothec-calc__res__item__row">
-            <span class="hypothec-calc__res__item__payment_accent">
-                <span class="js-hypothec__permonthME"></span> руб./мес.
-            </span>
-            <span>Платеж с нами</span>
-        </div>
-        <div class="hypothec-calc__res__item__row">
-            <span class="hypothec-calc__res__item__economy-text">Ваша экономия составит</span>
-            <span class="hypothec-calc__res__item__economy">
-                <span class="js-hypothec__economy"></span> руб.
-            </span>
-        </div>
-    </div>
-    
-</div>
-                <div class="hypothec-calc__res__item slide">
-    <div class="hypothec-calc__res__item__row _head">
-        <span class="hypothec-calc__res__item__img-wrapper">
-            <img src="img/hypothec/gazprombank.png"
-                 srcset="img/hypothec/gazprombank@2x.png 2x,
-                 img/hypothec/gazprombank@3x.png 3x"
-                 alt="Газпромбанк">
-        </span>
-        <span class="hypothec-calc__res__item__title">
-            Газпромбанк. Акция «Больше ставка»
-        </span>
-    </div>
-    <div class="hypothec-calc__res__item__row _content">
-        <span class="hypothec-calc__res__item__rate">
-            <span class="js-hypothec__rate">10,5</span>%
-        </span>
-        <span>Ставка по ипотеке</span>
-        <span class="hypothec-calc__res__item__payment">
-            <span class="js-hypothec__permonth"></span> руб./мес.
-        </span>
-        <span>Платеж по ипотеке</span>
-    </div>
-    
-</div>
-                <div class="hypothec-calc__res__item slide">
-    <div class="hypothec-calc__res__item__row _head">
-        <span class="hypothec-calc__res__item__img-wrapper">
-            <img src="img/hypothec/sberbank.png"
-                 srcset="img/hypothec/sberbank@2x.png 2x,
-                 img/hypothec/sberbank@3x.png 3x"
-                 alt="Сбербанк">
-        </span>
-        <span class="hypothec-calc__res__item__title">
-            Сбербанк. Акция «Больше метров – меньше ставка». Готовое жилье
-        </span>
-    </div>
-    <div class="hypothec-calc__res__item__row _content">
-        <span class="hypothec-calc__res__item__rate">
-            <span class="js-hypothec__rate">7,5</span>%
-        </span>
-        <span>Ставка по ипотеке</span>
-        <span class="hypothec-calc__res__item__payment">
-            <span class="js-hypothec__permonth"></span> руб./мес.
-        </span>
-        <span>Платеж по ипотеке</span>
-    </div>
-    
-    <span class="hidden js-hypothec__rateME">7</span>
-    <div class="hypothec-calc__res__item__row _foot">
-        <div class="hypothec-calc__res__item__row">
-            <span class="hypothec-calc__res__item__payment_accent">
-                <span class="js-hypothec__permonthME"></span> руб./мес.
-            </span>
-            <span>Платеж с нами</span>
-        </div>
-        <div class="hypothec-calc__res__item__row">
-            <span class="hypothec-calc__res__item__economy-text">Ваша экономия составит</span>
-            <span class="hypothec-calc__res__item__economy">
-                <span class="js-hypothec__economy"></span> руб.
-            </span>
-        </div>
-    </div>
-    
-</div>
-            </div>
-            <div class="hypothec-calc__list">
-    <div class="js-scrollbar scrollbar-outer _hor">
-        <div class="hypothec__list _scroll js-hypothec__scroll">
-            <div class="hypothec__list__item slide">
-    <a href="#" class="hypothec__list__item__inner">
-        <span class="hypothec__list__item__img-wrapper">
-            <img src="img/hypothec/sberbank.png"
-                 srcset="img/hypothec/sberbank@2x.png 2x,
-                 img/hypothec/sberbank@3x.png 3x"
-                 alt="Сбербанк">
-        </span>
-        <span class="hypothec__list__item__rate">
-            <span class="hypothec__list__item__muted">Ставка по ипотеке</span>
-            <span class="hypothec__list__item__accent">7,5%</span>
-        </span>
-        Сбербанк. Акция «Больше метров‑меньше ставка». Готовое жилье
-    </a>
-</div>
-            <div class="hypothec__list__item slide">
-    <a href="#" class="hypothec__list__item__inner">
-        <span class="hypothec__list__item__img-wrapper">
-            <img src="img/hypothec/vtb.png"
-                 srcset="img/hypothec/vtb@2x.png 2x,
-                 img/hypothec/vtb@3x.png 3x"
-                 alt="ВТБ">
-        </span>
-        <span class="hypothec__list__item__rate">
-            <span class="hypothec__list__item__muted">Ставка по ипотеке</span>
-            <span class="hypothec__list__item__accent">8%</span>
-        </span>
-        ВТБ. Акция «Больше метров‑меньше ставка». Готовое жилье
-    </a>
-</div>
-            <div class="hypothec__list__item slide">
-    <a href="#" class="hypothec__list__item__inner">
-        <span class="hypothec__list__item__img-wrapper">
-            <img src="img/hypothec/binbank.png"
-                 srcset="img/hypothec/binbank@2x.png 2x,
-                 img/hypothec/binbank@3x.png 3x"
-                 alt="Бинбанк">
-        </span>
-        <span class="hypothec__list__item__rate">
-            <span class="hypothec__list__item__muted">Ставка по ипотеке</span>
-            <span class="hypothec__list__item__accent">12%</span>
-        </span>
-        Бинбанк. Акция «Больше метров‑меньше ставка». Готовое жилье
-    </a>
-</div>
-            <div class="hypothec__list__item slide">
-    <a href="#" class="hypothec__list__item__inner">
-        <span class="hypothec__list__item__img-wrapper">
-            <img src="img/hypothec/gazprombank.png"
-                 srcset="img/hypothec/gazprombank@2x.png 2x,
-                 img/hypothec/gazprombank@3x.png 3x"
-                 alt="Газпромбанк">
-        </span>
-        <span class="hypothec__list__item__rate">
-            <span class="hypothec__list__item__muted">Ставка по ипотеке</span>
-            <span class="hypothec__list__item__accent">10,5%</span>
-        </span>
-        Газпромбанк. Акция «Больше ставка»
-    </a>
-</div>
-            <div class="hypothec__list__item slide">
-    <a href="#" class="hypothec__list__item__inner">
-        <span class="hypothec__list__item__img-wrapper">
-            <img src="img/hypothec/sberbank.png"
-                 srcset="img/hypothec/sberbank@2x.png 2x,
-                 img/hypothec/sberbank@3x.png 3x"
-                 alt="Сбербанк">
-        </span>
-        <span class="hypothec__list__item__rate">
-            <span class="hypothec__list__item__muted">Ставка по ипотеке</span>
-            <span class="hypothec__list__item__accent">7,5%</span>
-        </span>
-        Сбербанк. Акция «Больше метров‑меньше ставка». Готовое жилье
-    </a>
-</div>
-        </div>
-    </div>
-</div>
-            <div class="hypothec-request">
-    <div class="hypothec-request__row">
-        <div class="hypothec-request__col _1">
-            <h4 class="hypothec-request__h">Оформить онлайн</h4>
-            <ul class="hypothec-request__feat">
-                <li class="hypothec-request__feat__item">
-                    Зарегистрируйтесь в личном кабинете за 1 минуту
-                </li>
-                <li class="hypothec-request__feat__item">
-                    Отправьте заявку сразу в несколько банков
-                </li>
-                <li class="hypothec-request__feat__item">
-                    Следите за ходом рассмотрения вашей заявки
-                </li>
-            </ul>
-            <a href="#" class="btn _lg _secondary">Продолжить оформление</a>
-        </div>
-        <div class="hypothec-request__col _2">
-            <h4 class="hypothec-request__h">Оформить с экспертом</h4>
-            <div class="hypothec-request__row">
-                <div class="hypothec-request__agent">
-                    <div class="agent">
-    <div class="agent__inner">
-        <img src="img/agents/5.jpg"
-             srcset="img/agents/5@2x.jpg 2x,
-             img/agents/5@3x.jpg 3x"
-             class="agent__img" alt="alt text">
-        <div class="agent__name">Столбова Ольга Арслановна</div>
-        
-        <div class="agent__post">Ваш личный помощник по ипотеке</div>
-        
-        <div class="agent__phone">
-            <a href="tel:+7 922 471-16-85">+7 922 471-16-85</a>
-        </div>
-        
-        
-        
-    </div>
-</div>
-                </div>
-                <form class="hypothec-request__form">
-                    <div class="input-group hypothec-request__form__text">
-                        Оставьте ваш номер, и агент перезвонит вам в течение 5 минут
-                    </div>
-                    <div class="input-group _lg">
-                        <label>Ваш телефон</label>
-                        <input class="js-mask__tel">
-                    </div>
-                    <div class="input-group _lg">
-                        <button class="btn _lg _solid">Жду звонка</button>
-                    </div>
-                    <div class="input-group _last">
-                        <span class="input-help">
-                            Отправляя заявку вы соглашаетесь на обработку персональных данных
-                        </span>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-        </div>
-    </div>
 </section>
-            <section class="section _inverse _nomargin callme">
-    <div class="container">
-        <div class="callme__wrapper">
-            <div class="callme__inner">
-                <h3 class="section__h">Ничего не понравилось?</h3>
-                <p class="section__lead">Заполните заявку на подбор недвижимости. 
-                    Наш специалист свяжется с Вами и ответит на все вопросы!</p>
-                <form>
-                    <div class="input-group__wrapper">
-                        <div class="input-group _lg _white _secondary">
-                            <label>Ваше имя:</label>
-                            <input value="Иван">
-                        </div>
-                        <div class="input-group _lg _white _secondary">
-                            <label>Ваш телефон:</label>
-                            <input value="+7 (123) 456-78-90" class="js-mask__tel">
-                        </div>
                     </div>
-                    <div class="input-group__wrapper _submit">
-                        <div class="input-group">
-                            <button class="btn _solid _lg _shadow" type="submit">Жду звонка</button>
-                        </div>
-                        <div class="input-group _lg _white">
-                            <div class="input-help">Отправляя заявку вы соглашаетесь на обработку персональных данных</div>
-                        </div>
+                    <div id="tab3">
                     </div>
-                </form>
-            </div>
-            <div class="callme__wrapper__img-wrapper _1">
-                <img src="img/call1.png"
-                     srcset="img/call1@2x.png 2x,
-                     img/call1@3x.png 3x"
-                     alt="alt text">
-            </div>
-        </div>
-    </div>
-</section>
-            <section class="section  realty-subscribe">
-    <div class="container realty-subscribe__inner">
-        <p class="realty-subscribe__text">Узнайте первым о новых объектах недвижимости. 
-            Будьте в курсе снижения цен по вашему запросу.</p>
-        <div class="realty-subscribe__btn-wrapper">
-            <a href="#subscribe" class="btn _lg _solid js-popup">Подписаться на обновления</a>
-        </div>
-    </div>
-</section>
+                    <div id="tab4">
+                    </div>
+                </div>
+            </section>
             <section class="container section">
     <div class="seo">
         <h3 class="seo_h">Недвижимость в Нижнем Новгороде</h3>
@@ -2245,32 +3282,6 @@
             сопровождением.</p>
     </div>
 </section>
-            <div class="hidden">
-                <div id="subscribe" class="popup-cnt">
-    <div class="popup popup-subscribe">
-        <h3 class="popup__h3">Подписаться на обновления</h3>
-        <p class="popup__lead">Будьте в курсе снижения цен по вашему запросу</p>
-        <form id="popup_subscribe_form" class="popup-subscribe__form js-validate">
-            <div class="input-group__wrapper">
-                <div class="input-group _lg _secondary">
-                    <label>E-mail</label>
-                    <input type="text" name="email" value="" required>
-                </div>
-            </div>
-            <div class="input-group__wrapper _submit">
-                <div class="input-group">
-                    <button class="btn _solid _lg _shadow" type="submit">Подписаться</button>
-                </div>
-                <div class="input-group">
-                    <div class="input-help">
-                        Подписываясь на обновления вы соглашаетесь на обработку 
-                        персональных данных</div>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
-            </div>
             <footer class="footer">
     <div class="footer__dark">
         <div class="container">

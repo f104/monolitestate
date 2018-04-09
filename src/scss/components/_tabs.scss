@@ -24,12 +24,22 @@
                 transition: background-color .2s ease-in-out, color .2s ease-in-out;
                 &.active, &:hover {
                     background-color: $secondary;
-                    color: $white;
+                    color: $white !important;
                 }
             }
         }
     }
 }
+
+@include media-breakpoint-only(sm) {
+    .tabs {
+        border: none;
+        .tabs__list {
+            display: none;
+        }
+    }
+}
+
 @include media-breakpoint-up(md) {
     .tabs {
         margin-bottom: $container-padding-md;
@@ -45,6 +55,9 @@
                     padding: 0 25px;
                 }
             }
+        }
+        .tabs__select {
+            display: none;
         }
     }
 }

@@ -276,15 +276,11 @@ jQuery(function () {
             $('.js-select').removeClass('_opened _active');
         });
         // select2
-        function initSelect2() {
-            $('.js-select2').select2({
-                theme: 'custom',
-                minimumResultsForSearch: Infinity,
-            });
-        }
-        initSelect2();
+        $.fn.select2.defaults.set("theme", "custom");
+        $.fn.select2.defaults.set("minimumResultsForSearch", Infinity);
+        $('.js-select2').select2();
         $(window).on('resize', function () {
-            initSelect2();
+            $('.js-select2').select2();
         });
 //        $('.js-select2').select2('open');
     }
@@ -413,6 +409,7 @@ jQuery(function () {
             $(elem).bind('easytabs:after', function (event, $clicked, $target) {
                 $(elem).find('.js-tabs__select').val($clicked.attr('href')).change();
                 $target.find('.slick-initialized').slick('setPosition');
+                $target.find('.js-select2').select2();
             });
             $(elem).find('.js-tabs__select').on('change', function () {
                 $(elem).easytabs('select', $(this).val());
