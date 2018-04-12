@@ -46,6 +46,8 @@
     }
 }
 .find-on-map-section {
+    margin-top: -30px;
+    margin-bottom: 30px;
     .find-on-map {
         margin-left: - $container-padding-sm;
         margin-right: - $container-padding-sm;
@@ -60,9 +62,18 @@
         }
     }
     .find-on-map-section {
+        margin-top: -40px;
+        margin-bottom: 50px;
         .find-on-map {
             margin-left: 0;
             margin-right: 0;
         }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .find-on-map-section {
+        margin-top: -30px;
+        margin-bottom: 60px;
     }
 }

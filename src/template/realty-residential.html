@@ -1,0 +1,53 @@
+<section class="container section realty">
+    <h3 class="section__h">Популярные ЖК в Нижнем Новгороде</h3>
+    <div class="realty__list slider-small js-slider-small">
+        @@include('./chunks/realty-item.html', {
+        "img": [13,14,15,16],
+        "total": 8,
+        "tags": [],
+        "title": "ЖК «Квартет», ГП-236, ул. Широтная, 213",
+        "subtitle": "Студия",
+        "oldprice": "",
+        "price": "2 460 000 руб.",
+        "area": "",
+        "hypothec": "15 324"
+        })
+        @@include('./chunks/realty-item.html', {
+        "img": [14,15,16,13],
+        "total": 10,
+        "tags": [],
+        "title": "ЖК «Каскад»: Улица Ленина, д.45",
+        "subtitle": "Однокомнатная квартира",
+        "oldprice": "",
+        "price": "3 123 000 руб.",
+        "area": "",
+        "hypothec": "22 012"
+        })
+        @@include('./chunks/realty-item.html', {
+        "img": [15,16,13,14],
+        "total": 9,
+        "tags": [],
+        "title": "ЖК «Мир»: Улица Романа Ноздрина, д. 128",
+        "subtitle": "Однокомнатная квартира",
+        "oldprice": "",
+        "price": "1 980 000 руб.",
+        "area": "",
+        "hypothec": "13 012"
+        })
+        @@include('./chunks/realty-item.html', {
+        "img": [16,13,14,15],
+        "total": 10,
+        "tags": [],
+        "title": "ЖК «Дома»: Улица Полка Нормандии-Неман, д. 28",
+        "subtitle": "Однокомнатная квартира",
+        "oldprice": "",
+        "price": "4 540 000 руб.",
+        "area": "",
+        "hypothec": "15 324"
+        })
+    </div>
+    <button class="btn _primary _lg section__button _more">
+        <span>Показать больше</span><i class="icon-more"></i>
+    </button>
+    <a href="#" class="btn _secondary _lg section__button">Посмотреть все ЖК</a>
+</section>

@@ -1,5 +1,33 @@
 <section class="container section filters">
     <form class="filters-form">
+        @@if (title != '') {
+        <h3 class="filters-form__h">@@title</h3>
+        }
+        @@if (residential == 1) {
+        <div class="filters-form-residential">
+            <div class="filters-form-residential__img-wrapper">
+                <img src="img/realty/residential.jpg"
+                     srcset="img/realty/residential@2x.jpg 2x,
+                     img/realty/residential@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            <table class="filters-form-residential__table">
+                <tr>
+                    <td>Квартир:</td>
+                    <td>14 521</td>
+                </tr>
+                <tr>
+                    <td>Стоимость от:</td>
+                    <td>750 000 руб.</td>
+                </tr>
+                <tr>
+                    <td>Средняя цена за м²:</td>
+                    <td>53 285 руб.</td>
+                </tr>
+            </table>
+            <a href="#" class="btn _lg _solid _shadow">Посмотреть все ЖК</a>
+        </div>
+        }
         <div class="filters-form__row__lg">
             <div class="filters-form__col__lg _col1">
                 <div class="filters-form__row">

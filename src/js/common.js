@@ -675,15 +675,17 @@ jQuery(function () {
             }
         });
     }
-    
+
     function initScrollbar() {
         $('.js-scrollbar').scrollbar();
-        if ($(window).outerWidth() < appConfig.breakpoint.md) {
+        var w = $(window).outerWidth();
+        if (w < appConfig.breakpoint.md) {
             $('.js-scrollbar-sm').scrollbar();
         }
-        if ($(window).outerWidth() < appConfig.breakpoint.lg) {
+        if (w >= appConfig.breakpoint.md && w < appConfig.breakpoint.lg) {
             $('.js-scrollbar-md').scrollbar();
-        } else {
+        }
+        if (w >= appConfig.breakpoint.lg) {
             $('.js-scrollbar-lg').scrollbar();
         }
         $(window).on('resize', function () {
@@ -694,17 +696,23 @@ jQuery(function () {
             }
         });
         $(window).on('resize', function () {
-            if ($(window).outerWidth() < appConfig.breakpoint.lg) {
+            if ($(window).outerWidth() >= appConfig.breakpoint.md
+                    && $(window).outerWidth() < appConfig.breakpoint.lg) {
                 $('.js-scrollbar-md').scrollbar();
-                $('.js-scrollbar-lg').scrollbar('destroy');
             } else {
                 $('.js-scrollbar-md').scrollbar('destroy');
+            }
+        });
+        $(window).on('resize', function () {
+            if ($(window).outerWidth() >= appConfig.breakpoint.lg) {
                 $('.js-scrollbar-lg').scrollbar();
+            } else {
+                $('.js-scrollbar-lg').scrollbar('destroy');
             }
         });
 //        $('.js-scrollbar-hot').scrollbar();
     }
-    
+
     function initAntispam() {
         setTimeout(function () {
             $('input[name="email3"],input[name="info"],input[name="text"]').attr('value', '').val('');

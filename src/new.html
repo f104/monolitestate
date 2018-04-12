@@ -1,0 +1,45 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "Новостройки"
+    })
+    <body>
+        @@include('./template/header.html', {
+        "active": "new"
+        })
+        <div class="content">
+            @@include('./template/result/filters-new.html', {
+            "title": "Новостройки Нижнего Новгорода",
+            "residential": 1
+            })
+            @@include('./template/realty-form-new.html')
+            @@include('./template/find-on-map.html', {
+            "text": "Искать квартиры на карте"
+            })
+            @@include('./template/realty-new.html')
+            @@include('./template/sales.html')
+            @@include('./template/realty-residential.html')
+            @@include('./template/callme.html', {
+            "title": "Не хочу искать, перезвоните мне!",
+            "margin": 1,
+            "class": "_1",
+            "img": "call1"
+            })
+            @@include('./template/builders/section.html')
+            @@include('./template/hypothec/calc.html', {
+            "title": "Ипотечные программы на новостройки"
+            })
+            <section class="container section news">
+                <h3 class="section__h">Мы говорим</h3>
+                @@include('./template/news/related.html')
+                <button class="btn _primary _lg section__button _more">
+                    <span>Показать больше</span><i class="icon-more"></i></button>
+                <a href="news.html" class="btn _secondary _lg section__button">Все новости</a>
+            </section>
+            @@include('./template/seo.html')
+            @@include('./template/footer.html')
+            @@include('./template/popups-common.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        @@include('./template/foot.html')
+    </body>
+</html>

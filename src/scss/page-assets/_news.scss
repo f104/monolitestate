@@ -16,6 +16,30 @@
     }
 }
 
+.news-related-list {
+    position: relative;
+    margin-bottom: 70px;
+    @include media-breakpoint-only(md) {
+        @include row(28px);
+        flex-wrap: nowrap;
+        &:after {
+            content: '';
+            display: block;
+            width: 16px;
+            flex-shrink: 0;
+        }
+    }
+    @include media-breakpoint-up(md) {
+        margin-bottom: 40px;
+    }
+    .news-item {
+        border-radius: $border-radius;
+        @include media-breakpoint-only(md) {
+            @include col(382px, 28px);
+        }
+    }
+}
+
 .news-item {
     display: flex !important;
     .news-item__inner {
@@ -188,49 +212,21 @@
     }
 }
 
-.news-related {
-    &.section {
-        @include media-breakpoint-only(sm) {
-            margin-bottom: 0;
-        }
-        .section__h {
-            @include media-breakpoint-up(lg) {
-                font-size: 32px;
-            }
-        }
-    }
-    .news-related__list {
-        position: relative;
-        margin-bottom: 70px;
-        @include media-breakpoint-only(md) {
-            @include row(28px);
-            flex-wrap: nowrap;
-            &:after {
-                content: '';
-                display: block;
-                width: 16px;
-                flex-shrink: 0;
-            }
-        }
-        @include media-breakpoint-up(md) {
-            margin-bottom: 40px;
-        }
-    }
-    .news-item {
-        border-radius: $border-radius;
-        @include media-breakpoint-only(md) {
-            @include col(382px, 28px);
-        }
-        @include media-breakpoint-up(lg) {
-            margin-bottom: 31px;
-            &:last-of-type {
-                margin-bottom: 0;
-            }
-        }
-    }
-    .news-related__social {
+.news {
+    .section__button._more {
         @include media-breakpoint-down(md) {
             display: none;
+        }
+    }
+    .scroll-wrapper {
+        margin-bottom: 40px;
+    }
+    .news-related-list {
+        @include media-breakpoint-up(lg) {
+            @include row(27px);
+            .news-item {
+                @include col(33.33%, 27px);
+            }
         }
     }
 }
@@ -244,6 +240,26 @@
         }
         .news-related {
             flex: 1;
+            &.section {
+                .section__h {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+    .news-related-list {
+        .news-item {
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 31px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .news-related__social {
+        @include media-breakpoint-down(md) {
+            display: none;
         }
     }
 }

@@ -84,6 +84,9 @@
     &._commercial {
         background-image: linear-gradient(158deg, #16222a, #3a6073);
     }
+    &._new {
+        background-image: linear-gradient(22deg, #7faed8, #4585be);
+    }
 }
 
 @include media-breakpoint-up(md) {
@@ -121,6 +124,9 @@
         }
         &._commercial {
             background-image: linear-gradient(131deg, #16222a, #3a6073);
+        }
+        &._new {
+            background-image: linear-gradient(49deg, #7faed8, #4585be);
         }
     }    
 }
@@ -160,6 +166,21 @@
         }
         &._commercial {
             background-image: linear-gradient(101deg, #16222a, #3a6073);
+            .realty-form__h {
+                font-size: 35px;
+            }
+            .realty-form__row {
+                .realty-form__col {
+                    &._2 {
+                        .realty-form__h {
+                            font-size: 32px;
+                        }                        
+                    }
+                }
+            }
+        }
+        &._new {
+            background-image: linear-gradient(78deg, #7faed8, #4585be);
             .realty-form__h {
                 font-size: 35px;
             }
