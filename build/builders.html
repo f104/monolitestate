@@ -1,0 +1,1154 @@
+<html lang="ru" dir="ltr">
+    <head>
+    <title>Застройщики</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link href="fonts/Lato/lato.css" rel="stylesheet" type="text/css">
+    <link href="fonts/fontello/css/fontello.css" rel="stylesheet" type="text/css">
+    <link href="css/libs/slick.css" rel="stylesheet" type="text/css">
+    <link href="css/libs/jquery.scrollbar.css" rel="stylesheet" type="text/css">
+    <link href="css/libs/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+    <link href="css/libs/nouislider.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/libs/datepicker/datepicker.css" rel="stylesheet" type="text/css"/>
+    <link href="css/libs/datepicker/cell.css" rel="stylesheet" type="text/css"/>
+    <link href="css/libs/datepicker/navigation.css" rel="stylesheet" type="text/css"/>
+    <link href="css/libs/datepicker/timepicker.css" rel="stylesheet" type="text/css"/>
+    <link href="css/common.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+        <header class="header">
+    <div class="header__top">
+        <div class="container">
+            <div class="header__top__city">
+                Город: <a href="#" class="header__top__city__select">Нижний Новгород</a>
+            </div>
+            <nav>
+                <ul class="header__top__nav">
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="header__main">
+        <div class="container">
+            <div class="header__main__menu"><a href="#menu" class="header__main__menu__link js-menu-toggler"><i class="icon-menu"></i></a></div>
+            <div class="header__main__logo"><a href="index.html"><img src="img/logo.png"
+                                                                      srcset="img/logo@2x.png 2x,
+                                                                      img/logo@3x.png 3x"></a></div>
+            <div class="header__main__fav">
+                <a href="#" class="header__main__fav__link"><i class="icon-star"></i><span class="header__main__md">Избранное</span></a>
+                <div class="header__main__fav__counter header__main__md">10 позиций</div>
+            </div>
+            <div class="header__main__user">
+                <div class="header__main__sm">
+                    <a href="#" class="header__main__user__link"><i class="icon-user"></i></a>
+                </div>
+                <div class="header__main__md">
+                    <a href="#login" class="header__main__user__link btn _primary js-popup"><i class="icon-user _middle"></i> Войти</a>
+                    <a href="#signup" class="header__main__user__link btn _secondary js-popup">Регистрация</a>
+                </div>
+            </div>
+            <div class="header__main__phone">
+                <div class="header__main__md">+7 (831) 219-90-67</div>
+                <a href="#call" class="header__main__phone__link js-popup"><i class="icon-phone"></i><span class="header__main__md link">Заказать звонок</span></a>
+            </div>
+            <div class="header__main__contacts">
+                <div class="header__main__contacts__text">Звоните нам с 7:30 до 24:00</div>
+                <a href="#" class="header__main__contacts__link"><i class="icon-map _middle"></i> Контакты</a>
+            </div>
+        </div>
+    </div>
+    <div id="menu" class="header__menu js-menu">
+        <div class="header__menu__inner scrollbar-outer js-scrollbar-sm">
+            <div class="container">
+                <div class="header__menu__user">
+                    <a href="#login" class="header__main__user__link btn _primary js-popup"><i class="icon-user _middle"></i> Войти</a>
+                    <a href="#signup" class="header__main__user__link btn _secondary js-popup">Регистрация</a>
+                </div>
+                <div class="header__menu__phone">
+                    <div>+7 (831) 219-90-67</div>
+                    <a href="#call" class="header__menu__phone__link js-popup"><i class="icon-phone"></i><span class="link _inverse">Заказать звонок</span></a>
+                </div>
+                <div class="header__menu__contacts">
+                    <div class="header__menu__contacts__text">Звоните нам с 7:30 до 24:00</div>
+                    <a href="contacts.html" class="header__menu__contacts__link"><i class="icon-map _middle"></i> Контакты</a>
+                </div>
+                <ul class="header__menu__first">
+                    <li><a href="#" class="header__menu__first__toggler js-menu-second-toggler"><i class="icon-menu"></i></a></li>
+                    <li><a href="second.html" >Вторичное жилье</a></li>
+                    <li><a href="#" >Новостройки без комиссии</a></li>
+                    <li><a href="#">Дома, дачи, участки</a></li>
+                    <li><a href="rent.html" >Аренда</a></li>
+                    <li><a href="commercial.html" >Коммерческая</a></li>
+                    <li><a href="#">Ипотека</a></li>
+                    <li><a href="#">Продавцу</a></li>
+                    <li><a href="#">Аналитика</a></li>
+                </ul>
+                <div class="header__menu__second-wrapper js-menu-second">
+                    <div class="header__menu__second-container">
+                        <ul class="header__menu__second">
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Аналитика рынка недвижимости</a></li>
+                            <li><a href="#">Вакансии / Работа в компании МИ</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Рейтинг агентов</a></li>
+                            <li><a href="builders.html">Застройщики</a></li>
+                            <li><a href="news.html">Новости рынка недвижимости</a></li>
+                            <li><a href="#">Акции</a></li>
+                            <li><a href="contacts.html">Контакты</a></li>
+                            <li><a href="agents.html">Специалисты по недвижимости</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="content">
+            <section class="container section filters">
+    <form class="filters-form">
+        <div class="filters-form__row__lg">
+            <div class="filters-form__col__lg _col1">
+                <div class="filters-form__row">
+                    <div class="input-group filters-form__rooms _col2">
+                        <label>Кол-во комнат</label>
+                        <div class="filters-form__rooms__inner">
+                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">Студ.</span></label>
+                            <label class="filters-form__rooms__inner__checkbox filters-form__sm"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">Комн.</span></label>
+                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">1</span></label>
+                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox" checked><span class="filters-form__rooms__inner__checkbox__inner">2</span></label>
+                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">3</span></label>
+                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">4+</span></label>
+                        </div>
+                    </div>
+                    <div class="input-group _col1">
+                        <div class="pseudo-select js-select">
+    <div class="pseudo-select__inner">
+        <div class="pseudo-select__select js-select__toggler">
+            <span class="pseudo-select__select__inner">
+                Район, Улица
+            </span>
+        </div>
+        <div class="pseudo-select__dropdown js-select__inner js-select-search">
+            <input class="pseudo-select__dropdown__search js-select-search__input" placeholder="Поиск">
+            <div class="js-scrollbar scrollbar-outer">
+                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Жилой комплекс с очень длинным названием</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+            </div>
+        </div>
+    </div>
+</div>
+                    </div>
+                    <div class="input-group _double _col3">
+                        <input placeholder="Цена от (руб.)" class="js-mask__currency">
+                        <input placeholder="Цена до (руб.)" class="js-mask__currency">
+                    </div>
+                </div>
+                <div class="filters-form__row">
+                    <div class="input-group _col1">
+                        <div class="pseudo-select js-select">
+    <div class="pseudo-select__inner">
+        <div class="pseudo-select__select js-select__toggler">
+            <span class="pseudo-select__select__inner">
+                Жилой комплекс
+            </span>
+        </div>
+        <div class="pseudo-select__dropdown js-select__inner js-select-search">
+            <input class="pseudo-select__dropdown__search js-select-search__input" placeholder="Поиск">
+            <div class="js-scrollbar scrollbar-outer">
+                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Жилой комплекс с очень длинным названием</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+            </div>
+        </div>
+    </div>
+</div>
+                    </div>
+                    <div class="input-group _col2">
+                        <div class="pseudo-select js-select">
+    <div class="pseudo-select__inner">
+        <div class="pseudo-select__select js-select__toggler">
+            <span class="pseudo-select__select__inner">
+                Срок сдачи
+            </span>
+        </div>
+        <div class="pseudo-select__dropdown js-select__inner js-select-search">
+            <input class="pseudo-select__dropdown__search js-select-search__input" placeholder="Поиск">
+            <div class="js-scrollbar scrollbar-outer">
+                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Жилой комплекс с очень длинным названием</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+            </div>
+        </div>
+    </div>
+</div>
+                    </div>
+                    <div class="input-group _double _col3">
+                        <input placeholder="Площадь от" class="js-mask__square">
+                        <input placeholder="Площадь до" class="js-mask__square">
+                    </div>
+                </div>
+                <div class="filters-form__row">
+                    <div class="input-group _col1">
+                        <div class="pseudo-select js-select">
+    <div class="pseudo-select__inner">
+        <div class="pseudo-select__select js-select__toggler">
+            <span class="pseudo-select__select__inner">
+                Застройщик
+            </span>
+        </div>
+        <div class="pseudo-select__dropdown js-select__inner js-select-search">
+            <input class="pseudo-select__dropdown__search js-select-search__input" placeholder="Поиск">
+            <div class="js-scrollbar scrollbar-outer">
+                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Жилой комплекс с очень длинным названием</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+            </div>
+        </div>
+    </div>
+</div>
+                    </div>
+                    <div class="input-group _col2">
+                        <div class="filters-form__checkbox">
+                            <div class="filters-form__checkbox__item">
+    <label class="filters-form__checkbox__item__label">
+        <input type="checkbox" >
+        <span class="filters-form__checkbox__item__inner">
+            <span class="filters-form__checkbox__item__inner__text">
+                Дом сдан
+            </span>
+        </span>
+    </label>
+</div>
+                            <div class="filters-form__checkbox__item">
+    <label class="filters-form__checkbox__item__label">
+        <input type="checkbox" checked>
+        <span class="filters-form__checkbox__item__inner">
+            <span class="filters-form__checkbox__item__inner__text">
+                Заселиться в 2018
+            </span>
+        </span>
+    </label>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filters-form__col__lg _col2">
+                <div class="filters-form__summary">
+                    <p class="filters-form__summary__text">Найдено 6 322 варианта</p>
+                    <div class="filters-form__summary__buttons">
+                        <div class="filters-form__summary__buttons__col">
+                            <button class="btn _lg _secondary">Показать</button>
+                        </div>
+                        <div class="filters-form__summary__buttons__col">
+                            <button class="btn _lg _primary">
+                                <i class="icon-map _middle"></i><span>На карте</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+            <div class="page-header _white _subscribe">
+                <div class="container">
+                    <div class="page-header__row">
+                        <div class="page-header__col page-header__md">
+                            <h1 class="page-header__h">Застройщики</h1>
+                            <ul class="breadcrumbs">
+                                <li class="breadcrumbs__item">
+                                    <a href="index.html">Главная</a>
+                                </li>
+                                <li class="breadcrumbs__item _active">
+                                    <a href="new.html">Новостройки</a>
+                                </li>
+                                <li class="breadcrumbs__item _active">
+                                    Застройщики
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page-header__col page-header__subscribe">
+                            <a href="#subscribe" class="btn _solid _lg js-popup">
+                                Подписаться на обновления
+                            </a>
+                            <span class="page-header__subscribe__text">
+                                Будьте в курсе снижения цен по вашему запросу
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="section">
+    <div class="list-header ">
+    <div class="container">
+        <div class="list-header__row">
+            <div class="list-header__sorting _auto">
+                <div class="sorting _1">
+                    <div class="sorting__item">
+                        <label class="sorting__label">Сортировка по:</label>
+                        <select class="sorting__select js-select2">
+                            <option>Опыту на рынке</option>
+                            <option>Количеству квартир</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="list-header__pagination">
+                <ul class="pagination">
+                    <li class="pagination__item">
+                        <a class="pagination__item__link _first _disabled" href="#"></a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link _active" href="#">1</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link" href="#">2</a>
+                    </li>
+                    <li class="pagination__item hidden-sm">
+                        <a class="pagination__item__link" href="#">3</a>
+                    </li>
+                    <li class="pagination__item hidden-sm">
+                        <a class="pagination__item__link" href="#">4</a>
+                    </li>
+                    <li class="pagination__item _skip">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link" href="#">322</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link _last" href="#"></a>
+                    </li>
+                </ul>
+                <span class="list-header__pagination__total">
+                    Показано 10 из 146
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="builders-list">
+            <div class="builders-list__item _full">
+    <div class="builders-list__item__inner">
+        <span class="builders-list__item__img-wrapper">
+            <img src="img/partners/snegiri.png"
+                 srcset="img/partners/snegiri@2x.png 2x,
+                 img/partners/snegiri@3x.png 3x"
+                 alt="СК «Снегири»">
+        </span>
+        <span class="builders-list__item__name">СК «Снегири»</span>
+        <span class="builders-list__item__muted">Работает с 2004 года</span>
+        <div class="builders-list__item__rate-wrapper">
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">средняя цена за кв. м</span>
+                <span class="builders-list__item__accent">52 344</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">квартир в продаже</span>
+                <span class="builders-list__item__accent">827</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">кв. м в продаже</span>
+                <span class="builders-list__item__accent">32 666</span>
+            </span>
+        </div>
+        <a href="#" class="btn _lg _secondary">Подробнее</a>
+    </div>
+</div>
+            <div class="builders-list__item _full">
+    <div class="builders-list__item__inner">
+        <span class="builders-list__item__img-wrapper">
+            <img src="img/partners/cascad.png"
+                 srcset="img/partners/cascad@2x.png 2x,
+                 img/partners/cascad@3x.png 3x"
+                 alt="ООО «Каскад Риэлти»">
+        </span>
+        <span class="builders-list__item__name">ООО «Каскад Риэлти»</span>
+        <span class="builders-list__item__muted">Работает с 2012 года</span>
+        <div class="builders-list__item__rate-wrapper">
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">средняя цена за кв. м</span>
+                <span class="builders-list__item__accent">49 812</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">квартир в продаже</span>
+                <span class="builders-list__item__accent">545</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">кв. м в продаже</span>
+                <span class="builders-list__item__accent">23 458</span>
+            </span>
+        </div>
+        <a href="#" class="btn _lg _secondary">Подробнее</a>
+    </div>
+</div>
+            <div class="builders-list__item _full">
+    <div class="builders-list__item__inner">
+        <span class="builders-list__item__img-wrapper">
+            <img src="img/partners/glavstroy.png"
+                 srcset="img/partners/glavstroy@2x.png 2x,
+                 img/partners/glavstroy@3x.png 3x"
+                 alt="ООО «ГлавСтрой-Истейт»">
+        </span>
+        <span class="builders-list__item__name">ООО «ГлавСтрой-Истейт»</span>
+        <span class="builders-list__item__muted">Работает с 2014 года</span>
+        <div class="builders-list__item__rate-wrapper">
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">средняя цена за кв. м</span>
+                <span class="builders-list__item__accent">51 382</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">квартир в продаже</span>
+                <span class="builders-list__item__accent">912</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">кв. м в продаже</span>
+                <span class="builders-list__item__accent">45 123</span>
+            </span>
+        </div>
+        <a href="#" class="btn _lg _secondary">Подробнее</a>
+    </div>
+</div>
+            <div class="builders-list__item _full">
+    <div class="builders-list__item__inner">
+        <span class="builders-list__item__img-wrapper">
+            <img src="img/partners/snegiri.png"
+                 srcset="img/partners/snegiri@2x.png 2x,
+                 img/partners/snegiri@3x.png 3x"
+                 alt="СК «Снегири»">
+        </span>
+        <span class="builders-list__item__name">СК «Снегири»</span>
+        <span class="builders-list__item__muted">Работает с 2008 года</span>
+        <div class="builders-list__item__rate-wrapper">
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">средняя цена за кв. м</span>
+                <span class="builders-list__item__accent">52 344</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">квартир в продаже</span>
+                <span class="builders-list__item__accent">827</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">кв. м в продаже</span>
+                <span class="builders-list__item__accent">32 666</span>
+            </span>
+        </div>
+        <a href="#" class="btn _lg _secondary">Подробнее</a>
+    </div>
+</div>
+            
+            <div class="builders-list__item _full">
+    <div class="builders-list__item__inner">
+        <span class="builders-list__item__img-wrapper">
+            <img src="img/partners/cascad.png"
+                 srcset="img/partners/cascad@2x.png 2x,
+                 img/partners/cascad@3x.png 3x"
+                 alt="ООО «Каскад Риэлти»">
+        </span>
+        <span class="builders-list__item__name">ООО «Каскад Риэлти»</span>
+        <span class="builders-list__item__muted">Работает с 2012 года</span>
+        <div class="builders-list__item__rate-wrapper">
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">средняя цена за кв. м</span>
+                <span class="builders-list__item__accent">49 812</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">квартир в продаже</span>
+                <span class="builders-list__item__accent">545</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">кв. м в продаже</span>
+                <span class="builders-list__item__accent">23 458</span>
+            </span>
+        </div>
+        <a href="#" class="btn _lg _secondary">Подробнее</a>
+    </div>
+</div>
+            <div class="builders-list__item _full">
+    <div class="builders-list__item__inner">
+        <span class="builders-list__item__img-wrapper">
+            <img src="img/partners/glavstroy.png"
+                 srcset="img/partners/glavstroy@2x.png 2x,
+                 img/partners/glavstroy@3x.png 3x"
+                 alt="ООО «ГлавСтрой-Истейт»">
+        </span>
+        <span class="builders-list__item__name">ООО «ГлавСтрой-Истейт»</span>
+        <span class="builders-list__item__muted">Работает с 2014 года</span>
+        <div class="builders-list__item__rate-wrapper">
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">средняя цена за кв. м</span>
+                <span class="builders-list__item__accent">51 382</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">квартир в продаже</span>
+                <span class="builders-list__item__accent">912</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">кв. м в продаже</span>
+                <span class="builders-list__item__accent">45 123</span>
+            </span>
+        </div>
+        <a href="#" class="btn _lg _secondary">Подробнее</a>
+    </div>
+</div>
+            <div class="builders-list__item _full">
+    <div class="builders-list__item__inner">
+        <span class="builders-list__item__img-wrapper">
+            <img src="img/partners/snegiri.png"
+                 srcset="img/partners/snegiri@2x.png 2x,
+                 img/partners/snegiri@3x.png 3x"
+                 alt="СК «Снегири»">
+        </span>
+        <span class="builders-list__item__name">СК «Снегири»</span>
+        <span class="builders-list__item__muted">Работает с 2008 года</span>
+        <div class="builders-list__item__rate-wrapper">
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">средняя цена за кв. м</span>
+                <span class="builders-list__item__accent">52 344</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">квартир в продаже</span>
+                <span class="builders-list__item__accent">827</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">кв. м в продаже</span>
+                <span class="builders-list__item__accent">32 666</span>
+            </span>
+        </div>
+        <a href="#" class="btn _lg _secondary">Подробнее</a>
+    </div>
+</div>
+            <div class="builders-list__item _full">
+    <div class="builders-list__item__inner">
+        <span class="builders-list__item__img-wrapper">
+            <img src="img/partners/snegiri.png"
+                 srcset="img/partners/snegiri@2x.png 2x,
+                 img/partners/snegiri@3x.png 3x"
+                 alt="СК «Снегири»">
+        </span>
+        <span class="builders-list__item__name">СК «Снегири»</span>
+        <span class="builders-list__item__muted">Работает с 2004 года</span>
+        <div class="builders-list__item__rate-wrapper">
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">средняя цена за кв. м</span>
+                <span class="builders-list__item__accent">52 344</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">квартир в продаже</span>
+                <span class="builders-list__item__accent">827</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">кв. м в продаже</span>
+                <span class="builders-list__item__accent">32 666</span>
+            </span>
+        </div>
+        <a href="#" class="btn _lg _secondary">Подробнее</a>
+    </div>
+</div>
+            
+            <div class="builders-list__item _full">
+    <div class="builders-list__item__inner">
+        <span class="builders-list__item__img-wrapper">
+            <img src="img/partners/glavstroy.png"
+                 srcset="img/partners/glavstroy@2x.png 2x,
+                 img/partners/glavstroy@3x.png 3x"
+                 alt="ООО «ГлавСтрой-Истейт»">
+        </span>
+        <span class="builders-list__item__name">ООО «ГлавСтрой-Истейт»</span>
+        <span class="builders-list__item__muted">Работает с 2014 года</span>
+        <div class="builders-list__item__rate-wrapper">
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">средняя цена за кв. м</span>
+                <span class="builders-list__item__accent">51 382</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">квартир в продаже</span>
+                <span class="builders-list__item__accent">912</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">кв. м в продаже</span>
+                <span class="builders-list__item__accent">45 123</span>
+            </span>
+        </div>
+        <a href="#" class="btn _lg _secondary">Подробнее</a>
+    </div>
+</div>
+            <div class="builders-list__item _full">
+    <div class="builders-list__item__inner">
+        <span class="builders-list__item__img-wrapper">
+            <img src="img/partners/snegiri.png"
+                 srcset="img/partners/snegiri@2x.png 2x,
+                 img/partners/snegiri@3x.png 3x"
+                 alt="СК «Снегири»">
+        </span>
+        <span class="builders-list__item__name">СК «Снегири»</span>
+        <span class="builders-list__item__muted">Работает с 2008 года</span>
+        <div class="builders-list__item__rate-wrapper">
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">средняя цена за кв. м</span>
+                <span class="builders-list__item__accent">52 344</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">квартир в продаже</span>
+                <span class="builders-list__item__accent">827</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">кв. м в продаже</span>
+                <span class="builders-list__item__accent">32 666</span>
+            </span>
+        </div>
+        <a href="#" class="btn _lg _secondary">Подробнее</a>
+    </div>
+</div>
+            <div class="builders-list__item _full">
+    <div class="builders-list__item__inner">
+        <span class="builders-list__item__img-wrapper">
+            <img src="img/partners/snegiri.png"
+                 srcset="img/partners/snegiri@2x.png 2x,
+                 img/partners/snegiri@3x.png 3x"
+                 alt="СК «Снегири»">
+        </span>
+        <span class="builders-list__item__name">СК «Снегири»</span>
+        <span class="builders-list__item__muted">Работает с 2004 года</span>
+        <div class="builders-list__item__rate-wrapper">
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">средняя цена за кв. м</span>
+                <span class="builders-list__item__accent">52 344</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">квартир в продаже</span>
+                <span class="builders-list__item__accent">827</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">кв. м в продаже</span>
+                <span class="builders-list__item__accent">32 666</span>
+            </span>
+        </div>
+        <a href="#" class="btn _lg _secondary">Подробнее</a>
+    </div>
+</div>
+            <div class="builders-list__item _full">
+    <div class="builders-list__item__inner">
+        <span class="builders-list__item__img-wrapper">
+            <img src="img/partners/cascad.png"
+                 srcset="img/partners/cascad@2x.png 2x,
+                 img/partners/cascad@3x.png 3x"
+                 alt="ООО «Каскад Риэлти»">
+        </span>
+        <span class="builders-list__item__name">ООО «Каскад Риэлти»</span>
+        <span class="builders-list__item__muted">Работает с 2012 года</span>
+        <div class="builders-list__item__rate-wrapper">
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">средняя цена за кв. м</span>
+                <span class="builders-list__item__accent">49 812</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">квартир в продаже</span>
+                <span class="builders-list__item__accent">545</span>
+            </span>
+            <span class="builders-list__item__rate">
+                <span class="builders-list__item__muted">кв. м в продаже</span>
+                <span class="builders-list__item__accent">23 458</span>
+            </span>
+        </div>
+        <a href="#" class="btn _lg _secondary">Подробнее</a>
+    </div>
+</div>
+            
+        </div>
+    </div>
+
+    <div class="list-header _white _footer">
+    <div class="container">
+        <div class="list-header__row">
+            <div class="list-header__sorting _auto">
+                <div class="sorting _1">
+                    <div class="sorting__item">
+                        <label class="sorting__label">Сортировка по:</label>
+                        <select class="sorting__select js-select2">
+                            <option>Опыту на рынке</option>
+                            <option>Количеству квартир</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="list-header__pagination">
+                <ul class="pagination">
+                    <li class="pagination__item">
+                        <a class="pagination__item__link _first _disabled" href="#"></a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link _active" href="#">1</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link" href="#">2</a>
+                    </li>
+                    <li class="pagination__item hidden-sm">
+                        <a class="pagination__item__link" href="#">3</a>
+                    </li>
+                    <li class="pagination__item hidden-sm">
+                        <a class="pagination__item__link" href="#">4</a>
+                    </li>
+                    <li class="pagination__item _skip">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link" href="#">322</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__item__link _last" href="#"></a>
+                    </li>
+                </ul>
+                <span class="list-header__pagination__total">
+                    Показано 10 из 146
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container">
+        <button class="btn _secondary _lg section__button">Показать еще</button>
+    </div>
+</section>
+            <section class="section _inverse  callme">
+    <div class="container">
+        <div class="callme__wrapper">
+            <div class="callme__inner">
+                <h3 class="section__h">Оставьте ваш номер и мы вам перезвоним</h3>
+                <p class="section__lead">Заполните заявку на подбор недвижимости. 
+                    Наш специалист свяжется с Вами и ответит на все вопросы!</p>
+                <form>
+                    <div class="input-group__wrapper">
+                        <div class="input-group _lg _white _secondary">
+                            <label>Ваше имя:</label>
+                            <input value="Иван">
+                        </div>
+                        <div class="input-group _lg _white _secondary">
+                            <label>Ваш телефон:</label>
+                            <input value="+7 (123) 456-78-90" class="js-mask__tel">
+                        </div>
+                    </div>
+                    <div class="input-group__wrapper _submit">
+                        <div class="input-group">
+                            <button class="btn _solid _lg _shadow" type="submit">Жду звонка</button>
+                        </div>
+                        <div class="input-group _lg _white">
+                            <div class="input-help">Отправляя заявку вы соглашаетесь на обработку персональных данных</div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="callme__wrapper__img-wrapper _2">
+                <img src="img/call2.png"
+                     srcset="img/call2@2x.png 2x,
+                     img/call2@3x.png 3x"
+                     alt="alt text">
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="container section">
+    <div class="seo">
+        <h3 class="seo_h">Недвижимость в Нижнем Новгороде</h3>
+        <p>Недвижимость в Нижнем Новгороде, удивительно гармонично сочетающем 
+            черты современного индустриального центра Приволжского 
+            федерального округа с высоким промышленным и научным 
+            потенциалом и города, богатого историческими и культурными 
+            ценностями, ревностно сохраняющего традиции русского народа, 
+            всегда привлекала россиян и приезжих из стран, как ближнего, 
+            так и дальнего зарубежья. Даже в период минувшего 
+            финансово-экономического кризиса по числу объектов, реализуемых 
+            только через агентство недвижимости, Нижний Новгород не многим 
+            уступал двум признанным столицам России – Москве и Санкт-Петербургу. 
+            Причем покупка недвижимости была почти одинаково интенсивной 
+            и в жилом и в коммерческом секторах, а высокий спрос на аренду 
+            складских и офисных помещений явно демонстрировал привлекательность 
+            города для бизнес структур разного уровня. Вместе с тем повышенный 
+            интерес россиян и приезжих к Нижнему Новгороду обусловил 
+            и интенсивное развитие негативных явлений на рынке недвижимости, 
+            как вторичном, так и первичном.</p>
+        <p>Количество маклеров, частных риэлторов, фирм-однодневок, ипотечных 
+            псевдоброкеров и иного рода посредников между покупателем и продавцом 
+            недвижимости в городе неуклонно растет, как увеличивается и число 
+            обманутых ими россиян – нижегородцев и приезжих из других регионов 
+            страны. Поэтому компания «Монолит» предлагает своим соотечественникам 
+            подыскивать варианты продажи/покупки жилья, аренды помещений 
+            исключительно через агентство недвижимости с большим стажем работы, 
+            где гарантирована правовая чистота и безопасность сделки, 
+            а ипотечное кредитование можно реализовать по наиболее лояльным 
+            на текущий момент программам, в сжатые сроки и с полным юридическим 
+            сопровождением.</p>
+    </div>
+</section>
+            <div class="hidden">
+                <div id="subscribe" class="popup-cnt">
+    <div class="popup popup-subscribe">
+        <h3 class="popup__h3">Подписаться на обновления</h3>
+        <p class="popup__lead">Будьте в курсе снижения цен по вашему запросу</p>
+        <form id="popup_subscribe_form" class="popup-subscribe__form js-validate">
+            <div class="input-group__wrapper">
+                <div class="input-group _lg _secondary">
+                    <label>E-mail</label>
+                    <input type="text" name="email" value="" required>
+                </div>
+            </div>
+            <div class="input-group__wrapper _submit">
+                <div class="input-group">
+                    <button class="btn _solid _lg _shadow" type="submit">Подписаться</button>
+                </div>
+                <div class="input-group">
+                    <div class="input-help">
+                        Подписываясь на обновления вы соглашаетесь на обработку 
+                        персональных данных</div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+            </div>
+            <footer class="footer">
+    <div class="footer__dark">
+        <div class="container">
+            <ul class="footer__dark__menu">
+                <li><a href="second.html">Вторичное жилье</a></li>
+                <li><a href="#">Новостройки без комиссии</a></li>
+                <li><a href="#">Дома, дачи, участки</a></li>
+                <li><a href="rent.html">Аренда</a></li>
+                <li><a href="commercial.html">Коммерческая</a></li>
+                <li><a href="#">Ипотека</a></li>
+                <li><a href="#">Продавцу</a></li>
+                <li><a href="#">Аналитика</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer__light">
+        <div class="container">
+            <div class="footer__up">
+                <div class="footer__up__col _col1">
+                    <ul class="footer__menu">
+                        <li><a href="#">Работа в компании «Монолит Истейт»</a></li>
+                        <li><a href="#">О компании «Монолит Истейт»</a></li>
+                        <li><a href="news.html">Новости компании</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__up__col _col2">
+                    <ul class="footer__menu">
+                        <li><a href="agents.html">Специалисты по недвижимости</a></li>
+                        <li><a href="builders.html">Застройщики</a></li>
+                        <li><a href="#">Аналитика</a></li>
+                    </ul>
+                </div>
+                <div class="footer__up__col _col3">
+                    <ul class="footer__contacts">
+                        <li>г. Нижний Новгород,<br>
+                            ул. Большая Покровская, д. 69</li>
+                        <li>Email: kostina@monolit.nnov.ru<br>
+                            Тел.: <a href="tel:+78312199067">+7 (831) 219-90-67</a></li>
+                    </ul>
+                </div>
+                <div class="footer__up__col _col4">
+                    <div class="footer__social">
+                        
+<ul class="social-links">
+    <li><a href="#" class="_fb" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_instagram" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_vk" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_twitter" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_ok" rel="noopener nofollow"></a></li>
+</ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__down">
+                <div class="footer__down__col _col1">
+                    <div class="footer__copyright">
+                        © Copyright 2017 Агентство недвижимости "Монолит Истейт». Все права защищены.
+                    </div>
+                </div>
+                <div class="footer__down__col _col2">
+                    <ul class="footer__agreement">
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                        <li><a href="#">Пользовательское соглашение</a></li>
+                    </ul>
+                </div>
+                <div class="footer__down__col _col3">
+                    <a href="//riverstart.ru" target="_blank" rel="noopener nofollow" class="footer__made">
+                        <img src="img/riverstart.svg" alt="riverstart">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+            <div class="hidden">
+    <div id="call" class="popup-cnt">
+    <div class="popup popup-call">
+        <h3 class="popup__h3">Заказать обратный звонок</h3>
+        <p class="popup__lead">Перезвоним в течение 5 минут</p>
+        <form id="popup_call_form" class="popup-call__form js-validate">
+            <div class="input-group _lg _secondary">
+                <label>Как к вам обращаться?</label>
+                <input type="text" name="name" value="Иван" required>
+            </div>
+            <div class="input-group _lg _secondary">
+                <label>Ваш телефон</label>
+                <input type="text" name="phone" value="7" 
+                       class="js-mask__tel" required>
+            </div>
+            <div class="input-group">
+                <button class="btn _solid _lg _shadow" type="submit">Перезвоните мне</button>
+            </div>
+            <div class="input-group">
+                <div class="input-help popup-call__help">Нажимая кнопку «Перезвоните мне» вы принимаете Условия пользовательского соглашения и соглашаетесь на обработку ваших персональных данных.</div>
+            </div>
+        </form>
+        <img class="popup-call__img" src="img/call.png"
+             srcset="img/call@2x.png 2x,img/call@3x.png 3x"
+             alt="alt text">
+    </div>
+</div>
+    <div id="signup" class="popup-cnt">
+    <div class="popup popup-signup">
+        <h3 class="popup__h3">Регистрация на сайте</h3>
+        <p class="popup__lead">Займет пару минут</p>
+        <form id="popup_signup_form" class="popup-signup__form">
+            <div class="popup-signup__form__row1">
+                <div class="input-group _lg _secondary">
+                    <label>E-mail <span class="link">или телефон</span></label>
+                    <input type="text" name="name" value="Иван" required class="error">
+                    <div class="input-help">Некорректый e-mail</div>
+                </div>
+                <div class="input-group _lg _secondary">
+                    <label>Пароль</label>
+                    <input type="password" name="password" value="J3hdIsd Kj" required class="js-password">
+                    <div class="input-help _password">
+                        <span class="input-help__pass _0">Очень слабый пароль</span>
+                        <span class="input-help__pass _1">Слабый пароль</span>
+                        <span class="input-help__pass _2">Средний пароль</span>
+                        <span class="input-help__pass _3">Хороший пароль</span>
+                        <span class="input-help__pass _4">Очень хороший пароль</span>
+                    </div>
+                </div>
+                <div class="input-group _lg _secondary">
+                    <label>Повторите пароль</label>
+                    <input type="password" name="password_repeat" value="" required class="error">
+                    <div class="input-help">Введите пароль повторно</div>
+                </div>
+            </div>
+            <div class="popup-signup__form__row2">
+                <div class="input-group">
+                    <button class="btn _solid _lg _shadow" type="submit">Регистрация</button>
+                </div>
+                <div class="input-group">
+                    <div class="popup-signup__form__login">Я <a href="#login" class="js-popup">уже зарегистрирован</a> на вашем сайте</div>
+                </div>
+            </div>
+            <div class="popup-signup__form__row3">
+                <div class="input-group">
+                    <div class="input-help">Нажимая кнопку «Зарегистрироваться» вы принимаете Условия пользовательского соглашения и соглашаетесь на обработку ваших персональных данных.</div>
+                </div>
+                <div class="input-group">
+                    <div class="input-help _black">При регистрации на сайте вы получите доступ к своему личному кабинету, где сможете добавлять объявления в избранное и наблюдать за ними.</div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+    <div id="login" class="popup-cnt">
+    <div class="popup popup-signup _login">
+        <h3 class="popup__h3">Вход в личный кабинет</h3>
+        <form id="popup_login_form" class="popup-signup__form">
+            <div class="popup-signup__form__row1">
+                <div class="input-group _lg _secondary">
+                    <label>E-mail <span class="link">или телефон</span></label>
+                    <input type="text" name="name" value="user@host.com" required>
+                </div>
+                <div class="input-group _lg _secondary">
+                    <label>Пароль</label>
+                    <input type="password" name="password" value="J3hdIsd Kj" required class="error">
+                    <div class="input-help">
+                        Пароль не верный, <a href="#signup" class="js-popup">Забыли пароль?</a>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-signup__form__row2">
+                <div class="input-group">
+                    <button class="btn _solid _lg _shadow" type="submit">Войти</button>
+                </div>
+                <div class="input-group">
+                    <div class="popup-signup__form__login">Мне сначала нужно 
+                        <a href="#signup" class="js-popup">зарегистрироваться</a></div>
+                </div>
+            </div>
+            <div class="popup-signup__form__row3">
+                <div class="input-group">
+                    <div class="popup-signup__form__social">
+                        <span class="popup-signup__form__social__text">
+                            Войти через социальные сети
+                        </span>
+                        
+<ul class="social-links">
+    <li><a href="#" class="_fb" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_instagram" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_vk" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_twitter" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_ok" rel="noopener nofollow"></a></li>
+</ul>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        <div class="dev">
+    <span id="dev_toggler" class="dev__toggler">&lt;/&gt;</span>
+    <ul>
+        <li><a href="index.html">main</a></li>
+        <li><a href="second.html">second</a></li>
+        <li><a href="rent.html">rent</a></li>
+        <li><a href="commercial.html">commercial</a></li>
+        <li><a href="result.html">result</a></li>
+        <li><a href="detail.html">detail</a></li>
+        <li><a href="new-result.html">new-result</a></li>
+        <li><a href="content.html">content</a></li>
+        <li><a href="builders.html">builders</a></li>
+        <li><a href="news.html">news</a></li>
+        <li><a href="news-detail.html">news-detail</a></li>
+        <li><a href="agents.html">agents</a></li>
+        <li><a href="agent.html">agent</a></li>
+        <li><a href="contacts.html">contacts</a></li>
+        <li><a href="404.html">404</a></li>
+    </ul>
+</div>
+<script>
+    (function () {
+        var t = document.getElementById('dev_toggler');
+        var p = t.parentElement;
+        t.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.parentElement.classList.toggle('_active');
+        });
+        p.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+        window.addEventListener('click', function () {
+            p.classList.remove('_active');
+        });
+    }());
+</script>
+<script>
+    var appConfig = {
+        breakpoint: {
+            sm: 320,
+            md: 768,
+            lg: 1280
+        },
+        sliderFadeSpeed: 800,
+        sliderAutoplaySpeed: 8000
+    };
+</script>
+
+<script src="js/libs/jquery.min.js"></script>
+<script src="js/libs/slick.min.js"></script>
+<script src="js/libs/jquery.scrollbar.min.js"></script>
+<script src="js/libs/jquery.fancybox.min.js"></script>
+<script src="js/libs/jquery.inputmask.bundle.min.js"></script>
+<script src="js/libs/jquery.easytabs.min.js"></script>
+<script src="js/libs/jquery.validate.min.js"></script>
+<script src="js/libs/select2.min.js"></script>
+<script src="js/libs/nouislider.min.js"></script>
+<script src="js/libs/datepicker.min.js"></script>
+<script src="js/common.js"></script>
+    </body>
+</html>

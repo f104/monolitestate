@@ -21,9 +21,10 @@
         margin-bottom: 18px;
         @include media-breakpoint-up(md) {
             margin-bottom: 20px;
-            /*&:not(._auto) {*/
             flex-basis: 100%;
-            /*}*/
+            &._auto {
+                flex-basis: auto;
+            }
         }
         @include media-breakpoint-up(lg) {
             flex-basis: auto;

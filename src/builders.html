@@ -1,0 +1,56 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "Застройщики"
+    })
+    <body>
+        @@include('./template/header.html', {
+        "active": ""
+        })
+        <div class="content">
+            @@include('./template/result/filters-new.html')
+            <div class="page-header _white _subscribe">
+                <div class="container">
+                    <div class="page-header__row">
+                        <div class="page-header__col page-header__md">
+                            <h1 class="page-header__h">Застройщики</h1>
+                            <ul class="breadcrumbs">
+                                <li class="breadcrumbs__item">
+                                    <a href="index.html">Главная</a>
+                                </li>
+                                <li class="breadcrumbs__item _active">
+                                    <a href="new.html">Новостройки</a>
+                                </li>
+                                <li class="breadcrumbs__item _active">
+                                    Застройщики
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page-header__col page-header__subscribe">
+                            <a href="#subscribe" class="btn _solid _lg js-popup">
+                                Подписаться на обновления
+                            </a>
+                            <span class="page-header__subscribe__text">
+                                Будьте в курсе снижения цен по вашему запросу
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @@include('./template/builders/list.html')
+            @@include('./template/callme.html', {
+            "title": "Оставьте ваш номер и мы вам перезвоним",
+            "margin": 1,
+            "class": "_2",
+            "img": "call2"
+            })
+            @@include('./template/seo.html')
+            <div class="hidden">
+                @@include('./template/popups/subscribe.html')
+            </div>
+            @@include('./template/footer.html')
+            @@include('./template/popups-common.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        @@include('./template/foot.html')
+    </body>
+</html>
