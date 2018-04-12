@@ -5,7 +5,7 @@
 
 @mixin link-in-text {
     &:after {
-        content: none;
+        content: none !important;
     }
 }
 
@@ -116,5 +116,24 @@
     &:hover {
         top: -10px;
         box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.12);
+    }
+}
+
+@mixin md-full() {
+    margin-left: - $container-padding-sm;
+    margin-right: - $container-padding-sm;
+    padding-left: $container-padding-sm;
+    padding-right: $container-padding-sm;
+    @include media-breakpoint-up(md) {
+        margin-left: - $container-padding-md;
+        margin-right: - $container-padding-md;
+        padding-left: $container-padding-md;
+        padding-right: $container-padding-md;
+    }
+    @include media-breakpoint-up(lg) {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 }

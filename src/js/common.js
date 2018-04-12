@@ -21,7 +21,7 @@ jQuery(function () {
         initHypothec();
         initDatepicker()
         initScrollbar()
-
+        initAntispam()
     });
 
     $(window).on('resize', function () {
@@ -683,6 +683,8 @@ jQuery(function () {
         }
         if ($(window).outerWidth() < appConfig.breakpoint.lg) {
             $('.js-scrollbar-md').scrollbar();
+        } else {
+            $('.js-scrollbar-lg').scrollbar();
         }
         $(window).on('resize', function () {
             if ($(window).outerWidth() < appConfig.breakpoint.md) {
@@ -694,11 +696,19 @@ jQuery(function () {
         $(window).on('resize', function () {
             if ($(window).outerWidth() < appConfig.breakpoint.lg) {
                 $('.js-scrollbar-md').scrollbar();
+                $('.js-scrollbar-lg').scrollbar('destroy');
             } else {
                 $('.js-scrollbar-md').scrollbar('destroy');
+                $('.js-scrollbar-lg').scrollbar();
             }
         });
 //        $('.js-scrollbar-hot').scrollbar();
+    }
+    
+    function initAntispam() {
+        setTimeout(function () {
+            $('input[name="email3"],input[name="info"],input[name="text"]').attr('value', '').val('');
+        }, 5000);
     }
 
 });

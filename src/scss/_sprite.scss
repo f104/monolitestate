@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 7.7em 121.6em;
+    background-size: 7.7em 141.2em;
 }
 
 .no-svg .sprite:before {
@@ -17,8 +17,35 @@
 
 
 
-  .sprite.fb:before {
+  .sprite.accept:before {
       background-position: 0em 0em;
+      width: 2.6em;
+      height: 2.6em;
+  }
+
+
+
+
+  .sprite.bank:before {
+      background-position: 0em -2.6em;
+      width: 2.5em;
+      height: 1.9em;
+  }
+
+
+
+
+  .sprite.clock:before {
+      background-position: 0em -4.5em;
+      width: 2.5em;
+      height: 2.5em;
+  }
+
+
+
+
+  .sprite.fb:before {
+      background-position: 0em -7em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -27,7 +54,7 @@
 
 
   .sprite.fb-hover:before {
-      background-position: 0em -5.2em;
+      background-position: 0em -12.2em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -36,7 +63,7 @@
 
 
   .sprite.instagram:before {
-      background-position: 0em -10.4em;
+      background-position: 0em -17.4em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -45,7 +72,7 @@
 
 
   .sprite.instagram-hover:before {
-      background-position: 0em -15.6em;
+      background-position: 0em -22.6em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -54,7 +81,7 @@
 
 
   .sprite.man-baloon:before {
-      background-position: 0em -20.8em;
+      background-position: 0em -27.8em;
       width: 5.5em;
       height: 4.9em;
   }
@@ -62,8 +89,26 @@
 
 
 
+  .sprite.map-minus:before {
+      background-position: 0em -32.7em;
+      width: 6.3em;
+      height: 6.3em;
+  }
+
+
+
+
+  .sprite.map-plus:before {
+      background-position: 0em -39em;
+      width: 6.3em;
+      height: 6.3em;
+  }
+
+
+
+
   .sprite.ok:before {
-      background-position: 0em -25.7em;
+      background-position: 0em -45.3em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -72,7 +117,7 @@
 
 
   .sprite.ok-hover:before {
-      background-position: 0em -30.9em;
+      background-position: 0em -50.5em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -81,7 +126,7 @@
 
 
   .sprite.oldprice:before {
-      background-position: 0em -36.1em;
+      background-position: 0em -55.7em;
       width: 2.9em;
       height: 2.9em;
   }
@@ -90,7 +135,7 @@
 
 
   .sprite.realty-check:before {
-      background-position: 0em -39em;
+      background-position: 0em -58.6em;
       width: 1.8em;
       height: 1.4em;
   }
@@ -99,7 +144,7 @@
 
 
   .sprite.realty-commerce:before {
-      background-position: 0em -40.4em;
+      background-position: 0em -60em;
       width: 3.5em;
       height: 3.4em;
   }
@@ -108,7 +153,7 @@
 
 
   .sprite.realty-commerce-o:before {
-      background-position: 0em -43.8em;
+      background-position: 0em -63.4em;
       width: 3.5em;
       height: 3.4em;
   }
@@ -117,7 +162,7 @@
 
 
   .sprite.realty-new:before {
-      background-position: 0em -47.2em;
+      background-position: 0em -66.8em;
       width: 5.8em;
       height: 3.4em;
   }
@@ -126,7 +171,7 @@
 
 
   .sprite.realty-new-o:before {
-      background-position: 0em -50.6em;
+      background-position: 0em -70.2em;
       width: 5.8em;
       height: 3.4em;
   }
@@ -135,7 +180,7 @@
 
 
   .sprite.realty-second:before {
-      background-position: 0em -54em;
+      background-position: 0em -73.6em;
       width: 3.5em;
       height: 3.5em;
   }
@@ -144,7 +189,7 @@
 
 
   .sprite.realty-second-o:before {
-      background-position: 0em -57.5em;
+      background-position: 0em -77.1em;
       width: 3.5em;
       height: 3.5em;
   }
@@ -153,7 +198,7 @@
 
 
   .sprite.realty-village:before {
-      background-position: 0em -61em;
+      background-position: 0em -80.6em;
       width: 3.7em;
       height: 3.7em;
   }
@@ -162,7 +207,7 @@
 
 
   .sprite.realty-village-o:before {
-      background-position: 0em -64.7em;
+      background-position: 0em -84.3em;
       width: 3.7em;
       height: 3.7em;
   }
@@ -171,7 +216,7 @@
 
 
   .sprite.russia:before {
-      background-position: 0em -68.4em;
+      background-position: 0em -88em;
       width: 7.7em;
       height: 4.4em;
   }
@@ -180,7 +225,7 @@
 
 
   .sprite.sales-car:before {
-      background-position: 0em -72.8em;
+      background-position: 0em -92.4em;
       width: 4.1em;
       height: 3.4em;
   }
@@ -189,7 +234,7 @@
 
 
   .sprite.sales-hand:before {
-      background-position: 0em -76.2em;
+      background-position: 0em -95.8em;
       width: 4em;
       height: 4em;
   }
@@ -198,7 +243,7 @@
 
 
   .sprite.sales-home:before {
-      background-position: 0em -80.2em;
+      background-position: 0em -99.8em;
       width: 4.2em;
       height: 4.6em;
   }
@@ -207,7 +252,7 @@
 
 
   .sprite.sales-hypothec:before {
-      background-position: 0em -84.8em;
+      background-position: 0em -104.4em;
       width: 4.7em;
       height: 2.9em;
   }
@@ -216,7 +261,7 @@
 
 
   .sprite.sales-money:before {
-      background-position: 0em -87.7em;
+      background-position: 0em -107.3em;
       width: 3.9em;
       height: 3.9em;
   }
@@ -225,7 +270,7 @@
 
 
   .sprite.sales-ring:before {
-      background-position: 0em -91.6em;
+      background-position: 0em -111.2em;
       width: 4.7em;
       height: 4.7em;
   }
@@ -234,7 +279,7 @@
 
 
   .sprite.sweet-home:before {
-      background-position: 0em -96.3em;
+      background-position: 0em -115.9em;
       width: 4.7em;
       height: 4.5em;
   }
@@ -243,7 +288,7 @@
 
 
   .sprite.twitter:before {
-      background-position: 0em -100.8em;
+      background-position: 0em -120.4em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -252,7 +297,7 @@
 
 
   .sprite.twitter-hover:before {
-      background-position: 0em -106em;
+      background-position: 0em -125.6em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -261,7 +306,7 @@
 
 
   .sprite.vk:before {
-      background-position: 0em -111.2em;
+      background-position: 0em -130.8em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -270,7 +315,7 @@
 
 
   .sprite.vk-hover:before {
-      background-position: 0em -116.4em;
+      background-position: 0em -136em;
       width: 5.2em;
       height: 5.2em;
   }

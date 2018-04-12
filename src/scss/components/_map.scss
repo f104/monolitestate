@@ -1,0 +1,68 @@
+.placemark_layout_container { 
+    position: relative;
+}
+.placemark {
+    position: absolute;
+    left: -15.5px;
+    top: -42px;
+    width: 31px;
+    height: 42px;
+    position: relative;
+    &:after {
+        content: '';
+        box-shadow: 0px 0px 35px 10px rgba(0,0,0,0.4);
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        z-index: -1;
+    }
+    &._dot {
+        span {
+            position: absolute;
+            top: 11px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            width: 9px;
+            height: 9px;
+            background-color: $primary;
+            border-radius: 50%;
+        }
+    }
+    &._primary {
+        svg path {
+            fill: $primary;
+        }
+        span {
+            background-color: $white;
+        }
+
+    }
+}
+
+.map {
+    .map__content {
+        height: 100%;
+    }
+    .map__controls {
+        .map__controls__zoom {
+            @include list-unstyled;
+            margin-bottom: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            li {
+                margin-bottom: 8px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
+        .map__control {
+            cursor: pointer;
+        }
+    }
+}

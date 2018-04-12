@@ -322,10 +322,10 @@ $agents-list-gutter: 26px;
         }
     }
     .agent-header__phone {
-        @include link-in-text;
+        /*@include link-in-text;*/
         [class^="icon-"] {
             font-size: 16px;
-            margin-right: 9px;
+            /*margin-right: 9px;*/
         }
     }
     .agent-header__img {

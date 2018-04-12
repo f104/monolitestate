@@ -1,55 +1,129 @@
 .promo {
     .promo__wrapper {
-        display: block;
+        background-image: linear-gradient(138deg, #16222a, #3a6073);
         margin-left: -$container-padding-sm;
         margin-right: -$container-padding-sm;
         padding-left: $container-padding-sm;
         padding-right: $container-padding-sm;
-        @include bg-img-wrapper;
         @include link-in-text;
-        height: 126px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        .promo__img-inner {
-            @include bg-img-inner(#000, .2);
+        @include media-breakpoint-up(md) {
+            background-image: linear-gradient(109deg, #16222a, #3a6073);
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 52px;
+            padding-right: 52px;
+            border-radius: $border-radius;
         }
-        .promo__img {
-            @include bg-img-height-100;
+        @include media-breakpoint-up(lg) {
+            background-image: linear-gradient(102deg, #16222a, #3a6073);
         }
         .promo__h {
             position: relative;
             font-size: 22px;
             line-height: 1.08;
             font-weight: normal;
-            text-align: right;
             color: $white;
             margin-bottom: 14px;
-        }
-        .promo__p {
-            position: relative;
-            text-align: right;
-            color: $white;
-            margin-bottom: 0;            
-        }
-    }
-}
-@include media-breakpoint-up(md) {
-    .promo {
-        .promo__wrapper {
-            margin-left: 0;
-            margin-right: 0;
-            padding-left: 52px;
-            padding-right: 52px;
-            height: 250px;
-            border-radius: $border-radius;
-            .promo__h {
+            &:last-child {
+                margin-bottom: 0;
+            }
+            @include media-breakpoint-up(md) {
                 font-size: 42px;
                 line-height: 1.12;
                 margin-bottom: 23px;
             }
-            .promo__p {
+        }
+        .promo__p {
+            position: relative;
+            color: $white;
+            margin-bottom: 20px;  
+            &:last-child {
+                margin-bottom: 0;
+            }
+            @include media-breakpoint-up(md) {
                 font-size: 27px;
+            }
+        }
+    }
+    &._right {
+        .promo__wrapper {
+            text-align: right;
+        }
+    }
+    &._bg-img {
+        .promo__wrapper {
+            @include bg-img-wrapper;
+            height: 126px;
+            @include media-breakpoint-up(md) {
+                height: 250px;
+            }
+            .promo__img-inner {
+                @include bg-img-inner(#000, .2);
+            }
+            .promo__img {
+                @include bg-img-height-100;
+            }
+        }
+    }
+    &._style1 {
+        .promo__wrapper {
+            padding-top: 20px;
+            position: relative;
+            overflow: hidden;
+            @include media-breakpoint-up(md) {
+                height: 250px;
+                padding-top: 30px;
+                padding-bottom: 35px;
+                justify-content: space-between;
+            }
+            .promo__img-inner {
+                margin-left: -$container-padding-sm;
+                margin-right: -$container-padding-sm;
+                margin-top: 20px;
+                @include media-breakpoint-up(md) {
+                    margin: 0;
+                    position: absolute;
+                    top: 15px;
+                    bottom: 0;
+                    left: 470px;
+                    right: 0;
+                }
+                @include media-breakpoint-up(lg) {
+                    left: 650px;
+                }
+            }
+            .promo__img {
+                width: 100%;
+                @include media-breakpoint-up(md) {
+                    width: unset;
+                    min-width: 100%;
+                    min-height: 100%;
+                }
+            }
+            .promo__h {
+                @include media-breakpoint-up(md) {
+                    font-size: 28px;
+                }
+                @include media-breakpoint-up(lg) {
+                    font-size: 40px;
+                }
+            }
+            .promo__p {
+                @include media-breakpoint-up(md) {
+                    font-size: 18px;
+                    flex: 1;
+                }
+                @include media-breakpoint-up(lg) {
+                    font-size: 21px;
+                }
+            }
+            .promo__btn {
+                @include media-breakpoint-up(md) {
+                    width: 210px;
+                }                
             }
         }
     }

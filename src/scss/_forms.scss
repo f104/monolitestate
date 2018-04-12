@@ -21,7 +21,7 @@ form {
     white-space: nowrap;
     @include transition(all);
     &:after {
-        content: none;
+        content: none !important;
     }
     &._primary {
         border: solid 1px $primary;        

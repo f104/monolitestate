@@ -1,0 +1,91 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "Контакты"
+    })
+    <body>
+        @@include('./template/header.html', {
+        "active": ""
+        })
+        <div class="content">
+            <section class="section contacts">
+                <div class="page-header container">
+                    <h1 class="page-header__h _lg">Контакты</h1>
+                    <p class="page-header__lead _lg">Агентство недвижимости «Монолит Истейт»</p>
+                </div>
+                <div class="contacts__map map">
+                    <div id="map" class="map__content"></div>
+                    <div class="container map__controls">
+                        <ul class="map__controls__zoom">
+                            <li><i class="sprite map-plus map__control js-map__zoom _in"></i></li>
+                            <li><i class="sprite map-minus map__control js-map__zoom _out"></i></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container contacts__content-wrapper">
+                    <div class="contacts__content">
+                        <div class="contacts-slider js-contacts-slider">
+                            @@loop('./template/contacts/item.html', [
+                            {
+                            "title": "Офис на Покровской, 69", 
+                            "address":"г. Нижний Новгород, ул. Большая Покровcкая, д. 69"
+                            },
+                            {
+                            "title": "Офис в центре Сормово",
+                            "address":"г. Нижний Новгород, ул. Канавинская, д. 23"
+                            },
+                            {
+                            "title": "Офис на Белинского, 71",
+                            "address":"г. Нижний Новгород, ул. Большая Покровcкая, д. 69"
+                            },
+                            {
+                            "title": "Офис на Канавинской, 23",
+                            "address":"г. Нижний Новгород, ул. Канавинская, д. 23"
+                            }
+                            ])
+                        </div>
+                        <div class="contacts-scroller js-contacts-scroller
+                             js-scrollbar-lg scrollbar-outer _hor">
+                            <ul class="contacts-scroller__inner">
+                                <li>
+                                    <a href="#" 
+                                       class="contacts-scroller__link _active js-contacts-scroller__link"
+                                       data-geo="56.314953, 43.999951">
+                                        <span>Офис на Покровской, 69</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" 
+                                       class="contacts-scroller__link js-contacts-scroller__link"
+                                       data-geo="56.323889, 43.920087">
+                                        <span>Офис в центре Сормово</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" 
+                                       class="contacts-scroller__link js-contacts-scroller__link"
+                                       data-geo="56.342388, 44.089517">
+                                        <span>Офис на Белинского, 71</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" 
+                                       class="contacts-scroller__link js-contacts-scroller__link"
+                                       data-geo="56.288103, 43.928842">
+                                        <span>Офис на Канавинской, 23</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @@include('./template/footer.html')
+            @@include('./template/popups-common.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        @@include('./template/foot.html')
+        <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug"></script>
+        <script src="js/contacts.js"></script>
+    </body>
+</html>

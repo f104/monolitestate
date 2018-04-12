@@ -495,12 +495,15 @@ $hypothec-gutter-width: $grid-gutter-width;
     .hypothec-request__feat {
         @include list-unstyled;
         font-size: 14px;
-        /*margin-bottom: 25px;*/
         .hypothec-request__feat__item {
             margin-bottom: 25px;
-            /*            &:last-of-type {
-                            margin-bottom: 0;
-                        }*/
+            padding-left: 37px;
+            position: relative;
+            .sprite {
+                position: absolute;
+                left: 0;
+                top: 1px;
+            }
         }
     }
     .hypothec-request__agent {

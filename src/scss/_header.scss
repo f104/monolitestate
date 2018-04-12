@@ -2,7 +2,7 @@ body {
     padding-top: 60px;
 }
 .header {
-    margin-bottom: 15px;
+    margin-bottom: map_get($header-margin-bottom, sm);
     .header__top {
         display: none;
     }
@@ -195,7 +195,7 @@ body {
         padding-top: 0;
     }
     .header {
-        margin-bottom: 25px;
+        margin-bottom: map_get($header-margin-bottom, md);
         .header__top {
             display: block;
             font-size: 10px;
@@ -385,7 +385,7 @@ body {
 }
 @include media-breakpoint-up(lg) {
     .header {
-        margin-bottom: 30px;
+        margin-bottom: map_get($header-margin-bottom, lg);
         .header__main {
             .container {
                 height: 92px;

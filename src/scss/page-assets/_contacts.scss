@@ -1,0 +1,196 @@
+.contacts {
+    position: relative;
+    &.section {
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+            margin-top: - map_get($header-margin-bottom, md);
+        }
+        @include media-breakpoint-up(lg) {
+            margin-top: - map_get($header-margin-bottom, lg);
+        }
+    }
+    .page-header {
+        margin-bottom: 15px;
+        @include media-breakpoint-up(md) {
+            position: absolute;
+            top: 25px;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+        @include media-breakpoint-up(lg) {
+            top: 40px;
+        }
+    }
+    .contacts__map {
+        position: relative;
+        height: 272px;
+        @include media-breakpoint-up(md) {
+            height: 530px;
+        }
+        @include media-breakpoint-up(lg) {
+            height: 650px;
+        }
+    }
+    .contacts__content-wrapper {
+        position: relative;
+/*        @include media-breakpoint-up(lg) {
+            position: absolute;
+            bottom: 65px;
+            left: 0;
+            right: 0;
+        }*/
+    }
+    .contacts__content {
+        position: relative;
+        @include md-full;
+        background-color: $white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        @include media-breakpoint-up(md) {
+            padding-top: 25px;
+            padding-bottom: 30px;
+        }
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            right: $container-padding-lg;
+            bottom: 65px;
+            padding-left: 30px;
+            padding-right: 30px;
+            width: 488px;
+            border-radius: $border-radius;
+            box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.13);
+        }
+    }
+}
+
+.contacts-item {
+    margin-bottom: 30px;
+    @include media-breakpoint-up(md) {
+        margin-bottom: 40px;
+    }
+    .contacts-item__h {
+        font-size: 22px;
+        font-weight: 300;
+        margin-bottom: 17px;
+        @include media-breakpoint-up(md) {
+            font-size: 32px;
+            line-height: 1.06;
+            margin-bottom: 26px;            
+        }
+    }
+    .contacts-item__ul {
+        @include list-unstyled;
+        margin-bottom: 33px;
+        font-size: 14px;
+        font-weight: 500;
+        @include media-breakpoint-up(md) {
+            margin-bottom: 37px;
+        }
+        li {
+            display: inline-block;
+            margin-right: 15px;
+            @include media-breakpoint-up(md) {
+                margin-right: 30px;
+            }
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+        .icon-photo {
+            font-size: 13px;
+        }
+        .icon-clock {
+            font-size: 15;
+            line-height: 14px;
+        }
+    }
+    .contacts-item__dl {
+        @include clearfix;
+        margin-bottom: 0;
+        @include media-breakpoint-up(md) {
+            font-size: 18px;
+        }
+        dt {
+            clear: left;
+            float: left;
+        }
+        dd {
+            padding-left: 73px;
+            margin-bottom: 21px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            @include media-breakpoint-up(md) {
+                padding-left: 143px;
+                margin-bottom: 33px;
+            }
+        }
+    }
+}
+
+.contacts-slider {
+    &.slick-slider {
+        position: static;
+    }
+    .slick-dots {
+        position: absolute;
+        bottom: -35px;
+        left: 0;
+        right: 0;
+    }
+}
+.contacts-scroller {
+    @include md-full;
+    overflow-y: scroll;
+    &.scroll-content {
+        padding-bottom: 20px;
+    }
+    .contacts-scroller__inner {
+        @include list-unstyled;
+        margin-bottom: 0;
+        font-size: 0;
+        @include row(10px);
+        flex-wrap: nowrap;
+        &:after {
+            content: '';
+            width: $container-padding-sm - 5;
+            flex-shrink: 0;
+            @include media-breakpoint-up(lg) {
+                content: none;
+            }
+        }
+        li {
+            padding-right: 5px;
+            padding-left: 5px;
+            display: flex;
+            @include media-breakpoint-up(lg) {
+                &:last-of-type {
+                    padding-right: 0;
+                }
+            }
+        }
+        .contacts-scroller__link {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            @include link-black;
+            width: 136px;
+            border-radius: 5px;
+            border: solid 1px #b6b6b6;
+            padding: 5px 15px;
+            @include transition(all);
+            span {
+                opacity: 0.8;
+                font-family: Lato;
+                font-size: 14px;
+                font-weight: 500;
+            }
+            &._active {
+                color: $white !important;
+                background-color: $primary;
+                border-color: $primary;
+            }
+        }
+    }
+}
