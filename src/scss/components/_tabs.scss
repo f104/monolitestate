@@ -67,3 +67,41 @@
         margin-bottom: $container-padding-lg;
     }
 }
+
+.tabs-vert {
+    .tabs-vert__list {
+        @include media-breakpoint-only(sm) {
+            display: none;
+        }
+        @include list-unstyled;
+        margin: 0;
+        li {
+            margin-bottom: 5px;
+            a {
+                display: flex;
+                align-items: center;
+                min-height: 65px;
+                padding: 10px 18px;
+                background-color: rgba($white, .7);
+                opacity: 0.7;
+                border-radius: 2.9px;
+                opacity: 0.7;
+                font-size: 16px;
+                color: $body-color;
+                @include transition(all);
+                &:after {
+                    content: none;
+                }
+                &.active {
+                    opacity: 1;
+                    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.12);
+                }
+            }
+        }
+    }
+    .tabs__select {
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
+}

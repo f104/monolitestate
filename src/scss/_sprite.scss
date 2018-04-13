@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 7.7em 141.2em;
+    background-size: 7.7em 157.1em;
 }
 
 .no-svg .sprite:before {
@@ -233,8 +233,26 @@
 
 
 
-  .sprite.sales-hand:before {
+  .sprite.sales-career:before {
       background-position: 0em -95.8em;
+      width: 4.4em;
+      height: 4.1em;
+  }
+
+
+
+
+  .sprite.sales-edu:before {
+      background-position: 0em -99.9em;
+      width: 4.6em;
+      height: 3.9em;
+  }
+
+
+
+
+  .sprite.sales-hand:before {
+      background-position: 0em -103.8em;
       width: 4em;
       height: 4em;
   }
@@ -243,7 +261,7 @@
 
 
   .sprite.sales-home:before {
-      background-position: 0em -99.8em;
+      background-position: 0em -107.8em;
       width: 4.2em;
       height: 4.6em;
   }
@@ -252,7 +270,7 @@
 
 
   .sprite.sales-hypothec:before {
-      background-position: 0em -104.4em;
+      background-position: 0em -112.4em;
       width: 4.7em;
       height: 2.9em;
   }
@@ -260,8 +278,17 @@
 
 
 
+  .sprite.sales-income:before {
+      background-position: 0em -115.3em;
+      width: 5.7em;
+      height: 2.8em;
+  }
+
+
+
+
   .sprite.sales-money:before {
-      background-position: 0em -107.3em;
+      background-position: 0em -118.1em;
       width: 3.9em;
       height: 3.9em;
   }
@@ -270,7 +297,7 @@
 
 
   .sprite.sales-ring:before {
-      background-position: 0em -111.2em;
+      background-position: 0em -122em;
       width: 4.7em;
       height: 4.7em;
   }
@@ -278,8 +305,17 @@
 
 
 
+  .sprite.sales-stability:before {
+      background-position: 0em -126.7em;
+      width: 3.5em;
+      height: 5.1em;
+  }
+
+
+
+
   .sprite.sweet-home:before {
-      background-position: 0em -115.9em;
+      background-position: 0em -131.8em;
       width: 4.7em;
       height: 4.5em;
   }
@@ -288,7 +324,7 @@
 
 
   .sprite.twitter:before {
-      background-position: 0em -120.4em;
+      background-position: 0em -136.3em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -297,7 +333,7 @@
 
 
   .sprite.twitter-hover:before {
-      background-position: 0em -125.6em;
+      background-position: 0em -141.5em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -306,7 +342,7 @@
 
 
   .sprite.vk:before {
-      background-position: 0em -130.8em;
+      background-position: 0em -146.7em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -315,7 +351,7 @@
 
 
   .sprite.vk-hover:before {
-      background-position: 0em -136em;
+      background-position: 0em -151.9em;
       width: 5.2em;
       height: 5.2em;
   }

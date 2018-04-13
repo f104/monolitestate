@@ -404,7 +404,8 @@ jQuery(function () {
     function initTabs() {
         $('.js-tabs').each(function (index, elem) {
             $(elem).easytabs({
-                tabs: '.js-tabs__list > li'
+                tabs: '.js-tabs__list > li',
+                panelContext: $(elem).hasClass('js-tabs_disconnected') ? $('.js-tabs__content') : $(elem)
             });
             $(elem).bind('easytabs:after', function (event, $clicked, $target) {
                 $(elem).find('.js-tabs__select').val($clicked.attr('href')).change();
