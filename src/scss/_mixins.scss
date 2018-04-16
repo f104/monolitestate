@@ -119,6 +119,19 @@
     }
 }
 
+@mixin sm-full() {
+    margin-left: - $container-padding-sm;
+    margin-right: - $container-padding-sm;
+    padding-left: $container-padding-sm;
+    padding-right: $container-padding-sm;
+    @include media-breakpoint-up(md) {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 @mixin md-full() {
     margin-left: - $container-padding-sm;
     margin-right: - $container-padding-sm;

@@ -1,0 +1,105 @@
+.section.seller {
+    overflow: hidden;
+    margin-top: - map_get($header-margin-bottom, sm);
+    background-image: linear-gradient(24deg, #7faed8, #4585be);
+    @include media-breakpoint-up(md) {
+        margin-top: - map_get($header-margin-bottom, md);
+        background-image: linear-gradient(54deg, #7faed8, #4585be);
+    }
+    @include media-breakpoint-up(lg) {
+        margin-top: - map_get($header-margin-bottom, lg);
+        background-image: linear-gradient(78deg, #7faed8, #4585be);
+    }
+    .container {
+        position: relative;
+        @include media-breakpoint-only(sm) {
+            padding-bottom: 270px;
+        }
+    }
+    .section__h {
+        @include media-breakpoint-up(lg) {
+            font-size: 45px;
+        }
+    }
+    .section__lead {
+        opacity: 1;
+    }
+    .seller__feat {
+        @include list-unstyled;
+        margin-bottom: 0;
+        @include media-breakpoint-up(md) {
+            width: 40%;
+        }
+        @include media-breakpoint-up(lg) {
+            width: 55%;
+            column-count: 2;
+            column-gap: 30px;
+        }
+        li {
+            margin-bottom: 27px;
+            @include media-breakpoint-up(md) {
+                margin-bottom: 42px;
+            }
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            a {
+                display: inline-flex;
+                align-items: center;
+                color: $white;
+                @include transition(opacity);
+                font-size: 16px;
+                @include media-breakpoint-up(md) {
+                    font-size: 18px;
+                }
+                &:after {
+                    content: none;
+                }
+                &:hover {
+                    opacity: .8;
+                }
+                .sprite {
+                    margin-right: 20px;
+                    @include media-breakpoint-only(sm) {
+                        width: 40px;
+                        &:before {
+                            transform: scale(.8);
+                            transform-origin: left;
+                        }
+                    }
+                }
+                span {
+                    span {
+                        white-space: nowrap;
+                        position: relative;
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            bottom: -2px;
+                            width: 100%;
+                            height: 1px;
+                            background: url(img/link-inverse.png) repeat-x;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .seller__img-wrapper {
+        height: 310px;
+        position: absolute;
+        bottom: -20px;
+        right: 0px;
+        @include media-breakpoint-up(md) {
+            height: 430px;
+            bottom: -40px;
+        }
+        @include media-breakpoint-up(lg) {
+            bottom: -110px;
+        }
+        img {
+            height: 100%;
+        }
+    }
+}

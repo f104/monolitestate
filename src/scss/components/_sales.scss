@@ -27,6 +27,32 @@
         .sales-list__item__p {
             margin-bottom: 20px;
         }
+        &._seller {
+            .sales-list__item__h {
+                font-size: 18px;
+                line-height: 1.28;
+                flex-wrap: wrap;
+                margin-bottom: 0;
+                .sales-list__item__h__icon {
+                    background-color: #7f7fc7;
+                    background-image: linear-gradient(322deg, #7f7fc7, #494995);
+                    width: 69px;
+                    height: 69px;
+                    margin-right: 15px;
+                    .sprite {
+                        transform: scale(.9);
+                    }
+                }
+                .sales-list__item__h__inner {
+                    flex-basis: 196px;
+                    flex-grow: 1;
+                }
+                .btn {
+                    flex-basis: 100%;
+                    margin-left: 84px;
+                }
+            }
+        }
     }
 }
 @include media-breakpoint-up(md) {
@@ -44,6 +70,23 @@
                 display: inline-block;
                 width: auto;
                 align-self: flex-start;
+            }
+            &._seller {
+                .sales-list__item__h {
+                    font-size: 21px;
+                    .sales-list__item__h__icon {
+                        width: 71px;
+                        height: 71px;
+                        margin-right: 20px;
+                        .sprite {
+                            transform: none;
+                        }
+                    }
+                    .btn {
+                        flex-basis: auto;
+                        margin-left: 91px;
+                    }
+                }
             }
         }
         &._3 {
@@ -64,6 +107,23 @@
         &._4 {
             .sales-list__item {
                 @include col(25%, 50px)
+            }
+        }
+        .sales-list__item {
+            &._seller {
+                .sales-list__item__h {
+                    padding-right: 70px;
+                    flex-wrap: nowrap;
+                    .sales-list__item__h__inner {
+                        flex: 1;
+                        min-width: 190px;
+                    }
+                    .btn {
+                        flex: 1;
+                        margin-left: 20px;
+                        align-self: unset;
+                    }
+                }
             }
         }
     }

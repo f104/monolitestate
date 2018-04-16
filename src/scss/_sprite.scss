@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 7.7em 157.1em;
+    background-size: 7.7em 195.3em;
 }
 
 .no-svg .sprite:before {
@@ -224,8 +224,17 @@
 
 
 
-  .sprite.sales-car:before {
+  .sprite.sales-ads:before {
       background-position: 0em -92.4em;
+      width: 4em;
+      height: 4em;
+  }
+
+
+
+
+  .sprite.sales-car:before {
+      background-position: 0em -96.4em;
       width: 4.1em;
       height: 3.4em;
   }
@@ -234,7 +243,7 @@
 
 
   .sprite.sales-career:before {
-      background-position: 0em -95.8em;
+      background-position: 0em -99.8em;
       width: 4.4em;
       height: 4.1em;
   }
@@ -242,8 +251,17 @@
 
 
 
+  .sprite.sales-cost:before {
+      background-position: 0em -103.9em;
+      width: 4.2em;
+      height: 4.1em;
+  }
+
+
+
+
   .sprite.sales-edu:before {
-      background-position: 0em -99.9em;
+      background-position: 0em -108em;
       width: 4.6em;
       height: 3.9em;
   }
@@ -252,7 +270,7 @@
 
 
   .sprite.sales-hand:before {
-      background-position: 0em -103.8em;
+      background-position: 0em -111.9em;
       width: 4em;
       height: 4em;
   }
@@ -261,7 +279,7 @@
 
 
   .sprite.sales-home:before {
-      background-position: 0em -107.8em;
+      background-position: 0em -115.9em;
       width: 4.2em;
       height: 4.6em;
   }
@@ -270,7 +288,7 @@
 
 
   .sprite.sales-hypothec:before {
-      background-position: 0em -112.4em;
+      background-position: 0em -120.5em;
       width: 4.7em;
       height: 2.9em;
   }
@@ -279,7 +297,7 @@
 
 
   .sprite.sales-income:before {
-      background-position: 0em -115.3em;
+      background-position: 0em -123.4em;
       width: 5.7em;
       height: 2.8em;
   }
@@ -288,7 +306,7 @@
 
 
   .sprite.sales-money:before {
-      background-position: 0em -118.1em;
+      background-position: 0em -126.2em;
       width: 3.9em;
       height: 3.9em;
   }
@@ -296,8 +314,26 @@
 
 
 
+  .sprite.sales-photo:before {
+      background-position: 0em -130.1em;
+      width: 4.9em;
+      height: 4.1em;
+  }
+
+
+
+
+  .sprite.sales-problem:before {
+      background-position: 0em -134.2em;
+      width: 4.1em;
+      height: 4.1em;
+  }
+
+
+
+
   .sprite.sales-ring:before {
-      background-position: 0em -122em;
+      background-position: 0em -138.3em;
       width: 4.7em;
       height: 4.7em;
   }
@@ -306,7 +342,7 @@
 
 
   .sprite.sales-stability:before {
-      background-position: 0em -126.7em;
+      background-position: 0em -143em;
       width: 3.5em;
       height: 5.1em;
   }
@@ -314,8 +350,44 @@
 
 
 
+  .sprite.seller-1:before {
+      background-position: 0em -148.1em;
+      width: 5.2em;
+      height: 5.2em;
+  }
+
+
+
+
+  .sprite.seller-2:before {
+      background-position: 0em -153.3em;
+      width: 5.5em;
+      height: 5.5em;
+  }
+
+
+
+
+  .sprite.seller-3:before {
+      background-position: 0em -158.8em;
+      width: 5.7em;
+      height: 5.6em;
+  }
+
+
+
+
+  .sprite.seller-4:before {
+      background-position: 0em -164.4em;
+      width: 5.6em;
+      height: 5.6em;
+  }
+
+
+
+
   .sprite.sweet-home:before {
-      background-position: 0em -131.8em;
+      background-position: 0em -170em;
       width: 4.7em;
       height: 4.5em;
   }
@@ -324,7 +396,7 @@
 
 
   .sprite.twitter:before {
-      background-position: 0em -136.3em;
+      background-position: 0em -174.5em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -333,7 +405,7 @@
 
 
   .sprite.twitter-hover:before {
-      background-position: 0em -141.5em;
+      background-position: 0em -179.7em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -342,7 +414,7 @@
 
 
   .sprite.vk:before {
-      background-position: 0em -146.7em;
+      background-position: 0em -184.9em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -351,7 +423,7 @@
 
 
   .sprite.vk-hover:before {
-      background-position: 0em -151.9em;
+      background-position: 0em -190.1em;
       width: 5.2em;
       height: 5.2em;
   }

@@ -87,6 +87,9 @@
     &._new {
         background-image: linear-gradient(22deg, #7faed8, #4585be);
     }
+    &._seller {
+        background-image: linear-gradient(341deg, #7f7fc7, #494995);
+    }
 }
 
 @include media-breakpoint-up(md) {
@@ -127,6 +130,9 @@
         }
         &._new {
             background-image: linear-gradient(49deg, #7faed8, #4585be);
+        }
+        &._seller {
+            background-image: linear-gradient(315deg, #7f7fc7, #494995);;
         }
     }    
 }
@@ -183,6 +189,21 @@
             background-image: linear-gradient(78deg, #7faed8, #4585be);
             .realty-form__h {
                 font-size: 35px;
+            }
+            .realty-form__row {
+                .realty-form__col {
+                    &._2 {
+                        .realty-form__h {
+                            font-size: 32px;
+                        }                        
+                    }
+                }
+            }
+        }
+        &._seller {
+            background-image: linear-gradient(284deg, #7f7fc7, #494995);
+            .realty-form__h {
+                font-size: 40px;
             }
             .realty-form__row {
                 .realty-form__col {

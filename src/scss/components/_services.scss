@@ -10,7 +10,6 @@
         background-color: $white;
         padding: 20px;
         position: relative;
-        height: 300px;
         font-size: 14px;
         line-height: 1.29;
         .services__item__h {
@@ -40,6 +39,9 @@
                 }
             }
         }
+        .services__item__footer {
+            margin-top: 25px;
+        }
         .services__item__img-wrapper {
             position: absolute;
             right: 0;
@@ -54,9 +56,16 @@
 @include media-breakpoint-only(sm) {
     .services {
         .services__item {
+            &._seller {
+                .services__item__inner {
+                    margin-left: - $container-padding-sm;
+                    margin-right: - $container-padding-sm;
+                    border-radius: 0;
+                }
+            }
             &._1 {
                 .services__item__inner {
-                    height: 334px;
+                    padding-bottom: 150px;
                     .services__item__img-wrapper {
                         height: 167px;
                     }
@@ -64,9 +73,26 @@
             }
             &._2 {
                 .services__item__inner {
-                    height: 318px;
+                    padding-bottom: 160px;
                     .services__item__img-wrapper {
                         height: 159px;
+                    }
+                }
+            }
+            &._3 {
+                .services__item__inner {
+                    padding-bottom: 179px;
+                    .services__item__img-wrapper {
+                        height: 172px;
+                        right: $container-padding-sm;
+                    }
+                }
+            }
+            &._4 {
+                .services__item__inner {
+                    padding-bottom: 190px;
+                    .services__item__img-wrapper {
+                        height: 178px;
                     }
                 }
             }
@@ -77,6 +103,14 @@
     .services {
         .services__item {
             margin-bottom: 28px;
+            &._seller {
+                .services__item__footer {
+                    .btn {
+                        display: inline-block;
+                        width: auto;
+                    }
+                }
+            }
             &._1 {
                 .services__item__content {
                     width: 466px;
@@ -94,11 +128,37 @@
                     height: 235px;
                 }
             }
+            &._3 {
+                .services__item__content {
+                    .services__item__list, .services__item__p {
+                        width: 350px;
+                    }
+                }
+                .services__item__img-wrapper {
+                    height: 220px;
+                    right: 8.5px;
+                }
+            }
+            &._4 {
+                .services__item__content {
+                    .services__item__list, .services__item__p {
+                        width: 350px;
+                    }
+                }
+                .services__item__img-wrapper {
+                    height: 220px;
+                }
+            }
         }
         .services__item__inner {
-            height: 247px;
+            min-height: 247px;
             padding: 25px 30px;
             font-size: 15px;
+            display: flex;
+            flex-direction: column;
+            .services__item__content {
+                flex: 1;
+            }
             .services__item__h {
                 font-size: 21px;
                 margin-bottom: 29px;
@@ -119,6 +179,10 @@
         .services__item {
             @include col(50%, 28px);
             margin-bottom: 0;
+            display: flex;
+            .services__item__inner {
+                flex: 1;
+            }
             &._1 {
                 .services__item__content {
                     width: 340px;
@@ -130,6 +194,21 @@
             &._2 {
                 .services__item__content {
                     width: 245px;
+                }
+            }
+            &._3 {
+                .services__item__img-wrapper {
+                    height: 200px
+                }
+            }
+            &._4 {
+                .services__item__content {
+                    .services__item__list, .services__item__p {
+                        width: 310px;
+                    }
+                }
+                .services__item__img-wrapper {
+                    height: 200px;
                 }
             }
         }

@@ -1,0 +1,66 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "Продавцу"
+    })
+    <body>
+        @@include('./template/header.html', {
+        "active": "for-seller"
+        })
+        <div class="content">
+            <section class="section _inverse seller">
+                <div class="container">
+                    <h1 class="section__h">Продаете квартиру в Нижнем Новгороде?</h1>
+                    <p class="section__lead">Мы можем помочь вам:</p>
+                    <ul class="seller__feat">
+                        <li>
+                            <a href="#">
+                                <i class="sprite seller-1"></i>
+                                <span><span>Разместить квартиру</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="sprite seller-2"></i>
+                                <span><span>Проконсультироваться</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="sprite seller-3"></i>
+                                <span><span>Оценить квартиру</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="sprite seller-4"></i>
+                                <span>
+                                    <span>Поменять старую</span> 
+                                    <span>квартиру на новую</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="seller__img-wrapper">
+                        <img src="img/seller.png"
+                             srcset="img/seller@2x.png 2x,
+                             img/seller@3x.png 3x"
+                             alt="alt text">
+                    </div>
+                </div>
+            </section>
+            @@include('./template/sales/index.html', {
+            "title": "Найдите покупателей на нашем сайте и продайте свою квартиру выгодно",
+            "desc": ""
+            })
+            @@include('./template/services/seller.html')
+            @@include('./template/sales/realty.html')
+            @@include('./template/realty-form-seller.html')
+            @@include('./template/sales/seller.html')
+            @@include('./template/seo.html')
+            @@include('./template/footer.html')
+            @@include('./template/popups-common.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        @@include('./template/foot.html')
+    </body>
+</html>
