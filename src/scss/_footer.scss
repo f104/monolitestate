@@ -2,7 +2,7 @@
     .footer__dark {
         background-color: $primary;
         margin-bottom: 25px;
-        .footer__dark__menu {
+        .footer__dark__menu__list {
             @include list-unstyled;
             margin: 0;
             padding: 10px 0;
@@ -21,7 +21,33 @@
                     font-weight: 600;
                     letter-spacing: 0.5px;
                     color: $white;
+                    white-space: nowrap;
                 }
+            }
+        }
+        .footer__dark__menu__sm {
+            .footer__dark__menu__list {
+                li {
+                    display: block;
+                    margin-right: 0;
+                }
+                &:first-of-type {
+                    columns: 2;
+                    column-gap: 60px;
+                    padding-bottom: 0;
+                }
+                &:last-of-type {
+                    padding-top: 0;
+                }
+            }
+            @include media-breakpoint-up(md) {
+                display: none;
+            }
+        }
+        .footer__dark__menu__md {
+            display: none;
+            @include media-breakpoint-up(md) {
+                display: block;
             }
         }
     }
