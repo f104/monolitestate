@@ -1,30 +1,39 @@
-<div class="hypothec-programs__item">
+<div class="hypothec-programs__item js-hypothec__item">
     <div class="hypothec-programs__item__h">
         <span class="hypothec-programs__item__h__img">
             <img src="img/hypothec/@@logo.png" srcset="img/hypothec/@@logo@2x.png 2x,
                  img/hypothec/@@logo@3x.png 3x" alt="alt text">
         </span>
-        <span>@@title</span>
+        <span class="hypothec-programs__item__h__text">@@title</span>
     </div>
     <ul class="hypothec-programs__item__list">
         <li class="hypothec-programs__item__list__item">
             <span class="hypothec-programs__item__list__sm">Ставка по ипотеке</span>
             <span class="hypothec-programs__item__list__lg">
                 <span class="js-hypothec__rate">@@rate</span>%
+                <span class="hidden js-hypothec__rateME">@@rateME</span>
             </span>
         </li>
         <li class="hypothec-programs__item__list__item">
             <span class="hypothec-programs__item__list__sm">Первый взнос</span>
-            <span class="hypothec-programs__item__list__lg">768 213 руб.</span>
+            <span class="hypothec-programs__item__list__lg">
+                <span class="js-hypothec__first"></span> руб.
+            </span>
         </li>
         <li class="hypothec-programs__item__list__item">
             <span class="hypothec-programs__item__list__sm">Ежемесячный платеж</span>
-            <span class="hypothec-programs__item__list__lg">45 872 руб.</span>
+            <span class="hypothec-programs__item__list__lg">
+                @@if (rateME == "") {<span class="js-hypothec__permonth"></span>}
+                @@if (rateME != "") {<span class="js-hypothec__permonthME"></span>}
+                руб.
+            </span>
         </li>
         @@if (rateME != "") {
         <li class="hypothec-programs__item__list__item _last">
             <span class="hypothec-programs__item__list__sm">Выгода</span>
-            <span class="hypothec-programs__item__list__lg _primary">23 881 руб.</span>
+            <span class="hypothec-programs__item__list__lg _primary">
+                <span class="js-hypothec__economy"></span> руб.
+            </span>
         </li>
         }
     </ul>

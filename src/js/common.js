@@ -575,23 +575,26 @@ jQuery(function () {
                     $age = $(this).find('.js-hypothec__age'),
                     $credit = $(this).find('.js-hypothec__credit'),
                     $slider = $(this).find('.js-hypothec__slider'),
-                    $slides = $slider.find('.slide'),
+                    $items = $(this).find('.js-hypothec__item'),
                     $scroll = $(this).find('.js-hypothec__scroll');
             var rate = [];
-            $slider.find('.js-hypothec__rate').each(function () {
-                rate.push(parseFloat($(this).text().replace(",", ".")) || 0);
+            $items.each(function () {
+                rate.push(parseFloat($(this).find('.js-hypothec__rate').text().replace(",", ".")) || 0);
             });
+//            console.log(rate);
             var rateME = [];
-            $slider.find('.js-hypothec__rateME').each(function () {
-                rateME.push(parseFloat($(this).text().replace(",", ".")) || 0);
+            $items.each(function () {
+                rateME.push(parseFloat($(this).find('.js-hypothec__rateME').text().replace(",", ".")) || 0);
             });
+//            console.log(rateME);
             var credit = 0;
             var age = $age.val();
             $paymentPercent.on('change', function () {
                 $paymentSum.val(calcPayment(cost, $paymentPercent.val()));
                 credit = calcCredit(cost, $paymentPercent.val());
                 $credit.val(credit);
-                $slides.each(function (i, el) {
+                $items.each(function (i, el) {
+                    $(el).find('.js-hypothec__first').text(formatPrice($paymentSum.val()));
                     $(el).find('.js-hypothec__permonth').text(formatPrice(calcPerMonth(credit, rate[i], age)));
                     $(el).find('.js-hypothec__permonthME').text(formatPrice(calcPerMonth(credit, rateME[i], age)));
                     $(el).find('.js-hypothec__economy').text(formatPrice(calcPerMonth(credit, rate[i], age) * 12 * age - calcPerMonth(credit, rateME[i], age) * 12 * age));
@@ -600,7 +603,7 @@ jQuery(function () {
             $paymentPercent.trigger('change');
             $age.on('change', function () {
                 age = $age.val();
-                $slides.each(function (i, el) {
+                $items.each(function (i, el) {
                     $(el).find('.js-hypothec__permonth').text(formatPrice(calcPerMonth(credit, rate[i], age)));
                     $(el).find('.js-hypothec__permonthME').text(formatPrice(calcPerMonth(credit, rateME[i], age)));
                     $(el).find('.js-hypothec__economy').text(formatPrice(calcPerMonth(credit, rate[i], age) * 12 * age - calcPerMonth(credit, rateME[i], age) * 12 * age));
