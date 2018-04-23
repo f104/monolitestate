@@ -90,6 +90,13 @@
     &._seller {
         background-image: linear-gradient(341deg, #7f7fc7, #494995);
     }
+    &._hypothec {
+        background-image: linear-gradient(152deg, #41b765, #d7cc54);
+        margin-top: - map_get($header-margin-bottom, sm);
+        .realty-form__row, .btn {
+            margin-bottom: 34px;
+        }
+    }
 }
 
 @include media-breakpoint-up(md) {
@@ -133,6 +140,19 @@
         }
         &._seller {
             background-image: linear-gradient(315deg, #7f7fc7, #494995);;
+        }
+        &._hypothec {
+            background-image: linear-gradient(121deg, #41b765, #d7cc54);
+            margin-top: - map_get($header-margin-bottom, md);
+            .realty-form__row {
+                display: flex;
+                align-items: center;
+            }
+            .btn {
+                margin-bottom: 0;
+                width: 225px;
+                margin-right: 45px;
+            }
         }
     }    
 }
@@ -213,6 +233,13 @@
                         }                        
                     }
                 }
+            }
+        }
+        &._hypothec {
+            background-image: linear-gradient(104deg, #41b765, #d7cc54);
+            margin-top: - map_get($header-margin-bottom, lg);
+            .realty-form__content {
+                width: 735px;
             }
         }
     }    

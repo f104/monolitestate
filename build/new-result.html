@@ -86,7 +86,7 @@
                     <li><a href="#">Дома, дачи, участки</a></li>
                     <li><a href="rent.html" >Аренда</a></li>
                     <li><a href="commercial.html" >Коммерческая</a></li>
-                    <li><a href="#">Ипотека</a></li>
+                    <li><a href="hypothec.html" >Ипотека</a></li>
                     <li><a href="for-seller.html" >Продавцу</a></li>
                     <li><a href="#">Аналитика</a></li>
                 </ul>
@@ -1823,8 +1823,8 @@
                     <a href="#" class="btn _lg _solid _shadow promo__btn">Узнать подробнее</a>
                     <div class="promo__img-inner">
                         <img class="promo__img" src="img/promo/4.png" 
-                             srcset="img/promo/4@2x.jpg 2x,
-                             img/promo/4@3x.jpg 3x" alt="alt text">
+                             srcset="img/promo/4@2x.png 2x,
+                             img/promo/4@3x.png 3x" alt="alt text">
                     </div>
                 </div>
             </section>
@@ -1835,34 +1835,35 @@
             Рассчитайте ваш платеж по ипотеке
         </h3>
         <div class="hypothec-calc__fields">
-            <div class="input-group">
-                <label>Стоимость недвижимости</label>
-                <input value="2323414" disabled="disabled" class="js-mask__currency js-hypothec__cost">
-            </div>
-            <div class="js-picker">
-                <div class="input-group _picker _double _third">
-                    <label>Первоначальный взнос</label>
-                    <input disabled="disabled" 
-                           class="js-mask__currency js-hypothec__payment-sum">
-                    <input min="10" max="90" value="30" disabled="disabled" 
-                           class="js-mask__percent js-picker__input js-hypothec__payment-percent">
-                </div>
-                <div class="range _picker js-picker__target"></div>
-            </div>
-            <div class="input-group">
-                <label>Сумма кредита</label>
-                <input disabled="disabled" class="js-mask__currency js-hypothec__credit">
-            </div>
-            <div class="js-picker">
-                <div class="input-group _picker">
-                    <label>Срок ипотеки</label>
-                    <input min="1" max="30" value="20" 
-                           disabled="disabled" 
-                           class="js-mask__age js-picker__input js-hypothec__age">
-                </div>
-                <div class="range _picker js-picker__target"></div>
-            </div>
+    <div class="input-group">
+        <label>Стоимость недвижимости</label>
+        <input value="2323414" disabled="disabled" class="js-mask__currency js-hypothec__cost">
+    </div>
+    <div class="js-picker">
+        <div class="input-group _picker _double _third">
+            <label>Первоначальный взнос</label>
+            <input disabled="disabled" 
+                   class="js-mask__currency js-hypothec__payment-sum">
+            <input min="10" max="90" value="30" disabled="disabled" 
+                   class="js-mask__percent js-picker__input js-hypothec__payment-percent">
         </div>
+        <div class="range _picker js-picker__target"></div>
+    </div>
+    <div class="input-group">
+        <label>Сумма кредита</label>
+        <input disabled="disabled" class="js-mask__currency js-hypothec__credit">
+    </div>
+    <div class="js-picker">
+        <div class="input-group _picker">
+            <label>Срок ипотеки</label>
+            <input min="1" max="30" value="20" 
+                   disabled="disabled" 
+                   class="js-mask__age js-picker__input js-hypothec__age">
+        </div>
+        <div class="range _picker js-picker__target"></div>
+    </div>
+    
+</div>
         <p class="hypothec-calc__res-h">Найдено 5 ипотечных программ</p>
         <div class="hypothec-calc__row">
             <div class="hypothec-calc__res slider-small js-hypothec__slider">
@@ -2118,7 +2119,7 @@
         </div>
     </div>
 </div>
-            <div class="hypothec-request">
+            <div class="hypothec-request ">
     <div class="hypothec-request__row">
         <div class="hypothec-request__col _1">
             <h4 class="hypothec-request__h">Оформить онлайн</h4>
@@ -2165,17 +2166,25 @@
                     <div class="input-group hypothec-request__form__text">
                         Оставьте ваш номер, и агент перезвонит вам в течение 5 минут
                     </div>
-                    <div class="input-group _lg">
-                        <label>Ваш телефон</label>
-                        <input class="js-mask__tel">
+                    <div class="hypothec-request__form__inputs">
+                        <div class="input-group _lg hypothec-request__form__name">
+                            <label>Ваше имя</label>
+                            <input>
+                        </div>
+                        <div class="input-group _lg">
+                            <label>Ваш телефон</label>
+                            <input class="js-mask__tel">
+                        </div>
                     </div>
-                    <div class="input-group _lg">
-                        <button class="btn _lg _solid">Жду звонка</button>
-                    </div>
-                    <div class="input-group _last">
-                        <span class="input-help">
-                            Отправляя заявку вы соглашаетесь на обработку персональных данных
-                        </span>
+                    <div class="hypothec-request__form__submit">
+                        <div class="input-group _lg">
+                            <button class="btn _lg _solid">Жду звонка</button>
+                        </div>
+                        <div class="input-group _last">
+                            <span class="input-help">
+                                Отправляя заявку вы соглашаетесь на обработку персональных данных
+                            </span>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -2299,7 +2308,7 @@
                 <li><a href="#">Дома, дачи, участки</a></li>
                 <li><a href="rent.html">Аренда</a></li>
                 <li><a href="commercial.html">Коммерческая</a></li>
-                <li><a href="#">Ипотека</a></li>
+                <li><a href="hypothec.html">Ипотека</a></li>
                 <li><a href="for-seller.html">Продавцу</a></li>
                 <li><a href="#">Аналитика</a></li>
             </ul>
@@ -2507,6 +2516,7 @@
         <li><a href="agent.html">agent</a></li>
         <li><a href="work.html">work</a></li>
         <li><a href="for-seller.html">for seller</a></li>
+        <li><a href="hypothec.html">hypothec</a></li>
         <li><a href="contacts.html">contacts</a></li>
         <li><a href="404.html">404</a></li>
     </ul>

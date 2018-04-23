@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 7.7em 195.3em;
+    background-size: 7.7em 212.4em;
 }
 
 .no-svg .sprite:before {
@@ -62,8 +62,44 @@
 
 
 
-  .sprite.instagram:before {
+  .sprite.hypothec-1:before {
       background-position: 0em -17.4em;
+      width: 4.4em;
+      height: 4.4em;
+  }
+
+
+
+
+  .sprite.hypothec-2:before {
+      background-position: 0em -21.8em;
+      width: 4.6em;
+      height: 3.7em;
+  }
+
+
+
+
+  .sprite.hypothec-3:before {
+      background-position: 0em -25.5em;
+      width: 4.6em;
+      height: 4.5em;
+  }
+
+
+
+
+  .sprite.hypothec-4:before {
+      background-position: 0em -30em;
+      width: 4.5em;
+      height: 4.5em;
+  }
+
+
+
+
+  .sprite.instagram:before {
+      background-position: 0em -34.5em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -72,7 +108,7 @@
 
 
   .sprite.instagram-hover:before {
-      background-position: 0em -22.6em;
+      background-position: 0em -39.7em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -81,7 +117,7 @@
 
 
   .sprite.man-baloon:before {
-      background-position: 0em -27.8em;
+      background-position: 0em -44.9em;
       width: 5.5em;
       height: 4.9em;
   }
@@ -90,7 +126,7 @@
 
 
   .sprite.map-minus:before {
-      background-position: 0em -32.7em;
+      background-position: 0em -49.8em;
       width: 6.3em;
       height: 6.3em;
   }
@@ -99,7 +135,7 @@
 
 
   .sprite.map-plus:before {
-      background-position: 0em -39em;
+      background-position: 0em -56.1em;
       width: 6.3em;
       height: 6.3em;
   }
@@ -108,7 +144,7 @@
 
 
   .sprite.ok:before {
-      background-position: 0em -45.3em;
+      background-position: 0em -62.4em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -117,7 +153,7 @@
 
 
   .sprite.ok-hover:before {
-      background-position: 0em -50.5em;
+      background-position: 0em -67.6em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -126,7 +162,7 @@
 
 
   .sprite.oldprice:before {
-      background-position: 0em -55.7em;
+      background-position: 0em -72.8em;
       width: 2.9em;
       height: 2.9em;
   }
@@ -135,7 +171,7 @@
 
 
   .sprite.realty-check:before {
-      background-position: 0em -58.6em;
+      background-position: 0em -75.7em;
       width: 1.8em;
       height: 1.4em;
   }
@@ -144,7 +180,7 @@
 
 
   .sprite.realty-commerce:before {
-      background-position: 0em -60em;
+      background-position: 0em -77.1em;
       width: 3.5em;
       height: 3.4em;
   }
@@ -153,7 +189,7 @@
 
 
   .sprite.realty-commerce-o:before {
-      background-position: 0em -63.4em;
+      background-position: 0em -80.5em;
       width: 3.5em;
       height: 3.4em;
   }
@@ -162,7 +198,7 @@
 
 
   .sprite.realty-new:before {
-      background-position: 0em -66.8em;
+      background-position: 0em -83.9em;
       width: 5.8em;
       height: 3.4em;
   }
@@ -171,7 +207,7 @@
 
 
   .sprite.realty-new-o:before {
-      background-position: 0em -70.2em;
+      background-position: 0em -87.3em;
       width: 5.8em;
       height: 3.4em;
   }
@@ -180,7 +216,7 @@
 
 
   .sprite.realty-second:before {
-      background-position: 0em -73.6em;
+      background-position: 0em -90.7em;
       width: 3.5em;
       height: 3.5em;
   }
@@ -189,7 +225,7 @@
 
 
   .sprite.realty-second-o:before {
-      background-position: 0em -77.1em;
+      background-position: 0em -94.2em;
       width: 3.5em;
       height: 3.5em;
   }
@@ -198,7 +234,7 @@
 
 
   .sprite.realty-village:before {
-      background-position: 0em -80.6em;
+      background-position: 0em -97.7em;
       width: 3.7em;
       height: 3.7em;
   }
@@ -207,7 +243,7 @@
 
 
   .sprite.realty-village-o:before {
-      background-position: 0em -84.3em;
+      background-position: 0em -101.4em;
       width: 3.7em;
       height: 3.7em;
   }
@@ -216,7 +252,7 @@
 
 
   .sprite.russia:before {
-      background-position: 0em -88em;
+      background-position: 0em -105.1em;
       width: 7.7em;
       height: 4.4em;
   }
@@ -225,7 +261,7 @@
 
 
   .sprite.sales-ads:before {
-      background-position: 0em -92.4em;
+      background-position: 0em -109.5em;
       width: 4em;
       height: 4em;
   }
@@ -234,7 +270,7 @@
 
 
   .sprite.sales-car:before {
-      background-position: 0em -96.4em;
+      background-position: 0em -113.5em;
       width: 4.1em;
       height: 3.4em;
   }
@@ -243,7 +279,7 @@
 
 
   .sprite.sales-career:before {
-      background-position: 0em -99.8em;
+      background-position: 0em -116.9em;
       width: 4.4em;
       height: 4.1em;
   }
@@ -252,7 +288,7 @@
 
 
   .sprite.sales-cost:before {
-      background-position: 0em -103.9em;
+      background-position: 0em -121em;
       width: 4.2em;
       height: 4.1em;
   }
@@ -261,7 +297,7 @@
 
 
   .sprite.sales-edu:before {
-      background-position: 0em -108em;
+      background-position: 0em -125.1em;
       width: 4.6em;
       height: 3.9em;
   }
@@ -270,7 +306,7 @@
 
 
   .sprite.sales-hand:before {
-      background-position: 0em -111.9em;
+      background-position: 0em -129em;
       width: 4em;
       height: 4em;
   }
@@ -279,7 +315,7 @@
 
 
   .sprite.sales-home:before {
-      background-position: 0em -115.9em;
+      background-position: 0em -133em;
       width: 4.2em;
       height: 4.6em;
   }
@@ -288,7 +324,7 @@
 
 
   .sprite.sales-hypothec:before {
-      background-position: 0em -120.5em;
+      background-position: 0em -137.6em;
       width: 4.7em;
       height: 2.9em;
   }
@@ -297,7 +333,7 @@
 
 
   .sprite.sales-income:before {
-      background-position: 0em -123.4em;
+      background-position: 0em -140.5em;
       width: 5.7em;
       height: 2.8em;
   }
@@ -306,7 +342,7 @@
 
 
   .sprite.sales-money:before {
-      background-position: 0em -126.2em;
+      background-position: 0em -143.3em;
       width: 3.9em;
       height: 3.9em;
   }
@@ -315,7 +351,7 @@
 
 
   .sprite.sales-photo:before {
-      background-position: 0em -130.1em;
+      background-position: 0em -147.2em;
       width: 4.9em;
       height: 4.1em;
   }
@@ -324,7 +360,7 @@
 
 
   .sprite.sales-problem:before {
-      background-position: 0em -134.2em;
+      background-position: 0em -151.3em;
       width: 4.1em;
       height: 4.1em;
   }
@@ -333,7 +369,7 @@
 
 
   .sprite.sales-ring:before {
-      background-position: 0em -138.3em;
+      background-position: 0em -155.4em;
       width: 4.7em;
       height: 4.7em;
   }
@@ -342,7 +378,7 @@
 
 
   .sprite.sales-stability:before {
-      background-position: 0em -143em;
+      background-position: 0em -160.1em;
       width: 3.5em;
       height: 5.1em;
   }
@@ -351,7 +387,7 @@
 
 
   .sprite.seller-1:before {
-      background-position: 0em -148.1em;
+      background-position: 0em -165.2em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -360,7 +396,7 @@
 
 
   .sprite.seller-2:before {
-      background-position: 0em -153.3em;
+      background-position: 0em -170.4em;
       width: 5.5em;
       height: 5.5em;
   }
@@ -369,7 +405,7 @@
 
 
   .sprite.seller-3:before {
-      background-position: 0em -158.8em;
+      background-position: 0em -175.9em;
       width: 5.7em;
       height: 5.6em;
   }
@@ -378,7 +414,7 @@
 
 
   .sprite.seller-4:before {
-      background-position: 0em -164.4em;
+      background-position: 0em -181.5em;
       width: 5.6em;
       height: 5.6em;
   }
@@ -387,7 +423,7 @@
 
 
   .sprite.sweet-home:before {
-      background-position: 0em -170em;
+      background-position: 0em -187.1em;
       width: 4.7em;
       height: 4.5em;
   }
@@ -396,7 +432,7 @@
 
 
   .sprite.twitter:before {
-      background-position: 0em -174.5em;
+      background-position: 0em -191.6em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -405,7 +441,7 @@
 
 
   .sprite.twitter-hover:before {
-      background-position: 0em -179.7em;
+      background-position: 0em -196.8em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -414,7 +450,7 @@
 
 
   .sprite.vk:before {
-      background-position: 0em -184.9em;
+      background-position: 0em -202em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -423,7 +459,7 @@
 
 
   .sprite.vk-hover:before {
-      background-position: 0em -190.1em;
+      background-position: 0em -207.2em;
       width: 5.2em;
       height: 5.2em;
   }

@@ -1,0 +1,150 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "Ипотека"
+    })
+    <body>
+        @@include('./template/header.html', {
+        "active": "hypothec"
+        })
+        <div class="content">
+            <section class="section _inverse realty-form _hypothec">
+                <div class="container">
+                    <h1 class="section__h">Ипотека в Нижнем Новгороде</h1>
+                    <div class="realty-form__content">
+                        <div class="realty-form__text">
+                            <p>Ипотечный брокер компании «Монолит» ежедневно 
+                                помогает покупателям жилья решать даже самые 
+                                сложные вопросы по получению ипотечного займа 
+                                по низким ставкам.</p>
+                            <p>Свыше 90% покупателей агентства недвижимости, 
+                                кому требовалась ссуда, уже получили выгодный 
+                                жилищный кредит с помощью ипотечного брокера.</p>
+                        </div>
+                        <div class="realty-form__row">
+                            <a href="#" class="btn _lg _solid _shadow">Рассчитать ипотеку</a>
+                            <div class="hypothec-90">
+                                <span class="hypothec-90__segment">
+                                    90%
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.913 22.913"><path d="M11.456.265C5.276.265.265 5.275.265 11.456c0 6.181 5.01 11.192 11.191 11.192 6.181 0 11.192-5.01 11.192-11.192a11.192 11.192 0 0 0-5.5-9.621" fill="none" stroke="#fff" stroke-width=".52916" stroke-linecap="round"/></svg>
+                                </span>
+                                <span>Уже получили кредит</span>
+                            </div>
+                        </div>
+                        <div class="realty-form__call">
+                            <span class="realty-form__call__text">Подробности можете узнать по телефону:</span>
+                            <a href="tel:+78312199067" class="realty-form__call__phone">
+                                <i class="icon-phone _middle"></i><span class="link">+7 (831) 219-90-67</span></a>
+                        </div>
+                    </div>
+                    <!--                    <div class="hypothec-promo__img-wrapper">
+                                            <img src="img/seller.png"
+                                                 srcset="img/seller@2x.png 2x,
+                                                 img/seller@3x.png 3x"
+                                                 alt="alt text">
+                                        </div>-->
+                </div>
+            </section>
+            @@include('./template/sales/hypothec.html')
+            <section>
+                <div class="js-tabs">
+                    <div class="container">
+                        <div class="tabs">
+                            <ul class="tabs__list js-tabs__list">
+                                <li><a href="#tab1">Новостройки</a></li>
+                                <li><a href="#tab2">Вторичная недвижимость</a></li>
+                                <li><a href="#tab3">Дома и коттеджи</a></li>
+                                <li><a href="#tab4">Земельные участки</a></li>
+                                <li><a href="#tab5">Дачи</a></li>
+                            </ul>
+                            <div class="tabs__select">
+                                <select class="js-tabs__select js-select2" style="width:100%">
+                                    <option value="#tab1">Новостройки</option>
+                                    <option value="#tab2">Вторичная недвижимость</option>
+                                    <option value="#tab3">Дома и коттеджи</option>
+                                    <option value="#tab4">Земельные участки</option>
+                                    <option value="#tab5">Дачи</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab1">
+                        <section class="container section hypothec">
+                            <div class="hypothec-calc js-hypothec">
+                                <h3 class="hypothec-calc__h">
+                                    Рассчитайте ваш платеж по ипотеке
+                                </h3>
+                                @@include('./template/hypothec/calc-fields.html', {"extended": 1})
+                                @@include('./template/hypothec/request.html', {"extended": 1})
+                                <p class="hypothec-calc__res-h js-hypothec__show-target">Найдено 32 ипотечные программы</p>
+                                @@include('./template/hypothec/programs.html')
+                                <button class="btn _lg _primary section__button">
+                                    <span>Больше программ</span>
+                                    <i class="icon-more"></i>
+                                </button>
+                            </div>
+                        </section>
+                    </div>
+                    <div id="tab2"><div class="container">Вторичная недвижимость</div></div>
+                    <div id="tab3"><div class="container">Дома и коттеджи</div></div>
+                    <div id="tab4"><div class="container">Земельные участки</div></div>
+                    <div id="tab5"><div class="container">Дачи</div></div>
+                </div>
+            </section>
+            <section class="section container">
+                <h3 class="section__h">Кому нужен ипотечный брокер?</h3>
+                <div class="rte">
+                    <p>Некоторые потенциальные заемщики испытывают трудности 
+                        в получении ипотечного кредита на дом или квартиру, 
+                        причины этого могут быть разные, начиная от сложностей 
+                        в сборе всего пакета документов до выбора подходящих 
+                        предложений и большого количества времени 
+                        для оформления займа.</p>
+                    <p>Эффективно решить вопрос получения ипотеки при покупке 
+                        недвижимости через агентство «Монолит Истейт» вам поможет 
+                        ипотечный брокер. Специалист подбирает варианты ипотечных 
+                        программ, консультирует и предлагает наиболее выгодные 
+                        варианты кредитования.</p>
+                    <p>Брокер знает, как решать сложные ситуации и всегда поможет 
+                        в оформлении документов.</p>
+                    <p>Во-вторых, брокер подает заявку сразу в несколько банков, 
+                        что существенно экономит время.</p>
+                    <p>В-третьих, для брокеров банками предусмотрены специальные 
+                        условия — скидки, которые обеспечивают сниженный 
+                        процент по ипотеке для вас.</p>
+                    <p>Результат — вы экономите деньги, получая выгодную ставку 
+                        ипотечного кредитования, не тратите время на сбор 
+                        необходимых документов и поездки в банк и получаете 
+                        нужную сумму на желаемый срок.</p>
+                    <p>Станьте счастливым обладателем нового жилья, а все заботы 
+                        по получению и оформлению кредита на недвижимость решит 
+                        ипотечный брокер агентства «Монолит Истейт».</p>
+                </div>
+            </section>
+            <section class="container section promo _style2">
+                <div href="#" class="promo__wrapper">
+                    <h3 class="promo__h">Рефинансирование</h3>
+                    <p class="promo__p">Узнайте как сократить платеж по ипотеке!</p>
+                    <div>
+                        <a href="#" class="btn _lg _solid _shadow promo__btn">Узнать подробнее</a>
+                    </div>
+                    <div class="promo__img-inner">
+                        <img class="promo__img" src="img/promo/5.png" 
+                             srcset="img/promo/5@2x.png 2x,
+                             img/promo/5@3x.png 3x" alt="alt text">
+                    </div>
+                </div>
+            </section>
+            @@include('./template/callme.html', {
+            "title": "Не хочу искать, перезвоните мне!",
+            "margin": 1,
+            "class": "_1",
+            "img": "call1"
+            })
+            @@include('./template/seo.html')
+            @@include('./template/footer.html')
+            @@include('./template/popups-common.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        @@include('./template/foot.html')
+    </body>
+</html>

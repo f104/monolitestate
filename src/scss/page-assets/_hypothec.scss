@@ -327,7 +327,6 @@ $hypothec-gutter-width: $grid-gutter-width;
         .hypothec-calc__fields {
             display: flex;
             flex-wrap: wrap;
-            max-width: 600px;
             > * {
                 margin-right: 20px;
             }
@@ -336,6 +335,22 @@ $hypothec-gutter-width: $grid-gutter-width;
                 &._double {
                     width: 302px;
                 }
+            }
+            .hypothec-calc__fields__extended {
+                flex-basis: 100%;
+                display: flex;
+                margin-right: 0;
+                .input-group {
+                    margin-right: 20px;
+                    flex: 1;
+                    &:last-of-type {
+                        margin-right: 0;
+                        min-width: 256px;
+                    }
+                }
+            }
+            .hypothec-calc__fields__show-btn {
+                display: none;
             }
         }
         .hypothec-calc__res-h {
@@ -444,6 +459,9 @@ $hypothec-gutter-width: $grid-gutter-width;
     .hypothec-calc {
         .hypothec-calc__fields {
             max-width: unset;
+            .hypothec-calc__fields__extended {
+                flex-basis: 962px;
+            }
         }
         .hypothec-calc__row {
             display: flex;
@@ -507,9 +525,14 @@ $hypothec-gutter-width: $grid-gutter-width;
         }
     }
     .hypothec-request__agent {
+        display: flex;
         padding: 0 20%;
         margin-bottom: 30px;
         .agent {
+            display: flex;
+            .agent__inner {
+                justify-content: space-between;
+            }
             .agent__name {
                 font-size: 15px;
             }
@@ -525,6 +548,9 @@ $hypothec-gutter-width: $grid-gutter-width;
             font-size: 12px;
             font-weight: 500;
             margin-bottom: 15px;
+        }
+        .hypothec-request__form__name {
+            display: none;
         }
     }
     .hypothec-request__col._1 {
@@ -545,13 +571,13 @@ $hypothec-gutter-width: $grid-gutter-width;
             padding: 0;
             margin-bottom: 0;
             margin-right: 30px;
+            flex-basis: 150px;
         }
         .hypothec-request__form {
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
-            .hypothec-request__form__text {
-                flex: 1;
-            }
+            justify-content: space-between;
         }
         .hypothec-request__row {
             display: flex;
@@ -569,6 +595,7 @@ $hypothec-gutter-width: $grid-gutter-width;
                 }
             }
             &._2 {
+                flex: 1;
                 display: flex;
                 flex-direction: column;
             }
@@ -582,5 +609,204 @@ $hypothec-gutter-width: $grid-gutter-width;
         margin-left: 0;
         margin-right: 0;
         border-radius: $border-radius;
+        &._extended {
+            .hypothec-request__form__name {
+                display: block;
+            }
+            .hypothec-request__form__inputs {
+                display: flex;
+                .input-group {
+                    flex: 1;
+                    margin-right: 15px;
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                }
+            }
+            .hypothec-request__form__submit {
+                display: flex;
+                align-items: center;
+                .input-group {
+                    margin-bottom: 0;
+                    margin-right: 15px;
+                    &:last-of-type {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hypothec-90 {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    .hypothec-90__segment {
+        font-size: 34px;
+        font-weight: 300;
+        width: 85px;
+        height: 85px;
+        position: relative;
+        margin-right: 23px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+.hypothec-programs {
+    margin-bottom: 20px;
+    @include media-breakpoint-up(md) {
+        margin-bottom: 30px;
+    }
+    @include media-breakpoint-up(md) {
+        margin-bottom: 40px;
+    }
+    .hypothec-programs__item {
+        position: relative;
+        background-color: $white;
+        @include md-full();
+        padding-top: 15px;
+        margin-bottom: 10px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        @include media-breakpoint-up(md) {
+            display: flex;
+            padding-top: 0;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 15px;
+            padding-left: 26px;
+            padding-right: 26px;
+            border-radius: $border-radius;
+        }
+        .hypothec-programs__item__h {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            margin-bottom: 20px;
+            @include media-breakpoint-up(md) {
+                font-size: 12px;
+                flex-basis: 185px;
+                padding-right: 10px;
+                margin-right: 20px;
+                margin-bottom: 0;
+                border-right: 1px solid #e7e7e7;
+            }
+            @include media-breakpoint-up(lg) {
+                font-size: 15px;
+                flex-basis: 340px;
+                margin-right: 20px;
+            }
+            .hypothec-programs__item__h__img {
+                width: 60px;
+                height: 40px;
+                margin-right: 15px;
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    display: block;
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+                @include media-breakpoint-up(lg) {
+                    width: 85px;
+                    height: 55px;
+                    margin-right: 30px;
+                }
+            }
+        }
+        .hypothec-programs__item__list {
+            @include list-unstyled;
+            margin-bottom: 0;
+            @include transition(all);
+            @include row(20px);
+            flex-wrap: wrap;
+            @include media-breakpoint-up(md) {
+                flex-wrap: nowrap;
+                flex: 1;
+            }
+            @include media-breakpoint-up(md) {
+                @include row(40px);
+                flex-wrap: nowrap;
+            }
+            .hypothec-programs__item__list__item {
+                @include col(50%, 20px);
+                margin-bottom: 15px;
+                @include media-breakpoint-up(md) {
+                    width: auto;
+                    flex-basis: auto;
+                    margin-bottom: 0;
+                    border-right: 1px solid #e7e7e7;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    &._last {
+                        border-right: none;
+                    }
+                    &:nth-child(2), &:nth-child(3) {
+                        flex-basis: 27%;
+                    }
+                }
+                @include media-breakpoint-up(lg) {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+                .hypothec-programs__item__list__sm {
+                    display: block;
+                    opacity: 0.5;
+                    font-size: 11px;
+                    line-height: 1.5;
+                    white-space: nowrap;
+                    @include media-breakpoint-up(lg) {
+                        font-size: 12px;
+                    }
+                }
+                .hypothec-programs__item__list__lg {
+                    display: block;
+                    font-size: 19px;
+                    font-weight: 300;
+                    white-space: nowrap;
+                    &._primary {
+                        color: $primary;
+                        font-weight: 500;
+                    }
+                    @include media-breakpoint-up(lg) {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+        .hypothec-programs__item__btn {
+            width: auto;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+        &:hover {
+            box-shadow: 0 4px 23px 0 rgba(0, 0, 0, 0.1);
+            @include media-breakpoint-up(md) {
+                .hypothec-programs__item__h {
+                    border-right-color: transparent;
+                }
+                .hypothec-programs__item__list {
+                    opacity: 0;
+                }
+                .hypothec-programs__item__btn {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }

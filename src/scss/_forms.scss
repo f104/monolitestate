@@ -426,6 +426,19 @@ form {
             }
         }
     }
+    &._row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        .input-group__col {
+            &._sm {
+                flex-basis: 32%;
+            }
+            &._lg {
+                flex-basis: 65%;
+            }
+        }
+    }
     .checkbox {
         display: inline-block;
         opacity: 1;
@@ -497,7 +510,8 @@ form {
             position: relative;
             @include transition(box-shadow);
             .pseudo-select__select__inner {
-                opacity: .8;                
+                opacity: .8; 
+                white-space: nowrap;
             }
             &:hover {
                 @include border-inset(1px, $primary);

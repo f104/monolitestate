@@ -127,4 +127,49 @@
             }
         }
     }
+    &._style2 {
+        .promo__wrapper {
+            background-image: linear-gradient(123deg, #41b765, #d7cc54);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            @include media-breakpoint-up(md) {
+                background-image: linear-gradient(109deg, #41b765, #d7cc54);
+                height: 250px;
+                justify-content: space-between;
+                padding: 34px;
+                position: relative;
+                overflow: hidden;
+                padding-right: 310px;
+                .promo__h {
+                    font-size: 40px;
+                }
+                .promo__p {
+                    font-size: 21px;
+                }
+                .btn {
+                    width: auto;
+                    display: inline-block;
+                }
+            }
+            .promo__img-inner {
+                display: none;
+                @include media-breakpoint-up(md) {
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    bottom: -60px;
+                    img {
+                        height: 300px;
+                    }
+                }
+                @include media-breakpoint-up(lg) {
+                    right: 106px;
+                    bottom: -80px;
+                    img {
+                        height: 370px;
+                    }
+                }
+            }
+        }
+    }
 }

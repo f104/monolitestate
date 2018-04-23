@@ -4,35 +4,7 @@
         <h3 class="hypothec-calc__h">
             Рассчитайте ваш платеж по ипотеке
         </h3>
-        <div class="hypothec-calc__fields">
-            <div class="input-group">
-                <label>Стоимость недвижимости</label>
-                <input value="2323414" disabled="disabled" class="js-mask__currency js-hypothec__cost">
-            </div>
-            <div class="js-picker">
-                <div class="input-group _picker _double _third">
-                    <label>Первоначальный взнос</label>
-                    <input disabled="disabled" 
-                           class="js-mask__currency js-hypothec__payment-sum">
-                    <input min="10" max="90" value="30" disabled="disabled" 
-                           class="js-mask__percent js-picker__input js-hypothec__payment-percent">
-                </div>
-                <div class="range _picker js-picker__target"></div>
-            </div>
-            <div class="input-group">
-                <label>Сумма кредита</label>
-                <input disabled="disabled" class="js-mask__currency js-hypothec__credit">
-            </div>
-            <div class="js-picker">
-                <div class="input-group _picker">
-                    <label>Срок ипотеки</label>
-                    <input min="1" max="30" value="20" 
-                           disabled="disabled" 
-                           class="js-mask__age js-picker__input js-hypothec__age">
-                </div>
-                <div class="range _picker js-picker__target"></div>
-            </div>
-        </div>
+        @@include('./calc-fields.html', {"extended": 0})
         <p class="hypothec-calc__res-h">Найдено 5 ипотечных программ</p>
         <div class="hypothec-calc__row">
             <div class="hypothec-calc__res slider-small js-hypothec__slider">
@@ -73,7 +45,7 @@
                 })
             </div>
             @@include('./scroll.html')
-            @@include('./request.html')
+            @@include('./request.html', {"extended": 0})
         </div>
     </div>
 </section>

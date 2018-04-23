@@ -25,7 +25,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#estimate" class="js-popup">
                                 <i class="sprite seller-3"></i>
                                 <span><span>Оценить квартиру</span></span>
                             </a>
@@ -54,9 +54,10 @@
             })
             @@include('./template/services/seller.html')
             @@include('./template/sales/realty.html')
-            @@include('./template/realty-form-seller.html')
+            @@include('./template/realty/form-seller.html')
             @@include('./template/sales/seller.html')
             @@include('./template/seo.html')
+            <div class="hidden">@@include('./template/popups/estimate.html')</div>
             @@include('./template/footer.html')
             @@include('./template/popups-common.html')
             <div class="content__overlay js-menu-overlay"></div>

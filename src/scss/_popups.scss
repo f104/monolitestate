@@ -83,8 +83,12 @@
         width: 700px;
         .input-group__wrapper {
             &:not(._submit) {
+                margin-left: -17px;
+                margin-right: -17px;
                 .input-group {
-                    margin-right: 35px;
+                    margin-right: 0;
+                    padding-left: 17px;
+                    padding-right: 17px;
                     flex-basis: 50%;
                 }
             }

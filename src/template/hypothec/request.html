@@ -1,4 +1,4 @@
-<div class="hypothec-request">
+<div class="hypothec-request @@if (extended == 1){_extended}">
     <div class="hypothec-request__row">
         <div class="hypothec-request__col _1">
             <h4 class="hypothec-request__h">Оформить онлайн</h4>
@@ -36,17 +36,25 @@
                     <div class="input-group hypothec-request__form__text">
                         Оставьте ваш номер, и агент перезвонит вам в течение 5 минут
                     </div>
-                    <div class="input-group _lg">
-                        <label>Ваш телефон</label>
-                        <input class="js-mask__tel">
+                    <div class="hypothec-request__form__inputs">
+                        <div class="input-group _lg hypothec-request__form__name">
+                            <label>Ваше имя</label>
+                            <input>
+                        </div>
+                        <div class="input-group _lg">
+                            <label>Ваш телефон</label>
+                            <input class="js-mask__tel">
+                        </div>
                     </div>
-                    <div class="input-group _lg">
-                        <button class="btn _lg _solid">Жду звонка</button>
-                    </div>
-                    <div class="input-group _last">
-                        <span class="input-help">
-                            Отправляя заявку вы соглашаетесь на обработку персональных данных
-                        </span>
+                    <div class="hypothec-request__form__submit">
+                        <div class="input-group _lg">
+                            <button class="btn _lg _solid">Жду звонка</button>
+                        </div>
+                        <div class="input-group _last">
+                            <span class="input-help">
+                                Отправляя заявку вы соглашаетесь на обработку персональных данных
+                            </span>
+                        </div>
                     </div>
                 </form>
             </div>

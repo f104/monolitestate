@@ -54,6 +54,14 @@
             }
         }
     }
+    &._small-text {
+        .sales-list__item {
+            font-size: 15px;
+            .sales-list__item__h {
+                font-size: 19px;
+            }
+        }
+    }
 }
 @include media-breakpoint-up(md) {
     .sales-list {

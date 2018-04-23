@@ -649,6 +649,17 @@ jQuery(function () {
                 }
             ]
         });
+        var $t = $('.js-hypothec__show-target');
+        if ($t.length) {
+            var offset = $t.offset().top - 40;
+            if ($('.header__main').css('position') === 'fixed') {
+                offset += $('.header__main').outerHeight(true);
+            }
+            $('.js-hypothec__show-btn').on('click', function (e) {
+                e.preventDefault();
+                $('html, body').animate({scrollTop: offset}, 300);
+            });
+        }
     }
 
     function initDatepicker() {

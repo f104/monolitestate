@@ -86,7 +86,7 @@
                     <li><a href="#">Дома, дачи, участки</a></li>
                     <li><a href="rent.html" >Аренда</a></li>
                     <li><a href="commercial.html" >Коммерческая</a></li>
-                    <li><a href="#">Ипотека</a></li>
+                    <li><a href="hypothec.html" >Ипотека</a></li>
                     <li><a href="for-seller.html" class="_active">Продавцу</a></li>
                     <li><a href="#">Аналитика</a></li>
                 </ul>
@@ -129,7 +129,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#estimate" class="js-popup">
                                 <i class="sprite seller-3"></i>
                                 <span><span>Оценить квартиру</span></span>
                             </a>
@@ -205,7 +205,7 @@
                     </ul>
                 </div>
                 <div class="services__item__footer">
-                    <a href="#" class="btn _lg _secondary">Получить оценку стоимости</a>
+                    <a href="#estimate" class="btn _lg _secondary js-popup">Получить оценку стоимости</a>
                 </div>
                 <div class="services__item__img-wrapper">
                     <img src="img/services/3.png"
@@ -407,6 +407,62 @@
             сопровождением.</p>
     </div>
 </section>
+            <div class="hidden"><div id="estimate" class="popup-cnt">
+    <div class="popup popup-visit">
+        <h3 class="popup__h3">Получить оценку стоимости</h3>
+        <form id="popup_subscribe_form" class="popup-subscribe__form js-validate">
+            <div class="input-group__wrapper">
+                <div class="input-group _lg _secondary">
+                    <label>Ваше имя</label>
+                    <input type="text" name="name" value="" required>
+                </div>
+                <div class="input-group _lg _secondary">
+                    <label>E-mail</label>
+                    <input type="text" name="email" value="" required>
+                </div>
+            </div>
+            <div class="input-group__wrapper">
+                <div class="input-group _lg _secondary">
+                    <label>Ваш телефон</label>
+                    <input type="text" name="phone" value="" required 
+                           class="js-mask__tel">
+                </div>
+                <div class="input-group _lg _secondary _row">
+                    <div class="input-group__col _lg">
+                        <label>Улица</label>
+                        <input type="text" name="street" value="">
+                    </div>
+                    <div class="input-group__col _sm">
+                        <label>Номер дома</label>
+                        <input type="text" name="number" value="">
+                    </div>
+                </div>
+            </div>
+            <div class="input-group__wrapper">
+                <div class="input-group _lg _secondary _row">
+                    <div class="input-group__col _sm">
+                        <label>Кол-во комнат</label>
+                        <input type="text" name="count" value="">
+                    </div>
+                    <div class="input-group__col _lg">
+                        <label>Предположительная стоимость</label>
+                        <input type="text" name="estimate" value="">
+                    </div>
+                </div>
+            </div>
+            <div class="input-group__wrapper _submit">
+                <div class="input-group">
+                    <button class="btn _solid _lg _shadow" type="submit">Отправить</button>
+                </div>
+                <div class="input-group">
+                    <span class="input-help">
+                        Оправляя заявку вы соглашаетесь на обработку 
+                        ваших персональных данных.</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div></div>
             <footer class="footer">
     <div class="footer__dark">
         <div class="container">
@@ -416,7 +472,7 @@
                 <li><a href="#">Дома, дачи, участки</a></li>
                 <li><a href="rent.html">Аренда</a></li>
                 <li><a href="commercial.html">Коммерческая</a></li>
-                <li><a href="#">Ипотека</a></li>
+                <li><a href="hypothec.html">Ипотека</a></li>
                 <li><a href="for-seller.html">Продавцу</a></li>
                 <li><a href="#">Аналитика</a></li>
             </ul>
@@ -624,6 +680,7 @@
         <li><a href="agent.html">agent</a></li>
         <li><a href="work.html">work</a></li>
         <li><a href="for-seller.html">for seller</a></li>
+        <li><a href="hypothec.html">hypothec</a></li>
         <li><a href="contacts.html">contacts</a></li>
         <li><a href="404.html">404</a></li>
     </ul>
