@@ -1,0 +1,235 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "О компании"
+    })
+    <body>
+        @@include('./template/header.html', {
+        "active": ""
+        })
+        <div class="content">
+            <div class="page-header _about">
+                <div class="container">
+                    <h1 class="_lg page-header__h">О компании «Монолит Истейт»</h1>
+                    <div class="page-header__about">
+                        <div class="page-header__about__img">
+                            <img src="img/about/logo.png"
+                                 srcset="img/about/logo@2x.png 2x,
+                                 img/about/logo@3x.png 3x"
+                                 alt="alt text">
+                        </div>
+                        <ul class="page-header__about__feat">
+                            <li class="page-header__about__feat__item">
+                                <span class="page-header__about__feat__lg">20 лет</span>
+                                <span class="page-header__about__feat__sm">опыт работы</span>
+                            </li>
+                            <li class="page-header__about__feat__item">
+                                <span class="page-header__about__feat__lg">35</span>
+                                <span class="page-header__about__feat__sm">застройщиков</span>
+                            </li>
+                            <li class="page-header__about__feat__item">
+                                <span class="page-header__about__feat__lg">20</span>
+                                <span class="page-header__about__feat__sm">банков<br>партнеров</span>
+                            </li>
+                            <li class="page-header__about__feat__item">
+                                <span class="page-header__about__feat__lg">450</span>
+                                <span class="page-header__about__feat__sm">агентов</span>
+                            </li>
+                            <li class="page-header__about__feat__item">
+                                <span class="page-header__about__feat__lg">8000</span>
+                                <span class="page-header__about__feat__sm">квартир</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="page-header__img-wrapper">
+                    <img src="img/about/header.jpg"
+                         srcset="img/about/header@2x.jpg 2x,
+                         img/about/header@3x.jpg 3x"
+                         alt="alt text">
+                </div>
+            </div>
+            <section class="section container rte">
+                <h3>Монолит Истейт – ведущее агентство недвижимости Нижегородского региона</h3>
+                <p>Компания «Монолит Истейт» оказывает качественные услуги 
+                    по продаже и аренде недвижимости в Нижнем Новгороде с 1997 года. 
+                    За это время крупнейшее агентство города обрело репутацию 
+                    надежного партнера для банков, застройщиков и частных клиентов.</p>
+                <p>По данным <a href="#">исследования нижегородского рынка недвижимости 
+                        от бизнес-портала Innov.ru</a>, именно «Монолит» с большим 
+                    отрывом занимает лидерскую позицию среди риелторских 
+                    компаний города. Это обусловлено большой базой объектов 
+                    вторичного и строящегося жилья, коммерческих и загородных 
+                    объектов, и ответственной работой агентства по отношению 
+                    к каждому клиенту.</p>
+                <p>Коллектив агентства насчитывает более 450 опытных агентов, 
+                    юридическую службу, а также брокеров по ипотечному кредитованию. 
+                    Каждый наш сотрудник заинтересован в подборе оптимально выгодных 
+                    условий сделки, удовлетворяющих требованиям клиента. С целью 
+                    повышения качества обслуживания в компании регулярно проходит 
+                    обучение и сертификация сотрудников.</p>
+                <p>Центр ипотечных программ агентства работает с 20 ведущими 
+                    банками региона, чтобы подобрать для вас самые выгодные 
+                    условия жилищного кредитования.</p>
+                <p>Агентство «Монолит Истейт» — действующий член Нижегородской 
+                    Гильдии сертифицированных риелторов, что говорит о надежности 
+                    компании и высокой квалификации сотрудников.</p>
+            </section>
+            <section class="section container">
+                <h3 class="section__h">Почему нас выбирают?</h3>
+                <div class="about-why tabs-vert js-tabs js-tabs_disconnected">
+                    <aside class="about-why__aside">
+                        <ul class="tabs-vert__list js-tabs__list">
+                            <li><a href="#tab1">Покупатели</a></li>
+                            <li><a href="#tab2">Продавцы</a></li>
+                            <li><a href="#tab3">Соискатели</a></li>
+                        </ul>
+                        <div class="tabs__select">
+                            <select class="js-tabs__select js-select2" style="width:100%">
+                                <option value="#tab1">Покупатели</option>
+                                <option value="#tab2">Продавцы</option>
+                                <option value="#tab3">Соискатели</option>
+                            </select>
+                        </div>
+                    </aside>
+                    <div class="about-why__content js-tabs__content">
+                        <div id="tab1">
+                            <div class="sales-list _3 _small-text">
+                                @@include('./template/sales/item.html', {
+                                "icon": "hypothec-1",
+                                "title": "Скидки на ипотеку",
+                                "desc": "Мы договорились с крупнейшими банками о скидках для клиентов. С нами вы можете получить кредит по ставкам до 0,5% меньше, чем в банке.",
+                                "btn": ""
+                                })
+                                @@include('./template/sales/item.html', {
+                                "icon": "sales-ring",
+                                "title": "Гарантия безопасности",
+                                "desc": "Мы отвечаем собственными средствами за безопасность вашей сделки и возвращаем всю сумму сделки в случае утери прав. С нами покупатели под 100% защитой.",
+                                "btn": ""
+                                })
+                                @@include('./template/sales/item.html', {
+                                "icon": "hypothec-1",
+                                "title": "Юридическое сопровождение",
+                                "desc": "Юристы сопровождают сделки клиентов с момента подачи заявки и оказывают бесплатную помощь даже после покупки недвижимости. «Юридический» опыт работы в сфере недвижимости делает наши услуги высокопрофессиональными, а ваши сделки — «чистыми».",
+                                "btn": ""
+                                })
+                            </div>
+                        </div>
+                        <div id="tab2">2</div>
+                        <div id="tab3">3</div>
+                    </div>
+                </div>
+            </section>
+            <section class="section container">
+                <h3 class="section__h">История «Монолит Истейт»</h3>
+                <div class="about-hystory">
+                    <aside class="about-hystory__aside">
+                        <div class="about-hystory__year-slider js-about-hystory__year-slider">
+                            <span>1997</span>
+                            <span class="_sibling">1998</span>
+                            <span>1999</span>
+                            <span>2000</span>
+                            <span>2002</span>
+                            <span>2005</span>
+                            <span>2010</span>
+                            <span class="_sibling">2017</span>
+                        </div>
+                    </aside>
+                    <div class="about-hystory__content">
+                        <div class="about-hystory__content-slider js-about-hystory__content-slider">
+                            <div class="about-hystory__content__item">
+                                <div class="about-hystory__content__item__img">
+                                    <img src="img/about/1997.jpg"
+                                         srcset="img/about/1997@2x.jpg 2x,
+                                         img/about/1997@3x.jpg 3x"
+                                         class="Bitmap">
+                                </div>
+                                <div class="about-hystory__content__item__content">
+                                    <h3 class="about-hystory__content__item__h">Основание компании</h3>
+                                    <p class="about-hystory__content__item__year">1997 год</p>
+                                    <p class="about-hystory__content__item__text">
+                                        Наше Агентство было создано в июне 1997 г. и зарекомендовало 
+                                        себя как активный и высокопрофессиональный участник рынка 
+                                        недвижимости, во многом формирующий и способствующий 
+                                        установлению цивилизованных правил работы на рынке. 
+                                        В 1997 г. в фирме работало около 30 сотрудников, 
+                                        сейчас количество профессиональных агентов увеличилось 
+                                        более чем в 10 раз. Офисы Агентства расположены 
+                                        на центральных улицах Нижегородского и Советского районов: 
+                                        ул.Б.Покровская, 69 и ул.Бекетова, 13.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="about-hystory__content__item">
+                                <div class="about-hystory__content__item__img">
+                                    <img src="img/about/1998.jpg"
+                                         srcset="img/about/1998@2x.jpg 2x,
+                                         img/about/1998@3x.jpg 3x"
+                                         class="Bitmap">
+                                </div>
+                                <div class="about-hystory__content__item__content">
+                                    <h3 class="about-hystory__content__item__h">Становление компании</h3>
+                                    <p class="about-hystory__content__item__year">1998 год</p>
+                                    <p class="about-hystory__content__item__text">
+                                        Наше Агентство было создано в июне 1997 г. и зарекомендовало 
+                                        себя как активный и высокопрофессиональный участник рынка 
+                                        недвижимости, во многом формирующий и способствующий 
+                                        установлению цивилизованных правил работы на рынке.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="about-hystory__content__item">1999</div>
+                            <div class="about-hystory__content__item">2000</div>
+                            <div class="about-hystory__content__item">2002</div>
+                            <div class="about-hystory__content__item">2005</div>
+                            <div class="about-hystory__content__item">2010</div>
+                            <div class="about-hystory__content__item">2017</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section about-dir">
+                <div class="container">
+                    <h3 class="about-dir__h">Слово директору</h3>
+                    <div class="about-dir__text">
+                        <p>«В России много успешных компаний, потому что у нас прекрасные люди 
+                            и уникальная ментальность. Поэтому жить и работать здесь — счастье. 
+                            Мы работаем в сфере недвижимости и строим риелторскую компанию нового типа. 
+                            Сочетаем инновации, ответственность и человеческое отношение к каждому клиенту.</p>
+                        <p>Компания инвестирует в обучение, автоматизацию процессов, исследования 
+                            и качество услуг. Мы строим отношения с партнерами по всей России: 
+                            с застройщиками, банками, страховыми и оценочными компаниями. 
+                            Наши клиенты имеют доступ к огромной базе жилья, экономят деньги 
+                            за счет эксклюзивных скидок по ипотеке и время благодаря принципу одного окна.</p>
+                        <p>Мы развиваемся, чтобы Вы жили счастливо!»</p></p>
+                    </div>
+                    <div class="about-dir__subscribe">
+                        <p class="about-dir__subscribe__name">Светлана Жарова</p>
+                        <p class="about-dir__subscribe__post">Директор «Монолит Истейт»</p>
+                        <img class="about-dir__subscribe__img"
+                             src="img/about/subscribe.png"
+                             srcset="img/about/subscribe@2x.png 2x,
+                             img/about/subscribe@3x.png 3x"
+                             alt="alt text">
+                    </div>
+                </div>
+            </section>
+            @@include('./template/reviews/clients.html', {
+            "title": "Отзывы о компании"
+            })
+            @@include('./template/callme.html', {
+            "title": "Если у вас остались вопросы",
+            "margin": 1,
+            "class": "_2",
+            "img": "call2"
+            })
+            @@include('./template/news/section.html', {
+            "title":"Последние новости компании"
+            })
+            @@include('./template/seo.html')
+            @@include('./template/footer.html')
+            @@include('./template/popups-common.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        @@include('./template/foot.html')
+    </body>
+</html>

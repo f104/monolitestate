@@ -19,9 +19,10 @@ jQuery(function () {
         initRange();
         initGallery();
         initHypothec();
-        initDatepicker()
-        initScrollbar()
-        initAntispam()
+        initDatepicker();
+        initScrollbar();
+        initAbout();
+        initAntispam();
     });
 
     $(window).on('resize', function () {
@@ -728,6 +729,47 @@ jQuery(function () {
 //        $('.js-scrollbar-hot').scrollbar();
     }
 
+    function initAbout() {
+        $('.js-about-hystory__year-slider').slick({
+            dots: false,
+            arrows: false,
+            infinite: true,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            centerMode: true,
+            vertical: true,
+            centerPadding: '50px',
+            asNavFor: '.js-about-hystory__content-slider',
+            focusOnSelect: true,
+            mobileFirst: true,
+            responsive: [
+                {
+                    breakpoint: appConfig.breakpoint.md - 1,
+                    settings: {
+                        centerPadding: '70px'
+                    }
+                }
+            ]
+        });
+        $('.js-about-hystory__year-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+//                console.log(slick);
+            $(this).find('._sibling').removeClass('_sibling');
+            $(slick.$slides[nextSlide]).next().addClass('_sibling');
+            $(slick.$slides[nextSlide]).prev().addClass('_sibling');
+        });
+        $('.js-about-hystory__content-slider').slick({
+            dots: false,
+            arrows: false,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            asNavFor: '.js-about-hystory__year-slider',
+            adaptiveHeight: true,
+            draggable: false
+        });
+    }
+    
     function initAntispam() {
         setTimeout(function () {
             $('input[name="email3"],input[name="info"],input[name="text"]').attr('value', '').val('');

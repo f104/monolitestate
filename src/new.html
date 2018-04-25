@@ -28,13 +28,9 @@
             @@include('./template/hypothec/calc.html', {
             "title": "Ипотечные программы на новостройки"
             })
-            <section class="container section news">
-                <h3 class="section__h">Мы говорим</h3>
-                @@include('./template/news/related.html')
-                <button class="btn _primary _lg section__button _more">
-                    <span>Показать больше</span><i class="icon-more"></i></button>
-                <a href="news.html" class="btn _secondary _lg section__button">Все новости</a>
-            </section>
+            @@include('./template/news/section.html', {
+            "title":"Мы говорим"
+            })
             @@include('./template/seo.html')
             @@include('./template/footer.html')
             @@include('./template/popups-common.html')

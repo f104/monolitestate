@@ -20,7 +20,9 @@
         display: flex;
     }
     .work-list__aside {
+        margin-bottom: 26px;
         @include media-breakpoint-up(md) {
+            margin-bottom: 0;
             margin-right: 30px;
             flex-basis: 160px;
             flex-shrink: 0;
@@ -28,6 +30,7 @@
     }
     .work-item {
         .work-item__content {
+            margin-bottom: 25px;
             @include media-breakpoint-up(md) {
                 margin-bottom: 40px;
             }

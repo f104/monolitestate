@@ -125,6 +125,56 @@
         background-color: transparent;
         padding: 0;
     }
+    &._about {
+        @include bg-img-wrapper;
+        height: 370px;
+        display: flex;
+        margin-bottom: 10px;
+        margin-top: - map_get($header-margin-bottom, sm);
+        padding-top: map_get($header-margin-bottom, sm);
+        @include media-breakpoint-up(md) {
+            margin-bottom: 35px;
+            margin-top: - map_get($header-margin-bottom, md);
+            padding-top: map_get($header-margin-bottom, md);
+            height: 400px;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-top: - map_get($header-margin-bottom, lg);
+            padding-top: map_get($header-margin-bottom, lg);
+            height: 410px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        .page-header__h {
+            margin-bottom: 0;
+        }
+        .page-header__img-wrapper {
+            @include bg-img-inner($white, .55);
+            z-index: -1;
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 246px;
+                background: linear-gradient(to bottom, transparent, #F5F5F5);
+                z-index: 1;
+            }
+            img {
+                @include bg-img-100;
+                left: 120%;
+                @include media-breakpoint-up(md) {
+                    left: 75%;
+                }
+                @include media-breakpoint-up(lg) {
+                    left: 50%;
+                }
+            }
+        }
+    }
 }
 
 @include media-breakpoint-up(md) {
