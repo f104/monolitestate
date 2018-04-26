@@ -405,7 +405,8 @@ jQuery(function () {
     function initTabs() {
         $('.js-tabs').each(function (index, elem) {
             $(elem).easytabs({
-                tabs: '.js-tabs__list > li',
+                // для вложенных табов используем data
+                tabs: typeof $(elem).data('tabs') === 'undefined' ? '.js-tabs__list > li' : $(elem).data('tabs'),
                 panelContext: $(elem).hasClass('js-tabs_disconnected') ? $('.js-tabs__content') : $(elem)
             });
             $(elem).bind('easytabs:after', function (event, $clicked, $target) {
@@ -667,26 +668,32 @@ jQuery(function () {
     }
 
     function initDatepicker() {
-        var datepicker_visible = false;
-        $('.js-datetimepicker').datepicker({
-            minDate: new Date(),
-            timepicker: true,
-            dateTimeSeparator: ', ',
+        var datepickerVisible = false;
+        var commonOptions = {
             position: 'top left',
             onShow: function (inst, animationCompleted) {
                 if (animationCompleted) {
-                    datepicker_visible = true;
+                    datepickerVisible = true;
                 }
             },
             onHide: function (inst, animationCompleted) {
                 if (animationCompleted) {
-                    datepicker_visible = false;
+                    datepickerVisible = false;
                 }
             }
-        });
-        $('.js-datetimepicker').on('click', function () {
-            if (datepicker_visible) {
-                var datepicker = $('.js-datetimepicker').data('datepicker');
+        };
+        $('.js-datetimepicker').datepicker(Object.assign({
+            minDate: new Date(),
+            timepicker: true,
+            dateTimeSeparator: ', ',
+        }, commonOptions));
+        $('.js-datepicker-range').datepicker(Object.assign({
+            range: true,
+            multipleDatesSeparator: ' - ',
+        }, commonOptions));
+        $('.js-datetimepicker, .js-datepicker-range').on('click', function () {
+            if (datepickerVisible) {
+                var datepicker = $('.js-datetimepicker, .js-datepicker-range').data('datepicker');
                 datepicker.hide();
             }
         });
@@ -769,7 +776,7 @@ jQuery(function () {
             draggable: false
         });
     }
-    
+
     function initAntispam() {
         setTimeout(function () {
             $('input[name="email3"],input[name="info"],input[name="text"]').attr('value', '').val('');

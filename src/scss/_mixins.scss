@@ -150,3 +150,11 @@
         padding-right: 0;
     }
 }
+
+/* after для скроллбаров */
+@mixin scrollbar-spacer($width) {
+    content: '';
+    display: block;
+    width: $width;
+    flex-shrink: 0;
+}

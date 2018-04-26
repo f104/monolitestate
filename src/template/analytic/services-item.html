@@ -1,0 +1,22 @@
+<div class="analytic-services__item">
+    <div class="analytic-services__item__inner">
+        <div class="analytic-services__item__head">
+            <div class="analytic-services__item__h">@@title</div>
+            <div class="analytic-services__item__text rte">
+                <span class="analytic-services__item__text _muted">Чем мы помогаем вам:</span>
+                <ol>
+                    @@for (var i = 0; i < text.length; i++) {
+                    <li>`+text[i]+`</li>
+                    }
+                </ol>
+            </div>
+            <span class="analytic-services__item__icon">
+                <i class="sprite @@icon"></i>
+            </span>
+        </div>
+        <div class="analytic-services__item__foot">
+            <a href="#" class="btn _lg _solid">Заказать</a>
+            <a href="#" class="btn _lg _secondary">Посмотреть демо</a>
+        </div>
+    </div>
+</div>

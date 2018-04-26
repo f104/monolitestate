@@ -1,0 +1,83 @@
+<div class="analytic">
+    <h3 class="analytic__h">Динамика рынка недвижимости</h3>
+    <div class="analytic__row">
+        <div class="analytic__col">
+            <h3 class="analytic__lead">Динамика цены за квадратный метр</h3>
+            <ul class="analytic__chart-legend">
+                <li class="analytic__chart-legend__item _1">1-комнатные</li>
+                <li class="analytic__chart-legend__item _2">2-комнатные</li>
+                <li class="analytic__chart-legend__item _3">3-комнатные</li>
+                <li class="analytic__chart-legend__item _4">4-комнатные</li>
+            </ul>
+            <div class="js-scrollbar-sm scrollbar-outer _hor">
+                <div class="analytic__chart">
+                    <canvas id="chart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="analytic__col js-tabs">
+            <div class="tabs _primary _noselect">
+                <ul class="tabs__list js-tabs__list">
+                    <li><a href="#cost">Цена</a></li>
+                    <li><a href="#offer">Предложение</a></li>
+                </ul>
+            </div>
+            <div id="cost" class="analytic__cost">
+                <table class="analytic__table">
+                    <thead>
+                        <tr>
+                            <th>Тип<br>недвижимости</th>
+                            <th>Средняя цена предложения, кв.м</th>
+                            <th>Изменение на, %</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1-комнатные</td>
+                            <td>59 912 руб.</td>
+                            <td class="_up">7%</td>
+                        </tr>
+                        <tr>
+                            <td>2-комнатные</td>
+                            <td>56 236 руб.</td>
+                            <td class="_down">-5%</td>
+                        </tr>
+                        <tr>
+                            <td>3-комнатные</td>
+                            <td>54 959 руб.</td>
+                            <td class="_up">33%</td>
+                        </tr>
+                        <tr>
+                            <td>4-комнатные</td>
+                            <td>55 648 руб.</td>
+                            <td class="_up">12%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="analytic__text">
+                    <span class="analytic__text__h">
+                        Внимание! У вас выбрано несколько 
+                        Типов недвижимости и Районов.
+                    </span>
+                    Данные представлены совокупно по типам и районам. 
+                    Являясь обобщенным индикатором движения цены данные 
+                    могут не отражать реальной картины по конкретному 
+                    типу недвижимости или району
+                </div>
+                <div class="analytic__text">
+                    <span class="analytic__text__h">
+                        Справочно
+                    </span>
+                    В заданном временном периоде максимальную динамику 
+                    по средней цене предложения за квадратный метр 
+                    на уровне 7% к началу периода демонстрируют объекты: 
+                    1-комнатные  (7%) / 2-комнатные  (14%) / 
+                    3-комнатные  (33%) / Пансионат  (5%) / 4-комнатные  (16%)
+                </div>
+            </div>
+            <div id="offer">
+                Предложение
+            </div>
+        </div>
+    </div>
+</div>

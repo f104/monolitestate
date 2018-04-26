@@ -1,0 +1,29 @@
+<form class="analytic-filter">
+    <div class="input-group">
+        <select class="js-select2">
+            <option>Все города</option>
+            <option selected>Нижний Новгород</option>
+            <option>Арзамас</option>
+        </select>
+    </div>
+    <div class="input-group">
+        @@include('../chunks/pseudo-select.html', {"title": "Районы"})
+    </div>
+    <div class="input-group">
+        <select class="js-select2">
+            <option>Вся недвижимость</option>
+            <option selected>Вторичная</option>
+            <option>Новостройки</option>
+        </select>
+    </div>
+    <div class="input-group">
+        @@include('../chunks/pseudo-select.html', {"title": "Тип недвижимости"})
+    </div>
+    <div class="input-group">
+        <div class="input-wrapper _icon">
+            <input required readonly 
+                   class="js-datepicker-range">
+            <i class="icon-calendar"></i>
+        </div>
+    </div>
+</form>

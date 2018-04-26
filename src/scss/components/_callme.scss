@@ -52,5 +52,29 @@
                 }
             }
         }
+        .callme__wrapper__subscribe {
+            color: $white;
+            margin-top: 20px;
+            font-size: 16px;
+            .callme__wrapper__subscribe__muted {
+                display: block;
+                opacity: 0.5;
+                font-size: 12px;
+                margin-top: 5px;
+            }
+            @include media-breakpoint-up(md) {
+                position: absolute;
+                top: 130px;
+                right: 110px;
+                text-align: right;
+                width: 200px;
+                margin-top: 0;
+            }
+            @include media-breakpoint-up(lg) {
+                right: 270px;
+                top: auto;
+                bottom: 0px;
+            }
+        }
     }
 }

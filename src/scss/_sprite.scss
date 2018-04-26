@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 7.7em 212.4em;
+    background-size: 7.7em 229.8em;
 }
 
 .no-svg .sprite:before {
@@ -26,8 +26,44 @@
 
 
 
-  .sprite.bank:before {
+  .sprite.analytic-1:before {
       background-position: 0em -2.6em;
+      width: 3.5em;
+      height: 3.5em;
+  }
+
+
+
+
+  .sprite.analytic-2:before {
+      background-position: 0em -6.1em;
+      width: 3.7em;
+      height: 2.3em;
+  }
+
+
+
+
+  .sprite.analytic-3:before {
+      background-position: 0em -8.4em;
+      width: 3.2em;
+      height: 3.3em;
+  }
+
+
+
+
+  .sprite.analytic-4:before {
+      background-position: 0em -11.7em;
+      width: 3.4em;
+      height: 3.3em;
+  }
+
+
+
+
+  .sprite.bank:before {
+      background-position: 0em -15em;
       width: 2.5em;
       height: 1.9em;
   }
@@ -36,7 +72,7 @@
 
 
   .sprite.clock:before {
-      background-position: 0em -4.5em;
+      background-position: 0em -16.9em;
       width: 2.5em;
       height: 2.5em;
   }
@@ -45,7 +81,7 @@
 
 
   .sprite.fb:before {
-      background-position: 0em -7em;
+      background-position: 0em -19.4em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -54,7 +90,7 @@
 
 
   .sprite.fb-hover:before {
-      background-position: 0em -12.2em;
+      background-position: 0em -24.6em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -63,7 +99,7 @@
 
 
   .sprite.hypothec-1:before {
-      background-position: 0em -17.4em;
+      background-position: 0em -29.8em;
       width: 4.4em;
       height: 4.4em;
   }
@@ -72,7 +108,7 @@
 
 
   .sprite.hypothec-2:before {
-      background-position: 0em -21.8em;
+      background-position: 0em -34.2em;
       width: 4.6em;
       height: 3.7em;
   }
@@ -81,7 +117,7 @@
 
 
   .sprite.hypothec-3:before {
-      background-position: 0em -25.5em;
+      background-position: 0em -37.9em;
       width: 4.6em;
       height: 4.5em;
   }
@@ -90,7 +126,7 @@
 
 
   .sprite.hypothec-4:before {
-      background-position: 0em -30em;
+      background-position: 0em -42.4em;
       width: 4.5em;
       height: 4.5em;
   }
@@ -99,7 +135,7 @@
 
 
   .sprite.instagram:before {
-      background-position: 0em -34.5em;
+      background-position: 0em -46.9em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -108,7 +144,7 @@
 
 
   .sprite.instagram-hover:before {
-      background-position: 0em -39.7em;
+      background-position: 0em -52.1em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -117,7 +153,7 @@
 
 
   .sprite.man-baloon:before {
-      background-position: 0em -44.9em;
+      background-position: 0em -57.3em;
       width: 5.5em;
       height: 4.9em;
   }
@@ -126,7 +162,7 @@
 
 
   .sprite.map-minus:before {
-      background-position: 0em -49.8em;
+      background-position: 0em -62.2em;
       width: 6.3em;
       height: 6.3em;
   }
@@ -135,7 +171,7 @@
 
 
   .sprite.map-plus:before {
-      background-position: 0em -56.1em;
+      background-position: 0em -68.5em;
       width: 6.3em;
       height: 6.3em;
   }
@@ -144,7 +180,7 @@
 
 
   .sprite.ok:before {
-      background-position: 0em -62.4em;
+      background-position: 0em -74.8em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -153,7 +189,7 @@
 
 
   .sprite.ok-hover:before {
-      background-position: 0em -67.6em;
+      background-position: 0em -80em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -162,7 +198,7 @@
 
 
   .sprite.oldprice:before {
-      background-position: 0em -72.8em;
+      background-position: 0em -85.2em;
       width: 2.9em;
       height: 2.9em;
   }
@@ -170,8 +206,17 @@
 
 
 
+  .sprite.pdf:before {
+      background-position: 0em -88.1em;
+      width: 4.1em;
+      height: 5em;
+  }
+
+
+
+
   .sprite.realty-check:before {
-      background-position: 0em -75.7em;
+      background-position: 0em -93.1em;
       width: 1.8em;
       height: 1.4em;
   }
@@ -180,7 +225,7 @@
 
 
   .sprite.realty-commerce:before {
-      background-position: 0em -77.1em;
+      background-position: 0em -94.5em;
       width: 3.5em;
       height: 3.4em;
   }
@@ -189,7 +234,7 @@
 
 
   .sprite.realty-commerce-o:before {
-      background-position: 0em -80.5em;
+      background-position: 0em -97.9em;
       width: 3.5em;
       height: 3.4em;
   }
@@ -198,7 +243,7 @@
 
 
   .sprite.realty-new:before {
-      background-position: 0em -83.9em;
+      background-position: 0em -101.3em;
       width: 5.8em;
       height: 3.4em;
   }
@@ -207,7 +252,7 @@
 
 
   .sprite.realty-new-o:before {
-      background-position: 0em -87.3em;
+      background-position: 0em -104.7em;
       width: 5.8em;
       height: 3.4em;
   }
@@ -216,7 +261,7 @@
 
 
   .sprite.realty-second:before {
-      background-position: 0em -90.7em;
+      background-position: 0em -108.1em;
       width: 3.5em;
       height: 3.5em;
   }
@@ -225,7 +270,7 @@
 
 
   .sprite.realty-second-o:before {
-      background-position: 0em -94.2em;
+      background-position: 0em -111.6em;
       width: 3.5em;
       height: 3.5em;
   }
@@ -234,7 +279,7 @@
 
 
   .sprite.realty-village:before {
-      background-position: 0em -97.7em;
+      background-position: 0em -115.1em;
       width: 3.7em;
       height: 3.7em;
   }
@@ -243,7 +288,7 @@
 
 
   .sprite.realty-village-o:before {
-      background-position: 0em -101.4em;
+      background-position: 0em -118.8em;
       width: 3.7em;
       height: 3.7em;
   }
@@ -252,7 +297,7 @@
 
 
   .sprite.russia:before {
-      background-position: 0em -105.1em;
+      background-position: 0em -122.5em;
       width: 7.7em;
       height: 4.4em;
   }
@@ -261,7 +306,7 @@
 
 
   .sprite.sales-ads:before {
-      background-position: 0em -109.5em;
+      background-position: 0em -126.9em;
       width: 4em;
       height: 4em;
   }
@@ -270,7 +315,7 @@
 
 
   .sprite.sales-car:before {
-      background-position: 0em -113.5em;
+      background-position: 0em -130.9em;
       width: 4.1em;
       height: 3.4em;
   }
@@ -279,7 +324,7 @@
 
 
   .sprite.sales-career:before {
-      background-position: 0em -116.9em;
+      background-position: 0em -134.3em;
       width: 4.4em;
       height: 4.1em;
   }
@@ -288,7 +333,7 @@
 
 
   .sprite.sales-cost:before {
-      background-position: 0em -121em;
+      background-position: 0em -138.4em;
       width: 4.2em;
       height: 4.1em;
   }
@@ -297,7 +342,7 @@
 
 
   .sprite.sales-edu:before {
-      background-position: 0em -125.1em;
+      background-position: 0em -142.5em;
       width: 4.6em;
       height: 3.9em;
   }
@@ -306,7 +351,7 @@
 
 
   .sprite.sales-hand:before {
-      background-position: 0em -129em;
+      background-position: 0em -146.4em;
       width: 4em;
       height: 4em;
   }
@@ -315,7 +360,7 @@
 
 
   .sprite.sales-home:before {
-      background-position: 0em -133em;
+      background-position: 0em -150.4em;
       width: 4.2em;
       height: 4.6em;
   }
@@ -324,7 +369,7 @@
 
 
   .sprite.sales-hypothec:before {
-      background-position: 0em -137.6em;
+      background-position: 0em -155em;
       width: 4.7em;
       height: 2.9em;
   }
@@ -333,7 +378,7 @@
 
 
   .sprite.sales-income:before {
-      background-position: 0em -140.5em;
+      background-position: 0em -157.9em;
       width: 5.7em;
       height: 2.8em;
   }
@@ -342,7 +387,7 @@
 
 
   .sprite.sales-money:before {
-      background-position: 0em -143.3em;
+      background-position: 0em -160.7em;
       width: 3.9em;
       height: 3.9em;
   }
@@ -351,7 +396,7 @@
 
 
   .sprite.sales-photo:before {
-      background-position: 0em -147.2em;
+      background-position: 0em -164.6em;
       width: 4.9em;
       height: 4.1em;
   }
@@ -360,7 +405,7 @@
 
 
   .sprite.sales-problem:before {
-      background-position: 0em -151.3em;
+      background-position: 0em -168.7em;
       width: 4.1em;
       height: 4.1em;
   }
@@ -369,7 +414,7 @@
 
 
   .sprite.sales-ring:before {
-      background-position: 0em -155.4em;
+      background-position: 0em -172.8em;
       width: 4.7em;
       height: 4.7em;
   }
@@ -378,7 +423,7 @@
 
 
   .sprite.sales-stability:before {
-      background-position: 0em -160.1em;
+      background-position: 0em -177.5em;
       width: 3.5em;
       height: 5.1em;
   }
@@ -387,7 +432,7 @@
 
 
   .sprite.seller-1:before {
-      background-position: 0em -165.2em;
+      background-position: 0em -182.6em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -396,7 +441,7 @@
 
 
   .sprite.seller-2:before {
-      background-position: 0em -170.4em;
+      background-position: 0em -187.8em;
       width: 5.5em;
       height: 5.5em;
   }
@@ -405,7 +450,7 @@
 
 
   .sprite.seller-3:before {
-      background-position: 0em -175.9em;
+      background-position: 0em -193.3em;
       width: 5.7em;
       height: 5.6em;
   }
@@ -414,7 +459,7 @@
 
 
   .sprite.seller-4:before {
-      background-position: 0em -181.5em;
+      background-position: 0em -198.9em;
       width: 5.6em;
       height: 5.6em;
   }
@@ -423,7 +468,7 @@
 
 
   .sprite.sweet-home:before {
-      background-position: 0em -187.1em;
+      background-position: 0em -204.5em;
       width: 4.7em;
       height: 4.5em;
   }
@@ -432,7 +477,7 @@
 
 
   .sprite.twitter:before {
-      background-position: 0em -191.6em;
+      background-position: 0em -209em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -441,7 +486,7 @@
 
 
   .sprite.twitter-hover:before {
-      background-position: 0em -196.8em;
+      background-position: 0em -214.2em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -450,7 +495,7 @@
 
 
   .sprite.vk:before {
-      background-position: 0em -202em;
+      background-position: 0em -219.4em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -459,7 +504,7 @@
 
 
   .sprite.vk-hover:before {
-      background-position: 0em -207.2em;
+      background-position: 0em -224.6em;
       width: 5.2em;
       height: 5.2em;
   }

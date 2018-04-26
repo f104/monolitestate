@@ -23,10 +23,7 @@
         @include row(28px);
         flex-wrap: nowrap;
         &:after {
-            content: '';
-            display: block;
-            width: 16px;
-            flex-shrink: 0;
+            @include scrollbar-spacer(16px);
         }
     }
     @include media-breakpoint-up(md) {
