@@ -4,6 +4,7 @@
         margin-top: 0;
     }
     .detail__gallery {
+        position: relative;
         margin-left: - $container-padding-sm;
         margin-right: - $container-padding-sm;
         @include media-breakpoint-up(md) {
