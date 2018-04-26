@@ -45,6 +45,15 @@
         height: 100%;
     }
     .map__controls {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        > * {
+            pointer-events: all;
+        }
         .map__controls__zoom {
             @include list-unstyled;
             margin-bottom: 0;
@@ -59,6 +68,22 @@
             }
             @include media-breakpoint-down(sm) {
                 display: none;
+            }
+            &._right-lg {
+                @include media-breakpoint-up(lg) {
+                    right: $container-padding-lg;
+                }
+            }
+        }
+        .map__controls__filter {
+            position: absolute;
+            width: auto;
+            right: $container-padding-md;
+            top: $container-padding-lg;
+            display: none;
+            @include media-breakpoint-only(md) {
+                display: block;
+                z-index: 2;
             }
         }
         .map__control {

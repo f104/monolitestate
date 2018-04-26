@@ -1,0 +1,91 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "Объекты на карте"
+    })
+    <body>
+        @@include('./template/header.html', {
+        "active": "second"
+        })
+        <div class="content">
+            <section class="section onmap">
+                <div class="page-header container">
+                    <h1 class="page-header__h _lg">Объекты на карте</h1>
+                </div>
+                <div class="onmap__map map">
+                    <div id="map" class="map__content"></div>
+                    <div class="container map__controls">
+                        <ul class="map__controls__zoom _right-lg">
+                            <li><i class="sprite map-plus map__control js-map__zoom _in"></i></li>
+                            <li><i class="sprite map-minus map__control js-map__zoom _out"></i></li>
+                        </ul>
+                        @@include('./template/result/list-filters.html', {
+                        "type": "new"
+                        })
+                        <a href="#result_filter_new" class="btn _md _primary map__controls__filter js-menu-toggler">
+                            <i class="icon-filter"></i>
+                            Показать фильтр
+                        </a>
+                    </div>
+                </div>
+
+                <div class="container onmap__content-wrapper">
+                    <div class="onmap__content">
+                        <div class="onmap__list">
+                            <div class="scrollbar-outer _ver">
+                                @@loop('./template/onmap/item.html', [
+                                {
+                                "img": 1, 
+                                "title": "Северный: Улица Ленина, д.45", 
+                                "text": "Однокомнатная квартира"
+                                },
+                                {
+                                "img": 2, 
+                                "title": "Центр: КПД, ул. 50 лет Октября", 
+                                "text": "Однокомнатная квартира"
+                                },
+                                {
+                                "img": 3, 
+                                "title": "Улица Романа Ноздрина, д. 128", 
+                                "text": "Однокомнатная квартира"
+                                },
+                                {
+                                "img": 4, 
+                                "title": "Улица Полка Нормандии-Неман, д. 28", 
+                                "text": "Однокомнатная квартира"
+                                },
+                                {
+                                "img": 1, 
+                                "title": "Северный: Улица Ленина, д.45", 
+                                "text": "Однокомнатная квартира"
+                                },
+                                {
+                                "img": 2, 
+                                "title": "Центр: КПД, ул. 50 лет Октября", 
+                                "text": "Однокомнатная квартира"
+                                },
+                                {
+                                "img": 3, 
+                                "title": "Улица Романа Ноздрина, д. 128", 
+                                "text": "Однокомнатная квартира"
+                                },
+                                {
+                                "img": 4, 
+                                "title": "Улица Полка Нормандии-Неман, д. 28", 
+                                "text": "Однокомнатная квартира"
+                                }
+                                ])
+                            </div>
+                        </div>
+                        <a href="#" class="btn _lg _solid">Показать 14 вариантов</a>
+                    </div>
+                </div>
+            </section>
+            @@include('./template/footer.html')
+            @@include('./template/popups-common.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        @@include('./template/foot.html')
+        <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug"></script>
+        <script src="js/onmap.js"></script>
+    </body>
+</html>

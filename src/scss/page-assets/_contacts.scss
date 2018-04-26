@@ -10,6 +10,7 @@
         }
     }
     .page-header {
+        pointer-events: none;
         margin-bottom: 15px;
         @include media-breakpoint-up(md) {
             position: absolute;

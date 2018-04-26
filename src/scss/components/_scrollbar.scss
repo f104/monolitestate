@@ -1,4 +1,27 @@
 .scrollbar-outer {
+    &._ver {
+        > .scroll-element.scroll-y {
+            background: $white;
+            .scroll-element_outer {
+                width: 6px;
+                border-radius: 3px;
+                background: #e7e7e7;
+                right: 0;
+                left: auto;
+                .scroll-element_outer {
+                    width: 6px;
+                    right: 0px;
+                    left: auto;
+                }
+                .scroll-bar {
+                    width: 6px;
+                    border-radius: 3px;
+                    background: #4264cf;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
     &._hor {
         &.scroll-wrapper {
             margin-left: - $container-padding-sm;

@@ -380,6 +380,7 @@
         }
     }
 }
+
 .filters-form-residential {
     @include bg-img-wrapper;
     margin-bottom: 20px;
@@ -440,6 +441,103 @@
         @include bg-img-inner(transparent, 1);
         img {
             @include bg-img-100;
+        }
+    }
+}
+
+.result-filter {
+    .result-filter__inner {
+        position: relative;
+        background-color: $white;
+    }
+    .result-filter__h {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .result-filter__close {
+        display: none;
+    }
+    fieldset {
+        padding: 0 20px 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $gray-light;
+        legend {
+            opacity: 0.6;
+            font-family: Lato;
+            font-size: 14px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        &._inline {
+            .input-group {
+                display: inline-block;
+                margin-bottom: 0;
+                margin-right: 20px;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            } 
+        }
+    }
+    .result-filter__btn {
+        padding: 0 20px 20px;
+    }
+}
+@include media-breakpoint-down(md) {
+    .result-filter {
+        position: fixed;
+        z-index: 997;
+        top: 0;
+        width: 280px;
+        left: -280px;
+        @include transition(transform);
+        height: 100vh;
+        padding-top: 60px;
+        &._active {
+            transform: translateX(100%);
+            .result-filter__inner {
+                box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.13);
+            }
+        }
+        .scrollbar-outer {
+            height: 100%;
+            .scroll-element {
+                display: none;
+            }
+            .scroll-content.scroll-scrolly_visible {
+                left: 0;
+                margin-left: 0;
+            }
+        }
+        .result-filter__close {
+            @include link-black;
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 23px;
+            [class^="icon-"] {
+                color: $body-color;
+            }
+        }
+    }
+}
+@include media-breakpoint-up(md) {
+    .result-filter {
+        z-index: 999;
+        padding-top: 0;
+    }
+}
+@include media-breakpoint-up(lg) {
+    .result-filter {
+        z-index: unset;
+        .result-filter__inner {
+            border-radius: 5px;
         }
     }
 }

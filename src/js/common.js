@@ -708,6 +708,9 @@ jQuery(function () {
         if (w >= appConfig.breakpoint.md && w < appConfig.breakpoint.lg) {
             $('.js-scrollbar-md').scrollbar();
         }
+        if (w >= appConfig.breakpoint.md) {
+            $('.js-scrollbar-md-lg').scrollbar();
+        }
         if (w >= appConfig.breakpoint.lg) {
             $('.js-scrollbar-lg').scrollbar();
         }
@@ -724,6 +727,11 @@ jQuery(function () {
                 $('.js-scrollbar-md').scrollbar();
             } else {
                 $('.js-scrollbar-md').scrollbar('destroy');
+            }
+            if ($(window).outerWidth() >= appConfig.breakpoint.md) {
+                $('.js-scrollbar-md-lg').scrollbar();
+            } else {
+                $('.js-scrollbar-md-lg').scrollbar('destroy');
             }
         });
         $(window).on('resize', function () {
