@@ -10,6 +10,11 @@ jQuery(function () {
         $(window).on('resize', function () {
             initTooltip();
         });
+        $('.js-tabs').each(function (index, elem) {
+            $(elem).bind('easytabs:after', function (event, $clicked, $target) {
+                initTooltip();
+            });
+        });
     });
 
     function initSlider() {
