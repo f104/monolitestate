@@ -89,14 +89,15 @@
     .seller__img-wrapper {
         height: 310px;
         position: absolute;
-        bottom: -20px;
-        right: 0px;
+        bottom: -50px;
+        right: -100px;
         @include media-breakpoint-up(md) {
-            height: 430px;
+            height: 450px;
             bottom: -40px;
+            right: -60px;
         }
         @include media-breakpoint-up(lg) {
-            bottom: -110px;
+            bottom: -140px;
         }
         img {
             height: 100%;
