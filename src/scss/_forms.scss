@@ -489,6 +489,25 @@ form {
             }
         }
     }
+    &._file {
+        display: flex;
+        align-items: center;
+        @include media-breakpoint-up(md) {
+            padding-top: 26px;            
+        }
+        label {
+            margin-bottom: 0;
+            opacity: 1;
+            color: $primary;
+            .input-group__label-file {
+                @extend .link;
+                margin-left: .5ex;
+            }
+        }
+        input {
+            display: none !important;
+        }
+    }
 }
 
 .pseudo-select {

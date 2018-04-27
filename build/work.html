@@ -177,7 +177,7 @@
             <li>Активность, мобильность</li>
         </ul>
     </div>
-    <a href="#" class="btn _lg _solid work-item__btn">Откликнуться на вакансию</a>
+    <a href="#work" class="btn _lg _solid work-item__btn js-popup">Откликнуться на вакансию</a>
 </div><div id="tab2" class="work-item">
     <div class="work-item__content rte">
         <h3>PR-специалист</h3>
@@ -205,7 +205,7 @@
             <li>Активность, мобильность</li>
         </ul>
     </div>
-    <a href="#" class="btn _lg _solid work-item__btn">Откликнуться на вакансию</a>
+    <a href="#work" class="btn _lg _solid work-item__btn js-popup">Откликнуться на вакансию</a>
 </div><div id="tab3" class="work-item">
     <div class="work-item__content rte">
         <h3>Юрист</h3>
@@ -233,7 +233,7 @@
             <li>Активность, мобильность</li>
         </ul>
     </div>
-    <a href="#" class="btn _lg _solid work-item__btn">Откликнуться на вакансию</a>
+    <a href="#work" class="btn _lg _solid work-item__btn js-popup">Откликнуться на вакансию</a>
 </div><div id="tab4" class="work-item">
     <div class="work-item__content rte">
         <h3>Менеджер по продажам</h3>
@@ -261,7 +261,7 @@
             <li>Активность, мобильность</li>
         </ul>
     </div>
-    <a href="#" class="btn _lg _solid work-item__btn">Откликнуться на вакансию</a>
+    <a href="#work" class="btn _lg _solid work-item__btn js-popup">Откликнуться на вакансию</a>
 </div><div id="tab5" class="work-item">
     <div class="work-item__content rte">
         <h3>Руководитель отдела</h3>
@@ -289,7 +289,7 @@
             <li>Активность, мобильность</li>
         </ul>
     </div>
-    <a href="#" class="btn _lg _solid work-item__btn">Откликнуться на вакансию</a>
+    <a href="#work" class="btn _lg _solid work-item__btn js-popup">Откликнуться на вакансию</a>
 </div>
     </div>
 </div>
@@ -737,6 +737,49 @@
     </div>
 </div>
 </div>
+            <div class="hidden">
+                <div id="work" class="popup-cnt">
+    <div class="popup popup-visit">
+        <h3 class="popup__h3">Откликнуться на вакансию</h3>
+        <form id="popup_subscribe_form" class="popup-subscribe__form js-validate">
+            <div class="input-group__wrapper">
+                <div class="input-group _lg _secondary">
+                    <label>Ваше имя</label>
+                    <input type="text" name="name" value="" required>
+                </div>
+                <div class="input-group _lg _secondary">
+                    <label>E-mail</label>
+                    <input type="text" name="email" value="" required>
+                </div>
+            </div>
+            <div class="input-group__wrapper">
+                <div class="input-group _lg _secondary">
+                    <label>Ваш телефон</label>
+                    <input type="text" name="phone" value="" required 
+                           class="js-mask__tel">
+                </div>
+                <div class="input-group _file">
+                    <label>
+                        <i class="icon-attach"></i>
+                        <span class="input-group__label-file js-fileinput__cnt">Прикрепить файл резюме</span>
+                        <input type="file" class="js-fileinput">
+                    </label>
+                </div>
+            </div>
+            <div class="input-group__wrapper _submit">
+                <div class="input-group">
+                    <button class="btn _solid _lg _shadow" type="submit">Отправить</button>
+                </div>
+                <div class="input-group">
+                    <span class="input-help">
+                        Оправляя заявку вы соглашаетесь на обработку 
+                        ваших персональных данных.</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>                
+            </div>
             <div class="content__overlay js-menu-overlay"></div>
         </div>
         <div class="dev">

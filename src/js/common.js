@@ -22,6 +22,7 @@ jQuery(function () {
         initDatepicker();
         initScrollbar();
         initAbout();
+        initFileinput();
         initAntispam();
     });
 
@@ -785,6 +786,15 @@ jQuery(function () {
         });
     }
 
+    function initFileinput() {
+        $('.js-fileinput').on('change', function(e) {
+            if (this.files) {
+                var fileName = $(this).val().split('\\').pop();
+                $(this).parent().find('.js-fileinput__cnt').text(fileName);
+            }
+        });
+    }
+    
     function initAntispam() {
         setTimeout(function () {
             $('input[name="email3"],input[name="info"],input[name="text"]').attr('value', '').val('');
