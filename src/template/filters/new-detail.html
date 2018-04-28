@@ -1,0 +1,59 @@
+<div class="filters">
+    <form class="filters-form">
+        <div class="filters-form__row__lg">
+            <div class="filters-form__col__lg _col1">
+                <div class="filters-form__row">
+                    <div class="input-group _col1 js-range">
+                        <label class="_range">Площадь квартиры</label>
+                        <div class="range js-range__target"></div>
+                        <div class="input-group _range">
+                            <span class="input-group__item">
+                                <input type="number" min="19" max="160" value="19" 
+                                       autocomplete="off" class="js-range__from"> м²
+                            </span>
+                            <span class="input-group__item">
+                                <input type="number" min="19" max="160" value="160"
+                                       autocomplete="off" class="js-range__to"> м²
+                            </span>
+                        </div>
+                    </div>
+                    <div class="input-group _col2 js-range">
+                        <label class="_range">Стоимость квартиры</label>
+                        <div class="range js-range__target"></div>
+                        <div class="input-group _range">
+                            <span class="input-group__item">
+                                <input min="1900000" max="12000000" value="1900000" 
+                                       autocomplete="off" class="_lg js-mask__numeric js-range__from"> руб.
+                            </span>
+                            <span class="input-group__item">
+                                <input min="1900000" max="12000000" value="12000000"
+                                       autocomplete="off" class="_lg js-mask__numeric js-range__to"> руб.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="input-group filters-form__rooms">
+                        <label>Кол-во комнат</label>
+                        <div class="filters-form__rooms__inner">
+                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">Студ.</span></label>
+                            <label class="filters-form__rooms__inner__checkbox filters-form__sm"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">Комн.</span></label>
+                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">1</span></label>
+                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox" checked><span class="filters-form__rooms__inner__checkbox__inner">2</span></label>
+                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">3</span></label>
+                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">4+</span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filters-form__col__lg _col2">
+                <div class="filters-form__summary">
+                    <p class="filters-form__summary__text">Найдено 25 квартир</p>
+                    <div class="filters-form__summary__buttons">
+                        <div class="filters-form__summary__buttons__col">
+                            <button class="btn _lg _solid">Показать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

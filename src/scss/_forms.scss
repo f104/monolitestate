@@ -87,6 +87,9 @@ form {
         font-weight: 500;
         color: #141414;
         margin-bottom: 9px;
+        &._range {
+            margin-bottom: 15px;
+        }
     }
     select {
         display: block;
@@ -369,6 +372,9 @@ form {
             &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
                 -webkit-appearance: none;
                 margin: 0;
+            }
+            &._lg {
+                width: 95px;
             }
         }
     }

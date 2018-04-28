@@ -1,0 +1,19 @@
+.tour {
+    position: relative;
+    .tour__content {
+        height: 100%;
+        background-color: #d8d8d8;
+    }
+    .tour__intro {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 40px;
+        color: #b5b5b5;
+        @include media-breakpoint-up(md) {
+            font-size: 60px;
+        }
+
+    }
+}

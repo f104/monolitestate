@@ -314,7 +314,7 @@
         .filters-form__row {
             @include row(12px);
             align-items: flex-end;
-            .input-group {
+            > .input-group {
                 @include col(33.33%, 12px);
                 margin-bottom: 13px;
                 &._col1 {
@@ -360,11 +360,11 @@
         }
         .filters-form__row {
             @include row(18px);
-            .input-group {
+            > .input-group {
                 @include col(33.33%, 18px);
             }
             &:last-of-type {
-                .input-group {
+                > .input-group {
                     margin-bottom: 0;
                 }                
             }

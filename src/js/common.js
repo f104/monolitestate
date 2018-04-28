@@ -209,6 +209,7 @@ jQuery(function () {
                 unmaskAsNumber: true
             }
         });
+        $('.js-mask__numeric').inputmask("numeric");
         $('.js-mask__currency').inputmask("numeric", {
             suffix: ' руб.'
         });

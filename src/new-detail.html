@@ -1,0 +1,58 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "Новостройка"
+    })
+    <body>
+        @@include('./template/header.html', {
+        "active": "new"
+        })
+        <div class="content">
+            @@include('./template/new/detail-header.html')
+            <section class="section container new-detail-filter">
+                <h3 class="section__h">Выбрать квартиру</h3>
+                @@include('./template/filters/new-detail.html')
+            </section>
+            <section class="section container js-tabs">
+                <div class="tabs _noselect">
+                    <ul class="tabs__list js-tabs__list">
+                        <li><a href="#gallery">Фото/видео</a></li>
+                        <li><a href="#3d">3D-тур</a></li>
+                        <li><a href="#onmap">На карте</a></li>
+                        <li><a href="#progress">Ход строительства</a></li>
+                    </ul>
+                </div>
+                <div id="gallery" class="new-detail-gallery">
+                    @@include('./template/gallery.html')                        
+                </div>
+                <div id="3d" class="new-detail-tour">
+                    <div class="tour">
+                        <div class="tour__content"></div>
+                        <span class="tour__intro">3D-тур</span>
+                    </div>
+                </div>
+                <div id="onmap" class="new-detail-map map">
+                    <div id="map" class="map__content"></div>
+                    <div class="container map__controls">
+                        <ul class="map__controls__zoom">
+                            <li><i class="sprite map-plus map__control js-map__zoom _in"></i></li>
+                            <li><i class="sprite map-minus map__control js-map__zoom _out"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="progress"></div>
+            </section>
+            @@include('./template/new/detail-content.html')
+            @@include('./template/promo-new.html')
+            @@include('./template/hypothec/calc.html', {
+            "title": "Ипотечные программы для новостроек"
+            })
+            @@include('./template/seo.html')
+            @@include('./template/footer.html')
+            @@include('./template/popups-common.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        @@include('./template/foot.html')
+        <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug"></script>
+        <script src="js/detail.js"></script>
+    </body>
+</html>
