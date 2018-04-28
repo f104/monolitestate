@@ -705,6 +705,10 @@ jQuery(function () {
         var w = $(window).outerWidth();
         if (w < appConfig.breakpoint.md) {
             $('.js-scrollbar-sm').scrollbar();
+            $('.js-scrollbar-sm-md').scrollbar();
+        }
+        if (w < appConfig.breakpoint.lg) {
+            $('.js-scrollbar-sm-md').scrollbar();
         }
         if (w >= appConfig.breakpoint.md && w < appConfig.breakpoint.lg) {
             $('.js-scrollbar-md').scrollbar();
@@ -721,21 +725,22 @@ jQuery(function () {
             } else {
                 $('.js-scrollbar-sm').scrollbar('destroy');
             }
-        });
-        $(window).on('resize', function () {
             if ($(window).outerWidth() >= appConfig.breakpoint.md
                     && $(window).outerWidth() < appConfig.breakpoint.lg) {
                 $('.js-scrollbar-md').scrollbar();
             } else {
                 $('.js-scrollbar-md').scrollbar('destroy');
             }
+            if (w < appConfig.breakpoint.lg) {
+                $('.js-scrollbar-sm-md').scrollbar();
+            } else {
+                $('.js-scrollbar-sm-md').scrollbar('destroy');
+            }
             if ($(window).outerWidth() >= appConfig.breakpoint.md) {
                 $('.js-scrollbar-md-lg').scrollbar();
             } else {
                 $('.js-scrollbar-md-lg').scrollbar('destroy');
             }
-        });
-        $(window).on('resize', function () {
             if ($(window).outerWidth() >= appConfig.breakpoint.lg) {
                 $('.js-scrollbar-lg').scrollbar();
             } else {
@@ -787,14 +792,14 @@ jQuery(function () {
     }
 
     function initFileinput() {
-        $('.js-fileinput').on('change', function(e) {
+        $('.js-fileinput').on('change', function (e) {
             if (this.files) {
                 var fileName = $(this).val().split('\\').pop();
                 $(this).parent().find('.js-fileinput__cnt').text(fileName);
             }
         });
     }
-    
+
     function initAntispam() {
         setTimeout(function () {
             $('input[name="email3"],input[name="info"],input[name="text"]').attr('value', '').val('');

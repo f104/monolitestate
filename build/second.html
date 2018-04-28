@@ -65,45 +65,85 @@
         </div>
     </div>
     <div id="menu" class="header__menu js-menu">
-        <div class="header__menu__inner scrollbar-outer js-scrollbar-sm">
-            <div class="container">
-                <div class="header__menu__user">
-                    <a href="#login" class="header__main__user__link btn _primary js-popup"><i class="icon-user _middle"></i> Войти</a>
-                    <a href="#signup" class="header__main__user__link btn _secondary js-popup">Регистрация</a>
+        <div class="header__menu__inner scrollbar-outer js-scrollbar-sm-md">
+            <div class="header__menu-mobile">
+                <div class="header__menu-mobile__top">
+                    <div class="header__menu__user">
+                        <a href="#login" class="header__main__user__link btn _primary js-popup"><i class="icon-user _middle"></i> Войти</a>
+                        <a href="#signup" class="header__main__user__link btn _secondary js-popup">Регистрация</a>
+                    </div>
+                    <div class="header__menu__phone">
+                        <div>+7 (831) 219-90-67</div>
+                        <a href="#call" class="header__menu__phone__link js-popup"><i class="icon-phone"></i><span class="link _inverse">Заказать звонок</span></a>
+                    </div>
+                    <div class="header__menu__contacts">
+                        <div class="header__menu__contacts__text">Звоните нам с 7:30 до 24:00</div>
+                        <a href="contacts.html" class="header__menu__contacts__link"><i class="icon-map _middle"></i> Контакты</a>
+                    </div>
                 </div>
-                <div class="header__menu__phone">
-                    <div>+7 (831) 219-90-67</div>
-                    <a href="#call" class="header__menu__phone__link js-popup"><i class="icon-phone"></i><span class="link _inverse">Заказать звонок</span></a>
-                </div>
-                <div class="header__menu__contacts">
-                    <div class="header__menu__contacts__text">Звоните нам с 7:30 до 24:00</div>
-                    <a href="contacts.html" class="header__menu__contacts__link"><i class="icon-map _middle"></i> Контакты</a>
-                </div>
-                <ul class="header__menu__first">
-                    <li><a href="#" class="header__menu__first__toggler js-menu-second-toggler"><i class="icon-menu"></i></a></li>
-                    <li><a href="second.html" class="_active">Вторичное жилье</a></li>
-                    <li><a href="new.html" >Новостройки без комиссии</a></li>
-                    <li><a href="#">Дома, дачи, участки</a></li>
-                    <li><a href="rent.html" >Аренда</a></li>
-                    <li><a href="commercial.html" >Коммерческая</a></li>
-                    <li><a href="hypothec.html" >Ипотека</a></li>
-                    <li><a href="for-seller.html" >Продавцу</a></li>
-                    <li><a href="analytic.html" >Аналитика</a></li>
-                </ul>
-                <div class="header__menu__second-wrapper js-menu-second">
-                    <div class="header__menu__second-container">
-                        <ul class="header__menu__second">
-                            <li><a href="about.html">О компании</a></li>
-                            <li><a href="analytic.html">Аналитика рынка недвижимости</a></li>
-                            <li><a href="work.html">Вакансии / Работа в компании МИ</a></li>
-                            <li><a href="#">Услуги</a></li>
-                            <li><a href="#">Рейтинг агентов</a></li>
-                            <li><a href="builders.html">Застройщики</a></li>
-                            <li><a href="news.html">Новости рынка недвижимости</a></li>
-                            <li><a href="#">Акции</a></li>
-                            <li><a href="contacts.html">Контакты</a></li>
-                            <li><a href="agents.html">Специалисты по недвижимости</a></li>
+                <ul class="header__menu-mobile__first">
+                    <li>
+                        <span>Недвижимость</span>
+                        <ul class="header__menu-mobile__second">
+                            <li><a href="#">Вторичное жилье</a></li>
+                            <li><a href="#">Новостройки без комиссии</a></li>
+                            <li><a href="#">Дома, дачи, участки</a></li>
+                            <li><a href="#">Аренда</a></li>
+                            <li><a href="#">Коммерческая</a></li>
                         </ul>
+                    </li>
+                    <li>
+                        <span>Покупателям и продавцам</span>
+                        <ul class="header__menu-mobile__second">
+                            <li><a href="#">Ипотека</a></li>
+                            <li><a href="#">Продавцу</a></li>
+                            <li><a href="#">Застройщики</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Новости рынка недвижимости</a></li>
+                            <li><a href="#">Акции</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>Компания</span>
+                        <ul class="header__menu-mobile__second">
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Вакансии</a></li>
+                            <li><a href="#">Рейтинг агентов</a></li>
+                            <li><a href="#">Специалисты по недвижимости</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__menu-desktop">
+                <div class="container">
+                    <ul class="header__menu__first">
+                        <li><a href="#" class="header__menu__first__toggler js-menu-second-toggler"><i class="icon-menu"></i></a></li>
+                        <li><a href="second.html" class="_active">Вторичное жилье</a></li>
+                        <li><a href="new.html" >Новостройки без комиссии</a></li>
+                        <li><a href="#">Дома, дачи, участки</a></li>
+                        <li><a href="rent.html" >Аренда</a></li>
+                        <li><a href="commercial.html" >Коммерческая</a></li>
+                        <li><a href="hypothec.html" >Ипотека</a></li>
+                        <li><a href="for-seller.html" >Продавцу</a></li>
+                        <li><a href="analytic.html" >Аналитика</a></li>
+                    </ul>
+                    <div class="header__menu__second-wrapper js-menu-second">
+                        <div class="container">
+                            <div class="header__menu__second-inline">
+                                <ul class="header__menu__second">
+                                    <li><a href="work.html">Вакансии</a></li>
+                                    <li><a href="analytic.html">Услуги</a></li>
+                                    <li><a href="#">Рейтинг агентов</a></li>
+                                    <li><a href="about.html">О компании</a></li>
+                                    <li><a href="builders.html">Застройщики</a></li>
+                                    <li><a href="news.html">Новости рынка недвижимости</a></li>
+                                    <li><a href="#">Акции</a></li>
+                                    <li><a href="contacts.html">Контакты</a></li>
+                                    <li><a href="agents.html">Специалисты по недвижимости</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
