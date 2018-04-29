@@ -1,0 +1,58 @@
+.infrastructure {
+    .infrastructure__map {
+        height: 382px;
+        @include media-breakpoint-up(md) {
+            height: 600px;            
+        }
+        @include media-breakpoint-up(md) {
+            height: 600px;            
+        }
+    }
+    .infrastructure__header {
+        background-color: $white;
+        padding: $container-padding-sm;
+        @include media-breakpoint-up(md) {
+            display: flex;
+            padding-right: 80px;
+            padding-bottom: 0;
+        }
+        .infrastructure__header__h {
+            margin-bottom: 20px;
+            font-size: 22px;
+            font-weight: 300;
+            @include media-breakpoint-up(md) {
+                font-size: 26px;
+                margin-right: 50px;
+            }
+        }
+        .infrastructure__legend {
+            @include media-breakpoint-up(md) {
+                padding-top: 7px;
+            }
+            .infrastructure__legend__list {
+                @include list-unstyled;
+                margin-bottom: 15px;
+                @include media-breakpoint-up(md) {
+                    margin-bottom: 0;
+                }
+                li {
+                    display: inline-block;
+                    margin-right: 30px;
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                    @each $name, $color in $pm-colors {
+                        .input-group._#{$name} .checkbox input:checked ~ .checkbox__text:after {
+                            background-color: $color;
+                        }
+                    }
+                }
+            }
+            .infrastructure__legend__toggler {
+                @include media-breakpoint-up(md) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

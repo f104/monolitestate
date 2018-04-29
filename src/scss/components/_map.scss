@@ -36,7 +36,31 @@
         span {
             background-color: $white;
         }
-
+    }
+    @each $name, $color in $pm-colors {
+        &._#{$name} {
+            svg path {
+                fill: $color;
+            }
+            span {
+                position: absolute;
+                top: 9px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: block;
+                width: 31px;
+                text-align: center;
+                color: $white;
+            }
+            &._open {
+                svg path {
+                    fill: $white;
+                }
+                span {
+                    color: $color;
+                }
+            }
+        }
     }
 }
 
@@ -44,6 +68,7 @@
     position: relative;
     .map__content {
         height: 100%;
+        background-color: $gray-light;
     }
     .map__controls {
         pointer-events: none;
@@ -89,6 +114,48 @@
         }
         .map__control {
             cursor: pointer;
+        }
+    }
+    .map__balloon {
+        position: relative;
+        background-color: $white;
+        padding: 20px;
+        width: 200px;
+        transform: translate(-50%, 20px);
+        &:before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent $white;
+        }
+        &._logo {
+            width: 250px;
+            display: flex;
+        }
+        .map__balloon__title {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 7px;
+        }
+        .map__balloon__address {
+            display: block;
+            opacity: 0.5;
+            font-size: 14px;
+        }
+        .map__balloon__logo {
+            width: 75px;
+            margin-right: 20px;
+            img {
+                display: block;
+                max-width: 100%;
+            }
+        }
+        .map__balloon__content {
+            flex: 1;
         }
     }
 }

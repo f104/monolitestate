@@ -1,6 +1,6 @@
 <html lang="ru" dir="ltr">
     <head>
-    <title>Контакты</title>
+    <title>Инфраструктура</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -65,45 +65,85 @@
         </div>
     </div>
     <div id="menu" class="header__menu js-menu">
-        <div class="header__menu__inner scrollbar-outer js-scrollbar-sm">
-            <div class="container">
-                <div class="header__menu__user">
-                    <a href="#login" class="header__main__user__link btn _primary js-popup"><i class="icon-user _middle"></i> Войти</a>
-                    <a href="#signup" class="header__main__user__link btn _secondary js-popup">Регистрация</a>
+        <div class="header__menu__inner scrollbar-outer js-scrollbar-sm-md">
+            <div class="header__menu-mobile">
+                <div class="header__menu-mobile__top">
+                    <div class="header__menu__user">
+                        <a href="#login" class="header__main__user__link btn _primary js-popup"><i class="icon-user _middle"></i> Войти</a>
+                        <a href="#signup" class="header__main__user__link btn _secondary js-popup">Регистрация</a>
+                    </div>
+                    <div class="header__menu__phone">
+                        <div>+7 (831) 219-90-67</div>
+                        <a href="#call" class="header__menu__phone__link js-popup"><i class="icon-phone"></i><span class="link _inverse">Заказать звонок</span></a>
+                    </div>
+                    <div class="header__menu__contacts">
+                        <div class="header__menu__contacts__text">Звоните нам с 7:30 до 24:00</div>
+                        <a href="contacts.html" class="header__menu__contacts__link"><i class="icon-map _middle"></i> Контакты</a>
+                    </div>
                 </div>
-                <div class="header__menu__phone">
-                    <div>+7 (831) 219-90-67</div>
-                    <a href="#call" class="header__menu__phone__link js-popup"><i class="icon-phone"></i><span class="link _inverse">Заказать звонок</span></a>
-                </div>
-                <div class="header__menu__contacts">
-                    <div class="header__menu__contacts__text">Звоните нам с 7:30 до 24:00</div>
-                    <a href="contacts.html" class="header__menu__contacts__link"><i class="icon-map _middle"></i> Контакты</a>
-                </div>
-                <ul class="header__menu__first">
-                    <li><a href="#" class="header__menu__first__toggler js-menu-second-toggler"><i class="icon-menu"></i></a></li>
-                    <li><a href="second.html" >Вторичное жилье</a></li>
-                    <li><a href="new.html" >Новостройки без комиссии</a></li>
-                    <li><a href="#">Дома, дачи, участки</a></li>
-                    <li><a href="rent.html" >Аренда</a></li>
-                    <li><a href="commercial.html" >Коммерческая</a></li>
-                    <li><a href="hypothec.html" >Ипотека</a></li>
-                    <li><a href="for-seller.html" >Продавцу</a></li>
-                    <li><a href="analytic.html" >Аналитика</a></li>
-                </ul>
-                <div class="header__menu__second-wrapper js-menu-second">
-                    <div class="header__menu__second-container">
-                        <ul class="header__menu__second">
-                            <li><a href="about.html">О компании</a></li>
-                            <li><a href="analytic.html">Аналитика рынка недвижимости</a></li>
-                            <li><a href="work.html">Вакансии / Работа в компании МИ</a></li>
-                            <li><a href="#">Услуги</a></li>
-                            <li><a href="#">Рейтинг агентов</a></li>
-                            <li><a href="builders.html">Застройщики</a></li>
-                            <li><a href="news.html">Новости рынка недвижимости</a></li>
-                            <li><a href="#">Акции</a></li>
-                            <li><a href="contacts.html">Контакты</a></li>
-                            <li><a href="agents.html">Специалисты по недвижимости</a></li>
+                <ul class="header__menu-mobile__first">
+                    <li>
+                        <span>Недвижимость</span>
+                        <ul class="header__menu-mobile__second">
+                            <li><a href="#">Вторичное жилье</a></li>
+                            <li><a href="#">Новостройки без комиссии</a></li>
+                            <li><a href="#">Дома, дачи, участки</a></li>
+                            <li><a href="#">Аренда</a></li>
+                            <li><a href="#">Коммерческая</a></li>
                         </ul>
+                    </li>
+                    <li>
+                        <span>Покупателям и продавцам</span>
+                        <ul class="header__menu-mobile__second">
+                            <li><a href="#">Ипотека</a></li>
+                            <li><a href="#">Продавцу</a></li>
+                            <li><a href="#">Застройщики</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Новости рынка недвижимости</a></li>
+                            <li><a href="#">Акции</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>Компания</span>
+                        <ul class="header__menu-mobile__second">
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Вакансии</a></li>
+                            <li><a href="#">Рейтинг агентов</a></li>
+                            <li><a href="#">Специалисты по недвижимости</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__menu-desktop">
+                <div class="container">
+                    <ul class="header__menu__first">
+                        <li><a href="#" class="header__menu__first__toggler js-menu-second-toggler"><i class="icon-menu"></i></a></li>
+                        <li><a href="second.html" >Вторичное жилье</a></li>
+                        <li><a href="new.html" >Новостройки без комиссии</a></li>
+                        <li><a href="#">Дома, дачи, участки</a></li>
+                        <li><a href="rent.html" >Аренда</a></li>
+                        <li><a href="commercial.html" >Коммерческая</a></li>
+                        <li><a href="hypothec.html" >Ипотека</a></li>
+                        <li><a href="for-seller.html" >Продавцу</a></li>
+                        <li><a href="analytic.html" >Аналитика</a></li>
+                    </ul>
+                    <div class="header__menu__second-wrapper js-menu-second">
+                        <div class="container">
+                            <div class="header__menu__second-inline">
+                                <ul class="header__menu__second">
+                                    <li><a href="work.html">Вакансии</a></li>
+                                    <li><a href="analytic.html">Услуги</a></li>
+                                    <li><a href="#">Рейтинг агентов</a></li>
+                                    <li><a href="about.html">О компании</a></li>
+                                    <li><a href="builders.html">Застройщики</a></li>
+                                    <li><a href="news.html">Новости рынка недвижимости</a></li>
+                                    <li><a href="#">Акции</a></li>
+                                    <li><a href="contacts.html">Контакты</a></li>
+                                    <li><a href="agents.html">Специалисты по недвижимости</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -111,12 +151,59 @@
     </div>
 </header>
         <div class="content">
-            <section class="section contacts">
-                <div class="page-header container">
-                    <h1 class="page-header__h _lg">Контакты</h1>
-                    <p class="page-header__lead _lg">Агентство недвижимости «Монолит Истейт»</p>
+            <div class="infrastructure">
+                <div class="infrastructure__header">
+                    <h3 class="infrastructure__header__h">Инфраструктура</h3>
+                    <div class="infrastructure__legend">
+                        <ul class="infrastructure__legend__list js-infrastructure__legend__list">
+                            <li>
+    <div class="input-group _med">
+        <label class="checkbox">
+            <input type="checkbox" checked data-type="med">
+            <span class="checkbox__text">Больницы и поликлиники</span>
+        </label>
+    </div>
+</li><li>
+    <div class="input-group _child">
+        <label class="checkbox">
+            <input type="checkbox" checked data-type="child">
+            <span class="checkbox__text">Детские сады</span>
+        </label>
+    </div>
+</li><li>
+    <div class="input-group _market">
+        <label class="checkbox">
+            <input type="checkbox" checked data-type="market">
+            <span class="checkbox__text">Магазины</span>
+        </label>
+    </div>
+</li><li>
+    <div class="input-group _parking">
+        <label class="checkbox">
+            <input type="checkbox" checked data-type="parking">
+            <span class="checkbox__text">Парковки</span>
+        </label>
+    </div>
+</li><li>
+    <div class="input-group _gym">
+        <label class="checkbox">
+            <input type="checkbox" checked data-type="gym">
+            <span class="checkbox__text">Фитнес-клубы</span>
+        </label>
+    </div>
+</li><li>
+    <div class="input-group _farm">
+        <label class="checkbox">
+            <input type="checkbox" checked data-type="farm">
+            <span class="checkbox__text">Аптеки</span>
+        </label>
+    </div>
+</li>
+                        </ul>
+                        <a href="#" class="infrastructure__legend__toggler js-infrastructure__legend__toggler">Скрыть легенду</a>
+                    </div>
                 </div>
-                <div class="contacts__map map">
+                <div class="infrastructure__map map">
                     <div id="map" class="map__content"></div>
                     <div class="container map__controls">
                         <ul class="map__controls__zoom">
@@ -125,136 +212,7 @@
                         </ul>
                     </div>
                 </div>
-
-                <div class="container contacts__content-wrapper">
-                    <div class="contacts__content">
-                        <div class="contacts-slider js-contacts-slider">
-                            <div class="contacts-item">
-    <h3 class="contacts-item__h">Офис на Покровской, 69</h3>
-    <ul class="contacts-item__ul">
-        <li>
-            <a href="#" class="link-icon">
-                <i class="icon-photo"></i><span>Офис на фото</span>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="link-icon">
-                <i class="icon-clock"></i><span>Часы работы офиса</span>
-            </a>
-        </li>
-    </ul>
-    <dl class="contacts-item__dl">
-        <dt>Адрес</dt>
-        <dd>г. Нижний Новгород, ул. Большая Покровcкая, д. 69</dd>
-        <dt>E-mail</dt>
-        <dd><a href="mailto:monolitestate.press@gmail.com">monolitestate.press@gmail.com</a></dd>
-        <dt>Телефон</dt>
-        <dd><a href="tel:+78312833898">+7 (831) 283-38-98</a></dd>
-    </dl>
-</div><div class="contacts-item">
-    <h3 class="contacts-item__h">Офис в центре Сормово</h3>
-    <ul class="contacts-item__ul">
-        <li>
-            <a href="#" class="link-icon">
-                <i class="icon-photo"></i><span>Офис на фото</span>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="link-icon">
-                <i class="icon-clock"></i><span>Часы работы офиса</span>
-            </a>
-        </li>
-    </ul>
-    <dl class="contacts-item__dl">
-        <dt>Адрес</dt>
-        <dd>г. Нижний Новгород, ул. Канавинская, д. 23</dd>
-        <dt>E-mail</dt>
-        <dd><a href="mailto:monolitestate.press@gmail.com">monolitestate.press@gmail.com</a></dd>
-        <dt>Телефон</dt>
-        <dd><a href="tel:+78312833898">+7 (831) 283-38-98</a></dd>
-    </dl>
-</div><div class="contacts-item">
-    <h3 class="contacts-item__h">Офис на Белинского, 71</h3>
-    <ul class="contacts-item__ul">
-        <li>
-            <a href="#" class="link-icon">
-                <i class="icon-photo"></i><span>Офис на фото</span>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="link-icon">
-                <i class="icon-clock"></i><span>Часы работы офиса</span>
-            </a>
-        </li>
-    </ul>
-    <dl class="contacts-item__dl">
-        <dt>Адрес</dt>
-        <dd>г. Нижний Новгород, ул. Большая Покровcкая, д. 69</dd>
-        <dt>E-mail</dt>
-        <dd><a href="mailto:monolitestate.press@gmail.com">monolitestate.press@gmail.com</a></dd>
-        <dt>Телефон</dt>
-        <dd><a href="tel:+78312833898">+7 (831) 283-38-98</a></dd>
-    </dl>
-</div><div class="contacts-item">
-    <h3 class="contacts-item__h">Офис на Канавинской, 23</h3>
-    <ul class="contacts-item__ul">
-        <li>
-            <a href="#" class="link-icon">
-                <i class="icon-photo"></i><span>Офис на фото</span>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="link-icon">
-                <i class="icon-clock"></i><span>Часы работы офиса</span>
-            </a>
-        </li>
-    </ul>
-    <dl class="contacts-item__dl">
-        <dt>Адрес</dt>
-        <dd>г. Нижний Новгород, ул. Канавинская, д. 23</dd>
-        <dt>E-mail</dt>
-        <dd><a href="mailto:monolitestate.press@gmail.com">monolitestate.press@gmail.com</a></dd>
-        <dt>Телефон</dt>
-        <dd><a href="tel:+78312833898">+7 (831) 283-38-98</a></dd>
-    </dl>
-</div>
-                        </div>
-                        <div class="contacts-scroller js-contacts-scroller
-                             js-scrollbar-lg scrollbar-outer _hor">
-                            <ul class="contacts-scroller__inner">
-                                <li>
-                                    <a href="#" 
-                                       class="contacts-scroller__link _active js-contacts-scroller__link"
-                                       data-geo="56.314953, 43.999951">
-                                        <span>Офис на Покровской, 69</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" 
-                                       class="contacts-scroller__link js-contacts-scroller__link"
-                                       data-geo="56.323889, 43.920087">
-                                        <span>Офис в центре Сормово</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" 
-                                       class="contacts-scroller__link js-contacts-scroller__link"
-                                       data-geo="56.342388, 44.089517">
-                                        <span>Офис на Белинского, 71</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" 
-                                       class="contacts-scroller__link js-contacts-scroller__link"
-                                       data-geo="56.288103, 43.928842">
-                                        <span>Офис на Канавинской, 23</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            </div>
             <footer class="footer">
     <div class="footer__dark">
         <div class="container">
@@ -476,10 +434,12 @@
         <li><a href="second.html">second</a></li>
         <li><a href="rent.html">rent</a></li>
         <li><a href="commercial.html">commercial</a></li>
+        <li><a href="onmap.html">on map</a></li>
         <li><a href="result.html">result</a></li>
         <li><a href="detail.html">detail</a></li>
         <li><a href="new.html">new</a></li>
         <li><a href="new-result.html">new-result</a></li>
+        <li><a href="new-detail.html">new-detail</a></li>
         <li><a href="content.html">content</a></li>
         <li><a href="builders.html">builders</a></li>
         <li><a href="news.html">news</a></li>
@@ -535,6 +495,53 @@
 <script src="js/libs/datepicker.min.js"></script>
 <script src="js/common.js"></script>
         <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug"></script>
-        <script src="js/contacts.js"></script>
+        <script>
+            var data = [
+                {
+                    geo: [56.314953, 43.999951],
+                    type: 'child',
+                    title: 'Детский сад',
+                    address: 'Покровская, 69'
+                },
+                {
+                    geo: [56.323889, 43.920087],
+                    type: 'farm',
+                    title: 'Аптека',
+                    address: 'Белинского, 71'
+                },
+                {
+                    geo: [56.288103, 43.928842],
+                    type: 'gym',
+                    title: 'Фитнес-центр',
+                    address: 'Покровская, 69'
+                },
+                {
+                    geo: [56.308179, 44.032738],
+                    type: 'market',
+                    title: 'Супермаркет',
+                    address: 'Покровская, 69',
+                    logo: 'img/pyaterochka.png'
+                },
+                {
+                    geo: [56.323889, 43.920087],
+                    type: 'farm',
+                    title: 'Аптека',
+                    address: 'Белинского, 71'
+                },
+                {
+                    geo: [56.280210, 43.885968],
+                    type: 'med',
+                    title: 'Больница',
+                    address: 'Покровская, 69'
+                },
+                {
+                    geo: [56.310564, 43.903821],
+                    type: 'parking',
+                    title: 'Автостоянка',
+                    address: 'Покровская, 69'
+                }
+            ]
+        </script>
+        <script src="js/infrastructure.js"></script>
     </body>
 </html>

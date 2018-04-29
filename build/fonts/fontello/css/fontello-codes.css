@@ -17,3 +17,9 @@
 .icon-search:before { content: '\e80f'; } /* '' */
 .icon-photo:before { content: '\e810'; } /* '' */
 .icon-attach:before { content: '\e811'; } /* '' */
+.icon-child:before { content: '\e812'; } /* '' */
+.icon-gym:before { content: '\e813'; } /* '' */
+.icon-market:before { content: '\e814'; } /* '' */
+.icon-med:before { content: '\e815'; } /* '' */
+.icon-parking:before { content: '\e816'; } /* '' */
+.icon-farm:before { content: '\e817'; } /* '' */

@@ -1,0 +1,110 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "Инфраструктура"
+    })
+    <body>
+        @@include('./template/header.html', {
+        "active": ""
+        })
+        <div class="content">
+            <div class="infrastructure">
+                <div class="infrastructure__header">
+                    <h3 class="infrastructure__header__h">Инфраструктура</h3>
+                    <div class="infrastructure__legend">
+                        <ul class="infrastructure__legend__list js-infrastructure__legend__list">
+                            @@loop('./template/chunks/infrastructure-checkbox.html', [
+                            { 
+                            "type": "med", 
+                            "text": "Больницы и поликлиники"
+                            },
+                            { 
+                            "type": "child", 
+                            "text": "Детские сады"
+                            },
+                            { 
+                            "type": "market", 
+                            "text": "Магазины"
+                            },
+                            { 
+                            "type": "parking", 
+                            "text": "Парковки"
+                            },
+                            { 
+                            "type": "gym", 
+                            "text": "Фитнес-клубы"
+                            },
+                            { 
+                            "type": "farm", 
+                            "text": "Аптеки"
+                            }
+                            ])
+                        </ul>
+                        <a href="#" class="infrastructure__legend__toggler js-infrastructure__legend__toggler">Скрыть легенду</a>
+                    </div>
+                </div>
+                <div class="infrastructure__map map">
+                    <div id="map" class="map__content"></div>
+                    <div class="container map__controls">
+                        <ul class="map__controls__zoom">
+                            <li><i class="sprite map-plus map__control js-map__zoom _in"></i></li>
+                            <li><i class="sprite map-minus map__control js-map__zoom _out"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            @@include('./template/footer.html')
+            @@include('./template/popups-common.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        @@include('./template/foot.html')
+        <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug"></script>
+        <script>
+            var data = [
+                {
+                    geo: [56.314953, 43.999951],
+                    type: 'child',
+                    title: 'Детский сад',
+                    address: 'Покровская, 69'
+                },
+                {
+                    geo: [56.323889, 43.920087],
+                    type: 'farm',
+                    title: 'Аптека',
+                    address: 'Белинского, 71'
+                },
+                {
+                    geo: [56.288103, 43.928842],
+                    type: 'gym',
+                    title: 'Фитнес-центр',
+                    address: 'Покровская, 69'
+                },
+                {
+                    geo: [56.308179, 44.032738],
+                    type: 'market',
+                    title: 'Супермаркет',
+                    address: 'Покровская, 69',
+                    logo: 'img/pyaterochka.png'
+                },
+                {
+                    geo: [56.323889, 43.920087],
+                    type: 'farm',
+                    title: 'Аптека',
+                    address: 'Белинского, 71'
+                },
+                {
+                    geo: [56.280210, 43.885968],
+                    type: 'med',
+                    title: 'Больница',
+                    address: 'Покровская, 69'
+                },
+                {
+                    geo: [56.310564, 43.903821],
+                    type: 'parking',
+                    title: 'Автостоянка',
+                    address: 'Покровская, 69'
+                }
+            ]
+        </script>
+        <script src="js/infrastructure.js"></script>
+    </body>
+</html>
