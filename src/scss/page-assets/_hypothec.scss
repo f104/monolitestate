@@ -444,13 +444,13 @@ $hypothec-gutter-width: $grid-gutter-width;
                 .hypothec-calc__res__item__payment {
                     margin-top: 0;
                     margin-left: 20px;
+                    min-width: 150px;
                 }
                 .hypothec-calc__res__item__payment_accent {
                     font-size: 24px;
                     padding: 5px 7px 3px;
                     margin-right: 13px;
                 }
-
             }
         }
     }
@@ -494,6 +494,13 @@ $hypothec-gutter-width: $grid-gutter-width;
                 .scroll-element_outer {
                     left: $hypothec-gutter-width / 2;
                     right: $hypothec-gutter-width / 2;
+                }
+            }
+        }
+        .hypothec-calc__res {
+            .hypothec-calc__res__item {
+                .hypothec-calc__res__item__payment {
+                    min-width: 150px;
                 }
             }
         }

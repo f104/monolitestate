@@ -464,14 +464,14 @@ jQuery(function () {
                 noUiSlider.create(slider, {
                     start: val,
                     connect: [true, false],
-                    format: {
-                        to: function (value) {
-                            return parseInt(value);
-                        },
-                        from: function (value) {
-                            return value;
-                        }
-                    },
+//                    format: {
+//                        to: function (value) {
+//                            return parseInt(value);
+//                        },
+//                        from: function (value) {
+//                            return value;
+//                        }
+//                    },
                     range: {
                         'min': min,
                         'max': max
@@ -482,7 +482,7 @@ jQuery(function () {
                     $(elem).find('.js-picker__input').trigger('change');
                     var mask = input.inputmask;
                     if (mask && input.classList.contains('js-mask__age')) {
-                        var suffix = getNumEnding(slider.noUiSlider.get(), [' год', ' года', ' лет']);
+                        var suffix = getNumEnding(parseInt(slider.noUiSlider.get()), [' год', ' года', ' лет']);
                         mask.option({
                             suffix: suffix
                         });
@@ -593,9 +593,15 @@ jQuery(function () {
 //            console.log(rateME);
             var credit = 0;
             var age = $age.val();
-            $paymentPercent.on('change', function () {
-                $paymentSum.val(calcPayment(cost, $paymentPercent.val()));
-                credit = calcCredit(cost, $paymentPercent.val());
+            var percent;
+            $paymentSum.on('change', function () {
+                percent = $(this).val() * 100 / cost;
+                if (percent > 100) {
+                    percent = 100;
+                    $(this).val(cost);
+                }
+                credit = calcCredit(cost, percent);
+                $paymentPercent.val(percent);
                 $credit.val(credit);
                 $items.each(function (i, el) {
                     $(el).find('.js-hypothec__first').text(formatPrice($paymentSum.val()));
@@ -604,7 +610,13 @@ jQuery(function () {
                     $(el).find('.js-hypothec__economy').text(formatPrice(calcPerMonth(credit, rate[i], age) * 12 * age - calcPerMonth(credit, rateME[i], age) * 12 * age));
                 });
             });
-            $paymentPercent.trigger('change');
+            $paymentSum.inputmask("numeric", {
+                suffix: ' руб.',
+                oncomplete: function () {
+                    $(this).parents('.js-picker').find('.js-picker__target')[0].noUiSlider.set($(this).val());
+                }
+            });
+            $paymentSum.trigger('change');
             $age.on('change', function () {
                 age = $age.val();
                 $items.each(function (i, el) {
