@@ -13,24 +13,19 @@
                 </div>
             </div>
 
-            <div class="js-tabs" data-tabs=".js-tabs__list_parent > li">
+            <div class="-js-tabs" data-tabs=".js-tabs__list_parent > li">
                 <div class="container">
                     <div class="tabs _noselect">
                         <ul class="tabs__list js-tabs__list_parent">
-                            <li><a href="#monitor">Мониторинг</a></li>
-                            <li><a href="#service">Услуги</a></li>
+                            <li><a href="analytic1.html">Мониторинг</a></li>
+                            <li><span class="active">Услуги</span></li>
                         </ul>
                     </div>
-                    <section id="monitor" class="section">
-                        @@include('./template/analytic/filter.html')
-                        @@include('./template/analytic/chart.html')
-                        @@include('./template/analytic/map.html')
-                    </section>
-                    <div id="service">
+                    <section class="section">
                         @@include('./template/analytic/services.html')
                         @@include('./template/analytic/clients.html')
                         @@include('./template/analytic/reviews.html')
-                    </div>
+                    </section>
                 </div>
             </div>
             @@include('./template/callme.html', {

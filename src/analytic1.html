@@ -1,0 +1,48 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "Аналитика"
+    })
+    <body>
+        @@include('./template/header.html', {
+        "active": "analytic"
+        })
+        <div class="content">
+            <div class="page-header">
+                <div class="container">
+                    <h1 class="page-header__h _lg">Аналитика рынка недвижимости в Нижнем Новгороде</h1>
+                </div>
+            </div>
+
+            <div class="-js-tabs" data-tabs=".js-tabs__list_parent > li">
+                <div class="container">
+                    <div class="tabs _noselect">
+                        <ul class="tabs__list js-tabs__list_parent">
+                            <li><span class="active">Мониторинг</span></li>
+                            <li><a href="analytic2.html">Услуги</a></li>
+                        </ul>
+                    </div>
+                    <section class="section">
+                        @@include('./template/analytic/filter.html')
+                        @@include('./template/analytic/chart.html')
+                        @@include('./template/analytic/map.html')
+                    </section>
+                </div>
+            </div>
+            @@include('./template/callme.html', {
+            "title": "Если у вас остались вопросы",
+            "margin": 1,
+            "class": "_2",
+            "img": "call2",
+            "subscribe": 1
+            })
+            @@include('./template/seo.html')
+            @@include('./template/footer.html')
+            @@include('./template/popups-common.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        @@include('./template/foot.html')
+        <script src="js/libs/Chart.min.js"></script>
+        <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug"></script>
+        <script src="js/analytic.js"></script>
+    </body>
+</html>

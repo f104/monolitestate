@@ -1,6 +1,6 @@
 <html lang="ru" dir="ltr">
     <head>
-    <title>404</title>
+    <title>Аналитика</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -126,7 +126,7 @@
                         <li><a href="commercial.html" >Коммерческая</a></li>
                         <li><a href="hypothec.html" >Ипотека</a></li>
                         <li><a href="for-seller.html" >Продавцу</a></li>
-                        <li><a href="analytic.html" >Аналитика</a></li>
+                        <li><a href="analytic.html" class="_active">Аналитика</a></li>
                     </ul>
                     <div class="header__menu__second-wrapper js-menu-second">
                         <div class="container">
@@ -151,212 +151,530 @@
     </div>
 </header>
         <div class="content">
-            <section class="section container not-found">
-                <h1 class="section__h">Страница не найдена</h1>
-                <div class="not-found__row _1">
-                    <div class="not-found__404">404</div>
-                    <div class="not-found__row _2">
-                        <div class="not-found__text">
-                            Что-то пошло не так и квартира потерялась, 
-                            но я её обязательно найду!
-                        </div>
-                        <div class="not-found__img-wrapper">
-                            <img src="img/404.png"
-                                 srcset="img/404@2x.png 2x,
-                                 img/404@3x.png 3x"
-                                 alt="alt -text">
-                        </div>
-                    </div>
+            <div class="page-header">
+                <div class="container">
+                    <h1 class="page-header__h _lg">Аналитика рынка недвижимости в Нижнем Новгороде</h1>
                 </div>
-            </section>
-            <section class="container section filters">
-    <h3 class="section__h">Недвижимость в Нижнем Новгороде</h3>
-    <div class="js-tabs">
-        <div class="tabs filters__tabs">
-            <ul class="tabs__list js-tabs__list">
-                <li><a href="#buy">Купить</a></li>
-                <li><a href="#rent1">Снять</a></li>
-                <li><a href="#sell">Продать</a></li>
-                <li><a href="#rent2">Сдать</a></li>
+            </div>
+
+            <div class="js-tabs" data-tabs=".js-tabs__list_parent > li">
+                <div class="container">
+                    <div class="tabs _noselect">
+                        <ul class="tabs__list js-tabs__list_parent">
+                            <li><a href="#monitor">Мониторинг</a></li>
+                            <li><a href="#service">Услуги</a></li>
+                        </ul>
+                    </div>
+                    <section id="monitor" class="section">
+                        <form class="analytic-filter">
+    <div class="input-group">
+        <select class="js-select2">
+            <option>Все города</option>
+            <option selected>Нижний Новгород</option>
+            <option>Арзамас</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <div class="pseudo-select js-select">
+    <div class="pseudo-select__inner">
+        <div class="pseudo-select__select js-select__toggler">
+            <span class="pseudo-select__select__inner">
+                Районы
+            </span>
+        </div>
+        <div class="pseudo-select__dropdown js-select__inner js-select-search">
+            <input class="pseudo-select__dropdown__search js-select-search__input" placeholder="Поиск">
+            <div class="js-scrollbar scrollbar-outer">
+                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Жилой комплекс с очень длинным названием</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="input-group">
+        <select class="js-select2">
+            <option>Вся недвижимость</option>
+            <option selected>Вторичная</option>
+            <option>Новостройки</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <div class="pseudo-select js-select">
+    <div class="pseudo-select__inner">
+        <div class="pseudo-select__select js-select__toggler">
+            <span class="pseudo-select__select__inner">
+                Тип недвижимости
+            </span>
+        </div>
+        <div class="pseudo-select__dropdown js-select__inner js-select-search">
+            <input class="pseudo-select__dropdown__search js-select-search__input" placeholder="Поиск">
+            <div class="js-scrollbar scrollbar-outer">
+                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Жилой комплекс с очень длинным названием</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="input-group">
+        <div class="input-wrapper _icon">
+            <input required readonly 
+                   class="js-datepicker-range">
+            <i class="icon-calendar"></i>
+        </div>
+    </div>
+</form>
+                        <div class="analytic">
+    <h3 class="analytic__h">Динамика рынка недвижимости</h3>
+    <div class="analytic__row">
+        <div class="analytic__col">
+            <h3 class="analytic__lead">Динамика цены за квадратный метр</h3>
+            <ul class="analytic__chart-legend">
+                <li class="analytic__chart-legend__item _1">1-комнатные</li>
+                <li class="analytic__chart-legend__item _2">2-комнатные</li>
+                <li class="analytic__chart-legend__item _3">3-комнатные</li>
+                <li class="analytic__chart-legend__item _4">4-комнатные</li>
             </ul>
-        </div>
-        <div id="buy">
-            <form class="filters-form">
-                <h3 class="filters-form__h filters-form__md js-filters-realty-title">Найдите недвижимость на вторичном рынке</h3>
-                <div class="filters-form__row__lg">
-                    <div class="filters-form__col__lg _col1">
-                        <div class="input-group filters-form__realty-type filters-form__sm">
-                            <div class="filters-form__realty-type__item">
-                                <label class="filters-form__realty-type__label js-filters-realty-type"
-                                       data-filters-title="Найдите недвижимость на вторичном рынке">
-                                    <input type="radio" checked name="realty-type">
-                                    <span class="filters-form__realty-type__label__inner">
-                                        <i class="filters-form__realty-type__label__inner__img _second"></i>
-                                        Вторичная
-                                    </span>
-                                </label>
-                            </div>
-                            <div class="filters-form__realty-type__item">
-                                <label class="filters-form__realty-type__label js-filters-realty-type"
-                                       data-filters-title="Найдите недвижимость в новостройках">
-                                    <input type="radio" name="realty-type">
-                                    <span class="filters-form__realty-type__label__inner">
-                                        <i class="filters-form__realty-type__label__inner__img _new"></i>
-                                        Новостройки
-                                    </span>
-                                </label>
-                            </div>
-                            <div class="filters-form__realty-type__item">
-                                <label class="filters-form__realty-type__label js-filters-realty-type"
-                                       data-filters-title="Найдите загородную недвижимость">
-                                    <input type="radio" name="realty-type">
-                                    <span class="filters-form__realty-type__label__inner">
-                                        <i class="filters-form__realty-type__label__inner__img _village"></i>
-                                        Загородная
-                                    </span>
-                                </label>
-                            </div>
-                            <div class="filters-form__realty-type__item">
-                                <label class="filters-form__realty-type__label js-filters-realty-type"
-                                       data-filters-title="Найдите коммерческую недвижимость">
-                                    <input type="radio" name="realty-type">
-                                    <span class="filters-form__realty-type__label__inner">
-                                        <i class="filters-form__realty-type__label__inner__img _commerce"></i>
-                                        Коммерческая
-                                    </span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="filters-form__row">
-                            <div class="input-group filters-form__rooms _col2">
-                                <label>Кол-во комнат</label>
-                                <div class="filters-form__rooms__inner">
-                                    <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">Студ.</span></label>
-                                    <label class="filters-form__rooms__inner__checkbox filters-form__sm"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">Комн.</span></label>
-                                    <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">1</span></label>
-                                    <label class="filters-form__rooms__inner__checkbox"><input type="checkbox" checked><span class="filters-form__rooms__inner__checkbox__inner">2</span></label>
-                                    <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">3</span></label>
-                                    <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">4+</span></label>
-                                </div>
-                            </div>
-                            <div class="input-group _col1">
-                                <div class="pseudo-select js-select">
-    <div class="pseudo-select__inner">
-        <div class="pseudo-select__select js-select__toggler">
-            <span class="pseudo-select__select__inner">
-                Район, Улица
-            </span>
-        </div>
-        <div class="pseudo-select__dropdown js-select__inner js-select-search">
-            <input class="pseudo-select__dropdown__search js-select-search__input" placeholder="Поиск">
-            <div class="js-scrollbar scrollbar-outer">
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Жилой комплекс с очень длинным названием</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-            </div>
-        </div>
-    </div>
-</div>
-                            </div>
-                            <div class="input-group _double _col3">
-                                <input placeholder="Цена от (руб.)" class="js-mask__currency">
-                                <input placeholder="Цена до (руб.)" class="js-mask__currency">
-                            </div>
-                        </div>
-                        <div class="filters-form__row filters-form__md">
-                            <div class="input-group _col1">
-                                <div class="pseudo-select js-select">
-    <div class="pseudo-select__inner">
-        <div class="pseudo-select__select js-select__toggler">
-            <span class="pseudo-select__select__inner">
-                Жилой комплекс
-            </span>
-        </div>
-        <div class="pseudo-select__dropdown js-select__inner js-select-search">
-            <input class="pseudo-select__dropdown__search js-select-search__input" placeholder="Поиск">
-            <div class="js-scrollbar scrollbar-outer">
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Жилой комплекс с очень длинным названием</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-            </div>
-        </div>
-    </div>
-</div>
-                            </div>
-                            <div class="input-group _col2">
-                                <input placeholder="Код объекта">
-                            </div>
-                            <div class="input-group _double _col3">
-                                <input placeholder="Площадь от" class="js-mask__square">
-                                <input placeholder="Площадь до" class="js-mask__square">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filters-form__col__lg _col2">
-                        <div class="filters-form__summary">
-                            <p class="filters-form__summary__text">Найдено 19 518 вариантов</p>
-                            <div class="filters-form__summary__buttons">
-                                <div class="filters-form__summary__buttons__col">
-                                    <button class="btn _lg _secondary">Показать</button>
-                                </div>
-                                <div class="filters-form__summary__buttons__col">
-                                    <button class="btn _lg _primary">
-                                <i class="icon-map _middle"></i><span>На карте</span>
-                            </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="js-scrollbar-sm scrollbar-outer _hor">
+                <div class="analytic__chart">
+                    <canvas id="chart"></canvas>
                 </div>
-                <p class="filters-form__help filters-form__md">Для поиска другой недвижимости перейдите в соответствующий раздел</p>
-            </form>
+            </div>
         </div>
-        <div id="rent1">Снять</div>
-        <div id="sell">Продать</div>
-        <div id="rent2">Сдать</div>
+        <div class="analytic__col js-tabs">
+            <div class="tabs _primary _noselect">
+                <ul class="tabs__list js-tabs__list">
+                    <li><a href="#cost">Цена</a></li>
+                    <li><a href="#offer">Предложение</a></li>
+                </ul>
+            </div>
+            <div id="cost" class="analytic__cost">
+                <table class="analytic__table">
+                    <thead>
+                        <tr>
+                            <th>Тип<br>недвижимости</th>
+                            <th>Средняя цена предложения, кв.м</th>
+                            <th>Изменение на, %</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1-комнатные</td>
+                            <td>59 912 руб.</td>
+                            <td class="_up">7%</td>
+                        </tr>
+                        <tr>
+                            <td>2-комнатные</td>
+                            <td>56 236 руб.</td>
+                            <td class="_down">-5%</td>
+                        </tr>
+                        <tr>
+                            <td>3-комнатные</td>
+                            <td>54 959 руб.</td>
+                            <td class="_up">33%</td>
+                        </tr>
+                        <tr>
+                            <td>4-комнатные</td>
+                            <td>55 648 руб.</td>
+                            <td class="_up">12%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="analytic__text">
+                    <span class="analytic__text__h">
+                        Внимание! У вас выбрано несколько 
+                        Типов недвижимости и Районов.
+                    </span>
+                    Данные представлены совокупно по типам и районам. 
+                    Являясь обобщенным индикатором движения цены данные 
+                    могут не отражать реальной картины по конкретному 
+                    типу недвижимости или району
+                </div>
+                <div class="analytic__text">
+                    <span class="analytic__text__h">
+                        Справочно
+                    </span>
+                    В заданном временном периоде максимальную динамику 
+                    по средней цене предложения за квадратный метр 
+                    на уровне 7% к началу периода демонстрируют объекты: 
+                    1-комнатные  (7%) / 2-комнатные  (14%) / 
+                    3-комнатные  (33%) / Пансионат  (5%) / 4-комнатные  (16%)
+                </div>
+            </div>
+            <div id="offer">
+                Предложение
+            </div>
+        </div>
+    </div>
+</div>
+                        <div class="analytic">
+    <h3 class="analytic__h">Тепловая карта рынка недвижимости</h3>
+    <div class="analytic__row">
+        <div class="analytic__col">
+            <div class="analytic__map-wrapper">
+                <div id="map" class="analytic__map"></div>
+                <div class="analytic__map-legend">
+                    <span class="analytic__map-legend__h">Обозначения</span>
+                    <ul class="analytic__map-legend__list">
+                        <li class="analytic__map-legend__list__item _1">Меньше 17 000 руб./м²</li>
+                        <li class="analytic__map-legend__list__item _2">17 000 – 32 000 руб./м²</li>
+                        <li class="analytic__map-legend__list__item _3">32 000 – 47 000 руб./м²</li>
+                        <li class="analytic__map-legend__list__item _4">47 000 – 62 000 руб./м²</li>
+                        <li class="analytic__map-legend__list__item _5">62 000 – 78 000 руб./м²</li>
+                        <li class="analytic__map-legend__list__item _6">Больше 78 000 руб./м²</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="analytic__col">
+            <table class="analytic__table">
+                <thead>
+                    <tr>
+                        <th>Регион</th>
+                        <th>Средняя цена предложения, кв.м</th>
+                        <th>Кол-во объектов за период</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Нижегородский</td>
+                        <td>59 912 руб.</td>
+                        <td>54</td>
+                    </tr>
+                    <tr>
+                        <td>Советский</td>
+                        <td>56 236 руб.</td>
+                        <td>66</td>
+                    </tr>
+                    <tr>
+                        <td>Афонино д.</td>
+                        <td>54 959 руб.</td>
+                        <td>32</td>
+                    </tr>
+                    <tr>
+                        <td>Приокский</td>
+                        <td>55 648 руб.</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>Канавинский</td>
+                        <td>55 648 руб.</td>
+                        <td>54</td>
+                    </tr>
+                    <tr>
+                        <td>Московский</td>
+                        <td>55 648 руб.</td>
+                        <td>66</td>
+                    </tr>
+                    <tr>
+                        <td>Сорменский</td>
+                        <td>55 648 руб.</td>
+                        <td>32</td>
+                    </tr>
+                    <tr>
+                        <td>Ленинский</td>
+                        <td>55 648 руб.</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>Автозаводский</td>
+                        <td>55 648 руб.</td>
+                        <td>32</td>
+                    </tr>
+                    <tr>
+                        <td>Дзержинский</td>
+                        <td>55 648 руб.</td>
+                        <td>17</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    </section>
+                    <section id="service" class="section">
+                        <section class="section analytic-services">
+    <h3 class="section__h">Что мы делаем?</h3>
+    <p class="section__lead">Проанализировав действия множества компаний 
+        в различных условиях бизнеса, мы подготовили 
+        <a href="#">4 типа исследований</a>. Каждое из них — это комплекс 
+        инструментов, специально подобранных для привлечения клиентов 
+        и решения бизнес задач.</p>
+    <div class="analytic-services__list">
+        <div class="analytic-services__item">
+    <div class="analytic-services__item__inner">
+        <div class="analytic-services__item__head">
+            <div class="analytic-services__item__h">Разработка концепции проекта</div>
+            <div class="analytic-services__item__text rte">
+                <span class="analytic-services__item__text _muted">Чем мы помогаем вам:</span>
+                <ol>
+                    
+                    <li>Формируем концептуальный профиль жилого комплекса / дома</li>
+                    
+                    <li>Выявляем рыночные ниши</li>
+                    
+                    <li>Оцениваем конкурентную ситуацию сегодня и на перспективу</li>
+                    
+                    <li>Даем рекомендации по маркетингу и продвижению</li>
+                    
+                </ol>
+            </div>
+            <span class="analytic-services__item__icon">
+                <i class="sprite analytic-1"></i>
+            </span>
+        </div>
+        <div class="analytic-services__item__foot">
+            <a href="#" class="btn _lg _solid">Заказать</a>
+            <a href="#" class="btn _lg _secondary">Посмотреть демо</a>
+        </div>
+    </div>
+</div>
+        <div class="analytic-services__item">
+    <div class="analytic-services__item__inner">
+        <div class="analytic-services__item__head">
+            <div class="analytic-services__item__h">Глубинный мониторинг рынка</div>
+            <div class="analytic-services__item__text rte">
+                <span class="analytic-services__item__text _muted">Чем мы помогаем вам:</span>
+                <ol>
+                    
+                    <li>Определяем тренды и структурные сдвиги на рынке</li>
+                    
+                    <li>Анализируем выбытие у конкурентов и находим причины</li>
+                    
+                    <li>Выявляем ценовую динамику в разных сегментах рынка</li>
+                    
+                </ol>
+            </div>
+            <span class="analytic-services__item__icon">
+                <i class="sprite analytic-2"></i>
+            </span>
+        </div>
+        <div class="analytic-services__item__foot">
+            <a href="#" class="btn _lg _solid">Заказать</a>
+            <a href="#" class="btn _lg _secondary">Посмотреть демо</a>
+        </div>
+    </div>
+</div>
+        <div class="analytic-services__item">
+    <div class="analytic-services__item__inner">
+        <div class="analytic-services__item__head">
+            <div class="analytic-services__item__h">Маркетинговые исследования</div>
+            <div class="analytic-services__item__text rte">
+                <span class="analytic-services__item__text _muted">Чем мы помогаем вам:</span>
+                <ol>
+                    
+                    <li>Определяем емкость рынка или его сегмента</li>
+                    
+                    <li>Составляем портрет покупателя</li>
+                    
+                    <li>Выявляем потребительские предпочтения</li>
+                    
+                    <li>Определяем уровень узнаваемости бренда и лояльности к нему</li>
+                    
+                </ol>
+            </div>
+            <span class="analytic-services__item__icon">
+                <i class="sprite analytic-3"></i>
+            </span>
+        </div>
+        <div class="analytic-services__item__foot">
+            <a href="#" class="btn _lg _solid">Заказать</a>
+            <a href="#" class="btn _lg _secondary">Посмотреть демо</a>
+        </div>
+    </div>
+</div>
+        <div class="analytic-services__item">
+    <div class="analytic-services__item__inner">
+        <div class="analytic-services__item__head">
+            <div class="analytic-services__item__h">Оценка рыночной стоимости</div>
+            <div class="analytic-services__item__text rte">
+                <span class="analytic-services__item__text _muted">Чем мы помогаем вам:</span>
+                <ol>
+                    
+                    <li>Ориентируем по ситуации на рынке недвижимости</li>
+                    
+                    <li>Даем индивидуальную оценку вашим объектам недвижимости</li>
+                    
+                </ol>
+            </div>
+            <span class="analytic-services__item__icon">
+                <i class="sprite analytic-4"></i>
+            </span>
+        </div>
+        <div class="analytic-services__item__foot">
+            <a href="#" class="btn _lg _solid">Заказать</a>
+            <a href="#" class="btn _lg _secondary">Посмотреть демо</a>
+        </div>
+    </div>
+</div>
     </div>
 </section>
+                        <section class="section analytic-clients">
+    <h3 class="section__h">Нас уже выбрали</h3>
+    <div class="analytic-clients__list js-analytic__slider">
+        <div class="analytic-clients__list__item slide">
+    <div class="analytic-clients__list__item__inner">
+        <img src="img/analytic/1.png" alt="alt text">
+        <div class="analytic-clients__tooltip">
+            <span class="analytic-clients__tooltip__h">Звездный городок</span>
+            Крупнейший застройщик. Лидер по количеству клиентов
+        </div>
+    </div>
+</div>
+        <div class="analytic-clients__list__item slide">
+    <div class="analytic-clients__list__item__inner">
+        <img src="img/analytic/2.png" alt="alt text">
+        <div class="analytic-clients__tooltip">
+            <span class="analytic-clients__tooltip__h">Сибстройсервис</span>
+            Крупнейший застройщик. Лидер по количеству клиентов
+        </div>
+    </div>
+</div>
+        <div class="analytic-clients__list__item slide">
+    <div class="analytic-clients__list__item__inner">
+        <img src="img/analytic/3.png" alt="alt text">
+        <div class="analytic-clients__tooltip">
+            <span class="analytic-clients__tooltip__h">Партнер-строй</span>
+            Крупнейший застройщик. Лидер по количеству клиентов
+        </div>
+    </div>
+</div>
+        <div class="analytic-clients__list__item slide">
+    <div class="analytic-clients__list__item__inner">
+        <img src="img/analytic/4.png" alt="alt text">
+        <div class="analytic-clients__tooltip">
+            <span class="analytic-clients__tooltip__h">ВТБ24</span>
+            Крупнейший российский коммерческий банк. Лидер по количеству клиентов среди населения и бизнеса, по количеству вкладов и выданных кредитов
+        </div>
+    </div>
+</div>
+        <div class="analytic-clients__list__item slide">
+    <div class="analytic-clients__list__item__inner">
+        <img src="img/analytic/5.png" alt="alt text">
+        <div class="analytic-clients__tooltip">
+            <span class="analytic-clients__tooltip__h">YIT</span>
+            Крупнейший застройщик. Лидер по количеству клиентов
+        </div>
+    </div>
+</div>
+        <div class="analytic-clients__list__item slide">
+    <div class="analytic-clients__list__item__inner">
+        <img src="img/analytic/6.png" alt="alt text">
+        <div class="analytic-clients__tooltip">
+            <span class="analytic-clients__tooltip__h">Сбербанк</span>
+            Крупнейший российский коммерческий банк. Лидер по количеству клиентов среди населения и бизнеса, по количеству вкладов и выданных кредитов
+        </div>
+    </div>
+</div>
+        <div class="analytic-clients__list__item slide">
+    <div class="analytic-clients__list__item__inner">
+        <img src="img/analytic/5.png" alt="alt text">
+        <div class="analytic-clients__tooltip">
+            <span class="analytic-clients__tooltip__h">YIT</span>
+            Крупнейший застройщик. Лидер по количеству клиентов
+        </div>
+    </div>
+</div>
+        <div class="analytic-clients__list__item slide">
+    <div class="analytic-clients__list__item__inner">
+        <img src="img/analytic/6.png" alt="alt text">
+        <div class="analytic-clients__tooltip">
+            <span class="analytic-clients__tooltip__h">Сбербанк</span>
+            Крупнейший российский коммерческий банк. Лидер по количеству клиентов среди населения и бизнеса, по количеству вкладов и выданных кредитов
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+                        <section class="section analytic-reviews">
+    <h3 class="section__h">Аналитические обзоры рынка недвижимости</h3>
+    <div class="scrollbar-outer _hor js-scrollbar-md">
+        <div class="analytic-reviews__list slider-small js-slider-small">
+            <div class="analytic-reviews__item slide">
+    <div class="analytic-reviews__item__inner">
+        <div class="analytic-reviews__item__head">
+            Краткий обзор вторичного рынка жилья г. Тобольск за май 2017 г.
+            <i class="sprite pdf"></i>
+        </div>
+        <div class="analytic-reviews__item__foot">
+            <a href="#" class="btn _lg _secondary">Скачать (PDF, 2mb)</a>
+        </div>
+    </div>
+</div>
+            <div class="analytic-reviews__item slide">
+    <div class="analytic-reviews__item__inner">
+        <div class="analytic-reviews__item__head">
+            Краткий обзор новостроек Арзамаса
+            <i class="sprite pdf"></i>
+        </div>
+        <div class="analytic-reviews__item__foot">
+            <a href="#" class="btn _lg _secondary">Скачать (PDF, 1.5mb)</a>
+        </div>
+    </div>
+</div>
+            <div class="analytic-reviews__item slide">
+    <div class="analytic-reviews__item__inner">
+        <div class="analytic-reviews__item__head">
+            Краткий обзор вторичного рынка жилья г. Тобольск за май 2017 г.
+            <i class="sprite pdf"></i>
+        </div>
+        <div class="analytic-reviews__item__foot">
+            <a href="#" class="btn _lg _secondary">Скачать (PDF, 2mb)</a>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+    <button class="btn _primary _lg section__button _more">
+        <span>Показать больше</span><i class="icon-more"></i></button>
+</section>
+                    </section>
+                </div>
+            </div>
             <section class="section _inverse  callme">
     <div class="container">
         <div class="callme__wrapper">
             <div class="callme__inner">
-                <h3 class="section__h">Если у вас есть вопросы</h3>
+                <h3 class="section__h">Если у вас остались вопросы</h3>
                 <p class="section__lead">Заполните заявку на подбор недвижимости. 
                     Наш специалист свяжется с Вами и ответит на все вопросы!</p>
                 <form>
@@ -379,6 +697,13 @@
                         </div>
                     </div>
                 </form>
+            </div>
+            
+            <div class="callme__wrapper__subscribe">
+                Шабалина Оксана Андреевна
+                <span class="callme__wrapper__subscribe__muted">
+                    Аналитик «Монолит Истейт»
+                </span>
             </div>
             
             <div class="callme__wrapper__img-wrapper _2">
@@ -707,5 +1032,8 @@
 <script src="js/libs/nouislider.min.js"></script>
 <script src="js/libs/datepicker.min.js"></script>
 <script src="js/common.js"></script>
+        <script src="js/libs/Chart.min.js"></script>
+        <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug"></script>
+        <script src="js/analytic.js"></script>
     </body>
 </html>

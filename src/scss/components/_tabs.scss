@@ -12,7 +12,7 @@
         margin-right: -2px;
         li {
             flex: 1;
-            a {
+            a, span {
                 @include link-black;
                 display: block;
                 border-right: 1px solid $secondary;
@@ -36,7 +36,7 @@
         border-color: $primary;
         .tabs__list {
             li {
-                a {
+                a, span {
                     border-color: $primary;
                     &.active, &:hover {
                         background-color: $primary;
@@ -66,7 +66,7 @@
         }
         .tabs__list {
             li {
-                a {
+                a, span {
                     font-size: $font-size-base;
                     line-height: 48px;
                     padding: 0 25px;
@@ -94,7 +94,7 @@
         margin: 0;
         li {
             margin-bottom: 5px;
-            a {
+            a, span {
                 display: flex;
                 align-items: center;
                 min-height: 65px;

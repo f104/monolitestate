@@ -44,6 +44,7 @@ jQuery(function () {
     }
 
     function initTooltip() {
+        if (!$('.analytic-clients__list').length) return;
         var $t, timer, listOffset = $('.analytic-clients__list').offset().left;
         $('.analytic-clients__list__item img').off('mouseenter');
         $('.analytic-clients__list__item img').off('mouseleave');
@@ -128,6 +129,8 @@ jQuery(function () {
     }
 
     function initMap() {
+        if (!$('#map').length) return;
+        
         var map;
 
         map = new ymaps.Map("map", {
