@@ -1,19 +1,11 @@
 <div class="list-header @@class">
     <div class="container list-header__row">
-        <form class="list-header__filter">
-            <div class="input-group _radio _last">
-                <div class="input-group__inner">
-                    <label class="input-group__radio__item">
-                        <input type="radio" checked="" name="type" value="1">
-                        <span class="input-group__radio__item__inner">Новости «Монолит Истейт»</span>
-                    </label>
-                    <label class="input-group__radio__item">
-                        <input type="radio" name="type" value="2">
-                        <span class="input-group__radio__item__inner">Все новости</span>
-                    </label>
-                </div>
-            </div>
-        </form>
+        <div class="list-header__tags tags">
+            <ul class="tags__list">
+                <li><a href="#">Новости «Монолит Истейт»</a></li>
+                <li class="_active"><span>Все новости</span></li>
+            </ul>
+        </div>
         <div class="list-header__pagination">
             <ul class="pagination">
                 <li class="pagination__item">

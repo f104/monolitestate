@@ -256,7 +256,7 @@
             }
         }
         @include media-breakpoint-up(lg) {
-            margin-bottom: 40px;
+            margin-bottom: 13px;
             @include row(27px);
             &:after {
                 content: none;
@@ -270,6 +270,7 @@
         }
         @include media-breakpoint-up(lg) {
             @include col(33.33%, 27px);
+            margin-bottom: 27px;
         }
         .analytic-reviews__item__inner {
             flex: 1;

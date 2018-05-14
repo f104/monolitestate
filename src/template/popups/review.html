@@ -1,0 +1,45 @@
+<div id="review" class="popup-cnt">
+    <div class="popup popup-visit">
+        <h3 class="popup__h3">Добавить отзыв</h3>
+        <form id="popup_review_form" class="popup-subscribe__form js-validate">
+            <div class="input-group__wrapper">
+                <div class="input-group _lg _secondary">
+                    <label>Ваше имя</label>
+                    <input type="text" name="name" value="" required>
+                </div>
+                <div class="input-group _lg _secondary">
+                    <label>E-mail</label>
+                    <input type="text" name="email" value="" required>
+                </div>
+            </div>
+            <div class="input-group__wrapper">
+                <div class="input-group _lg _secondary">
+                    <label>Ваш телефон</label>
+                    <input type="text" name="phone" value="" required 
+                           class="js-mask__tel">
+                </div>
+                <div class="input-group _file">
+                    <label>
+                        <i class="icon-attach"></i>
+                        <span class="input-group__label-file js-fileinput__cnt">Прикрепить фотографию</span>
+                        <input type="file" class="js-fileinput">
+                    </label>
+                </div>
+            </div>
+            <div class="input-group _lg _secondary">
+                <label>Текст отзыва</label>
+                <textarea name="message" required></textarea>
+            </div>
+            <div class="input-group__wrapper _submit">
+                <div class="input-group">
+                    <button class="btn _solid _lg _shadow" type="submit">Отправить</button>
+                </div>
+                <div class="input-group">
+                    <span class="input-help">
+                        Оправляя заявку вы соглашаетесь на обработку 
+                        ваших персональных данных.</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

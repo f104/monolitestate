@@ -46,6 +46,9 @@ body {
 .necessaty_fields {
     display: none !important;;
 }
+.jGrowl {
+    z-index: 100000 !important;
+}
 .text-nowrap { white-space: nowrap !important; }
 
 .no-padding-top {
@@ -178,6 +181,7 @@ a:not(.link-icon), .link {
 @import "components/realty-index";
 @import "components/filters";
 @import "components/tabs";
+@import "components/tags";
 @import "components/promo";
 @import "components/sales";
 @import "components/agents";

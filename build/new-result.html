@@ -1878,7 +1878,7 @@
         <div class="hypothec-calc__fields">
     <div class="input-group">
         <label>Стоимость недвижимости</label>
-        <input value="2320000" disabled="disabled" class="js-mask__currency js-hypothec__cost">
+        <input value="2320000" _disabled="disabled" class="js-mask__currency js-hypothec__cost">
     </div>
     <div class="js-picker">
         <div class="input-group _picker _double _third">
@@ -2242,15 +2242,15 @@
                 <h3 class="section__h">Ничего не понравилось?</h3>
                 <p class="section__lead">Заполните заявку на подбор недвижимости. 
                     Наш специалист свяжется с Вами и ответит на все вопросы!</p>
-                <form>
+                <form class="js-validate">
                     <div class="input-group__wrapper">
                         <div class="input-group _lg _white _secondary">
                             <label>Ваше имя:</label>
-                            <input value="Иван">
+                            <input value="Иван" required>
                         </div>
                         <div class="input-group _lg _white _secondary">
                             <label>Ваш телефон:</label>
-                            <input value="+7 (123) 456-78-90" class="js-mask__tel">
+                            <input name="phone" value="+7 (123) 456-78-90" required class="js-mask__tel">
                         </div>
                     </div>
                     <div class="input-group__wrapper _submit">
@@ -2392,7 +2392,7 @@
                 </div>
                 <div class="footer__up__col _col3">
                     <ul class="footer__contacts">
-                        <li>г. Нижний Новгород,<br>
+                        <li class="footer__contacts__address">г. Нижний Новгород,
                             ул. Большая Покровская, д. 69</li>
                         <li>Email: kostina@monolit.nnov.ru<br>
                             Тел.: <a href="tel:+78312199067">+7 (831) 219-90-67</a></li>

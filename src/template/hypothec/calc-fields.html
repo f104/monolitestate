@@ -1,7 +1,7 @@
 <div class="hypothec-calc__fields">
     <div class="input-group">
         <label>Стоимость недвижимости</label>
-        <input value="2320000" disabled="disabled" class="js-mask__currency js-hypothec__cost">
+        <input value="2320000" _disabled="disabled" class="js-mask__currency js-hypothec__cost">
     </div>
     <div class="js-picker">
         <div class="input-group _picker _double _third">
@@ -32,10 +32,10 @@
             @@include('../chunks/pseudo-select.html', {"title":"Зарплатный проект"})
         </div>
         <div class="input-group">
-            @@include('../chunks/pseudo-select.html', {"title":"Социальная программа"})
+            @@include('./select-social.html')
         </div>
         <div class="input-group">
-            @@include('../chunks/pseudo-select.html', {"title":"Способ подтверждения дохода"})
+            @@include('./select-confirm.html')
         </div>
     </div>
     <a href="#" class="hypothec-calc__fields__show-btn btn _lg _solid js-hypothec__show-btn">Показать программы</a>

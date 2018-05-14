@@ -5,7 +5,9 @@ jQuery(function () {
         initChart();
         initSlider();
         initTooltip();
-        ymaps.ready(initMap);
+        if ($('#map').length) {
+            ymaps.ready(initMap);
+        }
 
         $(window).on('resize', function () {
             initTooltip();
@@ -44,7 +46,8 @@ jQuery(function () {
     }
 
     function initTooltip() {
-        if (!$('.analytic-clients__list').length) return;
+        if (!$('.analytic-clients__list').length)
+            return;
         var $t, timer, listOffset = $('.analytic-clients__list').offset().left;
         $('.analytic-clients__list__item img').off('mouseenter');
         $('.analytic-clients__list__item img').off('mouseleave');
@@ -72,6 +75,8 @@ jQuery(function () {
     }
 
     function initChart() {
+        if (typeof Chart == 'undefined')
+            return;
         Chart.defaults.global.defaultFontColor = '#131313';
         Chart.defaults.global.defaultFontFamily = 'Lato, sans-serif';
         var ctx = document.getElementById("chart");
@@ -129,8 +134,7 @@ jQuery(function () {
     }
 
     function initMap() {
-        if (!$('#map').length) return;
-        
+
         var map;
 
         map = new ymaps.Map("map", {

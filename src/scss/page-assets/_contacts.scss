@@ -35,12 +35,12 @@
     }
     .contacts__content-wrapper {
         position: relative;
-/*        @include media-breakpoint-up(lg) {
-            position: absolute;
-            bottom: 65px;
-            left: 0;
-            right: 0;
-        }*/
+        /*        @include media-breakpoint-up(lg) {
+                    position: absolute;
+                    bottom: 65px;
+                    left: 0;
+                    right: 0;
+                }*/
     }
     .contacts__content {
         position: relative;
@@ -144,6 +144,9 @@
 .contacts-scroller {
     @include md-full;
     overflow-y: scroll;
+    &.scrollbar-outer._hor > .scroll-element.scroll-x {
+        background: $white;
+    }
     &.scroll-content {
         padding-bottom: 20px;
     }

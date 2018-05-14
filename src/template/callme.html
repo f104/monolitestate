@@ -5,15 +5,15 @@
                 <h3 class="section__h">@@title</h3>
                 <p class="section__lead">Заполните заявку на подбор недвижимости. 
                     Наш специалист свяжется с Вами и ответит на все вопросы!</p>
-                <form>
+                <form class="js-validate">
                     <div class="input-group__wrapper">
                         <div class="input-group _lg _white _secondary">
                             <label>Ваше имя:</label>
-                            <input value="Иван">
+                            <input value="Иван" required>
                         </div>
                         <div class="input-group _lg _white _secondary">
                             <label>Ваш телефон:</label>
-                            <input value="+7 (123) 456-78-90" class="js-mask__tel">
+                            <input name="phone" value="+7 (123) 456-78-90" required class="js-mask__tel">
                         </div>
                     </div>
                     <div class="input-group__wrapper _submit">

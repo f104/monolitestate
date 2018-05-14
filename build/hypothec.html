@@ -165,7 +165,7 @@
                                 жилищный кредит с помощью ипотечного брокера.</p>
                         </div>
                         <div class="realty-form__row">
-                            <a href="#" class="btn _lg _solid _shadow">Рассчитать ипотеку</a>
+                            <a href="#hypothec_calc" class="btn _lg _solid _shadow js-scroll">Рассчитать ипотеку</a>
                             <div class="hypothec-90">
                                 <span class="hypothec-90__segment">
                                     90%
@@ -228,7 +228,7 @@
 
     </div>
 </section>
-            <section>
+            <section id="hypothec_calc">
                 <div class="js-tabs">
                     <div class="container">
                         <div class="tabs">
@@ -259,7 +259,7 @@
                                 <div class="hypothec-calc__fields">
     <div class="input-group">
         <label>Стоимость недвижимости</label>
-        <input value="2320000" disabled="disabled" class="js-mask__currency js-hypothec__cost">
+        <input value="2320000" _disabled="disabled" class="js-mask__currency js-hypothec__cost">
     </div>
     <div class="js-picker">
         <div class="input-group _picker _double _third">
@@ -324,7 +324,8 @@
 </div>
         </div>
         <div class="input-group">
-            <div class="pseudo-select js-select">
+            <div class="pseudo-select js-select js-hypothec__filter" 
+     data-hypothec-filter="social">
     <div class="pseudo-select__inner">
         <div class="pseudo-select__select js-select__toggler">
             <span class="pseudo-select__select__inner">
@@ -334,34 +335,17 @@
         <div class="pseudo-select__dropdown js-select__inner js-select-search">
             <input class="pseudo-select__dropdown__search js-select-search__input" placeholder="Поиск">
             <div class="js-scrollbar scrollbar-outer">
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Жилой комплекс с очень длинным названием</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Молодая семья"><input type="checkbox" value="3"><span class="checkbox__text">Молодая семья</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Военная ипотека"><input type="checkbox" value="4"><span class="checkbox__text">Военная ипотека</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Жилье для пенсионеров"><input type="checkbox" value="5"><span class="checkbox__text">Жилье для пенсионеров</span></label>
             </div>
         </div>
     </div>
 </div>
         </div>
         <div class="input-group">
-            <div class="pseudo-select js-select">
+            <div class="pseudo-select js-select js-hypothec__filter" 
+     data-hypothec-filter="confirm">
     <div class="pseudo-select__inner">
         <div class="pseudo-select__select js-select__toggler">
             <span class="pseudo-select__select__inner">
@@ -371,27 +355,8 @@
         <div class="pseudo-select__dropdown js-select__inner js-select-search">
             <input class="pseudo-select__dropdown__search js-select-search__input" placeholder="Поиск">
             <div class="js-scrollbar scrollbar-outer">
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Жилой комплекс с очень длинным названием</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Солнечный"><input type="checkbox" checked><span class="checkbox__text">Солнечный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Новый ветер"><input type="checkbox" checked><span class="checkbox__text">Новый ветер</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Полет"><input type="checkbox"><span class="checkbox__text">Полет</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Столичный"><input type="checkbox" checked><span class="checkbox__text">Столичный</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Гармония"><input type="checkbox"><span class="checkbox__text">Гармония</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Суходолье"><input type="checkbox"><span class="checkbox__text">Суходолье</span></label>
-                <label class="checkbox js-select-search__item" data-select-search="Уютная гавань"><input type="checkbox"><span class="checkbox__text">Уютная гавань</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="2-НДФЛ"><input type="checkbox" value="1"><span class="checkbox__text">2-НДФЛ</span></label>
+                <label class="checkbox js-select-search__item" data-select-search="Справка по форме банка"><input type="checkbox" value="2"><span class="checkbox__text">Справка по форме банка</span></label>
             </div>
         </div>
     </div>
@@ -475,7 +440,7 @@
 </div>
                                 <p class="hypothec-calc__res-h js-hypothec__show-target">Найдено 32 ипотечные программы</p>
                                 <div class="hypothec-programs">
-    <div class="hypothec-programs__item js-hypothec__item">
+    <div class="hypothec-programs__item js-hypothec__item" data-filter-1 data-filter-3>
     <div class="hypothec-programs__item__h">
         <span class="hypothec-programs__item__h__img">
             <img src="img/hypothec/sberbank.png" srcset="img/hypothec/sberbank@2x.png 2x,
@@ -514,9 +479,12 @@
         </li>
         
     </ul>
-    <a href="#" class="btn _lg _solid hypothec-programs__item__btn">Оставить заявку на ипотеку</a>
+    <a href="#hypothec_call" 
+       class="btn _lg _solid hypothec-programs__item__btn js-popup">
+        Оставить заявку на ипотеку
+    </a>
 </div>
-    <div class="hypothec-programs__item js-hypothec__item">
+    <div class="hypothec-programs__item js-hypothec__item" data-filter-2>
     <div class="hypothec-programs__item__h">
         <span class="hypothec-programs__item__h__img">
             <img src="img/hypothec/vtb.png" srcset="img/hypothec/vtb@2x.png 2x,
@@ -548,9 +516,12 @@
         </li>
         
     </ul>
-    <a href="#" class="btn _lg _solid hypothec-programs__item__btn">Оставить заявку на ипотеку</a>
+    <a href="#hypothec_call" 
+       class="btn _lg _solid hypothec-programs__item__btn js-popup">
+        Оставить заявку на ипотеку
+    </a>
 </div>
-    <div class="hypothec-programs__item js-hypothec__item">
+    <div class="hypothec-programs__item js-hypothec__item" data-filter-1 data-filter-2>
     <div class="hypothec-programs__item__h">
         <span class="hypothec-programs__item__h__img">
             <img src="img/hypothec/binbank.png" srcset="img/hypothec/binbank@2x.png 2x,
@@ -589,9 +560,12 @@
         </li>
         
     </ul>
-    <a href="#" class="btn _lg _solid hypothec-programs__item__btn">Оставить заявку на ипотеку</a>
+    <a href="#hypothec_call" 
+       class="btn _lg _solid hypothec-programs__item__btn js-popup">
+        Оставить заявку на ипотеку
+    </a>
 </div>
-    <div class="hypothec-programs__item js-hypothec__item">
+    <div class="hypothec-programs__item js-hypothec__item" data-filter-5>
     <div class="hypothec-programs__item__h">
         <span class="hypothec-programs__item__h__img">
             <img src="img/hypothec/gazprombank.png" srcset="img/hypothec/gazprombank@2x.png 2x,
@@ -623,9 +597,12 @@
         </li>
         
     </ul>
-    <a href="#" class="btn _lg _solid hypothec-programs__item__btn">Оставить заявку на ипотеку</a>
+    <a href="#hypothec_call" 
+       class="btn _lg _solid hypothec-programs__item__btn js-popup">
+        Оставить заявку на ипотеку
+    </a>
 </div>
-    <div class="hypothec-programs__item js-hypothec__item">
+    <div class="hypothec-programs__item js-hypothec__item" data-filter-2 data-filter-3>
     <div class="hypothec-programs__item__h">
         <span class="hypothec-programs__item__h__img">
             <img src="img/hypothec/sberbank.png" srcset="img/hypothec/sberbank@2x.png 2x,
@@ -664,9 +641,12 @@
         </li>
         
     </ul>
-    <a href="#" class="btn _lg _solid hypothec-programs__item__btn">Оставить заявку на ипотеку</a>
+    <a href="#hypothec_call" 
+       class="btn _lg _solid hypothec-programs__item__btn js-popup">
+        Оставить заявку на ипотеку
+    </a>
 </div>
-    <div class="hypothec-programs__item js-hypothec__item">
+    <div class="hypothec-programs__item js-hypothec__item" data-filter-1 data-filter-2>
     <div class="hypothec-programs__item__h">
         <span class="hypothec-programs__item__h__img">
             <img src="img/hypothec/vtb.png" srcset="img/hypothec/vtb@2x.png 2x,
@@ -698,9 +678,12 @@
         </li>
         
     </ul>
-    <a href="#" class="btn _lg _solid hypothec-programs__item__btn">Оставить заявку на ипотеку</a>
+    <a href="#hypothec_call" 
+       class="btn _lg _solid hypothec-programs__item__btn js-popup">
+        Оставить заявку на ипотеку
+    </a>
 </div>
-    <div class="hypothec-programs__item js-hypothec__item">
+    <div class="hypothec-programs__item js-hypothec__item" data-filter-1>
     <div class="hypothec-programs__item__h">
         <span class="hypothec-programs__item__h__img">
             <img src="img/hypothec/binbank.png" srcset="img/hypothec/binbank@2x.png 2x,
@@ -739,9 +722,12 @@
         </li>
         
     </ul>
-    <a href="#" class="btn _lg _solid hypothec-programs__item__btn">Оставить заявку на ипотеку</a>
+    <a href="#hypothec_call" 
+       class="btn _lg _solid hypothec-programs__item__btn js-popup">
+        Оставить заявку на ипотеку
+    </a>
 </div>
-    <div class="hypothec-programs__item js-hypothec__item">
+    <div class="hypothec-programs__item js-hypothec__item" data-filter-2 data-filter-5>
     <div class="hypothec-programs__item__h">
         <span class="hypothec-programs__item__h__img">
             <img src="img/hypothec/gazprombank.png" srcset="img/hypothec/gazprombank@2x.png 2x,
@@ -773,7 +759,10 @@
         </li>
         
     </ul>
-    <a href="#" class="btn _lg _solid hypothec-programs__item__btn">Оставить заявку на ипотеку</a>
+    <a href="#hypothec_call" 
+       class="btn _lg _solid hypothec-programs__item__btn js-popup">
+        Оставить заявку на ипотеку
+    </a>
 </div>
 </div>
                                 <button class="btn _lg _primary section__button">
@@ -833,6 +822,34 @@
                     </div>
                 </div>
             </section>
+            <div id="hypothec_call" class="popup-cnt">
+    <div class="popup popup-visit">
+        <h3 class="popup__h3">Заявка на ипотеку</h3>
+        <form id="popup_subscribe_form" class="popup-subscribe__form js-validate">
+            <div class="input-group__wrapper">
+                <div class="input-group _lg _secondary">
+                    <label>Ваше имя</label>
+                    <input type="text" name="name" value="" required>
+                </div>
+                <div class="input-group _lg _secondary">
+                    <label>Ваш телефон</label>
+                    <input type="text" name="phone" value="" required 
+                           class="js-mask__tel">
+                </div>
+            </div>
+            <div class="input-group__wrapper _submit">
+                <div class="input-group">
+                    <button class="btn _solid _lg _shadow" type="submit">Отправить</button>
+                </div>
+                <div class="input-group">
+                    <span class="input-help">
+                        Оправляя заявку вы соглашаетесь на обработку 
+                        ваших персональных данных.</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
             <section class="section _inverse  callme">
     <div class="container">
         <div class="callme__wrapper">
@@ -840,15 +857,15 @@
                 <h3 class="section__h">Не хочу искать, перезвоните мне!</h3>
                 <p class="section__lead">Заполните заявку на подбор недвижимости. 
                     Наш специалист свяжется с Вами и ответит на все вопросы!</p>
-                <form>
+                <form class="js-validate">
                     <div class="input-group__wrapper">
                         <div class="input-group _lg _white _secondary">
                             <label>Ваше имя:</label>
-                            <input value="Иван">
+                            <input value="Иван" required>
                         </div>
                         <div class="input-group _lg _white _secondary">
                             <label>Ваш телефон:</label>
-                            <input value="+7 (123) 456-78-90" class="js-mask__tel">
+                            <input name="phone" value="+7 (123) 456-78-90" required class="js-mask__tel">
                         </div>
                     </div>
                     <div class="input-group__wrapper _submit">
@@ -955,7 +972,7 @@
                 </div>
                 <div class="footer__up__col _col3">
                     <ul class="footer__contacts">
-                        <li>г. Нижний Новгород,<br>
+                        <li class="footer__contacts__address">г. Нижний Новгород,
                             ул. Большая Покровская, д. 69</li>
                         <li>Email: kostina@monolit.nnov.ru<br>
                             Тел.: <a href="tel:+78312199067">+7 (831) 219-90-67</a></li>

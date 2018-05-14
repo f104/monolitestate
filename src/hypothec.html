@@ -21,7 +21,7 @@
                                 жилищный кредит с помощью ипотечного брокера.</p>
                         </div>
                         <div class="realty-form__row">
-                            <a href="#" class="btn _lg _solid _shadow">Рассчитать ипотеку</a>
+                            <a href="#hypothec_calc" class="btn _lg _solid _shadow js-scroll">Рассчитать ипотеку</a>
                             <div class="hypothec-90">
                                 <span class="hypothec-90__segment">
                                     90%
@@ -45,7 +45,7 @@
                 </div>
             </section>
             @@include('./template/sales/hypothec.html')
-            <section>
+            <section id="hypothec_calc">
                 <div class="js-tabs">
                     <div class="container">
                         <div class="tabs">
@@ -134,6 +134,7 @@
                     </div>
                 </div>
             </section>
+            @@include('./template/popups/hypothec_call.html')
             @@include('./template/callme.html', {
             "title": "Не хочу искать, перезвоните мне!",
             "margin": 1,

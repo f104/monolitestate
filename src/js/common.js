@@ -21,6 +21,7 @@ jQuery(function () {
         initHypothec();
         initDatepicker();
         initScrollbar();
+        initScroll();
         initAbout();
         initFileinput();
         initAntispam();
@@ -576,6 +577,7 @@ jQuery(function () {
                     cost = $cost.val(),
                     $paymentPercent = $(this).find('.js-hypothec__payment-percent'),
                     $paymentSum = $(this).find('.js-hypothec__payment-sum'),
+                    $paymentSumPicker = $(this).find('.js-picker__target')[0],
                     $age = $(this).find('.js-hypothec__age'),
                     $credit = $(this).find('.js-hypothec__credit'),
                     $slider = $(this).find('.js-hypothec__slider'),
@@ -594,6 +596,20 @@ jQuery(function () {
             var credit = 0;
             var age = $age.val();
             var percent;
+            $cost.inputmask("numeric", {
+                suffix: ' руб.',
+                oncomplete: function () {
+                    cost = $(this).val();
+                    $paymentSum.prop('max', cost);
+                    $paymentSumPicker.noUiSlider.updateOptions({
+                        range: {
+                            'min': 0,
+                            'max': cost
+                        }
+                    });
+                    $paymentSum.trigger('change');
+                }
+            });
             $paymentSum.on('change', function () {
                 percent = $(this).val() * 100 / cost;
                 if (percent > 100) {
@@ -631,6 +647,28 @@ jQuery(function () {
                     $slider.slick('slickGoTo', i);
                 });
             });
+            // filters, каждый селект фильтрует отдельно
+            var style = [];
+            $(this).find('.js-hypothec__filter').each(function () {
+                var fName = $(this).data('hypothec-filter'),
+                    className = 'filter-' + fName;
+                style.push('.' + className + '{display:none !important}');
+                var $checkboxes = $(this).find('input[type=checkbox]');
+                $checkboxes.on('change', function () {
+                    var $checked = $checkboxes.filter(':checked');
+                    if ($checked.length) {
+                        $items.removeClass(className);
+                        var f = [];
+                        $checked.each(function () {
+                            f.push(':not([data-filter-' + $(this).val() + '])');
+                        });
+                        $items.filter('.js-hypothec__item' + f.join('')).addClass(className);
+                    } else {
+                        $items.removeClass(className);
+                    }
+                });
+            });
+            $('<style>' + style.join('') + '</style>').appendTo('head')
         });
         function calcPayment(cost, percent) {
             return Math.ceil(cost * percent / 100);
@@ -668,17 +706,17 @@ jQuery(function () {
                 }
             ]
         });
-        var $t = $('.js-hypothec__show-target');
-        if ($t.length) {
-            var offset = $t.offset().top - 40;
-            if ($('.header__main').css('position') === 'fixed') {
-                offset += $('.header__main').outerHeight(true);
-            }
-            $('.js-hypothec__show-btn').on('click', function (e) {
-                e.preventDefault();
+        $('.js-hypothec__show-btn').on('click', function (e) {
+            e.preventDefault();
+            var $t = $(this).parents('.js-hypothec').find('.js-hypothec__show-target');
+            if ($t.length) {
+                var offset = $t.offset().top - 40;
+                if ($('.header__main').css('position') === 'fixed') {
+                    offset -= $('.header__main').outerHeight(true);
+                }
                 $('html, body').animate({scrollTop: offset}, 300);
-            });
-        }
+            }
+        });
     }
 
     function initDatepicker() {
@@ -763,6 +801,25 @@ jQuery(function () {
 //        $('.js-scrollbar-hot').scrollbar();
     }
 
+    /**
+     * Прокрутка по ссылке до элемента
+     */
+    function initScroll() {
+        $('.js-scroll').on('click', function (e) {
+            e.preventDefault();
+            var $target = $($(this).attr('href'));
+            if ($target.length) {
+                var offset = $target.offset().top - 40;
+                if ($('.header__main').css('position') === 'fixed') {
+                    offset -= $('.header__main').outerHeight(true);
+                }
+                if ($('.header').css('position') === 'fixed') {
+                    offset -= $('.header').outerHeight();
+                }
+                $('html,body').animate({scrollTop: offset}, 300);
+            }
+        });
+    }
     function initAbout() {
         $('.js-about-hystory__year-slider').slick({
             dots: false,
@@ -805,6 +862,9 @@ jQuery(function () {
     }
 
     function initFileinput() {
+        $('.js-fileinput__cnt').each(function () {
+            $(this).data('default', $(this).text());
+        });
         $('.js-fileinput').on('change', function (e) {
             if (this.files) {
                 var fileName = $(this).val().split('\\').pop();

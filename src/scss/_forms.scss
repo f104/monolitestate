@@ -79,6 +79,10 @@ form {
     }
 }
 
+textarea {
+    height: 150px;
+}
+
 .input-group {
     margin-bottom: 20px;
     label {
@@ -203,7 +207,7 @@ form {
             }
         }
     }
-    input {
+    input, textarea {
         display: block;
         width: 100%;
         border-radius: $border-radius;
@@ -211,10 +215,8 @@ form {
         background-color: rgba(0, 0, 0, 0.07);
         /*opacity: 0.85;*/
         font-size: 14px;
-        line-height: 42px;
         font-weight: 500;
         color: $body-color;
-        padding: 0 16px;
         outline: none;
         min-width: 0; //https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size
         @include transition(box-shadow);
@@ -250,13 +252,22 @@ form {
             }
         }
     }
+    input {
+        line-height: 42px;
+        padding: 0 16px;
+    }
+    textarea {
+        padding: 16px;
+    }
     &._lg {
-        input {
-            font-size: 18px;
+        input, textarea {
             font-weight: normal;
-            line-height: 52px;
             border-radius: 5px;
             background-color: #f5f5f5;
+        }
+        input {
+            font-size: 18px;
+            line-height: 52px;
         }
     }
     &._xlg {
@@ -299,21 +310,21 @@ form {
         label {
             color: $white;
         }
-        input {
+        input, textarea {
             color: $white;
-            background-color: rgba(255, 255, 255, 0.25);
+            background-color: rgba(255, 255, 255, 0.25) !important;
         }
         .input-help {
             color: $white;
         }
     }
     &._gray {
-        input {
+        input, textarea {
             background-color: #dfdfdf;
         }
     }
     &._secondary {
-        input {
+        input, textarea {
             &:hover {
                 @include border-inset(1px, $secondary);
             }
@@ -573,6 +584,7 @@ form {
         .scrollbar-outer {
             max-height: 220px;
             padding: 1px 0;
+            margin-bottom: 0;
             .scroll-element {
                 &.scroll-y {
                     .scroll-element_outer {

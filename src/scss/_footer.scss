@@ -68,6 +68,9 @@
         @include list-unstyled;
         font-weight: 300;
         margin-bottom: 32px;
+        .footer__contacts__address {
+            white-space: pre-line;
+        }
         li {
             margin-bottom: 18px;
             &:last-of-type {

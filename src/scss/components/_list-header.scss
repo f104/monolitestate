@@ -50,6 +50,9 @@
             order: 3;
             flex-direction: row-reverse;
             align-items: center;
+            .pagination {
+                margin-left: 25px;
+            }
         }
         .list-header__pagination__total {
             display: block;
@@ -58,8 +61,14 @@
             margin-top: 20px;
             @include media-breakpoint-up(lg) {
                 margin-top: 0;
-                margin-right: 25px;
             }
+        }
+    }
+    .list-header__tags {
+        margin-bottom: 40px;
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+            align-self: flex-start;
         }
     }
     .list-header__btn-filter {
