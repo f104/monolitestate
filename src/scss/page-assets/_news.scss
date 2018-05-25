@@ -221,8 +221,10 @@
     .news-related-list {
         @include media-breakpoint-up(lg) {
             @include row(27px);
+            margin-bottom: 13px;
             .news-item {
                 @include col(33.33%, 27px);
+                margin-bottom: 27px;
             }
         }
     }

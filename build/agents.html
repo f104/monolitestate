@@ -158,10 +158,10 @@
             </div>
             <div class="agents">
                 <div class="container agents-filter">
-    <div class="agents-filter__search">
-        <div class="input-group _xlg _secondary _gray">
+    <div class="agents-filter__item agents-filter__search">
+        <div class="input-group _xlg">
             <div class="input-wrapper _icon">
-                <input>
+                <select multiple="multiple" class="js-agent-search"></select>
                 <i class="icon-search"></i>
             </div>
         </div>
@@ -170,7 +170,7 @@
                 Введите имя, фамилию (3 и более символа) или телефон риэлтора для поиска</span>
         </div>
     </div>
-    <div class="agents-filter__filter">
+    <div class="agents-filter__item agents-filter__filter">
         <p class="agents__muted">Показать риэлторов</p>
         <div class="agents-filter__checkbox-wrapper">
             <div class="input-group">
@@ -205,39 +205,24 @@
             </div>
         </div>
     </div>
-    <div class="agents-filter__abc">
+    <div class="agents-filter__item agents-filter__abc">
         <p class="agents__muted">Или найдите риэлтора по алфавиту</p>
         <div class="agents-filter__alphabet-wrapper">
-            <ul class="alphabet">
+            <ul class="alphabet js-alphabet">
                 <li class="_active"><a href="#">А-Я</a></li>
-                <li><a href="#">А</a></li>
-                <li><a href="#">Б</a></li>
-                <li><a href="#">В</a></li>
-                <li><a href="#">Г</a></li>
-                <li><a href="#">Д</a></li>
-                <li><a href="#">Е</a></li>
-                <li><a href="#">Ж</a></li>
-                <li><a href="#">З</a></li>
-                <li><a href="#">И</a></li>
-                <li><a href="#">К</a></li>
-                <li><a href="#">Л</a></li>
-                <li><a href="#">М</a></li>
-                <li><a href="#">Н</a></li>
-                <li><a href="#">О</a></li>
-                <li><a href="#">П</a></li>
-                <li><a href="#">Р</a></li>
-                <li><a href="#">С</a></li>
-                <li><a href="#">Т</a></li>
-                <li><a href="#">У</a></li>
-                <li><a href="#">Ф</a></li>
-                <li><a href="#">Х</a></li>
-                <li><a href="#">Ц</a></li>
-                <li><a href="#">Ч</a></li>
-                <li><a href="#">Ш</a></li>
-                <li><a href="#">Щ</a></li>
-                <li><a href="#">Э</a></li>
-                <li><a href="#">Ю</a></li>
-                <li><a href="#">Я</a></li>
+                <li><label class="link"><input type="radio" name="alphabet" value="А">А</label></li>
+                <li><label class="link"><input type="radio" name="alphabet" value="Б">Б</label></li>
+                <li><label class="link"><input type="radio" name="alphabet" value="В">В</label></li>
+                <li><label class="link"><input type="radio" name="alphabet" value="Г">Г</label></li>
+                <li><label class="link"><input type="radio" name="alphabet" value="Д">Д</label></li>
+                <li><label class="link"><input type="radio" name="alphabet" value="Е" checked>Е</label></li>
+                <li><label class="link"><input type="radio" name="alphabet" value="Ж">Ж</label></li>
+                <li><label class="link"><input type="radio" name="alphabet" value="З">З</label></li>
+                <li><label class="link"><input type="radio" name="alphabet" value="И">И</label></li>
+                <li><label class="link"><input type="radio" name="alphabet" value="К">К</label></li>
+                <li><label class="link"><input type="radio" name="alphabet" value="Л">Л</label></li>
+                <li><label class="link"><input type="radio" name="alphabet" value="М">М</label></li>
+                <li><label class="link"><input type="radio" name="alphabet" value="Н">Н</label></li>
             </ul>
         </div>
     </div>
@@ -1050,6 +1035,7 @@
         <li><a href="new-detail.html">new-detail</a></li>
         <li><a href="content.html">content</a></li>
         <li><a href="builders.html">builders</a></li>
+        <li><a href="builder.html">builder</a></li>
         <li><a href="news.html">news</a></li>
         <li><a href="news-detail.html">news-detail</a></li>
         <li><a href="agents.html">agents</a></li>

@@ -193,10 +193,10 @@ $hypothec-gutter-width: $grid-gutter-width;
     .hypothec {
         .hypothec__list {
             @include row($hypothec-gutter-width);
-            margin-bottom: 39px;
+            margin-bottom: 13px;
             .hypothec__list__item {
                 @include col(25%, $hypothec-gutter-width);
-                margin-bottom: 0;
+                margin-bottom: 26px;
             }
             &._scroll {
                 &:after {

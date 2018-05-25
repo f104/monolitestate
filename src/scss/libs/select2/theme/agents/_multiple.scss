@@ -1,0 +1,78 @@
+.select2-selection--multiple {
+    background-color: #dfdfdf;
+
+    border: none;
+    border-radius: $border-radius;
+
+    cursor: text;
+
+    outline: 0;
+    height: 60px;
+    @media (min-width: 768px) {
+        height: 80px;
+    }
+
+
+    .select2-selection__rendered {
+        list-style: none;
+        margin: 0;
+        padding: 0 55px 0 20;
+    }
+
+    .select2-selection__clear {
+        display: none;
+    }
+
+    .select2-selection__choice {
+
+        cursor: default;
+
+        float: left;
+        font-size: 18px;
+        line-height: 60px;
+        @media (min-width: 768px) {
+            font-size: 20px;
+            line-height: 80px;
+        }
+    }
+
+    .select2-selection__choice__remove {
+        display: none;
+    }
+}
+
+&[dir="rtl"] {
+    .select2-selection--multiple {
+        .select2-selection__choice {
+            float: right;
+        }
+
+        .select2-selection__choice {
+            margin-left: 5px;
+            margin-right: auto;
+        }
+
+        .select2-selection__choice__remove {
+            display: none;
+        }
+    }
+}
+
+&.select2-container--open {
+
+    &.select2-container--above {
+        .select2-selection--multiple {
+            border-top: none;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    }
+
+    &.select2-container--below {
+        .select2-selection--multiple {
+            border-bottom: none;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+}

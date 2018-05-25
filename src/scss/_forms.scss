@@ -712,6 +712,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
             top: 50%;
             transform: translateY(-50%);
             pointer-events: none;
+            z-index: 1055;
         }
     }
     &._primary {

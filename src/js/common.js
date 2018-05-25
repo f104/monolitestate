@@ -24,6 +24,7 @@ jQuery(function () {
         initScroll();
         initAbout();
         initFileinput();
+        initAlphabet();
         initAntispam();
     });
 
@@ -287,6 +288,63 @@ jQuery(function () {
             $('.js-select2').select2();
         });
 //        $('.js-select2').select2('open');
+        $(".js-agent-search").select2({
+            theme: 'agents',
+            width: '100%',
+            language: {
+                inputTooShort: function (a) {
+                    return "Пожалуйста, введите " + (a.minimum - a.input.length) + " или больше символов"
+                },
+            },
+            ajax: {
+                url: "https://api.myjson.com/bins/okyvi",
+                dataType: 'json',
+                delay: 250,
+                data: function (params) {
+                    return {
+                        q: params.term, // search term
+                        action: 'agent_search'
+                    };
+                },
+                processResults: function (data) {
+//                    console.log(data);
+                    var results = $.map(data, function (value, key) {
+                        return {
+                            id: key,
+                            text: value.pagetitle,
+                            agent: value
+                        };
+                    });
+//                    console.log(results);
+                    return {
+                        results: results,
+                    };
+                },
+                cache: true
+            },
+            templateResult: formatResult,
+            templateSelection: formatSelection,
+            escapeMarkup: function (markup) {
+                return markup;
+            }, // let our custom formatter work
+            minimumInputLength: 3,
+            maximumSelectionLength: 1,
+        });
+        function formatResult(item) {
+            if (item.loading) {
+                return 'поиск…';
+            }
+            return '<div class="select2-result-agent"><strong>' +
+                    item.agent.pagetitle + '</strong><br>' + item.agent.value + '</div>';
+        }
+        function formatSelection(item) {
+            return item.agent.pagetitle;
+        }
+        $('.js-agent-search').on('select2:select', function (e) {
+            var data = e.params.data;
+//            console.log(data);
+            window.location = data.agent.uri
+        });
     }
 
     function initValidate() {
@@ -392,17 +450,27 @@ jQuery(function () {
     }
 
     function initRealty() {
-        $('.js-realty-list-slider').each(function () {
-            var $togglers = $(this).find('.js-realty-list-slider__img-wrapper');
-            var $counter = $(this).find('.js-realty-list-slider__counter');
-            $togglers.each(function (i) {
-                $(this).on('mouseover', function () {
-                    $togglers.removeClass('_active');
-                    $(this).addClass('_active');
-                    $counter.text(i + 1);
-                });
-            });
+        init();
+        $(document).on('pdopage_load', function (e, config, response) {
+            init();
         });
+        $(document).on('mse2_load', function(e, data) {
+            init();
+        });
+        function init() {
+            $('.js-realty-list-slider[data-init="false"]').each(function () {
+                var $togglers = $(this).find('.js-realty-list-slider__img-wrapper');
+                var $counter = $(this).find('.js-realty-list-slider__counter');
+                $togglers.each(function (i) {
+                    $(this).on('mouseover', function () {
+                        $togglers.removeClass('_active');
+                        $(this).addClass('_active');
+                        $counter.text(i + 1);
+                    });
+                });
+                $(this).data('init', 'true');
+            });
+        }
     }
 
     function initTabs() {
@@ -426,8 +494,9 @@ jQuery(function () {
     function initRange() {
         $('.js-range').each(function (index, elem) {
             var slider = $(elem).find('.js-range__target')[0],
-                    from = $(elem).find('.js-range__from')[0],
-                    to = $(elem).find('.js-range__to')[0];
+                    $inputs = $(elem).find('input'),
+                    from = $inputs.first()[0],
+                    to = $inputs.last()[0];
             if (slider && from && to) {
                 var min = parseInt(from.value) || 0,
                         max = parseInt(to.value) || 0;
@@ -651,7 +720,7 @@ jQuery(function () {
             var style = [];
             $(this).find('.js-hypothec__filter').each(function () {
                 var fName = $(this).data('hypothec-filter'),
-                    className = 'filter-' + fName;
+                        className = 'filter-' + fName;
                 style.push('.' + className + '{display:none !important}');
                 var $checkboxes = $(this).find('input[type=checkbox]');
                 $checkboxes.on('change', function () {
@@ -877,6 +946,23 @@ jQuery(function () {
         setTimeout(function () {
             $('input[name="email3"],input[name="info"],input[name="text"]').attr('value', '').val('');
         }, 5000);
+    }
+
+    function initAlphabet() {
+        $('.js-alphabet input').on('change', function () {
+            $('.js-alphabet li').removeClass('_active');
+            if ($(this).prop('checked')) {
+                $(this).parents('li').addClass('_active');
+            }
+        });
+        $('.js-alphabet a').on('click', function (e) {
+            e.preventDefault();
+            $('.js-alphabet li').removeClass('_active');
+            $(this).parents('li').addClass('_active');
+            if (typeof mSearch2 !== 'undefined') {
+                mSearch2.reset();
+            }
+        });
     }
 
 });

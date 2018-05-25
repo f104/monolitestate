@@ -1,6 +1,6 @@
-<div class="result-list__item">
+<div @@if (id != ""){id="@@id"} class="result-list__item">
     <div class="result-list__item__images">
-        <div class="realty-list-slider js-realty-list-slider">
+        <div class="realty-list-slider js-realty-list-slider" data-init="false">
             <ul class="realty-tags">
                 @@for (var i = 0; i < tags.length; i++) {
                 <li><span class="realty-tags__content">`+tags[i]+`</span></li>

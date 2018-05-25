@@ -92,6 +92,7 @@
         .agents-list {
             @include media-breakpoint-up(lg) {
                 margin-right: 28px;
+                flex-grow: 1;
             }
         }
         .agents-list-aside {
@@ -226,7 +227,7 @@ $agents-list-gutter: 26px;
         display: flex;
         flex-wrap: wrap;
     }
-    > * {
+    .agents-filter__item {
         margin-bottom: 20px;
         &:last-of-type {
             margin-bottom: 0;
@@ -250,6 +251,9 @@ $agents-list-gutter: 26px;
             flex-shrink: 0;
             margin-top: -50px;
         }
+    }
+    .agents-filter__abc {
+        flex-basis: 100%;
     }
     .agents-filter__checkbox-wrapper {
         @include media-breakpoint-only(md) {

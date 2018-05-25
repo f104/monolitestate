@@ -32,6 +32,21 @@
                 transform: translateX(-50%);
             }
         }
+        label {
+            display: inline;
+            margin: 0;
+            color: $body-color;
+            &:after {
+                background: none;
+                border-bottom: 1px dashed;
+                width: 12px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            input {
+                display: none;
+            }
+        }
         &._active {
             background-color: $secondary;
             width: 48px;
@@ -39,7 +54,7 @@
             &:first-of-type {
                 margin-left: 0;
             }
-            a {
+            a, label {
                 color: $white;
                 pointer-events: none;
                 &:after {

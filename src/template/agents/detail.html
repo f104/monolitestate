@@ -1,0 +1,31 @@
+<h3 class="detail__h">@@title</h3>
+<div class="detail__agent">
+    @@include('./item.html', {
+    "img": 5,
+    "name": "Столбова Ольга Арслановна",
+    "post": "",
+    "phone": "+7 922 471-16-85",
+    "link": "stolbova@monolit.ru",
+    "all": 1,
+    "more": 0
+    })
+    <form class="detail__agent__form">
+        <div class="input-group">
+            <span class="input-text">
+                Оставьте ваш номер, и агент перезвонит вам в течение 5 минут
+            </span>
+        </div>
+        <div class="input-group _lg">
+            <label>Ваш телефон</label>
+            <input class="js-mask__tel">
+        </div>
+        <div class="input-group">
+            <button class="btn _lg _solid">Жду звонка</button>
+        </div>
+        <div class="input-group _last">
+            <span class="input-help">
+                Отправляя заявку вы соглашаетесь на обработку персональных данных
+            </span>
+        </div>
+    </form>
+</div>

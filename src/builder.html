@@ -1,0 +1,207 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "Застройщики"
+    })
+    <body>
+        @@include('./template/header.html', {
+        "active": ""
+        })
+        <div class="content">
+            <div class="page-header _white _subscribe">
+                <div class="container">
+                    <div class="page-header__row">
+                        <div class="page-header__col page-header__md">
+                            <h1 class="page-header__h">ПСК «Дом»</h1>
+                            <ul class="breadcrumbs">
+                                <li class="breadcrumbs__item">
+                                    <a href="index.html">Главная</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <a href="builders.html">Застройщики</a>
+                                </li>
+                                <li class="breadcrumbs__item _active">
+                                    ПСК «Дом»
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page-header__col page-header__subscribe">
+                            <a href="builders.html" class="btn _secondary _lg">
+                                Все застройщики
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-header _about _bg-img _builder">
+                <div class="container">
+                    <h1 class="_lg page-header__h">ПСК «Дом»</h1>
+                    <div class="page-header__about _builder">
+                        <div class="page-header__about__img">
+                            <img src="img/partners/builder.png"
+                                 srcset="img/partners/builder@2x.png 2x,
+                                 img/partners/builder@3x.png 3x"
+                                 alt="alt text">
+                        </div>
+                        <ul class="page-header__about__feat">
+                            <li class="page-header__about__feat__item">
+                                <span class="page-header__about__feat__lg">52 344 руб.</span>
+                                <span class="page-header__about__feat__sm">средняя цена 
+                                    за кв. м</span>
+                            </li>
+                            <li class="page-header__about__feat__item">
+                                <span class="page-header__about__feat__lg">827</span>
+                                <span class="page-header__about__feat__sm">квартир 
+                                    в продаже</span>
+                            </li>
+                            <li class="page-header__about__feat__item">
+                                <span class="page-header__about__feat__lg">32 562</span>
+                                <span class="page-header__about__feat__sm">кв. м в продаже</span>
+                            </li>
+                            <li class="page-header__about__feat__item">
+                                <span class="page-header__about__feat__lg">14 лет</span>
+                                <span class="page-header__about__feat__sm">опыта</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <section class="section container detail">
+                <div class="detail__row">
+                    <div class="detail__col">
+                        <h3 class="detail__h">Описание</h3>
+                        <div class="detail__content rte">
+                            <p>ПСК «Дом» — один из крупнейших застройщиков 
+                                нашего города. Уже 15 лет компанию рекомендуют 
+                                как надежного застройщика, который выполняет 
+                                свои обязательства качественно и в срок, 
+                                предлагая комфортное жилье по привлекательной цене. 
+                                За время плодотворной и слаженной работы специалистами 
+                                компании построено 13 184 квартир, в которых сегодня 
+                                проживает 39 558 человек.</p>
+                            <p>В рейтинге застройщиков 2014 года ПСК «Дом» 
+                                занимает первое место по вводу квадратных метров 
+                                жилья. Сегодня застройщик продолжает осуществляет 
+                                проектирование и строительство жилых домов с офисными, 
+                                торговыми помещениями и паркингами, а также объектов 
+                                социального назначения.</p>
+                            <p>Преимущества: Комплексная застройка. В продаже 
+                                имеются готовые квартиры. Кирпичное исполнение домов.
+                                Классические планировки с большими кухнями и высокими 
+                                потолками. Застройка в развитых районах города.</p>
+                        </div>
+                    </div>
+                    <div class="detail__col">
+                        @@include('./template/agents/detail.html', {
+                        "title": "Агент этого застройщика"
+                        })
+                    </div>
+                </div>
+            </section>
+            <section class="container section realty">
+                <h3 class="section__h">ЖК этого застройщика</h3>
+                <div class="realty__list slider-small js-slider-small">
+                    @@include('./template/realty/item.html', {
+                    "img": [9, 10, 11, 12],
+                    "total": 3,
+                    "tags": ["Евроремонт", "Хороший вид"],
+                    "title": "ЖК «Квартет», ГП-236, ул. Широтная, 213",
+                    "subtitle": "Студия",
+                    "oldprice": "2 670 000 руб.",
+                    "price": "2 460 000 руб.",
+                    "area": "32",
+                    "hypothec": "15 324"
+                    })
+                    @@include('./template/realty/item.html', {
+                    "img": [10, 11, 12, 9],
+                    "total": 10,
+                    "tags": ["Евроремонт"],
+                    "title": "ЖК «Каскад»: Улица Ленина, д.45",
+                    "subtitle": "Однокомнатная квартира",
+                    "oldprice": "",
+                    "price": "3 123 000 руб.",
+                    "area": "44",
+                    "hypothec": "22 012"
+                    })
+                    @@include('./template/realty/item.html', {
+                    "img": [11, 12, 9, 10],
+                    "total": 3,
+                    "tags": ["Евроремонт", "Рядом садик"],
+                    "title": "ЖК «Мир»: Улица Романа Ноздрина, д. 128",
+                    "subtitle": "Двухкомнатная квартира",
+                    "oldprice": "2 190 000 руб.",
+                    "price": "1 980 000 руб.",
+                    "area": "26",
+                    "hypothec": "13 012"
+                    })
+                    @@include('./template/realty/item.html', {
+                    "img": [12, 9, 10, 11],
+                    "total": 10,
+                    "tags": ["Евроремонт", "Рядом метро"],
+                    "title": "ЖК «Дома»: Улица Полка Нормандии-Неман, д. 28",
+                    "subtitle": "Трехкомнатная квартира",
+                    "oldprice": "",
+                    "price": "4 540 000 руб.",
+                    "area": "57",
+                    "hypothec": "15 324"
+                    })
+                </div>
+                <a href="new-result.html" class="btn _secondary _lg section__button">Сотреть все</a>
+            </section>
+            @@include('./template/callme.html', {
+            "title": "Оставьте ваш номер и мы вам перезвоним",
+            "margin": 1,
+            "class": "_2",
+            "img": "call2",
+            "subscribe": 0
+            })
+            @@include('./template/builders/projects.html')
+            <section class="container section builder-map">
+                <h3 class="section__h">Объекты на карте</h3>
+                <div class="map">
+                    <div id="map" class="map__content"></div>
+                </div>
+            </section>
+            @@include('./template/hypothec/calc.html', {
+            "title": "Ипотечные программы для новостроек"
+            })
+            @@include('./template/seo.html')
+            <div class="hidden">
+                @@include('./template/popups/subscribe.html')
+            </div>
+            @@include('./template/footer.html')
+            @@include('./template/popups-common.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        @@include('./template/foot.html')
+        <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug"></script>
+        <script>
+            var data = [
+                {
+                    geo: [56.314953, 43.999951],
+                    img: 'img/realty/objects/9.jpg',
+                    title: 'ЖК «Квартет», ГП-236, ул. Широтная, 213',
+                    link: 'detail.html',
+                },
+                {
+                    geo: [56.323889, 43.920087],
+                    img: 'img/realty/objects/10.jpg',
+                    title: 'ЖК «Каскад»: Улица Ленина, д.45',
+                    link: 'detail.html',
+                },
+                {
+                    geo: [56.288103, 43.928842],
+                    img: 'img/realty/objects/11.jpg',
+                    title: 'ЖК «Мир»: Улица Романа Ноздрина, д. 128',
+                    link: 'detail.html',
+                },
+                {
+                    geo: [56.308179, 44.032738],
+                    img: 'img/realty/objects/12.jpg',
+                    title: 'ЖК «Дома»: Улица Полка Нормандии-Неман, д. 28',
+                    link: 'detail.html',
+                }
+            ]
+        </script>
+        <script src="js/builder.js"></script>
+    </body>
+</html>

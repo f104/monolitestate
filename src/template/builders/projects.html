@@ -1,0 +1,98 @@
+<section class="container section builder-projects">
+    <h3 class="section__h">Проекты застройщика</h3>
+    <div class="result-list tabs-vert js-tabs js-tabs_disconnected">
+        <div class="result-list__aside">
+            <div class="js-scrollbar-md-lg scrollbar-outer _hor-md _ver-lg _body-bg">
+                <ul class="tabs-vert__list js-tabs__list">
+                    <li><a href="#tab1" class="tabs-vert__list__realty">
+                            <span class="tabs-vert__list__realty__img">
+                                <img src="img/realty/objects/9.jpg"
+                                     alt="alt text">
+                            </span>
+                            <span>ЖК «Квартет», ул. Широтная, 213</span>
+                        </a></li>
+                    <li><a href="#tab2" class="tabs-vert__list__realty">
+                            <span class="tabs-vert__list__realty__img">
+                                <img src="img/realty/objects/10.jpg"
+                                     alt="alt text">
+                            </span>
+                            <span>ЖК «Квартет», ул. Широтная, 213</span>
+                        </a></li>
+                    <li><a href="#tab3" class="tabs-vert__list__realty">
+                            <span class="tabs-vert__list__realty__img">
+                                <img src="img/realty/objects/11.jpg"
+                                     alt="alt text">
+                            </span>
+                            <span>ЖК «Квартет», ул. имени 346 Гвардейской 
+                                Краснознаменной дивизии, 213</span>
+                        </a></li>
+                    <li><a href="#tab4" class="tabs-vert__list__realty">
+                            <span class="tabs-vert__list__realty__img">
+                                <img src="img/realty/objects/12.jpg"
+                                     alt="alt text">
+                            </span>
+                            <span>ЖК «Квартет», ул. Широтная, 213</span>
+                        </a></li>
+                    <li><a href="#tab5" class="tabs-vert__list__realty">
+                            <span class="tabs-vert__list__realty__img">
+                                <img src="img/realty/objects/9.jpg"
+                                     alt="alt text">
+                            </span>
+                            <span>ЖК «Квартет», ул. Широтная, 213</span>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="tabs__select">
+                <select class="js-tabs__select js-select2" style="width:100%">
+                    <option value="#tab1">ЖК «Квартет»</option>
+                    <option value="#tab2">ЖК «Квартет»</option>
+                    <option value="#tab3">ЖК «Квартет»</option>
+                    <option value="#tab4">ЖК «Квартет»</option>
+                    <option value="#tab5">ЖК «Квартет»</option>
+                </select>
+            </div>
+        </div>
+        <div class="result-list__content js-tabs__content">
+            @@include('../result/list-new-item.html', {
+            "img": [9, 10, 11, 12],
+            "title": "ЖК «Квартет», ГП-236, ул. Широтная, 213",
+            "tags": ["Рядом метро"],
+            "compare": 0,
+            "fav": 0,
+            "id": "tab1"
+            })
+            @@include('../result/list-new-item.html', {
+            "img": [10, 11, 12, 9],
+            "title": "ЖК «Квартет», ГП-236, ул. Широтная, 213",
+            "tags": [],
+            "compare": -1,
+            "fav": 0,
+            "id": "tab2"
+            })
+            @@include('../result/list-new-item.html', {
+            "img": [11, 12, 9, 10],
+            "title": "ЖК «Квартет», ГП-236, ул. имени 346 Гвардейской Краснознаменной дивизии, 213",
+            "tags": ["Рядом метро"],
+            "compare": 1,
+            "fav": 1,
+            "id": "tab3"
+            })
+            @@include('../result/list-new-item.html', {
+            "img": [12, 9, 10, 11],
+            "title": "ЖК «Квартет», ГП-236, ул. Широтная, 213",
+            "tags": ["Рядом метро"],
+            "compare": 0,
+            "fav": 0,
+            "id": "tab4"
+            })
+            @@include('../result/list-new-item.html', {
+            "img": [9, 10, 11, 12],
+            "title": "ЖК «Квартет», ГП-236, ул. Широтная, 213",
+            "tags": ["Рядом метро"],
+            "compare": 0,
+            "fav": 0,
+            "id": "tab5"
+            })
+        </div>
+    </div>
+</section>

@@ -157,5 +157,35 @@
         .map__balloon__content {
             flex: 1;
         }
+        &._object {
+            display: flex;
+            padding: 0;
+            width: 250px;
+            .map__balloon__logo {
+                width: 105px;
+                margin-right: 0;
+                position: relative;
+                overflow: hidden;
+                img {
+                    position: absolute;
+                    min-width: 100%;
+                    height: 100%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    max-width: unset;
+                }
+            }
+            .map__balloon__content {
+                padding: 15px;
+            }
+            .map__balloon__title {
+                font-size: 14px;
+                opacity: .5;
+            }
+            .map__balloon__link {
+                font-size: 14px;
+            }
+        }
     }
 }

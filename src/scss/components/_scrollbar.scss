@@ -1,85 +1,108 @@
-.scrollbar-outer {
-    &._ver {
-        > .scroll-element.scroll-y {
-            background: $white;
+@mixin scrollbar-ver {
+    > .scroll-element.scroll-y {
+        background: $white;
+        .scroll-element_outer {
+            width: 6px;
+            border-radius: 3px;
+            background: #e7e7e7;
+            right: 0;
+            left: auto;
             .scroll-element_outer {
                 width: 6px;
-                border-radius: 3px;
-                background: #e7e7e7;
-                right: 0;
+                right: 0px;
                 left: auto;
-                .scroll-element_outer {
-                    width: 6px;
-                    right: 0px;
-                    left: auto;
-                }
-                .scroll-bar {
-                    width: 6px;
-                    border-radius: 3px;
-                    background: #4264cf;
-                    cursor: pointer;
-                }
+            }
+            .scroll-bar {
+                width: 6px;
+                border-radius: 3px;
+                background: #4264cf;
+                cursor: pointer;
             }
         }
     }
-    &._hor {
-        &.scroll-wrapper {
-            margin-left: - $container-padding-sm;
-            margin-right: - $container-padding-sm;
+}
+
+@mixin scrollbar-hor {
+    &.scroll-wrapper {
+        margin-left: - $container-padding-sm;
+        margin-right: - $container-padding-sm;
+        @include media-breakpoint-up(md) {
+            margin-left: - $container-padding-md;
+            margin-right: - $container-padding-md;                
+        }
+        @include media-breakpoint-up(lg) {
+            margin-left: 0;
+            margin-right: 0;                
+        }
+    }
+    .scroll-content {
+        padding-left: $container-padding-sm;
+        padding-right: $container-padding-sm;
+        @include media-breakpoint-up(md) {
+            padding-left: $container-padding-md;
+            padding-right: $container-padding-md;                
+        }
+        @include media-breakpoint-up(lg) {
+            padding-left: 0;
+            padding-right: 0;                
+        }
+    }
+    .scroll-x {
+        .scroll-element_outer {
+            width: auto;
+            left: $container-padding-sm;
+            right: $container-padding-sm;
             @include media-breakpoint-up(md) {
-                margin-left: - $container-padding-md;
-                margin-right: - $container-padding-md;                
+                left: $container-padding-md;
+                right: $container-padding-md;                
             }
             @include media-breakpoint-up(lg) {
-                margin-left: 0;
-                margin-right: 0;                
+                left: 0;
+                right: 0;                
             }
         }
-        .scroll-content {
-            padding-left: $container-padding-sm;
-            padding-right: $container-padding-sm;
-            @include media-breakpoint-up(md) {
-                padding-left: $container-padding-md;
-                padding-right: $container-padding-md;                
-            }
-            @include media-breakpoint-up(lg) {
-                padding-left: 0;
-                padding-right: 0;                
-            }
-        }
-        .scroll-x {
+    }
+    > .scroll-element.scroll-x {
+        background: $body-bg;
+        .scroll-element_outer {
+            top: 4;
+            height: 5px;
+            border-radius: 3px;
+            background: #e7e7e7;
             .scroll-element_outer {
-                width: auto;
-                left: $container-padding-sm;
-                right: $container-padding-sm;
-                @include media-breakpoint-up(md) {
-                    left: $container-padding-md;
-                    right: $container-padding-md;                
-                }
-                @include media-breakpoint-up(lg) {
-                    left: 0;
-                    right: 0;                
-                }
+                height: 5px;
+                top: 0px;
             }
-        }
-        > .scroll-element.scroll-x {
-            background: $body-bg;
-            .scroll-element_outer {
-                top: 4;
+            .scroll-bar {
                 height: 5px;
                 border-radius: 3px;
-                background: #e7e7e7;
-                .scroll-element_outer {
-                    height: 5px;
-                    top: 0px;
-                }
-                .scroll-bar {
-                    height: 5px;
-                    border-radius: 3px;
-                    background: #4264cf;
-                    cursor: pointer;
-                }
+                background: #4264cf;
+                cursor: pointer;
             }
+        }
+    }
+}
+
+.scrollbar-outer {
+    &._ver {
+        @include scrollbar-ver;
+    }
+    &._ver-lg {
+        @include media-breakpoint-up(lg) {
+            @include scrollbar-ver;
+        }
+    }
+    &._body-bg {
+        > .scroll-element.scroll-y {
+            background: $body-bg;
+        }
+    }
+    &._hor {
+        @include scrollbar-hor;
+    }
+    &._hor-md {
+        @include media-breakpoint-only(md) {
+            @include scrollbar-hor;
         }
     }
 }

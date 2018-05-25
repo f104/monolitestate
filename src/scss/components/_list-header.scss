@@ -51,7 +51,7 @@
             flex-direction: row-reverse;
             align-items: center;
             .pagination {
-                margin-left: 25px;
+                margin-left: 25px !important;
             }
         }
         .list-header__pagination__total {

@@ -133,6 +133,9 @@
             }
         }
     }
+    .slider-small.slick-slider {
+        margin-bottom: 68px;
+    }
 }
 
 @include media-breakpoint-up(md) {

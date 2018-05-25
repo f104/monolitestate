@@ -1,7 +1,9 @@
 .detail {
-    margin-top: -30px;
-    @include media-breakpoint-up(md) {
-        margin-top: 0;
+    &._realty {
+        margin-top: -30px;
+        @include media-breakpoint-up(md) {
+            margin-top: 0;
+        }
     }
     .detail__gallery {
         position: relative;
