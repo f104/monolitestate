@@ -874,7 +874,7 @@ jQuery(function () {
         $('.js-gallery-nav').slick({
             dots: false,
             arrows: true,
-            infinite: true,
+            infinite: false,
             slidesToShow: 6,
             slidesToScroll: 1,
             focusOnSelect: true,
@@ -909,7 +909,15 @@ jQuery(function () {
             $slider.on('afterChange', function (event, slick, currentSlide) {
                 $current.text(++currentSlide);
             });
-            $(el).find('.js-gallery__total').text($slider.find('.slide').length);
+            var $links = $slider.find('.slide:not(.slick-cloned)');
+            $(el).find('.js-gallery__total').text($links.length);
+            $links.on('click', function() {
+                $.fancybox.open( $links, {
+                    loop: true
+                }, $links.index( this ) );
+
+                return false;
+            });
         });
     }
 
