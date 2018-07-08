@@ -6,10 +6,12 @@ jQuery(function () {
     });
 
     function initMap() {
-        if (typeof data == 'undefined')
+        if (typeof app.builderMapData == 'undefined' || app.builderMapData.length === 0) {
+            $('.builder-map').remove();
             return;
+        }
 
-        var map, placemarks = [];
+        var map;
 
         map = new ymaps.Map("map", {
             center: [56.326887, 44.005986],
@@ -26,50 +28,58 @@ jQuery(function () {
                         <span class="map__balloon__logo"><img src="{{ properties.img }}"></span>\n\
                         <span class="map__balloon__content">\n\
                             <span class="map__balloon__title">{{ properties.title }}</span>\n\
-                            <a href="{{ properties.link }}" class="map__balloon__link">Подробнее</a>\n\
+                            <a href="/{{ properties.link }}" class="map__balloon__link">Подробнее</a>\n\
                         </span>\n\
                     </div>');
-
-        for (var i = 0, len = data.length; i < len; i++) {
-            var placemark = new ymaps.Placemark(data[i].geo,
-                    {
-                        idx: i,
-                        className: '_dot',
-                        img: data[i].img,
-                        title: data[i].title,
-                    },
-                    {
-                        iconLayout: tpl,
-                        iconShape: {
-                            type: 'Rectangle',
-                            coordinates: [
-                                [-15.5, -42], [15.5, 0]
-                            ]
+        
+        for (var j = 0, len1 = app.builderMapData.length; j < len1; j++) {
+            for (var i = 0, len = app.builderMapData[j].placemarks.length; i < len; i++) {
+                var placemark = new ymaps.Placemark(app.builderMapData[j].placemarks[i].coords,
+                        {
+                            className: '_dot _primary',
+                            img: app.builderMapData[j].img,
+                            title: app.builderMapData[j].title,
+                            link: app.builderMapData[j].link,
                         },
-                        hideIconOnBalloonOpen: false,
-                        balloonLayout: tplBalloon,
-                        balloonCloseButton: false
+                        {
+                            iconLayout: tpl,
+                            iconShape: {
+                                type: 'Rectangle',
+                                coordinates: [
+                                    [-15.5, -42], [15.5, 0]
+                                ]
+                            },
+                            hideIconOnBalloonOpen: false,
+                            balloonLayout: tplBalloon,
+                            balloonCloseButton: false
+                        });
+                map.geoObjects.add(placemark);
+                placemark.events.add('click', function (e) {
+                    map.geoObjects.each(function (pl, i){
+                        pl.properties.set('className', '_dot _primary');
                     });
-            map.geoObjects.add(placemark);
-            placemark.events.add('click', function (e) {
-                var index = e.get('target').properties.get('idx');
-                openBalloon(index);
-            });
+                    var pl = e.get('target');
+                    pl.properties.set('className', '_dot');
+                });
+            }
         }
-        map.setBounds(map.geoObjects.getBounds());
-        openBalloon(1);
-        map.geoObjects.get(1).balloon.open();
+        map.setBounds(map.geoObjects.getBounds(), {
+            checkZoomRange: true,
+            zoomMargin: 50,
+        }).then(function () {
+            if (map.geoObjects.getLength() == 1) {
+                map.setZoom(13);
+            }
+         }, this);
 
-        function openBalloon(index) {
-            for (var i = 0, len = data.length; i < len; i++) {
-                var tmp = map.geoObjects.get(i);
-                tmp.properties.set('className', '_dot');
-            }
-            var pl = map.geoObjects.get(index);
-            if (pl && !pl.balloon.isOpen()) {
-                pl.properties.set('className', '_dot _primary');
-            }
-        }
+        $('.js-map__zoom').on('click', function () {
+            var z = map.getZoom();
+            $(this).hasClass('_in') ? z++ : z--;
+            map.setZoom(z, {
+                checkZoomRange: true,
+                duration: 200
+            });
+        });
 
     }
 

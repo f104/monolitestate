@@ -48,11 +48,11 @@
             <section class="section container detail _realty">
                 <div class="detail__row">
                     <div class="detail__col detail__gallery">
-                        
+
                         @@include('./template/gallery.html')
                     </div>
                     <div class="detail__col detail__info">
-                        <div class="detail__info__cart">
+                        <div class="detail__info__cart _hypothec">
                             <div class="card-sale _big">
                                 <span class="card-sale__icon">
                                     <i class="icon-down-small"></i>
@@ -61,46 +61,48 @@
                                     Произошло снижение цены
                                 </span>
                             </div>
-                            <div class="detail__info__cart__price">
-                                <del>2 670 000 руб.</del> <i class="icon-down-small"></i>
-                                <span class="detail__info__cart__price__cost">
-                                    2 321 414 руб.
-                                </span>
-                                <span class="detail__info__cart__help">
-                                    стоимость
-                                </span>
+                            <div class="detail__info__cart__inner _hypothec">
+                                <div class="detail__info__cart__price">
+                                    <del>2 670 000 руб.</del> <i class="icon-down-small"></i>
+                                    <span class="detail__info__cart__price__cost">
+                                        2 321 414 руб.
+                                    </span>
+                                    <span class="detail__info__cart__help">
+                                        стоимость
+                                    </span>
+                                </div>
+                                <div class="detail__info__cart__hypothec">
+                                    <p>
+                                        <span class="detail__info__cart__hypothec__accent">
+                                            21 413 руб./мес.
+                                        </span>
+                                        <span class="detail__info__cart__hypothec__muted">
+                                            в ипотеку
+                                        </span>
+                                    </p>
+                                    <p>Выгода с Монолит Истейт до <strong>181 440 руб.</strong></p>
+                                </div>
+                                <ul class="detail__info__cart__options">
+                                    <li>
+                                        32 м²
+                                        <span class="detail__info__cart__help">
+                                            площадь
+                                        </span>
+                                    </li>
+                                    <li>
+                                        73 414 руб.
+                                        <span class="detail__info__cart__help">
+                                            цена за м²
+                                        </span>
+                                    </li>
+                                    <li>
+                                        5 этаж
+                                        <span class="detail__info__cart__help">
+                                            из 14
+                                        </span>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="detail__info__cart__hypothec">
-                                <p>
-                                    <span class="detail__info__cart__hypothec__accent">
-                                        21 413 руб./мес.
-                                    </span>
-                                    <span class="detail__info__cart__hypothec__muted">
-                                        в ипотеку
-                                    </span>
-                                </p>
-                                <p>Выгода с Монолит Истейт до <strong>181 440 руб.</strong></p>
-                            </div>
-                            <ul class="detail__info__cart__options">
-                                <li>
-                                    32 м²
-                                    <span class="detail__info__cart__help">
-                                        площадь
-                                    </span>
-                                </li>
-                                <li>
-                                    73 414 руб.
-                                    <span class="detail__info__cart__help">
-                                        цена за м²
-                                    </span>
-                                </li>
-                                <li>
-                                    5 этаж
-                                    <span class="detail__info__cart__help">
-                                        из 14
-                                    </span>
-                                </li>
-                            </ul>
                             <a href="#visit" 
                                class="btn _lg _secondary detail__info__btn js-popup">
                                 Записаться на просмотр
@@ -194,7 +196,7 @@
             "subscribe": 0
             })
             <div class="hidden">
-            @@include('./template/popups/visit.html')
+                @@include('./template/popups/visit.html')
             </div>
             @@include('./template/footer.html')
             @@include('./template/popups-common.html')

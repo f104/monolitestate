@@ -43,44 +43,50 @@
             &:last-of-type {
                 margin-bottom: 0;
             }
-            a {
-                display: inline-flex;
-                align-items: center;
-                color: $white;
-                @include transition(opacity);
-                font-size: 16px;
-                @include media-breakpoint-up(md) {
-                    font-size: 18px;
-                }
-                &:after {
-                    content: none;
-                }
-                &:hover {
-                    opacity: .8;
-                }
-                .sprite {
-                    margin-right: 20px;
-                    @include media-breakpoint-only(sm) {
-                        width: 40px;
-                        &:before {
-                            transform: scale(.8);
-                            transform-origin: left;
-                        }
+        }
+        .seller__feat__item {
+            display: inline-flex;
+            align-items: center;
+            color: $white;
+            @include transition(opacity);
+            font-size: 16px;
+            @include media-breakpoint-up(md) {
+                font-size: 18px;
+            }
+            &:after {
+                content: none;
+            }
+            .sprite {
+                margin-right: 20px;
+                @include media-breakpoint-only(sm) {
+                    width: 40px;
+                    &:before {
+                        transform: scale(.8);
+                        transform-origin: left;
                     }
                 }
+            }
+            span {
                 span {
-                    span {
-                        white-space: nowrap;
-                        position: relative;
-                        &:after {
-                            content: '';
-                            position: absolute;
-                            left: 0;
-                            bottom: -2px;
-                            width: 100%;
-                            height: 1px;
-                            background: url(img/link-inverse.png) repeat-x;
-                        }
+                    white-space: nowrap;
+                    position: relative;
+                }
+            }
+        }
+        a.seller__feat__item {
+            &:hover {
+                opacity: .8;
+            }
+            span {
+                span {
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: -2px;
+                        width: 100%;
+                        height: 1px;
+                        background: url(img/link-inverse.png) repeat-x;
                     }
                 }
             }

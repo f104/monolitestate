@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg863"
+   sodipodi:docname="map-close.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata867">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="996"
+     id="namedview865"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:snap-global="false"
+     inkscape:zoom="13.15873"
+     inkscape:cx="12.04056"
+     inkscape:cy="11.674501"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg863" />
+  <defs
+     id="defs855">
+    <filter
+       id="a"
+       width="1.1930001"
+       height="1.1930001"
+       x="-0.096000001"
+       y="-0.061000001"
+       filterUnits="objectBoundingBox">
+      <feOffset
+         dy="2"
+         in="SourceAlpha"
+         result="shadowOffsetOuter1"
+         id="feOffset842" />
+      <feGaussianBlur
+         in="shadowOffsetOuter1"
+         result="shadowBlurOuter1"
+         stdDeviation="1.5"
+         id="feGaussianBlur844" />
+      <feColorMatrix
+         in="shadowBlurOuter1"
+         result="shadowMatrixOuter1"
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
+         id="feColorMatrix846" />
+      <feMerge
+         id="feMerge852">
+        <feMergeNode
+           in="shadowMatrixOuter1"
+           id="feMergeNode848" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode850" />
+      </feMerge>
+    </filter>
+  </defs>
+  <path
+     style="display:inline;fill:#6b6b6b;fill-rule:evenodd;stroke-width:1.09956598;fill-opacity:1"
+     inkscape:connector-curvature="0"
+     id="path859"
+     d="M 15.930804,1.142191 9.1502994,7.923025 16,14.773059 14.773118,16 7.9234175,9.149967 1.1584626,15.91525 0.05442437,14.811158 6.8186021,8.046652 0,1.227719 1.2276595,0 8.0462612,6.818934 14.826765,0.038099 Z"
+     inkscape:label="path859" />
+</svg>

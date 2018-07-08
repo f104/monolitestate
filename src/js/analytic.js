@@ -126,7 +126,8 @@ jQuery(function () {
                     display: false
                 },
                 tooltips: {
-                    position: 'nearest',
+                    intersect: false,
+                    position: 'average',
                     mode: 'index',
                 }
             }

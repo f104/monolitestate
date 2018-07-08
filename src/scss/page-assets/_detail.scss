@@ -51,10 +51,6 @@
                 margin-bottom: 13px;
                 @include media-breakpoint-up(md) {
                     margin-bottom: 19px;
-                    padding-left: 160px;
-                }
-                @include media-breakpoint-up(md) {
-                    padding-left: 130px;
                 }
                 del {
                     font-size: 15px;
@@ -136,16 +132,10 @@
             }
             .detail__info__cart__options {
                 @include list-unstyled;
-                margin-bottom: 16px;
-                @include media-breakpoint-up(md) {
-                    margin-bottom: 28px;
-                    padding-left: 160px;
-                }
-                @include media-breakpoint-up(md) {
-                    padding-left: 130px;
-                }
+                margin-bottom: 0;
                 li {
                     display: inline-block;
+                    vertical-align: top;
                     margin-right: 15px;
                     font-size: 18px;
                     font-weight: 500;
@@ -170,6 +160,21 @@
             .detail__info__btn {
                 @include media-breakpoint-up(lg) {
                     width: 247px;
+                }
+            }
+            .detail__info__cart__inner {
+                margin-bottom: 16px;
+                @include media-breakpoint-up(md) {
+                    margin-bottom: 28px;
+                }
+                &._hypothec {
+                    @include media-breakpoint-up(md) {
+                        padding-left: 160px;
+                        min-height: 118px;
+                    }
+                    @include media-breakpoint-up(md) {
+                        padding-left: 130px;
+                    }
                 }
             }
         }

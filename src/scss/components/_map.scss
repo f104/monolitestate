@@ -29,6 +29,21 @@
             border-radius: 50%;
         }
     }
+    &._total {
+        span {
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: $primary;
+        }
+        &._primary {
+            span {
+                background-color: transparent;
+                color: $white;
+            }
+        }
+    }
     &._primary {
         svg path {
             fill: $primary;

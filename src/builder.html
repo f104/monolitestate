@@ -97,9 +97,9 @@
                     </div>
                 </div>
             </section>
-            <section class="container section realty">
+            <section class="container section realty js-hide-empty">
                 <h3 class="section__h">ЖК этого застройщика</h3>
-                <div class="realty__list slider-small js-slider-small">
+                <div class="realty__list slider-small js-slider-small js-hide-empty__cnt">
                     @@include('./template/realty/item.html', {
                     "img": [9, 10, 11, 12],
                     "total": 3,
@@ -145,7 +145,7 @@
                     "hypothec": "15 324"
                     })
                 </div>
-                <a href="new-result.html" class="btn _secondary _lg section__button">Сотреть все</a>
+                <a href="new-result.html" class="btn _secondary _lg section__button">Смотреть все</a>
             </section>
             @@include('./template/callme.html', {
             "title": "Оставьте ваш номер и мы вам перезвоним",
@@ -159,6 +159,12 @@
                 <h3 class="section__h">Объекты на карте</h3>
                 <div class="map">
                     <div id="map" class="map__content"></div>
+                    <div class="container map__controls">
+                        <ul class="map__controls__zoom">
+                            <li><i class="sprite map-plus map__control js-map__zoom _in"></i></li>
+                            <li><i class="sprite map-minus map__control js-map__zoom _out"></i></li>
+                        </ul>
+                    </div>
                 </div>
             </section>
             @@include('./template/hypothec/calc.html', {
@@ -175,32 +181,10 @@
         @@include('./template/foot.html')
         <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug"></script>
         <script>
-            var data = [
-                {
-                    geo: [56.314953, 43.999951],
-                    img: 'img/realty/objects/9.jpg',
-                    title: 'ЖК «Квартет», ГП-236, ул. Широтная, 213',
-                    link: 'detail.html',
-                },
-                {
-                    geo: [56.323889, 43.920087],
-                    img: 'img/realty/objects/10.jpg',
-                    title: 'ЖК «Каскад»: Улица Ленина, д.45',
-                    link: 'detail.html',
-                },
-                {
-                    geo: [56.288103, 43.928842],
-                    img: 'img/realty/objects/11.jpg',
-                    title: 'ЖК «Мир»: Улица Романа Ноздрина, д. 128',
-                    link: 'detail.html',
-                },
-                {
-                    geo: [56.308179, 44.032738],
-                    img: 'img/realty/objects/12.jpg',
-                    title: 'ЖК «Дома»: Улица Полка Нормандии-Неман, д. 28',
-                    link: 'detail.html',
-                }
-            ]
+//            app.builderMapData = JSON.parse('[{"placemarks":[{"coords":[56.29946857633490964190059457905590534210205078125,43.94109799951144879059938830323517322540283203125],"params":{"color":"blue","iconContent":"","balloonContentBody":"\u0414\u043e\u043c \u21161","balloonContentHeader":""}}],"title":"\u0416\u041a \u00ab\u041a\u043b\u0435\u0432\u0435\u0440\u00bb: \u041d\u0438\u0436\u0435\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0438\u0439, \u0410\u0440\u0442\u0435\u043b\u044c\u043d\u0430\u044f","link":"new-detail.html","img":"img\/realty\/objects\/9.jpg"},{"placemarks":[{"coords":[56.29579379291204332957931910641491413116455078125,43.916979576048760236517409794032573699951171875],"params":{"color":"blue","iconContent":"","balloonContentBody":"\u0414\u043e\u043c \u21161","balloonContentHeader":""}},{"coords":[56.2961055689318499162254738621413707733154296875,43.920555234146860357213881798088550567626953125],"params":{"color":"blue","iconContent":"","balloonContentBody":"","balloonContentHeader":""}}],"title":"\u0422\u0435\u0441\u0442\u043e\u0432\u044b\u0439 \u0416\u041a: \u041d\u0438\u0436\u0435\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0438\u0439, \u0410\u0440\u0442\u0435\u043b\u044c\u043d\u0430\u044f","link":"new-detail.html","img":"img\/realty\/objects\/10.jpg"}]');
+        </script>
+        <script>
+            app.builderMapData = JSON.parse('[{"placemarks":[{"coords":[56.29946857633490964190059457905590534210205078125,43.94109799951144879059938830323517322540283203125],"params":{"color":"blue","iconContent":"","balloonContentBody":"\u0414\u043e\u043c \u21161","balloonContentHeader":""}}],"title":"\u0416\u041a \u00ab\u041a\u043b\u0435\u0432\u0435\u0440\u00bb: \u041d\u0438\u0436\u0435\u0433\u043e\u0440\u043e\u0434\u0441\u043a\u0438\u0439, \u0410\u0440\u0442\u0435\u043b\u044c\u043d\u0430\u044f","link":"novostrojki\/zhk-klever.html","img":"\/assets\/images\/products\/14957\/grid\/s1.jpg"}]');
         </script>
         <script src="js/builder.js"></script>
     </body>

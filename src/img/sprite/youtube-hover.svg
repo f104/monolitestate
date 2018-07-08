@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="52"
+   height="52"
+   viewBox="0 0 52 52"
+   version="1.1"
+   id="svg1476"
+   sodipodi:docname="youtube-hover.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata1482">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1480" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="996"
+     id="namedview1478"
+     showgrid="false"
+     inkscape:zoom="4.5384615"
+     inkscape:cx="-1.4322034"
+     inkscape:cy="26"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1476" />
+  <circle
+     style="opacity:1;fill:#3863c5;fill-rule:evenodd;stroke:#3863c5;fill-opacity:1"
+     id="circle1470"
+     r="25"
+     cy="26"
+     cx="26" />
+  <path
+     style="opacity:1;fill:#ffffff;fill-rule:nonzero;fill-opacity:1"
+     inkscape:connector-curvature="0"
+     id="path1472"
+     d="M 33.938,17 H 18.062 C 15.818,17 14,18.86 14,21.156 v 8.688 C 14,32.14 15.818,34 18.062,34 H 33.938 C 36.182,34 38,32.14 38,29.844 V 21.156 C 38,18.86 36.182,17 33.938,17 Z m -6.923,10.389 -3.6,1.889 v -7.556 l 3.6,1.89 3.6,1.888 z" />
+</svg>

@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 7.7em 229.8em;
+    background-size: 7.7em 240.2em;
 }
 
 .no-svg .sprite:before {
@@ -505,6 +505,24 @@
 
   .sprite.vk-hover:before {
       background-position: 0em -224.6em;
+      width: 5.2em;
+      height: 5.2em;
+  }
+
+
+
+
+  .sprite.youtube:before {
+      background-position: 0em -229.8em;
+      width: 5.2em;
+      height: 5.2em;
+  }
+
+
+
+
+  .sprite.youtube-hover:before {
+      background-position: 0em -235em;
       width: 5.2em;
       height: 5.2em;
   }

@@ -1,0 +1,120 @@
+<html lang="ru" dir="ltr">
+    <head>
+    <title>Вторичное жилье</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link href="fonts/Lato/lato.css" rel="stylesheet" type="text/css">
+    <link href="fonts/fontello/css/fontello.css" rel="stylesheet" type="text/css">
+    <link href="css/libs/slick.css" rel="stylesheet" type="text/css">
+    <link href="css/libs/jquery.scrollbar.css" rel="stylesheet" type="text/css">
+    <link href="css/libs/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+    <link href="css/libs/nouislider.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/libs/datepicker/datepicker.css" rel="stylesheet" type="text/css"/>
+    <link href="css/libs/datepicker/cell.css" rel="stylesheet" type="text/css"/>
+    <link href="css/libs/datepicker/navigation.css" rel="stylesheet" type="text/css"/>
+    <link href="css/libs/datepicker/timepicker.css" rel="stylesheet" type="text/css"/>
+    <link href="css/common.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+        <div class="content">
+            <div class="map result-map">
+    <div class="result-map__hover">
+        <i class="icon-map"></i><span>Поиск на карте</span>
+    </div>
+    <div id="result_map" class="result-map__map"></div>
+    <div class="container map__controls">
+        <ul class="map__controls__zoom">
+            <li><i class="sprite map-plus map__control js-map__zoom _in"></i></li>
+            <li><i class="sprite map-minus map__control js-map__zoom _out"></i></li>
+        </ul>
+    </div>
+</div>
+        </div>
+        <div class="dev">
+    <span id="dev_toggler" class="dev__toggler">&lt;/&gt;</span>
+    <ul>
+        <li><a href="index.html">main</a></li>
+        <li><a href="second.html">second</a></li>
+        <li><a href="rent.html">rent</a></li>
+        <li><a href="commercial.html">commercial</a></li>
+        <li><a href="onmap.html">on map</a></li>
+        <li><a href="result.html">result</a></li>
+        <li><a href="result-map.html">result-map</a></li>
+        <li><a href="detail.html">detail</a></li>
+        <li><a href="new.html">new</a></li>
+        <li><a href="new-result.html">new-result</a></li>
+        <li><a href="new-detail.html">new-detail</a></li>
+        <li><a href="content.html">content</a></li>
+        <li><a href="builders.html">builders</a></li>
+        <li><a href="builder.html">builder</a></li>
+        <li><a href="news.html">news</a></li>
+        <li><a href="news-detail.html">news-detail</a></li>
+        <li><a href="agents.html">agents</a></li>
+        <li><a href="agent.html">agent</a></li>
+        <li><a href="work.html">work</a></li>
+        <li><a href="for-seller.html">for seller</a></li>
+        <li><a href="hypothec.html">hypothec</a></li>
+        <li><a href="analytic1.html">analytic1</a></li>
+        <li><a href="analytic2.html">analytic2</a></li>
+        <li><a href="analytic-tabs.html">analytic-tabs</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="contacts.html">contacts</a></li>
+        <li><a href="infrastructure.html">infrastructure</a></li>
+        <li><a href="404.html">404</a></li>
+    </ul>
+</div>
+<script>
+    (function () {
+        var t = document.getElementById('dev_toggler');
+        var p = t.parentElement;
+        t.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.parentElement.classList.toggle('_active');
+        });
+        p.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+        window.addEventListener('click', function () {
+            p.classList.remove('_active');
+        });
+    }());
+</script>
+<script>
+    var appConfig = {
+        breakpoint: {
+            sm: 320,
+            md: 768,
+            lg: 1280
+        },
+        sliderFadeSpeed: 800,
+        sliderAutoplaySpeed: 8000
+    };
+</script>
+
+<script src="js/libs/jquery.min.js"></script>
+<script src="js/libs/slick.min.js"></script>
+<script src="js/libs/jquery.scrollbar.min.js"></script>
+<script src="js/libs/jquery.fancybox.min.js"></script>
+<script src="js/libs/jquery.inputmask.bundle.min.js"></script>
+<script src="js/libs/jquery.easytabs.min.js"></script>
+<script src="js/libs/jquery.validate.min.js"></script>
+<script src="js/libs/select2.min.js"></script>
+<script src="js/libs/nouislider.min.js"></script>
+<script src="js/libs/datepicker.min.js"></script>
+<script src="js/common.js"></script>
+        <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug"></script>
+        <script>
+            var appResultMapConfig = {
+                urlPlaces: 'https://api.myjson.com/bins/ygsli',
+                urlItems: 'onmap-list.html',
+                params: {
+                    action: 'map',
+                    parent: 1984
+                }
+            };
+        </script>
+        <script src="js/result.js"></script>
+    </body>
+</html>

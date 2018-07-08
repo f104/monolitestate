@@ -1,3 +1,337 @@
+$(document).ready(function () {
+    app.initialize();
+});
+
+var app = {
+    initialized: false,
+
+    initialize: function () {
+        $('.js-hide-empty').each(function () {
+            if (!$(this).find('.js-hide-empty__cnt > *').length) {
+                $(this).remove();
+            }
+        });
+        this.initPseudoSelect();
+        this.initPseudoSelectSearch();
+        this.initTabs();
+        this.initChess();
+        this.initChessFilter();
+        this.initialized = true;
+    },
+
+    initPseudoSelect: function () {
+        // custom select
+        $('.js-select').on('click', function (e) {
+            e.stopPropagation();
+        });
+        $('.js-select__toggler').on('click', function () {
+            $('.js-select').removeClass('_active');
+            $(this).parents('.js-select').addClass('_active').toggleClass('_opened');
+            $('.js-select').not('._active').removeClass('_opened');
+        });
+        $(window).on('click', function () {
+            $('.js-select').removeClass('_opened _active');
+        });
+    },
+
+    initPseudoSelectSearch: function () {
+        // custom select search
+        $('.js-select-search').each(function (index, element) {
+            var $items = $(element).find('.js-select-search__item');
+            $(element).find('.js-select-search__input')
+                    .on('keyup', function () {
+                        var query = $(this).val().trim().toLowerCase();
+//                console.log(query);
+                        if (query.length) {
+                            $items.each(function () {
+                                $(this).data('select-search').toLowerCase().indexOf(query) === 0 ? $(this).show() : $(this).hide();
+                            });
+                        } else {
+                            $items.show();
+                        }
+                    })
+                    .on('change', function () {
+                        // need for mFilter2
+                        return false;
+                    });
+        });
+    },
+
+    initTabs: function () {
+        $('.js-tabs').each(function (index, elem) {
+            var tabsSelector = typeof $(elem).data('tabs') === 'undefined' ? '.js-tabs__list > li' : $(elem).data('tabs');
+            var $select = $(elem).find('.js-tabs__select'), withSelect = $select.length;
+            $(elem).easytabs({
+                // для вложенных табов используем data
+                tabs: tabsSelector,
+                panelContext: $(elem).hasClass('js-tabs_disconnected') ? $('.js-tabs__content') : $(elem)
+            });
+            if (withSelect) {
+                $(tabsSelector).find('a').each(function () {
+                    var value = $(this).attr('href'),
+                        text = $(this).data('select') || $(this).text();
+                    $select.append('<option value="'+value+'">'+text+'</option>');
+                });
+                $select.on('change', function () {
+                    $(elem).easytabs('select', $(this).val());
+                });
+            }
+            $(elem).bind('easytabs:after', function (event, $clicked, $target) {
+                if (withSelect) {
+                    $select.val($clicked.attr('href')).change();
+                }
+                $target.find('.slick-initialized').slick('setPosition');
+                $target.find('.js-select2').select2();
+            });
+        });
+    },
+
+    initChess: function () {
+        if ($(window).outerWidth() >= appConfig.breakpoint.lg) {
+            $('.js-chess-tooltip__content').parent().hover(app.showChessTooltip, app.hideChessTooltip);
+        }
+        var $target = {
+            title: $('.js-chess-info__title'),
+            area: $('.js-chess-info__area'),
+            price: $('.js-chess-info__price'),
+            pricePerSquare: $('.js-chess-info__pricePerSquare'),
+            floor: $('.js-chess-info__floor'),
+            floorsTotal: $('.js-chess-info__floorsTotal'),
+        },
+                $hypothec = $('.js-chess-info__hypothec'),
+                $hypothecWrapper = $('.js-chess-info__hypothec-wrapper'),
+                $imgFlat = $('.js-chess-info__imgFlat'),
+                $imgFloor = $('.js-chess-info__imgFloor'),
+                $tabs = $('.js-chess-info__tabs'),
+                $tabFloor = $('.js-chess-info__tabFloor'),
+                $tabFlat = $('.js-chess-info__tabFlat'),
+                $form = $('.js-chess-info__form'),
+                init = false;
+        $('.js-chess-info__item._active').on('click', function () {
+            var $this = $(this);
+            if ($this.hasClass('_selected'))
+                return;
+            $('.js-chess-info__item').removeClass('_selected');
+            $this.addClass('_selected');
+            var data = $this.data();
+            for (var key in $target) {
+                $target[key].text(data[key]);
+            }
+            $form.val(data.form);
+            if (data.hypothec) {
+                $hypothec.text(data.hypothec);
+                $hypothecWrapper.show();
+            } else {
+                $hypothecWrapper.hide();
+            }
+            if (data.imgFlat) {
+                $imgFlat.attr('href', data.imgFlat);
+                $imgFlat.find('img').attr('src', data.imgFlat);
+                $imgFlat.show();
+                $tabFlat.show();
+            } else {
+                $imgFlat.hide();
+                $tabFlat.hide();
+            }
+            if (data.imgFloor) {
+                $imgFloor.attr('href', data.imgFloor);
+                $imgFloor.find('img').attr('src', data.imgFloor);
+                $imgFloor.show();
+                $tabFloor.show();
+            } else {
+                $imgFloor.hide();
+                $tabFloor.hide();
+            }
+            if ($tabs.find('li:visible').length == 1) {
+                $tabs.find('li:visible').first().find('a').click();
+            }
+            if (init) {
+                $("html, body").animate({
+                    scrollTop: $target.title.offset().top - 100
+                }, 500);
+            }
+        });
+        $('.js-chess-info__item._active').first().click();
+        init = true;
+    },
+
+    $chessTooltip: null,
+    $chessTooltipTimeout: null,
+
+    showChessTooltip: function () {
+        var $self = $(this);
+        app.$chessTooltipTimeout = setTimeout(function () {
+            var offset = $self.offset();
+            app.$chessTooltip = $self.find('.js-chess-tooltip__content').clone();
+            app.$chessTooltip.css({
+                top: offset.top + 28,
+                left: offset.left + 10,
+            }).appendTo($('body')).addClass('_active');
+        }, 300);
+    },
+
+    hideChessTooltip: function () {
+        clearTimeout(app.$chessTooltipTimeout);
+        app.$chessTooltip.remove();
+    },
+
+    initChessFilter: function () {
+        var $form = $('.js-chess-filter'),
+                $items = $('.js-chess-filter__item'),
+                areaMin = null, areaMax = null,
+                priceMin = null, priceMax = null,
+                total = $items.length - $items.filter('._sold').length;
+        if ($form.length === 0 || $items.length === 0)
+            return;
+        this.setChessTotal(total);
+        $items.filter('[data-filter-area]').each(function () {
+            var area = Math.round(parseFloat($(this).data('filter-area')));
+            if (!areaMin || area < areaMin) {
+                areaMin = area;
+            }
+            if (!areaMax || area > areaMax) {
+                areaMax = area;
+            }
+        });
+        $items.filter('[data-filter-price]').each(function () {
+            var price = parseInt($(this).data('filter-price'));
+            if (!priceMin || price < priceMin) {
+                priceMin = price;
+            }
+            if (!priceMax || price > priceMax) {
+                priceMax = price;
+            }
+        });
+        $form.find('[name="area_min"]').attr('value', areaMin).attr('min', areaMin).attr('max', areaMax);
+        $form.find('[name="area_max"]').attr('value', areaMax).attr('min', areaMin).attr('max', areaMax);
+        $form.find('[name="price_min"]').attr('value', priceMin).attr('min', priceMin).attr('max', priceMax);
+        $form.find('[name="price_max"]').attr('value', priceMax).attr('min', priceMin).attr('max', priceMax);
+        $form.find('[name="rooms"]').each(function () {
+            if ($items.filter('[data-filter-rooms="' + $(this).val() + '"]').length == 0) {
+                $(this).parent().remove();
+            }
+        });
+
+        $form.find('input').on('change', function () {
+            var formData = $form.serializeArray(),
+                    filters = {
+                        area: [areaMin, areaMax],
+                        price: [priceMin, priceMax],
+                        rooms: []
+                    };
+//            console.log(formData);
+            $.each(formData, function (n, v) {
+                if (v.name == 'area_min' && v.value != areaMin) {
+                    filters.area[0] = parseInt(v.value);
+                }
+                if (v.name == 'area_max' && v.value != areaMax) {
+                    filters.area[1] = parseInt(v.value);
+                }
+                if (v.name == 'price_min' && v.value != priceMin) {
+                    filters.price[0] = parseInt(v.value);
+                }
+                if (v.name == 'price_max' && v.value != priceMax) {
+                    filters.price[1] = parseInt(v.value);
+                }
+                if (v.name == 'rooms') {
+                    filters.rooms.push(v.value);
+                }
+            });
+            if (filters.area[0] == areaMin && filters.area[1] == areaMax)
+                delete filters.area;
+            if (filters.price[0] == priceMin && filters.price[1] == priceMax)
+                delete filters.price;
+            if (filters.rooms.length == 0)
+                delete filters.rooms;
+//            console.log(filters);
+
+            if (Object.keys(filters).length) {
+                $items.addClass('_filtered');
+                $items.each(function () {
+                    var filtered = true, $_item = $(this);
+                    $.each(filters, function (k, v) {
+                        switch (k) {
+                            case 'area':
+                                if (typeof ($_item.data('filter-area')) !== 'undefined') {
+                                    var area = Math.round(parseFloat($_item.data('filter-area')));
+                                    if (area < v[0] || area > v[1]) {
+                                        filtered = false;
+                                    }
+                                } else {
+                                    filtered = false;
+                                }
+                                break;
+                            case 'price':
+                                if (typeof ($_item.data('filter-price')) !== 'undefined') {
+                                    var price = Math.round(parseFloat($_item.data('filter-price')));
+                                    if (price < v[0] || price > v[1]) {
+                                        filtered = false;
+                                    }
+                                } else {
+                                    filtered = false;
+                                }
+                                break;
+                            case 'rooms':
+                                if (typeof ($_item.data('filter-rooms')) === 'undefined' || v.indexOf($_item.data('filter-rooms').toString()) === -1) {
+                                    filtered = false;
+                                }
+                                break;
+                        }
+                    })
+                    if (filtered) {
+                        $(this).removeClass('_filtered');
+                    }
+                });
+                app.setChessTotal($items.length - $items.filter('._filtered').length);
+            } else {
+                $items.removeClass('_filtered');
+                app.setChessTotal(total);
+            }
+
+        });
+    },
+
+    setChessTotal: function (total) {
+        var endings = ['квартира', 'квартиры', 'квартир'];
+        $('.js-chess-filter__total').text(total + ' ' + app.getNumEnding(total, endings));
+    },
+
+    /**
+     * Функция возвращает окончание для множественного числа слова на основании числа и массива окончаний
+     * param  iNumber Integer Число на основе которого нужно сформировать окончание
+     * param  aEndings Array Массив слов или окончаний для чисел (1, 4, 5),
+     *         например ['яблоко', 'яблока', 'яблок']
+     * return String
+     * 
+     * https://habrahabr.ru/post/105428/
+     */
+    getNumEnding: function (iNumber, aEndings)
+    {
+        var sEnding, i;
+        iNumber = iNumber % 100;
+        if (iNumber >= 11 && iNumber <= 19) {
+            sEnding = aEndings[2];
+        } else {
+            i = iNumber % 10;
+            switch (i)
+            {
+                case (1):
+                    sEnding = aEndings[0];
+                    break;
+                case (2):
+                case (3):
+                case (4):
+                    sEnding = aEndings[1];
+                    break;
+                default:
+                    sEnding = aEndings[2];
+            }
+        }
+        return sEnding;
+    },
+
+}
+
 jQuery(function () {
     "use strict";
 
@@ -15,7 +349,6 @@ jQuery(function () {
         initRealtyFilters();
         initRealty();
         initPassword();
-        initTabs();
         initRange();
         initGallery();
         initHypothec();
@@ -169,9 +502,12 @@ jQuery(function () {
             $full.find('.js-agents-slider__full__img').attr('src', $agent.data('agent-img'));
             $full.find('.js-agents-slider__full__name').text($agent.data('agent-name'));
             var phone = $agent.data('agent-phone');
-            $full.find('.js-agents-slider__full__phone a').text(phone).attr('href', 'tel:' + phone.replace(/[-\s]/g, ''));
-            var link = $agent.data('agent-link');
-            $full.find('.js-agents-slider__full__link a').text(link).attr('href', '//:' + link);
+            $full.find('.js-agents-slider__full__phone a').text(phone).attr('href', 'tel:' + phone.replace(/[-\s()]/g, ''));
+            var mail = $agent.data('agent-mail');
+            $full.find('.js-agents-slider__full__mail a').text(mail).attr('href', 'mailto:' + mail);
+            var url = $agent.data('agent-url');
+            $full.find('.js-agents-slider__full__url a').attr('href', url);
+            $('.js-agents-slider__url').attr('href', url);
         }
     }
 
@@ -218,6 +554,14 @@ jQuery(function () {
         $('.js-mask__square').inputmask("numeric", {
             suffix: ' м²'
         });
+        $('.js-mask__square_filter').inputmask("numeric", {
+            suffix: ' м²',
+            unmaskAsNumber: false
+        });
+        $('.js-mask__currency_filter').inputmask("numeric", {
+            suffix: ' руб.',
+            unmaskAsNumber: false
+        });
         $('.js-mask__age').inputmask("numeric", {
             suffix: ' лет'
         });
@@ -254,32 +598,6 @@ jQuery(function () {
     }
 
     function initSelect() {
-        // custom select
-        $('.js-select-search').each(function (index, element) {
-            var $items = $(element).find('.js-select-search__item');
-            $(element).find('.js-select-search__input').on('keyup', function () {
-                var query = $(this).val().trim().toLowerCase();
-//                console.log(query);
-                if (query.length) {
-                    $items.each(function () {
-                        $(this).data('select-search').toLowerCase().indexOf(query) === 0 ? $(this).show() : $(this).hide();
-                    });
-                } else {
-                    $items.show();
-                }
-            });
-        });
-        $('.js-select').on('click', function (e) {
-            e.stopPropagation();
-        });
-        $('.js-select__toggler').on('click', function () {
-            $('.js-select').removeClass('_active');
-            $(this).parents('.js-select').addClass('_active').toggleClass('_opened');
-            $('.js-select').not('._active').removeClass('_opened');
-        });
-        $(window).on('click', function () {
-            $('.js-select').removeClass('_opened _active');
-        });
         // select2
         $.fn.select2.defaults.set("theme", "custom");
         $.fn.select2.defaults.set("minimumResultsForSearch", Infinity);
@@ -454,7 +772,7 @@ jQuery(function () {
         $(document).on('pdopage_load', function (e, config, response) {
             init();
         });
-        $(document).on('mse2_load', function(e, data) {
+        $(document).on('mse2_load', function (e, data) {
             init();
         });
         function init() {
@@ -471,24 +789,6 @@ jQuery(function () {
                 $(this).data('init', 'true');
             });
         }
-    }
-
-    function initTabs() {
-        $('.js-tabs').each(function (index, elem) {
-            $(elem).easytabs({
-                // для вложенных табов используем data
-                tabs: typeof $(elem).data('tabs') === 'undefined' ? '.js-tabs__list > li' : $(elem).data('tabs'),
-                panelContext: $(elem).hasClass('js-tabs_disconnected') ? $('.js-tabs__content') : $(elem)
-            });
-            $(elem).bind('easytabs:after', function (event, $clicked, $target) {
-                $(elem).find('.js-tabs__select').val($clicked.attr('href')).change();
-                $target.find('.slick-initialized').slick('setPosition');
-                $target.find('.js-select2').select2();
-            });
-            $(elem).find('.js-tabs__select').on('change', function () {
-                $(elem).easytabs('select', $(this).val());
-            });
-        });
     }
 
     function initRange() {
@@ -521,6 +821,11 @@ jQuery(function () {
                 to.addEventListener('change', function () {
                     slider.noUiSlider.set([null, this.value]);
                 });
+                if ($(elem).hasClass('js-chess-range')) {
+                    slider.noUiSlider.on('end', function (values, handle) {
+                        $('[name="price_max"]').trigger('change');
+                    });
+                }
             }
         });
 
@@ -569,7 +874,7 @@ jQuery(function () {
         $('.js-gallery-nav').slick({
             dots: false,
             arrows: true,
-            infinite: false,
+            infinite: true,
             slidesToShow: 6,
             slidesToScroll: 1,
             focusOnSelect: true,
@@ -589,7 +894,8 @@ jQuery(function () {
             $slider.slick({
                 dots: false,
                 arrows: true,
-                infinite: false,
+                infinite: true,
+                swipeToSlide: true,
                 asNavFor: '.js-gallery-nav',
                 responsive: [
                     {
@@ -801,6 +1107,9 @@ jQuery(function () {
                 if (animationCompleted) {
                     datepickerVisible = false;
                 }
+            },
+            onSelect: function (formattedDate, date, inst) {
+                inst.$el.trigger('change');
             }
         };
         $('.js-datetimepicker').datepicker(Object.assign({
@@ -808,10 +1117,18 @@ jQuery(function () {
             timepicker: true,
             dateTimeSeparator: ', ',
         }, commonOptions));
-        $('.js-datepicker-range').datepicker(Object.assign({
-            range: true,
-            multipleDatesSeparator: ' - ',
-        }, commonOptions));
+        $('.js-datepicker-range').each(function (el) {
+            var min = new Date($(this).data('min')) || null,
+                    max = new Date($(this).data('max')) || new Date();
+            $(this).datepicker(Object.assign({
+                minDate: min,
+                maxDate: max,
+                range: true,
+                multipleDatesSeparator: ' - ',
+            }, commonOptions));
+            var datepicker = $(this).data('datepicker');
+            datepicker.selectDate([min, max]);
+        });
         $('.js-datetimepicker, .js-datepicker-range').on('click', function () {
             if (datepickerVisible) {
                 var datepicker = $('.js-datetimepicker, .js-datepicker-range').data('datepicker');

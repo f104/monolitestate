@@ -277,6 +277,18 @@
       "search": [
         "farm"
       ]
+    },
+    {
+      "uid": "5d2d07f112b8de19f2c0dbfec3e42c05",
+      "css": "spin",
+      "code": 59448,
+      "src": "fontelico"
+    },
+    {
+      "uid": "d17030afaecc1e1c22349b99f3c4992a",
+      "css": "star-o",
+      "code": 59416,
+      "src": "fontawesome"
     }
   ]
 }

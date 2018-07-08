@@ -6,20 +6,21 @@ jQuery(function () {
     });
 
     function initMap() {
-        var map, geo = [[56.25471469870076, 43.947964454589815]];
-
-        map = new ymaps.Map("map", {
-            center: [56.25471469870076, 43.947964454589815],
-            zoom: 12,
+        
+        if (!$('#map').length || typeof(app.newMapData) !== 'object') return;
+        
+        var map = new ymaps.Map("map", {
+            center: app.newMapData.coords.center,
+            zoom: app.newMapData.coords.zoom,
             controls: []
         });
         map.behaviors.disable('scrollZoom');
-
+        
         var tpl = ymaps.templateLayoutFactory.createClass(
                 '<div class="placemark {{ properties.className }}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.202 11.113" class=""><path d="M4.101 11.113c2.734-3.12 4.101-5.442 4.101-6.968C8.202 1.855 6.366 0 4.101 0 1.836 0 0 1.856 0 4.145c0 1.526 1.367 3.849 4.101 6.968z" fill="#fff"></path></svg><span>{{ properties.content }}</span></div>'
                 );
-        for (var i = 0, len = geo.length; i < len; i++) {
-            var placemark = new ymaps.Placemark(geo[i],
+        for (var i = 0, len = app.newMapData.placemarks.length; i < len; i++) {
+            var placemark = new ymaps.Placemark(app.newMapData.placemarks[i].coords,
                     {
                         className: '_dot _primary',
                         idx: i,

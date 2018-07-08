@@ -6,18 +6,18 @@
 .social-links {
     @include list-unstyled;
     font-size: 0;
-    margin-bottom: 0;
-    white-space: nowrap;
+    margin-bottom: -5px;
     li {
         display: inline-block;
         margin-right: 5px;
+        margin-bottom: 5px;
         &:last-of-type {
             margin-right: 0;
         }
     }
     a {
         @include link-in-text;
-        @each $social in fb, instagram, vk, twitter, ok {
+        @each $social in youtube, fb, instagram, vk, twitter, ok {
             &._#{$social} {
                 @extend .sprite;
                 @extend .#{$social};

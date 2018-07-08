@@ -4,6 +4,7 @@
             color: #3c3c3c;
         }
     }
+    position: relative;
     margin-bottom: 10px;
     @include media-breakpoint-up(md) {
         margin-bottom: 30px;
@@ -15,6 +16,24 @@
     @include media-breakpoint-up(lg) {
         .input-group {
             @include col(20%, 20px);
+        }
+    }        
+    &._loading {
+        opacity: .5;
+        pointer-events: none;
+        &:after {
+            font-family: 'fontello';
+            content: '\e838';
+            position: absolute;
+            @include animate-spin;
+            top: 47.1%;
+            left: 50%;
+            @include media-breakpoint-up(md) {
+                top: 34.6%;
+            }
+            @include media-breakpoint-up(lg) {
+                top: 14px;
+            }        
         }
     }
 }
@@ -55,6 +74,7 @@
         .analytic__chart-legend__item {
             position: relative;
             margin-bottom: 10px;
+            white-space: nowrap;
             &:before {
                 content: '';
                 display: inline-block;
@@ -64,7 +84,7 @@
                 margin-right: 10px;
                 vertical-align: middle;
             }
-            @each $name, $color in (1, #a6d824), (2, #fea618), (3, #ea5f82), (4, #43a7ed) {
+            @each $name, $color in (0, #a6d824), (1, #fea618), (2, #ea5f82), (3, #43a7ed) {
                 &._#{$name}:before {
                     background-color: $color;
                 }
@@ -132,14 +152,24 @@
                     vertical-align: middle;
                 }
                 @each $name, $color1, $color2 in 
-                (1, #6e69fc, #6e69fc), 
-                (2, #6e69fc, #84f3fc), 
-                (3, #84f3fc, #8ef365), 
-                (4, #8ef365, #f9f85a),
-                (5, #f9f85a, #eb655b),
-                (6, #eb655b, #eb655b) {
+                (0, #6e69fc, #6e69fc), 
+                (1, #6e69fc, #84f3fc), 
+                (2, #84f3fc, #8ef365), 
+                (3, #8ef365, #f9f85a),
+                (4, #f9f85a, #eb655b),
+                (5, #eb655b, #eb655b) {
                     &._#{$name}:before {
                         background: linear-gradient(to left, $color1, $color2);
+                    }
+                }
+                @each $name, $color1 in 
+                (0, #6e69fc), 
+                (1, #84f3fc), 
+                (2, #8ef365), 
+                (3, #f9f85a),
+                (4, #eb655b) {
+                    &._#{$name}._solid:before {
+                        background: $color1;
                     }
                 }
             }

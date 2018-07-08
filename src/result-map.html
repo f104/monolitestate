@@ -1,0 +1,23 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "Вторичное жилье"
+    })
+    <body>
+        <div class="content">
+            @@include('./template/result/map.html')
+        </div>
+        @@include('./template/foot.html')
+        <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug"></script>
+        <script>
+            var appResultMapConfig = {
+                urlPlaces: 'https://api.myjson.com/bins/ygsli',
+                urlItems: 'onmap-list.html',
+                params: {
+                    action: 'map',
+                    parent: 1984
+                }
+            };
+        </script>
+        <script src="js/result.js"></script>
+    </body>
+</html>

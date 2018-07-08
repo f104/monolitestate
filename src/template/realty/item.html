@@ -10,28 +10,36 @@
                 }
             </ul>
             <div class="realty-list-slider js-realty-list-slider" data-init="false">
-                @@for (var i = 0; i < 1; i++) {
-                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
-                    <img class="realty__list__item__img"
-                         src="img/realty/objects/`+img[0]+`.jpg"
-                         srcset="img/realty/objects/`+img[0]+`@2x.jpg 2x,
-                         img/realty/objects/`+img[0]+`@3x.jpg 3x"
-                         alt="@@title">
-                </div>
+                @@if (img == "nophoto.svg") {
+                    <div class="realty-list-slider__img-wrapper _active _nophoto">
+                        <img class="realty__list__item__img"
+                             src="img/@@img" alt="@@title">
+                    </div>
                 }
-                @@for (var i = 1; i < img.length; i++) {
-                <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
-                    <img class="realty__list__item__img"
-                         src="img/realty/objects/`+img[i]+`.jpg"
-                         srcset="img/realty/objects/`+img[i]+`@2x.jpg 2x,
-                         img/realty/objects/`+img[i]+`@3x.jpg 3x"
-                         alt="@@title">
-                </div>
+                @@if (img != "nophoto.svg") {
+                    @@for (var i = 0; i < 1; i++) {
+                    <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
+                        <img class="realty__list__item__img"
+                             src="img/realty/objects/`+img[0]+`.jpg"
+                             srcset="img/realty/objects/`+img[0]+`@2x.jpg 2x,
+                             img/realty/objects/`+img[0]+`@3x.jpg 3x"
+                             alt="@@title">
+                    </div>
+                    }
+                    @@for (var i = 1; i < img.length; i++) {
+                    <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                        <img class="realty__list__item__img"
+                             src="img/realty/objects/`+img[i]+`.jpg"
+                             srcset="img/realty/objects/`+img[i]+`@2x.jpg 2x,
+                             img/realty/objects/`+img[i]+`@3x.jpg 3x"
+                             alt="@@title">
+                    </div>
+                    }
+                    <span class="realty-list-slider__counter">
+                        <span class="js-realty-list-slider__counter">1</span>
+                        из @@total
+                    </span>
                 }
-                <span class="realty-list-slider__counter">
-                    <span class="js-realty-list-slider__counter">1</span>
-                    из @@total
-                </span>
             </div>
         </div>
         <div class="realty__list__item__content">

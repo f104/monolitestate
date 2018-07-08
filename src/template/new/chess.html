@@ -1,0 +1,155 @@
+<section class="section container">
+    <h3 class="section__h">Схема квартир в доме*</h3>
+    <p class="section__lead">*Шахматка</p>
+    <div class="chess-wrapper">
+        <div class="chess-legend">
+            <span class="chess-legend__item">
+                <span class="chess-flat _0">ст</span> — студия
+            </span>
+            <span class="chess-legend__item">
+                <span class="chess-flat _1">1к</span> — 1-комнатная
+            </span>
+            <span class="chess-legend__item">
+                <span class="chess-flat _2">2к</span> — 2-комнатная
+            </span>
+            <span class="chess-legend__item">
+                <span class="chess-flat _3">3к</span> — 3-комнатная
+            </span>
+            <span class="chess-legend__item">
+                <span class="chess-flat _4">4к</span> — 4-комнатная
+            </span>
+            <span class="chess-legend__item">
+                <span class="chess-flat _sold">$</span> — продано
+            </span>
+            <span class="chess-legend__item">
+                <span class="chess-flat"></span> — вне условий поиска
+            </span>
+        </div>
+        <div class="js-scrollbar-md-lg scrollbar-outer _hor">
+            <div class="chess-inner slider-small js-slider-small">
+                @@include('./chess-section.html', {"section":1})
+                @@include('./chess-section.html', {"section":2})
+                @@include('./chess-section.html', {"section":3})
+                @@include('./chess-section.html', {"section":4})
+                @@include('./chess-section.html', {"section":5})
+            </div>
+        </div>
+    </div>
+    <div class="chess-info">
+        <div class="chess-info__flat js-tabs js-tabs_disconnected">
+            <div class="chess-info__flat__header">
+                <h3 class="chess-info__flat__h">
+                    <span class="js-chess-info__title"></span>
+                    <i class="icon-star-o"></i>
+                </h3>
+                <div class="tabs _noselect">
+                    <ul class="tabs__list js-tabs__list js-chess-info__tabs">
+                        <li class="js-chess-info__tabFlat"><a href="#flat">План квартиры</a></li>
+                        <li class="js-chess-info__tabFloor"><a href="#floor">План этажа</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="chess-info__flat__content">
+                <div class="chess-info__flat__content__img js-tabs__content">
+                    <div id="flat">
+                        <a href="" data-fancybox class="js-chess-info__imgFlat"
+                           style="display: none">
+                            <img src="" alt="План квартиры">
+                        </a>
+                    </div>
+                    <div id="floor">
+                        <a href="" data-fancybox class="js-chess-info__imgFloor">
+                            <img src="" alt="План этажа">
+                        </a>
+                    </div>
+                </div>
+                <div class="chess-info__flat__content__info result-list">
+                    <div class="result-list__item">
+                        <div class="result-list__item__price">
+                            <span class="result-list__item__price__cost">
+                                <span class="js-chess-info__price"></span> руб.
+                            </span>
+                            <span class="result-list__item__help">
+                                стоимость
+                            </span>
+                        </div>
+                        <div class="chess-info__flat__content__info__hypothec js-chess-info__hypothec-wrapper">
+                            <div class="result-list__item__hypothec">
+                                <span class="js-chess-info__hypothec"></span> руб./мес.
+                                <span class="result-list__item__help">
+                                    в ипотеку
+                                </span>
+                            </div>
+                            <i class="icon-help-circled"></i>
+                        </div>
+                        <ul class="result-list__item__options">
+                            <li>
+                                <span class="js-chess-info__area"></span> м²
+                                <span class="result-list__item__help">
+                                    площадь
+                                </span>
+                            </li>
+                            <li>
+                                <span class="js-chess-info__pricePerSquare"></span> руб.
+                                <span class="result-list__item__help">
+                                    цена за м²
+                                </span>
+                            </li>
+                            <li>
+                                <span class="js-chess-info__floor"></span> этаж
+                                <span class="result-list__item__help">
+                                    из <span class="js-chess-info__floorsTotal"></span>
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="result-list__item__actions__btn">
+                            <a href="#visit" class="btn _secondary _solid _lg js-popup">Записаться на просмотр</a>
+                            <a href="#reserve" class="btn _secondary _lg js-popup">Забронировать квартиру</a>
+                        </div>
+                        <div class="input-group">
+                            <label class="checkbox ">
+                                <input type="checkbox">
+                                <span class="checkbox__text">К сравнению</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chess-info__agent">
+            <div class="chess-info__agent__row">
+                <div class="chess-info__agent__col">
+                    <p class="chess-info__agent__h">Появились вопросы? Вам ответит:</p>
+                    @@include('../agents/item.html', {
+                    "img": 5,
+                    "name": "Столбова Ольга Арслановна",
+                    "post": "",
+                    "phone": "+7 922 471-16-85",
+                    "link": "",
+                    "all": 0,
+                    "more": 0
+                    })
+                </div>
+                <form class="chess-info__agent__col">
+                    <div class="input-group">
+                        <span class="input-text">
+                            Оставьте ваш номер, и агент перезвонит вам в течение 5 минут
+                        </span>
+                    </div>
+                    <div class="input-group _lg">
+                        <label>Ваш телефон</label>
+                        <input class="js-mask__tel">
+                    </div>
+                    <div class="input-group">
+                        <button class="btn _lg _solid">Жду звонка</button>
+                    </div>
+                    <div class="input-group _last">
+                        <span class="input-help">
+                            Отправляя заявку вы соглашаетесь на обработку персональных данных
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

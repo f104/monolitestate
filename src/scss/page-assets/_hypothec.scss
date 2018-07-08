@@ -1,5 +1,8 @@
 $hypothec-gutter-width: $grid-gutter-width;
 .hypothec-form {
+    &:first-child {
+        margin-top: - map_get($header-margin-bottom, sm);
+    }
     background-image: linear-gradient(346deg, #7f7fc7, #494995);
     .hypothec-form__feat {
         @include list-unstyled;
@@ -77,6 +80,9 @@ $hypothec-gutter-width: $grid-gutter-width;
 }
 @include media-breakpoint-up(lg) {
     .hypothec-form {
+        &:first-child {
+            margin-top: - map_get($header-margin-bottom, lg);
+        }
         background-image: linear-gradient(20deg, #7f7fc7, #494995);
         .hypothec-form__wrapper {
             display: flex;

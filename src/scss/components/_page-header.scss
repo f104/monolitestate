@@ -79,6 +79,9 @@
         @include media-breakpoint-only(sm) {
             margin-top: 20px;
         }
+        @include media-breakpoint-up(md) {
+            white-space: nowrap;
+        }
     }
     .page-header__datetime {
         @include list-unstyled;

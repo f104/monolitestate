@@ -12,6 +12,7 @@
                 <h3 class="section__h">Выбрать квартиру</h3>
                 @@include('./template/filters/new-detail.html')
             </section>
+            @@include('./template/new/chess.html')
             <section class="section container js-tabs">
                 <div class="tabs _noselect">
                     <ul class="tabs__list js-tabs__list">
@@ -47,11 +48,18 @@
             "title": "Ипотечные программы для новостроек"
             })
             @@include('./template/seo.html')
+            <div class="_hidden">
+                @@include('./template/popups/visit.html')
+                @@include('./template/popups/reserve.html')
+            </div>
             @@include('./template/footer.html')
             @@include('./template/popups-common.html')
             <div class="content__overlay js-menu-overlay"></div>
         </div>
         @@include('./template/foot.html')
+        <script>
+            app.newMapData = JSON.parse('{"coords":{"center":[56.29887359770448,43.940897107315834],"zoom":14},"type":"yandex#map","placemarks":[{"coords":[56.29946857633491,43.94109799951145],"params":{"color":"blue","iconContent":"","balloonContentBody":"Дом №1","balloonContentHeader":""}}],"polygons":[],"lines":[],"routes":[]}');
+        </script>
         <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug"></script>
         <script src="js/detail.js"></script>
     </body>

@@ -207,34 +207,43 @@
             <section class="section container new-detail-filter">
                 <h3 class="section__h">Выбрать квартиру</h3>
                 <div class="filters">
-    <form class="filters-form">
+    <form class="filters-form js-chess-filter">
+        <div class="filters-form__summary">
+            <p class="filters-form__summary__text">
+                Найдено <span class="js-chess-filter__total">25 квартир</span>
+            </p>
+        </div>
         <div class="filters-form__row__lg">
             <div class="filters-form__col__lg _col1">
                 <div class="filters-form__row">
-                    <div class="input-group _col1 js-range">
+                    <div class="input-group _col1 js-range js-chess-range">
                         <label class="_range">Площадь квартиры</label>
                         <div class="range js-range__target"></div>
                         <div class="input-group _range">
                             <span class="input-group__item">
                                 <input type="number" min="19" max="160" value="19" 
+                                       name="area_min"
                                        autocomplete="off" class="js-range__from"> м²
                             </span>
                             <span class="input-group__item">
                                 <input type="number" min="19" max="160" value="160"
+                                       name="area_max"
                                        autocomplete="off" class="js-range__to"> м²
                             </span>
                         </div>
                     </div>
-                    <div class="input-group _col2 js-range">
+                    <div class="input-group _col2 js-range js-chess-range">
                         <label class="_range">Стоимость квартиры</label>
                         <div class="range js-range__target"></div>
                         <div class="input-group _range">
                             <span class="input-group__item">
-                                <input min="1900000" max="12000000" value="1900000" 
+                                <input type="number" min="1900000" max="12000000" value="1900000" 
+                                       name="price_min"
                                        autocomplete="off" class="_lg js-mask__numeric js-range__from"> руб.
                             </span>
                             <span class="input-group__item">
-                                <input min="1900000" max="12000000" value="12000000"
+                                <input type="number" min="1900000" max="12000000" value="12000000"
+                                       name="price_max"
                                        autocomplete="off" class="_lg js-mask__numeric js-range__to"> руб.
                             </span>
                         </div>
@@ -242,22 +251,11 @@
                     <div class="input-group filters-form__rooms">
                         <label>Кол-во комнат</label>
                         <div class="filters-form__rooms__inner">
-                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">Студ.</span></label>
-                            <label class="filters-form__rooms__inner__checkbox filters-form__sm"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">Комн.</span></label>
-                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">1</span></label>
-                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox" checked><span class="filters-form__rooms__inner__checkbox__inner">2</span></label>
-                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">3</span></label>
-                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">4+</span></label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="filters-form__col__lg _col2">
-                <div class="filters-form__summary">
-                    <p class="filters-form__summary__text">Найдено 25 квартир</p>
-                    <div class="filters-form__summary__buttons">
-                        <div class="filters-form__summary__buttons__col">
-                            <button class="btn _lg _solid">Показать</button>
+                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox" name="rooms" value="0"><span class="filters-form__rooms__inner__checkbox__inner">Студ.</span></label>
+                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox" name="rooms" value="1"><span class="filters-form__rooms__inner__checkbox__inner">1</span></label>
+                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox" name="rooms" value="2"><span class="filters-form__rooms__inner__checkbox__inner">2</span></label>
+                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox" name="rooms" value="3"><span class="filters-form__rooms__inner__checkbox__inner">3</span></label>
+                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox" name="rooms" value="4+"><span class="filters-form__rooms__inner__checkbox__inner">4+</span></label>
                         </div>
                     </div>
                 </div>
@@ -266,6 +264,1648 @@
     </form>
 </div>
             </section>
+            <section class="section container">
+    <h3 class="section__h">Схема квартир в доме*</h3>
+    <p class="section__lead">*Шахматка</p>
+    <div class="chess-wrapper">
+        <div class="chess-legend">
+            <span class="chess-legend__item">
+                <span class="chess-flat _0">ст</span> — студия
+            </span>
+            <span class="chess-legend__item">
+                <span class="chess-flat _1">1к</span> — 1-комнатная
+            </span>
+            <span class="chess-legend__item">
+                <span class="chess-flat _2">2к</span> — 2-комнатная
+            </span>
+            <span class="chess-legend__item">
+                <span class="chess-flat _3">3к</span> — 3-комнатная
+            </span>
+            <span class="chess-legend__item">
+                <span class="chess-flat _4">4к</span> — 4-комнатная
+            </span>
+            <span class="chess-legend__item">
+                <span class="chess-flat _sold">$</span> — продано
+            </span>
+            <span class="chess-legend__item">
+                <span class="chess-flat"></span> — вне условий поиска
+            </span>
+        </div>
+        <div class="js-scrollbar-md-lg scrollbar-outer _hor">
+            <div class="chess-inner slider-small js-slider-small">
+                <div class="chess-section slide">
+    <table class="chess-section__table">
+        <thead class="chess-section__thead">
+            <tr>
+                <th class="chess-section__floor chess-section__muted">Этаж</th>
+                <th colspan="100">1 подъезд</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="chess-section__floor">12</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold js-chess-filter__item">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _3 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="3" data-filter-area="53.45"  data-filter-price="5500000"
+                          data-price="5 500 000" data-price-per-square="65 899" 
+                          data-hypothec="21 413"
+                          data-area="53.45" data-title="3-комнатная квартира"
+                          data-floor="12" data-floors-total="12"
+                          data-img-flat="img/realty/objects/flat.png"
+                          data-img-floor="img/realty/objects/floor.png"
+                          data-form="1/35">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">11</td>
+                <td>
+                    <span class="chess-flat _active _2 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="2" data-filter-area="25.18"  data-filter-price="4000000"
+                          data-price="4 000 000" data-price-per-square="74 856" 
+                          data-area="25.18" data-title="2-комнатная квартира"
+                          data-floor="11" data-floors-total="12"
+                          data-img-flat="img/realty/objects/flat.png"
+                          data-form="1/36">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _0 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="0" data-filter-area="20.00"  data-filter-price="2000000"
+                          data-price="4 000 000" data-price-per-square="74 856" 
+                          data-hypothec="15 132"
+                          data-area="25.18" data-title="Студия"
+                          data-floor="11" data-floors-total="12"
+                          data-img-floor="img/realty/objects/floor.png"
+                          data-form="1/37">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _0 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="0" data-filter-area="20.00"  data-filter-price="2000000"
+                          data-price="4 000 000" data-price-per-square="74 856" 
+                          data-hypothec="15 132"
+                          data-area="25.18" data-title="Студия"
+                          data-floor="11" data-floors-total="12"
+                          data-form="1/38">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">10</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">9</td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _2">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">8</td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">7</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">6</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">5</td>
+                <td>
+                    <span class="chess-flat _active _2">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _0">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _0">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">4</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">3</td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _2">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">2</td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">1</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+                <div class="chess-section slide">
+    <table class="chess-section__table">
+        <thead class="chess-section__thead">
+            <tr>
+                <th class="chess-section__floor chess-section__muted">Этаж</th>
+                <th colspan="100">2 подъезд</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="chess-section__floor">12</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold js-chess-filter__item">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _3 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="3" data-filter-area="53.45"  data-filter-price="5500000"
+                          data-price="5 500 000" data-price-per-square="65 899" 
+                          data-hypothec="21 413"
+                          data-area="53.45" data-title="3-комнатная квартира"
+                          data-floor="12" data-floors-total="12"
+                          data-img-flat="img/realty/objects/flat.png"
+                          data-img-floor="img/realty/objects/floor.png"
+                          data-form="1/35">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">11</td>
+                <td>
+                    <span class="chess-flat _active _2 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="2" data-filter-area="25.18"  data-filter-price="4000000"
+                          data-price="4 000 000" data-price-per-square="74 856" 
+                          data-area="25.18" data-title="2-комнатная квартира"
+                          data-floor="11" data-floors-total="12"
+                          data-img-flat="img/realty/objects/flat.png"
+                          data-form="1/36">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _0 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="0" data-filter-area="20.00"  data-filter-price="2000000"
+                          data-price="4 000 000" data-price-per-square="74 856" 
+                          data-hypothec="15 132"
+                          data-area="25.18" data-title="Студия"
+                          data-floor="11" data-floors-total="12"
+                          data-img-floor="img/realty/objects/floor.png"
+                          data-form="1/37">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _0 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="0" data-filter-area="20.00"  data-filter-price="2000000"
+                          data-price="4 000 000" data-price-per-square="74 856" 
+                          data-hypothec="15 132"
+                          data-area="25.18" data-title="Студия"
+                          data-floor="11" data-floors-total="12"
+                          data-form="1/38">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">10</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">9</td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _2">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">8</td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">7</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">6</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">5</td>
+                <td>
+                    <span class="chess-flat _active _2">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _0">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _0">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">4</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">3</td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _2">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">2</td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">1</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+                <div class="chess-section slide">
+    <table class="chess-section__table">
+        <thead class="chess-section__thead">
+            <tr>
+                <th class="chess-section__floor chess-section__muted">Этаж</th>
+                <th colspan="100">3 подъезд</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="chess-section__floor">12</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold js-chess-filter__item">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _3 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="3" data-filter-area="53.45"  data-filter-price="5500000"
+                          data-price="5 500 000" data-price-per-square="65 899" 
+                          data-hypothec="21 413"
+                          data-area="53.45" data-title="3-комнатная квартира"
+                          data-floor="12" data-floors-total="12"
+                          data-img-flat="img/realty/objects/flat.png"
+                          data-img-floor="img/realty/objects/floor.png"
+                          data-form="1/35">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">11</td>
+                <td>
+                    <span class="chess-flat _active _2 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="2" data-filter-area="25.18"  data-filter-price="4000000"
+                          data-price="4 000 000" data-price-per-square="74 856" 
+                          data-area="25.18" data-title="2-комнатная квартира"
+                          data-floor="11" data-floors-total="12"
+                          data-img-flat="img/realty/objects/flat.png"
+                          data-form="1/36">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _0 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="0" data-filter-area="20.00"  data-filter-price="2000000"
+                          data-price="4 000 000" data-price-per-square="74 856" 
+                          data-hypothec="15 132"
+                          data-area="25.18" data-title="Студия"
+                          data-floor="11" data-floors-total="12"
+                          data-img-floor="img/realty/objects/floor.png"
+                          data-form="1/37">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _0 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="0" data-filter-area="20.00"  data-filter-price="2000000"
+                          data-price="4 000 000" data-price-per-square="74 856" 
+                          data-hypothec="15 132"
+                          data-area="25.18" data-title="Студия"
+                          data-floor="11" data-floors-total="12"
+                          data-form="1/38">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">10</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">9</td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _2">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">8</td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">7</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">6</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">5</td>
+                <td>
+                    <span class="chess-flat _active _2">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _0">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _0">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">4</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">3</td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _2">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">2</td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">1</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+                <div class="chess-section slide">
+    <table class="chess-section__table">
+        <thead class="chess-section__thead">
+            <tr>
+                <th class="chess-section__floor chess-section__muted">Этаж</th>
+                <th colspan="100">4 подъезд</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="chess-section__floor">12</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold js-chess-filter__item">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _3 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="3" data-filter-area="53.45"  data-filter-price="5500000"
+                          data-price="5 500 000" data-price-per-square="65 899" 
+                          data-hypothec="21 413"
+                          data-area="53.45" data-title="3-комнатная квартира"
+                          data-floor="12" data-floors-total="12"
+                          data-img-flat="img/realty/objects/flat.png"
+                          data-img-floor="img/realty/objects/floor.png"
+                          data-form="1/35">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">11</td>
+                <td>
+                    <span class="chess-flat _active _2 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="2" data-filter-area="25.18"  data-filter-price="4000000"
+                          data-price="4 000 000" data-price-per-square="74 856" 
+                          data-area="25.18" data-title="2-комнатная квартира"
+                          data-floor="11" data-floors-total="12"
+                          data-img-flat="img/realty/objects/flat.png"
+                          data-form="1/36">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _0 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="0" data-filter-area="20.00"  data-filter-price="2000000"
+                          data-price="4 000 000" data-price-per-square="74 856" 
+                          data-hypothec="15 132"
+                          data-area="25.18" data-title="Студия"
+                          data-floor="11" data-floors-total="12"
+                          data-img-floor="img/realty/objects/floor.png"
+                          data-form="1/37">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _0 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="0" data-filter-area="20.00"  data-filter-price="2000000"
+                          data-price="4 000 000" data-price-per-square="74 856" 
+                          data-hypothec="15 132"
+                          data-area="25.18" data-title="Студия"
+                          data-floor="11" data-floors-total="12"
+                          data-form="1/38">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">10</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">9</td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _2">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">8</td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">7</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">6</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">5</td>
+                <td>
+                    <span class="chess-flat _active _2">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _0">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _0">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">4</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">3</td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _2">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">2</td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">1</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+                <div class="chess-section slide">
+    <table class="chess-section__table">
+        <thead class="chess-section__thead">
+            <tr>
+                <th class="chess-section__floor chess-section__muted">Этаж</th>
+                <th colspan="100">5 подъезд</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="chess-section__floor">12</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold js-chess-filter__item">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _3 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="3" data-filter-area="53.45"  data-filter-price="5500000"
+                          data-price="5 500 000" data-price-per-square="65 899" 
+                          data-hypothec="21 413"
+                          data-area="53.45" data-title="3-комнатная квартира"
+                          data-floor="12" data-floors-total="12"
+                          data-img-flat="img/realty/objects/flat.png"
+                          data-img-floor="img/realty/objects/floor.png"
+                          data-form="1/35">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">11</td>
+                <td>
+                    <span class="chess-flat _active _2 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="2" data-filter-area="25.18"  data-filter-price="4000000"
+                          data-price="4 000 000" data-price-per-square="74 856" 
+                          data-area="25.18" data-title="2-комнатная квартира"
+                          data-floor="11" data-floors-total="12"
+                          data-img-flat="img/realty/objects/flat.png"
+                          data-form="1/36">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _0 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="0" data-filter-area="20.00"  data-filter-price="2000000"
+                          data-price="4 000 000" data-price-per-square="74 856" 
+                          data-hypothec="15 132"
+                          data-area="25.18" data-title="Студия"
+                          data-floor="11" data-floors-total="12"
+                          data-img-floor="img/realty/objects/floor.png"
+                          data-form="1/37">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _0 js-chess-filter__item js-chess-info__item"
+                          data-filter-rooms="0" data-filter-area="20.00"  data-filter-price="2000000"
+                          data-price="4 000 000" data-price-per-square="74 856" 
+                          data-hypothec="15 132"
+                          data-area="25.18" data-title="Студия"
+                          data-floor="11" data-floors-total="12"
+                          data-form="1/38">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">10</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">9</td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _2">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">8</td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">7</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">6</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">5</td>
+                <td>
+                    <span class="chess-flat _active _2">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _0">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _0">
+                        ст
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">4</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">3</td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat"></span></td>
+                <td>
+                    <span class="chess-flat _active _2">
+                        2к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">2</td>
+                <td>
+                    <span class="chess-flat _active _1">
+                        1к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td>
+                    <span class="chess-flat _active _3">
+                        3к
+                        <span class="chess-flat__tooltip js-chess-tooltip__content">
+    <span class="chess-flat__tooltip__item _title">1-комнатная кв.</span>
+    <span class="chess-flat__tooltip__item">42 м²</span>
+    <span class="chess-flat__tooltip__item">2 132 233 руб.</span>
+</span>
+                    </span>
+                </td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+            </tr>
+            <tr>
+                <td class="chess-section__floor">1</td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+                <td><span class="chess-flat"></span></td>
+                <td><span class="chess-flat _sold">$</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+            </div>
+        </div>
+    </div>
+    <div class="chess-info">
+        <div class="chess-info__flat js-tabs js-tabs_disconnected">
+            <div class="chess-info__flat__header">
+                <h3 class="chess-info__flat__h">
+                    <span class="js-chess-info__title"></span>
+                    <i class="icon-star-o"></i>
+                </h3>
+                <div class="tabs _noselect">
+                    <ul class="tabs__list js-tabs__list js-chess-info__tabs">
+                        <li class="js-chess-info__tabFlat"><a href="#flat">План квартиры</a></li>
+                        <li class="js-chess-info__tabFloor"><a href="#floor">План этажа</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="chess-info__flat__content">
+                <div class="chess-info__flat__content__img js-tabs__content">
+                    <div id="flat">
+                        <a href="" data-fancybox class="js-chess-info__imgFlat"
+                           style="display: none">
+                            <img src="" alt="План квартиры">
+                        </a>
+                    </div>
+                    <div id="floor">
+                        <a href="" data-fancybox class="js-chess-info__imgFloor">
+                            <img src="" alt="План этажа">
+                        </a>
+                    </div>
+                </div>
+                <div class="chess-info__flat__content__info result-list">
+                    <div class="result-list__item">
+                        <div class="result-list__item__price">
+                            <span class="result-list__item__price__cost">
+                                <span class="js-chess-info__price"></span> руб.
+                            </span>
+                            <span class="result-list__item__help">
+                                стоимость
+                            </span>
+                        </div>
+                        <div class="chess-info__flat__content__info__hypothec js-chess-info__hypothec-wrapper">
+                            <div class="result-list__item__hypothec">
+                                <span class="js-chess-info__hypothec"></span> руб./мес.
+                                <span class="result-list__item__help">
+                                    в ипотеку
+                                </span>
+                            </div>
+                            <i class="icon-help-circled"></i>
+                        </div>
+                        <ul class="result-list__item__options">
+                            <li>
+                                <span class="js-chess-info__area"></span> м²
+                                <span class="result-list__item__help">
+                                    площадь
+                                </span>
+                            </li>
+                            <li>
+                                <span class="js-chess-info__pricePerSquare"></span> руб.
+                                <span class="result-list__item__help">
+                                    цена за м²
+                                </span>
+                            </li>
+                            <li>
+                                <span class="js-chess-info__floor"></span> этаж
+                                <span class="result-list__item__help">
+                                    из <span class="js-chess-info__floorsTotal"></span>
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="result-list__item__actions__btn">
+                            <a href="#visit" class="btn _secondary _solid _lg js-popup">Записаться на просмотр</a>
+                            <a href="#reserve" class="btn _secondary _lg js-popup">Забронировать квартиру</a>
+                        </div>
+                        <div class="input-group">
+                            <label class="checkbox ">
+                                <input type="checkbox">
+                                <span class="checkbox__text">К сравнению</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chess-info__agent">
+            <div class="chess-info__agent__row">
+                <div class="chess-info__agent__col">
+                    <p class="chess-info__agent__h">Появились вопросы? Вам ответит:</p>
+                    <div class="agent">
+    <div class="agent__inner">
+        <img src="img/agents/5.jpg"
+             srcset="img/agents/5@2x.jpg 2x,
+             img/agents/5@3x.jpg 3x"
+             class="agent__img" alt="alt text">
+        <div class="agent__name">Столбова Ольга Арслановна</div>
+        
+        <div class="agent__phone">
+            <a href="tel:+7 922 471-16-85">+7 922 471-16-85</a>
+        </div>
+        
+        
+        
+    </div>
+</div>
+                </div>
+                <form class="chess-info__agent__col">
+                    <div class="input-group">
+                        <span class="input-text">
+                            Оставьте ваш номер, и агент перезвонит вам в течение 5 минут
+                        </span>
+                    </div>
+                    <div class="input-group _lg">
+                        <label>Ваш телефон</label>
+                        <input class="js-mask__tel">
+                    </div>
+                    <div class="input-group">
+                        <button class="btn _lg _solid">Жду звонка</button>
+                    </div>
+                    <div class="input-group _last">
+                        <span class="input-help">
+                            Отправляя заявку вы соглашаетесь на обработку персональных данных
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
             <section class="section container js-tabs">
                 <div class="tabs _noselect">
                     <ul class="tabs__list js-tabs__list">
@@ -278,46 +1918,54 @@
                 <div id="gallery" class="new-detail-gallery">
                     <div class="gallery js-gallery">
     <div class="js-gallery__slider">
-        <div class="slide">
+        <a href="img/content/s1.jpg" class="slide"
+           data-fancybox="gallery">
             <img src="img/content/s1.jpg"
                  srcset="img/content/s1@2x.jpg 2x,
                  img/content/s1@3x.jpg 3x">
-        </div>
-        <div class="slide">
+        </a>
+        <a href="img/content/s2.jpg" class="slide"
+           data-fancybox="gallery">
             <img src="img/content/s2.jpg"
                  srcset="img/content/s2@2x.jpg 2x,
                  img/content/s2@3x.jpg 3x">
-        </div>
-        <div class="slide">
+        </a>
+        <a href="img/content/s1.jpg" class="slide"
+           data-fancybox="gallery">
             <img src="img/content/s1.jpg"
                  srcset="img/content/s1@2x.jpg 2x,
                  img/content/s1@3x.jpg 3x">
-        </div>
-        <div class="slide">
+        </a>
+        <a href="img/content/s2.jpg" class="slide"
+           data-fancybox="gallery">
             <img src="img/content/s2.jpg"
                  srcset="img/content/s2@2x.jpg 2x,
                  img/content/s2@3x.jpg 3x">
-        </div>
-        <div class="slide">
+        </a>
+        <a href="img/content/s1.jpg" class="slide"
+           data-fancybox="gallery">
             <img src="img/content/s1.jpg"
                  srcset="img/content/s1@2x.jpg 2x,
                  img/content/s1@3x.jpg 3x">
-        </div>
-        <div class="slide">
+        </a>
+        <a href="img/content/s2.jpg" class="slide"
+           data-fancybox="gallery">
             <img src="img/content/s2.jpg"
                  srcset="img/content/s2@2x.jpg 2x,
                  img/content/s2@3x.jpg 3x">
-        </div>
-        <div class="slide">
+        </a>
+        <a href="img/content/s1.jpg" class="slide"
+           data-fancybox="gallery">
             <img src="img/content/s1.jpg"
                  srcset="img/content/s1@2x.jpg 2x,
                  img/content/s1@3x.jpg 3x">
-        </div>
-        <div class="slide">
+        </a>
+        <a href="img/content/s2.jpg" class="slide"
+           data-fancybox="gallery">
             <img src="img/content/s2.jpg"
                  srcset="img/content/s2@2x.jpg 2x,
                  img/content/s2@3x.jpg 3x">
-        </div>
+        </a>
     </div>
     <div id="panorama" class="gallery__panorama js-panorama" data-geo="55.733685, 37.588264"></div>
     <span class="gallery__counter">
@@ -846,6 +2494,81 @@
             сопровождением.</p>
     </div>
 </section>
+            <div class="_hidden">
+                <div id="visit" class="popup-cnt">
+    <div class="popup popup-visit">
+        <h3 class="popup__h3">Записаться на просмотр</h3>
+        <form id="popup_subscribe_form" class="popup-subscribe__form js-validate">
+            <input type="hidden" name="new_info" class="js-chess-info__form">
+            <div class="input-group__wrapper">
+                <div class="input-group _lg _secondary">
+                    <label>Ваше имя</label>
+                    <input type="text" name="name" value="" required>
+                </div>
+                <div class="input-group _lg _secondary">
+                    <label>E-mail</label>
+                    <input type="text" name="email" value="" required>
+                </div>
+            </div>
+            <div class="input-group__wrapper">
+                <div class="input-group _lg _secondary">
+                    <label>Ваш телефон</label>
+                    <input type="text" name="phone" value="" required 
+                           class="js-mask__tel">
+                </div>
+                <div class="input-group _lg _secondary">
+                    <label>Удобная дата и время</label>
+                    <div class="input-wrapper _icon _primary">
+                        <input type="text" name="date" value="" 
+                               required readonly 
+                               class="js-datetimepicker">
+                        <i class="icon-calendar"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group__wrapper _submit">
+                <div class="input-group">
+                    <button class="btn _solid _lg _shadow" type="submit">Отправить</button>
+                </div>
+                <div class="input-group">
+                    <span class="input-help">
+                        Оправляя заявку вы соглашаетесь на обработку 
+                        ваших персональных данных.</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+                <div id="reserve" class="popup-cnt">
+    <div class="popup popup-visit">
+        <h3 class="popup__h3">Забронировать квартиру</h3>
+        <form class="popup-subscribe__form js-validate">
+            <input type="hidden" name="new_info" class="js-chess-info__form">
+            <div class="input-group__wrapper">
+                <div class="input-group _lg _secondary">
+                    <label>Ваше имя</label>
+                    <input type="text" name="name" value="" required>
+                </div>
+                <div class="input-group _lg _secondary">
+                    <label>Ваш телефон</label>
+                    <input type="text" name="phone" value="" required 
+                           class="js-mask__tel">
+                </div>
+            </div>
+            <div class="input-group__wrapper _submit">
+                <div class="input-group">
+                    <button class="btn _solid _lg _shadow" type="submit">Отправить</button>
+                </div>
+                <div class="input-group">
+                    <span class="input-help">
+                        Оправляя заявку вы соглашаетесь на обработку 
+                        ваших персональных данных.</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+            </div>
             <footer class="footer">
     <div class="footer__dark">
         <div class="container">
@@ -907,6 +2630,9 @@
                     <div class="footer__social">
                         
 <ul class="social-links">
+    
+    <li><a href="#" class="_youtube" rel="noopener nofollow"></a></li>
+    
     <li><a href="#" class="_fb" rel="noopener nofollow"></a></li>
     <li><a href="#" class="_instagram" rel="noopener nofollow"></a></li>
     <li><a href="#" class="_vk" rel="noopener nofollow"></a></li>
@@ -1045,6 +2771,7 @@
                         </span>
                         
 <ul class="social-links">
+    
     <li><a href="#" class="_fb" rel="noopener nofollow"></a></li>
     <li><a href="#" class="_instagram" rel="noopener nofollow"></a></li>
     <li><a href="#" class="_vk" rel="noopener nofollow"></a></li>
@@ -1069,6 +2796,7 @@
         <li><a href="commercial.html">commercial</a></li>
         <li><a href="onmap.html">on map</a></li>
         <li><a href="result.html">result</a></li>
+        <li><a href="result-map.html">result-map</a></li>
         <li><a href="detail.html">detail</a></li>
         <li><a href="new.html">new</a></li>
         <li><a href="new-result.html">new-result</a></li>
@@ -1131,6 +2859,9 @@
 <script src="js/libs/nouislider.min.js"></script>
 <script src="js/libs/datepicker.min.js"></script>
 <script src="js/common.js"></script>
+        <script>
+            app.newMapData = JSON.parse('{"coords":{"center":[56.29887359770448,43.940897107315834],"zoom":14},"type":"yandex#map","placemarks":[{"coords":[56.29946857633491,43.94109799951145],"params":{"color":"blue","iconContent":"","balloonContentBody":"Дом №1","balloonContentHeader":""}}],"polygons":[],"lines":[],"routes":[]}');
+        </script>
         <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug"></script>
         <script src="js/detail.js"></script>
     </body>

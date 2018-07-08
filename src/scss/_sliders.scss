@@ -144,6 +144,9 @@
 
 .main-slider {
     margin-bottom: 20px;
+    &:first-child {
+        margin-top: - map_get($header-margin-bottom, sm);
+    }
     .main-slider__bar {
         position: relative;
         height: 7px;
@@ -294,6 +297,9 @@
 @include media-breakpoint-up(lg) {
     .main-slider {
         margin-bottom: 60px;
+        &:first-child {
+            margin-top: - map_get($header-margin-bottom, lg);
+        }
         .slide {
             .main-slider__call {
                 position: relative;

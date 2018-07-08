@@ -41,6 +41,16 @@
                 display: block;
             }
         }
+        &._nophoto {
+            &:before, &:after {
+                content: none;
+            }
+            img {
+                width: 50%;
+                min-width: unset;
+                opacity: 0.5;
+            }
+        }
     }
     .realty-list-slider__counter {
         position: absolute;

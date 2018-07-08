@@ -57,13 +57,7 @@
                                 <li><a href="#tab5">Дачи</a></li>
                             </ul>
                             <div class="tabs__select">
-                                <select class="js-tabs__select js-select2" style="width:100%">
-                                    <option value="#tab1">Новостройки</option>
-                                    <option value="#tab2">Вторичная недвижимость</option>
-                                    <option value="#tab3">Дома и коттеджи</option>
-                                    <option value="#tab4">Земельные участки</option>
-                                    <option value="#tab5">Дачи</option>
-                                </select>
+                                <select class="js-tabs__select js-select2" style="width:100%"></select>
                             </div>
                         </div>
                     </div>
@@ -134,7 +128,9 @@
                     </div>
                 </div>
             </section>
-            @@include('./template/popups/hypothec_call.html')
+            <div class="hidden">
+                @@include('./template/popups/hypothec_call.html')
+            </div>
             @@include('./template/callme.html', {
             "title": "Не хочу искать, перезвоните мне!",
             "margin": 1,
