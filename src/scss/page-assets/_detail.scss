@@ -315,6 +315,9 @@
         margin-bottom: 50px;
         padding-bottom: 35px;
     }
+    &._bg {
+        background-color: rgba($primary, .8);
+    }
     .section__lead {
         font-size: 15px;
         opacity: 1;

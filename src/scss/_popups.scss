@@ -126,6 +126,13 @@
     }
 }
 
+.popup-infrastructure {
+    padding: 0 !important;
+    @include media-breakpoint-up(lg) {
+        width: 1200px;
+    }
+}
+
 @include media-breakpoint-up(lg) {
     .fancybox-container._popup {
         .fancybox-close-small {
@@ -133,6 +140,13 @@
             top: 42px;
             font-size: 16px;
             font-weight: 500;
+        }
+        .popup-cnt._close-ext {
+            overflow: visible;
+            .fancybox-close-small {
+                right: 0;
+                top: -40px;
+            }            
         }
     }
     .popup {

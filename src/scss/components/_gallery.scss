@@ -49,9 +49,9 @@
         }
     }
     .gallery__panorama-toggler {
-        opacity: 0.4;
+        /*opacity: 0.4;*/
         border-radius: $border-radius;
-        background-color: #000000;
+        background-color: $secondary;
         padding: 0 10px;
         font-size: 14px;
         line-height: 23px;

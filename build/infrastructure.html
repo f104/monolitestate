@@ -38,9 +38,7 @@
     <div class="header__main">
         <div class="container">
             <div class="header__main__menu"><a href="#menu" class="header__main__menu__link js-menu-toggler"><i class="icon-menu"></i></a></div>
-            <div class="header__main__logo"><a href="index.html"><img src="img/logo.png"
-                                                                      srcset="img/logo@2x.png 2x,
-                                                                      img/logo@3x.png 3x"></a></div>
+            <div class="header__main__logo"><a href="index.html"><img src="img/logo-old.png" data-newsrc="img/logo-new.png" class="js-logo"></a></div>
             <div class="header__main__fav">
                 <a href="#" class="header__main__fav__link"><i class="icon-star"></i><span class="header__main__md">Избранное</span></a>
                 <div class="header__main__fav__counter header__main__md">10 позиций</div>
@@ -159,43 +157,57 @@
                             <li>
     <div class="input-group _med">
         <label class="checkbox">
-            <input type="checkbox" checked data-type="med">
+            <input type="checkbox" checked data-type="1">
             <span class="checkbox__text">Больницы и поликлиники</span>
         </label>
     </div>
 </li><li>
     <div class="input-group _child">
         <label class="checkbox">
-            <input type="checkbox" checked data-type="child">
+            <input type="checkbox" checked data-type="2">
             <span class="checkbox__text">Детские сады</span>
         </label>
     </div>
 </li><li>
     <div class="input-group _market">
         <label class="checkbox">
-            <input type="checkbox" checked data-type="market">
+            <input type="checkbox" checked data-type="3">
             <span class="checkbox__text">Магазины</span>
         </label>
     </div>
 </li><li>
     <div class="input-group _parking">
         <label class="checkbox">
-            <input type="checkbox" checked data-type="parking">
+            <input type="checkbox" checked data-type="4">
             <span class="checkbox__text">Парковки</span>
         </label>
     </div>
 </li><li>
     <div class="input-group _gym">
         <label class="checkbox">
-            <input type="checkbox" checked data-type="gym">
+            <input type="checkbox" checked data-type="5">
             <span class="checkbox__text">Фитнес-клубы</span>
         </label>
     </div>
 </li><li>
     <div class="input-group _farm">
         <label class="checkbox">
-            <input type="checkbox" checked data-type="farm">
+            <input type="checkbox" checked data-type="6">
             <span class="checkbox__text">Аптеки</span>
+        </label>
+    </div>
+</li><li>
+    <div class="input-group _dot">
+        <label class="checkbox">
+            <input type="checkbox" checked data-type="7">
+            <span class="checkbox__text">Стадионы</span>
+        </label>
+    </div>
+</li><li>
+    <div class="input-group _coin">
+        <label class="checkbox">
+            <input type="checkbox" checked data-type="7">
+            <span class="checkbox__text">Банки</span>
         </label>
     </div>
 </li>
@@ -488,7 +500,8 @@
             lg: 1280
         },
         sliderFadeSpeed: 800,
-        sliderAutoplaySpeed: 8000
+        sliderAutoplaySpeed: 8000,
+        logoUpdateTimeout: 3000
     };
 </script>
 
@@ -547,6 +560,12 @@
                     geo: [56.310564, 43.903821],
                     type: 'parking',
                     title: 'Автостоянка',
+                    address: 'Покровская, 69'
+                },
+                {
+                    geo: [56.309392, 43.929548],
+                    type: 'dot',
+                    title: 'Стадион',
                     address: 'Покровская, 69'
                 }
             ]

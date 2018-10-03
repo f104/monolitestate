@@ -206,6 +206,10 @@ textarea {
                 }
             }
         }
+        &__link {
+            color: inherit;
+            text-decoration: underline;
+        }
     }
     input, textarea {
         display: block;
@@ -374,7 +378,7 @@ textarea {
     }
     &._range, &._fromto {
         input {
-            width: 39px;
+            width: 45px;
             line-height: 34px;
             display: inline;
             padding: 0 5px;
@@ -383,6 +387,9 @@ textarea {
             &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
                 -webkit-appearance: none;
                 margin: 0;
+            }
+            &._md {
+                width: 75px;
             }
             &._lg {
                 width: 95px;
@@ -498,6 +505,10 @@ textarea {
                     background-color: $primary;
                 }
             }
+            &:disabled ~ .checkbox__text {
+                pointer-events: none;
+                opacity: .6;
+            }
         }
         &._disabled {
             pointer-events: none;
@@ -602,7 +613,7 @@ textarea {
     &._opened {
         .pseudo-select__inner {
             box-shadow: 0 2px 18px 0 rgba(12, 27, 63, 0.08);
-            z-index: 1;
+            z-index: 50;
             .pseudo-select__select {
                 background-color: $white;
                 @include border-inset(2px, $primary);

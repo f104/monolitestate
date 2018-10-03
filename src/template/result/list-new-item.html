@@ -1,6 +1,6 @@
 <div @@if (id != ""){id="@@id"} class="result-list__item">
     <div class="result-list__item__images">
-        <div class="realty-list-slider js-realty-list-slider" data-init="false">
+        <a href="detail.html" class="realty-list-slider js-realty-list-slider" data-init="false">
             <ul class="realty-tags">
                 @@for (var i = 0; i < tags.length; i++) {
                 <li><span class="realty-tags__content">`+tags[i]+`</span></li>
@@ -28,7 +28,7 @@
                 <span class="js-realty-list-slider__counter">1</span>
                 из 10
             </span>
-        </div>
+        </a>
     </div>
     <div class="result-list__item__content">
         <h5 class="result-list__item__h">

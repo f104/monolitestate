@@ -1,0 +1,59 @@
+<section class="section container">
+    <h3 class="section__h">Схема квартир в доме*</h3>
+    <p class="section__lead">*Шахматка</p>
+    <div class="chess-wrapper">
+        <div class="chess-legend">
+            <span class="chess-legend__item">
+                <span class="chess-flat _0">ст</span> — студия
+            </span>
+            <span class="chess-legend__item">
+                <span class="chess-flat _1">1к</span> — 1-комнатная
+            </span>
+            <span class="chess-legend__item">
+                <span class="chess-flat _2">2к</span> — 2-комнатная
+            </span>
+            <span class="chess-legend__item">
+                <span class="chess-flat _3">3к</span> — 3-комнатная
+            </span>
+            <span class="chess-legend__item">
+                <span class="chess-flat _4">4к</span> — 4-комнатная
+            </span>
+            <span class="chess-legend__item">
+                <span class="chess-flat _sold">$</span> — продано
+            </span>
+            <span class="chess-legend__item">
+                <span class="chess-flat"></span> — вне условий поиска
+            </span>
+        </div>
+        <div class="js-tabs">
+            <div class="tabs">
+                <ul class="tabs__list js-tabs__list">
+                    <li><a href="#house_1" class="disabled">Дом №1</a></li>
+                    <li><a href="#house_2">Дом №2</a></li>
+                </ul>
+                <div class="tabs__select">
+                    <select class="js-tabs__select js-select2" style="width:100%"></select>
+                </div>
+            </div>
+            <div id="house_1">
+                <div class="js-scrollbar-md-lg scrollbar-outer _hor">
+                    <div class="chess-inner slider-small js-slider-small">
+                        @@include('./chess-section.html', {"section":1})
+                        @@include('./chess-section.html', {"section":2})
+                        @@include('./chess-section.html', {"section":3})
+                        @@include('./chess-section.html', {"section":4})
+                        @@include('./chess-section.html', {"section":5})
+                    </div>
+                </div>
+            </div>
+            <div id="house_2">
+                <div class="js-scrollbar-md-lg scrollbar-outer _hor">
+                    <div class="chess-inner slider-small js-slider-small">
+                        @@include('./chess-section.html', {"section":1})
+                        @@include('./chess-section.html', {"section":2})
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

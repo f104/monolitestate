@@ -14,28 +14,44 @@
                         <ul class="infrastructure__legend__list js-infrastructure__legend__list">
                             @@loop('./template/chunks/infrastructure-checkbox.html', [
                             { 
-                            "type": "med", 
+                            "type": 1, 
+                            "class": "med", 
                             "text": "Больницы и поликлиники"
                             },
                             { 
-                            "type": "child", 
+                            "type": 2, 
+                            "class": "child", 
                             "text": "Детские сады"
                             },
                             { 
-                            "type": "market", 
+                            "type": 3, 
+                            "class": "market", 
                             "text": "Магазины"
                             },
                             { 
-                            "type": "parking", 
+                            "type": 4, 
+                            "class": "parking", 
                             "text": "Парковки"
                             },
                             { 
-                            "type": "gym", 
+                            "type": 5, 
+                            "class": "gym", 
                             "text": "Фитнес-клубы"
                             },
                             { 
-                            "type": "farm", 
+                            "type": 6, 
+                            "class": "farm", 
                             "text": "Аптеки"
+                            },
+                            { 
+                            "type": 7, 
+                            "class": "dot", 
+                            "text": "Стадионы"
+                            },
+                            { 
+                            "type": 7, 
+                            "class": "coin", 
+                            "text": "Банки"
                             }
                             ])
                         </ul>
@@ -101,6 +117,12 @@
                     geo: [56.310564, 43.903821],
                     type: 'parking',
                     title: 'Автостоянка',
+                    address: 'Покровская, 69'
+                },
+                {
+                    geo: [56.309392, 43.929548],
+                    type: 'dot',
+                    title: 'Стадион',
                     address: 'Покровская, 69'
                 }
             ]

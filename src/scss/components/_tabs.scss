@@ -29,6 +29,10 @@
                     background-color: $secondary;
                     color: $white !important;
                 }
+                &.disabled {
+                    background-color: $gray-light;
+                    pointer-events: none;
+                }
             }
         }
     }

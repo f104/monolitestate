@@ -113,6 +113,7 @@ $hypothec-gutter-width: $grid-gutter-width;
             position: relative;
             .hypothec__list__item__inner {
                 display: block;
+                cursor: pointer;
                 text-align: center;
                 color: $body-color;
                 background-color: $white;
@@ -594,7 +595,7 @@ $hypothec-gutter-width: $grid-gutter-width;
         }
         .hypothec-request__row {
             display: flex;
-            flex: 1;
+            flex-grow: 1;
         }
         .hypothec-request__col {
             &._1 {

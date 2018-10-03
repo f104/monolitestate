@@ -52,6 +52,19 @@
             background-color: $white;
         }
     }
+    &._object {
+        left: -23.5px;
+        top: -64px;
+        width: 47px;
+        height: 64px;
+        &._dot {
+            span {
+                top: 15px;
+                width: 17px;
+                height: 17px;
+            }
+        }
+    }
     @each $name, $color in $pm-colors {
         &._#{$name} {
             svg path {

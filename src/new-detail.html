@@ -13,6 +13,7 @@
                 @@include('./template/filters/new-detail.html')
             </section>
             @@include('./template/new/chess.html')
+            @@include('./template/new/chess-tab.html')
             <section class="section container js-tabs">
                 <div class="tabs _noselect">
                     <ul class="tabs__list js-tabs__list">
@@ -31,13 +32,67 @@
                         <span class="tour__intro">3D-тур</span>
                     </div>
                 </div>
-                <div id="onmap" class="new-detail-map map">
-                    <div id="map" class="map__content"></div>
-                    <div class="container map__controls">
-                        <ul class="map__controls__zoom">
-                            <li><i class="sprite map-plus map__control js-map__zoom _in"></i></li>
-                            <li><i class="sprite map-minus map__control js-map__zoom _out"></i></li>
-                        </ul>
+                <div id="onmap">
+                    <div class="infrastructure">
+                        <div class="infrastructure__header">
+                            <h3 class="infrastructure__header__h">Инфраструктура</h3>
+                            <div class="infrastructure__legend">
+                                <ul class="infrastructure__legend__list js-infrastructure__legend__list">
+                                    @@loop('./template/chunks/infrastructure-checkbox.html', [
+                                    { 
+                                    "type": 1, 
+                                    "class": "med", 
+                                    "text": "Больницы и поликлиники"
+                                    },
+                                    { 
+                                    "type": 2, 
+                                    "class": "child", 
+                                    "text": "Детские сады"
+                                    },
+                                    { 
+                                    "type": 3, 
+                                    "class": "market", 
+                                    "text": "Магазины"
+                                    },
+                                    { 
+                                    "type": 4, 
+                                    "class": "parking", 
+                                    "text": "Парковки"
+                                    },
+                                    { 
+                                    "type": 5, 
+                                    "class": "gym", 
+                                    "text": "Фитнес-клубы"
+                                    },
+                                    { 
+                                    "type": 6, 
+                                    "class": "farm", 
+                                    "text": "Аптеки"
+                                    },
+                                    { 
+                                    "type": 7, 
+                                    "class": "dot", 
+                                    "text": "Стадионы"
+                                    },
+                                    { 
+                                    "type": 7, 
+                                    "class": "coin", 
+                                    "text": "Банки"
+                                    }
+                                    ])
+                                </ul>
+                                <a href="#" class="infrastructure__legend__toggler js-infrastructure__legend__toggler">Скрыть легенду</a>
+                            </div>
+                        </div>
+                        <div class="infrastructure__map map">
+                            <div id="map" class="map__content"></div>
+                            <div class="container map__controls">
+                                <ul class="map__controls__zoom">
+                                    <li><i class="sprite map-plus map__control js-map__zoom _in"></i></li>
+                                    <li><i class="sprite map-minus map__control js-map__zoom _out"></i></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div id="progress"></div>
@@ -58,7 +113,66 @@
         </div>
         @@include('./template/foot.html')
         <script>
-            app.newMapData = JSON.parse('{"coords":{"center":[56.29887359770448,43.940897107315834],"zoom":14},"type":"yandex#map","placemarks":[{"coords":[56.29946857633491,43.94109799951145],"params":{"color":"blue","iconContent":"","balloonContentBody":"Дом №1","balloonContentHeader":""}}],"polygons":[],"lines":[],"routes":[]}');
+            app.mapData = {
+                object: {
+                    geo: "[[56.300852493335704,43.93466069787501]]",
+                    title: 'ЖК «Квартет»',
+                    address: 'ул.Широтная, д. 214'
+                },
+                infrastructure: '[{"geo":[56.31495300000000270301825366914272308349609375,43.99995100000000292084223474375903606414794921875],"type":2,"icon":"child","title":"\u0414\u0435\u0442\u0441\u043a\u0438\u0439 \u0441\u0430\u0434","address":"\u041f\u043e\u043a\u0440\u043e\u0432\u0441\u043a\u0430\u044f, 69"},{"geo":[56.32388900000000120371623779647052288055419921875,43.92008700000000231966623687185347080230712890625],"type":6,"icon":"farm","title":"\u0410\u043f\u0442\u0435\u043a\u0430","address":"\u0411\u0435\u043b\u0438\u043d\u0441\u043a\u043e\u0433\u043e, 71"},{"geo":[56.28810299999999955389284878037869930267333984375,43.928842000000003054083208553493022918701171875],"type":5,"icon":"gym","title":"\u0424\u0438\u0442\u043d\u0435\u0441-\u0446\u0435\u043d\u0442\u0440","address":"\u041f\u043e\u043a\u0440\u043e\u0432\u0441\u043a\u0430\u044f, 69"},{"geo":[56.30817900000000264526534010656177997589111328125,44.03273800000000193222149391658604145050048828125],"type":3,"icon":"market","title":"\u0421\u0443\u043f\u0435\u0440\u043c\u0430\u0440\u043a\u0435\u0442","address":"\u041f\u043e\u043a\u0440\u043e\u0432\u0441\u043a\u0430\u044f, 69","logo":"img\/pyaterochka.png"},{"geo":[56.2802099999999967394614941440522670745849609375,43.88596799999999831243258086033165454864501953125],"type":1,"icon":"med","title":"\u0411\u043e\u043b\u044c\u043d\u0438\u0446\u0430","address":"\u041f\u043e\u043a\u0440\u043e\u0432\u0441\u043a\u0430\u044f, 69"},{"geo":[56.3105639999999993960955180227756500244140625,43.90382100000000065165295382030308246612548828125],"type":4,"icon":"parking","title":"\u0410\u0432\u0442\u043e\u0441\u0442\u043e\u044f\u043d\u043a\u0430","address":"\u041f\u043e\u043a\u0440\u043e\u0432\u0441\u043a\u0430\u044f, 69"},{"geo":[56.3093920000000025538611225783824920654296875,43.9295479999999969322743709199130535125732421875],"type":7,"icon":"dot","title":"\u0421\u0442\u0430\u0434\u0438\u043e\u043d","address":"\u041f\u043e\u043a\u0440\u043e\u0432\u0441\u043a\u0430\u044f, 69"},{"geo":[56.306817,43.978434],"type":8,"icon":"coin","title":"\u0411\u0430\u043d\u043a","address":"\u041f\u043e\u043a\u0440\u043e\u0432\u0441\u043a\u0430\u044f, 69"}]',
+                /*infrastructure: [
+                    {
+                        geo: [56.314953, 43.999951],
+                        type: 2,
+                        icon: 'child',
+                        title: 'Детский сад',
+                        address: 'Покровская, 69'
+                    },
+                    {
+                        geo: [56.323889, 43.920087],
+                        type: 6,
+                        icon: 'farm',
+                        title: 'Аптека',
+                        address: 'Белинского, 71'
+                    },
+                    {
+                        geo: [56.288103, 43.928842],
+                        type: 5,
+                        icon: 'gym',
+                        title: 'Фитнес-центр',
+                        address: 'Покровская, 69'
+                    },
+                    {
+                        geo: [56.308179, 44.032738],
+                        type: 3,
+                        icon: 'market',
+                        title: 'Супермаркет',
+                        address: 'Покровская, 69',
+                        logo: 'img/pyaterochka.png'
+                    },
+                    {
+                        geo: [56.280210, 43.885968],
+                        type: 1,
+                        icon: 'med',
+                        title: 'Больница',
+                        address: 'Покровская, 69'
+                    },
+                    {
+                        geo: [56.310564, 43.903821],
+                        type: 4,
+                        icon: 'parking',
+                        title: 'Автостоянка',
+                        address: 'Покровская, 69'
+                    },
+                    {
+                        geo: [56.309392, 43.929548],
+                        type: 7,
+                        icon: 'dot',
+                        title: 'Стадион',
+                        address: 'Покровская, 69'
+                    }
+                ]*/
+            };
         </script>
         <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug"></script>
         <script src="js/detail.js"></script>

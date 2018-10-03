@@ -47,6 +47,7 @@
         min-height: 245px;
         display: flex;
         flex-direction: column;
+        width: 100%;
         @include media-breakpoint-up(md) {
             padding: $container-padding-md;
             border-radius: $border-radius;
@@ -70,6 +71,9 @@
     }
     .news-item__btn {
         width: 116px;
+        &._services {
+            width: 155px;
+        }
     }
     .news-item__date {
         color: rgba($body-color, .5);

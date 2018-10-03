@@ -346,3 +346,13 @@
         }
     }
 }
+.chess-row {
+    @include media-breakpoint-up(md) {
+        &._flex {
+            display: flex;
+            .chess-row__col {
+                margin-right: 40px;
+            }
+        }
+    }
+}

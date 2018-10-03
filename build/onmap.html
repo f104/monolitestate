@@ -38,9 +38,7 @@
     <div class="header__main">
         <div class="container">
             <div class="header__main__menu"><a href="#menu" class="header__main__menu__link js-menu-toggler"><i class="icon-menu"></i></a></div>
-            <div class="header__main__logo"><a href="index.html"><img src="img/logo.png"
-                                                                      srcset="img/logo@2x.png 2x,
-                                                                      img/logo@3x.png 3x"></a></div>
+            <div class="header__main__logo"><a href="index.html"><img src="img/logo-old.png" data-newsrc="img/logo-new.png" class="js-logo"></a></div>
             <div class="header__main__fav">
                 <a href="#" class="header__main__fav__link"><i class="icon-star"></i><span class="header__main__md">Избранное</span></a>
                 <div class="header__main__fav__counter header__main__md">10 позиций</div>
@@ -259,7 +257,7 @@
             </div>
             <div class="input-group">
                 <label class="checkbox">
-                    <input type="checkbox">
+                    <input type="checkbox" disabled>
                     <span class="checkbox__text">Косметический ремонт</span>
                 </label>
             </div>
@@ -663,7 +661,8 @@
             lg: 1280
         },
         sliderFadeSpeed: 800,
-        sliderAutoplaySpeed: 8000
+        sliderAutoplaySpeed: 8000,
+        logoUpdateTimeout: 3000
     };
 </script>
 
