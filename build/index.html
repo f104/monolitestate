@@ -17,7 +17,28 @@
     <link href="css/libs/datepicker/timepicker.css" rel="stylesheet" type="text/css"/>
     <link href="css/common.css" rel="stylesheet" type="text/css">
 </head>
+    <style>
+        .preloader {
+            display: block;
+            background: #fff;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            z-index: 1000;
+        }
+        .preloader__img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
     <body>
+        <div class="preloader">
+            <img class="preloader__img" src="img/logo-preloader.png" alt="Монолит">
+        </div>
         <header class="header">
     <div class="header__top">
         <div class="container">
@@ -1554,7 +1575,9 @@
         <li><a href="detail.html">detail</a></li>
         <li><a href="new.html">new</a></li>
         <li><a href="new-result.html">new-result</a></li>
-        <li><a href="new-detail.html">new-detail</a></li>
+        <li><a href="new-detail_1-agent.html">new-detail 1 agent</a></li>
+        <li><a href="new-detail_2-agent.html">new-detail 2 agent</a></li>
+        <li><a href="new-detail_3-agent.html">new-detail 3 agent</a></li>
         <li><a href="content.html">content</a></li>
         <li><a href="builders.html">builders</a></li>
         <li><a href="builder.html">builder</a></li>

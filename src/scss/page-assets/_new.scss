@@ -186,18 +186,14 @@
     @include media-breakpoint-up(lg) {
         display: flex;
     }
-    &__flat, &__agent {
-        background-color: white;
+    &__flat {
         @include md-full;
+        background-color: white;
+        margin-bottom: 20px;
         padding-top: 20px;
         padding-bottom: 20px;
         @include media-breakpoint-up(lg) {
             padding: $container-padding-md;
-        }
-    }
-    &__flat {
-        margin-bottom: 20px;
-        @include media-breakpoint-up(lg) {
             margin-bottom: 0;
             margin-right: 28px;
             flex-grow: 1;
@@ -327,22 +323,7 @@
         @include media-breakpoint-up(lg) {
             flex-basis: 390px;
             flex-shrink: 0;
-        }
-        &__h {
-            font-size: 18px;
-            text-align: center;
-            margin-bottom: 15px;
-        }
-        .agent {
-            margin-bottom: 20px;
-        }
-        @include media-breakpoint-only(md) {
-            .chess-info__agent__row {
-                @include row($container-padding-md);
-            }
-            .chess-info__agent__col {
-                @include col(50%, $container-padding-md);
-            }
+            display: flex;
         }
     }
 }
@@ -352,6 +333,316 @@
             display: flex;
             .chess-row__col {
                 margin-right: 40px;
+            }
+        }
+    }
+}
+
+.new-agent {
+    $root: &;
+    @include media-breakpoint-up(lg) {
+        background-color: white;
+    }
+    &__head {
+        flex-grow: 1;
+    }
+    &__h {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        @include media-breakpoint-up(md) {
+            margin-top: 50px;
+            margin-bottom: 28px;
+            font-size: 24px;
+            line-height: 1.08;
+            text-align: left;
+        }
+        @include media-breakpoint-up(lg) {
+            margin: 0;
+            padding: 21px $container-padding-md 0;
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+    &__help {
+        display: none;
+        @include media-breakpoint-up(lg) {
+            display: block;
+            padding: 15px $container-padding-md;
+            width: 270px;
+            font-size: 12px;
+            font-weight: 500;
+            opacity: .4;
+        }
+    }
+    &__item-wrapper {
+        margin-bottom: 20px;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
+            border-bottom: 1px solid $gray-light;
+        }
+        &:last-child {
+            margin-bottom: 0;
+            border-bottom-width: 0;
+        }
+    }
+    &__item {
+        @include md-full;
+        background-color: white;
+        padding-top: $container-padding-sm;
+        padding-bottom: $container-padding-sm;
+        @include media-breakpoint-only(md) {
+            display: flex;
+        }
+        @include media-breakpoint-up(md) {
+            padding-top: 26px;
+            padding-bottom: 26px;
+        }
+        @include media-breakpoint-up(lg) {
+            padding: 24px $container-padding-md;
+        }
+        &__head {
+            margin-bottom: 20px;
+            text-align: center;
+            @include media-breakpoint-only(md) {
+                margin-bottom: 0;
+                flex-grow: 1;
+            }
+        }
+        &__foot {
+            @include media-breakpoint-only(md) {
+                width: 50%;
+                margin-left: $container-padding-md;
+                flex-shrink: 0;
+            }
+        }
+        &__img-wrapper {
+            width: 82px;
+            margin: 0 auto 20px;
+            img {
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+        &__name {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        &__phone {
+            margin-bottom: 8px;
+        }
+        &__phone, &__link {
+            font-size: 17px;
+        }
+    }
+    &._many {
+        @include media-breakpoint-down(lg) {
+            display: flex;
+            flex-direction: column;
+        }
+        #{$root} {
+            @include media-breakpoint-up(lg) {
+                &__foot {
+                    border-top: 1px solid $gray-light;
+                }
+            }
+            &__h {
+                @include media-breakpoint-up(lg) {
+                    padding-bottom: 21px;
+                    text-align: left;
+                    border-bottom: 1px solid $gray-light;
+                }
+            }
+            &__item {
+                @include media-breakpoint-only(md) {
+                    align-items: center;
+                }
+                &__head {
+                    @include media-breakpoint-up(md) {
+                        display: flex;
+                        align-items: center;
+                        text-align: left;
+                    }
+                }
+                &__foot {
+                    @include media-breakpoint-only(md) {
+                        width: 203px;
+                    }
+                }
+                &__img-wrapper {
+                    @include media-breakpoint-up(md) {
+                        margin-right: 28px;
+                        margin-left: 0;
+                        margin-bottom: 0;
+                        flex-shrink: 0;
+                        flex-grow: 0;
+                    }
+                }
+                &__name {
+                    @include media-breakpoint-up(lg) {
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                    }
+                }
+                &__phone, &__link {
+                    @include media-breakpoint-up(lg) {
+                        font-size: 14px;
+                    }
+                }
+                .btn {
+                    [class^="icon"] {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &._3 {
+            @include media-breakpoint-up(lg) {
+                #{$root} {
+                    &__item {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        &__head {
+                            margin-bottom: 0;
+                        }
+                        &__foot {
+                            width: 54px;
+                            margin-left: 15px;
+                            flex-shrink: 0;
+                        }
+                        &__img-wrapper {
+                            margin-right: 15px;
+                        }
+                        .btn {
+                            font-size: 0;
+                            [class^="icon"] {
+                                @include transition(color);
+                                font-size: 18px;
+                                display: block;
+                                position: absolute;
+                                top: 0;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &._nochess {
+        background-color: transparent !important;
+        @include media-breakpoint-up(lg) {
+            #{$root} {
+                &__h {
+                    margin-bottom: 28px;
+                    padding: 0;
+                    font-size: 24px;
+                    border-bottom-width: 0;
+                    text-align: left;
+                }
+                &__head {
+                    @include row(28px);
+                }
+                &__foot {
+                    display: none;
+                }
+                &__item-wrapper {
+                    @include col(50%, 28px);
+                    flex-grow: 1;
+                    display: flex;
+                    border-width: 0;
+                }
+                &__item {
+                    width: 100%;
+                    border-radius: $border-radius;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0;
+                    &__head {
+                        padding: 25px;
+                        flex-grow: 1;
+                        margin-bottom: 0;
+                        display: flex;
+                        text-align: left;
+                    }
+                    &__foot {
+                        padding: 25px;
+                        width: 760px;
+                        flex-shrink: 0;
+                        border-left: 1px solid #dfdfdf;
+                    }
+                    &__img-wrapper {
+                        margin-right: 20px;
+                        margin-left: 0;
+                        margin-bottom: 0;
+                    }
+                }
+                &__form {
+                    display: flex;
+                    align-items: flex-end;
+                    .input-group {
+                        margin-bottom: 0;
+                        margin-right: 15px;
+                        &:first-child {
+                            width: 165px;
+                            margin-right: 40px;
+                        }
+                        &._lg {
+                            flex-grow: 1;
+                        }
+                        &._last {
+                            margin-right: 0;
+                        }
+                        .input-help {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        &._many {
+            @include media-breakpoint-up(lg) {
+                #{$root} {
+                    &__item {
+                        &__head {
+                            padding: 20px;
+                        }
+                        &__foot {
+                            padding: 20px;
+                            width: 190px;
+                            border-width: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &._3 {
+            @include media-breakpoint-up(lg) {
+                #{$root} {
+                    &__item-wrapper {
+                        @include col(33.33%, 28px);
+                    }
+                    &__item {
+                        align-items: flex-start;
+                        position: relative;
+                        &__name {
+                            padding-right: 70px;
+                        }
+                        &__foot {
+                            position: absolute;
+                            right: 20px;
+                            top: 21px;
+                            width: 54px;
+                            padding: 0;
+                            margin: 0;
+                        }
+                    }
+                }
             }
         }
     }

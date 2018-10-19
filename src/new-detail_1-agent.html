@@ -8,6 +8,20 @@
         })
         <div class="content">
             @@include('./template/new/detail-header.html')
+
+            <section class="section container">
+                <div class="new-agent _nochess">
+                    <p class="new-agent__h">Появились вопросы? Вам ответит:</p>
+                    <div class="new-agent__head">
+                        @@include('./template/new/new-agent__item.html', {
+                        "img": 5,
+                        "name": "Столбова Ольга Арслановна",
+                        "form": true
+                        })
+                    </div>
+                </div>
+            </section>
+
             <section class="section container new-detail-filter">
                 <h3 class="section__h">Выбрать квартиру</h3>
                 @@include('./template/filters/new-detail.html')
@@ -16,54 +30,24 @@
             <section class="section container">
                 <h3 class="section__h">Схема квартир в доме*</h3>
                 <p class="section__lead">*Шахматка</p>
-                @@include('./template/new/chess-wrapper.html')
+                @@include('./template/new/chess-tab.html')
                 <div class="chess-info">
                     @@include('./template/new/chess-info__flat.html')
                     <div class="chess-info__agent">
                         <div class="new-agent">
-                            <div class="new-agent__row">
-                                <div class="new-agent__col">
-                                    <p class="new-agent__h">Появились вопросы? Вам ответит:</p>
-                                    @@include('./template/agents/item.html', {
-                                    "img": 5,
-                                    "name": "Столбова Ольга Арслановна",
-                                    "post": "",
-                                    "phone": "+7 922 471-16-85",
-                                    "link": "",
-                                    "all": 0,
-                                    "more": 0
-                                    })
-                                </div>
-                                <form class="new-agent__col">
-                                    <div class="input-group">
-                                        <span class="input-text">
-                                            Оставьте ваш номер, и агент перезвонит вам в течение 5 минут
-                                        </span>
-                                    </div>
-                                    <div class="input-group _lg">
-                                        <label>Ваш телефон</label>
-                                        <input class="js-mask__tel">
-                                    </div>
-                                    <div class="input-group">
-                                        <button class="btn _lg _solid">Жду звонка</button>
-                                    </div>
-                                    <div class="input-group _last">
-                                        <span class="input-help">
-                                            Отправляя заявку вы соглашаетесь на обработку персональных данных
-                                        </span>
-                                    </div>
-                                </form>
+                            <p class="new-agent__h">Появились вопросы? Вам ответит:</p>
+                            <div class="new-agent__head">
+                                @@include('./template/new/new-agent__item.html', {
+                                "img": 5,
+                                "name": "Столбова Ольга Арслановна",
+                                "form": true
+                                })
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="section container">
-                <h3 class="section__h">Схема квартир в доме*</h3>
-                <p class="section__lead">*Шахматка</p>
-                @@include('./template/new/chess-tab.html')
-            </section>
             @@include('./template/new/detail-gallery.html')
             @@include('./template/new/detail-content.html')
             @@include('./template/promo-new.html')

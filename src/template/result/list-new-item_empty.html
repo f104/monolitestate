@@ -1,0 +1,80 @@
+<div @@if (id != ""){id="@@id"} class="result-list__item">
+    <div class="result-list__item__images">
+        <a href="detail.html" class="realty-list-slider js-realty-list-slider" data-init="false">
+            <ul class="realty-tags">
+                @@for (var i = 0; i < tags.length; i++) {
+                <li><span class="realty-tags__content">`+tags[i]+`</span></li>
+                }
+            </ul>
+            @@for (var i = 0; i < 1; i++) {
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper _active">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/`+img[i]+`.jpg"
+                     srcset="img/realty/objects/`+img[i]+`@2x.jpg 2x,
+                     img/realty/objects/`+img[i]+`@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            }
+            @@for (var i = 1; i < img.length; i++) {
+            <div class="realty-list-slider__img-wrapper js-realty-list-slider__img-wrapper">
+                <img class="realty-list-slider__img"
+                     src="img/realty/objects/`+img[i]+`.jpg"
+                     srcset="img/realty/objects/`+img[i]+`@2x.jpg 2x,
+                     img/realty/objects/`+img[i]+`@3x.jpg 3x"
+                     alt="alt text">
+            </div>
+            }
+            <span class="realty-list-slider__counter">
+                <span class="js-realty-list-slider__counter">1</span>
+                из 10
+            </span>
+        </a>
+    </div>
+    <div class="result-list__item__content">
+        <h5 class="result-list__item__h">
+            @@title
+        </h5>
+        <p class="result-list__item__builder">
+            Застройщик: <a href="#">ГК «Меридиан»</a>
+        </p>
+        <div class="result-list__item__row">
+            <div class="result-list__item__col _2"></div>
+            <div class="result-list__item__col _3">
+                <ul class="result-list__item__options">
+                    <li>
+                        4 кв. 2017
+                        <span class="result-list__item__help">
+                            срок сдачи
+                        </span>
+                    </li>
+                    <li>
+                        Панель
+                        <span class="result-list__item__help">
+                            стены
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="result-list__item__actions">
+            <div class="result-list__item__actions__compare input-group">
+                <label class="checkbox @@if (compare == -1) {_disabled}">
+                    <input type="checkbox" 
+                           @@if (compare == -1) {disabled}
+                           @@if (compare == 1) {checked}>
+                           <span class="checkbox__text">К сравнению</span>
+                </label>
+            </div>
+            <div class="result-list__item__actions__btn">
+                @@if (fav != -1) {
+                <button class="btn _primary 
+                        result-list__item__actions__btn__compare
+                        @@if (fav == 1) {_active}">
+                    <i class="icon-star"></i>
+                    }
+                </button>
+                <a href="new-detail.html" class="btn _secondary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>

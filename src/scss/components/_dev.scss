@@ -9,13 +9,15 @@
     border-width: 1px 0 0 1px;
     padding: .5rem;
     transition: transform .2s;
-    width: 100px;
     transform: translateX(100%);
     ul {
         padding-left: 1rem;
         line-height: 1.7;
         margin-bottom: 0;
         font-size: 75%;
+    }
+    a {
+        white-space: nowrap;
     }
     .dev__toggler {
         display: block;

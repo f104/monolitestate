@@ -20,18 +20,18 @@ var app = {
         this.initChessFilter();
         this.initialized = true;
     },
-    
-    initLogo: function() {
+
+    initLogo: function () {
         var timeout = appConfig.logoUpdateTimeout || 3000,
-            $logo = $('.js-logo'), newSrc = $logo.data('newsrc'),
-            $newLogo = $('<img>');
+                $logo = $('.js-logo'), newSrc = $logo.data('newsrc'),
+                $newLogo = $('<img>');
         $newLogo.attr('src', newSrc);
-        $newLogo.on('load', function() {
-            setTimeout(function(){
+        $newLogo.on('load', function () {
+            setTimeout(function () {
                 $logo.parent().css('width', $logo.outerWidth());
-                $logo.fadeOut(function(){
+                $logo.fadeOut(function () {
                     $logo.attr('src', $newLogo.attr('src'));
-                    $logo.fadeIn(function(){
+                    $logo.fadeIn(function () {
                         $logo.parent().css('width', 'auto');
                     });
                 });
@@ -225,9 +225,10 @@ var app = {
             } else {
                 $hypothecWrapper.hide();
             }
-            if($('.js-hypothec__cost').length>0){
-				$('.js-hypothec__cost').val(data.filterPrice).blur();
-            }            
+            if ($('.js-hypothec__cost').length > 0) {
+                $('.js-hypothec__cost').val(data.filterPrice).trigger('change');
+                $('.js-hypothec__payment-sum').val(data.filterPrice / 2).trigger('change');
+            }
             if (data.imgFlat) {
                 $imgFlat.attr('href', data.imgFlat);
                 $imgFlat.find('img').attr('src', data.imgFlat);
@@ -451,7 +452,7 @@ var app = {
             if (filters.length !== 0) {
                 if (typeof (filters.komnatnye) != 'undefined') {
                     var rooms = filters['komnatnye'].split(',');
-                    $.each(rooms, function(i, v){
+                    $.each(rooms, function (i, v) {
                         var input = $form.find('[name="rooms"]').filter('[value="' + v + '"]');
                         if (input) {
                             input.prop('checked', true);
@@ -769,6 +770,16 @@ jQuery(function () {
         };
         $('.js-popup').on('click', function () {
             $.fancybox.close();
+            var $target = $('#' + $(this).attr('href').substr(1));
+            var data = $(this).data();
+            if ($target.length && data) {
+                for (var k in data) {
+                    var $input = $target.find('[name="' + k + '"]');
+                    if ($input.length) {
+                        $input.val(data[k]);
+                    }
+                }
+            }
         }).fancybox(options);
         if (window.location.hash) {
             var $cnt = $(window.location.hash);
@@ -844,7 +855,7 @@ jQuery(function () {
 //            console.log(data);
             window.location = data.agent.uri
         });
-        
+
     }
 
     function initValidate() {
@@ -1086,18 +1097,22 @@ jQuery(function () {
             var percent;
             $cost.inputmask("numeric", {
                 suffix: ' руб.',
-                oncomplete: function () {
-                    cost = $(this).val();
-                    $paymentSum.prop('max', cost);
-                    $paymentSumPicker.noUiSlider.updateOptions({
-                        range: {
-                            'min': 0,
-                            'max': cost
-                        }
-                    });
-                    $paymentSum.trigger('change');
-                }
+                oncomplete: recalcPayments
             });
+            $cost.on("change", recalcPayments);
+            function recalcPayments() {
+                cost = $(this).val();
+                $paymentSum.prop('max', cost);
+                $paymentSumPicker.noUiSlider.updateOptions({
+                    range: {
+                        'min': 0,
+                        'max': cost
+                    }
+                });
+                $paymentSumPicker.noUiSlider.set(cost / 2);
+                $paymentSum.trigger('change');
+            }
+            ;
             $paymentSum.on('change', function () {
                 percent = $(this).val() * 100 / cost;
                 if (percent > 100) {
@@ -1202,14 +1217,14 @@ jQuery(function () {
         });
         if (style.length) {
             var uniqueStyle = [];
-            $.each(style, function(i, el){
+            $.each(style, function (i, el) {
                 if ($.inArray(el, uniqueStyle) === -1) {
                     uniqueStyle.push(el);
                 }
             });
             $('<style>' + uniqueStyle.join('') + '</style>').appendTo('head')
         }
-        
+
         function calcPayment(cost, percent) {
             return Math.ceil(cost * percent / 100);
         }
@@ -1226,11 +1241,11 @@ jQuery(function () {
         }
         function setTotal($target, $items) {
             var total = $items.length - $items.filter('[class*="filter"]').length;
-            var a = getNumEnding(total, ['Найдена','Найдено','Найдено']);
-            var b = getNumEnding(total, ['ипотечная программа','ипотечные программы','ипотечных программ']);
+            var a = getNumEnding(total, ['Найдена', 'Найдено', 'Найдено']);
+            var b = getNumEnding(total, ['ипотечная программа', 'ипотечные программы', 'ипотечных программ']);
             $target.text([a, total, b].join(' '));
         }
-        
+
         $('.js-hypothec__slider').slick({
             dots: true,
             arrows: false,

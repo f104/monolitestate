@@ -206,13 +206,17 @@
                 margin-left: 3px;
             }
             .result-list__item__row {
-                justify-content: space-between;
+                justify-content: flex-end;
                 align-items: flex-end;
             }
             .result-list__item__col {
+                &._1 {
+                    flex-grow: 1;
+                }
                 &._2 {
                     order: 3;
                     flex-basis: 100%;
+                    min-height: 24px;
                 }
                 &._3 {
                     flex-basis: auto;

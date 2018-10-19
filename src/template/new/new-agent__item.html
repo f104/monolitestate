@@ -1,0 +1,47 @@
+<div class="new-agent__item-wrapper">
+    <div class="new-agent__item">
+        <div class="new-agent__item__head">
+            <div class="new-agent__item__img-wrapper">
+                <img src="img/agents/@@img.jpg"
+                     srcset="img/agents/@@img@2x.jpg 2x,
+                     img/agents/@@img@3x.jpg 3x"
+                     class="new-agent__item__img" alt="alt text">
+            </div>
+            <div class="new-agent__item__text-wrapper">
+                <div class="new-agent__item__name">@@name</div>
+                <div class="new-agent__item__phone">
+                    <a href="tel:+79224711685">+7 922 471-16-85</a>
+                </div>
+                <div class="new-agent__item__link">
+                    <a class="link-icon" href="mailto:monolit@est.com">long.username@monolitestate.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="new-agent__item__foot">
+            @@if (form) {
+            <form class="new-agent__form">
+                <div class="input-group">
+                    <span class="input-text">
+                        Оставьте ваш номер, и агент перезвонит вам в течение 5 минут
+                    </span>
+                </div>
+                <div class="input-group _lg">
+                    <label>Ваш телефон</label>
+                    <input class="js-mask__tel">
+                </div>
+                <div class="input-group">
+                    <button class="btn _secondary _lg">Жду звонка</button>
+                </div>
+                <div class="input-group _last">
+                    <span class="input-help">
+                        Отправляя заявку вы соглашаетесь на обработку персональных данных
+                    </span>
+                </div>
+            </form>
+            }
+            @@if (!form) {
+            <a href="#agent" class="btn _secondary _lg js-popup" data-agent="@@name"><i class="icon-phone"></i>Жду звонка</a>
+            }
+        </div>
+    </div>
+</div>

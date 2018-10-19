@@ -13,11 +13,11 @@
             @include col(33.33%, 20px);
         }
     }
-    @include media-breakpoint-up(lg) {
+/*    @include media-breakpoint-up(lg) {
         .input-group {
             @include col(20%, 20px);
         }
-    }        
+    }*/
     &._loading {
         opacity: .5;
         pointer-events: none;

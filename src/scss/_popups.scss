@@ -53,6 +53,12 @@
         bottom: 0;
         width: 183px;
     }
+    &._noimg {
+        height: auto;
+        .popup-call__help {
+            margin-right: 0;
+        }
+    }
 }
 .popup-signup {
     .popup-signup__form {

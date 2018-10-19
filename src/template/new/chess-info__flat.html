@@ -1,0 +1,80 @@
+<div class="chess-info__flat js-tabs js-tabs_disconnected">
+    <div class="chess-info__flat__header">
+        <h3 class="chess-info__flat__h">
+            <span class="js-chess-info__title"></span>
+            <i class="icon-star-o"></i>
+        </h3>
+        <div class="tabs _noselect">
+            <ul class="tabs__list js-tabs__list js-chess-info__tabs">
+                <li class="js-chess-info__tabFlat"><a href="#flat">План квартиры</a></li>
+                <li class="js-chess-info__tabFloor"><a href="#floor">План этажа</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="chess-info__flat__content">
+        <div class="chess-info__flat__content__img js-tabs__content">
+            <div id="flat">
+                <a href="#" data-fancybox class="link-icon js-chess-info__imgFlat"
+                   style="display: none">
+                    <img src="" alt="План квартиры">
+                </a>
+            </div>
+            <div id="floor">
+                <a href="#" data-fancybox class="link-icon js-chess-info__imgFloor">
+                    <img src="" alt="План этажа">
+                </a>
+            </div>
+        </div>
+        <div class="chess-info__flat__content__info result-list">
+            <div class="result-list__item">
+                <div class="result-list__item__price">
+                    <span class="result-list__item__price__cost">
+                        <span class="js-chess-info__price"></span> руб.
+                    </span>
+                    <span class="result-list__item__help">
+                        стоимость
+                    </span>
+                </div>
+                <div class="chess-info__flat__content__info__hypothec js-chess-info__hypothec-wrapper">
+                    <div class="result-list__item__hypothec">
+                        <span class="js-chess-info__hypothec"></span> руб./мес.
+                        <span class="result-list__item__help">
+                            в ипотеку
+                        </span>
+                    </div>
+                    <i class="icon-help-circled"></i>
+                </div>
+                <ul class="result-list__item__options">
+                    <li>
+                        <span class="js-chess-info__area"></span> м²
+                        <span class="result-list__item__help">
+                            площадь
+                        </span>
+                    </li>
+                    <li>
+                        <span class="js-chess-info__pricePerSquare"></span> руб.
+                        <span class="result-list__item__help">
+                            цена за м²
+                        </span>
+                    </li>
+                    <li>
+                        <span class="js-chess-info__floor"></span> этаж
+                        <span class="result-list__item__help">
+                            из <span class="js-chess-info__floorsTotal"></span>
+                        </span>
+                    </li>
+                </ul>
+                <div class="result-list__item__actions__btn">
+                    <a href="#visit" class="btn _secondary _solid _lg js-popup">Записаться на просмотр</a>
+                    <a href="#reserve" class="btn _secondary _lg js-popup">Забронировать квартиру</a>
+                </div>
+                <div class="input-group">
+                    <label class="checkbox ">
+                        <input type="checkbox">
+                        <span class="checkbox__text">К сравнению</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

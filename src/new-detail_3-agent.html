@@ -1,0 +1,92 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "Новостройка"
+    })
+    <body>
+        @@include('./template/header.html', {
+        "active": "new"
+        })
+        <div class="content">
+            @@include('./template/new/detail-header.html')
+
+            <section class="section container">
+                <div class="new-agent _nochess _many _3">
+                    <p class="new-agent__h">Появились вопросы? Вам ответят:</p>
+                    <div class="new-agent__head">
+                        @@include('./template/new/new-agent__item.html', {
+                        "img": 5,
+                        "name": "Столбова Ольга Арслановна",
+                        "form": false
+                        })
+                        @@include('./template/new/new-agent__item.html', {
+                        "img": 6,
+                        "name": "Лариса Вадимовна Обмолова",
+                        "form": false
+                        })
+                        @@include('./template/new/new-agent__item.html', {
+                        "img": 8,
+                        "name": "Константин Константинович Константинопольский",
+                        "form": false
+                        })
+                    </div>
+                    <div class="new-agent__foot">
+                        <div class="new-agent__help">
+                            Отправляя заявку вы соглашаетесь на обработку персональных данных
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section container new-detail-filter">
+                <h3 class="section__h">Выбрать квартиру</h3>
+                @@include('./template/filters/new-detail.html')
+            </section>
+
+            <section class="section container">
+                <h3 class="section__h">Схема квартир в доме*</h3>
+                <p class="section__lead">*Шахматка</p>
+                @@include('./template/new/chess-tab.html')
+                <div class="chess-info">
+                    @@include('./template/new/chess-info__flat.html')
+                    <div class="chess-info__agent">
+                        <div class="new-agent _many _3">
+                            <p class="new-agent__h">Появились вопросы? Вам ответят:</p>
+                            <div class="new-agent__head">
+                                @@include('./template/new/new-agent__item.html', {
+                                "img": 5,
+                                "name": "Столбова Ольга Арслановна",
+                                "form": false
+                                })
+                                @@include('./template/new/new-agent__item.html', {
+                                "img": 6,
+                                "name": "Лариса Вадимовна Обмолова",
+                                "form": false
+                                })
+                                @@include('./template/new/new-agent__item.html', {
+                                "img": 8,
+                                "name": "Константин Константинович Константинопольский",
+                                "form": false
+                                })
+                            </div>
+                            <div class="new-agent__foot">
+                                <div class="new-agent__help">
+                                    Отправляя заявку вы соглашаетесь на обработку персональных данных
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="hidden">
+                @@include('./template/popups/visit.html')
+                @@include('./template/popups/reserve.html')
+                @@include('./template/popups/agent.html')
+            </div>
+            @@include('./template/footer.html')
+            @@include('./template/popups-common.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        @@include('./template/foot.html')
+    </body>
+</html>
