@@ -599,7 +599,7 @@ jQuery(function () {
             })
 
             function startProgressbar() {
-                return false;
+//                return false;
                 resetProgressbar();
                 percentTime = 0;
     //            isPause = false;
