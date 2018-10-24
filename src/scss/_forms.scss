@@ -59,6 +59,10 @@ form {
             }
         }
     }
+    &:disabled {
+        opacity: .7;
+        pointer-events: none;
+    }
     &:focus {
         outline: none;
     }
@@ -162,7 +166,7 @@ textarea {
             }
             &._0 {
                 &:after {
-                    width: 20%;
+                    width: 0%;
                     background-color: $red;
                 }
                 ._0 {
@@ -171,7 +175,7 @@ textarea {
             }
             &._1 {
                 &:after {
-                    width: 40%;
+                    width: 33.33%;
                     background-color: $red;
                 }
                 ._1 {
@@ -180,7 +184,7 @@ textarea {
             }
             &._2 {
                 &:after {
-                    width: 60%;
+                    width: 66.66%;
                     background-color: $secondary;
                 }
                 ._2 {
@@ -189,7 +193,7 @@ textarea {
             }
             &._3 {
                 &:after {
-                    width: 80%;
+                    width: 100%;
                     background-color: $green;
                 }
                 ._3 {
@@ -239,7 +243,7 @@ textarea {
                 box-shadow: none;
             }
         }
-        &.error {
+        &.error, &._error {
             @include border-inset(1px, #ff0000);
             background-color: #f2d3d3;
             &:hover{
@@ -335,7 +339,7 @@ textarea {
             &:focus {
                 @include border-inset(2px, $secondary);
             }
-            &.error {
+            &.error, &._error {
                 @include border-inset(1px, #ff0000);
                 background-color: #f2d3d3;
                 &:hover{

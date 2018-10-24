@@ -1,0 +1,21 @@
+.auth {
+    .popup-signup {
+        margin-bottom: 20px;
+        @include media-breakpoint-up(md) {
+            margin-bottom: 30px;
+        }
+        @include media-breakpoint-up(lg) {
+            width: 100%;
+            margin-bottom: 40px;
+            .btn {
+                width: 200px;
+            }
+        }
+        &:not(._login){
+            margin-bottom: 0;
+        }
+        .popup-signup__form .popup-signup__form__login {
+            display: none;
+        }
+    }
+}

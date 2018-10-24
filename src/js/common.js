@@ -64,7 +64,7 @@ var app = {
 //                console.log(query);
                         if (query.length) {
                             $items.each(function () {
-                                $(this).data('select-search').toLowerCase().indexOf(query) === 0 ? $(this).show() : $(this).hide();
+                                $(this).data('select-search').toLowerCase().indexOf(query) != -1 ? $(this).show() : $(this).hide();
                             });
                         } else {
                             $items.show();
@@ -530,7 +530,8 @@ jQuery(function () {
         initValidate();
         initRealtyFilters();
         initRealty();
-        initPassword();
+//        initPassword();
+        initEasyPassword();
         initGallery();
         initHypothec();
         initDatepicker();
@@ -549,80 +550,84 @@ jQuery(function () {
 
     function initMainSlider() {
         var time = appConfig.sliderAutoplaySpeed / 1000;
-        var $bar = $('.js-main-slider-bar'),
-                $slick = $('.js-slider-main'),
-                isPause = false,
-                tick,
-                percentTime;
+        $('.js-slider-main').each(function(){
+            var $bar = $(this).find('.js-slider-main__bar'),
+                    $slick = $(this).find('.js-slider-main__slider'),
+                    isPause = false,
+                    tick,
+                    percentTime;
 
-        if ($slick.length === 0)
-            return;
+            if ($slick.length === 0)
+                return;
 
-        $slick.slick({
-            dots: true,
-            arrows: false,
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            fade: true,
-            speed: appConfig.sliderFadeSpeed
-//            autoplaySpeed: appConfig.sliderAutoplaySpeed,
-        });
-        $slick.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-            if (currentSlide < nextSlide) {
-                $(slick.$slides[currentSlide]).addClass('_fade _left');
-                $(slick.$slides[nextSlide]).addClass('_fade _right');
-            } else {
-                $(slick.$slides[currentSlide]).addClass('_fade _right');
-                $(slick.$slides[nextSlide]).addClass('_fade _left');
+            $slick.slick({
+                dots: true,
+                arrows: false,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                fade: true,
+                adaptiveHeight: true,
+                speed: appConfig.sliderFadeSpeed
+    //            autoplaySpeed: appConfig.sliderAutoplaySpeed,
+            });
+            $slick.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                if (currentSlide < nextSlide) {
+                    $(slick.$slides[currentSlide]).addClass('_fade _left');
+                    $(slick.$slides[nextSlide]).addClass('_fade _right');
+                } else {
+                    $(slick.$slides[currentSlide]).addClass('_fade _right');
+                    $(slick.$slides[nextSlide]).addClass('_fade _left');
+                }
+                clearTimeout(tick);
+                $bar.animate({
+                    width: 0 + '%'
+                }, 100);
+            });
+            $slick.on('afterChange', function (event, slick, currentSlide) {
+                $(slick.$slides[currentSlide]).removeClass('_fade _left _right');
+                startProgressbar();
+            });
+
+            $slick.on({
+                mouseenter: function () {
+                    isPause = true;
+                },
+                mouseleave: function () {
+                    isPause = false;
+                }
+            })
+
+            function startProgressbar() {
+                return false;
+                resetProgressbar();
+                percentTime = 0;
+    //            isPause = false;
+                tick = setInterval(interval, 10);
             }
-            clearTimeout(tick);
-            $bar.animate({
-                width: 0 + '%'
-            }, 100);
-        });
-        $slick.on('afterChange', function (event, slick, currentSlide) {
-            $(slick.$slides[currentSlide]).removeClass('_fade _left _right');
+
+            function interval() {
+                if (isPause === false) {
+                    percentTime += 1 / (time + 0.1);
+                    $bar.css({
+                        width: percentTime + "%"
+                    });
+                    if (percentTime >= 100) {
+                        $slick.slick('slickNext');
+                    }
+                }
+            }
+            function resetProgressbar() {
+                $bar.css({
+                    width: 0 + '%'
+                });
+                clearTimeout(tick);
+            }
+
             startProgressbar();
         });
 
-        $slick.on({
-            mouseenter: function () {
-                isPause = true;
-            },
-            mouseleave: function () {
-                isPause = false;
-            }
-        })
 
-        function startProgressbar() {
-            resetProgressbar();
-            percentTime = 0;
-//            isPause = false;
-            tick = setInterval(interval, 10);
-        }
-
-        function interval() {
-            if (isPause === false) {
-                percentTime += 1 / (time + 0.1);
-                $bar.css({
-                    width: percentTime + "%"
-                });
-                if (percentTime >= 100) {
-                    $slick.slick('slickNext');
-                }
-            }
-        }
-
-
-        function resetProgressbar() {
-            $bar.css({
-                width: 0 + '%'
-            });
-            clearTimeout(tick);
-        }
-
-        startProgressbar();
 
     }
 
@@ -912,6 +917,34 @@ jQuery(function () {
             });
             $('.js-password').keyup();
         }
+    }
+
+    /**
+     * Плохой: 8 знаков, остальных проверок нет
+     Средний: 10 знаков, мин одна буква, мин одна одна цифра
+     Хороший: 12 знаков, плюс проверка на спецзнак и заглавную
+     */
+    function initEasyPassword() {
+        var specials = /[!@#$%^&~]/;
+        $('.js-password').on('keyup', function () {
+            var val = $(this).val().trim(),
+                    cnt = $(this).siblings('.input-help'),
+                    score = 0;
+            cnt.removeClass('_0 _1 _2 _3');
+            if (val.length) {
+                if (val.length >= appConfig.minPasswordLength) {
+                    score = 1;
+                    if (val.length >= 10 && val.search(/\d/) !== -1 && val.search(/\D/) !== -1) {
+                        score = 2;
+                        if (val.length >= 12 && val.search(/[A-Z]/) !== -1 && val.search(specials) !== -1) {
+                            score = 3;
+                        }
+                    }
+                }
+                cnt.addClass('_' + score);
+            }
+        });
+        $('.js-password').keyup();
     }
 
     function initReviewsSlider() {

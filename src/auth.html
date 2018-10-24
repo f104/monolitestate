@@ -1,0 +1,18 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "Авторизация и регистрация"
+    })
+    <body>
+        @@include('./template/header.html', {
+        "active": ""
+        })
+        <div class="content">
+            <section class="section container auth">
+                @@include('./template/popups/login.html')
+                @@include('./template/popups/signup.html')
+            </section>
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        @@include('./template/foot.html')
+    </body>
+</html>
