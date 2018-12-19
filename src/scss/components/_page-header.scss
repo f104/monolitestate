@@ -1,5 +1,21 @@
 .page-header {
     margin-bottom: 40px;
+    &._domclick {
+        .page-header__inner {
+            @include media-breakpoint-up(md) {
+                position: relative;
+                padding-right: 200px;
+            }
+            @include media-breakpoint-up(lg) {
+                padding-right: 330px;
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            .domclick {
+                display: none;
+            }
+        }
+    }
     .page-header__h {
         font-size: 22px;
         font-weight: 300;
@@ -261,7 +277,7 @@
                 margin-bottom: 50px;
             }
             @include media-breakpoint-up(lg) {
-                margin-bottom: 25px;
+                /*margin-bottom: 25px;*/
                 margin-right: 135px;
             }
             img {

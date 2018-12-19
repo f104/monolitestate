@@ -1,0 +1,37 @@
+.results-promo {
+    padding: 20px;
+    &__h {
+        font-size: 32px;
+        font-weight: 300;
+        color: white;
+        margin-bottom: 10px;
+        @include media-breakpoint-up(lg) {
+            font-size: 40px;
+        }
+    }
+    &__lead {
+        color: white;
+        opacity: 0.5;
+        font-size: 16px;
+        margin-bottom: 28px;
+    }
+    &__btn {
+        @include media-breakpoint-up(md) {
+            display: inline-block;
+            width: auto;
+        }
+    }
+    &__content {
+        z-index: 1;
+    }
+    &__img {
+        display: none;
+        @include media-breakpoint-up(md) {
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+        }
+    }
+}

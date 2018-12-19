@@ -152,6 +152,11 @@ $hypothec-gutter-width: $grid-gutter-width;
                     line-height: 0.8;
                 }
             }
+            .domclick {
+                position: absolute;
+                right: 0;
+                top: 162px;
+            }
         }
         &._scroll {
             display: none;

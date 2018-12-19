@@ -3,6 +3,7 @@ jQuery(function () {
 
     $(document).ready(function () {
         initLegend();
+        initPanorama();
         ymaps.ready(initMap);
     });
 
@@ -13,6 +14,59 @@ jQuery(function () {
             $t.toggleClass('_active');
             $c.slideToggle();
             $t.text($t.hasClass('_active') ? 'Показать легенду' : 'Скрыть легенду');
+        });
+    }
+
+    function initPanorama() {
+        if (typeof panellum === undefined) {
+            return;
+        }
+        $('.js-panorama-gallery-nav').slick({
+            dots: false,
+            arrows: true,
+            infinite: false,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            focusOnSelect: true,
+            asNavFor: '.js-panorama-gallery__slider',
+            responsive: [
+                {
+                    breakpoint: appConfig.breakpoint.md,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }
+            ],
+        });
+        $('.js-panorama-gallery').each(function (i, el) {
+            var $slider = $(el).find('.js-panorama-gallery__slider');
+            $slider.slick({
+                dots: false,
+                arrows: true,
+                infinite: false,
+                swipeToSlide: true,
+                swipe: false,
+                draggable: false,
+                asNavFor: '.js-panorama-gallery-nav',
+                responsive: [
+                    {
+                        breakpoint: appConfig.breakpoint.md,
+                        settings: {
+                            arrows: false
+                        }
+                    }
+                ],
+            });
+        });
+        $('.js-panorama').each(function () {
+            var img = $(this).data('panorama');
+            if (img) {
+                pannellum.viewer(this, {
+                    "type": "equirectangular",
+                    "panorama": img,
+                    "hfov": 120
+                });
+            }
         });
     }
 
@@ -73,7 +127,7 @@ jQuery(function () {
                     });
             map.geoObjects.add(placemark);
         }
-        
+
         try {
             app.mapData.infrastructure = JSON.parse(app.mapData.infrastructure);
         } catch (e) {

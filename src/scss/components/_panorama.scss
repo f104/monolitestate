@@ -1,0 +1,9 @@
+.panorama {
+    height: 220px;
+    @include media-breakpoint-up(md) {
+        height: 460px;
+    }
+    @include media-breakpoint-up(lg) {
+        height: 700px;
+    }
+}

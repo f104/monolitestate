@@ -1,0 +1,94 @@
+// fixed right promo
+.fr {
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+    $root: &;
+    position: fixed;
+    top: calc(50% - 45px);
+    right: 0;
+    width: 255px;
+    transform: translateX(100%);
+    transition: transform .4s ease-in-out;
+    z-index: 500;
+    &__content {
+        background-color: white;
+        padding: 16px 22px 22px;
+        border-radius: 0 0 0 7px;
+        &__row {
+            margin-bottom: 22px;
+        }
+        &__h {
+            display: block;
+            margin-bottom: 0;
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 1.36;
+        }
+        &__p {
+            display: block;
+            margin-bottom: 0;
+            font-size: 17px;
+            font-weight: 600;
+            opacity: .5;
+        }
+    }
+    &__toggler {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        width: 77px;
+        border-radius: 5px 0 0 5px;
+        background-color: $secondary;
+        color: white;
+        text-align: center;
+        padding: 9px;
+        cursor: pointer;
+        &__h {
+            display: block;
+            margin-bottom: 0;
+            margin-top: 2px;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.43;
+        }
+        &__p {
+            display: block;
+            margin-bottom: 0;
+            font-size: 10px;
+            font-weight: 600;
+            opacity: .7;
+        }
+        &:before {
+            content: '';
+            width: 36px;
+            height: 36px;
+            transform: translateY(-50%) rotate(-45deg);
+            border-radius: 4px;
+            background-color: $secondary;
+            position: absolute;
+            left: -4px;
+            top: 50%;
+            z-index: -1;
+        }
+        .sprite {
+            font-size: 7px;
+        }
+        .sprite.promo-arrow {
+            position: absolute;
+            left: -2px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform .2s ease-in-out;
+        }
+    }
+    &._active {
+        transform: translateX(0);
+        #{$root}__toggler {
+            .sprite.promo-arrow:before {
+                transform: rotateY(.5turn);
+            }
+        }
+    }
+}

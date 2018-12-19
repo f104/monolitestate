@@ -6,9 +6,9 @@
     content:' ';
     vertical-align:middle;
     display: inline-block;
-    background-image: url("svg/sprite.svg?1");
+    background-image: url("svg/sprite.svg?4");
     background-repeat: no-repeat;
-    background-size: 7.7em 240.1em;
+    background-size: 7.7em 244.8em;
 }
 
 .no-svg .sprite:before {
@@ -215,8 +215,26 @@
 
 
 
-  .sprite.realty-check:before {
+  .sprite.promo-arrow:before {
       background-position: 0em -93.1em;
+      width: 1.2156em;
+      height: 1.1854em;
+  }
+
+
+
+
+  .sprite.promo-rouble:before {
+      background-position: 0em -94.3em;
+      width: 3.5em;
+      height: 3.5em;
+  }
+
+
+
+
+  .sprite.realty-check:before {
+      background-position: 0em -97.8em;
       width: 1.8em;
       height: 1.4em;
   }
@@ -225,7 +243,7 @@
 
 
   .sprite.realty-commerce:before {
-      background-position: 0em -94.5em;
+      background-position: 0em -99.2em;
       width: 3.5em;
       height: 3.4em;
   }
@@ -234,7 +252,7 @@
 
 
   .sprite.realty-commerce-o:before {
-      background-position: 0em -97.9em;
+      background-position: 0em -102.6em;
       width: 3.5em;
       height: 3.4em;
   }
@@ -243,7 +261,7 @@
 
 
   .sprite.realty-new:before {
-      background-position: 0em -101.3em;
+      background-position: 0em -106em;
       width: 5.8em;
       height: 3.4em;
   }
@@ -252,7 +270,7 @@
 
 
   .sprite.realty-new-o:before {
-      background-position: 0em -104.7em;
+      background-position: 0em -109.4em;
       width: 5.8em;
       height: 3.4em;
   }
@@ -261,7 +279,7 @@
 
 
   .sprite.realty-second:before {
-      background-position: 0em -108.1em;
+      background-position: 0em -112.8em;
       width: 3.5em;
       height: 3.5em;
   }
@@ -270,7 +288,7 @@
 
 
   .sprite.realty-second-o:before {
-      background-position: 0em -111.6em;
+      background-position: 0em -116.3em;
       width: 3.5em;
       height: 3.5em;
   }
@@ -279,7 +297,7 @@
 
 
   .sprite.realty-village:before {
-      background-position: 0em -115.1em;
+      background-position: 0em -119.8em;
       width: 3.7em;
       height: 3.7em;
   }
@@ -288,7 +306,7 @@
 
 
   .sprite.realty-village-o:before {
-      background-position: 0em -118.8em;
+      background-position: 0em -123.5em;
       width: 3.7em;
       height: 3.7em;
   }
@@ -297,7 +315,7 @@
 
 
   .sprite.russia:before {
-      background-position: 0em -122.5em;
+      background-position: 0em -127.2em;
       width: 7.7em;
       height: 4.4em;
   }
@@ -306,7 +324,7 @@
 
 
   .sprite.sales-ads:before {
-      background-position: 0em -126.9em;
+      background-position: 0em -131.6em;
       width: 4em;
       height: 4em;
   }
@@ -315,7 +333,7 @@
 
 
   .sprite.sales-car:before {
-      background-position: 0em -130.9em;
+      background-position: 0em -135.6em;
       width: 4.1em;
       height: 3.4em;
   }
@@ -324,7 +342,7 @@
 
 
   .sprite.sales-career:before {
-      background-position: 0em -134.3em;
+      background-position: 0em -139em;
       width: 4.4em;
       height: 4.1em;
   }
@@ -333,7 +351,7 @@
 
 
   .sprite.sales-cost:before {
-      background-position: 0em -138.4em;
+      background-position: 0em -143.1em;
       width: 4.2em;
       height: 4.1em;
   }
@@ -342,7 +360,7 @@
 
 
   .sprite.sales-edu:before {
-      background-position: 0em -142.5em;
+      background-position: 0em -147.2em;
       width: 4.6em;
       height: 3.9em;
   }
@@ -351,7 +369,7 @@
 
 
   .sprite.sales-hand:before {
-      background-position: 0em -146.4em;
+      background-position: 0em -151.1em;
       width: 4em;
       height: 4em;
   }
@@ -360,7 +378,7 @@
 
 
   .sprite.sales-home:before {
-      background-position: 0em -150.4em;
+      background-position: 0em -155.1em;
       width: 4.2em;
       height: 4.6em;
   }
@@ -369,7 +387,7 @@
 
 
   .sprite.sales-hypothec:before {
-      background-position: 0em -155em;
+      background-position: 0em -159.7em;
       width: 2.5821em;
       height: 2.7512em;
   }
@@ -378,7 +396,7 @@
 
 
   .sprite.sales-income:before {
-      background-position: 0em -157.8em;
+      background-position: 0em -162.5em;
       width: 5.7em;
       height: 2.8em;
   }
@@ -387,7 +405,7 @@
 
 
   .sprite.sales-money:before {
-      background-position: 0em -160.6em;
+      background-position: 0em -165.3em;
       width: 3.9em;
       height: 3.9em;
   }
@@ -396,7 +414,7 @@
 
 
   .sprite.sales-photo:before {
-      background-position: 0em -164.5em;
+      background-position: 0em -169.2em;
       width: 4.9em;
       height: 4.1em;
   }
@@ -405,7 +423,7 @@
 
 
   .sprite.sales-problem:before {
-      background-position: 0em -168.6em;
+      background-position: 0em -173.3em;
       width: 4.1em;
       height: 4.1em;
   }
@@ -414,7 +432,7 @@
 
 
   .sprite.sales-ring:before {
-      background-position: 0em -172.7em;
+      background-position: 0em -177.4em;
       width: 4.7em;
       height: 4.7em;
   }
@@ -423,7 +441,7 @@
 
 
   .sprite.sales-stability:before {
-      background-position: 0em -177.4em;
+      background-position: 0em -182.1em;
       width: 3.5em;
       height: 5.1em;
   }
@@ -432,7 +450,7 @@
 
 
   .sprite.seller-1:before {
-      background-position: 0em -182.5em;
+      background-position: 0em -187.2em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -441,7 +459,7 @@
 
 
   .sprite.seller-2:before {
-      background-position: 0em -187.7em;
+      background-position: 0em -192.4em;
       width: 5.5em;
       height: 5.5em;
   }
@@ -450,7 +468,7 @@
 
 
   .sprite.seller-3:before {
-      background-position: 0em -193.2em;
+      background-position: 0em -197.9em;
       width: 5.7em;
       height: 5.6em;
   }
@@ -459,7 +477,7 @@
 
 
   .sprite.seller-4:before {
-      background-position: 0em -198.8em;
+      background-position: 0em -203.5em;
       width: 5.6em;
       height: 5.6em;
   }
@@ -468,7 +486,7 @@
 
 
   .sprite.sweet-home:before {
-      background-position: 0em -204.4em;
+      background-position: 0em -209.1em;
       width: 4.7em;
       height: 4.5em;
   }
@@ -477,7 +495,7 @@
 
 
   .sprite.twitter:before {
-      background-position: 0em -208.9em;
+      background-position: 0em -213.6em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -486,7 +504,7 @@
 
 
   .sprite.twitter-hover:before {
-      background-position: 0em -214.1em;
+      background-position: 0em -218.8em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -495,7 +513,7 @@
 
 
   .sprite.vk:before {
-      background-position: 0em -219.3em;
+      background-position: 0em -224em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -504,7 +522,7 @@
 
 
   .sprite.vk-hover:before {
-      background-position: 0em -224.5em;
+      background-position: 0em -229.2em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -513,7 +531,7 @@
 
 
   .sprite.youtube:before {
-      background-position: 0em -229.7em;
+      background-position: 0em -234.4em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -522,7 +540,7 @@
 
 
   .sprite.youtube-hover:before {
-      background-position: 0em -234.9em;
+      background-position: 0em -239.6em;
       width: 5.2em;
       height: 5.2em;
   }

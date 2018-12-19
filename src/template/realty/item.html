@@ -4,6 +4,13 @@
             @@if (oldprice != '') {
             <i class="sprite oldprice"></i>
             }
+            <span class="domclick">
+                <img class="domclick__logo" src="img/sberbank.svg" alt="sberbank">
+                <span class="domclick__content">
+                    скидка
+                    <span class="domclick__percent">0,3%</span>
+                </span>
+            </span>
             <ul class="realty-tags">
                 @@for (var i = 0; i < tags.length; i++) {
                 <li><span class="realty-tags__content">`+tags[i]+`</span></li>

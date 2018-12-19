@@ -133,6 +133,12 @@
                 }
             }
         }
+        .domclick {
+            position: absolute;
+            right: 0;
+            bottom: 20px;
+            z-index: 1;
+        }
     }
     .slider-small.slick-slider {
         margin-bottom: 68px;

@@ -109,10 +109,12 @@
                 font-weight: normal;
                 margin-bottom: 5px;
             }
-            .onmap__list__item__content__muted {
+            .onmap__list__item__content__text {
                 font-size: 12px;
-                opacity: .5;
                 margin-bottom: 5px;
+                &__muted {
+                    opacity: .5;                    
+                }
             }
             .onmap__list__item__content__a {
                 font-size: 14px;

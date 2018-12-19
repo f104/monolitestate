@@ -16,6 +16,9 @@ body {
     letter-spacing: normal;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    &.menu-opened {
+        overflow: hidden;
+    }
 }
 @media (hover: none) {
     a:hover { color: inherit !important; }
@@ -39,9 +42,20 @@ body {
 .hidden {
     display: none !important;
 }
-@include media-breakpoint-down(md) {
-    .hidden-sm {
+.hidden-sm {
+    @include media-breakpoint-down(md) {
         display: none !important;
+    }
+}
+.visible-sm {
+    @include media-breakpoint-up(md) {
+        display: none !important;
+    }
+}
+.visible-md {
+    display: none !important;
+    @include media-breakpoint-up(md) {
+        display: initial;
     }
 }
 .necessaty_fields {
@@ -156,6 +170,14 @@ a:not(.link-icon), .link {
     }
 }
 
+.bannerz-link {
+    display: block;
+    width: 100%;
+    &:after {
+        content: none !important;
+    }
+}
+
 @import "sprite";
 @import "header";
 @import "sliders";
@@ -204,6 +226,10 @@ a:not(.link-icon), .link {
 @import "components/map";
 @import "components/tour";
 @import "components/infrastructure";
+@import "components/results-promo";
+@import "components/fixed-right";
+@import "components/domclick";
+@import "components/panorama";
 @import "components/dev";
 
 .preloader {

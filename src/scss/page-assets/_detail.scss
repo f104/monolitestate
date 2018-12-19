@@ -225,6 +225,11 @@
                 }
             }
         }
+        .domclick {
+            @include media-breakpoint-up(md) {
+                display: none;
+            }
+        }
     }
     .detail__agent {
         margin-left: - $container-padding-sm;

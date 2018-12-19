@@ -108,6 +108,9 @@
     &._4 {
         background-image: linear-gradient(135deg, #16222a, #3a6073);
     }
+    &._commerce {
+        background-image: linear-gradient(135deg, #B76541, #d7cc54);
+    }
     &._sold {
         background-image: linear-gradient(315deg, #ed8a64, #d65234);
     }
@@ -116,6 +119,7 @@
     }
     &._filtered {
         background-image: none;
+        background-color: transparent;
         color: transparent;
         pointer-events: none;
     }

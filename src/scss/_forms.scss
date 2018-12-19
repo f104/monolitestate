@@ -213,6 +213,9 @@ textarea {
         &__link {
             color: inherit;
             text-decoration: underline;
+            &:after {
+                content: none;
+            }
         }
     }
     input, textarea {

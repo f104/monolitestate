@@ -90,6 +90,27 @@
             }
         }
     }
+    &__hint {
+        background-color: $primary;
+        color: white;
+        padding: 5px;
+        white-space: nowrap;
+        font-size: 11px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -130%);
+        &:after {
+            content: '';
+            border-color: $primary transparent transparent;
+            border-width: 5px;
+            border-style: solid;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
 }
 
 .map {
