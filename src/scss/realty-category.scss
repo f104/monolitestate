@@ -1,0 +1,17 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "variables";
+@import "mixins";
+
+@import "components/realty-form";
+@import "components/find-on-map";
+@import "components/tabs";
+@import "components/realty-list-slider";
+@import "components/domclick";
+@import "components/sales-list";
+@import "components/hypothec-list";
+@import "components/services";
+@import "page-assets/realty";
+@import "page-assets/reviews";
+@import "components/agents";

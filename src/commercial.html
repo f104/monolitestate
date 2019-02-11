@@ -2,6 +2,7 @@
     @@include('./template/head.html', {
     "name": "Коммерческая недвижимость"
     })
+    @@include('./template/preloader-head.html')
     <body>
         @@include('./template/header.html', {
         "active": "commercial"
@@ -13,11 +14,13 @@
             "text": "Искать недвижимость для бизнеса на карте"
             })
             @@include('./template/realty/commercial.html')
+            <!--
             @@include('./template/promo.html', {
             "img": 3,
             "title": "Новые офисы<br>на Долгопрудной!",
             "subtitle": ""
             })
+            -->
             @@include('./template/agents.html')
             @@include('./template/sales/realty.html')
             @@include('./template/callme.html', {
@@ -27,11 +30,13 @@
             "img": "call1",
             "subscribe": 0
             })
+            <!--
             @@include('./template/promo.html', {
             "img": 3,
             "title": "Торговые площади<br>со скидкой",
             "subtitle": " Только с 5 по 20 августа"
             })
+            -->
             @@include('./template/hypothec/section.html', {
             "title": "Ипотека на коммерческую недвижимость"
             })
@@ -44,6 +49,8 @@
             @@include('./template/popups-common.html')
             <div class="content__overlay js-menu-overlay"></div>
         </div>
-        @@include('./template/foot.html', {"all": true})
+        @@include('./template/foot.html', {"all": false})
+        <link href="css/realty-category.css" rel="stylesheet" type="text/css">
+        @@include('./template/preloader-foot.html')
     </body>
 </html>

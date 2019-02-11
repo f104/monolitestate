@@ -2,6 +2,7 @@
     @@include('./template/head.html', {
     "name": "Новости"
     })
+    @@include('./template/preloader-head.html')
     <body>
         @@include('./template/header.html', {
         "active": ""
@@ -24,6 +25,8 @@
             @@include('./template/popups-common.html')
             <div class="content__overlay js-menu-overlay"></div>
         </div>
-        @@include('./template/foot.html', {"all": true})
+        @@include('./template/foot.html', {"all": false})
+        <link href="css/news.css" rel="stylesheet" type="text/css">
+        @@include('./template/preloader-head.html')
     </body>
 </html>

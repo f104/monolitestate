@@ -6,6 +6,24 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
 </head>
+    <style>
+    .preloader {
+        display: block;
+        background: #fff;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 1000;
+    }
+    .preloader__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
     <body>
         <header class="header">
     <div class="header__top">
@@ -673,13 +691,6 @@
 <link href="css/dev.css" rel="stylesheet" type="text/css">
 
 
-    <link href="css/libs/nouislider.min.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/datepicker.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/cell.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/navigation.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/timepicker.css" rel="stylesheet" type="text/css"/>
-    <link href="css/all.css" rel="stylesheet" type="text/css">
-
 
 <script>
     var appConfig = {
@@ -706,5 +717,11 @@
 <script src="js/libs/nouislider.min.js"></script>
 <script src="js/libs/datepicker.min.js"></script>
 <script src="js/common.js"></script>
+        <link href="css/news-detail.css" rel="stylesheet" type="text/css">
+        <style>
+    .preloader {
+        display: none !important;
+    }
+</style>
     </body>
 </html>

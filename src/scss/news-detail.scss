@@ -1,0 +1,10 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "variables";
+@import "mixins";
+
+@import "components/main-slider";
+@import "components/rte";
+@import "components/news-detail";
+@import "components/news-list";
