@@ -1,0 +1,107 @@
+/*
+Форма заявки на ипотеку
+*/
+.hypothec-form {
+    &:first-child {
+        margin-top: - map_get($header-margin-bottom, sm);
+    }
+    background-image: linear-gradient(346deg, #7f7fc7, #494995);
+    .hypothec-form__feat {
+        @include list-unstyled;
+        margin-left: -18px;
+        margin-right: -18px;
+        margin-bottom: 0;
+        text-align: center;
+        font-size: 0;
+        .hypothec-form__feat__item {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            width: 120px;
+            text-align: center;
+            color: $white;
+            margin-left: 18px;
+            margin-right: 18px;
+            margin-bottom: 35px;
+            .hypothec-form__feat__item__text {
+                font-size: $font-size-base;
+                font-weight: 600;
+                white-space: nowrap;
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
+            }
+            .hypothec-form__feat__item__accent {
+                display: block;
+                width: 120px;
+                line-height: 120px;
+                border-radius: 50%;
+                font-size: 43px;
+                font-weight: 300;
+                margin: 50px 0 35px;
+                background-color: $white;
+                color: $body-color;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hypothec-form__feat__item__link {
+                @include link-inverse;
+                font-size: 17px;
+                white-space: nowrap;
+                display: block;
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+@include media-breakpoint-up(md) {
+    .hypothec-form {
+        background-image: linear-gradient(45deg, #7f7fc7, #494995);
+        .input-group {
+            width: 311px;
+        }
+        .hypothec-form__feat {
+            text-align: left;
+            margin-left: - $container-padding-md;
+            margin-right: - $container-padding-md;
+            .hypothec-form__feat__item {
+                margin-left: 38px;
+                margin-right: 38px;
+                margin-bottom: 0;
+                &:first-of-type {
+                    margin-left: $container-padding-md;
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .hypothec-form {
+        &:first-child {
+            margin-top: - map_get($header-margin-bottom, lg);
+        }
+        background-image: linear-gradient(20deg, #7f7fc7, #494995);
+        .hypothec-form__wrapper {
+            display: flex;
+            .hypothec-form__col {
+                &:first-of-type {
+                    flex-basis: 730px;
+                }
+            }
+        }
+        .hypothec-form__feat {
+            text-align: left;
+            margin-left: -13px;
+            margin-right: -13px;
+            .hypothec-form__feat__item {
+                margin-left: 13px;
+                margin-right: 13px;
+            }
+        }
+    }
+}

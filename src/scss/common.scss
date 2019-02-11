@@ -6,9 +6,8 @@
 @import "node_modules/bootstrap/scss/reboot";
 @import "node_modules/bootstrap/scss/grid";
 @import "node_modules/bootstrap/scss/utilities/embed";
-@import "libs/select2/core.scss";
+@import "libs/select2/core.scss"; // используется в фильтре на бою
 @import "libs/select2/theme/custom/layout.scss";
-@import "libs/select2/theme/agents/layout.scss";
 
 body {
     font-style: normal;
@@ -178,60 +177,100 @@ a:not(.link-icon), .link {
     }
 }
 
+@mixin animate-spin {
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+  display: inline-block;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
 @import "sprite";
 @import "header";
 @import "sliders";
 @import "forms";
 @import "popups";
 @import "footer";
-@import "page-assets/about";
-@import "page-assets/hypothec";
-@import "page-assets/realty";
-@import "page-assets/builders";
-@import "page-assets/reviews";
-@import "page-assets/result";
-@import "page-assets/content";
-@import "page-assets/404";
-@import "page-assets/agents";
-@import "page-assets/detail";
-@import "page-assets/news";
-@import "page-assets/contacts";
-@import "page-assets/work";
-@import "page-assets/seller";
-@import "page-assets/analytic";
-@import "page-assets/onmap";
-@import "page-assets/new";
-@import "page-assets/auth";
 @import "components/section";
-@import "components/realty-index";
 @import "components/filters";
-@import "components/tabs";
-@import "components/tags";
-@import "components/promo";
-@import "components/sales";
-@import "components/agents";
 @import "components/seo";
 @import "components/social";
-@import "components/services";
 @import "components/callme";
-@import "components/find-on-map";
-@import "components/realty-form";
-@import "components/realty-subscribe";
-@import "components/realty-list-slider";
 @import "components/page-header";
-@import "components/list-header";
-@import "components/gallery";
 @import "components/scrollbar";
-@import "components/alphabet";
-@import "components/map";
-@import "components/tour";
-@import "components/infrastructure";
-@import "components/results-promo";
 @import "components/fixed-right";
-@import "components/domclick";
-@import "components/panorama";
-@import "components/dev";
-
-.preloader {
-    display: none !important;
-}

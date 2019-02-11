@@ -23,9 +23,9 @@
                             </ul>
                         </div>
                         <div class="page-header__col page-header__subscribe">
-                            <a href="#subscribe" class="btn _solid _lg js-popup">
+                            <button data-src="#subscribe" class="btn _solid _lg js-popup">
                                 Подписаться на обновления
-                            </a>
+                            </button>
                             <span class="page-header__subscribe__text">
                                 Будьте в курсе снижения цен по вашему запросу
                             </span>
@@ -52,6 +52,6 @@
             @@include('./template/popups-common.html')
             <div class="content__overlay js-menu-overlay"></div>
         </div>
-        @@include('./template/foot.html')
+        @@include('./template/foot.html', {"all": true})
     </body>
 </html>

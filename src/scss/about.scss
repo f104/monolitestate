@@ -1,0 +1,12 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "variables";
+@import "mixins";
+
+@import "components/tabs";
+@import "components/sales-list";
+@import "components/news-list";
+@import "components/rte";
+@import "page-assets/about";
+@import "page-assets/reviews";

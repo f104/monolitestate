@@ -723,7 +723,12 @@ jQuery(function () {
         $('.js-menu-toggler').on('click', function (e) {
             e.preventDefault();
             var href = $(this).attr('href');
-            $('.js-menu-toggler[href="' + href + '"]').toggleClass('_active');
+            if (href) {
+                $('.js-menu-toggler[href="' + href + '"]').toggleClass('_active');
+            } else {
+                href = $(this).data('href');
+                $('.js-menu-toggler[data-href="' + href + '"]').toggleClass('_active');
+            }
             $(href).toggleClass('_active');
             if ($('.js-menu._active').length) {
                 $('.js-menu-overlay').show();
@@ -803,13 +808,15 @@ jQuery(function () {
         };
         $('.js-popup').on('click', function () {
             $.fancybox.close();
-            var $target = $('#' + $(this).attr('href').substr(1));
-            var data = $(this).data();
-            if ($target.length && data) {
-                for (var k in data) {
-                    var $input = $target.find('[name="' + k + '"]');
-                    if ($input.length) {
-                        $input.val(data[k]);
+            if ($(this).attr('href')) {
+                var $target = $('#' + $(this).attr('href').substr(1));
+                var data = $(this).data();
+                if ($target.length && data) {
+                    for (var k in data) {
+                        var $input = $target.find('[name="' + k + '"]');
+                        if ($input.length) {
+                            $input.val(data[k]);
+                        }
                     }
                 }
             }
@@ -1047,6 +1054,7 @@ jQuery(function () {
 
     function initGallery() {
         $('.js-gallery-nav').slick({
+            lazyLoad: 'ondemand',
             dots: false,
             arrows: true,
             infinite: false,
@@ -1067,11 +1075,11 @@ jQuery(function () {
             var $slider = $(el).find('.js-gallery__slider');
             var $current = $(el).find('.js-gallery__current');
             $slider.slick({
+                lazyLoad: 'ondemand',
                 dots: false,
                 arrows: true,
                 infinite: true,
                 swipeToSlide: true,
-                draggable: false,
                 asNavFor: '.js-gallery-nav',
                 responsive: [
                     {
@@ -1085,7 +1093,7 @@ jQuery(function () {
             $slider.on('afterChange', function (event, slick, currentSlide) {
                 $current.text(++currentSlide);
             });
-            var $links = $slider.find('a.slide:not(.slick-cloned)');
+            var $links = $slider.find('.slide:not(.slick-cloned)');
             $(el).find('.js-gallery__total').text($links.length);
             $links.on('click', function () {
                 $.fancybox.open($links, {
@@ -1096,7 +1104,7 @@ jQuery(function () {
             });
         });
     }
-    
+
     /**
      * Функция возвращает окончание для множественного числа слова на основании числа и массива окончаний
      * param  iNumber Integer Число на основе которого нужно сформировать окончание

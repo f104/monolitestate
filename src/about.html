@@ -2,6 +2,7 @@
     @@include('./template/head.html', {
     "name": "О компании"
     })
+    @@include('./template/preloader-head.html')
     <body>
         @@include('./template/header.html', {
         "active": ""
@@ -231,6 +232,9 @@
             @@include('./template/popups-common.html')
             <div class="content__overlay js-menu-overlay"></div>
         </div>
-        @@include('./template/foot.html')
+        @@include('./template/foot.html', {"all": false})
+        
+        <link href="css/about.css" rel="stylesheet" type="text/css">
+        @@include('./template/preloader-head.html')
     </body>
 </html>

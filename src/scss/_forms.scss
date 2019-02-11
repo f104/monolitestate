@@ -504,6 +504,13 @@ textarea {
                 background-color: transparent;
                 @include transition(background-color)
             }
+            &__hidden-link {
+                color: inherit;
+                pointer-events: none;
+                &:after {
+                    content: none;
+                }
+            }
         }
         input {
             display: none;

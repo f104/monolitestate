@@ -30,6 +30,80 @@
     &._nomargin {
         margin-bottom: 0;
     }
+    &._builders {
+        .builders-list {
+            margin-bottom: 64px;
+            @include media-breakpoint-up(md) {
+                margin-bottom: 16px;
+            }
+            @include media-breakpoint-only(sm) {
+                .builders-list__item {
+                    height: 468px;
+                    .builders-list__item__inner {
+                        height: 100%;
+                    }
+                    .builders-list__item__img-wrapper {
+                        height: 110px;
+                    }
+                    .builders-list__item__name {
+                        font-size: 21px;
+                        line-height: 1.24;
+                        height: 60px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .builders-list__item__rate {
+                        height: 95px;
+                        .builders-list__item__accent {
+                            font-size: 35px;
+                        }
+                    }
+                }
+            }
+        }
+        .section__button._more {
+            display: none;
+            @include media-breakpoint-up(md) {
+                display: block;
+            }
+        }
+    }
+    &._about {
+        @include media-breakpoint-up(md) {
+            .btn {
+                width: 188px;
+            }
+        }
+    }
+    &._hypothec {
+        .section__button._more {
+            display: none;
+            @include media-breakpoint-up(md) {
+                display: block;
+            }
+        }
+    }
+    &._news {
+        .section__button._more {
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+        }
+        .scroll-wrapper {
+            margin-bottom: 40px;
+        }
+        .news-related-list {
+            @include media-breakpoint-up(lg) {
+                @include row(27px);
+                margin-bottom: 13px;
+                .news-item {
+                    @include col(33.33%, 27px);
+                    margin-bottom: 27px;
+                }
+            }
+        }
+    }
 }
 @include media-breakpoint-up(md) {
     .section {

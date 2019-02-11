@@ -1,0 +1,115 @@
+/*
+Список ипотечный программ
+*/
+
+$hypothec-gutter-width: $grid-gutter-width;
+
+.hypothec-list {
+    margin-bottom: 64px;
+    .hypothec-list__item {
+        height: 338px;
+        margin-bottom: 10px;
+        position: relative;
+        .hypothec-list__item__inner {
+            display: block;
+            cursor: pointer;
+            text-align: center;
+            color: $body-color;
+            background-color: $white;
+            border-radius: $border-radius;
+            padding: 0 30px;
+            height: 100%;
+            &:after {
+                content: none;
+            }
+        }
+        .hypothec-list__item__img-wrapper {
+            display: flex;
+            height: 115px;
+            align-items: center;
+            justify-content: center;
+        }
+        .hypothec-list__item__rate {
+            display: block;
+            border-top: 1px solid $gray-light;
+            border-bottom: 1px solid $gray-light;
+            margin: 0 10px 23px;
+            height: 115px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .hypothec-list__item__muted {
+                display: block;
+                opacity: 0.5;
+                font-size: 14px;
+                margin-bottom: 9px;
+            }
+            .hypothec-list__item__accent {
+                display: block;
+                font-size: 55px;
+                font-weight: 300;
+                line-height: 0.8;
+            }
+        }
+        .domclick {
+            position: absolute;
+            right: 0;
+            top: 162px;
+        }
+    }
+    &._scroll {
+        display: none;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .hypothec-list {
+        @include row($hypothec-gutter-width);
+        margin-bottom: 16px;
+        .hypothec-list__item {
+            @include col(50%, $hypothec-gutter-width);
+            margin-bottom: 32px;
+            .hypothec-list__item__inner {
+                @include hover-up();
+            }
+        }
+        &._scroll {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-top: 10px;
+            margin-bottom: 0;
+            &:after {
+                content: '';
+                display: block;
+                width: $container-padding-md - $hypothec-gutter-width / 2;
+                flex-shrink: 0;
+            }
+            .hypothec-list__item {
+                margin-bottom: 20px;
+                width: 306px;
+                flex: 0 0 auto;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .hypothec-list {
+        @include row($hypothec-gutter-width);
+        margin-bottom: 13px;
+        .hypothec-list__item {
+            @include col(25%, $hypothec-gutter-width);
+            margin-bottom: 26px;
+        }
+        &._scroll {
+            &:after {
+                content: none;
+            }
+            .hypothec-list__item {
+                margin-bottom: 20px;
+                width: 306px;
+                flex: 0 0 auto;
+            }
+        }
+    }
+}

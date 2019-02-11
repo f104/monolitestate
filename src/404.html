@@ -38,6 +38,14 @@
             @@include('./template/popups-common.html')
             <div class="content__overlay js-menu-overlay"></div>
         </div>
-        @@include('./template/foot.html')
+        @@include('./template/foot.html', {"all": false})
+        
+        <link href="css/404.css" rel="stylesheet" type="text/css">
+        <style>
+            .preloader {
+                display: none !important;
+            }
+        </style>
+        
     </body>
 </html>

@@ -156,7 +156,7 @@ jQuery(function () {
         ], {
             hintContent: "Щёлоковский Хутор"
         }, {
-            fillColor: '#ff9d00',
+            fillColor: 'violet',
             strokeColor: '#ffffff',
             opacity: 0.7,
             strokeWidth: 2,

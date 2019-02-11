@@ -58,14 +58,23 @@ jQuery(function () {
                 ],
             });
         });
+        var v = [];
         $('.js-panorama').each(function () {
             var img = $(this).data('panorama');
             if (img) {
-                pannellum.viewer(this, {
+                var viewer = pannellum.viewer(this, {
                     "type": "equirectangular",
                     "panorama": img,
-                    "hfov": 120
+                    "hfov": 120,
+                    "autoLoad": true,
                 });
+                var $tabs = $(this).parents('.js-tabs');
+                if ($tabs.length) {
+                    $tabs.bind('easytabs:after', function () {
+                        viewer.getRenderer().resize();
+                        viewer.setYaw(viewer.getYaw());
+                    });
+                }
             }
         });
     }

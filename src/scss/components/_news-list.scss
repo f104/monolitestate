@@ -1,0 +1,109 @@
+.news-list {
+    margin-left: - $container-padding-sm;
+    margin-right: - $container-padding-sm;
+    @include media-breakpoint-up(md) {
+        @include row(26px);
+    }
+    .news-item {
+        margin-bottom: 20px;
+        @include media-breakpoint-up(md) {
+            @include col(50%, 26px);
+            margin-bottom: 26px;
+        }
+        @include media-breakpoint-up(lg) {
+            @include col(33.33%, 26px);
+        }
+    }
+}
+
+.news-related-list {
+    position: relative;
+    margin-bottom: 70px;
+    @include media-breakpoint-only(md) {
+        @include row(28px);
+        flex-wrap: nowrap;
+        &:after {
+            @include scrollbar-spacer(16px);
+        }
+    }
+    @include media-breakpoint-up(md) {
+        margin-bottom: 40px;
+    }
+    .news-item {
+        border-radius: $border-radius;
+        @include media-breakpoint-only(md) {
+            @include col(382px, 28px);
+        }
+    }
+}
+
+.news-item {
+    display: flex !important;
+    .news-item__inner {
+        position: relative;
+        overflow: hidden;
+        background-color: $white;
+        padding: $container-padding-sm;
+        min-height: 245px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        @include media-breakpoint-up(md) {
+            padding: $container-padding-md;
+            border-radius: $border-radius;
+            min-height: 265px;
+        }
+    }
+    .news-item__h {
+        font-size: 19px;
+        font-weight: normal;
+        margin-bottom: 24px;
+    }
+    .news-item__intro {
+        font-size: 14px;
+        margin-bottom: 24px;
+        flex: 1;
+    }
+    .news-item__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .news-item__btn {
+        width: 116px;
+        &._services {
+            width: 155px;
+        }
+    }
+    .news-item__date {
+        color: rgba($body-color, .5);
+        font-size: 15px;
+        [class^="icon-"] {
+            font-size: 14px;
+            color: #7e7e7e;
+            vertical-align: baseline;
+        }
+    }
+    .news-item__img-wrapper {
+        @include bg-img-inner(#000, .65);
+        z-index: -1;
+    }
+    .news-item__img {
+        @include bg-img-100;
+    }
+    &._img {
+        .news-item__inner {
+            color: $white;
+            background-color: transparent;
+        }
+        .news-item__btn {
+            color: $white;
+        }
+        .news-item__date {
+            color: $white;
+            [class^="icon-"] {
+                color: $white;
+            }
+        }
+    }
+}

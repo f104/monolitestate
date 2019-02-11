@@ -24,6 +24,11 @@ body {
                 width: 19px;
                 font-size: 12px;
                 color: $body-color;
+                border-width: 0;
+                padding: 0;
+                background-color: transparent;
+                outline: none;
+                cursor: pointer;
                 @include link-in-text;
                 &._active {
                     .icon-menu {
@@ -281,8 +286,17 @@ body {
                     flex-grow: 0;
                     text-align: center;
                     .header__menu__first__toggler {
+                        color: $white;
+                        background-color: transparent;
+                        outline: none;
+                        cursor: pointer;
                         opacity: 1;
                         line-height: 50px;
+                        display: block;
+                        width: 100%;
+                        border-width: 0;
+                        padding: 0;
+                        font-size: 12px;
                         &._active {
                             .icon-menu {
                                 font-size: 14.3px;

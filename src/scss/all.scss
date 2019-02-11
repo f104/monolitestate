@@ -1,0 +1,327 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "variables";
+@import "mixins";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/utilities/embed";
+@import "libs/select2/core.scss";
+@import "libs/select2/theme/custom/layout.scss";
+@import "libs/select2/theme/agents/layout.scss";
+
+body {
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    &.menu-opened {
+        overflow: hidden;
+    }
+}
+@media (hover: none) {
+    a:hover { color: inherit !important; }
+}
+.container {
+    padding: 0 $container-padding-sm;
+}
+@include media-breakpoint-up(md) {
+    .container {
+        padding: 0 $container-padding-md;
+    }
+}
+@include media-breakpoint-up(lg) {
+    .container {
+        padding: 0 $container-padding-lg;
+    }
+}
+.flex {
+    display: flex !important;;
+}
+.hidden {
+    display: none !important;
+}
+.hidden-sm {
+    @include media-breakpoint-down(md) {
+        display: none !important;
+    }
+}
+.visible-sm {
+    @include media-breakpoint-up(md) {
+        display: none !important;
+    }
+}
+.visible-md {
+    display: none !important;
+    @include media-breakpoint-up(md) {
+        display: initial;
+    }
+}
+.necessaty_fields {
+    display: none !important;;
+}
+.jGrowl {
+    z-index: 100000 !important;
+}
+.text-nowrap { white-space: nowrap !important; }
+
+.no-padding-top {
+    padding-top: 0 !important;
+}
+
+a, .link {
+    outline: none;
+    position: relative;
+    @include transition(color);
+    color: $link-color;
+    cursor: pointer;
+    &:hover {
+        &:after {
+            opacity: .7;
+        }
+    }
+    &._inverse {
+        color: $white;
+    }
+}
+
+a:not(.link-icon), .link {
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 1px;
+        background: url(img/link.png) repeat-x;
+        @include transition(opacity);
+    }
+    &:hover {
+        &:after {
+            opacity: .7;
+        }
+    }
+    &._inverse {
+        &:after {
+            background: url(img/link-inverse.png) repeat-x;
+        }
+    }
+}
+
+.link-icon {
+    span {
+        position: relative;
+        margin-left: .7ex;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 1px;
+            background: url(img/link.png) repeat-x;
+            @include transition(opacity);
+        }
+    }
+    &:hover span {
+        &:after {
+            opacity: .7;
+        }
+    }
+    &._inverse {
+        span {
+            &:after {
+                background: url(img/link-inverse.png) repeat-x;
+            }
+        }
+    }
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    margin-right: 0; 
+    margin-left: 0; 
+    width: auto;
+    line-height: inherit;
+}
+[class^="icon-"] {
+    &._middle {
+        vertical-align: middle;
+    }
+}
+
+.icon-help-circled {
+    color: #cecece;
+}
+
+.content {
+    position: relative;
+    .content__overlay {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $white;
+        opacity: .8;
+        z-index: 900;
+        /*@include transition(all);*/
+    }
+}
+
+.bannerz-link {
+    display: block;
+    width: 100%;
+    &:after {
+        content: none !important;
+    }
+}
+
+@mixin animate-spin {
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+  display: inline-block;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@import "sprite";
+@import "header";
+@import "sliders";
+@import "forms";
+@import "popups";
+@import "footer";
+@import "components/section";
+@import "components/realty-index";
+@import "components/filters";
+@import "components/tabs";
+@import "components/tags";
+@import "components/promo";
+@import "components/sales-list";
+@import "components/agents";
+@import "components/seo";
+@import "components/social";
+@import "components/services";
+@import "components/callme";
+@import "components/find-on-map";
+@import "components/realty-form";
+@import "components/realty-subscribe";
+@import "components/realty-list-slider";
+@import "components/page-header";
+@import "components/list-header";
+@import "components/gallery";
+@import "components/scrollbar";
+@import "components/alphabet";
+@import "components/map";
+@import "components/tour";
+@import "components/infrastructure";
+@import "components/results-promo";
+@import "components/fixed-right";
+@import "components/domclick";
+@import "components/panorama";
+
+@import "components/news-list";
+@import "components/news-detail";
+@import "components/main-slider";
+@import "components/hypothec-form";
+@import "components/hypothec-list";
+@import "components/about-list";
+@import "components/builders-list";
+@import "components/rte";
+
+@import "page-assets/about";
+@import "page-assets/hypothec";
+@import "page-assets/realty";
+@import "page-assets/builders";
+@import "page-assets/reviews";
+@import "page-assets/result";
+@import "page-assets/404";
+@import "page-assets/agents";
+@import "page-assets/detail";
+@import "page-assets/contacts";
+@import "page-assets/work";
+@import "page-assets/seller";
+@import "page-assets/analytic";
+@import "page-assets/onmap";
+@import "page-assets/new";
+@import "page-assets/auth";
+
+.preloader {
+    display: none !important;
+}

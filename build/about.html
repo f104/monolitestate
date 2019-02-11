@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
-    <link href="fonts/Lato/lato.css" rel="stylesheet" type="text/css">
-    <link href="fonts/fontello/css/fontello.css" rel="stylesheet" type="text/css">
-    <link href="css/libs/slick.css" rel="stylesheet" type="text/css">
-    <link href="css/libs/jquery.scrollbar.css" rel="stylesheet" type="text/css">
-    <link href="css/libs/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
-    <link href="css/libs/nouislider.min.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/datepicker.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/cell.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/navigation.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/timepicker.css" rel="stylesheet" type="text/css"/>
-    <link href="css/common.css" rel="stylesheet" type="text/css">
 </head>
+    <style>
+    .preloader {
+        display: block;
+        background: #fff;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 1000;
+    }
+    .preloader__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
     <body>
         <header class="header">
     <div class="header__top">
@@ -37,7 +44,7 @@
     </div>
     <div class="header__main">
         <div class="container">
-            <div class="header__main__menu"><a href="#menu" class="header__main__menu__link js-menu-toggler"><i class="icon-menu"></i></a></div>
+            <div class="header__main__menu"><button data-href="#menu" class="header__main__menu__link js-menu-toggler"><i class="icon-menu"></i></button></div>
             <div class="header__main__logo"><a href="index.html"><img src="img/logo-old.png" data-newsrc="img/logo-new.png" class="js-logo"></a></div>
             <div class="header__main__fav">
                 <a href="#" class="header__main__fav__link"><i class="icon-star"></i><span class="header__main__md">Избранное</span></a>
@@ -116,7 +123,7 @@
             <div class="header__menu-desktop">
                 <div class="container">
                     <ul class="header__menu__first">
-                        <li><a href="#" class="header__menu__first__toggler js-menu-second-toggler"><i class="icon-menu"></i></a></li>
+                        <li><button class="header__menu__first__toggler js-menu-second-toggler"><i class="icon-menu"></i></button></li>
                         <li><a href="second.html" >Вторичное жилье</a></li>
                         <li><a href="new.html" >Новостройки без комиссии</a></li>
                         <li><a href="#">Дома, дачи, участки</a></li>
@@ -571,7 +578,7 @@
         </div>
     </div>
 </section>
-            <section class="container section news">
+            <section class="container section _news">
     <h3 class="section__h">Последние новости компании</h3>
     <div class="scrollbar-outer _hor js-scrollbar-md">
     <div class="news-related-list slider-small js-slider-small">
@@ -920,6 +927,18 @@
         });
     }());
 </script>
+
+<link href="fonts/Lato/lato.css" rel="stylesheet" type="text/css">
+<link href="fonts/fontello/css/fontello.css" rel="stylesheet" type="text/css">
+<link href="css/libs/slick.css" rel="stylesheet" type="text/css">
+<link href="css/libs/jquery.scrollbar.css" rel="stylesheet" type="text/css">
+<link href="css/libs/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+
+<link href="css/dev.css" rel="stylesheet" type="text/css">
+
+
+
 <script>
     var appConfig = {
         breakpoint: {
@@ -945,5 +964,25 @@
 <script src="js/libs/nouislider.min.js"></script>
 <script src="js/libs/datepicker.min.js"></script>
 <script src="js/common.js"></script>
+        
+        <link href="css/about.css" rel="stylesheet" type="text/css">
+        <style>
+    .preloader {
+        display: block;
+        background: #fff;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 1000;
+    }
+    .preloader__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
     </body>
 </html>

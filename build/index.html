@@ -5,36 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
-    <link href="fonts/Lato/lato.css" rel="stylesheet" type="text/css">
-    <link href="fonts/fontello/css/fontello.css" rel="stylesheet" type="text/css">
-    <link href="css/libs/slick.css" rel="stylesheet" type="text/css">
-    <link href="css/libs/jquery.scrollbar.css" rel="stylesheet" type="text/css">
-    <link href="css/libs/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
-    <link href="css/libs/nouislider.min.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/datepicker.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/cell.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/navigation.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/timepicker.css" rel="stylesheet" type="text/css"/>
-    <link href="css/common.css" rel="stylesheet" type="text/css">
 </head>
     <style>
-        .preloader {
-            display: block;
-            background: #fff;
-            position: fixed;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            z-index: 1000;
-        }
-        .preloader__img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    </style>
+    .preloader {
+        display: block;
+        background: #fff;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 1000;
+    }
+    .preloader__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
     <body>
         <div class="preloader">
             <img class="preloader__img" src="img/logo-preloader.png" alt="Монолит">
@@ -58,7 +47,7 @@
     </div>
     <div class="header__main">
         <div class="container">
-            <div class="header__main__menu"><a href="#menu" class="header__main__menu__link js-menu-toggler"><i class="icon-menu"></i></a></div>
+            <div class="header__main__menu"><button data-href="#menu" class="header__main__menu__link js-menu-toggler"><i class="icon-menu"></i></button></div>
             <div class="header__main__logo"><a href="index.html"><img src="img/logo-old.png" data-newsrc="img/logo-new.png" class="js-logo"></a></div>
             <div class="header__main__fav">
                 <a href="#" class="header__main__fav__link"><i class="icon-star"></i><span class="header__main__md">Избранное</span></a>
@@ -137,7 +126,7 @@
             <div class="header__menu-desktop">
                 <div class="container">
                     <ul class="header__menu__first">
-                        <li><a href="#" class="header__menu__first__toggler js-menu-second-toggler"><i class="icon-menu"></i></a></li>
+                        <li><button class="header__menu__first__toggler js-menu-second-toggler"><i class="icon-menu"></i></button></li>
                         <li><a href="second.html" >Вторичное жилье</a></li>
                         <li><a href="new.html" >Новостройки без комиссии</a></li>
                         <li><a href="#">Дома, дачи, участки</a></li>
@@ -564,7 +553,7 @@
                         <i class="icon-phone _middle"></i><span class="link">+7 (987) 654-32-10</span></a>
                 </div>
                 <div class="main-slider__img">
-                    <img src="img/slider-uni-2.png" alt="alt text">
+                    <img data-lazy="img/slider-uni-2.png" alt="alt text">
                 </div>
             </div>
         </div>
@@ -945,68 +934,68 @@
         </div>
     </div>
 </section>
-            <section class="container section hypothec">
+            <section class="container section _hypothec">
     <h3 class="section__h">Актуальные ипотечные программы</h3>
-    <div class="hypothec__list slider-small js-slider-small">
-    <div class="hypothec__list__item slide">
-    <div class="hypothec__list__item__inner">
-        <span class="hypothec__list__item__img-wrapper">
+    <div class="hypothec-list slider-small js-slider-small">
+    <div class="hypothec-list__item slide">
+    <div class="hypothec-list__item__inner">
+        <span class="hypothec-list__item__img-wrapper">
             <img src="img/hypothec/sberbank.png"
                  srcset="img/hypothec/sberbank@2x.png 2x,
                  img/hypothec/sberbank@3x.png 3x"
                  alt="Сбербанк">
         </span>
-        <span class="hypothec__list__item__rate">
-            <span class="hypothec__list__item__muted">Ставка по ипотеке</span>
-            <span class="hypothec__list__item__accent">7,5%</span>
+        <span class="hypothec-list__item__rate">
+            <span class="hypothec-list__item__muted">Ставка по ипотеке</span>
+            <span class="hypothec-list__item__accent">7,5%</span>
         </span>
         Сбербанк. Акция «Больше метров‑меньше ставка». Готовое жилье
         
     </div>
 </div>
-    <div class="hypothec__list__item slide">
-    <div class="hypothec__list__item__inner">
-        <span class="hypothec__list__item__img-wrapper">
+    <div class="hypothec-list__item slide">
+    <div class="hypothec-list__item__inner">
+        <span class="hypothec-list__item__img-wrapper">
             <img src="img/hypothec/vtb.png"
                  srcset="img/hypothec/vtb@2x.png 2x,
                  img/hypothec/vtb@3x.png 3x"
                  alt="ВТБ">
         </span>
-        <span class="hypothec__list__item__rate">
-            <span class="hypothec__list__item__muted">Ставка по ипотеке</span>
-            <span class="hypothec__list__item__accent">8%</span>
+        <span class="hypothec-list__item__rate">
+            <span class="hypothec-list__item__muted">Ставка по ипотеке</span>
+            <span class="hypothec-list__item__accent">8%</span>
         </span>
         ВТБ. Акция «Больше метров‑меньше ставка». Готовое жилье
         
     </div>
 </div>
-    <div class="hypothec__list__item slide">
-    <div class="hypothec__list__item__inner">
-        <span class="hypothec__list__item__img-wrapper">
+    <div class="hypothec-list__item slide">
+    <div class="hypothec-list__item__inner">
+        <span class="hypothec-list__item__img-wrapper">
             <img src="img/hypothec/binbank.png"
                  srcset="img/hypothec/binbank@2x.png 2x,
                  img/hypothec/binbank@3x.png 3x"
                  alt="Бинбанк">
         </span>
-        <span class="hypothec__list__item__rate">
-            <span class="hypothec__list__item__muted">Ставка по ипотеке</span>
-            <span class="hypothec__list__item__accent">12%</span>
+        <span class="hypothec-list__item__rate">
+            <span class="hypothec-list__item__muted">Ставка по ипотеке</span>
+            <span class="hypothec-list__item__accent">12%</span>
         </span>
         Бинбанк. Акция «Больше метров‑меньше ставка». Готовое жилье
         
     </div>
 </div>
-    <div class="hypothec__list__item slide">
-    <div class="hypothec__list__item__inner">
-        <span class="hypothec__list__item__img-wrapper">
+    <div class="hypothec-list__item slide">
+    <div class="hypothec-list__item__inner">
+        <span class="hypothec-list__item__img-wrapper">
             <img src="img/hypothec/gazprombank.png"
                  srcset="img/hypothec/gazprombank@2x.png 2x,
                  img/hypothec/gazprombank@3x.png 3x"
                  alt="Газпромбанк">
         </span>
-        <span class="hypothec__list__item__rate">
-            <span class="hypothec__list__item__muted">Ставка по ипотеке</span>
-            <span class="hypothec__list__item__accent">10,5%</span>
+        <span class="hypothec-list__item__rate">
+            <span class="hypothec-list__item__muted">Ставка по ипотеке</span>
+            <span class="hypothec-list__item__accent">10,5%</span>
         </span>
         Газпромбанк. Акция «Больше ставка»
         
@@ -1017,42 +1006,28 @@
         <span>Больше программ</span><i class="icon-more"></i></button>
     <a href="#" class="btn _secondary _lg section__button">Все программы</a>
 </section>
-            <section class="container section about">
+            <section class="container section _about">
     <h3 class="section__h">Монолит в цифрах</h3>
-    <ul class="about__list">
-        <li class="about__list__item">
-                <span class="about__list__item__accent">14 лет</span>
+    <ul class="about-list">
+        <li class="about-list__item">
+                <span class="about-list__item__accent">14 лет</span>
                 опыта работы в риэлторском бизнесе
-            <i class="sprite man-baloon about__list__item__icon"></i>
+            <i class="sprite man-baloon about-list__item__icon"></i>
         </li>
-        <li class="about__list__item">
-                <span class="about__list__item__accent">5000</span>
+        <li class="about-list__item">
+                <span class="about-list__item__accent">5000</span>
                 специалистов по всей России
-            <i class="sprite russia about__list__item__icon"></i>
+            <i class="sprite russia about-list__item__icon"></i>
         </li>
-        <li class="about__list__item">
-                <span class="about__list__item__accent">51568</span>
+        <li class="about-list__item">
+                <span class="about-list__item__accent">51568</span>
                 квартир продано
-            <i class="sprite sweet-home about__list__item__icon"></i>
+            <i class="sprite sweet-home about-list__item__icon"></i>
         </li>
     </ul>
     <a href="about.html" class="btn _secondary _lg">О компании</a>
 </section>
-            <section class="container section promo _right _bg-img">
-    <a href="#" class="promo__wrapper">
-        <div class="promo__img-inner">
-            <img class="promo__img" 
-                 src="img/promo/1.jpg"
-                 srcset="img/promo/1@2x.jpg 2x,
-                     img/promo/1@3x.jpg 3x"
-                 alt="alt text">
-        </div>
-        <h3 class="promo__h">Покупайте квартиры<br>в новом ЖК «Свободный»</h3>
-        
-            <p class="promo__p">И получите месяц парковки бесплатно!</p>
-        
-    </a>
-</section>
+            
             <section class="container section agents">
     <h3 class="section__h">Наши агенты</h3>
     <div class="agents-slider-wrapper">
@@ -1356,7 +1331,7 @@
         </div>
     </div>
 </section>
-            <section class="container section builders">
+            <section class="container section _builders">
     <h3 class="section__h">Застройщики-партнеры</h3>
     <div class="builders-list slider-small js-slider-small">
         <div class="builders-list__item slide">
@@ -1788,6 +1763,18 @@
         });
     }());
 </script>
+
+<link href="fonts/Lato/lato.css" rel="stylesheet" type="text/css">
+<link href="fonts/fontello/css/fontello.css" rel="stylesheet" type="text/css">
+<link href="css/libs/slick.css" rel="stylesheet" type="text/css">
+<link href="css/libs/jquery.scrollbar.css" rel="stylesheet" type="text/css">
+<link href="css/libs/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+
+<link href="css/dev.css" rel="stylesheet" type="text/css">
+
+
+
 <script>
     var appConfig = {
         breakpoint: {
@@ -1813,5 +1800,13 @@
 <script src="js/libs/nouislider.min.js"></script>
 <script src="js/libs/datepicker.min.js"></script>
 <script src="js/common.js"></script>
+
+        <link href="css/index.css" rel="stylesheet" type="text/css">
+        <style>
+    .preloader {
+        display: none !important;
+    }
+</style>
+        
     </body>
 </html>
