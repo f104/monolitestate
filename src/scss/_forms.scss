@@ -679,32 +679,34 @@ textarea {
     .noUi-connect {
         background: #4264cf;
     }
-    .noUi-handle {
-        width: 22px;
-        height: 22px;
-        background-color: #a3b3eb;
-        border: none;
-        box-shadow: none;
-        border-radius: 50%;
-        outline: none;
-        cursor: pointer;
-        top: -8px;
-        &:before {
-            content: none;
-        }
-        &:after {
-            content: '\e800';
-            font-family: 'fontello';
-            height: 6px;
-            width: 7px;
-            background: none;
-            color: #fff;
-            opacity: .7;
-            left: 50%;
-            top: 50%;
-            font-size: 5px;
-            box-sizing: content-box;
-            transform: translate(-50%,-50%);
+    &.noUi-horizontal {
+        .noUi-handle {
+            width: 22px;
+            height: 22px;
+            background-color: #a3b3eb;
+            border: none;
+            box-shadow: none;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+            top: -8px;
+            &:before {
+                content: none;
+            }
+            &:after {
+                content: '\e800';
+                font-family: 'fontello';
+                height: 6px;
+                width: 7px;
+                background: none;
+                color: #fff;
+                opacity: .7;
+                left: 50%;
+                top: 50%;
+                font-size: 5px;
+                box-sizing: content-box;
+                transform: translate(-50%,-50%);
+            }
         }
     }
     &._picker {
@@ -719,7 +721,7 @@ textarea {
         }
     }
 }
-html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
+html:not([dir=rtl]) .range.noUi-horizontal .noUi-handle {
     right: -11px;
     left: auto;
 }
