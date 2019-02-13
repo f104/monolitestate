@@ -2,7 +2,7 @@ jQuery(function () {
     "use strict";
 
     $(document).ready(function () {
-        ymaps.ready(initPanorama);
+        initPanorama());
     });
 
     function initPanorama() {

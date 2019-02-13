@@ -6,6 +6,24 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
 </head>
+    <style>
+    .preloader {
+        display: block;
+        background: #fff;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 1000;
+    }
+    .preloader__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
     <body>
         <header class="header">
     <div class="header__top">
@@ -236,12 +254,12 @@
                  img/content/s2@3x.jpg 3x">
         </a>
     </div>
-    <div id="panorama" class="gallery__panorama js-panorama" data-geo="55.733685, 37.588264"></div>
+    <div id="panorama" class="gallery__panorama _loading js-detail-panorama" data-geo="55.733685, 37.588264"></div>
     <span class="gallery__counter">
         <span class="js-gallery__current">1</span> из
         <span class="js-gallery__total"></span>
     </span>
-    <span class="gallery__panorama-toggler js-panorama__toggler">Смотреть панораму</span>
+    <span class="gallery__panorama-toggler js-detail-panorama__toggler _active">Смотреть панораму</span>
 </div>
 <div class="gallery-nav js-gallery-nav">
     <div class="slide">
@@ -352,7 +370,7 @@
                             </a>
                         </div>
                         <div class="detail__info__map">
-                            <a href="#onmap" class="find-on-map js-popup">
+                            <a href="#onmap" class="find-on-map js-detail-map">
                                 <div class="find-on-map__img-wrapper">
                                     <div class="find-on-map__img-inner">
                                         <img class="find-on-map__img" src="img/realty/map1.jpg" srcset="img/realty/map1@2x.jpg 2x,
@@ -1426,7 +1444,7 @@
                                 </div>
                             </div>
                             <div class="infrastructure__map map">
-                                <div id="map" class="map__content"></div>
+                                <div id="map" class="map__content _loading"></div>
                                 <div class="container map__controls">
                                     <ul class="map__controls__zoom">
                                         <li><i class="sprite map-plus map__control js-map__zoom _in"></i></li>
@@ -1718,13 +1736,6 @@
 <link href="css/dev.css" rel="stylesheet" type="text/css">
 
 
-    <link href="css/libs/nouislider.min.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/datepicker.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/cell.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/navigation.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/timepicker.css" rel="stylesheet" type="text/css"/>
-    <link href="css/all.css" rel="stylesheet" type="text/css">
-
 
 <script>
     var appConfig = {
@@ -1751,6 +1762,17 @@
 <script src="js/libs/nouislider.min.js"></script>
 <script src="js/libs/datepicker.min.js"></script>
 <script src="js/common.js"></script>
+        <link href="css/libs/nouislider.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/libs/datepicker/datepicker.css" rel="stylesheet" type="text/css">
+        <link href="css/libs/datepicker/cell.css" rel="stylesheet" type="text/css">
+        <link href="css/libs/datepicker/navigation.css" rel="stylesheet" type="text/css">
+        <link href="css/libs/datepicker/timepicker.css" rel="stylesheet" type="text/css">
+        <link href="css/realty-detail.css" rel="stylesheet" type="text/css">
+        <style>
+    .preloader {
+        display: none !important;
+    }
+</style>
         <script>
             app.mapData = {
                 object: {
@@ -1812,8 +1834,6 @@
                 ]
             };
         </script>
-        <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug"></script>
         <script src="js/detail.js"></script>
-        <script src="js/panorama.js"></script>
     </body>
 </html>

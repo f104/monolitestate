@@ -2,6 +2,7 @@
     @@include('./template/head.html', {
     "name": "Объект"
     })
+    @@include('./template/preloader-head.html')
     <body>
         @@include('./template/header.html', {
         "active": "second"
@@ -130,7 +131,7 @@
                             </a>
                         </div>
                         <div class="detail__info__map">
-                            <a href="#onmap" class="find-on-map js-popup">
+                            <a href="#onmap" class="find-on-map js-detail-map">
                                 <div class="find-on-map__img-wrapper">
                                     <div class="find-on-map__img-inner">
                                         <img class="find-on-map__img" src="img/realty/map1.jpg" srcset="img/realty/map1@2x.jpg 2x,
@@ -267,7 +268,7 @@
                                 </div>
                             </div>
                             <div class="infrastructure__map map">
-                                <div id="map" class="map__content"></div>
+                                <div id="map" class="map__content _loading"></div>
                                 <div class="container map__controls">
                                     <ul class="map__controls__zoom">
                                         <li><i class="sprite map-plus map__control js-map__zoom _in"></i></li>
@@ -283,7 +284,14 @@
             @@include('./template/popups-common.html')
             <div class="content__overlay js-menu-overlay"></div>
         </div>
-        @@include('./template/foot.html', {"all": true})
+        @@include('./template/foot.html', {"all": false})
+        <link href="css/libs/nouislider.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/libs/datepicker/datepicker.css" rel="stylesheet" type="text/css">
+        <link href="css/libs/datepicker/cell.css" rel="stylesheet" type="text/css">
+        <link href="css/libs/datepicker/navigation.css" rel="stylesheet" type="text/css">
+        <link href="css/libs/datepicker/timepicker.css" rel="stylesheet" type="text/css">
+        <link href="css/realty-detail.css" rel="stylesheet" type="text/css">
+        @@include('./template/preloader-foot.html')
         <script>
             app.mapData = {
                 object: {
@@ -345,8 +353,6 @@
                 ]
             };
         </script>
-        <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug"></script>
         <script src="js/detail.js"></script>
-        <script src="js/panorama.js"></script>
     </body>
 </html>
