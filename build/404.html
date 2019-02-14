@@ -6,7 +6,28 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
 </head>
+    <style>
+    .preloader {
+        display: block;
+        background: #fff;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 1000;
+    }
+    .preloader__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
     <body>
+        <div class="preloader">
+    <img class="preloader__img" src="img/logo-preloader.png" alt="Монолит">
+</div>
         <header class="header">
     <div class="header__top">
         <div class="container">
@@ -719,10 +740,10 @@
         
         <link href="css/404.css" rel="stylesheet" type="text/css">
         <style>
-            .preloader {
-                display: none !important;
-            }
-        </style>
+    .preloader {
+        display: none !important;
+    }
+</style>
         
     </body>
 </html>

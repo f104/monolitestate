@@ -4,9 +4,7 @@
     })
     @@include('./template/preloader-head.html')
     <body>
-        <div class="preloader">
-            <img class="preloader__img" src="img/logo-preloader.png" alt="Монолит">
-        </div>
+        @@include('./template/preloader.html')
         @@include('./template/header.html', {
         "active": ""
         })

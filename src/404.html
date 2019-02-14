@@ -2,7 +2,9 @@
     @@include('./template/head.html', {
     "name": "404"
     })
+    @@include('./template/preloader-head.html')
     <body>
+        @@include('./template/preloader.html')
         @@include('./template/header.html', {
         "active": ""
         })
@@ -41,11 +43,7 @@
         @@include('./template/foot.html', {"all": false})
         
         <link href="css/404.css" rel="stylesheet" type="text/css">
-        <style>
-            .preloader {
-                display: none !important;
-            }
-        </style>
+        @@include('./template/preloader-foot.html')
         
     </body>
 </html>
