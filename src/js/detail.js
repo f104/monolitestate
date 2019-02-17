@@ -19,9 +19,6 @@ jQuery(function () {
     }
 
     function initPanorama() {
-        if (typeof panellum === undefined) {
-            return;
-        }
         $('.js-panorama-gallery-nav').slick({
             dots: false,
             arrows: true,
@@ -59,25 +56,47 @@ jQuery(function () {
                 ],
             });
         });
-        var v = [];
-        $('.js-panorama').each(function () {
-            var img = $(this).data('panorama');
-            if (img) {
-                var viewer = pannellum.viewer(this, {
-                    "type": "equirectangular",
-                    "panorama": img,
-                    "hfov": 120,
-                    "autoLoad": true,
+        
+        if (!$('.js-panorama').length) {
+            return;
+        }
+        var loaded = false;
+        
+        $('.js-tabs').bind('easytabs:after', function (event, $clicked, $target) {
+            var $p = $target.find('.js-panorama');
+            if ($p.length && !loaded) {
+                $.ajax({
+                    url: 'js/libs/pannellum.js',
+                    dataType: "script",
+                    cache: true,
+                    success: function () {
+                        loaded = true;
+                        drawPanorama();
+                    }
                 });
-                var $tabs = $(this).parents('.js-tabs');
-                if ($tabs.length) {
-                    $tabs.bind('easytabs:after', function () {
-                        viewer.getRenderer().resize();
-                        viewer.setYaw(viewer.getYaw());
-                    });
-                }
             }
         });
+        
+        function drawPanorama() {
+            $('.js-panorama').each(function () {
+                var img = $(this).data('panorama');
+                if (img) {
+                    var viewer = pannellum.viewer(this, {
+                        "type": "equirectangular",
+                        "panorama": img,
+                        "hfov": 120,
+                        "autoLoad": true,
+                    });
+                    var $tabs = $(this).parents('.js-tabs');
+                    if ($tabs.length) {
+                        $tabs.bind('easytabs:after', function () {
+                            viewer.getRenderer().resize();
+                            viewer.setYaw(viewer.getYaw());
+                        });
+                    }
+                }
+            });
+        }
     }
 
     function initGalleryPanorama() {
@@ -112,7 +131,7 @@ jQuery(function () {
                 if (!loaded) {
                     if (typeof (ymaps) === 'undefined') {
                         $.ajax({
-                            url: `//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug`,
+                            url: '//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug',
                             dataType: "script",
                             cache: true,
                             success: function () {
@@ -187,7 +206,7 @@ jQuery(function () {
                     if (!loaded) {
                         if (typeof (ymaps) === 'undefined') {
                             $.ajax({
-                                url: `//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug`,
+                                url: '//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug',
                                 dataType: "script",
                                 cache: true,
                                 success: function () {

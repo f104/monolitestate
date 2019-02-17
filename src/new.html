@@ -2,6 +2,7 @@
     @@include('./template/head.html', {
     "name": "Новостройки"
     })
+    @@include('./template/preloader-head.html')
     <body>
         @@include('./template/header.html', {
         "active": "new"
@@ -12,9 +13,11 @@
             "residential": 1
             })
             @@include('./template/realty/form-new.html')
+            <!--
             @@include('./template/find-on-map.html', {
             "text": "Искать квартиры на карте"
             })
+            -->
             @@include('./template/realty/new.html')
             @@include('./template/sales/realty.html')
             @@include('./template/realty/residential.html')
@@ -37,6 +40,9 @@
             @@include('./template/popups-common.html')
             <div class="content__overlay js-menu-overlay"></div>
         </div>
-        @@include('./template/foot.html', {"all": true})
+        @@include('./template/foot.html', {"all": false})
+        <link href="css/libs/nouislider.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/new-category.css" rel="stylesheet" type="text/css">
+        @@include('./template/preloader-foot.html')
     </body>
 </html>

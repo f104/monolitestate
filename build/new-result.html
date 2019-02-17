@@ -6,6 +6,24 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
 </head>
+    <style>
+    .preloader {
+        display: block;
+        background: #fff;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 1000;
+    }
+    .preloader__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
     <body>
         <header class="header">
     <div class="header__top">
@@ -1830,6 +1848,7 @@
         <button class="btn _secondary _lg section__button">Показать еще</button>
     </div>
 </section>
+            <!--
             <section class="container section promo _style1">
     <div href="#" class="promo__wrapper">
         <h3 class="promo__h">Дешевле чем у застройщика!</h3>
@@ -1842,6 +1861,7 @@
         </div>
     </div>
 </section>
+            -->
             
             <section class="container section hypothec">
     <h3 class="section__h">Ипотечные программы для новостроек</h3>
@@ -2616,13 +2636,6 @@
 <link href="css/dev.css" rel="stylesheet" type="text/css">
 
 
-    <link href="css/libs/nouislider.min.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/datepicker.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/cell.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/navigation.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/timepicker.css" rel="stylesheet" type="text/css"/>
-    <link href="css/all.css" rel="stylesheet" type="text/css">
-
 
 <script>
     var appConfig = {
@@ -2649,5 +2662,12 @@
 <script src="js/libs/nouislider.min.js"></script>
 <script src="js/libs/datepicker.min.js"></script>
 <script src="js/common.js"></script>
+        <link href="css/libs/nouislider.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/new-result.css" rel="stylesheet" type="text/css">
+        <style>
+    .preloader {
+        display: none !important;
+    }
+</style>
     </body>
 </html>

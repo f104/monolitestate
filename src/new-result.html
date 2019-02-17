@@ -2,6 +2,7 @@
     @@include('./template/head.html', {
     "name": "Квартиры в новостройках"
     })
+    @@include('./template/preloader-head.html')
     <body>
         @@include('./template/header.html', {
         "active": "new"
@@ -40,7 +41,9 @@
                 </div>
             </div>
             @@include('./template/result/list-new.html')
+            <!--
             @@include('./template/promo-new.html')
+            -->
             
             @@include('./template/hypothec/calc.html', {
             "title": "Ипотечные программы для новостроек"
@@ -63,6 +66,9 @@
             @@include('./template/popups-common.html')
             <div class="content__overlay js-menu-overlay"></div>
         </div>
-        @@include('./template/foot.html', {"all": true})
+        @@include('./template/foot.html', {"all": false})
+        <link href="css/libs/nouislider.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/new-result.css" rel="stylesheet" type="text/css">
+        @@include('./template/preloader-foot.html')
     </body>
 </html>

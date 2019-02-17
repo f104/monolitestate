@@ -1,0 +1,21 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "variables";
+@import "mixins";
+
+@import "components/animate-spin";
+@import "components/hypothec-list";
+@import "components/gallery";
+@import "components/infrastructure";
+@import "components/map";
+@import "components/panorama";
+@import "components/realty-list-slider";
+@import "components/rte";
+@import "components/tabs";
+@import "page-assets/hypothec";
+@import "page-assets/agents";
+@import "page-assets/realty";
+@import "page-assets/result";
+@import "page-assets/detail";
+@import "page-assets/new";
