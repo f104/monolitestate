@@ -25,7 +25,7 @@
     }
 }
 @include media-breakpoint-up(lg) {
-    .seo {
+    .seo:not(._full) {
         width: 971px;
     }
 }

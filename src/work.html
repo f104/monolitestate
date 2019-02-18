@@ -2,6 +2,7 @@
     @@include('./template/head.html', {
     "name": "Работа в компании «Монолит Истейт»"
     })
+    @@include('./template/preloader-head.html')
     <body>
         @@include('./template/header.html', {
         "active": ""
@@ -78,6 +79,8 @@
             </div>
             <div class="content__overlay js-menu-overlay"></div>
         </div>
-        @@include('./template/foot.html', {"all": true})
+        @@include('./template/foot.html', {"all": false})
+        <link href="css/work.css" rel="stylesheet" type="text/css">
+        @@include('./template/preloader-foot.html')
     </body>
 </html>

@@ -1,0 +1,12 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "variables";
+@import "mixins";
+
+@import "page-assets/agents";
+@import "page-assets/hypothec";
+@import "components/realty-form";
+@import "components/rte";
+@import "components/sales-list";
+@import "components/tabs";

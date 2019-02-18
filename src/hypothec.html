@@ -2,6 +2,7 @@
     @@include('./template/head.html', {
     "name": "Ипотека"
     })
+    @@include('./template/preloader-head.html')
     <body>
         @@include('./template/header.html', {
         "active": "hypothec"
@@ -114,6 +115,7 @@
                         ипотечный брокер агентства «Монолит Истейт».</p>
                 </div>
             </section>
+            <!--
             <section class="container section promo _style2">
                 <div href="#" class="promo__wrapper">
                     <h3 class="promo__h">Рефинансирование</h3>
@@ -128,6 +130,7 @@
                     </div>
                 </div>
             </section>
+            -->
             <div class="hidden">
                 @@include('./template/popups/hypothec_call.html')
             </div>
@@ -143,6 +146,9 @@
             @@include('./template/popups-common.html')
             <div class="content__overlay js-menu-overlay"></div>
         </div>
-        @@include('./template/foot.html', {"all": true})
+        @@include('./template/foot.html', {"all": false})
+        <link href="css/libs/nouislider.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/hypothec.css" rel="stylesheet" type="text/css">
+        @@include('./template/preloader-foot.html')
     </body>
 </html>
