@@ -1,0 +1,14 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "variables";
+@import "mixins";
+
+@import "components/animate-spin";
+@import "components/domclick";
+@import "components/list-header";
+@import "page-assets/agents";
+@import "components/tabs";
+@import "components/realty-list-slider";
+@import "page-assets/realty";
+@import "page-assets/result";
