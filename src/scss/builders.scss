@@ -1,0 +1,12 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "variables";
+@import "mixins";
+
+@import "libs/select2/core.scss";
+@import "libs/select2/theme/custom/layout.scss";
+@import "libs/select2/theme/agents/layout.scss";
+
+@import "components/list-header";
+@import "components/builders-list";
