@@ -1,0 +1,46 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "Карта сайта"
+    })
+    @@include('./template/preloader-head.html')
+    <body>
+        @@include('./template/header.html', {
+        "active": ""
+        })
+        <div class="content">
+            <div class="page-header">
+                <div class="container">
+                    <h1 class="page-header__h _lg">Карта сайта</h1>
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item _active">
+                            Карта сайта
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <section class="section container rte">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li>
+                        <a href="#">Вторичное жилье</a>
+                        <ul>
+                            <li><a href="#">Однокомнатные квартиры</a></li>
+                            <li><a href="#">Двухкомнатные квартиры</a></li>
+                            <li><a href="#">Трехкомнатные квартиры</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Новостройки</a></li>
+                </ul>
+            </section>
+            @@include('./template/footer.html')
+            @@include('./template/popups-common.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        @@include('./template/foot.html', {"all": false})
+        <link rel="stylesheet" href="css/sitemap.css">
+        @@include('./template/preloader-foot.html')
+    </body>
+</html>

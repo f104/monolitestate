@@ -43,6 +43,12 @@
                 top: -1px;
                 content: '•';
             }
+            ul {
+                margin-top: 10px;
+                li {
+                    margin-bottom: 10px;
+                }
+            }
         }
     }
     ol {
