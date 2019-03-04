@@ -1,0 +1,151 @@
+/*
+Новые отзывы
+*/
+
+.reviews-item {
+    $root: &;
+    display: flex;
+    flex-direction: column;
+    > * {
+        width: 100%;
+    }
+    background-color: white;
+    height: 421px;
+    padding: 22px $container-padding-sm;
+    @include media-breakpoint-up(md) {
+        padding: 22px 26px;
+        border-radius: 5px;
+    }
+    &__header {
+        margin-bottom: 24px;
+        display: flex;
+        min-height: 81px;
+        align-items: center;
+    }
+    &__img-wrapper {
+        width: 82px;
+        margin-right: 18px;
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+    &__img {
+        border-radius: 50%;
+        width: 100%;
+    }
+    &__title {
+        font-size: 18px;
+        margin-bottom: 7px;
+    }
+    &__agent {
+        font-size: 12px;
+        color: #6d6d6d;
+    }
+    &__content {
+        flex: 1;
+        overflow: hidden;
+        margin-bottom: 5px;
+        position: relative;
+    }
+    &__footer {
+        margin-top: 24px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__date {
+        font-size: 0;
+        &__icon {
+            color: rgb(126, 126, 126);
+            margin-right: 9px;
+            font-size: 14px;
+            top: -1px;
+            position: relative;
+        }
+        &__text {
+            opacity: .5;
+            font-size: 15px;
+        }
+    }
+    &__toggler {
+        display: none;
+        opacity: 0.5;
+        font-size: 15px;
+        cursor: pointer;
+        @include transition(all);
+        @include hover-desktop {
+            opacity: 1;
+            color: $primary;
+        }
+    }
+    &__photos {
+        display: flex;
+        overflow: hidden;
+        width: auto;
+        margin-right: - $container-padding-sm;
+        @include media-breakpoint-up(md) {
+            margin-right: -26px;
+        }
+        &__item {
+            margin-right: 10px;
+            cursor: pointer;
+            img {
+                width: 135px;
+                height: 135px;
+            }
+            @include transition(opacity);
+            @include hover-desktop {
+                opacity: .9;
+            }
+        }
+    }
+    &._fade {
+        #{$root} {
+            &__content {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 74px;
+                    background-image: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0));
+                    @include transition(opacity);
+                }
+            }
+            &__toggler {
+                display: block;
+            }
+        }
+    }
+    &._cloned {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: auto;
+        visibility: hidden;
+        pointer-events: none;
+        #{$root} {
+            &__content {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &._opened{
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.08);
+        #{$root} {
+            &__content {
+                margin-bottom: 15px;
+                &:after {
+                    opacity: 0;
+                    pointer-events: none;
+                }
+            }
+            &__toggler {
+                display: block;
+            }
+        }
+    }
+}

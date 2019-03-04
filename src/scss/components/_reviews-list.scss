@@ -1,0 +1,25 @@
+/*
+Новые отзывы
+*/
+
+.reviews-list {
+    $root: &;
+    margin-left: - $container-padding-sm;
+    margin-right: - $container-padding-sm;
+    @include media-breakpoint-up(md) {
+        @include row(26px);
+    }
+    &__item {
+        margin-bottom: 20px;
+        @include media-breakpoint-up(md) {
+            @include col(50%, 26px);
+            margin-bottom: 26px;
+        }
+        @include media-breakpoint-up(lg) {
+            @include col(33.33%, 26px);
+        }
+        &__inner {
+            position: relative;
+        }
+    }
+}

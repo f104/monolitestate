@@ -62,6 +62,8 @@ body {
         }
         .header__main__phone {
             .header__main__phone__link {
+                color: $primary;
+                cursor: pointer;
                 @include link-in-text;
                 font-size: 20px;
             }

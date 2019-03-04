@@ -1,0 +1,860 @@
+<html lang="ru" dir="ltr">
+    <head>
+    <title>Отзывы</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+</head>
+    <style>
+    .preloader {
+        display: block;
+        background: #fff;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 1000;
+    }
+    .preloader__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+    <body>
+        <div class="preloader">
+    <img class="preloader__img" src="img/logo-preloader.png" alt="Монолит">
+</div>
+        <header class="header">
+    <div class="header__top">
+        <div class="container">
+            <div class="header__top__city">
+                Город: <a href="#" class="header__top__city__select">Нижний Новгород</a>
+            </div>
+            <nav>
+                <ul class="header__top__nav">
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="work.html">Вакансии</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="header__main">
+        <div class="container">
+            <div class="header__main__menu"><button data-href="#menu" class="header__main__menu__link js-menu-toggler"><i class="icon-menu"></i></button></div>
+            <div class="header__main__logo"><a href="index.html"><img src="img/logo-old.png" data-newsrc="img/logo-new.png" class="js-logo"></a></div>
+            <div class="header__main__fav">
+                <a href="#" class="header__main__fav__link"><i class="icon-star"></i><span class="header__main__md">Избранное</span></a>
+                <div class="header__main__fav__counter header__main__md">10 позиций</div>
+            </div>
+            <div class="header__main__user">
+                <div class="header__main__sm">
+                    <a href="#" class="header__main__user__link"><i class="icon-user"></i></a>
+                </div>
+                <div class="header__main__md">
+                    <a href="#login" class="header__main__user__link btn _primary js-popup"><i class="icon-user _middle"></i> Войти</a>
+                    <a href="#signup" class="header__main__user__link btn _secondary js-popup">Регистрация</a>
+                </div>
+            </div>
+            <div class="header__main__phone">
+                <div class="header__main__md">+7 (831) 219-90-67</div>
+                <span data-href="#call" class="header__main__phone__link js-popup"><i class="icon-phone"></i><span class="header__main__md link">Заказать звонок</span></span>
+            </div>
+            <div class="header__main__contacts">
+                <div class="header__main__contacts__text">Звоните нам с 7:30 до 24:00</div>
+                <a href="contacts.html" class="header__main__contacts__link"><i class="icon-map _middle"></i> Контакты</a>
+            </div>
+        </div>
+    </div>
+    <div id="menu" class="header__menu js-menu">
+        <div class="header__menu__inner scrollbar-outer js-scrollbar-sm-md">
+            <div class="header__menu-mobile">
+                <div class="header__menu-mobile__top">
+                    <div class="header__menu__user">
+                        <a href="#login" class="header__main__user__link btn _primary js-popup"><i class="icon-user _middle"></i> Войти</a>
+                        <a href="#signup" class="header__main__user__link btn _secondary js-popup">Регистрация</a>
+                    </div>
+                    <div class="header__menu__phone">
+                        <div>+7 (831) 219-90-67</div>
+                        <span data-href="#call" class="header__menu__phone__link js-popup"><i class="icon-phone"></i><span class="link _inverse">Заказать звонок</span></span>
+                    </div>
+                    <div class="header__menu__contacts">
+                        <div class="header__menu__contacts__text">Звоните нам с 7:30 до 24:00</div>
+                        <a href="contacts.html" class="header__menu__contacts__link"><i class="icon-map _middle"></i> Контакты</a>
+                    </div>
+                </div>
+                <ul class="header__menu-mobile__first">
+                    <li>
+                        <span>Недвижимость</span>
+                        <ul class="header__menu-mobile__second">
+                            <li><a href="#">Вторичное жилье</a></li>
+                            <li><a href="#">Новостройки без комиссии</a></li>
+                            <li><a href="#">Дома, дачи, участки</a></li>
+                            <li><a href="#">Аренда</a></li>
+                            <li><a href="#">Коммерческая</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>Покупателям и продавцам</span>
+                        <ul class="header__menu-mobile__second">
+                            <li><a href="#">Ипотека</a></li>
+                            <li><a href="#">Продавцу</a></li>
+                            <li><a href="#">Застройщики</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Новости рынка недвижимости</a></li>
+                            <li><a href="#">Акции</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>Компания</span>
+                        <ul class="header__menu-mobile__second">
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Вакансии</a></li>
+                            <li><a href="#">Рейтинг агентов</a></li>
+                            <li><a href="#">Специалисты по недвижимости</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__menu-desktop">
+                <div class="container">
+                    <ul class="header__menu__first">
+                        <li><button class="header__menu__first__toggler js-menu-second-toggler"><i class="icon-menu"></i></button></li>
+                        <li><a href="second.html" >Вторичное жилье</a></li>
+                        <li><a href="new.html" >Новостройки без комиссии</a></li>
+                        <li><a href="#">Дома, дачи, участки</a></li>
+                        <li><a href="rent.html" >Аренда</a></li>
+                        <li><a href="commercial.html" >Коммерческая</a></li>
+                        <li><a href="hypothec.html" >Ипотека</a></li>
+                        <li><a href="for-seller.html" >Продавцу</a></li>
+                        <li><a href="analytic.html" >Аналитика</a></li>
+                    </ul>
+                    <div class="header__menu__second-wrapper js-menu-second">
+                        <div class="container">
+                            <div class="header__menu__second-inline">
+                                <ul class="header__menu__second">
+                                    <li><a href="work.html">Вакансии</a></li>
+                                    <li><a href="analytic.html">Услуги</a></li>
+                                    <li><a href="#">Рейтинг агентов</a></li>
+                                    <li><a href="about.html">О компании</a></li>
+                                    <li><a href="builders.html">Застройщики</a></li>
+                                    <li><a href="news.html">Новости рынка недвижимости</a></li>
+                                    <li><a href="#">Акции</a></li>
+                                    <li><a href="contacts.html">Контакты</a></li>
+                                    <li><a href="agents.html">Специалисты по недвижимости</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="content">
+            <div class="page-header">
+                <div class="container page-header__row">
+                    <div class="page-header__col">
+                        <h1 class="page-header__h _lg">Отзывы</h1>
+                        <p class="page-header__lead _lg">Отзывы счастливых новоселов, которым мы уже помогли.</p>
+                    </div>
+                    <div class="page-header__social page-header__col">
+                        
+<span class="social-text">Мы в социальных сетях:</span>
+
+<ul class="social-links">
+    <li><a href="#" class="_fb" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_instagram" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_vk" rel="noopener nofollow"></a></li>
+    <!--<li><a href="#" class="_twitter" rel="noopener nofollow"></a></li>-->
+    <li><a href="#" class="_ok" rel="noopener nofollow"></a></li>
+    
+    <li><a href="#" class="_youtube" rel="noopener nofollow"></a></li>
+    
+</ul>
+                    </div>
+                </div>
+            </div>
+            <section class="section">
+    <div class="list-header _white">
+    <div class="container list-header__row">
+        <div></div>
+        <div class="list-header__pagination">
+            <ul class="pagination">
+                <li class="pagination__item">
+                    <a class="pagination__item__link _first _disabled" href="#"></a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__item__link _active" href="#">1</a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__item__link" href="#">2</a>
+                </li>
+                <li class="pagination__item hidden-sm">
+                    <a class="pagination__item__link" href="#">3</a>
+                </li>
+                <li class="pagination__item hidden-sm">
+                    <a class="pagination__item__link" href="#">4</a>
+                </li>
+                <li class="pagination__item _skip">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__item__link" href="#">322</a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__item__link _last" href="#"></a>
+                </li>
+            </ul>
+            <span class="list-header__pagination__total">
+                Показано 10 из 146
+            </span>
+        </div>
+    </div>
+</div>
+    <div class="container">
+        <div class="reviews-list">
+            <div class="reviews-list__item">
+    <div class="reviews-list__item__inner">
+        <div class="reviews-item _fade js-reviews">
+            <div class="reviews-item__header">
+                
+                <div class="reviews-item__img-wrapper">
+                    <img class="reviews-item__img"
+                         src="img/reviews/1.jpg"
+                         alt="alt text">
+                </div>
+                
+                <div class="reviews-item__header__inner">
+                    <div class="reviews-item__title">
+                        Раиса Васильевна Серикова
+                    </div>
+                    <div class="reviews-item__agent">
+                        Риелтор: <a href="#" class="text-nowrap">Столбова Ольга Арслановна</a>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-item__content js-reviews__outer">
+                <div class="reviews-item__content__inner js-reviews__inner">
+                    «Я человек пожилой, и родственники предложили мне из ММС переехать поближе к ним, в Восточный микрорайон, на Широтную. Купила однокомнатную квартиру в доме застройщика МДС. Доверилась, потому что компания крупная, по всей стране работала. И вдруг банкротство! И дом еще не достроен! Юристы Монолит Истейт сразу включились в это дело. Для того, чтобы мне не потерять свои деньги, нужно было попасть в реестр требований кредиторов. И юристы это сделали. Причем, все было организовано очень удобно для меня — меня заранее предупреждали обо всех судебных заседаниях. Все было оперативно. Очень надеюсь, что все завершится благополучно, и дом будет достроен другим застройщиком. Главное, что моя квартира в этом доме моя собственность на всех законных основаниях.»
+                </div>
+            </div>
+            <div class="reviews-item__photos">
+                
+                <a href="img/realty/1@3x.jpg" class="reviews-item__photos__item js-reviews__slide">
+                    <img src="img/realty/1.jpg">
+                </a>
+                
+                <a href="img/realty/2@3x.jpg" class="reviews-item__photos__item js-reviews__slide">
+                    <img src="img/realty/2.jpg">
+                </a>
+                
+                <a href="img/realty/3@3x.jpg" class="reviews-item__photos__item js-reviews__slide">
+                    <img src="img/realty/3.jpg">
+                </a>
+                
+            </div>
+            <div class="reviews-item__footer">
+                <span class="reviews-item__date">
+                    <i class="icon-calendar reviews-item__date__icon"></i>
+                    <span class="reviews-item__date__text">9.02.2017 16:22</span>
+                </span>
+                <span class="reviews-item__toggler js-reviews__toggler" 
+                      data-rolldown="Развернуть" data-rollup="Свернуть">
+                    Развернуть
+                </span>
+            </div>
+        </div>
+    </div>
+</div><div class="reviews-list__item">
+    <div class="reviews-list__item__inner">
+        <div class="reviews-item _fade js-reviews">
+            <div class="reviews-item__header">
+                
+                <div class="reviews-item__img-wrapper">
+                    <img class="reviews-item__img"
+                         src="img/reviews/2.jpg"
+                         alt="alt text">
+                </div>
+                
+                <div class="reviews-item__header__inner">
+                    <div class="reviews-item__title">
+                        Устинова Лолита
+                    </div>
+                    <div class="reviews-item__agent">
+                        Риелтор: <a href="#" class="text-nowrap">Столбова Ольга Арслановна</a>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-item__content js-reviews__outer">
+                <div class="reviews-item__content__inner js-reviews__inner">
+                    «Обратилась в компанию для покупки квартиры в Нижнем. Была приятно удивлён профессионализмом и участием агентов. Перераспределение бюджета, как следует из вышесказанного, решительно экономит рекламный клаттер. В соответствии с законом Ципфа, рекламный клаттер экономит креативный побочный PR-эффект. Психология восприятия рекламы спонтанно программирует медиабизнес. Стратегический маркетинг слабо усиливает охват аудитории, осознав маркетинг как часть производства.»
+                </div>
+            </div>
+            <div class="reviews-item__photos">
+                
+            </div>
+            <div class="reviews-item__footer">
+                <span class="reviews-item__date">
+                    <i class="icon-calendar reviews-item__date__icon"></i>
+                    <span class="reviews-item__date__text">6.02.2017 17:02</span>
+                </span>
+                <span class="reviews-item__toggler js-reviews__toggler" 
+                      data-rolldown="Развернуть" data-rollup="Свернуть">
+                    Развернуть
+                </span>
+            </div>
+        </div>
+    </div>
+</div><div class="reviews-list__item">
+    <div class="reviews-list__item__inner">
+        <div class="reviews-item _fade js-reviews">
+            <div class="reviews-item__header">
+                
+                <div class="reviews-item__header__inner">
+                    <div class="reviews-item__title">
+                        Семья Огородниковых
+                    </div>
+                    <div class="reviews-item__agent">
+                        Риелтор: <a href="#" class="text-nowrap">Макарова Н.М.</a>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-item__content js-reviews__outer">
+                <div class="reviews-item__content__inner js-reviews__inner">
+                    «Выражаем огромную благодарность Макаровой Н.М. за профессионализм, ответственность, качественный и трепетный подход к делу. Сделка прошла очень удачно и теперь мы живем в новом доме. Согласно предыдущему, искусство дискредитирует сенсибельный даосизм. Искусство реально раскладывает на элементы субъективный бабувизм. Созерцание, как принято считать, представляет собой из ряда вон выходящий дедуктивный метод. Атомистика подчеркивает естественный гравитационный парадокс.»
+                </div>
+            </div>
+            <div class="reviews-item__photos">
+                
+                <a href="img/realty/2@3x.jpg" class="reviews-item__photos__item js-reviews__slide">
+                    <img src="img/realty/2.jpg">
+                </a>
+                
+                <a href="img/realty/3@3x.jpg" class="reviews-item__photos__item js-reviews__slide">
+                    <img src="img/realty/3.jpg">
+                </a>
+                
+                <a href="img/realty/1@3x.jpg" class="reviews-item__photos__item js-reviews__slide">
+                    <img src="img/realty/1.jpg">
+                </a>
+                
+            </div>
+            <div class="reviews-item__footer">
+                <span class="reviews-item__date">
+                    <i class="icon-calendar reviews-item__date__icon"></i>
+                    <span class="reviews-item__date__text">9.02.2017 16:22</span>
+                </span>
+                <span class="reviews-item__toggler js-reviews__toggler" 
+                      data-rolldown="Развернуть" data-rollup="Свернуть">
+                    Развернуть
+                </span>
+            </div>
+        </div>
+    </div>
+</div><div class="reviews-list__item">
+    <div class="reviews-list__item__inner">
+        <div class="reviews-item _fade js-reviews">
+            <div class="reviews-item__header">
+                
+                <div class="reviews-item__img-wrapper">
+                    <img class="reviews-item__img"
+                         src="img/reviews/2.jpg"
+                         alt="alt text">
+                </div>
+                
+                <div class="reviews-item__header__inner">
+                    <div class="reviews-item__title">
+                        Устинова Лолита
+                    </div>
+                    <div class="reviews-item__agent">
+                        Риелтор: <a href="#" class="text-nowrap">Столбова Ольга Арслановна</a>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-item__content js-reviews__outer">
+                <div class="reviews-item__content__inner js-reviews__inner">
+                    «Обратилась в компанию для покупки квартиры в Нижнем. Была приятно удивлён профессионализмом и участием агентов. Перераспределение бюджета, как следует из вышесказанного, решительно экономит рекламный клаттер. В соответствии с законом Ципфа, рекламный клаттер экономит креативный побочный PR-эффект. Психология восприятия рекламы спонтанно программирует медиабизнес. Стратегический маркетинг слабо усиливает охват аудитории, осознав маркетинг как часть производства.»
+                </div>
+            </div>
+            <div class="reviews-item__photos">
+                
+            </div>
+            <div class="reviews-item__footer">
+                <span class="reviews-item__date">
+                    <i class="icon-calendar reviews-item__date__icon"></i>
+                    <span class="reviews-item__date__text">6.02.2017 17:02</span>
+                </span>
+                <span class="reviews-item__toggler js-reviews__toggler" 
+                      data-rolldown="Развернуть" data-rollup="Свернуть">
+                    Развернуть
+                </span>
+            </div>
+        </div>
+    </div>
+</div><div class="reviews-list__item">
+    <div class="reviews-list__item__inner">
+        <div class="reviews-item _fade js-reviews">
+            <div class="reviews-item__header">
+                
+                <div class="reviews-item__header__inner">
+                    <div class="reviews-item__title">
+                        Семья Огородниковых
+                    </div>
+                    <div class="reviews-item__agent">
+                        Риелтор: <a href="#" class="text-nowrap">Макарова Н.М.</a>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-item__content js-reviews__outer">
+                <div class="reviews-item__content__inner js-reviews__inner">
+                    «Выражаем огромную благодарность Макаровой Н.М. за профессионализм, ответственность, качественный и трепетный подход к делу. Сделка прошла очень удачно и теперь мы живем в новом доме. Согласно предыдущему, искусство дискредитирует сенсибельный даосизм. Искусство реально раскладывает на элементы субъективный бабувизм. Созерцание, как принято считать, представляет собой из ряда вон выходящий дедуктивный метод. Атомистика подчеркивает естественный гравитационный парадокс.»
+                </div>
+            </div>
+            <div class="reviews-item__photos">
+                
+                <a href="img/realty/2@3x.jpg" class="reviews-item__photos__item js-reviews__slide">
+                    <img src="img/realty/2.jpg">
+                </a>
+                
+                <a href="img/realty/3@3x.jpg" class="reviews-item__photos__item js-reviews__slide">
+                    <img src="img/realty/3.jpg">
+                </a>
+                
+                <a href="img/realty/1@3x.jpg" class="reviews-item__photos__item js-reviews__slide">
+                    <img src="img/realty/1.jpg">
+                </a>
+                
+            </div>
+            <div class="reviews-item__footer">
+                <span class="reviews-item__date">
+                    <i class="icon-calendar reviews-item__date__icon"></i>
+                    <span class="reviews-item__date__text">9.02.2017 16:22</span>
+                </span>
+                <span class="reviews-item__toggler js-reviews__toggler" 
+                      data-rolldown="Развернуть" data-rollup="Свернуть">
+                    Развернуть
+                </span>
+            </div>
+        </div>
+    </div>
+</div><div class="reviews-list__item">
+    <div class="reviews-list__item__inner">
+        <div class="reviews-item _fade js-reviews">
+            <div class="reviews-item__header">
+                
+                <div class="reviews-item__img-wrapper">
+                    <img class="reviews-item__img"
+                         src="img/reviews/1.jpg"
+                         alt="alt text">
+                </div>
+                
+                <div class="reviews-item__header__inner">
+                    <div class="reviews-item__title">
+                        Раиса Васильевна Серикова
+                    </div>
+                    <div class="reviews-item__agent">
+                        Риелтор: <a href="#" class="text-nowrap">Столбова Ольга Арслановна</a>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-item__content js-reviews__outer">
+                <div class="reviews-item__content__inner js-reviews__inner">
+                    «Я человек пожилой, и родственники предложили мне из ММС переехать поближе к ним, в Восточный микрорайон, на Широтную. Купила однокомнатную квартиру в доме застройщика МДС. Доверилась, потому что компания крупная, по всей стране работала. И вдруг банкротство! И дом еще не достроен! Юристы Монолит Истейт сразу включились в это дело. Для того, чтобы мне не потерять свои деньги, нужно было попасть в реестр требований кредиторов. И юристы это сделали. Причем, все было организовано очень удобно для меня — меня заранее предупреждали обо всех судебных заседаниях. Все было оперативно. Очень надеюсь, что все завершится благополучно, и дом будет достроен другим застройщиком. Главное, что моя квартира в этом доме моя собственность на всех законных основаниях.»
+                </div>
+            </div>
+            <div class="reviews-item__photos">
+                
+                <a href="img/realty/1@3x.jpg" class="reviews-item__photos__item js-reviews__slide">
+                    <img src="img/realty/1.jpg">
+                </a>
+                
+                <a href="img/realty/2@3x.jpg" class="reviews-item__photos__item js-reviews__slide">
+                    <img src="img/realty/2.jpg">
+                </a>
+                
+                <a href="img/realty/3@3x.jpg" class="reviews-item__photos__item js-reviews__slide">
+                    <img src="img/realty/3.jpg">
+                </a>
+                
+            </div>
+            <div class="reviews-item__footer">
+                <span class="reviews-item__date">
+                    <i class="icon-calendar reviews-item__date__icon"></i>
+                    <span class="reviews-item__date__text">9.02.2017 16:22</span>
+                </span>
+                <span class="reviews-item__toggler js-reviews__toggler" 
+                      data-rolldown="Развернуть" data-rollup="Свернуть">
+                    Развернуть
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+    <div class="list-header _white _footer">
+    <div class="container list-header__row">
+        <div></div>
+        <div class="list-header__pagination">
+            <ul class="pagination">
+                <li class="pagination__item">
+                    <a class="pagination__item__link _first _disabled" href="#"></a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__item__link _active" href="#">1</a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__item__link" href="#">2</a>
+                </li>
+                <li class="pagination__item hidden-sm">
+                    <a class="pagination__item__link" href="#">3</a>
+                </li>
+                <li class="pagination__item hidden-sm">
+                    <a class="pagination__item__link" href="#">4</a>
+                </li>
+                <li class="pagination__item _skip">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__item__link" href="#">322</a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__item__link _last" href="#"></a>
+                </li>
+            </ul>
+            <span class="list-header__pagination__total">
+                Показано 10 из 146
+            </span>
+        </div>
+    </div>
+</div>
+</section>
+            <footer class="footer">
+    <div class="footer__dark">
+        <div class="container">
+            <div class="footer__dark__menu__md">
+                <ul class="footer__dark__menu__list">
+                    <li><a href="second.html">Вторичное жилье</a></li>
+                    <li><a href="new.html">Новостройки без комиссии</a></li>
+                    <li><a href="#">Дома, дачи, участки</a></li>
+                    <li><a href="rent.html">Аренда</a></li>
+                    <li><a href="commercial.html">Коммерческая</a></li>
+                    <li><a href="hypothec.html">Ипотека</a></li>
+                    <li><a href="for-seller.html">Продавцу</a></li>
+                    <li><a href="analytic.html">Аналитика</a></li>
+                </ul>
+            </div>
+            <div class="footer__dark__menu__sm">
+                <ul class="footer__dark__menu__list">
+                    <li><a href="second.html">Вторичное жилье</a></li>
+                    <li><a href="#">Дома, дачи, участки</a></li>
+                    <li><a href="commercial.html">Коммерческая</a></li>
+                    <li><a href="for-seller.html">Продавцу</a></li>
+                    <li><a href="rent.html">Аренда</a></li>
+                    <li><a href="hypothec.html">Ипотека</a></li>
+                    <li><a href="analytic.html">Аналитика</a></li>
+                </ul>
+                <ul class="footer__dark__menu__list">
+                    <li><a href="new.html">Новостройки без комиссии</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer__light">
+        <div class="container">
+            <div class="footer__up">
+                <div class="footer__up__col _col1">
+                    <ul class="footer__menu">
+                        <li><a href="work.html">Работа в компании «Монолит Истейт»</a></li>
+                        <li><a href="about.html">О компании «Монолит Истейт»</a></li>
+                        <li><a href="news.html">Новости компании</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__up__col _col2">
+                    <ul class="footer__menu">
+                        <li><a href="agents.html">Специалисты по недвижимости</a></li>
+                        <li><a href="builders.html">Застройщики</a></li>
+                        <li><a href="analytic.html">Аналитика</a></li>
+                    </ul>
+                </div>
+                <div class="footer__up__col _col3">
+                    <ul class="footer__contacts">
+                        <li class="footer__contacts__address">г. Нижний Новгород,
+                            ул. Большая Покровская, д. 69</li>
+                        <li>Email: kostina@monolit.nnov.ru<br>
+                            Тел.: <a href="tel:+78312199067">+7 (831) 219-90-67</a></li>
+                    </ul>
+                </div>
+                <div class="footer__up__col _col4">
+                    <div class="footer__social">
+                        
+<ul class="social-links">
+    <li><a href="#" class="_fb" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_instagram" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_vk" rel="noopener nofollow"></a></li>
+    <!--<li><a href="#" class="_twitter" rel="noopener nofollow"></a></li>-->
+    <li><a href="#" class="_ok" rel="noopener nofollow"></a></li>
+    
+    <li><a href="#" class="_youtube" rel="noopener nofollow"></a></li>
+    
+</ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__down">
+                <div class="footer__down__col _col1">
+                    <div class="footer__copyright">
+                        © Copyright 2017 Агентство недвижимости «Монолит Истейт». Все права защищены.
+                    </div>
+                </div>
+                <div class="footer__down__col _col2">
+                    <ul class="footer__agreement">
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                        <li><a href="#">Пользовательское соглашение</a></li>
+                        <li><a href="sitemap.html">Карта сайта</a></li>
+                    </ul>
+                </div>
+                <div class="footer__down__col _col3">
+                    <a href="//riverstart.ru" target="_blank" rel="noopener nofollow" class="footer__made">
+                        <img src="img/riverstart.svg" alt="riverstart">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+            <div class="hidden">
+    <div id="call" class="popup-cnt">
+    <div class="popup popup-call">
+        <h3 class="popup__h3">Заказать обратный звонок</h3>
+        <p class="popup__lead">Перезвоним в течение 5 минут</p>
+        <form id="popup_call_form" class="popup-call__form js-validate">
+            <div class="input-group _lg _secondary">
+                <label>Как к вам обращаться?</label>
+                <input type="text" name="name" value="Иван" required>
+            </div>
+            <div class="input-group _lg _secondary">
+                <label>Ваш телефон</label>
+                <input type="text" name="phone" value="7" 
+                       class="js-mask__tel" required>
+            </div>
+            <div class="input-group">
+                <button class="btn _solid _lg _shadow" type="submit">Перезвоните мне</button>
+            </div>
+            <div class="input-group">
+                <div class="input-help popup-call__help">Нажимая кнопку «Перезвоните мне» вы принимаете Условия пользовательского соглашения и соглашаетесь на обработку ваших персональных данных.</div>
+            </div>
+        </form>
+        <img class="popup-call__img" src="img/call.png"
+             srcset="img/call@2x.png 2x,img/call@3x.png 3x"
+             alt="alt text">
+    </div>
+</div>
+    <div id="signup" class="popup-cnt">
+    <div class="popup popup-signup">
+        <h3 class="popup__h3">Регистрация на сайте</h3>
+        <p class="popup__lead">Займет пару минут</p>
+        <form id="popup_signup_form" class="popup-signup__form">
+            <div class="popup-signup__form__row1">
+                <div class="input-group _lg _secondary">
+                    <label>E-mail <span class="link">или телефон</span></label>
+                    <input type="text" name="name" value="Иван" required class="error">
+                    <div class="input-help">Некорректый e-mail</div>
+                </div>
+                <div class="input-group _lg _secondary">
+                    <label>Пароль</label>
+                    <input type="password" name="password" required class="js-password">
+                    <div class="input-help _password">
+                        <span class="input-help__pass _0">Минимальная длина пароля – 8 символов</span>
+                        <span class="input-help__pass _1">Слабый пароль</span>
+                        <span class="input-help__pass _2">Средний пароль</span>
+                        <span class="input-help__pass _3">Хороший пароль</span>
+                    </div>
+                </div>
+                <div class="input-group _lg _secondary">
+                    <label>Повторите пароль</label>
+                    <input type="password" name="password_repeat" value="" required class="error">
+                    <div class="input-help">Введите пароль повторно</div>
+                </div>
+            </div>
+            <div class="popup-signup__form__row2">
+                <div class="input-group">
+                    <button class="btn _solid _lg _shadow" type="submit">Регистрация</button>
+                </div>
+                <div class="input-group">
+                    <div class="popup-signup__form__login">Я <a href="#login" class="js-popup">уже зарегистрирован</a> на вашем сайте</div>
+                </div>
+            </div>
+            <div class="popup-signup__form__row3">
+                <div class="input-group">
+                    <div class="input-help">Нажимая кнопку «Зарегистрироваться» вы принимаете Условия пользовательского соглашения и соглашаетесь на обработку ваших персональных данных.</div>
+                </div>
+                <div class="input-group">
+                    <div class="input-help _black">При регистрации на сайте вы получите доступ к своему личному кабинету, где сможете добавлять объявления в избранное и наблюдать за ними.</div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+    <div id="login" class="popup-cnt">
+    <div class="popup popup-signup _login">
+        <h3 class="popup__h3">Вход в личный кабинет</h3>
+        <form id="popup_login_form" class="popup-signup__form">
+            <div class="popup-signup__form__row1">
+                <div class="input-group _lg _secondary">
+                    <label>E-mail <span class="link">или телефон</span></label>
+                    <input type="text" name="name" value="user@host.com" required>
+                </div>
+                <div class="input-group _lg _secondary">
+                    <label>Пароль</label>
+                    <input type="password" name="password" value="J3hdIsd Kj" required class="error">
+                    <div class="input-help">
+                        Пароль не верный, <a href="#signup" class="js-popup">Забыли пароль?</a>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-signup__form__row2">
+                <div class="input-group">
+                    <button class="btn _solid _lg _shadow" type="submit">Войти</button>
+                </div>
+                <div class="input-group">
+                    <div class="popup-signup__form__login">Мне сначала нужно 
+                        <a href="#signup" class="js-popup">зарегистрироваться</a></div>
+                </div>
+            </div>
+            <div class="popup-signup__form__row3">
+                <div class="input-group">
+                    <div class="popup-signup__form__social">
+                        <span class="popup-signup__form__social__text">
+                            Войти через социальные сети
+                        </span>
+                        
+<ul class="social-links">
+    <li><a href="#" class="_fb" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_instagram" rel="noopener nofollow"></a></li>
+    <li><a href="#" class="_vk" rel="noopener nofollow"></a></li>
+    <!--<li><a href="#" class="_twitter" rel="noopener nofollow"></a></li>-->
+    <li><a href="#" class="_ok" rel="noopener nofollow"></a></li>
+    
+</ul>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        <div class="dev">
+    <span id="dev_toggler" class="dev__toggler">&lt;/&gt;</span>
+    <ul>
+        <li><a href="index.html">main</a></li>
+        <li><a href="second.html">second</a></li>
+        <li><a href="rent.html">rent</a></li>
+        <li><a href="commercial.html">commercial</a></li>
+        <li><a href="onmap.html">on map</a></li>
+        <li><a href="result.html">result</a></li>
+        <li><a href="result-map.html">result-map</a></li>
+        <li><a href="detail.html">detail</a></li>
+        <li><a href="new.html">new</a></li>
+        <li><a href="new-result.html">new-result</a></li>
+        <li><a href="new-detail_1-agent.html">new-detail 1 agent</a></li>
+        <li><a href="new-detail_2-agent.html">new-detail 2 agent</a></li>
+        <li><a href="new-detail_3-agent.html">new-detail 3 agent</a></li>
+        <li><a href="content.html">content</a></li>
+        <li><a href="builders.html">builders</a></li>
+        <li><a href="builder.html">builder</a></li>
+        <li><a href="news.html">news</a></li>
+        <li><a href="news-detail.html">news-detail</a></li>
+        <li><a href="agents.html">agents</a></li>
+        <li><a href="agent.html">agent</a></li>
+        <li><a href="work.html">work</a></li>
+        <li><a href="for-seller.html">for seller</a></li>
+        <li><a href="hypothec.html">hypothec</a></li>
+        <li><a href="analytic1.html">analytic1</a></li>
+        <li><a href="analytic2.html">analytic2</a></li>
+        <li><a href="analytic-tabs.html">analytic-tabs</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="contacts.html">contacts</a></li>
+        <li><a href="infrastructure.html">infrastructure</a></li>
+        <li><a href="404.html">404</a></li>
+        <li><a href="auth.html">auth</a></li>
+        <li><a href="sitemap.html">sitemap</a></li>
+        <li><a href="reviews.html">reviews</a></li>
+    </ul>
+</div>
+<script>
+    (function () {
+        var t = document.getElementById('dev_toggler');
+        var p = t.parentElement;
+        t.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.parentElement.classList.toggle('_active');
+        });
+        p.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+        window.addEventListener('click', function () {
+            p.classList.remove('_active');
+        });
+    }());
+</script>
+
+<link href="fonts/Lato/lato.css" rel="stylesheet" type="text/css">
+<link href="fonts/fontello/css/fontello.css" rel="stylesheet" type="text/css">
+<link href="css/libs/slick.css" rel="stylesheet" type="text/css">
+<link href="css/libs/jquery.scrollbar.css" rel="stylesheet" type="text/css">
+<link href="css/libs/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+
+<link href="css/dev.css" rel="stylesheet" type="text/css">
+
+
+
+<script>
+    var appConfig = {
+        breakpoint: {
+            sm: 320,
+            md: 768,
+            lg: 1280
+        },
+        sliderFadeSpeed: 800,
+        sliderAutoplaySpeed: 8000,
+        logoUpdateTimeout: 3000,
+        minPasswordLength: 8
+    };
+</script>
+
+<script src="js/libs/jquery.min.js"></script>
+<script src="js/libs/slick.min.js"></script>
+<script src="js/libs/jquery.scrollbar.min.js"></script>
+<script src="js/libs/jquery.fancybox.min.js"></script>
+<script src="js/libs/jquery.inputmask.bundle.min.js"></script>
+<script src="js/libs/jquery.easytabs.min.js"></script>
+<script src="js/libs/jquery.validate.min.js"></script>
+<script src="js/libs/select2.min.js"></script>
+<script src="js/libs/nouislider.min.js"></script>
+<script src="js/libs/datepicker.min.js"></script>
+<script src="js/common.js"></script>
+        <link href="css/reviews.css" rel="stylesheet" type="text/css">
+        <style>
+    .preloader {
+        display: none !important;
+    }
+</style>
+    </body>
+</html>

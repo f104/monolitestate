@@ -479,7 +479,7 @@ var app = {
         var endings = ['квартира', 'квартиры', 'квартир'];
         $('.js-chess-filter__total').text(total + ' ' + app.getNumEnding(total, endings));
     },
-    
+
     /**
      * fixed right promo
      */
@@ -555,6 +555,7 @@ jQuery(function () {
         initFileinput();
         initAlphabet();
         initAntispam();
+        initReviews();
     });
 
     $(window).on('resize', function () {
@@ -564,7 +565,7 @@ jQuery(function () {
 
     function initMainSlider() {
         var time = appConfig.sliderAutoplaySpeed / 1000;
-        $('.js-slider-main').each(function(){
+        $('.js-slider-main').each(function () {
             var $bar = $(this).find('.js-slider-main__bar'),
                     $slick = $(this).find('.js-slider-main__slider'),
                     isPause = false,
@@ -585,14 +586,14 @@ jQuery(function () {
                 fade: true,
                 adaptiveHeight: true,
                 speed: appConfig.sliderFadeSpeed
-    //            autoplaySpeed: appConfig.sliderAutoplaySpeed,
+                        //            autoplaySpeed: appConfig.sliderAutoplaySpeed,
             });
-            
+
             if (total === 1) {
                 $bar.parent().remove();
                 return;
             }
-            
+
             $slick.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
                 if (currentSlide < nextSlide) {
                     $(slick.$slides[currentSlide]).addClass('_fade _left');
@@ -624,7 +625,7 @@ jQuery(function () {
 //                return false;
                 resetProgressbar();
                 percentTime = 0;
-    //            isPause = false;
+                //            isPause = false;
                 tick = setInterval(interval, 10);
             }
 
@@ -808,8 +809,9 @@ jQuery(function () {
         };
         $('.js-popup').on('click', function () {
             $.fancybox.close();
-            if ($(this).attr('href')) {
-                var $target = $('#' + $(this).attr('href').substr(1));
+            var href = $(this).attr('href') || $(this).data('href');
+            if (href) {
+                var $target = $('#' + href.substr(1));
                 var data = $(this).data();
                 if ($target.length && data) {
                     for (var k in data) {
@@ -820,7 +822,9 @@ jQuery(function () {
                     }
                 }
             }
-        }).fancybox(options);
+            $.fancybox.open($target, options);
+            return false;
+        });
         if (window.location.hash) {
             var $cnt = $(window.location.hash);
             if ($cnt.length && $cnt.hasClass('popup-cnt')) {
@@ -1100,6 +1104,66 @@ jQuery(function () {
                     loop: true
                 }, $links.index(this));
 
+                return false;
+            });
+        });
+    }
+
+    function initReviews() {
+        function checkOuter() {
+            $('.js-reviews__outer').each(function () {
+                var $inner = $(this).find('.js-reviews__inner');
+                if ($inner.outerHeight() <= $(this).outerHeight()) {
+                    $(this).parents('.js-reviews').removeClass('_fade');
+                } else {
+                    $(this).parents('.js-reviews').addClass('_fade');
+                }
+            });
+        }
+        function rollDown($item) {
+            var $parent = $item.parent().height($item.outerHeight());
+            $item.addClass('_opened');
+        }
+        function rollUp($item) {
+            $item.removeClass('_opened');
+        }
+        $('.js-reviews__toggler').on('click', function () {
+            var $this = $(this);
+            var $item = $this.parents('.js-reviews');
+            var height = null;
+            if ($item.hasClass('_opened')) {
+                height = $item.data('height');
+                $this.text($this.data('rolldown'));
+                $item.animate({height: height}, 400, function () {
+                    $item.removeClass('_opened');
+                    $item.css('height', '');
+                });
+            } else {
+                var $parent = $item.parent().height($item.outerHeight());
+                var $clone = $item.clone().addClass('_cloned').width($item.outerWidth()).appendTo($parent);
+                height = $clone.outerHeight();
+                $clone.remove();
+                $item.data('height', $item.outerHeight());
+                $item.addClass('_opened');
+                $item.animate({height: height}, 400, function () {
+                    $this.text($this.data('rollup'));
+                });
+            }
+        });
+        $(window).on('resize', function () {
+            $('.js-reviews').removeClass('_opened').css('height', '');
+            $('.js-reviews__toggler').each(function(){
+                $(this).text($(this).data('rolldown'));
+            });
+            checkOuter();
+        });
+        checkOuter();
+        $('.js-reviews').each(function () {
+            var $links = $(this).find('.js-reviews__slide');
+            $links.on('click', function () {
+                $.fancybox.open($links, {
+                    loop: true
+                }, $links.index(this));
                 return false;
             });
         });
@@ -1538,5 +1602,5 @@ jQuery(function () {
             }
         });
     }
-    
+
 });

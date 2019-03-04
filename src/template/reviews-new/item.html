@@ -1,0 +1,45 @@
+<div class="reviews-list__item">
+    <div class="reviews-list__item__inner">
+        <div class="reviews-item _fade js-reviews">
+            <div class="reviews-item__header">
+                @@if (img) {
+                <div class="reviews-item__img-wrapper">
+                    <img class="reviews-item__img"
+                         src="img/reviews/@@img.jpg"
+                         alt="alt text">
+                </div>
+                }
+                <div class="reviews-item__header__inner">
+                    <div class="reviews-item__title">
+                        @@title
+                    </div>
+                    <div class="reviews-item__agent">
+                        Риелтор: <a href="#" class="text-nowrap">@@agent</a>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-item__content js-reviews__outer">
+                <div class="reviews-item__content__inner js-reviews__inner">
+                    @@text
+                </div>
+            </div>
+            <div class="reviews-item__photos">
+                @@for (var i = 0; i < photos.length; i++) {
+                <a href="img/realty/`+photos[i]+`@3x.jpg" class="reviews-item__photos__item js-reviews__slide">
+                    <img src="img/realty/`+photos[i]+`.jpg">
+                </a>
+                }
+            </div>
+            <div class="reviews-item__footer">
+                <span class="reviews-item__date">
+                    <i class="icon-calendar reviews-item__date__icon"></i>
+                    <span class="reviews-item__date__text">@@date</span>
+                </span>
+                <span class="reviews-item__toggler js-reviews__toggler" 
+                      data-rolldown="Развернуть" data-rollup="Свернуть">
+                    Развернуть
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

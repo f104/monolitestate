@@ -119,6 +119,14 @@
     }
 }
 
+@mixin hover-desktop() {
+    @media (hover) , (min-width:0\0) , (min--moz-device-pixel-ratio:0){
+        &:hover {
+            @content
+        }
+    }
+}
+
 @mixin sm-full() {
     margin-left: - $container-padding-sm;
     margin-right: - $container-padding-sm;
