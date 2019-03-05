@@ -77,19 +77,25 @@
         }
     }
     &__photos {
-        display: flex;
-        overflow: hidden;
-        width: auto;
-        margin-right: - $container-padding-sm;
-        @include media-breakpoint-up(md) {
-            margin-right: -26px;
+        &__row {
+            @include row(10px);
+        }
+        &__col {
+            @include col(50%, 10px);
+            display: none;
+            &:nth-child(1), &:nth-child(2) {
+                display: block;
+            }
         }
         &__item {
-            margin-right: 10px;
+            display: block;
             cursor: pointer;
+            height: 135px;
+            overflow: hidden;
             img {
-                width: 135px;
-                height: 135px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
             @include transition(opacity);
             @include hover-desktop {
@@ -100,6 +106,7 @@
     &._fade {
         #{$root} {
             &__content {
+                cursor: pointer;
                 &:after {
                     content: '';
                     position: absolute;

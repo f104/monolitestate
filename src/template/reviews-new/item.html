@@ -24,11 +24,15 @@
                 </div>
             </div>
             <div class="reviews-item__photos">
-                @@for (var i = 0; i < photos.length; i++) {
-                <a href="img/realty/`+photos[i]+`@3x.jpg" class="reviews-item__photos__item js-reviews__slide">
-                    <img src="img/realty/`+photos[i]+`.jpg">
-                </a>
-                }
+                <div class="reviews-item__photos__row">
+                    @@for (var i = 0; i < photos.length; i++) {
+                    <div class="reviews-item__photos__col">
+                        <a href="img/realty/`+photos[i]+`@3x.jpg" class="reviews-item__photos__item link-icon js-reviews__slide">
+                            <img src="img/realty/`+photos[i]+`.jpg">
+                        </a>
+                    </div>
+                    }
+                </div>
             </div>
             <div class="reviews-item__footer">
                 <span class="reviews-item__date">

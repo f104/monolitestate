@@ -1120,20 +1120,15 @@ jQuery(function () {
                 }
             });
         }
-        function rollDown($item) {
-            var $parent = $item.parent().height($item.outerHeight());
-            $item.addClass('_opened');
-        }
-        function rollUp($item) {
-            $item.removeClass('_opened');
-        }
-        $('.js-reviews__toggler').on('click', function () {
-            var $this = $(this);
-            var $item = $this.parents('.js-reviews');
+        function roll($item) {
+            if (!$item.hasClass('_fade')) {
+                return;
+            }
+            var $toggler = $item.find('.js-reviews__toggler');
             var height = null;
             if ($item.hasClass('_opened')) {
                 height = $item.data('height');
-                $this.text($this.data('rolldown'));
+                $toggler.text($toggler.data('rolldown'));
                 $item.animate({height: height}, 400, function () {
                     $item.removeClass('_opened');
                     $item.css('height', '');
@@ -1146,9 +1141,12 @@ jQuery(function () {
                 $item.data('height', $item.outerHeight());
                 $item.addClass('_opened');
                 $item.animate({height: height}, 400, function () {
-                    $this.text($this.data('rollup'));
+                    $toggler.text($toggler.data('rollup'));
                 });
             }
+        }
+        $('.js-reviews__toggler, .js-reviews__outer').on('click', function () {
+            roll($(this).parents('.js-reviews'));
         });
         $(window).on('resize', function () {
             $('.js-reviews').removeClass('_opened').css('height', '');
