@@ -2,7 +2,9 @@
     @@include('./template/head.html', {
     "name": "Новостройка"
     })
+    @@include('./template/preloader-head.html')
     <body>
+        @@include('./template/preloader.html')
         @@include('./template/header.html', {
         "active": "new"
         })
@@ -48,9 +50,9 @@
                 </div>
             </section>
 
-            @@include('./template/new/detail-gallery.html')
-            @@include('./template/new/detail-content.html')
-            @@include('./template/promo-new.html')
+            @@include('./template/new/detail-feat.html')
+            @@include('./template/new/detail-about.html')
+            <!--@@include('./template/promo-new.html')-->
             @@include('./template/hypothec/calc.html', {
             "title": "Ипотечные программы для новостроек"
             })
@@ -63,7 +65,14 @@
             @@include('./template/popups-common.html')
             <div class="content__overlay js-menu-overlay"></div>
         </div>
-        @@include('./template/foot.html', {"all": true})
+        @@include('./template/foot.html', {"all": false})
+        <link href="css/libs/nouislider.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/libs/datepicker/datepicker.css" rel="stylesheet" type="text/css">
+        <link href="css/libs/datepicker/cell.css" rel="stylesheet" type="text/css">
+        <link href="css/libs/datepicker/navigation.css" rel="stylesheet" type="text/css">
+        <link href="css/libs/datepicker/timepicker.css" rel="stylesheet" type="text/css">
+        <link href="css/new-detail.css" rel="stylesheet" type="text/css">
+        @@include('./template/preloader-foot.html')
         <script>
             app.mapData = {
                 object: {
@@ -127,7 +136,6 @@
             };
         </script>
         <link rel="stylesheet" href="css/libs/pannellum.css">
-        <script src="js/libs/pannellum.js"></script>
         <script src="js/detail.js"></script>
     </body>
 </html>

@@ -6,7 +6,28 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
 </head>
+    <style>
+    .preloader {
+        display: block;
+        background: #fff;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 1000;
+    }
+    .preloader__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
     <body>
+        <div class="preloader">
+    <img class="preloader__img" src="img/logo-preloader.png" alt="Монолит">
+</div>
         <header class="header">
     <div class="header__top">
         <div class="container">
@@ -16,7 +37,7 @@
             <nav>
                 <ul class="header__top__nav">
                     <li><a href="#">Акции</a></li>
-                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#" class="header__top__nav__accent">Услуги</a></li>
                     <li><a href="about.html">О компании</a></li>
                     <li><a href="work.html">Вакансии</a></li>
                     <li><a href="news.html">Новости</a></li>
@@ -43,7 +64,7 @@
             </div>
             <div class="header__main__phone">
                 <div class="header__main__md">+7 (831) 219-90-67</div>
-                <a href="#call" class="header__main__phone__link js-popup"><i class="icon-phone"></i><span class="header__main__md link">Заказать звонок</span></a>
+                <span data-href="#call" class="header__main__phone__link js-popup"><i class="icon-phone"></i><span class="header__main__md link">Заказать звонок</span></span>
             </div>
             <div class="header__main__contacts">
                 <div class="header__main__contacts__text">Звоните нам с 7:30 до 24:00</div>
@@ -61,7 +82,7 @@
                     </div>
                     <div class="header__menu__phone">
                         <div>+7 (831) 219-90-67</div>
-                        <a href="#call" class="header__menu__phone__link js-popup"><i class="icon-phone"></i><span class="link _inverse">Заказать звонок</span></a>
+                        <span data-href="#call" class="header__menu__phone__link js-popup"><i class="icon-phone"></i><span class="link _inverse">Заказать звонок</span></span>
                     </div>
                     <div class="header__menu__contacts">
                         <div class="header__menu__contacts__text">Звоните нам с 7:30 до 24:00</div>
@@ -339,7 +360,7 @@
     <div class="js-tabs">
         <div class="tabs">
             <ul class="tabs__list js-tabs__list">
-                <li><a href="#house_1" class="disabled">Дом №1</a></li>
+                <li><a href="#house_1" class="-disabled">Дом №1</a></li>
                 <li><a href="#house_2">Дом №2</a></li>
             </ul>
             <div class="tabs__select">
@@ -367,8 +388,7 @@
                 <td>
                     <span class="chess-flat _active _3 js-chess-filter__item js-chess-info__item"
                           data-filter-rooms="3" data-filter-area="53.45"  data-filter-price="5500000"
-                          data-price="5 500 000" data-price-per-square="65 899" 
-                          data-hypothec="21 413"
+                          data-price="0" data-price-per-square="0" 
                           data-area="53.45" data-title="3-комнатная квартира"
                           data-floor="12" data-floors-total="12"
                           data-img-flat="img/realty/objects/flat.png"
@@ -389,6 +409,7 @@
                     <span class="chess-flat _active _2 js-chess-filter__item js-chess-info__item"
                           data-filter-rooms="2" data-filter-area="25.18"  data-filter-price="4000000"
                           data-price="4 000 000" data-price-per-square="74 856" 
+                          data-hypothec="21 413"
                           data-area="25.18" data-title="2-комнатная квартира"
                           data-floor="11" data-floors-total="12"
                           data-img-flat="img/realty/objects/flat.png"
@@ -673,8 +694,7 @@
                 <td>
                     <span class="chess-flat _active _3 js-chess-filter__item js-chess-info__item"
                           data-filter-rooms="3" data-filter-area="53.45"  data-filter-price="5500000"
-                          data-price="5 500 000" data-price-per-square="65 899" 
-                          data-hypothec="21 413"
+                          data-price="0" data-price-per-square="0" 
                           data-area="53.45" data-title="3-комнатная квартира"
                           data-floor="12" data-floors-total="12"
                           data-img-flat="img/realty/objects/flat.png"
@@ -695,6 +715,7 @@
                     <span class="chess-flat _active _2 js-chess-filter__item js-chess-info__item"
                           data-filter-rooms="2" data-filter-area="25.18"  data-filter-price="4000000"
                           data-price="4 000 000" data-price-per-square="74 856" 
+                          data-hypothec="21 413"
                           data-area="25.18" data-title="2-комнатная квартира"
                           data-floor="11" data-floors-total="12"
                           data-img-flat="img/realty/objects/flat.png"
@@ -979,8 +1000,7 @@
                 <td>
                     <span class="chess-flat _active _3 js-chess-filter__item js-chess-info__item"
                           data-filter-rooms="3" data-filter-area="53.45"  data-filter-price="5500000"
-                          data-price="5 500 000" data-price-per-square="65 899" 
-                          data-hypothec="21 413"
+                          data-price="0" data-price-per-square="0" 
                           data-area="53.45" data-title="3-комнатная квартира"
                           data-floor="12" data-floors-total="12"
                           data-img-flat="img/realty/objects/flat.png"
@@ -1001,6 +1021,7 @@
                     <span class="chess-flat _active _2 js-chess-filter__item js-chess-info__item"
                           data-filter-rooms="2" data-filter-area="25.18"  data-filter-price="4000000"
                           data-price="4 000 000" data-price-per-square="74 856" 
+                          data-hypothec="21 413"
                           data-area="25.18" data-title="2-комнатная квартира"
                           data-floor="11" data-floors-total="12"
                           data-img-flat="img/realty/objects/flat.png"
@@ -1285,8 +1306,7 @@
                 <td>
                     <span class="chess-flat _active _3 js-chess-filter__item js-chess-info__item"
                           data-filter-rooms="3" data-filter-area="53.45"  data-filter-price="5500000"
-                          data-price="5 500 000" data-price-per-square="65 899" 
-                          data-hypothec="21 413"
+                          data-price="0" data-price-per-square="0" 
                           data-area="53.45" data-title="3-комнатная квартира"
                           data-floor="12" data-floors-total="12"
                           data-img-flat="img/realty/objects/flat.png"
@@ -1307,6 +1327,7 @@
                     <span class="chess-flat _active _2 js-chess-filter__item js-chess-info__item"
                           data-filter-rooms="2" data-filter-area="25.18"  data-filter-price="4000000"
                           data-price="4 000 000" data-price-per-square="74 856" 
+                          data-hypothec="21 413"
                           data-area="25.18" data-title="2-комнатная квартира"
                           data-floor="11" data-floors-total="12"
                           data-img-flat="img/realty/objects/flat.png"
@@ -1591,8 +1612,7 @@
                 <td>
                     <span class="chess-flat _active _3 js-chess-filter__item js-chess-info__item"
                           data-filter-rooms="3" data-filter-area="53.45"  data-filter-price="5500000"
-                          data-price="5 500 000" data-price-per-square="65 899" 
-                          data-hypothec="21 413"
+                          data-price="0" data-price-per-square="0" 
                           data-area="53.45" data-title="3-комнатная квартира"
                           data-floor="12" data-floors-total="12"
                           data-img-flat="img/realty/objects/flat.png"
@@ -1613,6 +1633,7 @@
                     <span class="chess-flat _active _2 js-chess-filter__item js-chess-info__item"
                           data-filter-rooms="2" data-filter-area="25.18"  data-filter-price="4000000"
                           data-price="4 000 000" data-price-per-square="74 856" 
+                          data-hypothec="21 413"
                           data-area="25.18" data-title="2-комнатная квартира"
                           data-floor="11" data-floors-total="12"
                           data-img-flat="img/realty/objects/flat.png"
@@ -1903,8 +1924,7 @@
                 <td>
                     <span class="chess-flat _active _3 js-chess-filter__item js-chess-info__item"
                           data-filter-rooms="3" data-filter-area="53.45"  data-filter-price="5500000"
-                          data-price="5 500 000" data-price-per-square="65 899" 
-                          data-hypothec="21 413"
+                          data-price="0" data-price-per-square="0" 
                           data-area="53.45" data-title="3-комнатная квартира"
                           data-floor="12" data-floors-total="12"
                           data-img-flat="img/realty/objects/flat.png"
@@ -1925,6 +1945,7 @@
                     <span class="chess-flat _active _2 js-chess-filter__item js-chess-info__item"
                           data-filter-rooms="2" data-filter-area="25.18"  data-filter-price="4000000"
                           data-price="4 000 000" data-price-per-square="74 856" 
+                          data-hypothec="21 413"
                           data-area="25.18" data-title="2-комнатная квартира"
                           data-floor="11" data-floors-total="12"
                           data-img-flat="img/realty/objects/flat.png"
@@ -2209,8 +2230,7 @@
                 <td>
                     <span class="chess-flat _active _3 js-chess-filter__item js-chess-info__item"
                           data-filter-rooms="3" data-filter-area="53.45"  data-filter-price="5500000"
-                          data-price="5 500 000" data-price-per-square="65 899" 
-                          data-hypothec="21 413"
+                          data-price="0" data-price-per-square="0" 
                           data-area="53.45" data-title="3-комнатная квартира"
                           data-floor="12" data-floors-total="12"
                           data-img-flat="img/realty/objects/flat.png"
@@ -2231,6 +2251,7 @@
                     <span class="chess-flat _active _2 js-chess-filter__item js-chess-info__item"
                           data-filter-rooms="2" data-filter-area="25.18"  data-filter-price="4000000"
                           data-price="4 000 000" data-price-per-square="74 856" 
+                          data-hypothec="21 413"
                           data-area="25.18" data-title="2-комнатная квартира"
                           data-floor="11" data-floors-total="12"
                           data-img-flat="img/realty/objects/flat.png"
@@ -2532,7 +2553,7 @@
         </div>
         <div class="chess-info__flat__content__info result-list">
             <div class="result-list__item">
-                <div class="result-list__item__price">
+                <div class="result-list__item__price js-chess-info__price-wrapper">
                     <span class="result-list__item__price__cost">
                         <span class="js-chess-info__price"></span> руб.
                     </span>
@@ -2556,7 +2577,7 @@
                             площадь
                         </span>
                     </li>
-                    <li>
+                    <li class="js-chess-info__pricePerSquare-wrapper">
                         <span class="js-chess-info__pricePerSquare"></span> руб.
                         <span class="result-list__item__help">
                             цена за м²
@@ -2638,17 +2659,65 @@
                 </div>
             </section>
 
+            <section class="section container">
+    <div class="new-detail-feat">
+        <div class="new-detail-feat__col">
+            <h3 class="new-detail-feat__h">Как купить</h3>
+            <ul class="new-detail-feat__list">
+                <li class="new-detail-feat__list__item">Ипотека</li>
+                <li class="new-detail-feat__list__item">Ипотека с преференцией</li>
+                <li class="new-detail-feat__list__item">Наличные</li>
+                <li class="new-detail-feat__list__item">Рассрочка</li>
+                <li class="new-detail-feat__list__item">С использованием материнского капитала</li>
+            </ul>
+        </div>
+        <div class="new-detail-feat__col">
+            <h3 class="new-detail-feat__h">Преимущества</h3>
+            <ul class="new-detail-feat__list">
+                <li class="new-detail-feat__list__item">Высота потолков выше 2,7 м</li>
+                <li class="new-detail-feat__list__item">Грузопассажирский лифт</li>
+                <li class="new-detail-feat__list__item">Детская площадка</li>
+                <li class="new-detail-feat__list__item">Менее 10 минут до остановки</li>
+                <li class="new-detail-feat__list__item">Менее 5 минут пешком до детского сада</li>
+                <li class="new-detail-feat__list__item">Паркинг</li>
+                <li class="new-detail-feat__list__item">Подземный паркинг</li>
+                <li class="new-detail-feat__list__item">Своя котельная</li>
+                <li class="new-detail-feat__list__item">Спортивная площадка</li>
+                <li class="new-detail-feat__list__item">Экологически чистый район</li>
+            </ul>
+        </div>
+        <div class="new-detail-feat__col">
+            <h3 class="new-detail-feat__h">Отделка</h3>
+            <ul class="new-detail-feat__list">
+                <li class="new-detail-feat__list__item">Стяжка пола</li>
+                <li class="new-detail-feat__list__item">Металлическая дверь</li>
+                <li class="new-detail-feat__list__item">Окна ПВХ</li>
+                <li class="new-detail-feat__list__item">Остекление лоджий</li>
+                <li class="new-detail-feat__list__item">Плитка в санузле</li>
+                <li class="new-detail-feat__list__item">Радиаторы отопления</li>
+                <li class="new-detail-feat__list__item">Стояки канализации и водоснабжения</li>
+                <li class="new-detail-feat__list__item">Счетчики на воду</li>
+                <li class="new-detail-feat__list__item">Улучшенная отделка под ключ 100%</li>
+                <li class="new-detail-feat__list__item">Штукатурка всех стен</li>
+                <li class="new-detail-feat__list__item">Электрические плиты</li>
+                <li class="new-detail-feat__list__item">Электроразводка по квартире</li>
+            </ul>
+        </div>
+    </div>
+</section>
             <section class="section container js-tabs">
     <div class="tabs _noselect">
         <ul class="tabs__list js-tabs__list">
-            <li><a href="#gallery">Фото/видео</a></li>
+            <li><a href="#gallery">Описание</a></li>
             <li><a href="#3d">3D-тур</a></li>
             <li><a href="#onmap">На карте</a></li>
             <li><a href="#progress">Ход строительства</a></li>
         </ul>
     </div>
     <div id="gallery" class="new-detail-gallery">
-        <div class="gallery js-gallery">
+        <div class="new-detail-gallery__row">
+            <div class="new-detail-gallery__row__col">
+                <div class="gallery js-gallery">
     <div class="js-gallery__slider">
         <a href="img/content/s1.jpg" class="slide">
             <img src="img/content/s1.jpg"
@@ -2739,7 +2808,36 @@
              srcset="img/content/s2small@2x.jpg 2x,
              img/content/s2small@3x.jpg 3x">
     </div>
-</div>                        
+</div>
+            </div>
+            <div class="new-detail-gallery__row__col">
+                <div class="new-detail-content">
+                    <!--<h3 class="new-detail-content__h">Описание</h3>-->
+                    <div class="rte">
+                        <p>ЖК «Квартет» — это два 10-этажных и один 14-этажный дом 
+                            в микрорайоне Восточный-2.</p>
+                        <p>Преимущество: перспективный район с развитой инфраструктурой 
+                            и удобной транспортной развязкой.</p>
+                        <p>Безопасность: домофонные двери в каждом подъезде 
+                            и закрытые спортивные площадки.</p>
+                        <p>Благоустройство: по проекту запланированы детская игровая 
+                            и волейбольная площадки. На территории высадят 
+                            деревья и кустарники, сделают газоны.</p>
+                        <p>Инфраструктура: добраться до центра города можно 
+                            за 10-15 минут. В 5 минутах езды база отдыха «Пруд Лесной». 
+                            Весной 2016 года началось строительство сквера «Серебряные ключи». 
+                            Предполагается, что в сквере будет пруд, 
+                            который зимой превратится в каток.</p>
+                        <p>В районе есть детские сады, школы, места для отдыха, магазины 
+                            и аптеки. Школы: № 72 и 59 Детские сады: № 25 и частный 
+                            сад «Шустренок»</p>
+                        <p>Особенности жилья: в комплексе есть однокомнатные 
+                            (площадь 43,74 кв.м.) и двухкомнатные (68,31 кв.м.) квартиры. 
+                            В квартирах уже есть остекление с тройным стеклопакетом.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="3d">
         <div class="gallery js-panorama-gallery">
@@ -2849,67 +2947,7 @@
     </div>
     <div id="progress"></div>
 </section>
-            <section class="section container new-detail-content">
-    <div class="new-detail-content__left">
-        <h3 class="new-detail-content__h">Описание</h3>
-        <div class="rte">
-            <p>ЖК «Квартет» — это два 10-этажных и один 14-этажный дом 
-                в микрорайоне Восточный-2.</p>
-            <p>Преимущество: перспективный район с развитой инфраструктурой 
-                и удобной транспортной развязкой.</p>
-            <p>Безопасность: домофонные двери в каждом подъезде 
-                и закрытые спортивные площадки.</p>
-            <p>Благоустройство: по проекту запланированы детская игровая 
-                и волейбольная площадки. На территории высадят 
-                деревья и кустарники, сделают газоны.</p>
-            <p>Инфраструктура: добраться до центра города можно 
-                за 10-15 минут. В 5 минутах езды база отдыха «Пруд Лесной». 
-                Весной 2016 года началось строительство сквера «Серебряные ключи». 
-                Предполагается, что в сквере будет пруд, 
-                который зимой превратится в каток.</p>
-            <p>В районе есть детские сады, школы, места для отдыха, магазины 
-                и аптеки. Школы: № 72 и 59 Детские сады: № 25 и частный 
-                сад «Шустренок»</p>
-            <p>Особенности жилья: в комплексе есть однокомнатные 
-                (площадь 43,74 кв.м.) и двухкомнатные (68,31 кв.м.) квартиры. 
-                В квартирах уже есть остекление с тройным стеклопакетом.</p>
-        </div>
-    </div>
-    <div class="new-detail-content__right">
-        <h4 class="new-detail-content__h _sm">Дом</h4>
-        <div class="rte">
-            <ul>
-                <li>Вид ремонта: Черновая отделка</li>
-                <li>Пандусы</li>
-                <li>Пожарная сигнализация</li>
-                <li>Остекление балконов и лоджий</li>
-                <li>Домофон</li>
-                <li>Лифт пассажирский</li>
-                <li>Материал окон: Пластиковые</li>
-                <li>Железная дверь</li>
-            </ul>
-        </div>
-        <h4 class="new-detail-content__h _sm">Двор</h4>
-        <div class="rte">
-            <ul>
-                <li>Открытый двор</li>
-                <li>Наземный паркинг</li>
-            </ul>
-        </div>
-    </div>
-</section>
-            <section class="container section promo _style1">
-    <div href="#" class="promo__wrapper">
-        <h3 class="promo__h">Дешевле чем у застройщика!</h3>
-        <p class="promo__p">Узнайте как сэкономить при покупке квартиры</p>
-        <a href="#" class="btn _lg _solid _shadow promo__btn">Узнать подробнее</a>
-        <div class="promo__img-inner">
-            <img class="promo__img" src="img/promo/4.png" 
-                 srcset="img/promo/4@2x.png 2x,
-                 img/promo/4@3x.png 3x" alt="alt text">
-        </div>
-    </div>
-</section>
+            
             <section class="container section hypothec">
     <h3 class="section__h">Ипотечные программы для новостроек</h3>
     <div class="hypothec-calc js-hypothec">
@@ -3464,14 +3502,14 @@
                     <div class="footer__social">
                         
 <ul class="social-links">
-    
-    <li><a href="#" class="_youtube" rel="noopener nofollow"></a></li>
-    
     <li><a href="#" class="_fb" rel="noopener nofollow"></a></li>
     <li><a href="#" class="_instagram" rel="noopener nofollow"></a></li>
     <li><a href="#" class="_vk" rel="noopener nofollow"></a></li>
-    <li><a href="#" class="_twitter" rel="noopener nofollow"></a></li>
+    <!--<li><a href="#" class="_twitter" rel="noopener nofollow"></a></li>-->
     <li><a href="#" class="_ok" rel="noopener nofollow"></a></li>
+    
+    <li><a href="#" class="_youtube" rel="noopener nofollow"></a></li>
+    
 </ul>
                     </div>
                 </div>
@@ -3486,6 +3524,7 @@
                     <ul class="footer__agreement">
                         <li><a href="#">Политика конфиденциальности</a></li>
                         <li><a href="#">Пользовательское соглашение</a></li>
+                        <li><a href="sitemap.html">Карта сайта</a></li>
                     </ul>
                 </div>
                 <div class="footer__down__col _col3">
@@ -3604,12 +3643,12 @@
                         </span>
                         
 <ul class="social-links">
-    
     <li><a href="#" class="_fb" rel="noopener nofollow"></a></li>
     <li><a href="#" class="_instagram" rel="noopener nofollow"></a></li>
     <li><a href="#" class="_vk" rel="noopener nofollow"></a></li>
-    <li><a href="#" class="_twitter" rel="noopener nofollow"></a></li>
+    <!--<li><a href="#" class="_twitter" rel="noopener nofollow"></a></li>-->
     <li><a href="#" class="_ok" rel="noopener nofollow"></a></li>
+    
 </ul>
                     </div>
                 </div>
@@ -3654,6 +3693,8 @@
         <li><a href="infrastructure.html">infrastructure</a></li>
         <li><a href="404.html">404</a></li>
         <li><a href="auth.html">auth</a></li>
+        <li><a href="sitemap.html">sitemap</a></li>
+        <li><a href="reviews.html">reviews</a></li>
     </ul>
 </div>
 <script>
@@ -3683,13 +3724,6 @@
 <link href="css/dev.css" rel="stylesheet" type="text/css">
 
 
-    <link href="css/libs/nouislider.min.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/datepicker.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/cell.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/navigation.css" rel="stylesheet" type="text/css"/>
-    <link href="css/libs/datepicker/timepicker.css" rel="stylesheet" type="text/css"/>
-    <link href="css/all.css" rel="stylesheet" type="text/css">
-
 
 <script>
     var appConfig = {
@@ -3716,6 +3750,17 @@
 <script src="js/libs/nouislider.min.js"></script>
 <script src="js/libs/datepicker.min.js"></script>
 <script src="js/common.js"></script>
+        <link href="css/libs/nouislider.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/libs/datepicker/datepicker.css" rel="stylesheet" type="text/css">
+        <link href="css/libs/datepicker/cell.css" rel="stylesheet" type="text/css">
+        <link href="css/libs/datepicker/navigation.css" rel="stylesheet" type="text/css">
+        <link href="css/libs/datepicker/timepicker.css" rel="stylesheet" type="text/css">
+        <link href="css/new-detail.css" rel="stylesheet" type="text/css">
+        <style>
+    .preloader {
+        display: none !important;
+    }
+</style>
         <script>
             app.mapData = {
                 object: {
@@ -3779,7 +3824,6 @@
             };
         </script>
         <link rel="stylesheet" href="css/libs/pannellum.css">
-        <script src="js/libs/pannellum.js"></script>
         <script src="js/detail.js"></script>
     </body>
 </html>
