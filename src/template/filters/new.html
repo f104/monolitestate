@@ -1,4 +1,4 @@
-<section class="container section filters">
+<section class="container section filters loading">
     <form class="filters-form">
         @@if (title != '') {
         <h3 class="filters-form__h">@@title</h3>
@@ -28,69 +28,71 @@
             <a href="#" class="btn _lg _solid _shadow">Посмотреть все ЖК</a>
         </div>
         }
-        <div class="filters-form__row__lg">
-            <div class="filters-form__col__lg _col1">
-                <div class="filters-form__row">
-                    <div class="input-group filters-form__rooms _col2">
-                        <label>Кол-во комнат</label>
-                        <div class="filters-form__rooms__inner">
-                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">Студ.</span></label>
-                            <label class="filters-form__rooms__inner__checkbox filters-form__sm"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">Комн.</span></label>
-                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">1</span></label>
-                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox" checked><span class="filters-form__rooms__inner__checkbox__inner">2</span></label>
-                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">3</span></label>
-                            <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">4+</span></label>
+        <div class="filters__loading-wrapper">
+            <div class="filters-form__row__lg">
+                <div class="filters-form__col__lg _col1">
+                    <div class="filters-form__row">
+                        <div class="input-group filters-form__rooms _col2">
+                            <label>Кол-во комнат</label>
+                            <div class="filters-form__rooms__inner">
+                                <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">Студ.</span></label>
+                                <label class="filters-form__rooms__inner__checkbox filters-form__sm"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">Комн.</span></label>
+                                <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">1</span></label>
+                                <label class="filters-form__rooms__inner__checkbox"><input type="checkbox" checked><span class="filters-form__rooms__inner__checkbox__inner">2</span></label>
+                                <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">3</span></label>
+                                <label class="filters-form__rooms__inner__checkbox"><input type="checkbox"><span class="filters-form__rooms__inner__checkbox__inner">4+</span></label>
+                            </div>
+                        </div>
+                        <div class="input-group _col1">
+                            @@include('../chunks/pseudo-select.html', {"title": "Район, Улица"})
+                        </div>
+                        <div class="input-group _double _col3">
+                            <input placeholder="Цена от (руб.)" class="js-mask__currency">
+                            <input placeholder="Цена до (руб.)" class="js-mask__currency">
                         </div>
                     </div>
-                    <div class="input-group _col1">
-                        @@include('../chunks/pseudo-select.html', {"title": "Район, Улица"})
+                    <div class="filters-form__row">
+                        <div class="input-group _col1">
+                            @@include('../chunks/pseudo-select.html', {"title": "Жилой комплекс"})
+                        </div>
+                        <div class="input-group _col2">
+                            @@include('../chunks/pseudo-select.html', {"title": "Срок сдачи"})
+                        </div>
+                        <div class="input-group _double _col3">
+                            <input placeholder="Площадь от" class="js-mask__square">
+                            <input placeholder="Площадь до" class="js-mask__square">
+                        </div>
                     </div>
-                    <div class="input-group _double _col3">
-                        <input placeholder="Цена от (руб.)" class="js-mask__currency">
-                        <input placeholder="Цена до (руб.)" class="js-mask__currency">
-                    </div>
-                </div>
-                <div class="filters-form__row">
-                    <div class="input-group _col1">
-                        @@include('../chunks/pseudo-select.html', {"title": "Жилой комплекс"})
-                    </div>
-                    <div class="input-group _col2">
-                        @@include('../chunks/pseudo-select.html', {"title": "Срок сдачи"})
-                    </div>
-                    <div class="input-group _double _col3">
-                        <input placeholder="Площадь от" class="js-mask__square">
-                        <input placeholder="Площадь до" class="js-mask__square">
-                    </div>
-                </div>
-                <div class="filters-form__row">
-                    <div class="input-group _col1">
-                        @@include('../chunks/pseudo-select.html', {"title": "Застройщик"})
-                    </div>
-                    <div class="input-group _col2">
-                        <div class="filters-form__checkbox">
-                            @@include('./checkbox.html', {
-                            "text": "Дом сдан",
-                            "checked": 0
-                            })
-                            @@include('./checkbox.html', {
-                            "text": "Заселиться в 2018",
-                            "checked": 1
-                            })
+                    <div class="filters-form__row">
+                        <div class="input-group _col1">
+                            @@include('../chunks/pseudo-select.html', {"title": "Застройщик"})
+                        </div>
+                        <div class="input-group _col2">
+                            <div class="filters-form__checkbox">
+                                @@include('./checkbox.html', {
+                                "text": "Дом сдан",
+                                "checked": 0
+                                })
+                                @@include('./checkbox.html', {
+                                "text": "Заселиться в 2018",
+                                "checked": 1
+                                })
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="filters-form__col__lg _col2">
-                <div class="filters-form__summary">
-                    <p class="filters-form__summary__text">Найдено 6 322 варианта</p>
-                    <div class="filters-form__summary__buttons">
-                        <div class="filters-form__summary__buttons__col">
-                            <button class="btn _lg _secondary">Показать</button>
-                        </div>
-                        <div class="filters-form__summary__buttons__col">
-                            <button class="btn _lg _primary">
-                                <i class="icon-map _middle"></i><span>На карте</span>
-                            </button>
+                <div class="filters-form__col__lg _col2">
+                    <div class="filters-form__summary">
+                        <p class="filters-form__summary__text">Найдено 6 322 варианта</p>
+                        <div class="filters-form__summary__buttons">
+                            <div class="filters-form__summary__buttons__col">
+                                <button class="btn _lg _secondary">Показать</button>
+                            </div>
+                            <div class="filters-form__summary__buttons__col">
+                                <button class="btn _lg _primary">
+                                    <i class="icon-map _middle"></i><span>На карте</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

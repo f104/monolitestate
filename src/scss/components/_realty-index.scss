@@ -7,10 +7,17 @@
             position: relative;
             .realty-index__list__item__inner {
                 background-color: $white;
-                min-height: 216px;
                 display: block;
                 @include link-in-text;
                 color: $body-color;
+                a {
+                    color: inherit;
+                    @include link-in-text;
+                    @include transition(opacity);
+                    &:hover {
+                        opacity: .7;
+                    }
+                }
             }
             .realty-index__list__item__img-wrapper {
                 display: none;
@@ -19,11 +26,15 @@
                 padding-left: $container-padding-sm;
                 padding-right: $container-padding-sm;
                 padding-top: 16px;
+                padding-bottom: 16px;
             }
             .realty-index__list__item__row {
                 display: flex;
                 align-items: baseline;
                 margin-bottom: 20px;
+                &:first-of-type {
+                    align-items: flex-end;
+                }
                 &:last-of-type {
                     margin-bottom: 0;
                 }
@@ -46,6 +57,7 @@
                 &._total {
                     font-size: 12px;
                     flex-basis: auto;
+                    line-height: 18px;
                 }
                 &._color {
                     opacity: 1;
@@ -116,10 +128,12 @@
                     padding-left: 32px;
                     padding-right: 32px;
                     padding-top: 19px;
+                    padding-bottom: 19px;
                     flex: 1;
                 }
                 .realty-index__list__item__h {
                     font-size: 23px;
+                    line-height: 26px;
                 }
                 .realty-index__list__item__text {
                     font-size: 15px;
@@ -129,6 +143,7 @@
                     flex-basis: 60px;
                     &._total {
                         font-size: 14px;
+                        line-height: 20px;
                     }
                 }
                 &._map {
@@ -152,6 +167,10 @@ $realty-gutter-width: 30px;
                 padding-left: $realty-gutter-width / 2;
                 padding-right: $realty-gutter-width / 2;
                 flex-basis: 50%;
+                display: flex;
+                .realty-index__list__item__inner {
+                    width: 100%;
+                }
                 .realty-index__list__item__img-wrapper {
                     width: 204px;
                 }

@@ -37,7 +37,7 @@
             <nav>
                 <ul class="header__top__nav">
                     <li><a href="#">Акции</a></li>
-                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#" class="header__top__nav__accent">Услуги</a></li>
                     <li><a href="about.html">О компании</a></li>
                     <li><a href="work.html">Вакансии</a></li>
                     <li><a href="news.html">Новости</a></li>
@@ -159,13 +159,14 @@
     </div>
 </header>
         <div class="content">
-            <section class="container section filters">
+            <section class="container section filters loading">
     <form class="filters-form">
         <h3 class="filters-form__h">
             Недвижимость для бизнеса в Нижнем Новгороде</h3>
-        <div class="filters-form__checkbox-wrapper">
-            <div class="filters-form__checkbox">
-                <div class="filters-form__checkbox__item">
+        <div class="filters__loading-wrapper">
+            <div class="filters-form__checkbox-wrapper">
+                <div class="filters-form__checkbox">
+                    <div class="filters-form__checkbox__item">
     <label class="filters-form__checkbox__item__label">
         <input type="checkbox" >
         <span class="filters-form__checkbox__item__inner">
@@ -175,7 +176,7 @@
         </span>
     </label>
 </div>
-                <div class="filters-form__checkbox__item">
+                    <div class="filters-form__checkbox__item">
     <label class="filters-form__checkbox__item__label">
         <input type="checkbox" checked>
         <span class="filters-form__checkbox__item__inner">
@@ -185,7 +186,7 @@
         </span>
     </label>
 </div>
-                <div class="filters-form__checkbox__item">
+                    <div class="filters-form__checkbox__item">
     <label class="filters-form__checkbox__item__label">
         <input type="checkbox" >
         <span class="filters-form__checkbox__item__inner">
@@ -195,7 +196,7 @@
         </span>
     </label>
 </div>
-                <div class="filters-form__checkbox__item">
+                    <div class="filters-form__checkbox__item">
     <label class="filters-form__checkbox__item__label">
         <input type="checkbox" >
         <span class="filters-form__checkbox__item__inner">
@@ -205,7 +206,7 @@
         </span>
     </label>
 </div>
-                <div class="filters-form__checkbox__item">
+                    <div class="filters-form__checkbox__item">
     <label class="filters-form__checkbox__item__label">
         <input type="checkbox" >
         <span class="filters-form__checkbox__item__inner">
@@ -215,7 +216,7 @@
         </span>
     </label>
 </div>
-                <div class="filters-form__checkbox__item">
+                    <div class="filters-form__checkbox__item">
     <label class="filters-form__checkbox__item__label">
         <input type="checkbox" >
         <span class="filters-form__checkbox__item__inner">
@@ -225,7 +226,7 @@
         </span>
     </label>
 </div>
-                <div class="filters-form__checkbox__item">
+                    <div class="filters-form__checkbox__item">
     <label class="filters-form__checkbox__item__label">
         <input type="checkbox" >
         <span class="filters-form__checkbox__item__inner">
@@ -235,7 +236,7 @@
         </span>
     </label>
 </div>
-                <div class="filters-form__checkbox__item">
+                    <div class="filters-form__checkbox__item">
     <label class="filters-form__checkbox__item__label">
         <input type="checkbox" >
         <span class="filters-form__checkbox__item__inner">
@@ -245,7 +246,7 @@
         </span>
     </label>
 </div>
-                <div class="filters-form__checkbox__item">
+                    <div class="filters-form__checkbox__item">
     <label class="filters-form__checkbox__item__label">
         <input type="checkbox" >
         <span class="filters-form__checkbox__item__inner">
@@ -255,7 +256,7 @@
         </span>
     </label>
 </div>
-                <div class="filters-form__checkbox__item">
+                    <div class="filters-form__checkbox__item">
     <label class="filters-form__checkbox__item__label">
         <input type="checkbox" >
         <span class="filters-form__checkbox__item__inner">
@@ -265,7 +266,7 @@
         </span>
     </label>
 </div>
-                <div class="filters-form__checkbox__item">
+                    <div class="filters-form__checkbox__item">
     <label class="filters-form__checkbox__item__label">
         <input type="checkbox" >
         <span class="filters-form__checkbox__item__inner">
@@ -275,37 +276,37 @@
         </span>
     </label>
 </div>
+                </div>
             </div>
-        </div>
-        <div class="filters-form__row__lg">
-            <div class="filters-form__col__lg _col1">
-                <div class="filters-form__row">
-                    <div class="input-group _col1 _radio">
-                        <div class="input-group__inner">
-                            <label class="input-group__radio__item">
-                                <input type="radio" checked="" name="type2" value="1">
-                                <span class="input-group__radio__item__inner">Купить</span>
-                            </label>
-                            <label class="input-group__radio__item">
-                                <input type="radio" name="type2" value="2">
-                                <span class="input-group__radio__item__inner">Арендовать</span>
-                            </label>
+            <div class="filters-form__row__lg">
+                <div class="filters-form__col__lg _col1">
+                    <div class="filters-form__row">
+                        <div class="input-group _col1 _radio">
+                            <div class="input-group__inner">
+                                <label class="input-group__radio__item">
+                                    <input type="radio" checked="" name="type2" value="1">
+                                    <span class="input-group__radio__item__inner">Купить</span>
+                                </label>
+                                <label class="input-group__radio__item">
+                                    <input type="radio" name="type2" value="2">
+                                    <span class="input-group__radio__item__inner">Арендовать</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="input-group _col2">
+                            <select class="js-select2">
+                                <option>Вторичная</option>
+                                <option>Новая</option>
+                            </select>
+                        </div>
+                        <div class="input-group _double _col3">
+                            <input placeholder="Цена от (руб.)" class="js-mask__currency">
+                            <input placeholder="Цена до (руб.)" class="js-mask__currency">
                         </div>
                     </div>
-                    <div class="input-group _col2">
-                        <select class="js-select2">
-                            <option>Вторичная</option>
-                            <option>Новая</option>
-                        </select>
-                    </div>
-                    <div class="input-group _double _col3">
-                        <input placeholder="Цена от (руб.)" class="js-mask__currency">
-                        <input placeholder="Цена до (руб.)" class="js-mask__currency">
-                    </div>
-                </div>
-                <div class="filters-form__row">
-                    <div class="input-group _col1">
-                        <div class="pseudo-select js-select">
+                    <div class="filters-form__row">
+                        <div class="input-group _col1">
+                            <div class="pseudo-select js-select">
     <div class="pseudo-select__inner">
         <div class="pseudo-select__select js-select__toggler">
             <span class="pseudo-select__select__inner">
@@ -340,27 +341,28 @@
         </div>
     </div>
 </div>
-                    </div>
-                    <div class="input-group _col2">
-                        <input placeholder="Код объекта">
-                    </div>
-                    <div class="input-group _double _col3">
-                        <input placeholder="Площадь от" class="js-mask__square">
-                        <input placeholder="Площадь до" class="js-mask__square">
+                        </div>
+                        <div class="input-group _col2">
+                            <input placeholder="Код объекта">
+                        </div>
+                        <div class="input-group _double _col3">
+                            <input placeholder="Площадь от" class="js-mask__square">
+                            <input placeholder="Площадь до" class="js-mask__square">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="filters-form__col__lg _col2">
-                <div class="filters-form__summary _norooms">
-                    <p class="filters-form__summary__text">Найдено 19 518 вариантов</p>
-                    <div class="filters-form__summary__buttons">
-                        <div class="filters-form__summary__buttons__col">
-                            <button class="btn _lg _secondary">Показать</button>
-                        </div>
-                        <div class="filters-form__summary__buttons__col">
-                            <button class="btn _lg _primary">
-                                <i class="icon-map _middle"></i><span>На карте</span>
-                            </button>
+                <div class="filters-form__col__lg _col2">
+                    <div class="filters-form__summary _norooms">
+                        <p class="filters-form__summary__text">Найдено 19 518 вариантов</p>
+                        <div class="filters-form__summary__buttons">
+                            <div class="filters-form__summary__buttons__col">
+                                <button class="btn _lg _secondary">Показать</button>
+                            </div>
+                            <div class="filters-form__summary__buttons__col">
+                                <button class="btn _lg _primary">
+                                    <i class="icon-map _middle"></i><span>На карте</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1163,7 +1165,7 @@
         </div>
         <div class="agents-slider__item__short js-agents-slider__short"
              data-agent-name="Пушкин Александр Сергеевич"
-             data-agent-phone="+7 (123) 456-78-90"
+             data-agent-phone="+71234567890"
              data-agent-mail="user@monolitestate.com"
              data-agent-url="agent.html"
              data-agent-img="img/agents/1.jpg">
@@ -1178,7 +1180,7 @@
         </div>
         <div class="agents-slider__item__short js-agents-slider__short"
              data-agent-name="Столбова Ольга Арслановна"
-             data-agent-phone="+7 (123) 456-78-90"
+             data-agent-phone="+71234567890"
              data-agent-mail="user@monolitestate.com"
              data-agent-url="agent.html"
              data-agent-img="img/agents/3.jpg">
@@ -1193,7 +1195,7 @@
         </div>
         <div class="agents-slider__item__short js-agents-slider__short"
              data-agent-name="Мусоргский Модест Петрович"
-             data-agent-phone="+7 (123) 456-78-90"
+             data-agent-phone="+71234567890"
              data-agent-mail="user@monolitestate.com"
              data-agent-url="agent.html"
              data-agent-img="img/agents/2.jpg">
@@ -1208,7 +1210,7 @@
         </div>
         <div class="agents-slider__item__short js-agents-slider__short"
              data-agent-name="Столбова Ольга Арслановна"
-             data-agent-phone="+7 (123) 456-78-90"
+             data-agent-phone="+71234567890"
              data-agent-mail="user@monolitestate.com"
              data-agent-url="agent.html"
              data-agent-img="img/agents/4.jpg">
@@ -1223,7 +1225,7 @@
         </div>
         <div class="agents-slider__item__short js-agents-slider__short"
              data-agent-name="Пушкин Александр Сергеевич"
-             data-agent-phone="+7 (123) 456-78-90"
+             data-agent-phone="+71234567890"
              data-agent-mail="user@monolitestate.com"
              data-agent-url="agent.html"
              data-agent-img="img/agents/1.jpg">
@@ -1238,7 +1240,7 @@
         </div>
         <div class="agents-slider__item__short js-agents-slider__short"
              data-agent-name="Столбова Ольга Арслановна"
-             data-agent-phone="+7 (123) 456-78-90"
+             data-agent-phone="+71234567890"
              data-agent-mail="user@monolitestate.com"
              data-agent-url="agent.html"
              data-agent-img="img/agents/3.jpg">
@@ -1253,7 +1255,7 @@
         </div>
         <div class="agents-slider__item__short js-agents-slider__short"
              data-agent-name="Мусоргский Модест Петрович"
-             data-agent-phone="+7 (123) 456-78-90"
+             data-agent-phone="+71234567890"
              data-agent-mail="user@monolitestate.com"
              data-agent-url="agent.html"
              data-agent-img="img/agents/2.jpg">
@@ -1268,7 +1270,7 @@
         </div>
         <div class="agents-slider__item__short js-agents-slider__short"
              data-agent-name="Столбова Ольга Арслановна"
-             data-agent-phone="+7 (123) 456-78-90"
+             data-agent-phone="+71234567890"
              data-agent-mail="user@monolitestate.com"
              data-agent-url="agent.html"
              data-agent-img="img/agents/4.jpg">
@@ -1283,7 +1285,7 @@
         </div>
         <div class="agents-slider__item__short js-agents-slider__short"
              data-agent-name="Пушкин Александр Сергеевич"
-             data-agent-phone="+7 (123) 456-78-90"
+             data-agent-phone="+71234567890"
              data-agent-mail="user@monolitestate.com"
              data-agent-url="agent.html"
              data-agent-img="img/agents/1.jpg">
@@ -1298,7 +1300,7 @@
         </div>
         <div class="agents-slider__item__short js-agents-slider__short"
              data-agent-name="Столбова Ольга Арслановна"
-             data-agent-phone="+7 (123) 456-78-90"
+             data-agent-phone="+71234567890"
              data-agent-mail="user@monolitestate.com"
              data-agent-url="agent.html"
              data-agent-img="img/agents/3.jpg">
@@ -1313,7 +1315,7 @@
         </div>
         <div class="agents-slider__item__short js-agents-slider__short"
              data-agent-name="Мусоргский Модест Петрович"
-             data-agent-phone="+7 (123) 456-78-90"
+             data-agent-phone="+71234567890"
              data-agent-mail="user@monolitestate.com"
              data-agent-url="agent.html"
              data-agent-img="img/agents/2.jpg">
@@ -1328,7 +1330,7 @@
         </div>
         <div class="agents-slider__item__short js-agents-slider__short"
              data-agent-name="Столбова Ольга Арслановна"
-             data-agent-phone="+7 (123) 456-78-90"
+             data-agent-phone="+71234567890"
              data-agent-mail="user@monolitestate.com"
              data-agent-url="agent.html"
              data-agent-img="img/agents/4.jpg">
@@ -1343,7 +1345,7 @@
         </div>
         <div class="agents-slider__item__short js-agents-slider__short"
              data-agent-name="Пушкин Александр Сергеевич"
-             data-agent-phone="+7 (123) 456-78-90"
+             data-agent-phone="+71234567890"
              data-agent-mail="user@monolitestate.com"
              data-agent-url="agent.html"
              data-agent-img="img/agents/1.jpg">
@@ -1358,7 +1360,7 @@
         </div>
         <div class="agents-slider__item__short js-agents-slider__short"
              data-agent-name="Столбова Ольга Арслановна"
-             data-agent-phone="+7 (123) 456-78-90"
+             data-agent-phone="+71234567890"
              data-agent-mail="user@monolitestate.com"
              data-agent-url="agent.html"
              data-agent-img="img/agents/3.jpg">
@@ -1373,7 +1375,7 @@
         </div>
         <div class="agents-slider__item__short js-agents-slider__short"
              data-agent-name="Мусоргский Модест Петрович"
-             data-agent-phone="+7 (123) 456-78-90"
+             data-agent-phone="+71234567890"
              data-agent-mail="user@monolitestate.com"
              data-agent-url="agent.html"
              data-agent-img="img/agents/2.jpg">
@@ -1388,7 +1390,7 @@
         </div>
         <div class="agents-slider__item__short js-agents-slider__short"
              data-agent-name="Столбова Ольга Арслановна"
-             data-agent-phone="+7 (123) 456-78-90"
+             data-agent-phone="+71234567890"
              data-agent-mail="user@monolitestate.com"
              data-agent-url="agent.html"
              data-agent-img="img/agents/4.jpg">
@@ -1403,7 +1405,7 @@
         </div>
         <div class="agents-slider__item__short js-agents-slider__short"
              data-agent-name="Пушкин Александр Сергеевич"
-             data-agent-phone="+7 (123) 456-78-90"
+             data-agent-phone="+71234567890"
              data-agent-mail="user@monolitestate.com"
              data-agent-url="agent.html"
              data-agent-img="img/agents/1.jpg">
@@ -1418,7 +1420,7 @@
         </div>
         <div class="agents-slider__item__short js-agents-slider__short"
              data-agent-name="Столбова Ольга Арслановна"
-             data-agent-phone="+7 (123) 456-78-90"
+             data-agent-phone="+71234567890"
              data-agent-mail="user@monolitestate.com"
              data-agent-url="agent.html"
              data-agent-img="img/agents/3.jpg">
@@ -1433,7 +1435,7 @@
         </div>
         <div class="agents-slider__item__short js-agents-slider__short"
              data-agent-name="Мусоргский Модест Петрович"
-             data-agent-phone="+7 (123) 456-78-90"
+             data-agent-phone="+71234567890"
              data-agent-mail="user@monolitestate.com"
              data-agent-url="agent.html"
              data-agent-img="img/agents/2.jpg">

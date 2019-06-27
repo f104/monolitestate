@@ -4,6 +4,7 @@ $(document).ready(function () {
 
 var app = {
     initialized: false,
+    body: $('body'),
 
     initialize: function () {
         $('.js-hide-empty').each(function () {
@@ -12,16 +13,37 @@ var app = {
             }
         });
         this.initLogo();
-        this.initPseudoSelect();
-        this.initPseudoSelectSearch();
+        this.initPseudoSelect(this.body);
+        this.initPseudoSelectSearch(this.body);
+        this.initScrollbar();
         this.initTabs();
+        this.initMask();
         this.initRange();
         this.initChess();
         this.initChessFilter();
         this.initFRPromo();
+        this.initUp();
         this.initialized = true;
     },
 
+    initUp: function () {
+        var $btn = $(".js-up");
+        if (!$btn.length) {
+            return;
+        }
+        var breakpoint = $(window).outerHeight() / 2;
+        $(window).on('scroll', function () {
+            if ($(this).scrollTop() > breakpoint) {
+                $btn.addClass('_active');
+            } else {
+                $btn.removeClass('_active');
+            }
+        });
+        $btn.on('click', function () {
+            $("html, body").animate({scrollTop: 0}, 500);
+        });
+    },
+    
     initLogo: function () {
         var timeout = appConfig.logoUpdateTimeout || 3000,
                 $logo = $('.js-logo'), newSrc = $logo.data('newsrc'),
@@ -40,24 +62,30 @@ var app = {
         });
     },
 
-    initPseudoSelect: function () {
-        // custom select
-        $('.js-select').on('click', function (e) {
+    /** custom select 
+     * @param $cnt container
+     */
+    initPseudoSelect: function ($cnt) {
+        $cnt.find('.js-select').on('click', function (e) {
             e.stopPropagation();
         });
-        $('.js-select__toggler').on('click', function () {
+        $cnt.find('.js-select__toggler').on('click', function () {
             $('.js-select').removeClass('_active');
             $(this).parents('.js-select').addClass('_active').toggleClass('_opened');
             $('.js-select').not('._active').removeClass('_opened');
         });
-        $(window).on('click', function () {
-            $('.js-select').removeClass('_opened _active');
-        });
+        if (!app.initialized) {
+            $(window).on('click', function () {
+                $('.js-select').removeClass('_opened _active');
+            });
+        }
     },
 
-    initPseudoSelectSearch: function () {
-        // custom select search
-        $('.js-select-search').each(function (index, element) {
+    /** custom select search
+     * @param $cnt container
+     */
+    initPseudoSelectSearch: function ($cnt) {
+        $cnt.find('.js-select-search').each(function (index, element) {
             var $items = $(element).find('.js-select-search__item');
             $(element).find('.js-select-search__input')
                     .on('keyup', function () {
@@ -76,6 +104,56 @@ var app = {
                         return false;
                     });
         });
+    },
+    
+    initScrollbar: function () {
+        $('.js-scrollbar').scrollbar();
+        var w = $(window).outerWidth();
+        if (w < appConfig.breakpoint.md) {
+            $('.js-scrollbar-sm').scrollbar();
+            $('.js-scrollbar-sm-md').scrollbar();
+        }
+        if (w < appConfig.breakpoint.lg) {
+            $('.js-scrollbar-sm-md').scrollbar();
+        }
+        if (w >= appConfig.breakpoint.md && w < appConfig.breakpoint.lg) {
+            $('.js-scrollbar-md').scrollbar();
+        }
+        if (w >= appConfig.breakpoint.md) {
+            $('.js-scrollbar-md-lg').scrollbar();
+        }
+        if (w >= appConfig.breakpoint.lg) {
+            $('.js-scrollbar-lg').scrollbar();
+        }
+        $(window).on('resize', function () {
+            if ($(window).outerWidth() < appConfig.breakpoint.md) {
+                $('.js-scrollbar-sm').scrollbar();
+            } else {
+                $('.js-scrollbar-sm').scrollbar('destroy');
+            }
+            if ($(window).outerWidth() >= appConfig.breakpoint.md
+                    && $(window).outerWidth() < appConfig.breakpoint.lg) {
+                $('.js-scrollbar-md').scrollbar();
+            } else {
+                $('.js-scrollbar-md').scrollbar('destroy');
+            }
+            if (w < appConfig.breakpoint.lg) {
+                $('.js-scrollbar-sm-md').scrollbar();
+            } else {
+                $('.js-scrollbar-sm-md').scrollbar('destroy');
+            }
+            if ($(window).outerWidth() >= appConfig.breakpoint.md) {
+                $('.js-scrollbar-md-lg').scrollbar();
+            } else {
+                $('.js-scrollbar-md-lg').scrollbar('destroy');
+            }
+            if ($(window).outerWidth() >= appConfig.breakpoint.lg) {
+                $('.js-scrollbar-lg').scrollbar();
+            } else {
+                $('.js-scrollbar-lg').scrollbar('destroy');
+            }
+        });
+//        $('.js-scrollbar-hot').scrollbar();
     },
 
     initTabs: function () {
@@ -106,6 +184,54 @@ var app = {
                 $target.find('.slick-initialized').slick('setPosition');
                 $target.find('.js-select2').select2();
             });
+        });
+    },
+
+    initMask: function () {
+        $('.js-mask__tel').inputmask({
+            mask: '+9 (999) 999-99-99'
+        });
+        Inputmask.extendAliases({
+            'numeric': {
+                autoUnmask: true,
+                showMaskOnHover: false,
+                radixPoint: ",",
+                groupSeparator: " ",
+                digits: 0,
+                allowMinus: false,
+                autoGroup: true,
+                rightAlign: false,
+                unmaskAsNumber: true
+            }
+        });
+        $('.js-mask__numeric').inputmask("numeric");
+        $('.js-mask__currency').inputmask("numeric", {
+            suffix: ' руб.'
+        });
+        $('.js-mask__square').inputmask("numeric", {
+            suffix: ' м²'
+        });
+        $('.js-mask__square_filter').inputmask("numeric", {
+            suffix: ' м²',
+            unmaskAsNumber: false
+        });
+        $('.js-mask__currency_filter').inputmask("numeric", {
+            suffix: ' руб.',
+            unmaskAsNumber: false
+        });
+        $('.js-mask__age').inputmask("numeric", {
+            suffix: ' лет'
+        });
+        $('.js-mask__percent').inputmask("numeric", {
+            suffix: '%'
+        });
+        $('.js-mask__currency, .js-mask__square, .js-mask__percent').on('blur', function () {
+            // need for remove suffix
+            // https://github.com/RobinHerbots/Inputmask/issues/1551
+            var v = $(this).val();
+            if (v == 0 || v == '') {
+                $(this).val('');
+            }
         });
     },
 
@@ -202,6 +328,8 @@ var app = {
         },
                 $hypothec = $('.js-chess-info__hypothec'),
                 $hypothecWrapper = $('.js-chess-info__hypothec-wrapper'),
+                $priceWrapper = $('.js-chess-info__price-wrapper'),
+                $pricePerSquareWrapper = $('.js-chess-info__pricePerSquare-wrapper'),
                 $imgFlat = $('.js-chess-info__imgFlat'),
                 $imgFloor = $('.js-chess-info__imgFloor'),
                 $tabs = $('.js-chess-info__tabs'),
@@ -226,6 +354,8 @@ var app = {
             } else {
                 $hypothecWrapper.hide();
             }
+            data.price != 0 ? $priceWrapper.show() : $priceWrapper.hide();
+            data.pricePerSquare != 0 ? $pricePerSquareWrapper.show() : $pricePerSquareWrapper.hide();
             if ($('.js-hypothec__cost').length > 0) {
                 $('.js-hypothec__cost').val(data.filterPrice).trigger('change');
                 $('.js-hypothec__payment-sum').val(data.filterPrice / 2).trigger('change');
@@ -538,7 +668,6 @@ jQuery(function () {
         initAgentsPresentation();
         setAgentsPresentation();
         initMenu();
-        initMask();
         initPopup();
         initSelect();
         initValidate();
@@ -549,7 +678,6 @@ jQuery(function () {
         initGallery();
         initHypothec();
         initDatepicker();
-        initScrollbar();
         initScroll();
         initAbout();
         initFileinput();
@@ -561,6 +689,10 @@ jQuery(function () {
     $(window).on('resize', function () {
         initSmallSliders();
 //        initMenu();
+    });
+
+    $(document).on('pdopage_load', function (e, config, response) {
+        initReviews();
     });
 
     function initMainSlider() {
@@ -711,7 +843,9 @@ jQuery(function () {
             $full.find('.js-agents-slider__full__img').attr('src', $agent.data('agent-img'));
             $full.find('.js-agents-slider__full__name').text($agent.data('agent-name'));
             var phone = $agent.data('agent-phone');
-            $full.find('.js-agents-slider__full__phone a').text(phone).attr('href', 'tel:' + phone.replace(/[-\s()]/g, ''));
+            $full.find('.js-agents-slider__full__phone a')
+                    .text(phone.replace(/^(\+7)(\d{3})(\d{3})(\d{2})(\d{2})/, '$1 ($2) $3-$4-$5'))
+                    .attr('href', 'tel:' + phone.replace(/[-\s()]/g, ''));
             var mail = $agent.data('agent-mail');
             $full.find('.js-agents-slider__full__mail a').text(mail).attr('href', 'mailto:' + mail);
             var url = $agent.data('agent-url');
@@ -747,54 +881,6 @@ jQuery(function () {
             e.preventDefault();
             $(this).toggleClass('_active');
             $('.js-menu-second').toggleClass('_active');
-        });
-    }
-
-    function initMask() {
-        $('.js-mask__tel').inputmask({
-            mask: '+9 (999) 999-99-99'
-        });
-        Inputmask.extendAliases({
-            'numeric': {
-                autoUnmask: true,
-                showMaskOnHover: false,
-                radixPoint: ",",
-                groupSeparator: " ",
-                digits: 0,
-                allowMinus: false,
-                autoGroup: true,
-                rightAlign: false,
-                unmaskAsNumber: true
-            }
-        });
-        $('.js-mask__numeric').inputmask("numeric");
-        $('.js-mask__currency').inputmask("numeric", {
-            suffix: ' руб.'
-        });
-        $('.js-mask__square').inputmask("numeric", {
-            suffix: ' м²'
-        });
-        $('.js-mask__square_filter').inputmask("numeric", {
-            suffix: ' м²',
-            unmaskAsNumber: false
-        });
-        $('.js-mask__currency_filter').inputmask("numeric", {
-            suffix: ' руб.',
-            unmaskAsNumber: false
-        });
-        $('.js-mask__age').inputmask("numeric", {
-            suffix: ' лет'
-        });
-        $('.js-mask__percent').inputmask("numeric", {
-            suffix: '%'
-        });
-        $('.js-mask__currency, .js-mask__square, .js-mask__percent').on('blur', function () {
-            // need for remove suffix
-            // https://github.com/RobinHerbots/Inputmask/issues/1551
-            var v = $(this).val();
-            if (v == 0 || v == '') {
-                $(this).val('');
-            }
         });
     }
 
@@ -1084,6 +1170,7 @@ jQuery(function () {
                 arrows: true,
                 infinite: true,
                 swipeToSlide: true,
+                touchThreshold: 10,
                 asNavFor: '.js-gallery-nav',
                 responsive: [
                     {
@@ -1150,7 +1237,7 @@ jQuery(function () {
         });
         $(window).on('resize', function () {
             $('.js-reviews').removeClass('_opened').css('height', '');
-            $('.js-reviews__toggler').each(function(){
+            $('.js-reviews__toggler').each(function () {
                 $(this).text($(this).data('rolldown'));
             });
             checkOuter();
@@ -1276,9 +1363,10 @@ jQuery(function () {
                     $(el).find('.js-hypothec__economy').text(formatPrice(calcPerMonth(credit, rate[i], age) * 12 * age - calcPerMonth(credit, rateME[i], age) * 12 * age));
                 });
             });
-            $scroll.find('.hypothec__list__item').each(function (i) {
-                $(this).find('.hypothec__list__item__inner').on('click', function (e) {
+            $scroll.find('.hypothec-list__item').each(function (i) {
+                $(this).find('.hypothec-list__item__inner').on('click', function (e) {
                     e.preventDefault();
+                    console.log(i)
                     $slider.slick('slickGoTo', i);
                 });
             });
@@ -1454,56 +1542,6 @@ jQuery(function () {
                 datepicker.hide();
             }
         });
-    }
-
-    function initScrollbar() {
-        $('.js-scrollbar').scrollbar();
-        var w = $(window).outerWidth();
-        if (w < appConfig.breakpoint.md) {
-            $('.js-scrollbar-sm').scrollbar();
-            $('.js-scrollbar-sm-md').scrollbar();
-        }
-        if (w < appConfig.breakpoint.lg) {
-            $('.js-scrollbar-sm-md').scrollbar();
-        }
-        if (w >= appConfig.breakpoint.md && w < appConfig.breakpoint.lg) {
-            $('.js-scrollbar-md').scrollbar();
-        }
-        if (w >= appConfig.breakpoint.md) {
-            $('.js-scrollbar-md-lg').scrollbar();
-        }
-        if (w >= appConfig.breakpoint.lg) {
-            $('.js-scrollbar-lg').scrollbar();
-        }
-        $(window).on('resize', function () {
-            if ($(window).outerWidth() < appConfig.breakpoint.md) {
-                $('.js-scrollbar-sm').scrollbar();
-            } else {
-                $('.js-scrollbar-sm').scrollbar('destroy');
-            }
-            if ($(window).outerWidth() >= appConfig.breakpoint.md
-                    && $(window).outerWidth() < appConfig.breakpoint.lg) {
-                $('.js-scrollbar-md').scrollbar();
-            } else {
-                $('.js-scrollbar-md').scrollbar('destroy');
-            }
-            if (w < appConfig.breakpoint.lg) {
-                $('.js-scrollbar-sm-md').scrollbar();
-            } else {
-                $('.js-scrollbar-sm-md').scrollbar('destroy');
-            }
-            if ($(window).outerWidth() >= appConfig.breakpoint.md) {
-                $('.js-scrollbar-md-lg').scrollbar();
-            } else {
-                $('.js-scrollbar-md-lg').scrollbar('destroy');
-            }
-            if ($(window).outerWidth() >= appConfig.breakpoint.lg) {
-                $('.js-scrollbar-lg').scrollbar();
-            } else {
-                $('.js-scrollbar-lg').scrollbar('destroy');
-            }
-        });
-//        $('.js-scrollbar-hot').scrollbar();
     }
 
     /**

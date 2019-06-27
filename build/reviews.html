@@ -37,7 +37,7 @@
             <nav>
                 <ul class="header__top__nav">
                     <li><a href="#">Акции</a></li>
-                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#" class="header__top__nav__accent">Услуги</a></li>
                     <li><a href="about.html">О компании</a></li>
                     <li><a href="work.html">Вакансии</a></li>
                     <li><a href="news.html">Новости</a></li>
@@ -185,7 +185,11 @@
             <section class="section">
     <div class="list-header _white">
     <div class="container list-header__row">
-        <div></div>
+        <div class="list-header__filter">
+            <button data-href="#review" class="btn _solid _lg js-popup">
+                Добавить отзыв
+            </button>
+        </div>
         <div class="list-header__pagination">
             <ul class="pagination">
                 <li class="pagination__item">
@@ -540,7 +544,11 @@
     </div>
     <div class="list-header _white _footer">
     <div class="container list-header__row">
-        <div></div>
+        <div class="list-header__filter">
+            <button data-href="#review" class="btn _solid _lg js-popup">
+                Добавить отзыв
+            </button>
+        </div>
         <div class="list-header__pagination">
             <ul class="pagination">
                 <li class="pagination__item">
@@ -793,6 +801,53 @@
     </div>
 </div>
 </div>
+            <div class="hidden">
+                <div id="review" class="popup-cnt">
+    <div class="popup popup-visit">
+        <h3 class="popup__h3">Добавить отзыв</h3>
+        <form id="popup_review_form" class="popup-subscribe__form js-validate">
+            <div class="input-group__wrapper">
+                <div class="input-group _lg _secondary">
+                    <label>Ваше имя</label>
+                    <input type="text" name="name" value="" required>
+                </div>
+                <div class="input-group _lg _secondary">
+                    <label>E-mail</label>
+                    <input type="text" name="email" value="" required>
+                </div>
+            </div>
+            <div class="input-group__wrapper">
+                <div class="input-group _lg _secondary">
+                    <label>Ваш телефон</label>
+                    <input type="text" name="phone" value="" required 
+                           class="js-mask__tel">
+                </div>
+                <div class="input-group _file">
+                    <label>
+                        <i class="icon-attach"></i>
+                        <span class="input-group__label-file js-fileinput__cnt">Прикрепить фотографию</span>
+                        <input type="file" class="js-fileinput">
+                    </label>
+                </div>
+            </div>
+            <div class="input-group _lg _secondary">
+                <label>Текст отзыва</label>
+                <textarea name="message" required></textarea>
+            </div>
+            <div class="input-group__wrapper _submit">
+                <div class="input-group">
+                    <button class="btn _solid _lg _shadow" type="submit">Отправить</button>
+                </div>
+                <div class="input-group">
+                    <span class="input-help">
+                        Оправляя заявку вы соглашаетесь на обработку 
+                        ваших персональных данных.</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+            </div>
             <div class="content__overlay js-menu-overlay"></div>
         </div>
         <div class="dev">

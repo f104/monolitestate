@@ -1,0 +1,111 @@
+<section class="section container js-tabs">
+    <div class="tabs _noselect">
+        <ul class="tabs__list js-tabs__list">
+            <li><a href="#gallery">Описание</a></li>
+            <li><a href="#3d">3D-тур</a></li>
+            <li><a href="#onmap">На карте</a></li>
+            <li><a href="#progress">Ход строительства</a></li>
+        </ul>
+    </div>
+    <div id="gallery" class="new-detail-gallery">
+        <div class="new-detail-gallery__row">
+            <div class="new-detail-gallery__row__col">
+                @@include('../gallery.html')
+            </div>
+            <div class="new-detail-gallery__row__col">
+                <div class="new-detail-content">
+                    <!--<h3 class="new-detail-content__h">Описание</h3>-->
+                    <div class="rte">
+                        <p>ЖК «Квартет» — это два 10-этажных и один 14-этажный дом 
+                            в микрорайоне Восточный-2.</p>
+                        <p>Преимущество: перспективный район с развитой инфраструктурой 
+                            и удобной транспортной развязкой.</p>
+                        <p>Безопасность: домофонные двери в каждом подъезде 
+                            и закрытые спортивные площадки.</p>
+                        <p>Благоустройство: по проекту запланированы детская игровая 
+                            и волейбольная площадки. На территории высадят 
+                            деревья и кустарники, сделают газоны.</p>
+                        <p>Инфраструктура: добраться до центра города можно 
+                            за 10-15 минут. В 5 минутах езды база отдыха «Пруд Лесной». 
+                            Весной 2016 года началось строительство сквера «Серебряные ключи». 
+                            Предполагается, что в сквере будет пруд, 
+                            который зимой превратится в каток.</p>
+                        <p>В районе есть детские сады, школы, места для отдыха, магазины 
+                            и аптеки. Школы: № 72 и 59 Детские сады: № 25 и частный 
+                            сад «Шустренок»</p>
+                        <p>Особенности жилья: в комплексе есть однокомнатные 
+                            (площадь 43,74 кв.м.) и двухкомнатные (68,31 кв.м.) квартиры. 
+                            В квартирах уже есть остекление с тройным стеклопакетом.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="3d">
+        @@include('../gallery-3d.html')                        
+    </div>
+    <div id="onmap">
+        <div class="infrastructure">
+            <div class="infrastructure__header">
+                <h3 class="infrastructure__header__h">Инфраструктура</h3>
+                <div class="infrastructure__legend">
+                    <ul class="infrastructure__legend__list js-infrastructure__legend__list">
+                        @@loop('../chunks/infrastructure-checkbox.html', [
+                        { 
+                        "type": 1, 
+                        "class": "med", 
+                        "text": "Больницы и поликлиники"
+                        },
+                        { 
+                        "type": 2, 
+                        "class": "child", 
+                        "text": "Детские сады"
+                        },
+                        { 
+                        "type": 3, 
+                        "class": "market", 
+                        "text": "Магазины"
+                        },
+                        { 
+                        "type": 4, 
+                        "class": "parking", 
+                        "text": "Парковки"
+                        },
+                        { 
+                        "type": 5, 
+                        "class": "gym", 
+                        "text": "Фитнес-клубы"
+                        },
+                        { 
+                        "type": 6, 
+                        "class": "farm", 
+                        "text": "Аптеки"
+                        },
+                        { 
+                        "type": 7, 
+                        "class": "dot", 
+                        "text": "Стадионы"
+                        },
+                        { 
+                        "type": 7, 
+                        "class": "coin", 
+                        "text": "Банки"
+                        }
+                        ])
+                    </ul>
+                    <a href="#" class="infrastructure__legend__toggler js-infrastructure__legend__toggler">Скрыть легенду</a>
+                </div>
+            </div>
+            <div class="infrastructure__map map">
+                <div id="map" class="map__content _loading"></div>
+                <div class="container map__controls">
+                    <ul class="map__controls__zoom">
+                        <li><i class="sprite map-plus map__control js-map__zoom _in"></i></li>
+                        <li><i class="sprite map-minus map__control js-map__zoom _out"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="progress"></div>
+</section>

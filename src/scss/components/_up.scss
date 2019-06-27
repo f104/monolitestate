@@ -1,0 +1,59 @@
+/*
+Кнопка "наверх"
+*/
+
+.up {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    &__inner {
+        position: relative;
+    }
+    &__button {
+        position: absolute;
+        bottom: -40px;
+        right: $container-padding-sm;
+        @include media-breakpoint-up(md) {
+            right: $container-padding-md;
+        }
+        @include media-breakpoint-up(lg) {
+            right: $container-padding-lg;
+        }
+        display: block;
+        font-size: 0;
+        padding: 0;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        border: 1px solid $primary;
+        color: $primary;
+        background-color: white;
+        border-radius: 18px;
+        @include transition(all);
+        pointer-events: all;
+        outline: none !important;
+        cursor: pointer;
+        &:before {
+            font-family: "fontello";
+            content: '\e808';
+            font-size: 19px;
+            position: absolute;
+            left: 15px;
+            top: -2px;
+            color: inherit;
+            transform: rotate(-90deg);
+        }
+        @include hover-desktop {
+            background-color: $primary;
+            color: white;
+        }
+        &._active {
+            bottom: 20px;
+            @include media-breakpoint-up(md) {
+                bottom: 50px;
+            }
+        }
+    }
+}

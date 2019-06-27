@@ -1,105 +1,107 @@
-<section class="container section filters">
+<section class="container section filters loading">
     <form class="filters-form">
         <h3 class="filters-form__h">
             Недвижимость для бизнеса в Нижнем Новгороде</h3>
-        <div class="filters-form__checkbox-wrapper">
-            <div class="filters-form__checkbox">
-                @@include('./checkbox.html', {
-                "text": "Офис",
-                "checked": 0
-                })
-                @@include('./checkbox.html', {
-                "text": "Торговое",
-                "checked": 1
-                })
-                @@include('./checkbox.html', {
-                "text": "Свободного назначения",
-                "checked": 0
-                })
-                @@include('./checkbox.html', {
-                "text": "Производство",
-                "checked": 0
-                })
-                @@include('./checkbox.html', {
-                "text": "База",
-                "checked": 0
-                })
-                @@include('./checkbox.html', {
-                "text": "Склад",
-                "checked": 0
-                })
-                @@include('./checkbox.html', {
-                "text": "Земля",
-                "checked": 0
-                })
-                @@include('./checkbox.html', {
-                "text": "Здания",
-                "checked": 0
-                })
-                @@include('./checkbox.html', {
-                "text": "Общепит",
-                "checked": 0
-                })
-                @@include('./checkbox.html', {
-                "text": "Новостройки",
-                "checked": 0
-                })
-                @@include('./checkbox.html', {
-                "text": "Готовый бизнес",
-                "checked": 0
-                })
-            </div>
-        </div>
-        <div class="filters-form__row__lg">
-            <div class="filters-form__col__lg _col1">
-                <div class="filters-form__row">
-                    <div class="input-group _col1 _radio">
-                        <div class="input-group__inner">
-                            <label class="input-group__radio__item">
-                                <input type="radio" checked="" name="type2" value="1">
-                                <span class="input-group__radio__item__inner">Купить</span>
-                            </label>
-                            <label class="input-group__radio__item">
-                                <input type="radio" name="type2" value="2">
-                                <span class="input-group__radio__item__inner">Арендовать</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="input-group _col2">
-                        <select class="js-select2">
-                            <option>Вторичная</option>
-                            <option>Новая</option>
-                        </select>
-                    </div>
-                    <div class="input-group _double _col3">
-                        <input placeholder="Цена от (руб.)" class="js-mask__currency">
-                        <input placeholder="Цена до (руб.)" class="js-mask__currency">
-                    </div>
-                </div>
-                <div class="filters-form__row">
-                    <div class="input-group _col1">
-                        @@include('../chunks/pseudo-select.html', {"title": "Район, Улица"})
-                    </div>
-                    <div class="input-group _col2">
-                        <input placeholder="Код объекта">
-                    </div>
-                    <div class="input-group _double _col3">
-                        <input placeholder="Площадь от" class="js-mask__square">
-                        <input placeholder="Площадь до" class="js-mask__square">
-                    </div>
+        <div class="filters__loading-wrapper">
+            <div class="filters-form__checkbox-wrapper">
+                <div class="filters-form__checkbox">
+                    @@include('./checkbox.html', {
+                    "text": "Офис",
+                    "checked": 0
+                    })
+                    @@include('./checkbox.html', {
+                    "text": "Торговое",
+                    "checked": 1
+                    })
+                    @@include('./checkbox.html', {
+                    "text": "Свободного назначения",
+                    "checked": 0
+                    })
+                    @@include('./checkbox.html', {
+                    "text": "Производство",
+                    "checked": 0
+                    })
+                    @@include('./checkbox.html', {
+                    "text": "База",
+                    "checked": 0
+                    })
+                    @@include('./checkbox.html', {
+                    "text": "Склад",
+                    "checked": 0
+                    })
+                    @@include('./checkbox.html', {
+                    "text": "Земля",
+                    "checked": 0
+                    })
+                    @@include('./checkbox.html', {
+                    "text": "Здания",
+                    "checked": 0
+                    })
+                    @@include('./checkbox.html', {
+                    "text": "Общепит",
+                    "checked": 0
+                    })
+                    @@include('./checkbox.html', {
+                    "text": "Новостройки",
+                    "checked": 0
+                    })
+                    @@include('./checkbox.html', {
+                    "text": "Готовый бизнес",
+                    "checked": 0
+                    })
                 </div>
             </div>
-            <div class="filters-form__col__lg _col2">
-                <div class="filters-form__summary _norooms">
-                    <p class="filters-form__summary__text">Найдено 19 518 вариантов</p>
-                    <div class="filters-form__summary__buttons">
-                        <div class="filters-form__summary__buttons__col">
-                            <button class="btn _lg _secondary">Показать</button>
+            <div class="filters-form__row__lg">
+                <div class="filters-form__col__lg _col1">
+                    <div class="filters-form__row">
+                        <div class="input-group _col1 _radio">
+                            <div class="input-group__inner">
+                                <label class="input-group__radio__item">
+                                    <input type="radio" checked="" name="type2" value="1">
+                                    <span class="input-group__radio__item__inner">Купить</span>
+                                </label>
+                                <label class="input-group__radio__item">
+                                    <input type="radio" name="type2" value="2">
+                                    <span class="input-group__radio__item__inner">Арендовать</span>
+                                </label>
+                            </div>
                         </div>
-                        <div class="filters-form__summary__buttons__col">
-                            <button class="btn _lg _primary">
-                                <i class="icon-map _middle"></i><span>На карте</span>
-                            </button>
+                        <div class="input-group _col2">
+                            <select class="js-select2">
+                                <option>Вторичная</option>
+                                <option>Новая</option>
+                            </select>
+                        </div>
+                        <div class="input-group _double _col3">
+                            <input placeholder="Цена от (руб.)" class="js-mask__currency">
+                            <input placeholder="Цена до (руб.)" class="js-mask__currency">
+                        </div>
+                    </div>
+                    <div class="filters-form__row">
+                        <div class="input-group _col1">
+                            @@include('../chunks/pseudo-select.html', {"title": "Район, Улица"})
+                        </div>
+                        <div class="input-group _col2">
+                            <input placeholder="Код объекта">
+                        </div>
+                        <div class="input-group _double _col3">
+                            <input placeholder="Площадь от" class="js-mask__square">
+                            <input placeholder="Площадь до" class="js-mask__square">
+                        </div>
+                    </div>
+                </div>
+                <div class="filters-form__col__lg _col2">
+                    <div class="filters-form__summary _norooms">
+                        <p class="filters-form__summary__text">Найдено 19 518 вариантов</p>
+                        <div class="filters-form__summary__buttons">
+                            <div class="filters-form__summary__buttons__col">
+                                <button class="btn _lg _secondary">Показать</button>
+                            </div>
+                            <div class="filters-form__summary__buttons__col">
+                                <button class="btn _lg _primary">
+                                    <i class="icon-map _middle"></i><span>На карте</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -10,6 +10,19 @@ jQuery(function () {
             $('.builder-map').remove();
             return;
         }
+        
+        // может придти json  с пустыми placemarks
+        var pmFound = false;
+        for (var j = 0, len1 = app.builderMapData.length; j < len1; j++) {
+            if (app.builderMapData[j].placemarks.length) {
+                pmFound = true;
+                break;
+            }
+        }
+        if (!pmFound) {
+            $('.builder-map').remove();
+            return;
+        }
 
         var map;
 

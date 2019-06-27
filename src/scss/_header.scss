@@ -403,7 +403,6 @@ body {
             .header__top__nav {
                 @include list-unstyled;
                 margin-bottom: 0;
-                opacity: 0.6;
                 li {
                     display: inline-block;
                     margin-right: 20px;
@@ -412,10 +411,23 @@ body {
                     }
                 }
                 a {
+                    opacity: 0.6;
                     @include link-in-text;
                     color: $body-color;
                     &:hover {
                         color: $primary;
+                    }
+                    &.header__top__nav__accent {
+                        opacity: 1;
+                        @include transition(background-color);
+                        /*margin: 0 -7px;*/
+                        display: inline-block;
+                        color: white;
+                        background-color: $secondary;
+                        padding: 2px 7px 0 7px;
+                        &:hover {
+                            background-color: rgba($secondary, .8);
+                        }
                     }
                 }
             }

@@ -23,6 +23,9 @@
             @@include('./template/reviews-new/list.html')
             @@include('./template/footer.html')
             @@include('./template/popups-common.html')
+            <div class="hidden">
+                @@include('./template/popups/review.html')
+            </div>
             <div class="content__overlay js-menu-overlay"></div>
         </div>
         @@include('./template/foot.html', {"all": false})

@@ -1,9 +1,54 @@
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .filters {
+    $root: &;
     margin-bottom: 20px;
     .section__h {
         font-size: 16px;
         font-weight: normal;
         margin-bottom: 16px;
+    }
+    &.loading {
+        #{$root}__loading-wrapper {
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: - $container-padding-sm;
+                right: - $container-padding-sm;
+                background-color: rgba($body-bg,.5);
+                z-index: 1;
+                @include media-breakpoint-up(md) {
+                    left: 0;
+                    right: 0;
+                }
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -23px;
+                margin-left: -23px;
+                display: block;
+                width: 46px;
+                height: 46px;
+                border-radius: 50%;
+                border: 5px solid $primary;
+                border-color: $primary transparent $primary transparent;
+                animation: loader 1.2s linear infinite;
+                z-index: 2;
+            }
+        }
     }
 }
 .filters-form {
@@ -108,7 +153,7 @@
                     cursor: pointer;
                     @include transition(box-shadow);
                 }
-                &:hover {
+                @include hover-desktop {
                     .filters-form__rooms__inner__checkbox__inner {
                         @include border-inset(1px, $primary);
                     }

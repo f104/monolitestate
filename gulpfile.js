@@ -13,6 +13,7 @@ var gulp = require('gulp'),
         rename = require("gulp-rename"),
         cleanCSS = require('gulp-clean-css'),
         reload = browserSync.reload,
+        concat = require('gulp-concat'),
         uglify = require('gulp-uglify');
 var path = {
     build: {
@@ -90,6 +91,30 @@ gulp.task('style:build', function () {
             .pipe(gulp.dest(path.build.css))
             .pipe(reload({stream: true}));
 });
+/**
+ * Минификация и объединение всех стилей 
+ */
+gulp.task('minify-css', () => {
+    // gulp.src('src/scss/common.scss')
+            // .pipe(sass({
+                // sourceMap: false,
+                // errLogToConsole: true
+            // }))
+            // .pipe(autoprefixer({
+                // browsers: ['last 2 versions'],
+                // cascade: false
+            // }))
+            // .pipe(gulp.dest(path.build.css))
+    gulp.src([
+        'build/css/libs/**/*.css',
+        'build/css/common.css',
+        '!build/css/bundle.css'])
+            .pipe(cleanCSS({
+                rebase: false
+            }))
+            .pipe(concat("bundle.css"))
+            .pipe(gulp.dest(path.build.css));
+});
 gulp.task('style:prod', function () {
     gulp.src(path.src.style)
             .pipe(sass({
@@ -125,7 +150,8 @@ gulp.task('sprites', function () {
                 common: "sprite",
                 preview: false,
                 cssFile: "_sprite.scss",
-                svgPath: "%f"
+                svgPath: "%f",
+				//padding: 10
             }))
             .pipe(gulp.dest(path.build.sprite));
 });

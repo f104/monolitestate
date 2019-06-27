@@ -112,7 +112,8 @@
         background-image: linear-gradient(135deg, #B76541, #d7cc54);
     }
     &._sold {
-        background-image: linear-gradient(315deg, #ed8a64, #d65234);
+        /*background-image: linear-gradient(315deg, #ed8a64, #d65234);*/
+        background-color: #ddd;
     }
     &._active {
         cursor: pointer;
@@ -648,6 +649,84 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.new-detail-feat {
+    @include media-breakpoint-up(md) {
+        @include row(28px);
+    }
+    &__col {
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+            @include col(33.33%, 28px);
+        }
+    }
+    &__h {
+        font-size: 21px;
+        line-height: 23px;
+        margin-bottom: 20px;
+        @include media-breakpoint-up(md) {
+            font-size: 24px;
+            line-height: 26px;
+        }
+    }
+    &__list {
+        @include list-unstyled;
+        &__item {
+            position: relative;
+            font-size: 16px;
+            padding-left: 50px;
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0; 
+            }
+            &:before {
+                font-family: 'fontello';
+                content: '\E829';
+                position: absolute;
+                left: 8px;
+                top: 0;
+                color: $secondary;
+            }
+        }
+    }
+}
+
+.new-detail-gallery {
+    &__row {
+        @include media-breakpoint-up(lg) {
+            @include row(30px)
+        }
+        &__col {
+            &:first-child {
+                margin-bottom: 40px;
+            }
+            @include media-breakpoint-up(lg) {
+                @include col(50%, 30px)
+                &:first-child {
+                    flex-grow: 1;
+                    margin-bottom: 0;
+                }
+                &:last-child {
+                    flex-basis: 481px;
+                    width: 481px;
+                }
+            }
+        }
+    }
+    .new-detail-content {
+        display: block;
+        padding-left: $container-padding-sm;
+        padding-right: $container-padding-sm;
+        @include media-breakpoint-up(md) {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 }
