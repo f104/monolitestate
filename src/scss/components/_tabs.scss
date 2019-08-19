@@ -15,6 +15,7 @@
             a, span {
                 @include link-black;
                 display: block;
+                cursor: pointer;
                 border-right: 1px solid $secondary;
                 border-bottom: 1px solid $secondary;
                 /*                font-size: 14px;

@@ -1,0 +1,79 @@
+<html lang="ru" dir="ltr">
+    @@include('./template/head.html', {
+    "name": "Выгоды"
+    })
+    @@include('./template/preloader-head.html')
+    <body>
+        @@include('./template/preloader.html')
+        @@include('./template/header.html', {
+        "active": ""
+        })
+        <div class="content">
+            <section class="section benefits">
+                <div class="container">
+                    <h1 class="benefits__h">Дополнительные выгоды для клиентов «Монолит Истейт»</h1>
+                    <div class="benefits__lead">
+                        <p>Агентство «Монолит Истейт» ежедневно помогает обрести новое жилье, квартиру или дом в Нижнем Новгороде и области. А новый дом — это важное событие в жизни каждой семьи, и так важно, чтобы в нем был уют — новые окна, стильная мебель, модный ремонт, который радует глаз.</p>
+                        <p>Мы заботимся о наших клиентах, и при покупке жилья через «Монолит Истейт» дарим вам отличные скидки и подарки от наших партнеров — на мебель и аксессуары, на дизайн-проекты, сантехнику и даже на переезд.</p>
+                    </div>
+                    <div class="benefits__list">
+                        <div class="benefits-list slider-small js-slider-small">
+                            <div class="benefits-list__item slide">
+                                @@include('./template/benefits/benefits-item.html', {
+                                "img": "img/benefits/hoff.svg",
+                                "category": "Мебель",
+                                "text": "Мы заботимся о наших клиентах, и при покупке жилья через «Монолит Истейт» дарим вам отличные скидки и подарки от наших партнеров.",
+                                "price": "50 000 руб.",
+                                "dates": "с 13 по 28 августа"
+                                })
+                            </div>
+                            <div class="benefits-list__item slide">
+                                @@include('./template/benefits/benefits-item.html', {
+                                "img": "img/benefits/ikea.svg",
+                                "category": "Товары для дома",
+                                "text": "Мы заботимся о наших клиентах.",
+                                "price": "5 000 руб.",
+                                "dates": "с 13 июля по 28 августа"
+                                })
+                            </div>
+                            <div class="benefits-list__item slide">
+                                @@include('./template/benefits/benefits-item.html', {
+                                "img": "img/benefits/windows.svg",
+                                "category": "Окна",
+                                "text": "Мы заботимся о наших клиентах, и при покупке жилья через «Монолит Истейт» дарим вам отличные скидки и подарки от наших партнеров. Мы заботимся о наших клиентах, и при покупке жилья через «Монолит Истейт» дарим вам отличные скидки и подарки от наших партнеров.",
+                                "price": "7 000 руб.",
+                                "dates": "с 13 по 28 августа"
+                                })
+                            </div>
+                            <div class="benefits-list__item slide">
+                                @@include('./template/benefits/benefits-item.html', {
+                                "img": "img/benefits/ceresit.svg",
+                                "category": "Строительные материалы",
+                                "text": "Мы заботимся о наших клиентах, и при покупке жилья через «Монолит Истейт» дарим вам отличные скидки и подарки от наших партнеров ",
+                                "price": "7%",
+                                "dates": "с 13 по 28 августа"
+                                })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefits__foot">
+                        <div class="benefits__foot__text">
+                            Пусть ваш переезд в новый дом будет приятным и выгодным с выгодными предложениями от партнеров «Монолит Истейт».<br>
+                            Предложения от партнеров обновляются каждый месяц— следите за новостями.
+                        </div>
+                        <button class="btn _solid _lg benefits__foot__btn js-popup" data-href="#call">Узнать подробности</button>
+                        <div class="benefits__foot__muted">
+                            Мы работаем только с проверенными партнерами, которые реализуют качественные товары и услуги и дают 
+                            на них свою гарантию.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @@include('./template/footer.html')
+            @@include('./template/popups-common.html')
+            <div class="content__overlay js-menu-overlay"></div>
+        </div>
+        @@include('./template/foot.html', {"all": false})
+        @@include('./template/preloader-foot.html')
+    </body>
+</html>

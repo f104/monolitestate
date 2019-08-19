@@ -23,9 +23,22 @@ var app = {
         this.initChessFilter();
         this.initFRPromo();
         this.initUp();
+        this.initJsLink();
         this.initialized = true;
     },
 
+    initJsLink: function () {
+        $('.js-link').each(function(){
+           var href = $(this).data('href');
+           var target = $(this).data('target');
+           if (href) {
+               $(this).on('click', function(){
+                   window.open(href, target || '_self')
+               });
+           }
+        });
+    },
+    
     initUp: function () {
         var $btn = $(".js-up");
         if (!$btn.length) {
@@ -167,8 +180,8 @@ var app = {
                 updateHash: false,
             });
             if (withSelect) {
-                $(elem).find(tabsSelector).find('a').each(function () {
-                    var value = $(this).attr('href'),
+                $(elem).find(tabsSelector).find('a, [data-href]').each(function () {
+                    var value = $(this).attr('href') || $(this).data('href'),
                             text = $(this).data('select') || $(this).text();
                     $select.append('<option value="' + value + '">' + text + '</option>');
                 });
@@ -176,10 +189,11 @@ var app = {
                     $(elem).easytabs('select', $(this).val());
                 });
             }
-            $(elem).find(tabsSelector).find('a:not(.disabled)').first().click();
+            $(elem).find(tabsSelector).find('a:not(.disabled), [data-href]:not(.disabled)').first().click();
             $(elem).bind('easytabs:after', function (event, $clicked, $target) {
                 if (withSelect) {
-                    $select.val($clicked.attr('href')).change();
+                    var href = $clicked.attr('href') || $clicked.data('href');
+                    $select.val(href).change();
                 }
                 $target.find('.slick-initialized').slick('setPosition');
                 $target.find('.js-select2').select2();
@@ -313,12 +327,14 @@ var app = {
             }
         });
     },
-
-    initChess: function () {
-        if ($(window).outerWidth() >= appConfig.breakpoint.lg) {
-            $('.js-chess-tooltip__content').parent().hover(app.showChessTooltip, app.hideChessTooltip);
-        }
+    
+    /** Выделение квартиры в шахматке и обновление информации о квартире */
+    chessSelectFlat: function($flat, scrollToInfo) {
+        var $this = $flat;
+//            if ($this.hasClass('_selected'))
+//                return;
         var $target = {
+            cnt: $('.js-chess-info'),
             title: $('.js-chess-info__title'),
             area: $('.js-chess-info__area'),
             price: $('.js-chess-info__price'),
@@ -326,69 +342,77 @@ var app = {
             floor: $('.js-chess-info__floor'),
             floorsTotal: $('.js-chess-info__floorsTotal'),
         },
-                $hypothec = $('.js-chess-info__hypothec'),
-                $hypothecWrapper = $('.js-chess-info__hypothec-wrapper'),
-                $priceWrapper = $('.js-chess-info__price-wrapper'),
-                $pricePerSquareWrapper = $('.js-chess-info__pricePerSquare-wrapper'),
-                $imgFlat = $('.js-chess-info__imgFlat'),
-                $imgFloor = $('.js-chess-info__imgFloor'),
-                $tabs = $('.js-chess-info__tabs'),
-                $tabFloor = $('.js-chess-info__tabFloor'),
-                $tabFlat = $('.js-chess-info__tabFlat'),
-                $form = $('.js-chess-info__form'),
-                init = false;
-        $('.js-chess-info__item._active').on('click', function () {
-            var $this = $(this);
-            if ($this.hasClass('_selected'))
-                return;
-            $('.js-chess-info__item').removeClass('_selected');
-            $this.addClass('_selected');
-            var data = $this.data();
-            for (var key in $target) {
-                $target[key].text(data[key]);
+            $hypothec = $('.js-chess-info__hypothec'),
+            $hypothecWrapper = $('.js-chess-info__hypothec-wrapper'),
+            $priceWrapper = $('.js-chess-info__price-wrapper'),
+            $pricePerSquareWrapper = $('.js-chess-info__pricePerSquare-wrapper'),
+            $imgFlat = $('.js-chess-info__imgFlat'),
+            $imgFloor = $('.js-chess-info__imgFloor'),
+            $tabs = $('.js-chess-info__tabs'),
+            $tabFloor = $('.js-chess-info__tabFloor'),
+            $tabFlat = $('.js-chess-info__tabFlat'),
+            $form = $('.js-chess-info__form');
+
+        $('.js-chess-info__item').removeClass('_selected');
+        $this.addClass('_selected');
+        
+        var data = $this.data();
+        for (var key in $target) {
+            $target[key].text(data[key]);
+        }
+        $form.val(data.form);
+        if (data.hypothec) {
+            $hypothec.text(data.hypothec);
+            $hypothecWrapper.show();
+        } else {
+            $hypothecWrapper.hide();
+        }
+        data.price != 0 ? $priceWrapper.show() : $priceWrapper.hide();
+        data.pricePerSquare != 0 ? $pricePerSquareWrapper.show() : $pricePerSquareWrapper.hide();
+        if ($('.js-hypothec__cost').length > 0) {
+            $('.js-hypothec__cost').val(data.filterPrice).trigger('change');
+            $('.js-hypothec__payment-sum').val(data.filterPrice / 2).trigger('change');
+        }
+        if (data.imgFlat) {
+            $imgFlat.attr('href', data.imgFlat);
+            $imgFlat.find('img').attr('src', data.imgFlat);
+            $imgFlat.show();
+            $tabFlat.show();
+        } else {
+            $imgFlat.hide();
+            $tabFlat.hide();
+        }
+        if (data.imgFloor) {
+            $imgFloor.attr('href', data.imgFloor);
+            $imgFloor.find('img').attr('src', data.imgFloor);
+            $imgFloor.show();
+            $tabFloor.show();
+        } else {
+            $imgFloor.hide();
+            $tabFloor.hide();
+        }
+        if ($tabs.find('li:visible').length == 1) {
+            $tabs.find('li:visible').first().find('a').click();
+        }
+        if (scrollToInfo) {
+            var scroll = $target.cnt.offset().top;
+            if ($target.cnt.outerHeight() <= $(window).outerHeight()) {
+                scroll -= ($(window).outerHeight() - $target.cnt.outerHeight());
             }
-            $form.val(data.form);
-            if (data.hypothec) {
-                $hypothec.text(data.hypothec);
-                $hypothecWrapper.show();
-            } else {
-                $hypothecWrapper.hide();
-            }
-            data.price != 0 ? $priceWrapper.show() : $priceWrapper.hide();
-            data.pricePerSquare != 0 ? $pricePerSquareWrapper.show() : $pricePerSquareWrapper.hide();
-            if ($('.js-hypothec__cost').length > 0) {
-                $('.js-hypothec__cost').val(data.filterPrice).trigger('change');
-                $('.js-hypothec__payment-sum').val(data.filterPrice / 2).trigger('change');
-            }
-            if (data.imgFlat) {
-                $imgFlat.attr('href', data.imgFlat);
-                $imgFlat.find('img').attr('src', data.imgFlat);
-                $imgFlat.show();
-                $tabFlat.show();
-            } else {
-                $imgFlat.hide();
-                $tabFlat.hide();
-            }
-            if (data.imgFloor) {
-                $imgFloor.attr('href', data.imgFloor);
-                $imgFloor.find('img').attr('src', data.imgFloor);
-                $imgFloor.show();
-                $tabFloor.show();
-            } else {
-                $imgFloor.hide();
-                $tabFloor.hide();
-            }
-            if ($tabs.find('li:visible').length == 1) {
-                $tabs.find('li:visible').first().find('a').click();
-            }
-            if (init) {
-                $("html, body").animate({
-                    scrollTop: $target.title.offset().top - 100
-                }, 500);
-            }
+            $("html, body").animate({
+                scrollTop: scroll
+            }, 500);
+        }
+    },
+
+    initChess: function () {
+        if ($(window).outerWidth() >= appConfig.breakpoint.lg) {
+            $('.js-chess-tooltip__content').parent().hover(app.showChessTooltip, app.hideChessTooltip);
+        }
+        $('.js-chess-info__item._active').on('click', function() {
+            app.chessSelectFlat($(this), true);
         });
         $('.js-chess-info__item._active').first().click();
-        init = true;
     },
 
     $chessTooltip: null,
@@ -489,6 +513,7 @@ var app = {
                 );
 
         $form.find('input').on('change', function () {
+            $items.removeClass('_selected');
             var formData = $form.serializeArray(),
                     filters = {
                         area: [areaMin, areaMax],
@@ -563,7 +588,10 @@ var app = {
                 $items.removeClass('_filtered');
                 app.setChessTotal(total);
             }
-
+            var $notFilteredItems = $items.filter('._active:not(._filtered)');
+            if ($notFilteredItems.length) {
+                app.chessSelectFlat($notFilteredItems.first(), false);
+            }
         });
 
         // handle get filters

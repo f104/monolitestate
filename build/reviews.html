@@ -32,7 +32,7 @@
     <div class="header__top">
         <div class="container">
             <div class="header__top__city">
-                Город: <a href="#" class="header__top__city__select">Нижний Новгород</a>
+                Город: <a href="#city" class="header__top__city__select js-popup">Нижний Новгород</a>
             </div>
             <nav>
                 <ul class="header__top__nav">
@@ -77,6 +77,7 @@
             <div class="header__menu-mobile">
                 <div class="header__menu-mobile__top">
                     <div class="header__menu__user">
+                        <a href="#city" class="header__main__user__link btn _primary js-popup">Город: Нижний Новгород</a>
                         <a href="#login" class="header__main__user__link btn _primary js-popup"><i class="icon-user _middle"></i> Войти</a>
                         <a href="#signup" class="header__main__user__link btn _secondary js-popup">Регистрация</a>
                     </div>
@@ -800,6 +801,13 @@
         </form>
     </div>
 </div>
+    <div id="city" class="popup-cnt">
+    <div class="popup popup-signup _city">
+        <h3 class="popup__h3">Выберите город</h3>
+        <a class="btn _lg _primary" href="#">Нижний Новгород</a>
+        <a class="btn _lg _primary" href="#">Чебоксары</a>
+    </div>
+</div>
 </div>
             <div class="hidden">
                 <div id="review" class="popup-cnt">
@@ -886,6 +894,8 @@
         <li><a href="auth.html">auth</a></li>
         <li><a href="sitemap.html">sitemap</a></li>
         <li><a href="reviews.html">reviews</a></li>
+        <li><a href="benefits.html">benefits</a></li>
+        <li><a href="offer.html">offer</a></li>
     </ul>
 </div>
 <script>
@@ -935,7 +945,7 @@
 <script src="js/libs/jquery.scrollbar.min.js"></script>
 <script src="js/libs/jquery.fancybox.min.js"></script>
 <script src="js/libs/jquery.inputmask.bundle.min.js"></script>
-<script src="js/libs/jquery.easytabs.min.js"></script>
+<script src="js/libs/jquery.easytabs.modified.js"></script>
 <script src="js/libs/jquery.validate.min.js"></script>
 <script src="js/libs/select2.min.js"></script>
 <script src="js/libs/nouislider.min.js"></script>

@@ -40,6 +40,14 @@
         font-size: 13px;
         margin-bottom: 22px;
     }
+    &._city {
+        .btn {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 .popup-call {
     width: 320px;
@@ -232,6 +240,9 @@
                     display: block;
                 }
             }
+        }
+        &._city {
+            width: 500px;
         }
     }
 }

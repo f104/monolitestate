@@ -37,12 +37,14 @@
 }
 
 .promo-article {
+    $root: &;
     background: linear-gradient(142.96deg, #6297C9 6.81%, #4F88C1 77.65%);
     border-radius: 4px;
     padding: 40px 20px;
     min-height: 330px;
     display: flex;
     flex-direction: column;
+    position: relative;
     &__head {
         flex-grow: 1;
         margin-bottom: 30px;
@@ -88,5 +90,71 @@
         min-height: 54px;
         max-width: 335px;
         margin: 0 auto;
+    }
+    &__list {
+        display: none;
+        @include media-breakpoint-up(md) {
+            @include list-unstyled;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+        &__item {
+            padding: 0 10px;
+            text-align: center;
+            flex: 0 0 20%;
+            > * {
+                display: block;
+            }
+            &__img {
+                height: 55px;
+                margin-bottom: 25px;
+                display: flex;
+                align-items: center;
+                &__img {
+                    margin: 0 auto;
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+            &__price {
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 24px;
+                margin-bottom: 12px;
+            }
+            &__text {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+    }
+    &._benefits {
+        background: url('img/benefits-bg.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        color: white;
+        padding-top: 17px;
+        padding-bottom: 27px;
+        #{$root} {
+            &__head {
+                display: flex;
+                align-items: center;
+                @include media-breakpoint-up(md) {
+                    display: block;
+                    margin-bottom: 12px;
+                }
+            }
+            &__h {
+                margin-bottom: 0;
+                @include media-breakpoint-up(md) {
+                    margin-bottom: 38px;
+                    font-size: 30px;
+                    line-height: 36px;
+                }
+            }
+        }
     }
 }

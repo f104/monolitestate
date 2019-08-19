@@ -1,0 +1,309 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+
+$body-bg: #ffffff;
+$body-color: #131313;
+$link-color: $body-color;
+$link-hover-color: $link-color;
+$link-hover-decoration: none;
+$headings-color: $body-color;
+
+$gray-color: rgb(132, 132, 132);
+
+$font-size-base-px: 11px;
+$font-size-base: $font-size-base-px;
+$font-weight-base: normal;
+$line-height-base: 150%;
+$font-family-base: 'Source Sans Pro', sans-serif;
+
+@import "mixins";
+@import "node_modules/bootstrap/scss/reboot";
+
+.body-offer {
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.03em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+a, .link {
+    outline: none;
+}
+
+.offer-section {
+    margin-bottom: 56px;
+    padding-left: 20mm;
+    padding-right: 20mm;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    &__h {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 110%;
+        margin-bottom: 28px;
+    }
+}
+
+.offer-header {
+    @include clearfix;
+    padding-bottom: 57px;
+    padding-left: 10mm;
+    padding-right: 10mm;
+    &__left {
+        float: left;
+    }
+    &__right {
+        float: right;
+        text-align: right;
+    }
+    &__logo {
+        display: inline-block;
+        vertical-align: middle;
+        width: 130px;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    &__number {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 12px;
+        margin-left: 22px;
+        margin-top: 9px;
+        color: $gray-color;
+    }
+    &__phone {
+        display: block;
+        font-weight: bold;
+        font-size: 19px;
+        color: $body-color;
+        text-decoration: none;
+    }
+    &__time {
+        display: block;
+        font-size: 10px;
+        color: $gray-color;
+    }
+}
+
+.offer {
+    &__table {
+        width: 100%;
+    }
+
+    &__left, &__right {
+        vertical-align: top;
+    }
+    &__left {
+        width: 56%;
+        padding-right: 68px;
+    }
+    &__right {
+        width: 44%;
+        &__header {
+            margin-bottom: 40px;
+        }
+    }
+    &__h {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 110%;
+        margin-bottom: 18px;
+    }
+    &__lead {
+        font-size: 20px;
+        line-height: 120%;
+        margin-bottom: 42px;
+    }
+    &__text {
+        font-size: 14px;
+        line-height: 150%;
+        margin-bottom: 56px;
+    }
+    &__list {
+        @include clearfix;
+        font-size: 16px;
+        line-height: 120%;
+        margin-bottom: 61px;
+        &__dt {
+            clear: left;
+            float: left;
+            /*width: 125px;*/
+            color: $gray-color;
+            margin-bottom: 20px;
+            font-weight: normal;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            img {
+                vertical-align: baseline;
+            }
+        }
+        &__dd {
+            padding-left: 155px;
+            margin-bottom: 20px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__agent {
+        &__header {
+            margin-bottom: 18px;
+            &__img {
+                display: inline-block;
+                width: 79px;
+                height: 79px;
+                border-radius: 50%;
+                margin-right: 21px;
+            }
+            &__right {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            &__name {
+                font-size: 16px;
+                line-height: 120%;
+                margin-bottom: 9px;
+                display: block;
+            }
+            &__post {
+                display: block;
+                font-size: 12px;
+                line-height: 120%;
+                color: $gray-color;
+            }
+        }
+        &__contacts {
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 130%;
+            a {
+                color: #20407B;
+            }
+        }
+    }
+    &__cost {
+        margin-bottom: 30px;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 110%;
+        &__sub {
+            font-size: 20px;
+            line-height: 120%;
+            display: block;
+        }
+    }
+    &__price {
+        margin-bottom: 30px;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 110%;
+        &__col {
+            margin-right: 33px;
+            display: inline-block;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &__sub {
+            font-size: 16px;
+            line-height: 120%;
+            display: block;
+        }
+    }
+    &__hypothec {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 110%;
+        color: #20407B;
+        &__sub {
+            font-size: 14px;
+            line-height: 120%;
+            display: block;
+        }
+    }
+    &__photos {
+        &__text {
+            font-size: 12px;
+            line-height: 150%;
+            color: $gray-color;
+            margin-bottom: 10px;
+        }
+        &__item {
+            width: 100%;
+            height: auto;
+            padding-bottom: 64%;
+            background-size: cover;
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &__img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.offer-map {
+    &__inner {
+        margin-left: -20mm;
+        margin-right: -20mm;
+    }
+    &__map {
+        background-color: #cccccc;
+        height: 395px;
+    }
+}
+
+.offer-photos {
+    overflow: hidden;
+    &__inner {
+        font-size: 0;
+    }
+    &__item {
+        display: inline-block;
+        float: left;
+        margin-bottom: 20px;
+        width: 50%;
+        &:nth-child(odd) {
+            padding-right: 10px;
+        }
+        &:nth-child(even) {
+            padding-left: 10px;
+        }
+        &__inner {
+            padding-bottom: 60%;
+            background-size: cover;
+            page-break-inside: avoid !important;
+        }
+    }
+}
+
+.offer-footer {
+    height: 173px;
+    padding-top: 24px;
+    &__text {
+        font-size: 12px;
+        text-align: right;
+        color: $gray-color;
+        padding-left: 10mm;
+        padding-right: 10mm;
+        margin-bottom: 5px;
+    }
+    &__img {
+        height: 152px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

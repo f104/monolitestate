@@ -211,6 +211,7 @@ textarea {
             }
         }
         &__link {
+            cursor: pointer;
             color: inherit;
             text-decoration: underline;
             &:after {

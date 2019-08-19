@@ -29,7 +29,7 @@
     <div class="header__top">
         <div class="container">
             <div class="header__top__city">
-                Город: <a href="#" class="header__top__city__select">Нижний Новгород</a>
+                Город: <a href="#city" class="header__top__city__select js-popup">Нижний Новгород</a>
             </div>
             <nav>
                 <ul class="header__top__nav">
@@ -74,6 +74,7 @@
             <div class="header__menu-mobile">
                 <div class="header__menu-mobile__top">
                     <div class="header__menu__user">
+                        <a href="#city" class="header__main__user__link btn _primary js-popup">Город: Нижний Новгород</a>
                         <a href="#login" class="header__main__user__link btn _primary js-popup"><i class="icon-user _middle"></i> Войти</a>
                         <a href="#signup" class="header__main__user__link btn _secondary js-popup">Регистрация</a>
                     </div>
@@ -727,7 +728,54 @@
         </div>
     </div>
 </div>
-                <a href="#" class="bannerz-link">
+                <a href="benefits.html" class="bannerz-link">
+    <div class="result-list__item promo-article _benefits">
+        <div class="promo-article__head">
+            <h3 class="promo-article__h">Обращаясь к нам, вы экономите до 65 000 ₽</h3>
+            <ul class="promo-article__list">
+                <li class="promo-article__list__item">
+                    <span class="promo-article__list__item__img">
+                        <img class="promo-article__list__item__img__img" src="img/benefits/1.svg">
+                    </span>
+                    <span class="promo-article__list__item__price">до 50 000 руб.</span>
+                    <span class="promo-article__list__item__text">на товары для дома в Hoff</span>
+                </li>
+                <li class="promo-article__list__item">
+                    <span class="promo-article__list__item__img">
+                        <img class="promo-article__list__item__img__img" src="img/benefits/2.svg">
+                    </span>
+                    <span class="promo-article__list__item__price">7%</span>
+                    <span class="promo-article__list__item__text">на переезд</span>
+                </li>
+                <li class="promo-article__list__item">
+                    <span class="promo-article__list__item__img">
+                        <img class="promo-article__list__item__img__img" src="img/benefits/3.svg">
+                    </span>
+                    <span class="promo-article__list__item__price">5 000 руб.</span>
+                    <span class="promo-article__list__item__text">на сантехнику</span>
+                </li>
+                <li class="promo-article__list__item">
+                    <span class="promo-article__list__item__img">
+                        <img class="promo-article__list__item__img__img" src="img/benefits/4.svg">
+                    </span>
+                    <span class="promo-article__list__item__price">3 000 руб.</span>
+                    <span class="promo-article__list__item__text">на плитку</span>
+                </li>
+                <li class="promo-article__list__item">
+                    <span class="promo-article__list__item__img">
+                        <img class="promo-article__list__item__img__img" src="img/benefits/5.svg">
+                    </span>
+                    <span class="promo-article__list__item__price">5 000 руб.</span>
+                    <span class="promo-article__list__item__text">на пластиковые окна</span>
+                </li>
+            </ul>
+        </div>
+        <div class="promo-article__foot">
+            <button class="btn _solid">Узнать подробности</button>
+        </div>
+    </div>
+</a>
+<a href="#" class="bannerz-link">
     <div class="result-list__item promo-article">
         <div class="promo-article__head">
             <img class="promo-article__img" src="img/promo/kak_torgovatsa.svg">
@@ -3667,6 +3715,13 @@
         </form>
     </div>
 </div>
+    <div id="city" class="popup-cnt">
+    <div class="popup popup-signup _city">
+        <h3 class="popup__h3">Выберите город</h3>
+        <a class="btn _lg _primary" href="#">Нижний Новгород</a>
+        <a class="btn _lg _primary" href="#">Чебоксары</a>
+    </div>
+</div>
 </div>
             <div class="content__overlay js-menu-overlay"></div>
         </div>
@@ -3706,6 +3761,8 @@
         <li><a href="auth.html">auth</a></li>
         <li><a href="sitemap.html">sitemap</a></li>
         <li><a href="reviews.html">reviews</a></li>
+        <li><a href="benefits.html">benefits</a></li>
+        <li><a href="offer.html">offer</a></li>
     </ul>
 </div>
 <script>
@@ -3755,7 +3812,7 @@
 <script src="js/libs/jquery.scrollbar.min.js"></script>
 <script src="js/libs/jquery.fancybox.min.js"></script>
 <script src="js/libs/jquery.inputmask.bundle.min.js"></script>
-<script src="js/libs/jquery.easytabs.min.js"></script>
+<script src="js/libs/jquery.easytabs.modified.js"></script>
 <script src="js/libs/jquery.validate.min.js"></script>
 <script src="js/libs/select2.min.js"></script>
 <script src="js/libs/nouislider.min.js"></script>

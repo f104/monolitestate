@@ -445,6 +445,7 @@
         @include media-breakpoint-down(lg) {
             display: flex;
             flex-direction: column;
+            width: 100%;
         }
         #{$root} {
             @include media-breakpoint-up(lg) {
@@ -678,7 +679,7 @@
     }
     &__list {
         @include list-unstyled;
-        &__item {
+        li {
             position: relative;
             font-size: 16px;
             padding-left: 50px;
@@ -700,22 +701,16 @@
 
 .new-detail-gallery {
     &__row {
-        @include media-breakpoint-up(lg) {
-            @include row(30px)
-        }
+        overflow: hidden;
         &__col {
             &:first-child {
                 margin-bottom: 40px;
             }
             @include media-breakpoint-up(lg) {
-                @include col(50%, 30px)
                 &:first-child {
-                    flex-grow: 1;
-                    margin-bottom: 0;
-                }
-                &:last-child {
-                    flex-basis: 481px;
-                    width: 481px;
+                    float: right;
+                    width: 720px;
+                    margin-left: 30px;
                 }
             }
         }
