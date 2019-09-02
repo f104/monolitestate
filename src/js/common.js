@@ -432,7 +432,9 @@ var app = {
 
     hideChessTooltip: function () {
         clearTimeout(app.$chessTooltipTimeout);
-        app.$chessTooltip.remove();
+        if (app.$chessTooltip) {
+            app.$chessTooltip.remove();
+        }
     },
 
     initChessFilter: function () {

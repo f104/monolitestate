@@ -550,6 +550,11 @@ textarea {
         input {
             display: none !important;
         }
+        &._white {
+            label {
+                color: $white;
+            }
+        }
     }
 }
 

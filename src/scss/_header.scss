@@ -216,6 +216,12 @@ body {
             margin-bottom: 20px;
             font-size: 17px;
             color: $white;
+            &__a {
+                color: inherit;
+                &:after {
+                    content: none;
+                }
+            }
             .header__menu__phone__link {
                 font-size: 14px;
                 font-weight: 500;
