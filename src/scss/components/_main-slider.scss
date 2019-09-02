@@ -168,6 +168,7 @@
     // индивидуальные промо-баннеры
     .slide {
         &._promo_1, &._promo_2 {
+            min-height: auto;
             .container {
                 position: relative;
             }
@@ -206,14 +207,6 @@
             .main-slider__buttons {
                 @include media-breakpoint-up(md) {
                     display: none;
-                }
-            }
-        }
-        &._promo_2 {
-            min-height: auto;
-            @include media-breakpoint-up(md) {
-                .input-group__wrapper._submit .input-group {
-                    margin-bottom: 0;
                 }
             }
         }
